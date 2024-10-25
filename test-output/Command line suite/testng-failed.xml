@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Command line suite]">
+  <test thread-count="5" name="Command line test(failed)">
+    <classes>
+      <class name="tests.a_sauceLabApk.PageAccessTests">
+        <methods>
+          <include name="androidDriverSetup"/>
+          <include name="tearDownClass"/>
+          <include name="setUpSuite"/>
+          <include name="setUpTest"/>
+          <include name="tearDownMethod"/>
+          <include name="setUpMethod"/>
+          <include name="tearDownSuite"/>
+          <include name="fingerPrintPageAccessTest"/>
+          <include name="tearDownTest"/>
+        </methods>
+      </class> <!-- tests.a_sauceLabApk.PageAccessTests -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

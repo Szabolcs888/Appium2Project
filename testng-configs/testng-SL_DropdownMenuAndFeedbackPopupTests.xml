@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DropdownMenu and FeedbackPopup" verbose="1">
+    <test name="DropdownMenu and FeedbackPopup tests (data from xml file)_Saucelab">
+        <classes>
+            <class name="tests.a_sauceLabApk.DropdownMenuTests"/>
+            <class name="tests.a_sauceLabApk.FeedbackPopupTests"/>
+        </classes>
+    </test>
+</suite>

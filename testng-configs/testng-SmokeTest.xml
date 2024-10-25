@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke" verbose="1">
+    <test name="Smoke test (data from xml file and testNG group attributes)">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="tests.a_sauceLabApk.LoginTests"/>
+              <class name="tests.a_sauceLabApk.PageAccessTests"/>
+            <class name="tests.b_curaHealthcareWithChrome.LoginTests"/>
+            <class name="tests.b_curaHealthcareWithChrome.PageAccessTests"/> 
+            <class name="tests.c_batteryAlarmApk.PageAccessTests"/>
+        </classes>
+       </test>
+   </suite>
+
+
+

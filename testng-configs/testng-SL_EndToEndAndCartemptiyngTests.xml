@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="EndToEnd and Cartemptiyng" verbose="1">
+    <test name="EndToEnd and Cartemptiyng tests (data from xml file)_Saucelab">
+        <classes>
+            <class name="tests.a_sauceLabApk.EndToEndTests"/>
+            <class name="tests.a_sauceLabApk.CartEmptyingTests"/>
+        </classes>
+    </test>
+</suite>

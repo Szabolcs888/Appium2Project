@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="EndToEnd and Appointment Confirmation" verbose="1">
+    <test name="EndToEnd and Appointment Confirmation tests (data from xml file)_Cura">
+        <classes>
+            <class name="tests.b_curaHealthcareWithChrome.EndToEndTests"/>
+            <class name="tests.b_curaHealthcareWithChrome.AppointmentConfirmationTests"/>
+        </classes>
+    </test>
+</suite>

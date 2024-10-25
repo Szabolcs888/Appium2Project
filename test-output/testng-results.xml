@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-10-17T01:19:12 CEST" name="Command line suite" finished-at="2024-10-17T01:21:27 CEST" duration-ms="134461">
+    <groups>
+    </groups>
+    <test started-at="2024-10-17T01:19:12 CEST" name="Command line test" finished-at="2024-10-17T01:21:27 CEST" duration-ms="134461">
+      <class name="tests.a_sauceLabApk.PageAccessTests">
+        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:19:12 CEST" name="setUpSuite" finished-at="2024-10-17T01:19:12 CEST" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpSuite -->
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:19:17 CEST" name="setUpTest" finished-at="2024-10-17T01:19:17 CEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method is-config="true" signature="androidDriverSetup()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:19:17 CEST" name="androidDriverSetup" finished-at="2024-10-17T01:19:17 CEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- androidDriverSetup -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:19:17 CEST" name="setUpMethod" finished-at="2024-10-17T01:19:38 CEST" duration-ms="21407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="webviewPageAccessTest()[pri:1, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:19:38 CEST" name="webviewPageAccessTest" finished-at="2024-10-17T01:19:44 CEST" duration-ms="5990" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webviewPageAccessTest -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:19:45 CEST" name="tearDownMethod" finished-at="2024-10-17T01:19:46 CEST" duration-ms="1096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:19:46 CEST" name="setUpMethod" finished-at="2024-10-17T01:19:55 CEST" duration-ms="8957" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="qrCodeScannerPageAccessTest()[pri:2, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:19:55 CEST" name="qrCodeScannerPageAccessTest" finished-at="2024-10-17T01:20:01 CEST" duration-ms="5396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qrCodeScannerPageAccessTest -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:01 CEST" name="tearDownMethod" finished-at="2024-10-17T01:20:02 CEST" duration-ms="1007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:02 CEST" name="setUpMethod" finished-at="2024-10-17T01:20:11 CEST" duration-ms="9491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="geoLocationPageAccessTest()[pri:3, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:11 CEST" name="geoLocationPageAccessTest" finished-at="2024-10-17T01:20:15 CEST" duration-ms="4419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- geoLocationPageAccessTest -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:16 CEST" name="tearDownMethod" finished-at="2024-10-17T01:20:17 CEST" duration-ms="1006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:17 CEST" name="setUpMethod" finished-at="2024-10-17T01:20:26 CEST" duration-ms="9129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="drawingPageAccessTest()[pri:4, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:26 CEST" name="drawingPageAccessTest" finished-at="2024-10-17T01:20:29 CEST" duration-ms="3485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- drawingPageAccessTest -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:29 CEST" name="tearDownMethod" finished-at="2024-10-17T01:20:30 CEST" duration-ms="1177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:30 CEST" name="setUpMethod" finished-at="2024-10-17T01:20:39 CEST" duration-ms="8688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="aboutPageAccessTest()[pri:5, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:39 CEST" name="aboutPageAccessTest" finished-at="2024-10-17T01:20:43 CEST" duration-ms="4252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aboutPageAccessTest -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:43 CEST" name="tearDownMethod" finished-at="2024-10-17T01:20:45 CEST" duration-ms="1119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:45 CEST" name="setUpMethod" finished-at="2024-10-17T01:20:53 CEST" duration-ms="8411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="fingerPrintPageAccessTest()[pri:6, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:53 CEST" name="fingerPrintPageAccessTest" finished-at="2024-10-17T01:20:56 CEST" duration-ms="2923" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Finger Print] but found [FingerPrint]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Finger Print] but found [FingerPrint]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at tests.a_sauceLabApk.PageAccessTests.fingerPrintPageAccessTest(PageAccessTests.java:122)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at tests.TestRunner.main(TestRunner.java:17)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fingerPrintPageAccessTest -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:57 CEST" name="tearDownMethod" finished-at="2024-10-17T01:20:58 CEST" duration-ms="1094" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:20:58 CEST" name="setUpMethod" finished-at="2024-10-17T01:21:06 CEST" duration-ms="8509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="apiCallsPageAccessTest()[pri:7, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:21:06 CEST" name="apiCallsPageAccessTest" finished-at="2024-10-17T01:21:11 CEST" duration-ms="4383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- apiCallsPageAccessTest -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:21:11 CEST" name="tearDownMethod" finished-at="2024-10-17T01:21:12 CEST" duration-ms="1133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="setUpMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:21:12 CEST" name="setUpMethod" finished-at="2024-10-17T01:21:21 CEST" duration-ms="8605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method signature="sauceBotVideoPageAccessTest()[pri:8, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:21:21 CEST" name="sauceBotVideoPageAccessTest" finished-at="2024-10-17T01:21:26 CEST" duration-ms="5182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sauceBotVideoPageAccessTest -->
+        <test-method is-config="true" signature="tearDownMethod()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:21:26 CEST" name="tearDownMethod" finished-at="2024-10-17T01:21:27 CEST" duration-ms="1134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:21:27 CEST" name="tearDownClass" finished-at="2024-10-17T01:21:27 CEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:21:27 CEST" name="tearDownTest" finished-at="2024-10-17T01:21:27 CEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:tests.a_sauceLabApk.PageAccessTests@3f67593e]" started-at="2024-10-17T01:21:47 CEST" name="tearDownSuite" finished-at="2024-10-17T01:21:47 CEST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSuite -->
+      </class> <!-- tests.a_sauceLabApk.PageAccessTests -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
