@@ -4,4 +4,3 @@ Therefore, if we want them to be reinstalled before the tests, we need to copy t
 *******
 Az apk fileok feltöltését letiltottam a méretük miatt.
 Ezért, ha szeretnénk, hogy a tesztek előtt újratelepüljenek, be kell ide másolnunk őket.
-
