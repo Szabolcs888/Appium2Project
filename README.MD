@@ -104,4 +104,3 @@ A tesztkeretrendszert a nulláról építettem, melynek magját a Java - Appium 
 A tesztadatokat tartalmazó fileokat direkt nem tettem a .gitignore-ba, mert fiktív és nem privát adatok. És az emailküldéshez szükséges adatokat tartalmazó file-t sem, mert amit feltöltöttem, csak egy sablon, a saját adataim nélkül. Ahhoz, hogy működjön az emailküldés, szükséges kitölteni a filet az adatokkal (ha ez nem teljesül, akkor ki kell kommentelni a tearDownSuite() utolsó metódusát).
 
 (megjegyzés: a videófelvétellel már nehezen bírt a gépem, sokszor 100%-on volt a processzor, így lassabban futottak a tesztek a megszokottnál. Ezért helyenként meg kell vágnom az adott videót (jellemzően a teszt elején az app megnyitása vett hosszabb időt igénybe az átlagosnál).) 
-# Appium-2-Project
