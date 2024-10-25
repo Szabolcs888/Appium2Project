@@ -73,9 +73,10 @@ Logintests with Data Provider (Cura)
 </td>
 </tr>
 </table>
+<br>
 
-Note:
->My computer had a hard time with video recording, the processor was often at 100%, so the tests ran slower than usual. Therefore, I have to cut the given video in some places (typically, at the beginning of the test, opening the app took longer than average ).)
+
+>_note:_ my computer had a hard time with video recording, the processor was often at 100%, so the tests ran slower than usual. Therefore, I have to cut the given video in some places (typically, at the beginning of the test, opening the app took longer than average).
 
 #
 #
@@ -104,7 +105,7 @@ A keretrendszert a nulláról építettem, melynek magját a Java - Appium 2 - S
 - [Battery Alarm v73 app)](https://www.batteryalarm.app/ "link title")
 <br>
 
-Megjegyzések:
+_Megjegyzések:_
 > A tesztadatokat tartalmazó fileokat direkt nem tettem a .gitignore-ba, mert fiktív és nem privát adatok. És az emailküldéshez szükséges adatokat tartalmazó file-t sem, mert amit feltöltöttem, csak egy sablon, a saját adataim nélkül. Ahhoz, hogy működjön az emailküldés, szükséges kitölteni a filet az adatokkal (ha ez nem teljesül, akkor ki kell kommentelni a tearDownSuite() utolsó metódusát).
 >
->> A videófelvétellel már nehezen bírt a gépem, sokszor 100%-on volt a processzor, így lassabban futottak a tesztek a megszokottnál. Ezért helyenként meg kell vágnom az adott videót (jellemzően a teszt elején az app megnyitása vett hosszabb időt igénybe az átlagosnál).) 
+>> A videófelvétellel már nehezen bírt a gépem, sokszor 100%-on volt a processzor, így lassabban futottak a tesztek a megszokottnál. Ezért helyenként meg kell vágnom az adott videót (jellemzően a teszt elején az app megnyitása vett hosszabb időt igénybe az átlagosnál).
