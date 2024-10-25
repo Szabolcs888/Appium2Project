@@ -1,5 +1,5 @@
 # Appium 2 Project
-This is an Appium 2 project that I created for learning/development purposes as a junior software tester. I wanted to develop a test framework that, once installed, would hold its own even in a workplace environment. During the process, I gained a lot of new experience and faced quite a few challenges, because anyone who knows mobile testing, Appium, knows how many things have to fall into place in order for everything to work properly. I performed the testing on a real mobile phone, a Xiaomi Redmi note 8t, which I present in the videos below.
+This is an Appium 2 project that I created for learning/development purposes as a junior software tester. I wanted to develop a test framework similar to a framework used in a workplace environment. During the process, I gained a lot of new experience and faced quite a few challenges, because anyone who knows mobile testing, Appium, knows how many things have to fall into place in order for everything to work properly. I performed the testing on a real mobile phone, a Xiaomi Redmi note 8t, which I present in the videos below.
 
 I built the framework from scratch, the core of which is provided by Java - Appium 2 - Selenium - testNg - log4J. It is able to upload the server logo, logging, screenshots of failed tests, reports (Extent reports, Emailable report) to the server and send them by email. Also, if the Appium server is not running in the background, it starts automatically from code. Tests read test data from file(s). The tests have been classified into groups and can be started from a file (you can see, for example, the "Smoke" test in the example video). Of course, there are still countless opportunities for development and refinement. My next goal is CI/CD integration (e.g. with Jenkins).
 
@@ -18,8 +18,9 @@ I built the framework from scratch, the core of which is provided by Java - Appi
 - [Saucelab App (MyDemoAppRN.1.3.0.build-244)](https://github.com/saucelabs/my-demo-app-rn/releases/ "link title") <br>
 - [CURA Healthcare Service (Katalon demo webpage)](https://katalon-demo-cura.herokuapp.com// "link title") <br>
 - [Battery Alarm v73 app)](https://www.batteryalarm.app/ "link title")
+<br>
 
-I deliberately did not put the files containing the test data in .gitignore, because they are fictitious and not private data. And I didn't include the file containing the data necessary for sending emails either, because what I uploaded was just a template, without my own data. In order for email sending to work, it is necessary to fill out the file with the data (if this is not fulfilled, the last method of tearDownSuite() must be commented out).
+>I deliberately did not put the files containing the test data in .gitignore, because they are fictitious and not private data. And I didn't include the file containing the data necessary for sending emails either, because what I uploaded was just a template, without my own data. In order for email sending to work, it is necessary to fill out the file with the data (if this is not fulfilled, the last method of tearDownSuite() must be commented out).
 
 ## Videos of the tests
 <table>
@@ -73,14 +74,15 @@ Logintests with Data Provider (Cura)
 </tr>
 </table>
 
-(note: my computer had a hard time with video recording, the processor was often at 100%, so the tests ran slower than usual. Therefore, I have to cut the given video in some places (typically, at the beginning of the test, opening the app took longer than average ).)
+Note:
+>My computer had a hard time with video recording, the processor was often at 100%, so the tests ran slower than usual. Therefore, I have to cut the given video in some places (typically, at the beginning of the test, opening the app took longer than average ).)
 
 #
 #
 <br>
 
 # Appium 2 Project
-Ez egy Appium 2 project, melyet tanulás/fejlődés céljából hoztam létre, mint junior szoftvertesztelő. Egy olyan tesztkeretrendszert szerettem volna fejleszteni, amit "belakva" akár munkahelyi közegben is megállná a helyét. A folyamat alatt rengeteg új tapasztalatot szereztem és jó néhány kihívással szembesültem, hiszen aki ismeri a mobiltesztelést, az Appiumot, tudja, hogy mennyi mindennek kell a helyére kerülnie ahhoz, hogy minden megfelően működjön. A tesztelést egy valós mobiltelefonon végeztem, egy Xiaomi Redmi note 8t-n, melyet fentebb videókban be is mutatok. 
+Ez egy Appium 2 project, melyet tanulás/fejlődés céljából hoztam létre, mint junior szoftvertesztelő. Egy olyan tesztkeretrendszert szerettem volna fejleszteni, ami hasonlít egy munkahelyi közegben használt keretrendszerhez. A folyamat alatt rengeteg új tapasztalatot szereztem és jó néhány kihívással szembesültem, hiszen aki ismeri a mobiltesztelést, az Appiumot, tudja, hogy mennyi mindennek kell a helyére kerülnie ahhoz, hogy minden megfelően működjön. A tesztelést egy valós mobiltelefonon végeztem, egy Xiaomi Redmi note 8t-n, melyet fentebb videókban be is mutatok. 
 
 A keretrendszert a nulláról építettem, melynek magját a Java - Appium 2 - Selenium - testNg - log4J adja. Képes a server logot, a logolást, a failed tesztek screenshotjait, a reportokat (Extent reports, Emailable report) szerverre feltölteni és emailben elküldeni. Illetve, ha nem fut a háttérben az Appium server, akkor elindul automatikusan kódból. A tesztek a tesztadatokat fájl(ok)ból olvassák be. A teszteket groupokba is soroltam és elindíthatóak fájlból is (látható pl. a "Smoke" teszt példavideóban). Természetesen számtalan fejlesztési és finomítási lehetőség van még. A következő célom a CI/CD integráció (pl. Jenkins-vel).
 <br>
@@ -100,7 +102,9 @@ A keretrendszert a nulláról építettem, melynek magját a Java - Appium 2 - S
 - [Saucelab App (MyDemoAppRN.1.3.0.build-244)](https://github.com/saucelabs/my-demo-app-rn/releases/ "link title") <br>
 - [CURA Healthcare Service (Katalon demo webpage)](https://katalon-demo-cura.herokuapp.com// "link title") <br>
 - [Battery Alarm v73 app)](https://www.batteryalarm.app/ "link title")
+<br>
 
-A tesztadatokat tartalmazó fileokat direkt nem tettem a .gitignore-ba, mert fiktív és nem privát adatok. És az emailküldéshez szükséges adatokat tartalmazó file-t sem, mert amit feltöltöttem, csak egy sablon, a saját adataim nélkül. Ahhoz, hogy működjön az emailküldés, szükséges kitölteni a filet az adatokkal (ha ez nem teljesül, akkor ki kell kommentelni a tearDownSuite() utolsó metódusát).
-
-(megjegyzés: a videófelvétellel már nehezen bírt a gépem, sokszor 100%-on volt a processzor, így lassabban futottak a tesztek a megszokottnál. Ezért helyenként meg kell vágnom az adott videót (jellemzően a teszt elején az app megnyitása vett hosszabb időt igénybe az átlagosnál).) 
+Megjegyzések:
+> A tesztadatokat tartalmazó fileokat direkt nem tettem a .gitignore-ba, mert fiktív és nem privát adatok. És az emailküldéshez szükséges adatokat tartalmazó file-t sem, mert amit feltöltöttem, csak egy sablon, a saját adataim nélkül. Ahhoz, hogy működjön az emailküldés, szükséges kitölteni a filet az adatokkal (ha ez nem teljesül, akkor ki kell kommentelni a tearDownSuite() utolsó metódusát).
+>
+>> A videófelvétellel már nehezen bírt a gépem, sokszor 100%-on volt a processzor, így lassabban futottak a tesztek a megszokottnál. Ezért helyenként meg kell vágnom az adott videót (jellemzően a teszt elején az app megnyitása vett hosszabb időt igénybe az átlagosnál).) 
