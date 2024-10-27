@@ -12,8 +12,8 @@ I built the framework from scratch, the core of which is provided by Java - Appi
 - **TestNG 7.10.2**
 - **Log4j 2.24.0**
 - **Extent reports 5.1.2**
+- **Sendgrid 4.10.3 (email sending)**
 - **Netlify (file upload to server)**
-- **Sendgrid (email sending)**
 <br>
 
 **Tested applications (two native and one webapp):** <br>
@@ -99,8 +99,8 @@ A keretrendszert a nulláról építettem, melynek magját a Java - Appium 2 - S
 - **TestNG 7.10.2**
 - **Log4j 2.24.0**
 - **Extent reports 5.1.2**
+- **Sendgrid 4.10.3 (email küldés)**
 - **Netlify (fájlfeltöltés szerverre)**
-- **Send Grid (email küldés)**
 <br>
 
 **Tesztelt alkalmazások (két natív és egy webapp):** <br>
