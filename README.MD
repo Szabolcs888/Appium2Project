@@ -19,7 +19,7 @@ I built the framework from scratch, the core of which is provided by Java - Appi
 **Tested applications:** 
 - **Saucelab app** [(MyDemoAppRN.1.3.0.build-244)](https://github.com/saucelabs/my-demo-app-rn/releases/ "link title") <br>
 - **CURA Healthcare Service** [(Katalon demo webpage)](https://katalon-demo-cura.herokuapp.com// "link title") <br>
-- **Battery Alarm v73 app** [(Battery Alarm webpage)](https://www.batteryalarm.app/ "link title")
+- **Battery Alarm app (v73)** [(Battery Alarm webpage)](https://www.batteryalarm.app/ "link title")
 - **Chrome version:** 129.0.6668.70
 <br>
 
@@ -107,7 +107,7 @@ A keretrendszert a nulláról építettem, melynek magját a Java - Appium 2 - S
 **Tesztelt alkalmazások:** 
 - **Saucelab app** [(MyDemoAppRN.1.3.0.build-244)](https://github.com/saucelabs/my-demo-app-rn/releases/ "link title") <br>
 - **CURA Healthcare Service** [(Katalon demo webpage)](https://katalon-demo-cura.herokuapp.com// "link title") <br>
-- **Battery Alarm v73 app** [(Battery Alarm webpage)](https://www.batteryalarm.app/ "link title")
+- **Battery Alarm app (v73)** [(Battery Alarm webpage)](https://www.batteryalarm.app/ "link title")
 - **Chrome verzió:** 129.0.6668.70
 <br>
 
