@@ -17,7 +17,7 @@ import java.util.List;
 @Listeners(TestListener.class)
 public class LoginTests extends ChromeBrowserBaseTest {
     private static final Logger log = LogManager.getLogger(LoginTests.class);
-    private static final String testDataPath = "src/test/resources/testData/CuraHealthcareCredentials.txt";
+    private static final String testDataPath = "src/test/resources/testData/curaHealthcareCredentials.txt";
     private static final String expectedErrorMessage = "Login failed! Please ensure the username and password are valid.";
 
     @Test(priority = 1,

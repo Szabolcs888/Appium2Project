@@ -20,7 +20,7 @@ import java.util.List;
 @Listeners(TestListener.class)
 public class EndToEndTests extends SauceLabApkBaseTest {
     private static final Logger log = LogManager.getLogger(EndToEndTests.class);
-    private static final String testDataPath = "src/test/resources/testData/SauceLabCredentials.txt";
+    private static final String testDataPath = "src/test/resources/testData/sauceLabCredentials.txt";
 
     @Test(priority = 1,
             description = "Login first then shopping")

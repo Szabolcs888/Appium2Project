@@ -16,7 +16,7 @@ import java.util.List;
 @Listeners(TestListener.class)
 public class EndToEndTests extends ChromeBrowserBaseTest {
     private static final Logger log = LogManager.getLogger(tests.b_curaHealthcareWithChrome.EndToEndTests.class);
-    private static final String testDataPath = "src/test/resources/testData/CuraHealthcareCredentials.txt";
+    private static final String testDataPath = "src/test/resources/testData/curaHealthcareCredentials.txt";
 
     @Test
     public void testEndToEndCura() {

@@ -19,7 +19,7 @@ import java.util.List;
 @Listeners(TestListener.class)
 public class PageAccessTests extends ChromeBrowserBaseTest {
     private static final Logger log = LogManager.getLogger(PageAccessTests.class);
-    private static final String testDataPath = "src/test/resources/testData/CuraHealthcareCredentials.txt";
+    private static final String testDataPath = "src/test/resources/testData/curaHealthcareCredentials.txt";
 
     @Test(priority = 1,
             groups = {"smoke"})

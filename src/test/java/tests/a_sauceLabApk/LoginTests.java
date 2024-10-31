@@ -17,7 +17,7 @@ import java.util.List;
 @Listeners(TestListener.class)
 public class LoginTests extends SauceLabApkBaseTest {
     private static final Logger log = LogManager.getLogger(LoginTests.class);
-    private static final String testDataPath = "src/test/resources/testData/SauceLabCredentials.txt";
+    private static final String testDataPath = "src/test/resources/testData/sauceLabCredentials.txt";
     private static final String expectedErrorMessage = "Provided credentials do not match any user in this service.";
 
     @Test(priority = 3,

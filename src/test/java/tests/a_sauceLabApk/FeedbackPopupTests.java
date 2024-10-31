@@ -18,7 +18,7 @@ import java.util.List;
 @Listeners(TestListener.class)
 public class FeedbackPopupTests extends SauceLabApkBaseTest {
     private static final Logger log = LogManager.getLogger(FeedbackPopupTests.class);
-    private static final String testDataPath = "src/test/resources/testData/SauceLabCredentials.txt";
+    private static final String testDataPath = "src/test/resources/testData/sauceLabCredentials.txt";
 
     @Test(priority = 1)
     public void testFeedbackPopupOnProductsPageWithoutLoggedIn() {

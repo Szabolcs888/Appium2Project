@@ -18,7 +18,7 @@ import java.util.Base64;
 import java.util.List;
 
 public class SendGridEmailHelper {
-    private static final String emailSendingDataPath = "src/main/resources/emailSendingData/SendGridCredentials.txt";
+    private static final String emailSendingDataPath = "src/main/resources/emailSendingData/sendGridCredentials.txt";
     private static final List<String> emailSendingData = CommonUtils.readDataFromFile(emailSendingDataPath);
     private static final String API_KEY = emailSendingData.get(0);
     private static final String FROM_EMAIL = emailSendingData.get(1);
