@@ -32,7 +32,7 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         int currentMaxAlarmValue = mainPage.getCurrentMaxAlarmValue();
         if (currentBatteryChargeValue < currentMaxAlarmValue) {
             int byWhichToReduceTheMaxAlarmValue = currentMaxAlarmValue - currentBatteryChargeValue + 2;
-            log.info("In order for the phone to alarm, we need to reduce the 'Max Alarm' value by " + byWhichToReduceTheMaxAlarmValue);
+            log.info("In order for the phone to alarm, we need to reduce the 'Max Alarm' value by {}", byWhichToReduceTheMaxAlarmValue);
             mainPage.pressMaxAlarmMinusButton(byWhichToReduceTheMaxAlarmValue);
         }
 
@@ -62,7 +62,7 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         int currentMinAlarmValue = mainPage.getCurrentMinAlarmValue();
         if (currentBatteryChargeValue >= currentMinAlarmValue) {
             int byWhichToIncreaseTheMinAlarmValue = currentBatteryChargeValue - currentMinAlarmValue;
-            log.info("In order for the phone to alarm, we need to increase the 'Min Alarm' value by " + byWhichToIncreaseTheMinAlarmValue);
+            log.info("In order for the phone to alarm, we need to increase the 'Min Alarm' value by {}", byWhichToIncreaseTheMinAlarmValue);
             mainPage.pressMinAlarmPlusButton(byWhichToIncreaseTheMinAlarmValue);
         }
 

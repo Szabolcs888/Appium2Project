@@ -44,7 +44,7 @@ public class LoginTestsWithDataProvider extends ChromeBrowserBaseTest {
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        log.info("We check whether the login is successful. The expected result: " + expectedResult);
+        log.info("We check whether the login is successful. The expected result: {}", expectedResult);
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
         boolean isMakeAppointmentPageLoaded = makeAppointmentPage.isPageLoaded();
         if (isMakeAppointmentPageLoaded) {

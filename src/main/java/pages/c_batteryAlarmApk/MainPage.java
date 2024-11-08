@@ -192,7 +192,7 @@ public class MainPage {
     }
 
     public void pressMaxAlarmMinusButton(int buttonPressCounter) {
-        log.info("We press the 'Max Alarm' minus button " + buttonPressCounter + " times");
+        log.info("We press the 'Max Alarm' minus button {} times", buttonPressCounter);
         for (int i = 0; i < buttonPressCounter; i++) {
             if (getCurrentMaxAlarmValue() == 1) {
                 break;
@@ -202,7 +202,7 @@ public class MainPage {
     }
 
     public void pressMinAlarmPlusButton(int buttonPressCounter) {
-        log.info("We press the 'Min Alarm' plus button " + buttonPressCounter + " times");
+        log.info("We press the 'Min Alarm' plus button {} times", buttonPressCounter);
         for (int i = 0; i < buttonPressCounter; i++) {
             if (getCurrentMinAlarmValue() == 100) {
                 break;

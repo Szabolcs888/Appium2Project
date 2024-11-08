@@ -71,7 +71,7 @@ public class MakeAppointmentPage {
     }
 
     public void choiceFacilityOption(String option) {
-        log.info("We choice the '" + option + "' option");
+        log.info("We choice the '{}' option", option);
         Select select = new Select(facilityChoice);
         select.selectByVisibleText(option);
     }
@@ -85,7 +85,7 @@ public class MakeAppointmentPage {
     }
 
     public void choiceHealthcareProgramOption(String option) {
-        log.info("We choice the '" + option + "' in the Healthcare Program radio box");
+        log.info("We choice the '{}' in the Healthcare Program radio box", option);
         for (WebElement element : healthcareProgramOptions) {
             String idValue = element.getAttribute("value");
             if (idValue.equals(option)) {
@@ -96,12 +96,12 @@ public class MakeAppointmentPage {
     }
 
     public void fillDateOfVisitInput(String date) {
-        log.info("We fill the date of visit input field with: '" + date + "'");
+        log.info("We fill the date of visit input field with: '{}'", date);
         dateOfVisit.sendKeys(date);
     }
 
     public void fillCommentInput(String comment) {
-        log.info("We write a comment in a comment field: '" + comment + "'");
+        log.info("We write a comment in a comment field: '{}'", comment);
         formBox.sendKeys(comment);
     }
 

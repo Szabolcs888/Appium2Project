@@ -24,7 +24,7 @@ public class TestListener implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         suiteName = context.getSuite().getName();
-        log.info(suiteName + " test(s) run will start");
+        log.info("{} test(s) run will start", suiteName);
         extentReports = ExtentAppender.setupExtentReports();
         ExtentAppender.setExtentReports(extentReports);
     }
@@ -73,7 +73,7 @@ public class TestListener implements ITestListener {
     public void onFinish(ITestContext context) {
         extentReports.flush();
         ExtentAppender.reset();
-        log.info(suiteName + " test(s) run completed\n");
+        log.info("{} test(s) run completed\n", suiteName);
     }
 
     private AndroidDriver getDriverFromTestClass(Object testClass) {

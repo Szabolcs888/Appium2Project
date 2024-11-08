@@ -41,7 +41,7 @@ public class CommonUtils {
             try {
                 splitLines.add(item.split("_:")[1]);
             } catch (ArrayIndexOutOfBoundsException e) {
-                log.warn("Incorrect format in line: " + item);
+                log.warn("Incorrect format in line: {}", item);
                 throw new RuntimeException("Test data format error: " + item, e);
             }
         }

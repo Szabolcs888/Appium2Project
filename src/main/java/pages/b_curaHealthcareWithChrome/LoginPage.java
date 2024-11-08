@@ -35,12 +35,12 @@ public class LoginPage {
     private WebElement loginText;
 
     public void fillUserNameInput(String userName, String validOrInvalidUsername) {
-        log.info("We fill the 'Username' input field with the " + validOrInvalidUsername + " username");
+        log.info("We fill the 'Username' input field with the {} username", validOrInvalidUsername);
         usernameInput.sendKeys(userName);
     }
 
     public void fillPasswordInput(String password, String validOrInvalidPassword) {
-        log.info("We fill the 'Password' input field with the " + validOrInvalidPassword + " password");
+        log.info("We fill the 'Password' input field with the {} password", validOrInvalidPassword);
         passwordInput.sendKeys(password);
     }
 
