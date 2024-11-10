@@ -84,7 +84,7 @@ public class CartEmptyingTests extends SauceLabApkBaseTest {
         } else {
             log.error("The cart is not empty");
         }
-        Assert.assertTrue(isDisplayedNoItemsText);
+        Assert.assertTrue(isDisplayedNoItemsText, "The cart should be empty, but it is not.");
 
         cartNoItemsPage.pressGoShoppingButton();
 
@@ -95,6 +95,6 @@ public class CartEmptyingTests extends SauceLabApkBaseTest {
         } else {
             log.error("The cart counter is available");
         }
-        Assert.assertFalse(isDisplayedProductCounter);
+        Assert.assertFalse(isDisplayedProductCounter, "The cart counter should not be available, but it is.");
     }
 }

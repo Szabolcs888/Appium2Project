@@ -38,8 +38,8 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         } else {
             log.error("We are not on the 'Main' page");
         }
-        Assert.assertEquals(voiceWarningText, expectedVoiceWarningText);
-        Assert.assertEquals(chooseASoundText, expectedChooseASoundText);
+        Assert.assertEquals(voiceWarningText, expectedVoiceWarningText, "The voice warning text should be '" + expectedVoiceWarningText + "', but it is '" + voiceWarningText + "'.");
+        Assert.assertEquals(chooseASoundText, expectedChooseASoundText, "The 'Choose a sound' text should be '" + expectedChooseASoundText + "', but it is '" + chooseASoundText + "'.");
     }
 
     @Test(priority = 2,
@@ -65,7 +65,7 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         } else {
             log.error("We are not on the 'Information' page");
         }
-        Assert.assertTrue(informationText.contains(expectedTextFragment));
+        Assert.assertTrue(informationText.contains(expectedTextFragment), "The information text should contain '" + expectedTextFragment + "', but it does not.");
     }
 
     @Test(priority = 3,
@@ -81,7 +81,7 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         } else {
             log.error("The 'Warning' popup window does not appears");
         }
-        Assert.assertTrue(isDisplayedExitWarningPopup);
+        Assert.assertTrue(isDisplayedExitWarningPopup, "The 'Warning' popup window should appear, but it does not.");
 
         mainPage.pressNoButtonOnWarningPopupWindow();
 
@@ -92,6 +92,6 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         } else {
             log.error("The 'Warning' popup window is not available");
         }
-        Assert.assertFalse(isDisplayedExitWarningPopup);
+        Assert.assertFalse(isDisplayedExitWarningPopup, "The 'Warning' popup window should disappear, but it is still available.");
     }
 }

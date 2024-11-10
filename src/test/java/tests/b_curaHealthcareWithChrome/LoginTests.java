@@ -44,7 +44,7 @@ public class LoginTests extends ChromeBrowserBaseTest {
         } else {
             log.error("We are not on the 'Make Appointment' page");
         }
-        Assert.assertTrue(isMakeAppointmentPageLoaded);
+        Assert.assertTrue(isMakeAppointmentPageLoaded, "The 'Make Appointment' page should be loaded, but it is not.");
     }
 
     @Test(priority = 2,
@@ -70,7 +70,7 @@ public class LoginTests extends ChromeBrowserBaseTest {
         } else {
             log.error("The error message is not correct");
         }
-        Assert.assertEquals(errorMessageText, expectedErrorMessage);
+        Assert.assertEquals(errorMessageText, expectedErrorMessage, "The error message should be '" + expectedErrorMessage + "', but it is '" + errorMessageText + "'.");
     }
 
     @Test(priority = 3,
@@ -96,7 +96,7 @@ public class LoginTests extends ChromeBrowserBaseTest {
         } else {
             log.error("The error message is not correct");
         }
-        Assert.assertEquals(errorMessageText, expectedErrorMessage);
+        Assert.assertEquals(errorMessageText, expectedErrorMessage, "The error message should be '" + expectedErrorMessage + "', but it is '" + errorMessageText + "'.");
     }
 
     @Test(priority = 4,
@@ -121,6 +121,6 @@ public class LoginTests extends ChromeBrowserBaseTest {
         } else {
             log.error("The error message is not correct");
         }
-        Assert.assertEquals(errorMessageText, expectedErrorMessage);
+        Assert.assertEquals(errorMessageText, expectedErrorMessage, "The error message should be '" + expectedErrorMessage + "', but it is '" + errorMessageText + "'.");
     }
 }

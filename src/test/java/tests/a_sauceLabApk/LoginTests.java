@@ -42,7 +42,7 @@ public class LoginTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'Products' page");
         }
-        Assert.assertEquals(productPageTitleText, expectedPageTitleText);
+        Assert.assertEquals(productPageTitleText, expectedPageTitleText, "The page title should be 'Products', but it is not.");
     }
 
     @Test(priority = 1,
@@ -65,8 +65,8 @@ public class LoginTests extends SauceLabApkBaseTest {
         } else {
             log.error("The error message is not correct");
         }
-        Assert.assertTrue(loginPage.isDisplayedErrorMessage());
-        Assert.assertEquals(errorMessageText, expectedErrorMessage);
+        Assert.assertTrue(loginPage.isDisplayedErrorMessage(), "The error message should be displayed, but it is not.");
+        Assert.assertEquals(errorMessageText, expectedErrorMessage, "The error message text should be '" + expectedErrorMessage + "', but it is '" + errorMessageText + "'.");
     }
 
     @Test(priority = 2,
@@ -88,7 +88,7 @@ public class LoginTests extends SauceLabApkBaseTest {
             log.info("The error message is correct");
         else
             log.error("The error message is correct");
-        Assert.assertTrue(loginPage.isDisplayedErrorMessage());
-        Assert.assertEquals(loginPage.getErrorMessageText(), expectedErrorMessage);
+        Assert.assertTrue(loginPage.isDisplayedErrorMessage(), "The error message should be displayed, but it is not.");
+        Assert.assertEquals(errorMessageText, expectedErrorMessage, "The error message text should be '" + expectedErrorMessage + "', but it is '" + errorMessageText + "'.");
     }
 }

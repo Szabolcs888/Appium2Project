@@ -43,10 +43,10 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         } else {
             log.error("The alarm does not work");
         }
-        Assert.assertTrue(isCountdownActive);
+        Assert.assertTrue(isCountdownActive, "The countdown should be active, but it is not.");
     }
 
-    //@Test(description = "The prerequisite for the test is that the phone is not charging.")
+    @Test(description = "The prerequisite for the test is that the phone is not charging.")
     public void testMinAlarm() {
         MainPage mainPage = new MainPage(driver);
         if (!mainPage.getSelectedLanguage().equals("English")) {
@@ -76,6 +76,6 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         } else {
             log.error("The alarm does not work");
         }
-        Assert.assertTrue(isCountdownActive);
+        Assert.assertTrue(isCountdownActive, "The countdown should be active, but it is not.");
     }
 }

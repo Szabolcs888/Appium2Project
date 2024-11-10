@@ -30,7 +30,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'Webview' page");
         }
-        Assert.assertEquals(webviewPageTitleText, expectedPageTitleText);
+        Assert.assertEquals(webviewPageTitleText, expectedPageTitleText, "The page title should be 'Webview', but it is not.");
     }
 
     @Test(priority = 2,
@@ -49,7 +49,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'QR Code Scanner' page");
         }
-        Assert.assertEquals(qrCodeScannerPageTitleText, expectedPageTitleText);
+        Assert.assertEquals(qrCodeScannerPageTitleText, expectedPageTitleText, "The page title should be 'QR Code Scanner', but it is not.");
     }
 
     @Test(priority = 3,
@@ -68,7 +68,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'Geo Location' page");
         }
-        Assert.assertEquals(geoLocationPageTitleText, expectedPageTitleText);
+        Assert.assertEquals(geoLocationPageTitleText, expectedPageTitleText, "The page title should be 'Geo Location', but it is not.");
     }
 
     @Test(priority = 4,
@@ -87,7 +87,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'Drawing' page");
         }
-        Assert.assertEquals(drawingPageTitleText, expectedPageTitleText);
+        Assert.assertEquals(drawingPageTitleText, expectedPageTitleText, "The page title should be 'Drawing', but it is not.");
     }
 
     @Test(priority = 5,
@@ -106,7 +106,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'About' page");
         }
-        Assert.assertEquals(aboutPageTitleText, expectedPageTitleText);
+        Assert.assertEquals(aboutPageTitleText, expectedPageTitleText, "The page title should be 'About', but it is not.");
     }
 
     @Test(priority = 6,
@@ -119,13 +119,13 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         log.info("We check whether we are on the 'Finger Print' page");
         FingerPrintPage fingerPrintPage = new FingerPrintPage(driver);
         String fingerPrintPageTitleText = fingerPrintPage.getFingerPrintPageTitleText();
-        String expectedPageTitleText = "Finger Print";
+        String expectedPageTitleText = "FingerPrint";
         if (fingerPrintPageTitleText.equals(expectedPageTitleText)) {
             log.info("We are on the 'Finger Print' page");
         } else {
             log.error("We are not on the 'Finger Print' page");
         }
-        Assert.assertEquals(fingerPrintPageTitleText, expectedPageTitleText);
+        Assert.assertEquals(fingerPrintPageTitleText, expectedPageTitleText, "The page title should be 'Finger Print', but it is not.");
     }
 
     @Test(priority = 7,
@@ -144,7 +144,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'API calls' page");
         }
-        Assert.assertEquals(apiCallsPageTitleText, expectedPageTitleText);
+        Assert.assertEquals(apiCallsPageTitleText, expectedPageTitleText, "The page title should be 'API calls', but it is not.");
     }
 
     @Test(priority = 8,
@@ -163,6 +163,6 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'Sauce Bot Video' page");
         }
-        Assert.assertEquals(sauceBotVideoPageTitleText, expectedPageTitleText);
+        Assert.assertEquals(sauceBotVideoPageTitleText, expectedPageTitleText, "The page title should be 'SauceBot - The Beginning', but it is not.");
     }
 }

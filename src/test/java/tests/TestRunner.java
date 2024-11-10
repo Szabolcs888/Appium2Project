@@ -15,5 +15,3 @@ public class TestRunner {
         testng.run();
     }
 }
-
-

@@ -212,9 +212,9 @@ public class MainPage {
     }
 
     public boolean isTheCountdownGoing() {
-        CommonUtils.threadSleep(6000);
+        CommonUtils.threadSleep(7000);
         String countdownTimer = widgetsButtons.get(1).getText();
-        if (!countdownTimer.equals("0h:0m:10s") && !countdownTimer.equals("0h:0m:30s")) //android.widget.Button[@text="0h:0m:30s"])
+        if (!countdownTimer.equals("0h:0m:10s") && !countdownTimer.equals("0h:0m:30s"))
             return true;
         else
             return false;

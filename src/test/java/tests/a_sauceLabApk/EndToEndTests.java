@@ -87,7 +87,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("There are no correct products in the cart");
         }
-        Assert.assertEquals(productsNamesListInMyCart, theListAsItShouldBe);
+        Assert.assertEquals(productsNamesListInMyCart, theListAsItShouldBe, "The cart should contain the correct products, but it does not.");
 
         log.info("We check the number of products in the cart");
         int productsQuantityInMyCart = productsPage.getProductCounterOnCartBadgeButton();
@@ -98,7 +98,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("The number of products in the cart is not correct");
         }
-        Assert.assertEquals(productsQuantityInMyCart, 11);
+        Assert.assertEquals(productsQuantityInMyCart, 11, "The number of products in the cart should be 11, but it is " + productsQuantityInMyCart + ".");
 
         cartPage.pressProceedToCheckoutButton();
 
@@ -111,7 +111,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'Checkout' page");
         }
-        Assert.assertEquals(checkoutPageTitleText, expectedTitleText);
+        Assert.assertEquals(checkoutPageTitleText, expectedTitleText, "The page title should be 'Checkout', but it is not.");
 
         checkoutPage.fillFullNameInput(testData.get(3));
         checkoutPage.fillAddressLine1Input(testData.get(4));
@@ -141,7 +141,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("The delivery data is not correct");
         }
-        Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData);
+        Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData, "The delivery data should match the provided data, but it does not.");
 
         List<String> originalPaymentData = Arrays.asList(testData.get(3), testData.get(9), testData.get(10));
         List<String> paymentDataOnOrderReviewPage = checkoutOrderReviewPage.getPaymentData();
@@ -152,7 +152,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("The payment data is not correct");
         }
-        Assert.assertEquals(paymentDataOnOrderReviewPage, originalPaymentData);
+        Assert.assertEquals(paymentDataOnOrderReviewPage, originalPaymentData, "The payment data should match the provided data, but it does not.");
 
         checkoutOrderReviewPage.pressPlaceOrderButton();
 
@@ -165,7 +165,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'Checkout Complete' page");
         }
-        Assert.assertEquals(checkoutCompletePageTitleText, expectedPageTitleText);
+        Assert.assertEquals(checkoutCompletePageTitleText, expectedPageTitleText, "The page title should be 'Checkout Complete', but it is not.");
 
         checkoutCompletePage.pressContinueShoppingButton();
 
@@ -178,7 +178,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("The cart is not empty");
         }
-        Assert.assertTrue(isDisplayedNoItemsText);
+        Assert.assertTrue(isDisplayedNoItemsText, "The cart should be empty, but it is not.");
 
         log.info("We check if the cart counter is available");
         boolean isDisplayedProductCounter = productsPage.isDisplayedProductCounterOnCartBadgeButton();
@@ -187,7 +187,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("The cart counter is available");
         }
-        Assert.assertFalse(isDisplayedProductCounter);
+        Assert.assertFalse(isDisplayedProductCounter, "The cart counter should not be available, but it is.");
 
         appiumActions.navigateBack(driver);
 
@@ -204,7 +204,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'Login' page");
         }
-        Assert.assertEquals(loginPageTitleText, expectedLoginPageTitleText);
+        Assert.assertEquals(loginPageTitleText, expectedLoginPageTitleText, "The page title should be 'Login', but it is not.");
     }
 
     @Test(priority = 2,
@@ -267,7 +267,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("There are no correct products in the cart");
         }
-        Assert.assertEquals(productsNamesListInMyCart, theListAsItShouldBe);
+        Assert.assertEquals(productsNamesListInMyCart, theListAsItShouldBe, "The cart should contain the correct products, but it does not.");
 
         log.info("We check the number of products in the cart");
         int productsQuantityInMyCart = productsPage.getProductCounterOnCartBadgeButton();
@@ -278,7 +278,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("The number of products in the cart is not correct");
         }
-        Assert.assertEquals(productsQuantityInMyCart, 12);
+        Assert.assertEquals(productsQuantityInMyCart, 12, "The number of products in the cart should be 12, but it is " + productsQuantityInMyCart + ".");
 
         cartPage.pressProceedToCheckoutButton();
 
@@ -297,7 +297,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'Checkout' page");
         }
-        Assert.assertEquals(checkoutPageTitleText, expectedTitleText);
+        Assert.assertEquals(checkoutPageTitleText, expectedTitleText, "The page title should be 'Checkout', but it is not.");
 
         checkoutPage.fillFullNameInput(testData.get(15));
         checkoutPage.fillAddressLine1Input(testData.get(16));
@@ -326,7 +326,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("The delivery data is not correct");
         }
-        Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData);
+        Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData, "The delivery data should match the provided data, but it does not.");
 
         List<String> originalPaymentData = Arrays.asList(testData.get(15), testData.get(21), testData.get(22));
         List<String> paymentDataOnOrderReviewPage = checkoutOrderReviewPage.getPaymentData();
@@ -337,7 +337,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("The payment data is not correct");
         }
-        Assert.assertEquals(paymentDataOnOrderReviewPage, originalPaymentData);
+        Assert.assertEquals(paymentDataOnOrderReviewPage, originalPaymentData, "The payment data should match the provided data, but it does not.");
 
         checkoutOrderReviewPage.pressPlaceOrderButton();
 
@@ -350,7 +350,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'Checkout Complete' page");
         }
-        Assert.assertEquals(checkoutCompletePageTitleText, expectedPageTitleText);
+        Assert.assertEquals(checkoutCompletePageTitleText, expectedPageTitleText, "The page title should be 'Checkout Complete', but it is not.");
 
         checkoutCompletePage.pressContinueShoppingButton();
 
@@ -363,7 +363,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("The cart is not empty");
         }
-        Assert.assertTrue(isDisplayedNoItemsText);
+        Assert.assertTrue(isDisplayedNoItemsText, "The cart should be empty, but it is not.");
 
         log.info("We check if the cart counter is available");
         boolean isDisplayedProductCounter = productsPage.isDisplayedProductCounterOnCartBadgeButton();
@@ -372,7 +372,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("The cart counter is available");
         }
-        Assert.assertFalse(isDisplayedProductCounter);
+        Assert.assertFalse(isDisplayedProductCounter, "The cart counter should not be available, but it is.");
 
         appiumActions.navigateBack(driver);
 
@@ -390,6 +390,6 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             log.error("We are not on the 'Login' page");
         }
-        Assert.assertEquals(loginPageTitleText, expectedLoginPageTitleText);
+        Assert.assertEquals(loginPageTitleText, expectedLoginPageTitleText, "The page title should be 'Login', but it is not.");
     }
 }

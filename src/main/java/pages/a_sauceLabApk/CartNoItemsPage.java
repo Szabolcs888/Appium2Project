@@ -42,6 +42,5 @@ public class CartNoItemsPage {
         } catch (NoSuchElementException e) {
             return false;
         }
-
     }
 }

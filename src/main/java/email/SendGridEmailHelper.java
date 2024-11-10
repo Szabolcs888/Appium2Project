@@ -89,7 +89,7 @@ public class SendGridEmailHelper {
             request.setEndpoint("mail/send");
             request.setBody(mail.build());
             Response response = sg.api(request);
-            System.out.println(("Email successfully sent with status code: " + response.getStatusCode()));
+            System.out.println("Email successfully sent with status code: " + response.getStatusCode());
         } catch (IOException ex) {
             System.out.println("Failed to send email: " + ex.getMessage());
             throw ex;

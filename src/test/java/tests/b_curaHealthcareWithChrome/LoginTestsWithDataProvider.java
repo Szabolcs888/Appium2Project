@@ -52,6 +52,6 @@ public class LoginTestsWithDataProvider extends ChromeBrowserBaseTest {
         } else {
             log.error("Login failed");
         }
-        Assert.assertEquals(isMakeAppointmentPageLoaded, expectedResult);
+        Assert.assertEquals(isMakeAppointmentPageLoaded, expectedResult, "The login result should be '" + expectedResult + "', but it is '" + isMakeAppointmentPageLoaded + "'.");
     }
 }

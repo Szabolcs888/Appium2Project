@@ -39,7 +39,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
             log.info(LOG_MESSAGE2);
         else
             log.error(LOG_MESSAGE3);
-        Assert.assertEquals(voiceWarningEnglishText, expectedEnglishText);
+        Assert.assertEquals(voiceWarningEnglishText, expectedEnglishText, "The displayed language should be English, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseCestinaOption();
@@ -51,7 +51,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningCzechText, expectedCzechText);
+        Assert.assertEquals(voiceWarningCzechText, expectedCzechText, "The displayed language should be Czech, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseDanskOption();
@@ -63,7 +63,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningDanishText, expectedDanishText);
+        Assert.assertEquals(voiceWarningDanishText, expectedDanishText, "The displayed language should be Danish, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseDeutschOption();
@@ -75,7 +75,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningGermanText, expectedGermanText);
+        Assert.assertEquals(voiceWarningGermanText, expectedGermanText, "The displayed language should be German, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseEspanolOption();
@@ -87,7 +87,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningSpanishText, expectedSpanishText);
+        Assert.assertEquals(voiceWarningSpanishText, expectedSpanishText, "The displayed language should be Spanish, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseFrancaisOption();
@@ -99,7 +99,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningFranchiseText, expectedFranchiseText);
+        Assert.assertEquals(voiceWarningFranchiseText, expectedFranchiseText, "The displayed language should be French, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseIndonesiaOption();
@@ -111,7 +111,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningIndonesiaText, expectedIndonesiaText);
+        Assert.assertEquals(voiceWarningIndonesiaText, expectedIndonesiaText, "The displayed language should be Indonesian, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseItalianoOption();
@@ -123,7 +123,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningItalianText, expectedItalianText);
+        Assert.assertEquals(voiceWarningItalianText, expectedItalianText, "The displayed language should be Italian, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseMagyarOption();
@@ -135,7 +135,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningHungarianText, expectedHungarianText);
+        Assert.assertEquals(voiceWarningHungarianText, expectedHungarianText, "The displayed language should be Hungarian, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseNederlandsOption();
@@ -147,7 +147,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningDutchText, expectedDutchText);
+        Assert.assertEquals(voiceWarningDutchText, expectedDutchText, "The displayed language should be Dutch, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.choosePolskiOption();
@@ -159,7 +159,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningPolishText, expectedPolishText);
+        Assert.assertEquals(voiceWarningPolishText, expectedPolishText, "The displayed language should be Polish, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.choosePortuguesOption();
@@ -171,7 +171,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningPortugueseText, expectedPortugueseText);
+        Assert.assertEquals(voiceWarningPortugueseText, expectedPortugueseText, "The displayed language should be Portuguese, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseRomanaOption();
@@ -183,7 +183,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningRomanText, expectedRomanText);
+        Assert.assertEquals(voiceWarningRomanText, expectedRomanText, "The displayed language should be Romanian, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSlovencinaOption();
@@ -195,7 +195,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningSlovenianText, expectedSlovenianText);
+        Assert.assertEquals(voiceWarningSlovenianText, expectedSlovenianText, "The displayed language should be Slovenian, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSvenskaOption();
@@ -207,7 +207,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningSwedishText, expectedSwedishText);
+        Assert.assertEquals(voiceWarningSwedishText, expectedSwedishText, "The displayed language should be Swedish, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSrpskiOption();
@@ -219,7 +219,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningSerbianText, expectedSerbianText);
+        Assert.assertEquals(voiceWarningSerbianText, expectedSerbianText, "The displayed language should be Serbian, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSuomiOption();
@@ -231,7 +231,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningFinnishText, expectedFinnishText);
+        Assert.assertEquals(voiceWarningFinnishText, expectedFinnishText, "The displayed language should be Finnish, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseTürkceOption();
@@ -243,7 +243,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningTurkishText, expectedTurkishText);
+        Assert.assertEquals(voiceWarningTurkishText, expectedTurkishText, "The displayed language should be Turkish, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseBulgarianOption();
@@ -255,7 +255,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningBulgarianText, expectedBulgarianText);
+        Assert.assertEquals(voiceWarningBulgarianText, expectedBulgarianText, "The displayed language should be Bulgarian, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseRussianOption();
@@ -267,7 +267,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningRussianText, expectedRussianText);
+        Assert.assertEquals(voiceWarningRussianText, expectedRussianText, "The displayed language should be Russian, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseUkrainianOption();
@@ -279,7 +279,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningUkrainianText, expectedUkrainianText);
+        Assert.assertEquals(voiceWarningUkrainianText, expectedUkrainianText, "The displayed language should be Ukrainian, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseGreekOption();
@@ -291,7 +291,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningGreekText, expectedGreekText);
+        Assert.assertEquals(voiceWarningGreekText, expectedGreekText, "The displayed language should be Greek, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseVietnameseOption();
@@ -303,7 +303,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningVietnameseText, expectedVietnameseText);
+        Assert.assertEquals(voiceWarningVietnameseText, expectedVietnameseText, "The displayed language should be Vietnamese, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseJapaneseOption();
@@ -315,7 +315,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningJapaneseText, expectedJapaneseText);
+        Assert.assertEquals(voiceWarningJapaneseText, expectedJapaneseText, "The displayed language should be Japanese, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseChineseOption();
@@ -327,7 +327,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningChineseText, expectedChineseText);
+        Assert.assertEquals(voiceWarningChineseText, expectedChineseText, "The displayed language should be Chinese, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseKoreanOption();
@@ -339,7 +339,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningKoreanText, expectedKoreanText);
+        Assert.assertEquals(voiceWarningKoreanText, expectedKoreanText, "The displayed language should be Korean, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseThaiOption();
@@ -351,7 +351,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningThaiText, expectedThaiText);
+        Assert.assertEquals(voiceWarningThaiText, expectedThaiText, "The displayed language should be Thai, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseArabicOption();
@@ -363,7 +363,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningArabicText, expectedArabicText);
+        Assert.assertEquals(voiceWarningArabicText, expectedArabicText, "The displayed language should be Arabic, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseFarsiOption();
@@ -375,7 +375,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningFarsiText, expectedFarsiText);
+        Assert.assertEquals(voiceWarningFarsiText, expectedFarsiText, "The displayed language should be Farsi, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseHebrewOption();
@@ -387,7 +387,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningHebrewText, expectedHebrewText);
+        Assert.assertEquals(voiceWarningHebrewText, expectedHebrewText, "The displayed language should be Hebrew, but it is not.");
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseHindiOption();
@@ -399,6 +399,6 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             log.error(LOG_MESSAGE3);
         }
-        Assert.assertEquals(voiceWarningHindiText, expectedHindiText);
+        Assert.assertEquals(voiceWarningHindiText, expectedHindiText, "The displayed language should be Hindi, but it is not.");
     }
 }

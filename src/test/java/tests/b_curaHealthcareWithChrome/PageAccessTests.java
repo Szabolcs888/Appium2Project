@@ -51,7 +51,7 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
         } else {
             log.error("We are not on the 'Profile' page");
         }
-        Assert.assertTrue(isProfilePageLoaded);
+        Assert.assertTrue(isProfilePageLoaded, "The 'Profile' page should be loaded, but it is not.");
     }
 
     @Test(priority = 2,
@@ -84,6 +84,6 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
         } else {
             log.error("We are not on the 'History' page");
         }
-        Assert.assertTrue(isHistoryPageLoaded);
+        Assert.assertTrue(isHistoryPageLoaded, "The 'History' page should be loaded, but it is not.");
     }
 }

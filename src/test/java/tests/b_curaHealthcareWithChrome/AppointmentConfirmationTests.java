@@ -56,6 +56,6 @@ public class AppointmentConfirmationTests extends ChromeBrowserBaseTest {
         } else {
             log.error("The appointment data is not correct");
         }
-        Assert.assertEquals(appointmentDataAsTheyAreOnThePage, appointmentDataAsItShouldBe);
+        Assert.assertEquals(appointmentDataAsTheyAreOnThePage, appointmentDataAsItShouldBe, "The appointment data should match the provided data, but it does not.");
     }
 }
