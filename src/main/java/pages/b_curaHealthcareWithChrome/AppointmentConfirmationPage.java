@@ -39,7 +39,9 @@ public class AppointmentConfirmationPage {
 
     public boolean isPageLoaded() {
         try {
-            return appointmentConfirmationPageTitleText.isDisplayed() && appointmentConfirmationPageTitleText.isEnabled() && appointmentConfirmationPageTitleText.getText().equals("Appointment Confirmation");
+            return appointmentConfirmationPageTitleText.isDisplayed() &&
+                    appointmentConfirmationPageTitleText.isEnabled() &&
+                    appointmentConfirmationPageTitleText.getText().equals("Appointment Confirmation");
         } catch (NoSuchElementException e) {
             return false;
         }

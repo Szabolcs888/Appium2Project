@@ -29,7 +29,9 @@ public class ProfilePage {
 
     public boolean isPageLoaded() {
         try {
-            return underConstructionsText.isDisplayed() && underConstructionsText.isEnabled() && underConstructionsText.getText().equals("Under construction.");
+            return underConstructionsText.isDisplayed() &&
+                    underConstructionsText.isEnabled() &&
+                    underConstructionsText.getText().equals("Under construction.");
         } catch (NoSuchElementException e) {
             return false;
         }

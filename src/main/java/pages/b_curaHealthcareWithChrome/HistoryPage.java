@@ -39,7 +39,9 @@ public class HistoryPage {
 
     public boolean isPageLoaded() {
         try {
-            return historyTitleText.isDisplayed() && historyTitleText.isEnabled() && historyTitleText.getText().equals("History");
+            return historyTitleText.isDisplayed() &&
+                    historyTitleText.isEnabled() &&
+                    historyTitleText.getText().equals("History");
         } catch (NoSuchElementException e) {
             return false;
         }

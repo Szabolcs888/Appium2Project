@@ -23,7 +23,9 @@ public class MainPage {
 
     public boolean isPageLoaded() {
         try {
-            return curaHealthcareServiceText.isDisplayed() && curaHealthcareServiceText.isEnabled() && curaHealthcareServiceText.getText().equals("CURA Healthcare Service");
+            return curaHealthcareServiceText.isDisplayed() &&
+                    curaHealthcareServiceText.isEnabled() &&
+                    curaHealthcareServiceText.getText().equals("CURA Healthcare Service");
         } catch (NoSuchElementException e) {
             return false;
         }

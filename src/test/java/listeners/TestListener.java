@@ -47,14 +47,15 @@ public class TestListener implements ITestListener {
     public void onTestFailure(ITestResult result) {
         Object testClass = result.getInstance();
         AndroidDriver driver = getDriverFromTestClass(testClass);
+        String testName = result.getName();
 
-        ScreenshotUtils.captureAndSaveScreenshot(driver, result.getName());
-        String screenshotUrl = ScreenshotUtils.getScreenshotUrl(result.getName());
+        ScreenshotUtils.captureAndSaveScreenshot(driver, testName);
+        String screenshotUrl = ScreenshotUtils.getScreenshotUrl(testName);
         extentTest.addScreenCaptureFromPath(screenshotUrl, "Screenshot");
 
         extentTest.log(Status.FAIL, "Test Failed");
         ExtentAppender.reset();
-        log.error("Test FAILED: {}", result.getName());
+        log.error("Test FAILED: {}", testName);
     }
 
     @Override
@@ -77,13 +78,16 @@ public class TestListener implements ITestListener {
     }
 
     private AndroidDriver getDriverFromTestClass(Object testClass) {
-        AndroidDriver driver = null;
+        AndroidDriver driver;
         if (testClass instanceof SauceLabApkBaseTest) {
-            return driver = ((SauceLabApkBaseTest) testClass).getDriver();
+            driver = ((SauceLabApkBaseTest) testClass).getDriver();
+            return driver;
         } else if (testClass instanceof ChromeBrowserBaseTest) {
-            return driver = ((ChromeBrowserBaseTest) testClass).getDriver();
+            driver = ((ChromeBrowserBaseTest) testClass).getDriver();
+            return driver;
         } else if (testClass instanceof BatteryAlarmBaseTest) {
-            return driver = ((BatteryAlarmBaseTest) testClass).getDriver();
+            driver = ((BatteryAlarmBaseTest) testClass).getDriver();
+            return driver;
         } else {
             return null;
         }

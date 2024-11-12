@@ -10,13 +10,13 @@
 
         <classes>
             <class name="tests.a_sauceLabApk.LoginTests"/>
-              <class name="tests.a_sauceLabApk.PageAccessTests"/>
+            <class name="tests.a_sauceLabApk.PageAccessTests"/>
             <class name="tests.b_curaHealthcareWithChrome.LoginTests"/>
-            <class name="tests.b_curaHealthcareWithChrome.PageAccessTests"/> 
+            <class name="tests.b_curaHealthcareWithChrome.PageAccessTests"/>
             <class name="tests.c_batteryAlarmApk.PageAccessTests"/>
         </classes>
-       </test>
-   </suite>
+    </test>
+</suite>
 
 
 
