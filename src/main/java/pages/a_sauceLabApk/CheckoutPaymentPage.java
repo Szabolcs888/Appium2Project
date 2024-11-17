@@ -9,10 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.CommonUtils;
 
 public class CheckoutPaymentPage {
-    private static final Logger log = LogManager.getLogger(CheckoutPaymentPage.class);
+    private static final Logger LOG = LogManager.getLogger(CheckoutPaymentPage.class);
     private WebDriverWait wait;
 
     public CheckoutPaymentPage(AndroidDriver driver) {
@@ -41,27 +40,27 @@ public class CheckoutPaymentPage {
 
     public void fillFullNameInput(String fullName) {
         wait.until(ExpectedConditions.elementToBeClickable(fullNameInput));
-        log.info("We fill the 'Full Name' input field");
+        LOG.info("We fill the 'Full Name' input field");
         fullNameInput.sendKeys(fullName);
     }
 
     public void fillCardNumberInput(String cardNumber) {
-        log.info("We fill the 'Card Number' input field");
+        LOG.info("We fill the 'Card Number' input field");
         cardNumberInput.sendKeys(cardNumber);
     }
 
     public void fillExpirationDateInput(String expirationDate) {
-        log.info("We fill the 'Expiration Date' input field");
+        LOG.info("We fill the 'Expiration Date' input field");
         expirationDateInput.sendKeys(expirationDate);
     }
 
     public void fillSecurityCodeInput(String securityCode) {
-        log.info("We fill the 'Security Code' input field");
+        LOG.info("We fill the 'Security Code' input field");
         securityCodeInput.sendKeys(securityCode);
     }
 
     public void pressReviewOrderButton() {
-        log.info("We press the 'Review Order' button");
+        LOG.info("We press the 'Review Order' button");
         reviewOrderButton.click();
     }
 }

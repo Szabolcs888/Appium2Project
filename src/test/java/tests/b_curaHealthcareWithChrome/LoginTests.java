@@ -1,10 +1,8 @@
 package tests.b_curaHealthcareWithChrome;
 
-import listeners.TestListener;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.b_curaHealthcareWithChrome.HamburgerMenu;
 import pages.b_curaHealthcareWithChrome.LoginPage;
@@ -14,11 +12,10 @@ import utils.CommonUtils;
 
 import java.util.List;
 
-@Listeners(TestListener.class)
 public class LoginTests extends ChromeBrowserBaseTest {
-    private static final Logger log = LogManager.getLogger(LoginTests.class);
-    private static final String testDataPath = "src/test/resources/testData/curaHealthcareCredentials.txt";
-    private static final String expectedErrorMessage = "Login failed! Please ensure the username and password are valid.";
+    private static final Logger LOG = LogManager.getLogger(LoginTests.class);
+    private static final String TEST_DATA_PATH = "src/test/resources/testData/curaHealthcareCredentials.txt";
+    private static final String EXPECTED_ERROR_MESSAGE = "Login failed! Please ensure the username and password are valid.";
 
     @Test(priority = 1,
             groups = {"smoke"})
@@ -29,20 +26,20 @@ public class LoginTests extends ChromeBrowserBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(testDataPath);
+        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(testData.get(1), "valid");
         loginPage.fillPasswordInput(testData.get(2), "valid");
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        log.info("We check if we are on the 'Make Appointment' page");
+        LOG.info("We check if we are on the 'Make Appointment' page");
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
         boolean isMakeAppointmentPageLoaded = makeAppointmentPage.isPageLoaded();
         if (isMakeAppointmentPageLoaded) {
-            log.info("We are on the 'Make Appointment' page");
+            LOG.info("We are on the 'Make Appointment' page");
         } else {
-            log.error("We are not on the 'Make Appointment' page");
+            LOG.error("We are not on the 'Make Appointment' page");
         }
         Assert.assertTrue(isMakeAppointmentPageLoaded, "The 'Make Appointment' page should be loaded, but it is not.");
     }
@@ -56,21 +53,21 @@ public class LoginTests extends ChromeBrowserBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(testDataPath);
+        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(testData.get(1), "valid");
         loginPage.fillPasswordInput("invalidPassword", "invalid");
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        log.info("We check whether the error message appears and, if so, whether it is correct");
+        LOG.info("We check whether the error message appears and, if so, whether it is correct");
         String errorMessageText = loginPage.getErrorMessageText();
-        if (errorMessageText.equals(expectedErrorMessage)) {
-            log.info("The error message is correct");
+        if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
+            LOG.info("The error message is correct");
         } else {
-            log.error("The error message is not correct");
+            LOG.error("The error message is not correct");
         }
-        Assert.assertEquals(errorMessageText, expectedErrorMessage, "The error message should be '" + expectedErrorMessage + "', but it is '" + errorMessageText + "'.");
+        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE, "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
     }
 
     @Test(priority = 3,
@@ -82,21 +79,21 @@ public class LoginTests extends ChromeBrowserBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(testDataPath);
+        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput("invalidUsername", "invalid");
         loginPage.fillPasswordInput(testData.get(2), "valid");
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        log.info("We check whether the error message appears and, if so, whether it is correct");
+        LOG.info("We check whether the error message appears and, if so, whether it is correct");
         String errorMessageText = loginPage.getErrorMessageText();
-        if (errorMessageText.equals(expectedErrorMessage)) {
-            log.info("The error message is correct");
+        if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
+            LOG.info("The error message is correct");
         } else {
-            log.error("The error message is not correct");
+            LOG.error("The error message is not correct");
         }
-        Assert.assertEquals(errorMessageText, expectedErrorMessage, "The error message should be '" + expectedErrorMessage + "', but it is '" + errorMessageText + "'.");
+        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE, "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
     }
 
     @Test(priority = 4,
@@ -114,13 +111,13 @@ public class LoginTests extends ChromeBrowserBaseTest {
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        log.info("We check whether the error message appears and, if so, whether it is correct");
+        LOG.info("We check whether the error message appears and, if so, whether it is correct");
         String errorMessageText = loginPage.getErrorMessageText();
-        if (errorMessageText.equals(expectedErrorMessage)) {
-            log.info("The error message is correct");
+        if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
+            LOG.info("The error message is correct");
         } else {
-            log.error("The error message is not correct");
+            LOG.error("The error message is not correct");
         }
-        Assert.assertEquals(errorMessageText, expectedErrorMessage, "The error message should be '" + expectedErrorMessage + "', but it is '" + errorMessageText + "'.");
+        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE, "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
     }
 }

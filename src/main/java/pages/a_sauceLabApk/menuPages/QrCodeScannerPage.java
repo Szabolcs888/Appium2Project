@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class QrCodeScannerPage {
-    private static final Logger log = LogManager.getLogger(QrCodeScannerPage.class);
+    private static final Logger LOG = LogManager.getLogger(QrCodeScannerPage.class);
 
     public QrCodeScannerPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

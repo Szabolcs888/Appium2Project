@@ -2,6 +2,7 @@ package tests._baseTests;
 
 import email.SendGridEmailHelper;
 import io.appium.java_client.android.AndroidDriver;
+import listeners.TestListener;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,6 +10,7 @@ import org.apache.logging.log4j.core.config.Configurator;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 import server.AppiumServerFromCode;
 import server.NetlifyUploader;
 import utils.CommonUtils;
@@ -16,12 +18,13 @@ import utils.CommonUtils;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+@Listeners(TestListener.class)
 public class BaseTestParent {
     static {
         Configurator.setLevel("org.testng.internal.Utils", Level.OFF);
     }
 
-    protected static final Logger log = LogManager.getLogger(BaseTestParent.class);
+    protected static final Logger LOG = LogManager.getLogger(BaseTestParent.class);
     protected AndroidDriver driver;
     protected WebDriverWait wait;
     protected AppiumServerFromCode appiumServerFromCode = new AppiumServerFromCode();

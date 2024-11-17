@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CartPage {
-    private static final Logger log = LogManager.getLogger(CartPage.class);
+    private static final Logger LOG = LogManager.getLogger(CartPage.class);
 
     public CartPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -33,7 +33,7 @@ public class CartPage {
     private List<WebElement> productsQuantityListInMyCartAsElements;
 
     public void pressProceedToCheckoutButton() {
-        log.info("We press the Proceed To Checkout button");
+        LOG.info("We press the Proceed To Checkout button");
         proceedToCheckoutButton.click();
     }
 
@@ -64,7 +64,7 @@ public class CartPage {
     }
 
     public void pressRemoveItemButtons() {
-        log.info("We press the 'Remove Item' button until the cart is empty");
+        LOG.info("We press the 'Remove Item' button until the cart is empty");
         boolean moreElements = true;
         while (moreElements) {
             for (WebElement item : removeItemButtons) {

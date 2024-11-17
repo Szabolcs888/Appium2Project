@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class NetlifyUploader {
-    private static final Logger log = LogManager.getLogger(NetlifyUploader.class);
+    private static final Logger LOG = LogManager.getLogger(NetlifyUploader.class);
 
     public static void uploadReportToNetlify() {
         try {

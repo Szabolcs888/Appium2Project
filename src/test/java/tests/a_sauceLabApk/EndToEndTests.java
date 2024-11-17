@@ -1,10 +1,8 @@
 package tests.a_sauceLabApk;
 
-import listeners.TestListener;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.a_sauceLabApk.*;
 import pages.a_sauceLabApk.ProductsPage;
@@ -17,10 +15,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-@Listeners(TestListener.class)
 public class EndToEndTests extends SauceLabApkBaseTest {
-    private static final Logger log = LogManager.getLogger(EndToEndTests.class);
-    private static final String testDataPath = "src/test/resources/testData/sauceLabCredentials.txt";
+    private static final Logger LOG = LogManager.getLogger(EndToEndTests.class);
+    private static final String TEST_DATA_PATH = "src/test/resources/testData/sauceLabCredentials.txt";
 
     @Test(priority = 1,
             description = "Login first then shopping")
@@ -29,7 +26,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLogInButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(testDataPath);
+        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(testData.get(1), "valid");
         loginPage.fillPasswordInput(testData.get(2), "valid");
@@ -40,41 +37,40 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         productsPage.pressAbcOrderOption();
 
         productsPage.pressBikeLightProductText();
-        BikeLightPage BikeLightPage = new BikeLightPage(driver);
-        BikeLightPage.pressCounterPlusButton();
-        BikeLightPage.pressAddToCartButton();
-        AppiumActions appiumActions = new AppiumActions();
-        appiumActions.navigateBack(driver);
+        BikeLightPage bikeLightPage = new BikeLightPage(driver);
+        bikeLightPage.pressCounterPlusButton();
+        bikeLightPage.pressAddToCartButton();
+        AppiumActions.navigateBack(driver);
 
         productsPage.pressBoltTShirtProductText();
         BoltTShirtPage boltTShirtPage = new BoltTShirtPage(driver);
         boltTShirtPage.pressAddToCartButton();
         boltTShirtPage.pressAddToCartButton();
-        appiumActions.navigateBack(driver);
-        appiumActions.scrollWithFixCoordinates(driver, 1, "DOWN", 0.5);
+        AppiumActions.navigateBack(driver);
+        AppiumActions.scrollWithFixCoordinates(driver, 1, "DOWN", 0.5);
 
         productsPage.pressOnesieProductText();
-        OnesiePage OnesiePage = new OnesiePage(driver);
-        OnesiePage.pressBlackCircleButton();
-        OnesiePage.pressCounterPlusButton();
-        OnesiePage.pressCounterPlusButton();
-        OnesiePage.pressAddToCartButton();
-        appiumActions.navigateBack(driver);
+        OnesiePage onesiePage = new OnesiePage(driver);
+        onesiePage.pressBlackCircleButton();
+        onesiePage.pressCounterPlusButton();
+        onesiePage.pressCounterPlusButton();
+        onesiePage.pressAddToCartButton();
+        AppiumActions.navigateBack(driver);
 
         productsPage.pressTestAllTheThingsTShirtProductText();
         TestAllTheThingsTShirtPage testAllTheThingsTShirtPage = new TestAllTheThingsTShirtPage(driver);
         testAllTheThingsTShirtPage.pressGrayCircleButton();
         testAllTheThingsTShirtPage.pressAddToCartButton();
-        appiumActions.navigateBack(driver);
+        AppiumActions.navigateBack(driver);
 
         productsPage.pressFleeceJacketProductText();
         FleeceJacketPage fleeceJacketPage = new FleeceJacketPage(driver);
         fleeceJacketPage.pressCounterPlusButton();
         fleeceJacketPage.pressCounterPlusButton();
         fleeceJacketPage.pressAddToCartButton();
-        appiumActions.navigateBack(driver);
+        AppiumActions.navigateBack(driver);
 
-        log.info("We check whether the correct products are in the cart");
+        LOG.info("We check whether the correct products are in the cart");
         productsPage.pressCartBadgeButton();
         CartPage cartPage = new CartPage(driver);
         List<String> productsNamesListInMyCart = cartPage.getTheListOfProductNamesInMyCart(driver);
@@ -83,33 +79,33 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         System.out.println("The products in the cart: \n" + productsNamesListInMyCart);
         System.out.println("The cart should contain these products: \n" + theListAsItShouldBe);
         if (productsNamesListInMyCart.equals(theListAsItShouldBe)) {
-            log.info("The correct products are in the cart");
+            LOG.info("The correct products are in the cart");
         } else {
-            log.error("There are no correct products in the cart");
+            LOG.error("There are no correct products in the cart");
         }
         Assert.assertEquals(productsNamesListInMyCart, theListAsItShouldBe, "The cart should contain the correct products, but it does not.");
 
-        log.info("We check the number of products in the cart");
+        LOG.info("We check the number of products in the cart");
         int productsQuantityInMyCart = productsPage.getProductCounterOnCartBadgeButton();
         System.out.println("The number of products in the cart: " + productsQuantityInMyCart);
         System.out.println("This should be the number of products in the cart: 11");
         if (productsQuantityInMyCart == 11) {
-            log.info("The number of products in the cart is correct");
+            LOG.info("The number of products in the cart is correct");
         } else {
-            log.error("The number of products in the cart is not correct");
+            LOG.error("The number of products in the cart is not correct");
         }
         Assert.assertEquals(productsQuantityInMyCart, 11, "The number of products in the cart should be 11, but it is " + productsQuantityInMyCart + ".");
 
         cartPage.pressProceedToCheckoutButton();
 
-        log.info("We check whether we are on the 'Checkout' page");
+        LOG.info("We check whether we are on the 'Checkout' page");
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         String checkoutPageTitleText = checkoutPage.getCheckoutPageTitleText();
         String expectedTitleText = "Checkout";
         if (checkoutPageTitleText.equals(expectedTitleText)) {
-            log.info("We are on the 'Checkout' page");
+            LOG.info("We are on the 'Checkout' page");
         } else {
-            log.error("We are not on the 'Checkout' page");
+            LOG.error("We are not on the 'Checkout' page");
         }
         Assert.assertEquals(checkoutPageTitleText, expectedTitleText, "The page title should be 'Checkout', but it is not.");
 
@@ -128,18 +124,18 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         checkoutPaymentPage.fillSecurityCodeInput(testData.get(11));
         checkoutPaymentPage.pressReviewOrderButton();
 
-        log.info("We check that the delivery data and payment data are correct");
+        LOG.info("We check that the delivery data and payment data are correct");
         CheckoutOrderReviewPage checkoutOrderReviewPage = new CheckoutOrderReviewPage(driver);
-        appiumActions.scrollWithFixCoordinates(driver, 2, "DOWN", 0.5);
+        AppiumActions.scrollWithFixCoordinates(driver, 2, "DOWN", 0.5);
 
         List<String> originalDeliveryData = Arrays.asList(testData.get(3), testData.get(4), testData.get(5), testData.get(6), testData.get(7), testData.get(8));
         List<String> deliveryDataOnOrderReviewPage = checkoutOrderReviewPage.getDeliveryAddressData();
         System.out.println("Delivery data is on the page: \n" + deliveryDataOnOrderReviewPage);
         System.out.println("Original delivery data: \n" + originalDeliveryData);
         if (deliveryDataOnOrderReviewPage.equals(originalDeliveryData)) {
-            log.info("The delivery data is correct");
+            LOG.info("The delivery data is correct");
         } else {
-            log.error("The delivery data is not correct");
+            LOG.error("The delivery data is not correct");
         }
         Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData, "The delivery data should match the provided data, but it does not.");
 
@@ -148,61 +144,61 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         System.out.println("Payment data is on the page: \n" + paymentDataOnOrderReviewPage);
         System.out.println("Original payment data: \n" + originalPaymentData);
         if (paymentDataOnOrderReviewPage.equals(originalPaymentData)) {
-            log.info("The payment data is correct");
+            LOG.info("The payment data is correct");
         } else {
-            log.error("The payment data is not correct");
+            LOG.error("The payment data is not correct");
         }
         Assert.assertEquals(paymentDataOnOrderReviewPage, originalPaymentData, "The payment data should match the provided data, but it does not.");
 
         checkoutOrderReviewPage.pressPlaceOrderButton();
 
-        log.info("We check whether we are on the 'Checkout Complete' page");
+        LOG.info("We check whether we are on the 'Checkout Complete' page");
         CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
         String checkoutCompletePageTitleText = checkoutCompletePage.getCheckoutCompletePageTitleText();
         String expectedPageTitleText = "Checkout Complete";
         if (checkoutCompletePageTitleText.equals(expectedPageTitleText)) {
-            log.info("We are on the 'Checkout Complete' page");
+            LOG.info("We are on the 'Checkout Complete' page");
         } else {
-            log.error("We are not on the 'Checkout Complete' page");
+            LOG.error("We are not on the 'Checkout Complete' page");
         }
         Assert.assertEquals(checkoutCompletePageTitleText, expectedPageTitleText, "The page title should be 'Checkout Complete', but it is not.");
 
         checkoutCompletePage.pressContinueShoppingButton();
 
-        log.info("We check if the cart is empty");
+        LOG.info("We check if the cart is empty");
         CartNoItemsPage cartNoItemsPage = new CartNoItemsPage(driver);
         productsPage.pressCartBadgeButton();
         boolean isDisplayedNoItemsText = cartNoItemsPage.isDisplayedNoItemsTextOnCartNoItemsPage();
         if (isDisplayedNoItemsText) {
-            log.info("The cart is empty");
+            LOG.info("The cart is empty");
         } else {
-            log.error("The cart is not empty");
+            LOG.error("The cart is not empty");
         }
         Assert.assertTrue(isDisplayedNoItemsText, "The cart should be empty, but it is not.");
 
-        log.info("We check if the cart counter is available");
+        LOG.info("We check if the cart counter is available");
         boolean isDisplayedProductCounter = productsPage.isDisplayedProductCounterOnCartBadgeButton();
         if (!isDisplayedProductCounter) {
-            log.info("The cart counter is not available");
+            LOG.info("The cart counter is not available");
         } else {
-            log.error("The cart counter is available");
+            LOG.error("The cart counter is available");
         }
         Assert.assertFalse(isDisplayedProductCounter, "The cart counter should not be available, but it is.");
 
-        appiumActions.navigateBack(driver);
+        AppiumActions.navigateBack(driver);
 
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLogOutButton();
         hamburgerMenu.pressLogOutButtonOnLogOutAlert();
         loginPage.pressOkButtonOnSuccessfulLoggedOutAlert();
 
-        log.info("We check whether we are on the 'Login' page");
+        LOG.info("We check whether we are on the 'Login' page");
         String loginPageTitleText = loginPage.getLoginPageTitleText();
         String expectedLoginPageTitleText = "Login";
         if (loginPageTitleText.equals(expectedLoginPageTitleText)) {
-            log.info("We are on the 'Login' page");
+            LOG.info("We are on the 'Login' page");
         } else {
-            log.error("We are not on the 'Login' page");
+            LOG.error("We are not on the 'Login' page");
         }
         Assert.assertEquals(loginPageTitleText, expectedLoginPageTitleText, "The page title should be 'Login', but it is not.");
     }
@@ -218,43 +214,42 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         TestAllTheThingsTShirtPage testAllTheThingsTShirtPage = new TestAllTheThingsTShirtPage(driver);
         testAllTheThingsTShirtPage.pressBlackCircleButton();
         testAllTheThingsTShirtPage.pressAddToCartButton();
-        AppiumActions appiumActions = new AppiumActions();
-        appiumActions.navigateBack(driver);
+        AppiumActions.navigateBack(driver);
 
         productsPage.pressOnesieProductText();
-        OnesiePage OnesiePage = new OnesiePage(driver);
-        OnesiePage.pressCounterPlusButton();
-        OnesiePage.pressAddToCartButton();
-        appiumActions.navigateBack(driver);
+        OnesiePage onesiePage = new OnesiePage(driver);
+        onesiePage.pressCounterPlusButton();
+        onesiePage.pressAddToCartButton();
+        AppiumActions.navigateBack(driver);
 
         productsPage.pressBikeLightProductText();
-        BikeLightPage BikeLightPage = new BikeLightPage(driver);
-        BikeLightPage.pressCounterPlusButton();
-        BikeLightPage.pressCounterPlusButton();
-        BikeLightPage.pressAddToCartButton();
-        appiumActions.navigateBack(driver);
+        BikeLightPage bikeLightPage = new BikeLightPage(driver);
+        bikeLightPage.pressCounterPlusButton();
+        bikeLightPage.pressCounterPlusButton();
+        bikeLightPage.pressAddToCartButton();
+        AppiumActions.navigateBack(driver);
 
         productsPage.pressBoltTShirtProductText();
         BoltTShirtPage boltTShirtPage = new BoltTShirtPage(driver);
         boltTShirtPage.pressAddToCartButton();
-        appiumActions.navigateBack(driver);
-        appiumActions.scrollWithFixCoordinates(driver, 1, "DOWN", 0.5);
+        AppiumActions.navigateBack(driver);
+        AppiumActions.scrollWithFixCoordinates(driver, 1, "DOWN", 0.5);
 
         productsPage.pressFleeceJacketProductText();
         FleeceJacketPage fleeceJacketPage = new FleeceJacketPage(driver);
         fleeceJacketPage.pressCounterPlusButton();
         fleeceJacketPage.pressCounterPlusButton();
         fleeceJacketPage.pressAddToCartButton();
-        appiumActions.navigateBack(driver);
+        AppiumActions.navigateBack(driver);
 
         productsPage.pressBackpackProductText();
         BackPackPage backPackPage = new BackPackPage(driver);
         backPackPage.pressBlueCircleButton();
         backPackPage.pressCounterPlusButton();
         backPackPage.pressAddToCartButton();
-        appiumActions.navigateBack(driver);
+        AppiumActions.navigateBack(driver);
 
-        log.info("We check whether the correct products are in the cart");
+        LOG.info("We check whether the correct products are in the cart");
         productsPage.pressCartBadgeButton();
         CartPage cartPage = new CartPage(driver);
         List<String> productsNamesListInMyCart = cartPage.getTheListOfProductNamesInMyCart(driver);
@@ -263,39 +258,39 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         System.out.println("The products in the cart: \n" + productsNamesListInMyCart);
         System.out.println("The cart should contain these products: \n" + theListAsItShouldBe);
         if (productsNamesListInMyCart.equals(theListAsItShouldBe)) {
-            log.info("The correct products are in the cart");
+            LOG.info("The correct products are in the cart");
         } else {
-            log.error("There are no correct products in the cart");
+            LOG.error("There are no correct products in the cart");
         }
         Assert.assertEquals(productsNamesListInMyCart, theListAsItShouldBe, "The cart should contain the correct products, but it does not.");
 
-        log.info("We check the number of products in the cart");
+        LOG.info("We check the number of products in the cart");
         int productsQuantityInMyCart = productsPage.getProductCounterOnCartBadgeButton();
         System.out.println("The number of products in the cart: " + productsQuantityInMyCart);
         System.out.println("This should be the number of products in the cart: 12");
         if (productsQuantityInMyCart == 12) {
-            log.info("The number of products in the cart is correct");
+            LOG.info("The number of products in the cart is correct");
         } else {
-            log.error("The number of products in the cart is not correct");
+            LOG.error("The number of products in the cart is not correct");
         }
         Assert.assertEquals(productsQuantityInMyCart, 12, "The number of products in the cart should be 12, but it is " + productsQuantityInMyCart + ".");
 
         cartPage.pressProceedToCheckoutButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(testDataPath);
+        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(testData.get(13), "valid");
         loginPage.fillPasswordInput(testData.get(14), "valid");
         loginPage.pressLoginButton();
 
-        log.info("We check whether we are on the 'Checkout' page");
+        LOG.info("We check whether we are on the 'Checkout' page");
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         String checkoutPageTitleText = checkoutPage.getCheckoutPageTitleText();
         String expectedTitleText = "Checkout";
         if (checkoutPageTitleText.equals(expectedTitleText)) {
-            log.info("We are on the 'Checkout' page");
+            LOG.info("We are on the 'Checkout' page");
         } else {
-            log.error("We are not on the 'Checkout' page");
+            LOG.error("We are not on the 'Checkout' page");
         }
         Assert.assertEquals(checkoutPageTitleText, expectedTitleText, "The page title should be 'Checkout', but it is not.");
 
@@ -314,17 +309,17 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         checkoutPaymentPage.fillSecurityCodeInput(testData.get(23));
         checkoutPaymentPage.pressReviewOrderButton();
 
-        log.info("We check that the delivery data and payment data are correct");
+        LOG.info("We check that the delivery data and payment data are correct");
         CheckoutOrderReviewPage checkoutOrderReviewPage = new CheckoutOrderReviewPage(driver);
-        appiumActions.scrollWithFixCoordinates(driver, 2, "DOWN", 0.5);
+        AppiumActions.scrollWithFixCoordinates(driver, 2, "DOWN", 0.5);
         List<String> originalDeliveryData = Arrays.asList(testData.get(15), testData.get(16), testData.get(17), testData.get(18), testData.get(19), testData.get(20));
         List<String> deliveryDataOnOrderReviewPage = checkoutOrderReviewPage.getDeliveryAddressData();
         System.out.println("Delivery data is on the page: \n" + deliveryDataOnOrderReviewPage);
         System.out.println("Original delivery data: \n" + originalDeliveryData);
         if (deliveryDataOnOrderReviewPage.equals(originalDeliveryData)) {
-            log.info("The delivery data is correct");
+            LOG.info("The delivery data is correct");
         } else {
-            log.error("The delivery data is not correct");
+            LOG.error("The delivery data is not correct");
         }
         Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData, "The delivery data should match the provided data, but it does not.");
 
@@ -333,48 +328,48 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         System.out.println("Payment data is on the page: \n" + paymentDataOnOrderReviewPage);
         System.out.println("Original payment data: \n" + originalPaymentData);
         if (paymentDataOnOrderReviewPage.equals(originalPaymentData)) {
-            log.info("The payment data is correct");
+            LOG.info("The payment data is correct");
         } else {
-            log.error("The payment data is not correct");
+            LOG.error("The payment data is not correct");
         }
         Assert.assertEquals(paymentDataOnOrderReviewPage, originalPaymentData, "The payment data should match the provided data, but it does not.");
 
         checkoutOrderReviewPage.pressPlaceOrderButton();
 
-        log.info("We check whether we are on the 'Checkout Complete' page");
+        LOG.info("We check whether we are on the 'Checkout Complete' page");
         CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
         String checkoutCompletePageTitleText = checkoutCompletePage.getCheckoutCompletePageTitleText();
         String expectedPageTitleText = "Checkout Complete";
         if (checkoutCompletePageTitleText.equals(expectedPageTitleText)) {
-            log.info("We are on the 'Checkout Complete' page");
+            LOG.info("We are on the 'Checkout Complete' page");
         } else {
-            log.error("We are not on the 'Checkout Complete' page");
+            LOG.error("We are not on the 'Checkout Complete' page");
         }
         Assert.assertEquals(checkoutCompletePageTitleText, expectedPageTitleText, "The page title should be 'Checkout Complete', but it is not.");
 
         checkoutCompletePage.pressContinueShoppingButton();
 
-        log.info("We check if the cart is empty");
+        LOG.info("We check if the cart is empty");
         CartNoItemsPage cartNoItemsPage = new CartNoItemsPage(driver);
         productsPage.pressCartBadgeButton();
         boolean isDisplayedNoItemsText = cartNoItemsPage.isDisplayedNoItemsTextOnCartNoItemsPage();
         if (isDisplayedNoItemsText) {
-            log.info("The cart is empty");
+            LOG.info("The cart is empty");
         } else {
-            log.error("The cart is not empty");
+            LOG.error("The cart is not empty");
         }
         Assert.assertTrue(isDisplayedNoItemsText, "The cart should be empty, but it is not.");
 
-        log.info("We check if the cart counter is available");
+        LOG.info("We check if the cart counter is available");
         boolean isDisplayedProductCounter = productsPage.isDisplayedProductCounterOnCartBadgeButton();
         if (!isDisplayedProductCounter) {
-            log.info("The cart counter is not available");
+            LOG.info("The cart counter is not available");
         } else {
-            log.error("The cart counter is available");
+            LOG.error("The cart counter is available");
         }
         Assert.assertFalse(isDisplayedProductCounter, "The cart counter should not be available, but it is.");
 
-        appiumActions.navigateBack(driver);
+        AppiumActions.navigateBack(driver);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();
@@ -382,13 +377,13 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressLogOutButtonOnLogOutAlert();
         loginPage.pressOkButtonOnSuccessfulLoggedOutAlert();
 
-        log.info("We check whether we are on the 'Login' page");
+        LOG.info("We check whether we are on the 'Login' page");
         String loginPageTitleText = loginPage.getLoginPageTitleText();
         String expectedLoginPageTitleText = "Login";
         if (loginPageTitleText.equals(expectedLoginPageTitleText)) {
-            log.info("We are on the 'Login' page");
+            LOG.info("We are on the 'Login' page");
         } else {
-            log.error("We are not on the 'Login' page");
+            LOG.error("We are not on the 'Login' page");
         }
         Assert.assertEquals(loginPageTitleText, expectedLoginPageTitleText, "The page title should be 'Login', but it is not.");
     }

@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class AboutPage {
-    private static final Logger log = LogManager.getLogger(AboutPage.class);
+    private static final Logger LOG = LogManager.getLogger(AboutPage.class);
 
     public AboutPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

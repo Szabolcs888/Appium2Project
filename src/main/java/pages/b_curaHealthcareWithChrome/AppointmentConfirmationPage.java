@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppointmentConfirmationPage {
-    private static final Logger log = LogManager.getLogger(AppointmentConfirmationPage.class);
+    private static final Logger LOG = LogManager.getLogger(AppointmentConfirmationPage.class);
 
     public AppointmentConfirmationPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

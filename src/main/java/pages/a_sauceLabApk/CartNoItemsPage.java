@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CartNoItemsPage {
-    private static final Logger log = LogManager.getLogger(CartNoItemsPage.class);
+    private static final Logger LOG = LogManager.getLogger(CartNoItemsPage.class);
     private WebDriverWait wait;
 
     public CartNoItemsPage(AndroidDriver driver) {
@@ -32,7 +32,7 @@ public class CartNoItemsPage {
 
     public void pressGoShoppingButton() {
         wait.until(ExpectedConditions.elementToBeClickable(goShoppingButton));
-        log.info("We press the 'Go Shopping' button");
+        LOG.info("We press the 'Go Shopping' button");
         goShoppingButton.click();
     }
 

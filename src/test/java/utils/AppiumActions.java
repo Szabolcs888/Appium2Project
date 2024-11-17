@@ -13,22 +13,22 @@ import org.openqa.selenium.interactions.Sequence;
 import java.time.Duration;
 
 public class AppiumActions {
-    private static final Logger log = LogManager.getLogger(AppiumActions.class);
+    private static final Logger LOG = LogManager.getLogger(AppiumActions.class);
 
-    public void navigateBack(AndroidDriver driver) {
-        log.info("We press the back button on the phone");
+    public static void navigateBack(AndroidDriver driver) {
+        LOG.info("We press the back button on the phone");
         driver.navigate().back();
     }
 
-    public void scrollWithFreeCoordinates(AndroidDriver driver, int numbersOfRuns, int startX, int startY, int endX, int endY, String logMessage) {
+    public static void scrollWithFreeCoordinates(AndroidDriver driver, int numbersOfRuns, int startX, int startY, int endX, int endY, String logMessage) {
         for (int i = 0; i < numbersOfRuns; i++) {
-            log.info(logMessage);
+            LOG.info(logMessage);
             Duration SCROLL_DURATION = Duration.ofMillis(300);
             scrollAction(driver, new Point(startX, startY), new Point(endX, endY), SCROLL_DURATION);
         }
     }
 
-    public void scrollWithFixCoordinates(AndroidDriver driver, int numbersOfRuns, String pageDirection, double scrollRatio) {
+    public static void scrollWithFixCoordinates(AndroidDriver driver, int numbersOfRuns, String pageDirection, double scrollRatio) {
         for (int i = 0; i < numbersOfRuns; i++) {
             CommonUtils.threadSleep(500);
             Duration SCROLL_DURATION = Duration.ofMillis(300);
@@ -44,26 +44,26 @@ public class AppiumActions {
             int right = (int) (midPoint.x + midPoint.x * scrollRatio);
             switch (pageDirection) {
                 case "UP" -> {
-                    log.info("We scroll up");
+                    LOG.info("We scroll up");
                     scrollAction(driver, new Point(midPoint.x, top), new Point(midPoint.x, bottom), SCROLL_DURATION);
                 }
                 case "DOWN" -> {
-                    log.info("We scroll down");
+                    LOG.info("We scroll down");
                     scrollAction(driver, new Point(midPoint.x, bottom), new Point(midPoint.x, top), SCROLL_DURATION);
                 }
                 case "LEFT" -> {
-                    log.info("We scroll to the left");
+                    LOG.info("We scroll to the left");
                     scrollAction(driver, new Point(left, midPoint.y), new Point(right, midPoint.y), SCROLL_DURATION);
                 }
                 case "RIGHT" -> {
-                    log.info("We scroll to the right");
+                    LOG.info("We scroll to the right");
                     scrollAction(driver, new Point(right, midPoint.y), new Point(left, midPoint.y), SCROLL_DURATION);
                 }
             }
         }
     }
 
-    public void scrollAction(AndroidDriver driver, Point start, Point end, Duration duration) {
+    public static void scrollAction(AndroidDriver driver, Point start, Point end, Duration duration) {
         PointerInput input = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         Sequence fingerAction = new Sequence(input, 0); //mutató létrehozása
         fingerAction.addAction(input.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), start.x, start.y));

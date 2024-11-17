@@ -12,25 +12,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CommonUtils {
-    private static final Logger log = LogManager.getLogger(CommonUtils.class);
+    private static final Logger LOG = LogManager.getLogger(CommonUtils.class);
 
     public static void threadSleep(int milliseconds) {
         try {
             Thread.sleep(milliseconds);
         } catch (InterruptedException e) {
-            log.error("Thread sleep was interrupted");
+            LOG.error("Thread sleep was interrupted");
             throw new RuntimeException(e);
         }
     }
 
     public static List<String> readDataFromFile(String path) {
-        log.info("We request the test data from the list");
+        LOG.info("We request the test data from the list");
         List<String> lines = new ArrayList<>();
         try {
             lines = Files.readAllLines(Paths.get(path));
         } catch (
                 IOException e) {
-            log.error("The testData's file is not found!");
+            LOG.error("The testData's file is not found!");
         }
         return splittingLines(lines);
     }
@@ -41,7 +41,7 @@ public class CommonUtils {
             try {
                 splitLines.add(item.split("_:")[1]);
             } catch (ArrayIndexOutOfBoundsException e) {
-                log.warn("Incorrect format in line: {}", item);
+                LOG.warn("Incorrect format in line: {}", item);
                 throw new RuntimeException("Test data format error: " + item, e);
             }
         }

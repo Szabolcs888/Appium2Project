@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class MakeAppointmentPage {
-    private static final Logger log = LogManager.getLogger(MakeAppointmentPage.class);
+    private static final Logger LOG = LogManager.getLogger(MakeAppointmentPage.class);
     AndroidDriver driver;
 
     public MakeAppointmentPage(AndroidDriver driver) {
@@ -66,26 +66,26 @@ public class MakeAppointmentPage {
     }
 
     public void pressFacilityDropDownMenuButton() {
-        log.info("We press the 'Facility' dropdown menu button");
+        LOG.info("We press the 'Facility' dropdown menu button");
         facilityDropDownMenuButton.click();
     }
 
     public void choiceFacilityOption(String option) {
-        log.info("We choice the '{}' option", option);
+        LOG.info("We choice the '{}' option", option);
         Select select = new Select(facilityChoice);
         select.selectByVisibleText(option);
     }
 
     public void pressApplyForHospitalReadmissionCheckBoxOrDontPressIt(String option) {
         if (option.equals("Yes")) {
-            log.info("We press the 'Apply for hospital readmission' checkbox");
+            LOG.info("We press the 'Apply for hospital readmission' checkbox");
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", applyForHospitalReadmissionCheckbox);
         } else
-            log.info("We do not press the 'Apply for hospital readmission' checkbox");
+            LOG.info("We do not press the 'Apply for hospital readmission' checkbox");
     }
 
     public void choiceHealthcareProgramOption(String option) {
-        log.info("We choice the '{}' in the Healthcare Program radio box", option);
+        LOG.info("We choice the '{}' in the Healthcare Program radio box", option);
         for (WebElement element : healthcareProgramOptions) {
             String idValue = element.getAttribute("value");
             if (idValue.equals(option)) {
@@ -96,17 +96,17 @@ public class MakeAppointmentPage {
     }
 
     public void fillDateOfVisitInput(String date) {
-        log.info("We fill the date of visit input field with: '{}'", date);
+        LOG.info("We fill the date of visit input field with: '{}'", date);
         dateOfVisit.sendKeys(date);
     }
 
     public void fillCommentInput(String comment) {
-        log.info("We write a comment in a comment field: '{}'", comment);
+        LOG.info("We write a comment in a comment field: '{}'", comment);
         formBox.sendKeys(comment);
     }
 
     public void pressBookAppointmentButton() {
-        log.info("We press the 'Book Appointment' button");
+        LOG.info("We press the 'Book Appointment' button");
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", bookAppointmentButton);
     }
 }

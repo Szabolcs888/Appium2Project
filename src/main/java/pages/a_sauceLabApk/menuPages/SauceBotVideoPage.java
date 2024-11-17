@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class SauceBotVideoPage {
-    private static final Logger log = LogManager.getLogger(SauceBotVideoPage.class);
+    private static final Logger LOG = LogManager.getLogger(SauceBotVideoPage.class);
 
     public SauceBotVideoPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

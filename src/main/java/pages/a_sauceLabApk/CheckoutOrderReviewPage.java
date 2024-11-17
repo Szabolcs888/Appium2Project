@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CheckoutOrderReviewPage {
-    private static final Logger log = LogManager.getLogger(CheckoutOrderReviewPage.class);
+    private static final Logger LOG = LogManager.getLogger(CheckoutOrderReviewPage.class);
 
     public CheckoutOrderReviewPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -28,7 +28,7 @@ public class CheckoutOrderReviewPage {
     private List<WebElement> paymentDataListAsElements;
 
     public void pressPlaceOrderButton() {
-        log.info("We press the 'Place Order' button");
+        LOG.info("We press the 'Place Order' button");
         placeOrderButton.click();
     }
 

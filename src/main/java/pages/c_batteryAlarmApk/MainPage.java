@@ -12,7 +12,7 @@ import utils.CommonUtils;
 import java.util.List;
 
 public class MainPage {
-    private static final Logger log = LogManager.getLogger(MainPage.class);
+    private static final Logger LOG = LogManager.getLogger(MainPage.class);
 
     public MainPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -145,22 +145,22 @@ public class MainPage {
     private WebElement voiceWarningHindiText;
 
     public void pressInformationButton() {
-        log.info("We press the 'information' button");
+        LOG.info("We press the 'information' button");
         informationButton.click();
     }
 
     public void pressCloseAppButton() {
-        log.info("We press the 'X' (close app) button");
+        LOG.info("We press the 'X' (close app) button");
         closeAppButton.click();
     }
 
     public void pressPutItOnTheTrayButton() {
-        log.info("We press the '-' (put it on the tray) button");
+        LOG.info("We press the '-' (put it on the tray) button");
         putItOnTheTrayButton.click();
     }
 
     public void pressNoButtonOnWarningPopupWindow() {
-        log.info("We press the 'NO' button on warning popup window");
+        LOG.info("We press the 'NO' button on warning popup window");
         noButtonOnWarningPopupWindow.click();
     }
 
@@ -192,7 +192,7 @@ public class MainPage {
     }
 
     public void pressMaxAlarmMinusButton(int buttonPressCounter) {
-        log.info("We press the 'Max Alarm' minus button {} times", buttonPressCounter);
+        LOG.info("We press the 'Max Alarm' minus button {} times", buttonPressCounter);
         for (int i = 0; i < buttonPressCounter; i++) {
             if (getCurrentMaxAlarmValue() == 1) {
                 break;
@@ -202,7 +202,7 @@ public class MainPage {
     }
 
     public void pressMinAlarmPlusButton(int buttonPressCounter) {
-        log.info("We press the 'Min Alarm' plus button {} times", buttonPressCounter);
+        LOG.info("We press the 'Min Alarm' plus button {} times", buttonPressCounter);
         for (int i = 0; i < buttonPressCounter; i++) {
             if (getCurrentMinAlarmValue() == 100) {
                 break;

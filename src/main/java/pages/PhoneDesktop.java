@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class PhoneDesktop {
-    private static final Logger log = LogManager.getLogger(PhoneDesktop.class);
+    private static final Logger LOG = LogManager.getLogger(PhoneDesktop.class);
 
     public PhoneDesktop(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -19,7 +19,7 @@ public class PhoneDesktop {
     private WebElement batteryAlarmAppIcon;
 
     public void pressBatteryAlarmAppIcon() {
-        log.info("We press the 'Battery Alarm' app icon");
+        LOG.info("We press the 'Battery Alarm' app icon");
         batteryAlarmAppIcon.click();
     }
 }

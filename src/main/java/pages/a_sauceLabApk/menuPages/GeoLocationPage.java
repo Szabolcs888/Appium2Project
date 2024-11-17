@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class GeoLocationPage {
-    private static final Logger log = LogManager.getLogger(GeoLocationPage.class);
+    private static final Logger LOG = LogManager.getLogger(GeoLocationPage.class);
 
     public GeoLocationPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

@@ -11,13 +11,13 @@ import java.io.IOException;
 import java.net.ServerSocket;
 
 public class AppiumServerFromCode {
-    private static final Logger log = LogManager.getLogger(AppiumServerFromCode.class);
+    private static final Logger LOG = LogManager.getLogger(AppiumServerFromCode.class);
     static AppiumDriverLocalService server;
 
     public void startAppiumServer() {
         if (!isAppiumServerRunning(4723)) {
             getInstance().start();
-            log.info("The Appium Server starts from code");
+            LOG.info("The Appium Server starts from code");
             System.out.println("URL: " + server.getUrl());
             System.out.println("Is Server Running: " + server.isRunning());
         } else {
@@ -71,7 +71,7 @@ public class AppiumServerFromCode {
     public void stopAppiumServer() {
         if (server != null && server.isRunning()) {
             getInstance().stop();
-            log.info("The Appium Server is down\n");
+            LOG.info("The Appium Server is down\n");
         }
     }
 }

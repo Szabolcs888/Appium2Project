@@ -16,15 +16,15 @@ import tests._baseTests.SauceLabApkBaseTest;
 import utils.ScreenshotUtils;
 
 public class TestListener implements ITestListener {
-    private static final Logger log = LogManager.getLogger(TestListener.class);
+    private static final Logger LOG = LogManager.getLogger(TestListener.class);
     private static ExtentReports extentReports;
     private static ExtentTest extentTest;
-    String suiteName;
+    private String suiteName;
 
     @Override
     public void onStart(ITestContext context) {
         suiteName = context.getSuite().getName();
-        log.info("{} test(s) run will start", suiteName);
+        LOG.info("{} test(s) run will start", suiteName);
         extentReports = ExtentAppender.setupExtentReports();
         ExtentAppender.setExtentReports(extentReports);
     }
@@ -33,14 +33,14 @@ public class TestListener implements ITestListener {
     public void onTestStart(ITestResult result) {
         extentTest = extentReports.createTest(result.getMethod().getMethodName());
         ExtentAppender.setExtentTest(extentTest);
-        log.info("Test STARTED: {}", result.getName());
+        LOG.info("Test STARTED: {}", result.getName());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
         extentTest.log(Status.PASS, "Test Passed");
         ExtentAppender.reset();
-        log.info("Test PASSED: {}", result.getName());
+        LOG.info("Test PASSED: {}", result.getName());
     }
 
     @Override
@@ -55,26 +55,26 @@ public class TestListener implements ITestListener {
 
         extentTest.log(Status.FAIL, "Test Failed");
         ExtentAppender.reset();
-        log.error("Test FAILED: {}", testName);
+        LOG.error("Test FAILED: {}", testName);
     }
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-        log.error("Test FAILED with certain success percentage: {}", result.getName());
+        LOG.error("Test FAILED with certain success percentage: {}", result.getName());
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
         extentTest.log(Status.SKIP, "Test Skipped");
         ExtentAppender.reset();
-        log.info("Test SKIPPED: {}", result.getName());
+        LOG.info("Test SKIPPED: {}", result.getName());
     }
 
     @Override
     public void onFinish(ITestContext context) {
         extentReports.flush();
         ExtentAppender.reset();
-        log.info("{} test(s) run completed\n", suiteName);
+        LOG.info("{} test(s) run completed\n", suiteName);
     }
 
     private AndroidDriver getDriverFromTestClass(Object testClass) {

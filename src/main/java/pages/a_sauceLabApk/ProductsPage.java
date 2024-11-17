@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductsPage {
-    private static final Logger log = LogManager.getLogger(ProductsPage.class);
+    private static final Logger LOG = LogManager.getLogger(ProductsPage.class);
     private WebDriverWait wait;
 
     public ProductsPage(AndroidDriver driver) {
@@ -109,74 +109,74 @@ public class ProductsPage {
     }
 
     public void pressDropdownMenuButton() {
-        log.info("We press the dropdown menu button");
+        LOG.info("We press the dropdown menu button");
         dropdownMenuButton.click();
     }
 
     public void pressAbcOrderOption() {
-        log.info("We select the abc order option");
+        LOG.info("We select the abc order option");
         abcAscendingOrderOption.click();
     }
 
     public void pressAbcOrderBackwardsOption() {
-        log.info("We select the reverse abc order option");
+        LOG.info("We select the reverse abc order option");
         abcDescendingOrderOption.click();
     }
 
     public void pressPriceAscendingOrderOption() {
-        log.info("We select the ascending price order option");
+        LOG.info("We select the ascending price order option");
         priceAscendingOrderOption.click();
     }
 
     public void pressPriceDescendingOrderOption() {
-        log.info("We select the descending price order option");
+        LOG.info("We select the descending price order option");
         priceDescendingOrderOption.click();
     }
 
     public void pressBikeLightProductText() {
-        log.info("We press the 'Bike Light's text");
+        LOG.info("We press the 'Bike Light's text");
         bikeLightProductText.click();
     }
 
     public void pressOnesieProductText() {
         wait.until(ExpectedConditions.elementToBeClickable(onesieProductText));
-        log.info("We press the 'Onesie's text");
+        LOG.info("We press the 'Onesie's text");
         onesieProductText.click();
     }
 
     public void pressFleeceJacketProductText() {
-        log.info("We press the 'Fleece Jacket's text");
+        LOG.info("We press the 'Fleece Jacket's text");
         fleeceJacketProductText.click();
     }
 
     public void pressBoltTShirtProductText() {
-        log.info("We press the 'Bolt T-shirt's text");
+        LOG.info("We press the 'Bolt T-shirt's text");
         boltTShirtProductText.click();
     }
 
     public void pressTestAllTheThingsTShirtProductText() {
-        log.info("We press the 'Test allTheThings T-shirt's text");
+        LOG.info("We press the 'Test allTheThings T-shirt's text");
         testAllTheThingsTShirtProductText.click();
     }
 
     public void pressBackpackProductText() {
-        log.info("We press the 'Backpack's text");
+        LOG.info("We press the 'Backpack's text");
         backpackProductText.click();
     }
 
     public void pressCartBadgeButton() {
         CommonUtils.threadSleep(500);
-        log.info("We press the cart badge button");
+        LOG.info("We press the cart badge button");
         cartBadgeButton.click();
     }
 
     public void pressThirdStarButtonUnderTheBackpack() {
-        log.info("We press the third star button under the 'Backpack'");
+        LOG.info("We press the third star button under the 'Backpack'");
         thirdStarButtonUnderTheBackpack.click();
     }
 
     public void pressCloseModalButtonOnFeedbackPopup() {
-        log.info("We press the 'Close Modal' button");
+        LOG.info("We press the 'Close Modal' button");
         closeModalButtonOnFeedbackPopup.click();
     }
 

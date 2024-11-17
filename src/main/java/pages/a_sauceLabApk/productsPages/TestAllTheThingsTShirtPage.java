@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class TestAllTheThingsTShirtPage {
-    private static final Logger log = LogManager.getLogger(TestAllTheThingsTShirtPage.class);
+    private static final Logger LOG = LogManager.getLogger(TestAllTheThingsTShirtPage.class);
 
     public TestAllTheThingsTShirtPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -25,17 +25,17 @@ public class TestAllTheThingsTShirtPage {
     private WebElement blackCircleButton;
 
     public void pressAddToCartButton() {
-        log.info("We press the 'Add To Cart' button");
+        LOG.info("We press the 'Add To Cart' button");
         addToCartButton.click();
     }
 
     public void pressGrayCircleButton() {
-        log.info("We press the gray circle button");
+        LOG.info("We press the gray circle button");
         grayCircleButton.click();
     }
 
     public void pressBlackCircleButton() {
-        log.info("We press the black circle button");
+        LOG.info("We press the black circle button");
         blackCircleButton.click();
     }
 }

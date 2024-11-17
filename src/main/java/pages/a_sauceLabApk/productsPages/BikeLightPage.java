@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class BikeLightPage {
-    private static final Logger log = LogManager.getLogger(BikeLightPage.class);
+    private static final Logger LOG = LogManager.getLogger(BikeLightPage.class);
 
     public BikeLightPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -22,12 +22,12 @@ public class BikeLightPage {
     private WebElement counterPlusButton;
 
     public void pressCounterPlusButton() {
-        log.info("We press the counter plus button");
+        LOG.info("We press the counter plus button");
         counterPlusButton.click();
     }
 
     public void pressAddToCartButton() {
-        log.info("We press the 'Add To Cart' button");
+        LOG.info("We press the 'Add To Cart' button");
         addToCartButton.click();
     }
 }

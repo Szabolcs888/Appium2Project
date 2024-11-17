@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FleeceJacketPage {
-    private static final Logger log = LogManager.getLogger(FleeceJacketPage.class);
+    private static final Logger LOG = LogManager.getLogger(FleeceJacketPage.class);
     private WebDriverWait wait;
 
     public FleeceJacketPage(AndroidDriver driver) {
@@ -42,23 +42,23 @@ public class FleeceJacketPage {
 
 
     public void pressAddToCartButton() {
-        log.info("We press the 'Add To Cart' button");
+        LOG.info("We press the 'Add To Cart' button");
         addToCartButton.click();
     }
 
     public void pressCounterPlusButton() {
-        log.info("We press the counter plus button");
+        LOG.info("We press the counter plus button");
         counterPlusButton.click();
     }
 
     public void pressFifthStarButton() {
-        log.info("We press the fifth star button under the 'Fleece Jacket's picture");
+        LOG.info("We press the fifth star button under the 'Fleece Jacket's picture");
         fifthStarButton.click();
     }
 
     public void pressCloseModalButtonOnFeedbackPopup() {
         wait.until(ExpectedConditions.elementToBeClickable(closeModalButtonOnFeedbackPopup));
-        log.info("We press the 'Close Modal' button");
+        LOG.info("We press the 'Close Modal' button");
         closeModalButtonOnFeedbackPopup.click();
     }
 

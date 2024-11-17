@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutPage {
-    private static final Logger log = LogManager.getLogger(CheckoutPage.class);
+    private static final Logger LOG = LogManager.getLogger(CheckoutPage.class);
 
     public CheckoutPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -49,37 +49,37 @@ public class CheckoutPage {
     }
 
     public void fillFullNameInput(String fullName) {
-        log.info("We fill the 'Full Name' input field");
+        LOG.info("We fill the 'Full Name' input field");
         fullNameInput.sendKeys(fullName);
     }
 
     public void fillAddressLine1Input(String addressLine1) {
-        log.info("We fill the 'Address Line 1' input field");
+        LOG.info("We fill the 'Address Line 1' input field");
         addressLine1Input.sendKeys(addressLine1);
     }
 
     public void fillCityInput(String city) {
-        log.info("We fill the 'City' input field");
+        LOG.info("We fill the 'City' input field");
         cityInput.sendKeys(city);
     }
 
     public void fillStateRegionInput(String stateRegion) {
-        log.info("We fill the 'State Region' input field");
+        LOG.info("We fill the 'State Region' input field");
         stateRegionInput.sendKeys(stateRegion);
     }
 
     public void fillZipCodeInput(String zipCode) {
-        log.info("We fill the 'Zip Code' input field");
+        LOG.info("We fill the 'Zip Code' input field");
         zipCodeInput.sendKeys(zipCode);
     }
 
     public void fillCountryInput(String country) {
-        log.info("We fill the 'Country' input field");
+        LOG.info("We fill the 'Country' input field");
         countryInput.sendKeys(country);
     }
 
     public void pressToPaymentButton() {
-        log.info("We press the 'To Payment' button");
+        LOG.info("We press the 'To Payment' button");
         toPaymentButton.click();
     }
 }

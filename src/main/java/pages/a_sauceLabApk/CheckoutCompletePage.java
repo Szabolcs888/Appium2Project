@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutCompletePage {
-    private static final Logger log = LogManager.getLogger(CheckoutCompletePage.class);
+    private static final Logger LOG = LogManager.getLogger(CheckoutCompletePage.class);
 
     public CheckoutCompletePage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -20,16 +20,16 @@ public class CheckoutCompletePage {
     private WebElement continueShoppingButton;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Checkout Complete\")")
-    private WebElement CheckoutCompleteText;
+    private WebElement checkoutCompleteText;
 
     public void pressContinueShoppingButton() {
-        log.info("We press the 'Continue Shopping' button");
+        LOG.info("We press the 'Continue Shopping' button");
         continueShoppingButton.click();
     }
 
     public String getCheckoutCompletePageTitleText() {
         try {
-            return CheckoutCompleteText.getText();
+            return checkoutCompleteText.getText();
         } catch (NoSuchElementException e) {
             return "The title text is not available";
         }

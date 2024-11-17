@@ -11,7 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    private static final Logger log = LogManager.getLogger(LoginPage.class);
+    private static final Logger LOG = LogManager.getLogger(LoginPage.class);
     AndroidDriver driver;
 
     public LoginPage(AndroidDriver driver) {
@@ -35,22 +35,22 @@ public class LoginPage {
     private WebElement loginText;
 
     public void fillUserNameInput(String userName, String validOrInvalidUsername) {
-        log.info("We fill the 'Username' input field with the {} username", validOrInvalidUsername);
+        LOG.info("We fill the 'Username' input field with the {} username", validOrInvalidUsername);
         usernameInput.sendKeys(userName);
     }
 
     public void fillPasswordInput(String password, String validOrInvalidPassword) {
-        log.info("We fill the 'Password' input field with the {} password", validOrInvalidPassword);
+        LOG.info("We fill the 'Password' input field with the {} password", validOrInvalidPassword);
         passwordInput.sendKeys(password);
     }
 
     public void pressLoginButton() {
-        log.info("We press the 'Login' button");
+        LOG.info("We press the 'Login' button");
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", loginButton);
     }
 
     public void pressLoginText() {
-        log.info("We press the 'Login' text");
+        LOG.info("We press the 'Login' text");
         loginText.click();
     }
 

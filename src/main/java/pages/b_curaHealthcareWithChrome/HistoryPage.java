@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HistoryPage {
-    private static final Logger log = LogManager.getLogger(HistoryPage.class);
+    private static final Logger LOG = LogManager.getLogger(HistoryPage.class);
 
     public HistoryPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

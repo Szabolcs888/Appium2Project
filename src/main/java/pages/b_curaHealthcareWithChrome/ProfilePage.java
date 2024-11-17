@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ProfilePage {
-    private static final Logger log = LogManager.getLogger(ProfilePage.class);
+    private static final Logger LOG = LogManager.getLogger(ProfilePage.class);
 
     public ProfilePage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -23,7 +23,7 @@ public class ProfilePage {
     private WebElement logoutButton;
 
     public void pressLogoutButton() {
-        log.info("We press the 'Logout' Button");
+        LOG.info("We press the 'Logout' Button");
         logoutButton.click();
     }
 

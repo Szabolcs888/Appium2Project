@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HamburgerMenu {
-    private static final Logger log = LogManager.getLogger(HamburgerMenu.class);
+    private static final Logger LOG = LogManager.getLogger(HamburgerMenu.class);
 
     public HamburgerMenu(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -28,22 +28,22 @@ public class HamburgerMenu {
     private WebElement historyButton;
 
     public void pressHamburgerMenuButton() {
-        log.info("We press the 'Hamburger menu' button");
+        LOG.info("We press the 'Hamburger menu' button");
         hamburgerMenuButton.click();
     }
 
     public void pressLoginButton() {
-        log.info("We press the 'Login' button");
+        LOG.info("We press the 'Login' button");
         loginButton.click();
     }
 
     public void pressProfileButton() {
-        log.info("We press the 'Profile' button");
+        LOG.info("We press the 'Profile' button");
         profileButton.click();
     }
 
     public void pressHistoryButton() {
-        log.info("We press the 'History' button");
+        LOG.info("We press the 'History' button");
         historyButton.click();
     }
 }

@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HamburgerMenu {
-    private static final Logger log = LogManager.getLogger(HamburgerMenu.class);
+    private static final Logger LOG = LogManager.getLogger(HamburgerMenu.class);
     private WebDriverWait wait;
 
     public HamburgerMenu(AndroidDriver driver) {
@@ -61,62 +61,62 @@ public class HamburgerMenu {
 
     public void pressHamburgerMenuButton() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenuButton));
-        log.info("We press the 'Hamburger menu' button");
+        LOG.info("We press the 'Hamburger menu' button");
         hamburgerMenuButton.click();
     }
 
     public void pressLogInButton() {
-        log.info("We press the 'Log In' button");
+        LOG.info("We press the 'Log In' button");
         logInButton.click();
     }
 
     public void pressLogOutButton() {
-        log.info("We press the 'Log Out' button");
+        LOG.info("We press the 'Log Out' button");
         logOutButton.click();
     }
 
     public void pressLogOutButtonOnLogOutAlert() {
-        log.info("We press the 'Log Out' button On the 'Log Out' Alert");
+        LOG.info("We press the 'Log Out' button On the 'Log Out' Alert");
         logOutButtonOnLogOutAlert.click();
     }
 
     public void pressWebviewButton() {
-        log.info("We press the 'Webview' button");
+        LOG.info("We press the 'Webview' button");
         webviewButton.click();
     }
 
     public void pressQrCodeScannerButton() {
-        log.info("We press the 'QR Code Scanner' button");
+        LOG.info("We press the 'QR Code Scanner' button");
         qrCodeScannerButton.click();
     }
 
     public void pressGeoLocationButton() {
-        log.info("We press the 'Geo Location' button");
+        LOG.info("We press the 'Geo Location' button");
         geoLocationButton.click();
     }
 
     public void pressDrawingButton() {
-        log.info("We press the 'Drawing' button");
+        LOG.info("We press the 'Drawing' button");
         drawingButton.click();
     }
 
     public void pressFingerPrintButton() {
-        log.info("We press the 'Finger Print' button");
+        LOG.info("We press the 'Finger Print' button");
         fingerPrintButton.click();
     }
 
     public void pressAboutButton() {
-        log.info("We press the 'About' button");
+        LOG.info("We press the 'About' button");
         aboutButton.click();
     }
 
     public void pressApiCallsButton() {
-        log.info("We press the 'Api Calls' button");
+        LOG.info("We press the 'Api Calls' button");
         apiCallsButton.click();
     }
 
     public void pressSauceBotVideoButton() {
-        log.info("We press the 'Sauce Bot Video' button");
+        LOG.info("We press the 'Sauce Bot Video' button");
         sauceBotVideoButton.click();
     }
 }

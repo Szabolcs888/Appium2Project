@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class BackPackPage {
-    private static final Logger log = LogManager.getLogger(BackPackPage.class);
+    private static final Logger LOG = LogManager.getLogger(BackPackPage.class);
 
     public BackPackPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -28,22 +28,22 @@ public class BackPackPage {
     private WebElement counterPlusButton;
 
     public void pressAddToCartButton() {
-        log.info("We press the 'Add To Cart' button");
+        LOG.info("We press the 'Add To Cart' button");
         addToCartButton.click();
     }
 
     public void pressRedCircleButton() {
-        log.info("We press the red circle button");
+        LOG.info("We press the red circle button");
         redCircleButton.click();
     }
 
     public void pressBlueCircleButton() {
-        log.info("We press the blue circle button");
+        LOG.info("We press the blue circle button");
         redCircleButton.click();
     }
 
     public void pressCounterPlusButton() {
-        log.info("We press the counter plus button");
+        LOG.info("We press the counter plus button");
         counterPlusButton.click();
     }
 }

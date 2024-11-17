@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class BoltTShirtPage {
-    private static final Logger log = LogManager.getLogger(BoltTShirtPage.class);
+    private static final Logger LOG = LogManager.getLogger(BoltTShirtPage.class);
 
     public BoltTShirtPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -19,7 +19,7 @@ public class BoltTShirtPage {
     private WebElement addToCartButton;
 
     public void pressAddToCartButton() {
-        log.info("We press the 'Add To Cart' button");
+        LOG.info("We press the 'Add To Cart' button");
         addToCartButton.click();
     }
 }

@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class FingerPrintPage {
-    private static final Logger log = LogManager.getLogger(FingerPrintPage.class);
+    private static final Logger LOG = LogManager.getLogger(FingerPrintPage.class);
 
     public FingerPrintPage(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

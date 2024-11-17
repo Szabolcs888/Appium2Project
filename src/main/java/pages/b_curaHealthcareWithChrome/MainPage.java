@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class MainPage {
-    private static final Logger log = LogManager.getLogger(MainPage.class);
+    private static final Logger LOG = LogManager.getLogger(MainPage.class);
     AndroidDriver driver;
 
     public MainPage(AndroidDriver driver) {

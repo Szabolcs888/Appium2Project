@@ -1,20 +1,17 @@
 package tests.b_curaHealthcareWithChrome;
 
-import listeners.TestListener;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.b_curaHealthcareWithChrome.HamburgerMenu;
 import pages.b_curaHealthcareWithChrome.LoginPage;
 import pages.b_curaHealthcareWithChrome.MakeAppointmentPage;
 import tests._baseTests.ChromeBrowserBaseTest;
 
-@Listeners(TestListener.class)
 public class LoginTestsWithDataProvider extends ChromeBrowserBaseTest {
-    private static final Logger log = LogManager.getLogger(LoginTestsWithDataProvider.class);
+    private static final Logger LOG = LogManager.getLogger(LoginTestsWithDataProvider.class);
 
     /**
      * Here, I did not read the data directly from a file for the sake of illustration.
@@ -44,13 +41,13 @@ public class LoginTestsWithDataProvider extends ChromeBrowserBaseTest {
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        log.info("We check whether the login is successful. The expected result: {}", expectedResult);
+        LOG.info("We check whether the login is successful. The expected result: {}", expectedResult);
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
         boolean isMakeAppointmentPageLoaded = makeAppointmentPage.isPageLoaded();
         if (isMakeAppointmentPageLoaded) {
-            log.info("Login is successful");
+            LOG.info("Login is successful");
         } else {
-            log.error("Login failed");
+            LOG.error("Login failed");
         }
         Assert.assertEquals(isMakeAppointmentPageLoaded, expectedResult, "The login result should be '" + expectedResult + "', but it is '" + isMakeAppointmentPageLoaded + "'.");
     }

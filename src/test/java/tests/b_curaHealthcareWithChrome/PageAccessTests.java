@@ -1,10 +1,8 @@
 package tests.b_curaHealthcareWithChrome;
 
-import listeners.TestListener;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.b_curaHealthcareWithChrome.HamburgerMenu;
 import pages.b_curaHealthcareWithChrome.HistoryPage;
@@ -16,10 +14,9 @@ import utils.CommonUtils;
 
 import java.util.List;
 
-@Listeners(TestListener.class)
 public class PageAccessTests extends ChromeBrowserBaseTest {
-    private static final Logger log = LogManager.getLogger(PageAccessTests.class);
-    private static final String testDataPath = "src/test/resources/testData/curaHealthcareCredentials.txt";
+    private static final Logger LOG = LogManager.getLogger(PageAccessTests.class);
+    private static final String TEST_DATA_PATH = "src/test/resources/testData/curaHealthcareCredentials.txt";
 
     @Test(priority = 1,
             groups = {"smoke"})
@@ -30,26 +27,25 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(testDataPath);
+        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(testData.get(1), "valid");
         loginPage.fillPasswordInput(testData.get(2), "valid");
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        AppiumActions appiumActions = new AppiumActions();
-        appiumActions.scrollWithFixCoordinates(driver, 1, "UP", 0.5);
+        AppiumActions.scrollWithFixCoordinates(driver, 1, "UP", 0.5);
 
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressProfileButton();
 
-        log.info("We check whether we are on the 'Profile' page");
+        LOG.info("We check whether we are on the 'Profile' page");
         ProfilePage profilePage = new ProfilePage(driver);
         boolean isProfilePageLoaded = profilePage.isPageLoaded();
         if (isProfilePageLoaded) {
-            log.info("We are on the 'Profile' page");
+            LOG.info("We are on the 'Profile' page");
         } else {
-            log.error("We are not on the 'Profile' page");
+            LOG.error("We are not on the 'Profile' page");
         }
         Assert.assertTrue(isProfilePageLoaded, "The 'Profile' page should be loaded, but it is not.");
     }
@@ -63,26 +59,25 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(testDataPath);
+        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(testData.get(1), "valid");
         loginPage.fillPasswordInput(testData.get(2), "valid");
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        AppiumActions appiumActions = new AppiumActions();
-        appiumActions.scrollWithFixCoordinates(driver, 1, "UP", 0.5);
+        AppiumActions.scrollWithFixCoordinates(driver, 1, "UP", 0.5);
 
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressHistoryButton();
 
-        log.info("We check whether we are on the 'History' page");
+        LOG.info("We check whether we are on the 'History' page");
         HistoryPage historyPage = new HistoryPage(driver);
         boolean isHistoryPageLoaded = historyPage.isPageLoaded();
         if (isHistoryPageLoaded) {
-            log.info("We are on the 'History' page");
+            LOG.info("We are on the 'History' page");
         } else {
-            log.error("We are not on the 'History' page");
+            LOG.error("We are not on the 'History' page");
         }
         Assert.assertTrue(isHistoryPageLoaded, "The 'History' page should be loaded, but it is not.");
     }

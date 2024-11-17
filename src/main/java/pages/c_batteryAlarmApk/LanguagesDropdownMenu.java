@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class LanguagesDropdownMenu {
-    private static final Logger log = LogManager.getLogger(LanguagesDropdownMenu.class);
+    private static final Logger LOG = LogManager.getLogger(LanguagesDropdownMenu.class);
 
     public LanguagesDropdownMenu(AndroidDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -70,7 +70,7 @@ public class LanguagesDropdownMenu {
     private WebElement suomiOption;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Türkçe\")")
-    private WebElement türkceOption;
+    private WebElement turkceOption;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"български\")")
     private WebElement bulgarianOption;
@@ -112,162 +112,162 @@ public class LanguagesDropdownMenu {
     private WebElement hindiOption;
 
     public void pressLanguageSelectorDropdownMenuButton() {
-        log.info("We press the language selector dropdown menu button");
+        LOG.info("We press the language selector dropdown menu button");
         languageSelectorDropdownMenu.click();
     }
 
     public void chooseEnglishOption() {
-        log.info("We choose the 'English' option");
+        LOG.info("We choose the 'English' option");
         englishOption.click();
     }
 
     public void chooseCestinaOption() {
-        log.info("We choose the 'cestina' option");
+        LOG.info("We choose the 'cestina' option");
         cestinaOption.click();
     }
 
     public void chooseDanskOption() {
-        log.info("We choose the 'dansk' option");
+        LOG.info("We choose the 'dansk' option");
         danskOption.click();
     }
 
     public void chooseDeutschOption() {
-        log.info("We choose the 'Deutsch' option");
+        LOG.info("We choose the 'Deutsch' option");
         deutschOption.click();
     }
 
     public void chooseEspanolOption() {
-        log.info("We choose the 'espanol' option");
+        LOG.info("We choose the 'espanol' option");
         espanolOption.click();
     }
 
     public void chooseFrancaisOption() {
-        log.info("We choose the 'francais' option");
+        LOG.info("We choose the 'francais' option");
         francaisOption.click();
     }
 
     public void chooseIndonesiaOption() {
-        log.info("We choose the 'Indonesia' option");
+        LOG.info("We choose the 'Indonesia' option");
         indonesiaOption.click();
     }
 
     public void chooseItalianoOption() {
-        log.info("We choose the 'italiano' option");
+        LOG.info("We choose the 'italiano' option");
         italianoOption.click();
     }
 
     public void chooseMagyarOption() {
-        log.info("We choose the 'magyar' option");
+        LOG.info("We choose the 'magyar' option");
         magyarOption.click();
     }
 
     public void chooseNederlandsOption() {
-        log.info("We choose the 'Nederlands' option");
+        LOG.info("We choose the 'Nederlands' option");
         nederlandsOption.click();
     }
 
     public void choosePolskiOption() {
-        log.info("We choose the 'polski' option");
+        LOG.info("We choose the 'polski' option");
         polskiOption.click();
     }
 
     public void choosePortuguesOption() {
-        log.info("We choose the 'portugues' option");
+        LOG.info("We choose the 'portugues' option");
         portuguesOption.click();
     }
 
     public void chooseRomanaOption() {
-        log.info("We choose the 'romana' option");
+        LOG.info("We choose the 'romana' option");
         romanaOption.click();
     }
 
     public void chooseSlovencinaOption() {
-        log.info("We choose the 'slovencina' option");
+        LOG.info("We choose the 'slovencina' option");
         slovencinaOption.click();
     }
 
     public void chooseSvenskaOption() {
-        log.info("We choose the 'svenska' option");
+        LOG.info("We choose the 'svenska' option");
         svenskaOption.click();
     }
 
     public void chooseSrpskiOption() {
-        log.info("We choose the 'srpski' option");
+        LOG.info("We choose the 'srpski' option");
         srpskiOption.click();
     }
 
     public void chooseSuomiOption() {
-        log.info("We choose the 'Suomi' option");
+        LOG.info("We choose the 'Suomi' option");
         suomiOption.click();
     }
 
-    public void chooseTürkceOption() {
-        log.info("We choose the 'Türkce' option");
-        türkceOption.click();
+    public void chooseTurkceOption() {
+        LOG.info("We choose the 'Türkce' option");
+        turkceOption.click();
     }
 
     public void chooseBulgarianOption() {
-        log.info("We choose the 'bulgarian' option");
+        LOG.info("We choose the 'bulgarian' option");
         bulgarianOption.click();
     }
 
     public void chooseRussianOption() {
-        log.info("We choose the 'russian' option");
+        LOG.info("We choose the 'russian' option");
         russianOption.click();
     }
 
     public void chooseUkrainianOption() {
-        log.info("We choose the 'Ukrainian' option");
+        LOG.info("We choose the 'Ukrainian' option");
         ukrainianOption.click();
     }
 
     public void chooseGreekOption() {
-        log.info("We choose the 'Greek' option");
+        LOG.info("We choose the 'Greek' option");
         greekOption.click();
     }
 
     public void chooseVietnameseOption() {
-        log.info("We choose the 'Vietnamese' option");
+        LOG.info("We choose the 'Vietnamese' option");
         vietnameseOption.click();
     }
 
     public void chooseJapaneseOption() {
-        log.info("We choose the 'japanese' option");
+        LOG.info("We choose the 'japanese' option");
         japaneseOption.click();
     }
 
     public void chooseChineseOption() {
-        log.info("We choose the 'chinese' option");
+        LOG.info("We choose the 'chinese' option");
         chineseOption.click();
     }
 
     public void chooseKoreanOption() {
-        log.info("We choose the 'korean' option");
+        LOG.info("We choose the 'korean' option");
         koreanOption.click();
     }
 
     public void chooseThaiOption() {
-        log.info("We choose the 'thai' option");
+        LOG.info("We choose the 'thai' option");
         thaiOption.click();
     }
 
     public void chooseArabicOption() {
-        log.info("We choose the 'arab' option");
+        LOG.info("We choose the 'arab' option");
         arabOption.click();
     }
 
     public void chooseFarsiOption() {
-        log.info("We choose the 'farsi' option");
+        LOG.info("We choose the 'farsi' option");
         farsiOption.click();
     }
 
     public void chooseHebrewOption() {
-        log.info("We choose the 'hebrew' option");
+        LOG.info("We choose the 'hebrew' option");
         hebrewOption.click();
     }
 
     public void chooseHindiOption() {
-        log.info("We choose the 'hindi' option");
+        LOG.info("We choose the 'hindi' option");
         hindiOption.click();
     }
 }
