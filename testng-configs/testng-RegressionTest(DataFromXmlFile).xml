@@ -5,9 +5,9 @@ attribute of the @Test annotation of testNg, but as listed here. -->
 <suite name="Regression" verbose="1">
     <test name="Regression test (data from xml file)">
         <packages>
-            <package name="tests.a_sauceLabApk"/>
-            <package name="tests.b_curaHealthcareWithChrome"/>
-            <package name="tests.c_batteryAlarmApk"/>
+            <package name="com.myappium2project.tests.saucelab"/>
+            <package name="com.myappium2project.tests.curahealthcarewithchrome"/>
+            <package name="com.myappium2project.tests.batteryalarm"/>
         </packages>
     </test>
 </suite>

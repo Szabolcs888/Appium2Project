@@ -3,8 +3,8 @@
 <suite name="Languages and Alarm" verbose="1">
     <test name="Languages and Alarm tests (data from xml file)_Battery A.">
         <classes>
-            <class name="tests.c_batteryAlarmApk.LanguagesTests"/>
-            <class name="tests.c_batteryAlarmApk.AlarmTests"/>
+            <class name="com.myappium2project.tests.batteryalarm.LanguagesTests"/>
+            <class name="com.myappium2project.tests.batteryalarm.AlarmTests"/>
         </classes>
     </test>
 </suite>

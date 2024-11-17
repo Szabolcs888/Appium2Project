@@ -3,7 +3,6 @@
     <suite-files>
         <suite-file path="testng-SmokeTest.xml"/>
         <suite-file path="testng-RegressionTest(DataFromXmlFile).xml"/>
-        <suite-file path="testng-BA_LanguagesAndAlarmTests.xml"/>
         <suite-file path="testng-CU_EndToEndAndAppointmentConfirmationTests.xml"/>
         <suite-file path="testng-SL_DropdownMenuAndFeedbackPopupTests.xml"/>
         <suite-file path="testng-SL_EndToEndAndCartemptiyngTests.xml"/>
@@ -11,6 +10,6 @@
     </suite-files>
 
     <listeners>
-        <listener class-name="listeners.TestListener"/>
+        <listener class-name="com.myappium2project.listeners.TestListener"/>
     </listeners>
 </suite>

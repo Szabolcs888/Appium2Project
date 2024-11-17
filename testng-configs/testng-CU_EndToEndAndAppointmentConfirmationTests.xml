@@ -3,8 +3,8 @@
 <suite name="EndToEnd and Appointment Confirmation" verbose="1">
     <test name="EndToEnd and Appointment Confirmation tests (data from xml file)_Cura">
         <classes>
-            <class name="tests.b_curaHealthcareWithChrome.EndToEndTests"/>
-            <class name="tests.b_curaHealthcareWithChrome.AppointmentConfirmationTests"/>
+            <class name="com.myappium2project.tests.curahealthcarewithchrome.EndToEndTests"/>
+            <class name="com.myappium2project.tests.curahealthcarewithchrome.AppointmentConfirmationTests"/>
         </classes>
     </test>
 </suite>

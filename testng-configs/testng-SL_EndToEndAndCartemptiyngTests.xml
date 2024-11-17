@@ -3,8 +3,8 @@
 <suite name="EndToEnd and Cartemptiyng" verbose="1">
     <test name="EndToEnd and Cartemptiyng tests (data from xml file)_Saucelab">
         <classes>
-            <class name="tests.a_sauceLabApk.EndToEndTests"/>
-            <class name="tests.a_sauceLabApk.CartEmptyingTests"/>
+            <class name="com.myappium2project.tests.saucelab.EndToEndTests"/>
+            <class name="com.myappium2project.tests.saucelab.CartEmptyingTests"/>
         </classes>
     </test>
 </suite>

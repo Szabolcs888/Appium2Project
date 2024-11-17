@@ -3,8 +3,8 @@
 <suite name="DropdownMenu and FeedbackPopup" verbose="1">
     <test name="DropdownMenu and FeedbackPopup tests (data from xml file)_Saucelab">
         <classes>
-            <class name="tests.a_sauceLabApk.DropdownMenuTests"/>
-            <class name="tests.a_sauceLabApk.FeedbackPopupTests"/>
+            <class name="com.myappium2project.tests.saucelab.DropdownMenuTests"/>
+            <class name="com.myappium2project.tests.saucelab.FeedbackPopupTests"/>
         </classes>
     </test>
 </suite>

@@ -9,11 +9,11 @@
         </groups>
 
         <classes>
-            <class name="tests.a_sauceLabApk.LoginTests"/>
-            <class name="tests.a_sauceLabApk.PageAccessTests"/>
-            <class name="tests.b_curaHealthcareWithChrome.LoginTests"/>
-            <class name="tests.b_curaHealthcareWithChrome.PageAccessTests"/>
-            <class name="tests.c_batteryAlarmApk.PageAccessTests"/>
+            <class name="com.myappium2project.tests.saucelab.LoginTests"/>
+            <class name="com.myappium2project.tests.saucelab.PageAccessTests"/>
+            <class name="com.myappium2project.tests.curahealthcarewithchrome.LoginTests"/>
+            <class name="com.myappium2project.tests.curahealthcarewithchrome.PageAccessTests"/>
+            <class name="com.myappium2project.tests.batteryalarm.PageAccessTests"/>
         </classes>
     </test>
 </suite>
