@@ -12,7 +12,7 @@ import java.net.ServerSocket;
 
 public class AppiumServerFromCode {
     private static final Logger LOG = LogManager.getLogger(AppiumServerFromCode.class);
-    static AppiumDriverLocalService server;
+    private static AppiumDriverLocalService server;
 
     public void startAppiumServer() {
         if (!isAppiumServerRunning(4723)) {
@@ -43,14 +43,14 @@ public class AppiumServerFromCode {
         return isServerRunning;
     }
 
-    static AppiumDriverLocalService getInstance() {
+    private static AppiumDriverLocalService getInstance() {
         if (server == null) {
             setInstance();
         }
         return server;
     }
 
-    static void setInstance() {
+    private static void setInstance() {
         String nodeJSMainPath = "c:/Users/szigl/AppData/Roaming/npm/node_modules/appium/build/lib/main.js";
         String nodeExePath = "c:/Program Files/nodejs/node.exe";
         String logFilePath = System.getProperty("user.dir") + "/logs/serverLog.log";

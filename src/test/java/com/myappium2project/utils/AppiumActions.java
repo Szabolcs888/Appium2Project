@@ -1,6 +1,7 @@
 package com.myappium2project.utils;
 
 import com.google.common.collect.ImmutableList;
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -73,7 +74,7 @@ public class AppiumActions {
         driver.perform(ImmutableList.of(fingerAction));
     }
 
-    public void longPress(AndroidDriver driver, WebElement webElement) {
+    public static void longPress(AndroidDriver driver, WebElement webElement) {
         Point location = webElement.getLocation();
         PointerInput input = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         Sequence fingerAction = new Sequence(input, 0);

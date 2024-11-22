@@ -20,7 +20,7 @@ public class ScreenshotUtils {
         return "https://appiumreports.netlify.app/actualReportScreenshots/" + testName + ".png";
     }
 
-    public static void takeScreenshot(AndroidDriver driver, String screenshotPath, String actualReportScreenshotPath) {
+    private static void takeScreenshot(AndroidDriver driver, String screenshotPath, String actualReportScreenshotPath) {
         try {
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(scrFile, new File(screenshotPath));

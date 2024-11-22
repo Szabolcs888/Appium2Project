@@ -1,6 +1,7 @@
 package com.myappium2project.pages.saucelab;
 
-import io.appium.java_client.AppiumBy;
+import com.myappium2project.utils.ListUtils;
+import com.myappium2project.utils.ScrollUtils;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -42,20 +43,11 @@ public class CartPage {
         boolean moreElements = true;
         int previousSize = 0;
         while (moreElements) {
-            for (WebElement item : productsNamesListInMyCartAsElements) {
-                String productName = item.getText();
-                if (!productsNamesListInMyCartAsString.contains(productName)) {
-                    productsNamesListInMyCartAsString.add(productName);
-                }
-            }
+            ListUtils.addUniqueItemsToStringList(productsNamesListInMyCartAsString, productsNamesListInMyCartAsElements);
             // We check if new items have appeared
             if (productsNamesListInMyCartAsString.size() > previousSize) {
                 previousSize = productsNamesListInMyCartAsString.size();
-                try {
-                    driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollForward();"));
-                } catch (Exception e) {
-                    moreElements = false;
-                }
+                moreElements = ScrollUtils.tryScroll(driver);
             } else {
                 moreElements = false;
             }

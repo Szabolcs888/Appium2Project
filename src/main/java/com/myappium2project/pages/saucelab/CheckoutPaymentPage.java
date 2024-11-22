@@ -14,10 +14,6 @@ public class CheckoutPaymentPage {
     private static final Logger LOG = LogManager.getLogger(CheckoutPaymentPage.class);
     private WebDriverWait wait;
 
-    public CheckoutPaymentPage(AndroidDriver driver) {
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     public CheckoutPaymentPage(AndroidDriver driver, WebDriverWait wait) {
         this.wait = wait;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);

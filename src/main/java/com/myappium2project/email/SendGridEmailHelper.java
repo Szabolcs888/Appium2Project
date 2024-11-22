@@ -44,7 +44,7 @@ public class SendGridEmailHelper {
         }
     }
 
-    public static void sendTestResults(String subject, String htmlContent, List<String> attachmentPaths) throws IOException {
+    private static void sendTestResults(String subject, String htmlContent, List<String> attachmentPaths) throws IOException {
         Mail mail = createEmail(subject, htmlContent, attachmentPaths);
         sendEmail(mail);
     }
@@ -96,11 +96,11 @@ public class SendGridEmailHelper {
         }
     }
 
-    public static String readHtmlFromFile(String filePath) throws IOException {
+    private static String readHtmlFromFile(String filePath) throws IOException {
         return new String(Files.readAllBytes(new File(filePath).toPath()));
     }
 
-    public static String getHtmlLink(String link) {
+    private static String getHtmlLink(String link) {
         String htmlLink = "<h1>Extent Report</h1>" +
                 "<p>A detailed report can be found at the following link:</p>" +
                 "<a href=\"" + link + "\">View Extent Report</a>";

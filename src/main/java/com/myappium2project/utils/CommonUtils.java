@@ -35,7 +35,7 @@ public class CommonUtils {
         return splittingLines(lines);
     }
 
-    public static List<String> splittingLines(List<String> lines) {
+    private static List<String> splittingLines(List<String> lines) {
         List<String> splitLines = new ArrayList<>();
         for (String item : lines) {
             try {
@@ -48,7 +48,7 @@ public class CommonUtils {
         return splitLines;
     }
 
-    public static void deleteDirectoryContents(File directory) {
+    private static void deleteDirectoryContents(File directory) {
         File[] files = directory.listFiles();
         if (files != null) {
             for (File file : files) {
@@ -59,7 +59,7 @@ public class CommonUtils {
         }
     }
 
-    public static void deleteFile(String path) {
+    private static void deleteFile(String path) {
         File file = new File(path);
         if (file.delete()) {
         } else {

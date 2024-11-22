@@ -15,7 +15,7 @@ import java.util.List;
 
 public class MakeAppointmentPage {
     private static final Logger LOG = LogManager.getLogger(MakeAppointmentPage.class);
-    AndroidDriver driver;
+    private final AndroidDriver driver;
 
     public MakeAppointmentPage(AndroidDriver driver) {
         this.driver = driver;

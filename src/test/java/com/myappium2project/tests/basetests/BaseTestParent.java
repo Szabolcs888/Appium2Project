@@ -49,7 +49,7 @@ public class BaseTestParent {
         executePostSuiteActions(testStartDateTime, testEndDateTime);
     }
 
-    public static void executePostSuiteActions(String testStartDateTime, String testEndDateTime) {
+    private static void executePostSuiteActions(String testStartDateTime, String testEndDateTime) {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             CommonUtils.threadSleep(1000);
             CommonUtils.copyFile("target/surefire-reports/emailable-report.html", "reports/emailable-report.html");

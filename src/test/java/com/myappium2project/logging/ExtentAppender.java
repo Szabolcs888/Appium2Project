@@ -20,7 +20,7 @@ public class ExtentAppender extends AbstractAppender {
     private static ExtentReports extentReports;
     private static ExtentTest extentTest;
 
-    protected ExtentAppender(String name, Layout<?> layout) {
+    private ExtentAppender(String name, Layout<?> layout) {
         super(name, null, layout, false);
     }
 

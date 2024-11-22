@@ -1,6 +1,7 @@
 package com.myappium2project.pages.saucelab;
 
-import io.appium.java_client.AppiumBy;
+import com.myappium2project.utils.ListUtils;
+import com.myappium2project.utils.ScrollUtils;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -103,7 +104,7 @@ public class ProductsPage {
         }
     }
 
-    public Integer getProductCounterOnCartBadgeButton() {
+    public int getProductCounterOnCartBadgeButton() {
         int productCounter = Integer.parseInt(productCounterOnCartBadgeButton.getText());
         return productCounter;
     }
@@ -201,22 +202,12 @@ public class ProductsPage {
         List<String> productNameListAsString = new ArrayList<>();
         boolean moreElements = true;
         int previousSize = 0;
-
         while (moreElements) {
-            for (WebElement item : productsNamesListAsElements) {
-                String productName = item.getText();
-                if (!productNameListAsString.contains(productName)) {
-                    productNameListAsString.add(productName);
-                }
-            }
+            ListUtils.addUniqueItemsToStringList(productNameListAsString, productsNamesListAsElements);
             // We check if new items have appeared
             if (productNameListAsString.size() > previousSize) {
                 previousSize = productNameListAsString.size();
-                try {
-                    driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollForward();"));
-                } catch (Exception e) {
-                    moreElements = false;
-                }
+                moreElements = ScrollUtils.tryScroll(driver);
             } else {
                 moreElements = false;
             }
@@ -228,21 +219,12 @@ public class ProductsPage {
         List<Float> productPriceListAsFloat = new ArrayList<>();
         boolean moreElements = true;
         int previousSize = 0;
-
         while (moreElements) {
-            for (WebElement item : productsPricesListAsElements) {
-                float price = Float.parseFloat(item.getText().substring(1));
-                if (!productPriceListAsFloat.contains(price)) {
-                    productPriceListAsFloat.add(price);
-                }
-            }
+            ListUtils.addUniqueItemsToFloatList(productPriceListAsFloat, productsPricesListAsElements);
+            // We check if new items have appeared
             if (productPriceListAsFloat.size() > previousSize) {
                 previousSize = productPriceListAsFloat.size();
-                try {
-                    driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollForward();"));
-                } catch (Exception e) {
-                    moreElements = false;
-                }
+                moreElements = ScrollUtils.tryScroll(driver);
             } else {
                 moreElements = false;
             }
