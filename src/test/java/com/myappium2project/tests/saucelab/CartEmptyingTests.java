@@ -15,7 +15,7 @@ import java.util.List;
 
 public class CartEmptyingTests extends SauceLabApkBaseTest {
     private static final Logger LOG = LogManager.getLogger(CartEmptyingTests.class);
-    private static final String TEST_DATA_PATH = TestDataFilePaths.SAUCELAB_TEST_DATA_PATH;
+    private static final String TEST_DATA_PATH = TestDataFilePaths.getSaucelabTestDataPath();
 
     @Test(timeOut = 45000, priority = 1)
     public void testPlacingProductsInTheCartAndThenEmptyingThemSL() throws InterruptedException {

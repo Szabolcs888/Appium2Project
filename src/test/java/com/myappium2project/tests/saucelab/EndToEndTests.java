@@ -17,7 +17,7 @@ import java.util.List;
 
 public class EndToEndTests extends SauceLabApkBaseTest {
     private static final Logger LOG = LogManager.getLogger(EndToEndTests.class);
-    private static final String TEST_DATA_PATH = TestDataFilePaths.SAUCELAB_TEST_DATA_PATH;
+    private static final String TEST_DATA_PATH = TestDataFilePaths.getSaucelabTestDataPath();
 
     @Test(priority = 1,
             description = "Login first then shopping")

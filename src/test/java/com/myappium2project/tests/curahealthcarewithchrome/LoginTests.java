@@ -15,7 +15,7 @@ import java.util.List;
 
 public class LoginTests extends ChromeBrowserBaseTest {
     private static final Logger LOG = LogManager.getLogger(LoginTests.class);
-    private static final String TEST_DATA_PATH = TestDataFilePaths.CURA_TEST_DATA_PATH;
+    private static final String TEST_DATA_PATH = TestDataFilePaths.getCuraTestDataPath();
     private static final String EXPECTED_ERROR_MESSAGE = "Login failed! Please ensure the username and password are valid.";
 
     @Test(priority = 1,

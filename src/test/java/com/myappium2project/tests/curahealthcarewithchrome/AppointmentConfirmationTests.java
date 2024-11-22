@@ -17,7 +17,7 @@ import java.util.List;
 
 public class AppointmentConfirmationTests extends ChromeBrowserBaseTest {
     private static final Logger LOG = LogManager.getLogger(AppointmentConfirmationTests.class);
-    private static final String TEST_DATA_PATH = TestDataFilePaths.CURA_TEST_DATA_PATH;
+    private static final String TEST_DATA_PATH = TestDataFilePaths.getCuraTestDataPath();
 
     @Test
     public void testAppointmentConfirmationCura() {

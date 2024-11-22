@@ -17,7 +17,7 @@ import java.util.List;
 
 public class PageAccessTests extends ChromeBrowserBaseTest {
     private static final Logger LOG = LogManager.getLogger(PageAccessTests.class);
-    private static final String TEST_DATA_PATH = TestDataFilePaths.CURA_TEST_DATA_PATH;
+    private static final String TEST_DATA_PATH = TestDataFilePaths.getCuraTestDataPath();
 
     @Test(priority = 1,
             groups = {"smoke"})
