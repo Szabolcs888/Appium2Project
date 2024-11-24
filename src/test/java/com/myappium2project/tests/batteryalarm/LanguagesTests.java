@@ -1,8 +1,5 @@
 package com.myappium2project.tests.batteryalarm;
 
-import com.myappium2project.tests.saucelab.LoginTests;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import com.myappium2project.pages.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.batteryalarm.MainPage;
@@ -11,7 +8,6 @@ import org.testng.annotations.Test;
 import com.myappium2project.utils.AppiumActions;
 
 public class LanguagesTests extends BatteryAlarmBaseTest {
-    private static final Logger LOG = LogManager.getLogger(LoginTests.class);
 
     @Test
     public void testLanguages() {

@@ -1,7 +1,5 @@
 package com.myappium2project.tests.batteryalarm;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.batteryalarm.InformationPage;
@@ -11,7 +9,6 @@ import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
 import com.myappium2project.utils.AppiumActions;
 
 public class PageAccessTests extends BatteryAlarmBaseTest {
-    private static final Logger LOG = LogManager.getLogger(PageAccessTests.class);
 
     @Test(priority = 1,
             groups = {"smoke"})

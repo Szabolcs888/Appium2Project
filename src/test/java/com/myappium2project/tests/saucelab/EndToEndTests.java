@@ -5,8 +5,6 @@ import com.myappium2project.pages.saucelab.productsPages.*;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
 import com.myappium2project.utils.AppiumActions;
 import com.myappium2project.utils.TestDataFilePaths;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.utils.CommonUtils;
@@ -16,7 +14,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class EndToEndTests extends SauceLabApkBaseTest {
-    private static final Logger LOG = LogManager.getLogger(EndToEndTests.class);
     private static final String TEST_DATA_PATH = TestDataFilePaths.getSaucelabTestDataPath();
 
     @Test(priority = 1,

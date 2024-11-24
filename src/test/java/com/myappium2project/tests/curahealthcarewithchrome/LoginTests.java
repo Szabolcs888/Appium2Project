@@ -2,8 +2,6 @@ package com.myappium2project.tests.curahealthcarewithchrome;
 
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
 import com.myappium2project.utils.TestDataFilePaths;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.curahealthcarewithchrome.HamburgerMenu;
@@ -14,7 +12,6 @@ import com.myappium2project.utils.CommonUtils;
 import java.util.List;
 
 public class LoginTests extends ChromeBrowserBaseTest {
-    private static final Logger LOG = LogManager.getLogger(LoginTests.class);
     private static final String TEST_DATA_PATH = TestDataFilePaths.getCuraTestDataPath();
     private static final String EXPECTED_ERROR_MESSAGE = "Login failed! Please ensure the username and password are valid.";
 

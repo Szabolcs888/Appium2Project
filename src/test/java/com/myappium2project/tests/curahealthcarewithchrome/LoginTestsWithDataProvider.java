@@ -1,8 +1,6 @@
 package com.myappium2project.tests.curahealthcarewithchrome;
 
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -11,11 +9,8 @@ import com.myappium2project.pages.curahealthcarewithchrome.LoginPage;
 import com.myappium2project.pages.curahealthcarewithchrome.MakeAppointmentPage;
 
 public class LoginTestsWithDataProvider extends ChromeBrowserBaseTest {
-    private static final Logger LOG = LogManager.getLogger(LoginTestsWithDataProvider.class);
 
-    /**
-     * Here, I did not read the data directly from a file for the sake of illustration.
-     **/
+    // Here, I did not read the data directly from a file for the sake of illustration.
     @DataProvider(name = "loginData")
     public Object[][] loginDataProvider() {
         Object[][] data = {

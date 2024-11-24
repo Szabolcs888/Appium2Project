@@ -1,17 +1,14 @@
 package com.myappium2project.tests.batteryalarm;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.myappium2project.pages.PhoneDesktop;
+import com.myappium2project.pages.common.PhoneDesktop;
 import com.myappium2project.pages.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.batteryalarm.MainPage;
 import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
 import com.myappium2project.utils.AppiumActions;
 
 public class AlarmTests extends BatteryAlarmBaseTest {
-    private static final Logger LOG = LogManager.getLogger(AlarmTests.class);
 
     @Test(description = "The prerequisite for the test is that the phone is charging.")
     public void testMaxAlarm() {

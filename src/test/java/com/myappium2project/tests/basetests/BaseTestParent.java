@@ -24,11 +24,11 @@ public class BaseTestParent {
         Configurator.setLevel("org.testng.internal.Utils", Level.OFF);
     }
 
-    protected static final Logger LOG = LogManager.getLogger(BaseTestParent.class);
+    protected Logger LOG;
     protected AndroidDriver driver;
     protected WebDriverWait wait;
-    protected AppiumServerFromCode appiumServerFromCode = new AppiumServerFromCode();
-    protected static String testStartDateTime;
+    private AppiumServerFromCode appiumServerFromCode = new AppiumServerFromCode();
+    private static String testStartDateTime;
 
     public AndroidDriver getDriver() {
         return driver;
@@ -36,6 +36,7 @@ public class BaseTestParent {
 
     @BeforeSuite(alwaysRun = true)
     public void setUpSuite() {
+        LOG = LogManager.getLogger(this.getClass());
         Configurator.initialize(null, "config/log4j2.properties");
         appiumServerFromCode.startAppiumServer();
         CommonUtils.cleanReportsAndScreenshots();

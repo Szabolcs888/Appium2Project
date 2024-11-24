@@ -1,13 +1,9 @@
 package com.myappium2project.server;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.File;
 import java.io.IOException;
 
 public class NetlifyUploader {
-    private static final Logger LOG = LogManager.getLogger(NetlifyUploader.class);
 
     public static void uploadReportToNetlify() {
         try {

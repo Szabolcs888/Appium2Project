@@ -1,7 +1,6 @@
 package com.myappium2project.utils;
 
 import com.google.common.collect.ImmutableList;
-import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

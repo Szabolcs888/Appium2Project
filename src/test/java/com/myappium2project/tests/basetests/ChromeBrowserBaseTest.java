@@ -10,9 +10,6 @@ import java.time.Duration;
 
 public class ChromeBrowserBaseTest extends BaseTestParent {
 
-    public ChromeBrowserBaseTest() {
-    }
-
     @BeforeMethod(alwaysRun = true)
     public void setUpMethod() throws MalformedURLException {
         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");

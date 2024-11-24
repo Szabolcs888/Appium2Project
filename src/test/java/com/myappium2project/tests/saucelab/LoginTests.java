@@ -2,8 +2,6 @@ package com.myappium2project.tests.saucelab;
 
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
 import com.myappium2project.utils.TestDataFilePaths;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import com.myappium2project.pages.saucelab.HamburgerMenu;
 import com.myappium2project.pages.saucelab.LoginPage;
@@ -14,7 +12,6 @@ import com.myappium2project.utils.CommonUtils;
 import java.util.List;
 
 public class LoginTests extends SauceLabApkBaseTest {
-    private static final Logger LOG = LogManager.getLogger(LoginTests.class);
     private static final String TEST_DATA_PATH = TestDataFilePaths.getSaucelabTestDataPath();
     private static final String EXPECTED_ERROR_MESSAGE = "Provided credentials do not match any user in this service.";
 

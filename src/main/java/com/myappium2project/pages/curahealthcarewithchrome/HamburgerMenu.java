@@ -1,17 +1,16 @@
 package com.myappium2project.pages.curahealthcarewithchrome;
 
+import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HamburgerMenu {
-    private static final Logger LOG = LogManager.getLogger(HamburgerMenu.class);
+public class HamburgerMenu extends BasePage {
 
     public HamburgerMenu(AndroidDriver driver) {
+        super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 

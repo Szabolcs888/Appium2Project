@@ -1,12 +1,11 @@
 package com.myappium2project.pages.saucelab;
 
+import com.myappium2project.pages.BasePage;
 import com.myappium2project.utils.ListUtils;
 import com.myappium2project.utils.ScrollUtils;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
@@ -18,15 +17,16 @@ import com.myappium2project.utils.CommonUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductsPage {
-    private static final Logger LOG = LogManager.getLogger(ProductsPage.class);
+public class ProductsPage extends BasePage {
     private WebDriverWait wait;
 
     public ProductsPage(AndroidDriver driver) {
+        super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     public ProductsPage(AndroidDriver driver, WebDriverWait wait) {
+        super();
         this.wait = wait;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }

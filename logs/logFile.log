@@ -1,228 +1,29 @@
-[INFO ] 2024-10-23 22:31:33 - listeners.TestListener           - Smoke test(s) run will start
-[INFO ] 2024-10-23 22:31:34 - tests._baseTests.BaseTestParent  - ------- START: Sauce Lab Apk -------
-[INFO ] 2024-10-23 22:31:50 - listeners.TestListener           - Test STARTED: testLoginWithValidUsernameInvalidPassword
-[INFO ] 2024-10-23 22:31:52 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:31:52 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Log In' button
-[INFO ] 2024-10-23 22:31:55 - utils.CommonUtils                - We request the test data from the list
-[INFO ] 2024-10-23 22:31:55 - pages.a_sauceLabApk.LoginPage    - We fill the 'Username' input field with the valid username
-[INFO ] 2024-10-23 22:31:56 - pages.a_sauceLabApk.LoginPage    - We fill the 'Password' input field with the invalid password
-[INFO ] 2024-10-23 22:31:57 - pages.a_sauceLabApk.LoginPage    - We press the 'Login' button
-[INFO ] 2024-10-23 22:31:58 - tests.a_sauceLabApk.LoginTests   - We check whether the error message appears and, if so, whether it is correct
-[INFO ] 2024-10-23 22:31:59 - tests.a_sauceLabApk.LoginTests   - The error message is correct
-[INFO ] 2024-10-23 22:32:00 - listeners.TestListener           - Test PASSED: testLoginWithValidUsernameInvalidPassword
-[INFO ] 2024-10-23 22:32:01 - tests._baseTests.BaseTestParent  - ------- STOPPED: Sauce Lab Apk -------
+[INFO ] 2024-11-24 15:30:06 - listeners.TestListener                   - Default Suite test(s) run will start
+[INFO ] 2024-11-24 15:30:07 - batteryalarm.PageAccessTests             - ------- Start: Battery Alarm Apk -------
+[INFO ] 2024-11-24 15:30:18 - listeners.TestListener                   - Test STARTED: testMainPageAccess
+[INFO ] 2024-11-24 15:30:22 - batteryalarm.PageAccessTests             - We check whether we are on the 'Main' page
+[INFO ] 2024-11-24 15:30:22 - batteryalarm.PageAccessTests             - We are on the 'Main' page
+[INFO ] 2024-11-24 15:30:22 - listeners.TestListener                   - Test PASSED: testMainPageAccess
+[INFO ] 2024-11-24 15:30:23 - batteryalarm.PageAccessTests             - ------- Stopped: Battery Alarm Apk -------
 
-[INFO ] 2024-10-23 22:32:01 - tests._baseTests.BaseTestParent  - ------- START: Sauce Lab Apk -------
-[INFO ] 2024-10-23 22:32:12 - listeners.TestListener           - Test STARTED: testLoginWithInvalidUsernameValidPassword
-[INFO ] 2024-10-23 22:32:13 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:32:13 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Log In' button
-[INFO ] 2024-10-23 22:32:16 - utils.CommonUtils                - We request the test data from the list
-[INFO ] 2024-10-23 22:32:16 - pages.a_sauceLabApk.LoginPage    - We fill the 'Username' input field with the invalid username
-[INFO ] 2024-10-23 22:32:17 - pages.a_sauceLabApk.LoginPage    - We fill the 'Password' input field with the valid password
-[INFO ] 2024-10-23 22:32:18 - pages.a_sauceLabApk.LoginPage    - We press the 'Login' button
-[INFO ] 2024-10-23 22:32:19 - tests.a_sauceLabApk.LoginTests   - We check whether the error message appears and, if so, whether it is correct
-[INFO ] 2024-10-23 22:32:20 - tests.a_sauceLabApk.LoginTests   - The error message is correct
-[INFO ] 2024-10-23 22:32:21 - listeners.TestListener           - Test PASSED: testLoginWithInvalidUsernameValidPassword
-[INFO ] 2024-10-23 22:32:22 - tests._baseTests.BaseTestParent  - ------- STOPPED: Sauce Lab Apk -------
+[INFO ] 2024-11-24 15:30:23 - batteryalarm.PageAccessTests             - ------- Start: Battery Alarm Apk -------
+[INFO ] 2024-11-24 15:30:31 - listeners.TestListener                   - Test STARTED: testInformationPageAccess
+[INFO ] 2024-11-24 15:30:33 - batteryalarm.MainPage                    - We press the 'information' button
+[INFO ] 2024-11-24 15:30:33 - batteryalarm.PageAccessTests             - We check whether we are on the 'Information' page
+[INFO ] 2024-11-24 15:30:34 - batteryalarm.PageAccessTests             - We are on the 'Information' page
+[INFO ] 2024-11-24 15:30:34 - listeners.TestListener                   - Test PASSED: testInformationPageAccess
+[INFO ] 2024-11-24 15:30:35 - batteryalarm.PageAccessTests             - ------- Stopped: Battery Alarm Apk -------
 
-[INFO ] 2024-10-23 22:32:22 - tests._baseTests.BaseTestParent  - ------- START: Sauce Lab Apk -------
-[INFO ] 2024-10-23 22:32:32 - listeners.TestListener           - Test STARTED: testLoginWithValidData
-[INFO ] 2024-10-23 22:32:33 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:32:33 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Log In' button
-[INFO ] 2024-10-23 22:32:36 - utils.CommonUtils                - We request the test data from the list
-[INFO ] 2024-10-23 22:32:36 - pages.a_sauceLabApk.LoginPage    - We fill the 'Username' input field with the valid username
-[INFO ] 2024-10-23 22:32:37 - pages.a_sauceLabApk.LoginPage    - We fill the 'Password' input field with the valid password
-[INFO ] 2024-10-23 22:32:38 - pages.a_sauceLabApk.LoginPage    - We press the 'Login' button
-[INFO ] 2024-10-23 22:32:39 - tests.a_sauceLabApk.LoginTests   - We check if we are on the 'Products' page
-[INFO ] 2024-10-23 22:32:40 - tests.a_sauceLabApk.LoginTests   - We are on the 'Products' page
-[INFO ] 2024-10-23 22:32:40 - listeners.TestListener           - Test PASSED: testLoginWithValidData
-[INFO ] 2024-10-23 22:32:41 - tests._baseTests.BaseTestParent  - ------- STOPPED: Sauce Lab Apk -------
+[INFO ] 2024-11-24 15:30:35 - batteryalarm.PageAccessTests             - ------- Start: Battery Alarm Apk -------
+[INFO ] 2024-11-24 15:30:42 - listeners.TestListener                   - Test STARTED: testWarningPopupAlertAccess
+[INFO ] 2024-11-24 15:30:45 - batteryalarm.MainPage                    - We press the 'X' (close app) button
+[INFO ] 2024-11-24 15:30:46 - batteryalarm.PageAccessTests             - We check whether the 'Warning' popup window appears
+[INFO ] 2024-11-24 15:30:47 - batteryalarm.PageAccessTests             - The 'Warning' popup window appears
+[INFO ] 2024-11-24 15:30:47 - batteryalarm.MainPage                    - We press the 'NO' button on warning popup window
+[INFO ] 2024-11-24 15:30:48 - batteryalarm.PageAccessTests             - We check whether the popup window 'Warning' disappears
+[ERROR] 2024-11-24 15:30:59 - batteryalarm.PageAccessTests             - The 'Warning' popup window is not available
+[INFO ] 2024-11-24 15:30:59 - listeners.TestListener                   - Test PASSED: testWarningPopupAlertAccess
+[INFO ] 2024-11-24 15:31:00 - batteryalarm.PageAccessTests             - ------- Stopped: Battery Alarm Apk -------
 
-[INFO ] 2024-10-23 22:32:41 - tests._baseTests.BaseTestParent  - ------- START: Sauce Lab Apk -------
-[INFO ] 2024-10-23 22:32:51 - listeners.TestListener           - Test STARTED: testWebviewPageAccess
-[INFO ] 2024-10-23 22:32:52 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:32:53 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Webview' button
-[INFO ] 2024-10-23 22:32:55 - ts.a_sauceLabApk.PageAccessTests - We check whether we are on the 'Webview' page
-[INFO ] 2024-10-23 22:32:56 - ts.a_sauceLabApk.PageAccessTests - We are on the 'Webview' page
-[INFO ] 2024-10-23 22:32:56 - listeners.TestListener           - Test PASSED: testWebviewPageAccess
-[INFO ] 2024-10-23 22:32:58 - tests._baseTests.BaseTestParent  - ------- STOPPED: Sauce Lab Apk -------
-
-[INFO ] 2024-10-23 22:32:58 - tests._baseTests.BaseTestParent  - ------- START: Sauce Lab Apk -------
-[INFO ] 2024-10-23 22:33:08 - listeners.TestListener           - Test STARTED: testQrCodeScannerPageAccess
-[INFO ] 2024-10-23 22:33:09 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:33:10 - ages.a_sauceLabApk.HamburgerMenu - We press the 'QR Code Scanner' button
-[INFO ] 2024-10-23 22:33:11 - ts.a_sauceLabApk.PageAccessTests - We check whether we are on the 'QR Code Scanner' page
-[INFO ] 2024-10-23 22:33:13 - ts.a_sauceLabApk.PageAccessTests - We are on the 'QR Code Scanner' page
-[INFO ] 2024-10-23 22:33:13 - listeners.TestListener           - Test PASSED: testQrCodeScannerPageAccess
-[INFO ] 2024-10-23 22:33:15 - tests._baseTests.BaseTestParent  - ------- STOPPED: Sauce Lab Apk -------
-
-[INFO ] 2024-10-23 22:33:15 - tests._baseTests.BaseTestParent  - ------- START: Sauce Lab Apk -------
-[INFO ] 2024-10-23 22:33:25 - listeners.TestListener           - Test STARTED: testGeoLocationPageAccess
-[INFO ] 2024-10-23 22:33:26 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:33:26 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Geo Location' button
-[INFO ] 2024-10-23 22:33:28 - ts.a_sauceLabApk.PageAccessTests - We check whether we are on the 'Geo Location' page
-[INFO ] 2024-10-23 22:33:30 - ts.a_sauceLabApk.PageAccessTests - We are on the 'Geo Location' page
-[INFO ] 2024-10-23 22:33:30 - listeners.TestListener           - Test PASSED: testGeoLocationPageAccess
-[INFO ] 2024-10-23 22:33:31 - tests._baseTests.BaseTestParent  - ------- STOPPED: Sauce Lab Apk -------
-
-[INFO ] 2024-10-23 22:33:31 - tests._baseTests.BaseTestParent  - ------- START: Sauce Lab Apk -------
-[INFO ] 2024-10-23 22:33:42 - listeners.TestListener           - Test STARTED: testDrawingPageAccess
-[INFO ] 2024-10-23 22:33:42 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:33:43 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Drawing' button
-[INFO ] 2024-10-23 22:33:44 - ts.a_sauceLabApk.PageAccessTests - We check whether we are on the 'Drawing' page
-[INFO ] 2024-10-23 22:33:47 - ts.a_sauceLabApk.PageAccessTests - We are on the 'Drawing' page
-[INFO ] 2024-10-23 22:33:47 - listeners.TestListener           - Test PASSED: testDrawingPageAccess
-[INFO ] 2024-10-23 22:33:48 - tests._baseTests.BaseTestParent  - ------- STOPPED: Sauce Lab Apk -------
-
-[INFO ] 2024-10-23 22:33:48 - tests._baseTests.BaseTestParent  - ------- START: Sauce Lab Apk -------
-[INFO ] 2024-10-23 22:33:59 - listeners.TestListener           - Test STARTED: testAboutPageAccess
-[INFO ] 2024-10-23 22:34:01 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:34:01 - ages.a_sauceLabApk.HamburgerMenu - We press the 'About' button
-[INFO ] 2024-10-23 22:34:03 - ts.a_sauceLabApk.PageAccessTests - We check whether we are on the 'About' page
-[INFO ] 2024-10-23 22:34:04 - ts.a_sauceLabApk.PageAccessTests - We are on the 'About' page
-[INFO ] 2024-10-23 22:34:04 - listeners.TestListener           - Test PASSED: testAboutPageAccess
-[INFO ] 2024-10-23 22:34:06 - tests._baseTests.BaseTestParent  - ------- STOPPED: Sauce Lab Apk -------
-
-[INFO ] 2024-10-23 22:34:06 - tests._baseTests.BaseTestParent  - ------- START: Sauce Lab Apk -------
-[INFO ] 2024-10-23 22:34:17 - listeners.TestListener           - Test STARTED: testFingerPrintPageAccess
-[INFO ] 2024-10-23 22:34:18 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:34:18 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Finger Print' button
-[INFO ] 2024-10-23 22:34:20 - ts.a_sauceLabApk.PageAccessTests - We check whether we are on the 'Finger Print' page
-[ERROR] 2024-10-23 22:34:22 - listeners.TestListener           - Test FAILED: testFingerPrintPageAccess
-[INFO ] 2024-10-23 22:34:24 - tests._baseTests.BaseTestParent  - ------- STOPPED: Sauce Lab Apk -------
-
-[INFO ] 2024-10-23 22:34:24 - tests._baseTests.BaseTestParent  - ------- START: Sauce Lab Apk -------
-[INFO ] 2024-10-23 22:34:36 - listeners.TestListener           - Test STARTED: testApiCallsPageAccess
-[INFO ] 2024-10-23 22:34:37 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:34:37 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Api Calls' button
-[INFO ] 2024-10-23 22:34:39 - ts.a_sauceLabApk.PageAccessTests - We check whether we are on the 'API calls' page
-[INFO ] 2024-10-23 22:34:42 - ts.a_sauceLabApk.PageAccessTests - We are on the 'API calls' page
-[INFO ] 2024-10-23 22:34:42 - listeners.TestListener           - Test PASSED: testApiCallsPageAccess
-[INFO ] 2024-10-23 22:34:44 - tests._baseTests.BaseTestParent  - ------- STOPPED: Sauce Lab Apk -------
-
-[INFO ] 2024-10-23 22:34:44 - tests._baseTests.BaseTestParent  - ------- START: Sauce Lab Apk -------
-[INFO ] 2024-10-23 22:34:55 - listeners.TestListener           - Test STARTED: testSauceBotVideoPageAccess
-[INFO ] 2024-10-23 22:34:56 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:34:56 - ages.a_sauceLabApk.HamburgerMenu - We press the 'Sauce Bot Video' button
-[INFO ] 2024-10-23 22:34:58 - ts.a_sauceLabApk.PageAccessTests - We check whether we are on the 'Sauce Bot Video' page
-[INFO ] 2024-10-23 22:35:01 - ts.a_sauceLabApk.PageAccessTests - We are on the 'Sauce Bot Video' page
-[INFO ] 2024-10-23 22:35:01 - listeners.TestListener           - Test PASSED: testSauceBotVideoPageAccess
-[INFO ] 2024-10-23 22:35:02 - tests._baseTests.BaseTestParent  - ------- STOPPED: Sauce Lab Apk -------
-
-[INFO ] 2024-10-23 22:35:02 - tests._baseTests.BaseTestParent  - ------- START: Chrome Browser -------
-[INFO ] 2024-10-23 22:35:16 - listeners.TestListener           - Test STARTED: testLoginWithValidDataCura
-[INFO ] 2024-10-23 22:35:17 - althcareWithChrome.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:35:17 - althcareWithChrome.HamburgerMenu - We press the 'Login' button
-[INFO ] 2024-10-23 22:35:18 - utils.CommonUtils                - We request the test data from the list
-[INFO ] 2024-10-23 22:35:18 - raHealthcareWithChrome.LoginPage - We fill the 'Username' input field with the valid username
-[INFO ] 2024-10-23 22:35:19 - raHealthcareWithChrome.LoginPage - We fill the 'Password' input field with the valid password
-[INFO ] 2024-10-23 22:35:19 - raHealthcareWithChrome.LoginPage - We press the 'Login' text
-[INFO ] 2024-10-23 22:35:20 - raHealthcareWithChrome.LoginPage - We press the 'Login' button
-[INFO ] 2024-10-23 22:35:21 - aHealthcareWithChrome.LoginTests - We check if we are on the 'Make Appointment' page
-[INFO ] 2024-10-23 22:35:22 - aHealthcareWithChrome.LoginTests - We are on the 'Make Appointment' page
-[INFO ] 2024-10-23 22:35:22 - listeners.TestListener           - Test PASSED: testLoginWithValidDataCura
-[INFO ] 2024-10-23 22:35:23 - tests._baseTests.BaseTestParent  - ------- STOPPED: Chrome Browser -------
-
-[INFO ] 2024-10-23 22:35:23 - tests._baseTests.BaseTestParent  - ------- START: Chrome Browser -------
-[INFO ] 2024-10-23 22:35:37 - listeners.TestListener           - Test STARTED: testLoginWithValidUsernameInvalidPasswordCura
-[INFO ] 2024-10-23 22:35:38 - althcareWithChrome.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:35:38 - althcareWithChrome.HamburgerMenu - We press the 'Login' button
-[INFO ] 2024-10-23 22:35:39 - utils.CommonUtils                - We request the test data from the list
-[INFO ] 2024-10-23 22:35:39 - raHealthcareWithChrome.LoginPage - We fill the 'Username' input field with the valid username
-[INFO ] 2024-10-23 22:35:40 - raHealthcareWithChrome.LoginPage - We fill the 'Password' input field with the invalid password
-[INFO ] 2024-10-23 22:35:41 - raHealthcareWithChrome.LoginPage - We press the 'Login' text
-[INFO ] 2024-10-23 22:35:41 - raHealthcareWithChrome.LoginPage - We press the 'Login' button
-[INFO ] 2024-10-23 22:35:42 - aHealthcareWithChrome.LoginTests - We check whether the error message appears and, if so, whether it is correct
-[INFO ] 2024-10-23 22:35:42 - aHealthcareWithChrome.LoginTests - The error message is correct
-[INFO ] 2024-10-23 22:35:42 - listeners.TestListener           - Test PASSED: testLoginWithValidUsernameInvalidPasswordCura
-[INFO ] 2024-10-23 22:35:43 - tests._baseTests.BaseTestParent  - ------- STOPPED: Chrome Browser -------
-
-[INFO ] 2024-10-23 22:35:43 - tests._baseTests.BaseTestParent  - ------- START: Chrome Browser -------
-[INFO ] 2024-10-23 22:35:57 - listeners.TestListener           - Test STARTED: testLoginWithInvalidUsernameValidPasswordCura
-[INFO ] 2024-10-23 22:35:58 - althcareWithChrome.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:35:58 - althcareWithChrome.HamburgerMenu - We press the 'Login' button
-[INFO ] 2024-10-23 22:35:59 - utils.CommonUtils                - We request the test data from the list
-[INFO ] 2024-10-23 22:35:59 - raHealthcareWithChrome.LoginPage - We fill the 'Username' input field with the invalid username
-[INFO ] 2024-10-23 22:36:00 - raHealthcareWithChrome.LoginPage - We fill the 'Password' input field with the valid password
-[INFO ] 2024-10-23 22:36:00 - raHealthcareWithChrome.LoginPage - We press the 'Login' text
-[INFO ] 2024-10-23 22:36:01 - raHealthcareWithChrome.LoginPage - We press the 'Login' button
-[INFO ] 2024-10-23 22:36:02 - aHealthcareWithChrome.LoginTests - We check whether the error message appears and, if so, whether it is correct
-[INFO ] 2024-10-23 22:36:02 - aHealthcareWithChrome.LoginTests - The error message is correct
-[INFO ] 2024-10-23 22:36:02 - listeners.TestListener           - Test PASSED: testLoginWithInvalidUsernameValidPasswordCura
-[INFO ] 2024-10-23 22:36:03 - tests._baseTests.BaseTestParent  - ------- STOPPED: Chrome Browser -------
-
-[INFO ] 2024-10-23 22:36:03 - tests._baseTests.BaseTestParent  - ------- START: Chrome Browser -------
-[INFO ] 2024-10-23 22:36:16 - listeners.TestListener           - Test STARTED: testLoginWithEmptyUsernameEmptyPasswordCura
-[INFO ] 2024-10-23 22:36:17 - althcareWithChrome.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:36:17 - althcareWithChrome.HamburgerMenu - We press the 'Login' button
-[INFO ] 2024-10-23 22:36:18 - raHealthcareWithChrome.LoginPage - We fill the 'Username' input field with the empty username
-[INFO ] 2024-10-23 22:36:19 - raHealthcareWithChrome.LoginPage - We fill the 'Password' input field with the empty password
-[INFO ] 2024-10-23 22:36:19 - raHealthcareWithChrome.LoginPage - We press the 'Login' text
-[INFO ] 2024-10-23 22:36:20 - raHealthcareWithChrome.LoginPage - We press the 'Login' button
-[INFO ] 2024-10-23 22:36:20 - aHealthcareWithChrome.LoginTests - We check whether the error message appears and, if so, whether it is correct
-[INFO ] 2024-10-23 22:36:21 - aHealthcareWithChrome.LoginTests - The error message is correct
-[INFO ] 2024-10-23 22:36:21 - listeners.TestListener           - Test PASSED: testLoginWithEmptyUsernameEmptyPasswordCura
-[INFO ] 2024-10-23 22:36:21 - tests._baseTests.BaseTestParent  - ------- STOPPED: Chrome Browser -------
-
-[INFO ] 2024-10-23 22:36:21 - tests._baseTests.BaseTestParent  - ------- START: Chrome Browser -------
-[INFO ] 2024-10-23 22:36:34 - listeners.TestListener           - Test STARTED: testProfilPageAccessCura
-[INFO ] 2024-10-23 22:36:35 - althcareWithChrome.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:36:35 - althcareWithChrome.HamburgerMenu - We press the 'Login' button
-[INFO ] 2024-10-23 22:36:36 - utils.CommonUtils                - We request the test data from the list
-[INFO ] 2024-10-23 22:36:36 - raHealthcareWithChrome.LoginPage - We fill the 'Username' input field with the valid username
-[INFO ] 2024-10-23 22:36:37 - raHealthcareWithChrome.LoginPage - We fill the 'Password' input field with the valid password
-[INFO ] 2024-10-23 22:36:37 - raHealthcareWithChrome.LoginPage - We press the 'Login' text
-[INFO ] 2024-10-23 22:36:38 - raHealthcareWithChrome.LoginPage - We press the 'Login' button
-[INFO ] 2024-10-23 22:36:39 - utils.AppiumActions              - We scroll up
-[INFO ] 2024-10-23 22:36:40 - althcareWithChrome.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:36:40 - althcareWithChrome.HamburgerMenu - We press the 'Profile' button
-[INFO ] 2024-10-23 22:36:41 - thcareWithChrome.PageAccessTests - We check whether we are on the 'Profile' page
-[INFO ] 2024-10-23 22:36:42 - thcareWithChrome.PageAccessTests - We are on the 'Profile' page
-[INFO ] 2024-10-23 22:36:42 - listeners.TestListener           - Test PASSED: testProfilPageAccessCura
-[INFO ] 2024-10-23 22:36:43 - tests._baseTests.BaseTestParent  - ------- STOPPED: Chrome Browser -------
-
-[INFO ] 2024-10-23 22:36:43 - tests._baseTests.BaseTestParent  - ------- START: Chrome Browser -------
-[INFO ] 2024-10-23 22:36:56 - listeners.TestListener           - Test STARTED: testHistoryPageAccessCura
-[INFO ] 2024-10-23 22:36:57 - althcareWithChrome.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:36:57 - althcareWithChrome.HamburgerMenu - We press the 'Login' button
-[INFO ] 2024-10-23 22:36:58 - utils.CommonUtils                - We request the test data from the list
-[INFO ] 2024-10-23 22:36:58 - raHealthcareWithChrome.LoginPage - We fill the 'Username' input field with the valid username
-[INFO ] 2024-10-23 22:36:59 - raHealthcareWithChrome.LoginPage - We fill the 'Password' input field with the valid password
-[INFO ] 2024-10-23 22:36:59 - raHealthcareWithChrome.LoginPage - We press the 'Login' text
-[INFO ] 2024-10-23 22:37:00 - raHealthcareWithChrome.LoginPage - We press the 'Login' button
-[INFO ] 2024-10-23 22:37:01 - utils.AppiumActions              - We scroll up
-[INFO ] 2024-10-23 22:37:02 - althcareWithChrome.HamburgerMenu - We press the 'Hamburger menu' button
-[INFO ] 2024-10-23 22:37:02 - althcareWithChrome.HamburgerMenu - We press the 'History' button
-[INFO ] 2024-10-23 22:37:03 - thcareWithChrome.PageAccessTests - We check whether we are on the 'History' page
-[INFO ] 2024-10-23 22:37:04 - thcareWithChrome.PageAccessTests - We are on the 'History' page
-[INFO ] 2024-10-23 22:37:04 - listeners.TestListener           - Test PASSED: testHistoryPageAccessCura
-[INFO ] 2024-10-23 22:37:05 - tests._baseTests.BaseTestParent  - ------- STOPPED: Chrome Browser -------
-
-[INFO ] 2024-10-23 22:37:05 - tests._baseTests.BaseTestParent  - ------- Start: Battery Alarm Apk -------
-[INFO ] 2024-10-23 22:37:15 - listeners.TestListener           - Test STARTED: testMainPageAccess
-[INFO ] 2024-10-23 22:37:17 - _batteryAlarmApk.PageAccessTests - We check whether we are on the 'Main' page
-[INFO ] 2024-10-23 22:37:17 - _batteryAlarmApk.PageAccessTests - We are on the 'Main' page
-[INFO ] 2024-10-23 22:37:17 - listeners.TestListener           - Test PASSED: testMainPageAccess
-[INFO ] 2024-10-23 22:37:18 - tests._baseTests.BaseTestParent  - ------- Stopped: Battery Alarm Apk -------
-
-[INFO ] 2024-10-23 22:37:18 - tests._baseTests.BaseTestParent  - ------- Start: Battery Alarm Apk -------
-[INFO ] 2024-10-23 22:37:27 - listeners.TestListener           - Test STARTED: testInformationPageAccess
-[INFO ] 2024-10-23 22:37:28 - pages.c_batteryAlarmApk.MainPage - We press the 'information' button
-[INFO ] 2024-10-23 22:37:28 - _batteryAlarmApk.PageAccessTests - We check whether we are on the 'Information' page
-[INFO ] 2024-10-23 22:37:30 - _batteryAlarmApk.PageAccessTests - We are on the 'Information' page
-[INFO ] 2024-10-23 22:37:30 - listeners.TestListener           - Test PASSED: testInformationPageAccess
-[INFO ] 2024-10-23 22:37:31 - tests._baseTests.BaseTestParent  - ------- Stopped: Battery Alarm Apk -------
-
-[INFO ] 2024-10-23 22:37:31 - tests._baseTests.BaseTestParent  - ------- Start: Battery Alarm Apk -------
-[INFO ] 2024-10-23 22:37:40 - listeners.TestListener           - Test STARTED: testWarningPopupAlertAccess
-[INFO ] 2024-10-23 22:37:40 - pages.c_batteryAlarmApk.MainPage - We press the 'X' (close app) button
-[INFO ] 2024-10-23 22:37:41 - _batteryAlarmApk.PageAccessTests - We check whether the 'Warning' popup window appears
-[INFO ] 2024-10-23 22:37:42 - _batteryAlarmApk.PageAccessTests - The 'Warning' popup window appears
-[INFO ] 2024-10-23 22:37:42 - pages.c_batteryAlarmApk.MainPage - We press the 'NO' button on warning popup window
-[INFO ] 2024-10-23 22:37:43 - _batteryAlarmApk.PageAccessTests - We check whether the popup window 'Warning' disappears
-[ERROR] 2024-10-23 22:37:53 - _batteryAlarmApk.PageAccessTests - The 'Warning' popup window is not available
-[INFO ] 2024-10-23 22:37:53 - listeners.TestListener           - Test PASSED: testWarningPopupAlertAccess
-[INFO ] 2024-10-23 22:37:54 - tests._baseTests.BaseTestParent  - ------- Stopped: Battery Alarm Apk -------
-
-[INFO ] 2024-10-23 22:37:56 - listeners.TestListener           - Smoke test(s) run completed
+[INFO ] 2024-11-24 15:31:00 - listeners.TestListener                   - Default Suite test(s) run completed
 

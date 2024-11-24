@@ -2,8 +2,6 @@ package com.myappium2project.tests.curahealthcarewithchrome;
 
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
 import com.myappium2project.utils.TestDataFilePaths;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.curahealthcarewithchrome.AppointmentConfirmationPage;
@@ -16,7 +14,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class AppointmentConfirmationTests extends ChromeBrowserBaseTest {
-    private static final Logger LOG = LogManager.getLogger(AppointmentConfirmationTests.class);
     private static final String TEST_DATA_PATH = TestDataFilePaths.getCuraTestDataPath();
 
     @Test

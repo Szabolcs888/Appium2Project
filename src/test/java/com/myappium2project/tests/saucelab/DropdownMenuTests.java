@@ -1,8 +1,6 @@
 package com.myappium2project.tests.saucelab;
 
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.saucelab.ProductsPage;
@@ -12,7 +10,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class DropdownMenuTests extends SauceLabApkBaseTest {
-    private static final Logger LOG = LogManager.getLogger(DropdownMenuTests.class);
 
     @Test(priority = 1)
     public void testDropdownMenuAbcOrder() {

@@ -1,18 +1,17 @@
 package com.myappium2project.pages.saucelab;
 
+import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class CheckoutCompletePage {
-    private static final Logger LOG = LogManager.getLogger(CheckoutCompletePage.class);
+public class CheckoutCompletePage extends BasePage {
 
     public CheckoutCompletePage(AndroidDriver driver) {
+        super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 

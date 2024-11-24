@@ -5,8 +5,6 @@ import com.myappium2project.pages.saucelab.productsPages.*;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
 import com.myappium2project.utils.AppiumActions;
 import com.myappium2project.utils.TestDataFilePaths;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.utils.CommonUtils;
@@ -14,7 +12,6 @@ import com.myappium2project.utils.CommonUtils;
 import java.util.List;
 
 public class CartEmptyingTests extends SauceLabApkBaseTest {
-    private static final Logger LOG = LogManager.getLogger(CartEmptyingTests.class);
     private static final String TEST_DATA_PATH = TestDataFilePaths.getSaucelabTestDataPath();
 
     @Test(timeOut = 45000, priority = 1)

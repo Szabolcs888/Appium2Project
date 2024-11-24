@@ -1,9 +1,8 @@
 package com.myappium2project.pages.curahealthcarewithchrome;
 
+import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -13,11 +12,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class MakeAppointmentPage {
-    private static final Logger LOG = LogManager.getLogger(MakeAppointmentPage.class);
+public class MakeAppointmentPage extends BasePage {
     private final AndroidDriver driver;
 
     public MakeAppointmentPage(AndroidDriver driver) {
+        super();
         this.driver = driver;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
