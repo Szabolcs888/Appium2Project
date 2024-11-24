@@ -30,7 +30,8 @@ public class FeedbackPopupTests extends SauceLabApkBaseTest {
         } else {
             LOG.error("The popup text is not correct");
         }
-        Assert.assertEquals(feedbackPopupText, expectedFeedbackPopupText, "The popup text should be 'Thank you for submitting your review!', but it is not.");
+        Assert.assertEquals(feedbackPopupText, expectedFeedbackPopupText,
+                "The popup text should be 'Thank you for submitting your review!', but it is not.");
 
         productPage.pressCloseModalButtonOnFeedbackPopup();
 
@@ -41,7 +42,8 @@ public class FeedbackPopupTests extends SauceLabApkBaseTest {
         } else {
             LOG.error("The 'Close Modal' button is available");
         }
-        Assert.assertFalse(isTheCloseMButtonAvailable, "The 'Close Modal' button should not be available, but it is.");
+        Assert.assertFalse(isTheCloseMButtonAvailable,
+                "The 'Close Modal' button should not be available, but it is.");
     }
 
     @Test(priority = 2)
@@ -73,7 +75,8 @@ public class FeedbackPopupTests extends SauceLabApkBaseTest {
         } else {
             LOG.error("The popup text is not correct");
         }
-        Assert.assertEquals(feedbackPopupText, expectedFeedbackPopupText, "The popup text should be 'Thank you for submitting your review!', but it is not.");
+        Assert.assertEquals(feedbackPopupText, expectedFeedbackPopupText,
+                "The popup text should be 'Thank you for submitting your review!', but it is not.");
 
         fleeceJacketPage.pressCloseModalButtonOnFeedbackPopup();
 
@@ -84,6 +87,7 @@ public class FeedbackPopupTests extends SauceLabApkBaseTest {
         } else {
             LOG.error("The 'Close Modal' button is available");
         }
-        Assert.assertFalse(isTheCloseMButtonAvailable, "The 'Close Modal' button should not be available, but it is.");
+        Assert.assertFalse(isTheCloseMButtonAvailable,
+                "The 'Close Modal' button should not be available, but it is.");
     }
 }

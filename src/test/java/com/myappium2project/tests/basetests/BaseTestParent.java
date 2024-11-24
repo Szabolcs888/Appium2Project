@@ -53,7 +53,9 @@ public class BaseTestParent {
     private static void executePostSuiteActions(String testStartDateTime, String testEndDateTime) {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             CommonUtils.threadSleep(1000);
-            CommonUtils.copyFile("target/surefire-reports/emailable-report.html", "reports/emailable-report.html");
+            CommonUtils.copyFile(
+                    "target/surefire-reports/emailable-report.html",
+                    "reports/emailable-report.html");
             NetlifyUploader.uploadReportToNetlify();
             SendGridEmailHelper sendGridEmailHelper = new SendGridEmailHelper();
             sendGridEmailHelper.sendEmailWithReport(testStartDateTime, testEndDateTime);

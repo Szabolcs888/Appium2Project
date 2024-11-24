@@ -16,7 +16,8 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         if (!mainPage.getSelectedLanguage().equals("English")) {
             LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
             languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
-            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900, "We scroll up in the dropdown menu");
+            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900,
+                    "We scroll up in the dropdown menu");
             languagesDropdownMenu.chooseEnglishOption();
         }
 
@@ -45,7 +46,8 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         if (!mainPage.getSelectedLanguage().equals("English")) {
             LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
             languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
-            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900, "We scroll up in the dropdown menu");
+            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900,
+                    "We scroll up in the dropdown menu");
             languagesDropdownMenu.chooseEnglishOption();
         }
 

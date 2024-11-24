@@ -37,7 +37,8 @@ public class LoginTests extends SauceLabApkBaseTest {
         } else {
             LOG.error("We are not on the 'Products' page");
         }
-        Assert.assertEquals(productPageTitleText, expectedPageTitleText, "The page title should be 'Products', but it is not.");
+        Assert.assertEquals(productPageTitleText, expectedPageTitleText,
+                "The page title should be 'Products', but it is not.");
     }
 
     @Test(priority = 1,
@@ -60,8 +61,10 @@ public class LoginTests extends SauceLabApkBaseTest {
         } else {
             LOG.error("The error message is not correct");
         }
-        Assert.assertTrue(loginPage.isDisplayedErrorMessage(), "The error message should be displayed, but it is not.");
-        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE, "The error message text should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
+        Assert.assertTrue(loginPage.isDisplayedErrorMessage(),
+                "The error message should be displayed, but it is not.");
+        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
+                "The error message text should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
     }
 
     @Test(priority = 2,
@@ -83,7 +86,9 @@ public class LoginTests extends SauceLabApkBaseTest {
             LOG.info("The error message is correct");
         else
             LOG.error("The error message is correct");
-        Assert.assertTrue(loginPage.isDisplayedErrorMessage(), "The error message should be displayed, but it is not.");
-        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE, "The error message text should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
+        Assert.assertTrue(loginPage.isDisplayedErrorMessage(),
+                "The error message should be displayed, but it is not.");
+        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
+                "The error message text should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
     }
 }

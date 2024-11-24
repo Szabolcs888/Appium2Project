@@ -43,7 +43,9 @@ public class AppointmentConfirmationTests extends ChromeBrowserBaseTest {
         LOG.info("We check whether the appointment data matches the ones we provided");
         AppointmentConfirmationPage appointmentConfirmationPage = new AppointmentConfirmationPage(driver);
         List<String> appointmentDataAsTheyAreOnThePage = appointmentConfirmationPage.getAppointmentDataAsTheyAreOnTheAppointmentConfirmationPage();
-        List<String> appointmentDataAsItShouldBe = Arrays.asList(testData.get(3), testData.get(4), testData.get(5), testData.get(6), testData.get(7));
+        List<String> appointmentDataAsItShouldBe = Arrays.asList(
+                testData.get(3), testData.get(4), testData.get(5),
+                testData.get(6), testData.get(7));
         System.out.println("Appointment data is on the page: \n" + appointmentDataAsTheyAreOnThePage);
         System.out.println("Original appointment data: \n" + appointmentDataAsItShouldBe);
         if (appointmentDataAsTheyAreOnThePage.equals(appointmentDataAsItShouldBe)) {
@@ -51,6 +53,7 @@ public class AppointmentConfirmationTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error("The appointment data is not correct");
         }
-        Assert.assertEquals(appointmentDataAsTheyAreOnThePage, appointmentDataAsItShouldBe, "The appointment data should match the provided data, but it does not.");
+        Assert.assertEquals(appointmentDataAsTheyAreOnThePage, appointmentDataAsItShouldBe,
+                "The appointment data should match the provided data, but it does not.");
     }
 }

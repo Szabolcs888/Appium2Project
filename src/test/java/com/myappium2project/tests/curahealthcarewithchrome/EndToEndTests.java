@@ -36,7 +36,8 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error("We are not on the 'Make Appointment' page");
         }
-        Assert.assertTrue(isMakeAppointmentPageLoaded, "The 'Make Appointment' page should be loaded, but it is not.");
+        Assert.assertTrue(isMakeAppointmentPageLoaded,
+                "The 'Make Appointment' page should be loaded, but it is not.");
 
         makeAppointmentPage.pressFacilityDropDownMenuButton();
         makeAppointmentPage.choiceFacilityOption(testData.get(11));
@@ -54,7 +55,8 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error("We are not on the 'Appointment Confirmation' page");
         }
-        Assert.assertTrue(isAppointmentConfirmationPageLoaded, "The 'Appointment Confirmation' page should be loaded, but it is not.");
+        Assert.assertTrue(isAppointmentConfirmationPageLoaded,
+                "The 'Appointment Confirmation' page should be loaded, but it is not.");
 
         LOG.info("We check whether the appointment data matches the ones we provided");
         List<String> appointmentDataAsTheyAreOnTheAppointmentConfirmationPage = appointmentConfirmationPage.getAppointmentDataAsTheyAreOnTheAppointmentConfirmationPage();
@@ -66,7 +68,8 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error("The appointment data is not correct on the 'Appointment Confirmation' page");
         }
-        Assert.assertEquals(appointmentDataAsTheyAreOnTheAppointmentConfirmationPage, appointmentDataAsItShouldBe, "The appointment data should match the provided data, but it does not.");
+        Assert.assertEquals(appointmentDataAsTheyAreOnTheAppointmentConfirmationPage, appointmentDataAsItShouldBe,
+                "The appointment data should match the provided data, but it does not.");
 
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressHistoryButton();
@@ -91,7 +94,8 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error("The appointment data is not correct on the 'History' page");
         }
-        Assert.assertEquals(appointmentDataAsTheyAreOnTheHistoryPage, appointmentDataAsItShouldBe2, "The appointment data on the 'History' page should match the provided data, but it does not.");
+        Assert.assertEquals(appointmentDataAsTheyAreOnTheHistoryPage, appointmentDataAsItShouldBe2,
+                "The appointment data on the 'History' page should match the provided data, but it does not.");
 
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressProfileButton();
@@ -119,7 +123,8 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
             LOG.error("We are not on the 'Main' page");
         }
         Assert.assertTrue(isMainPageLoaded, "The 'Main' page should be loaded, but it is not.");
-        Assert.assertEquals(currentUrl, expectedUrl, "The current URL should be '" + expectedUrl + "', but it is '" + currentUrl + "'.");
+        Assert.assertEquals(currentUrl, expectedUrl,
+                "The current URL should be '" + expectedUrl + "', but it is '" + currentUrl + "'.");
     }
 }
 

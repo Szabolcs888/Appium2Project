@@ -15,7 +15,9 @@ public class InformationPage extends BasePage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"In order to avoid issue, find the power saving option on your phone, open it and add Battery app to protected apps or disable optimization for Battery app. It is usually under Phone battery settings.\n" +
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"In order to avoid issue, find the power saving option on your phone," +
+            " open it and add Battery app to protected apps or disable optimization for Battery app." +
+            " It is usually under Phone battery settings.\n" +
             "This option might be called: \n" +
             "Power saving\n" +
             "Battery optimization\n" +

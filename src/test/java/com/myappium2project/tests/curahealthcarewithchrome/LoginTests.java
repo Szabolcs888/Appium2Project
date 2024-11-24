@@ -65,7 +65,8 @@ public class LoginTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error("The error message is not correct");
         }
-        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE, "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
+        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
+                "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
     }
 
     @Test(priority = 3,
@@ -91,7 +92,8 @@ public class LoginTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error("The error message is not correct");
         }
-        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE, "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
+        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
+                "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
     }
 
     @Test(priority = 4,
@@ -116,6 +118,7 @@ public class LoginTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error("The error message is not correct");
         }
-        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE, "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
+        Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
+                "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
     }
 }

@@ -17,7 +17,8 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         if (!mainPage.getSelectedLanguage().equals("English")) {
             LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
             languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
-            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900, "We scroll up in the dropdown menu");
+            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900,
+                    "We scroll up in the dropdown menu");
             languagesDropdownMenu.chooseEnglishOption();
         }
 
@@ -31,8 +32,10 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error("We are not on the 'Main' page");
         }
-        Assert.assertEquals(voiceWarningText, expectedVoiceWarningText, "The voice warning text should be '" + expectedVoiceWarningText + "', but it is '" + voiceWarningText + "'.");
-        Assert.assertEquals(chooseASoundText, expectedChooseASoundText, "The 'Choose a sound' text should be '" + expectedChooseASoundText + "', but it is '" + chooseASoundText + "'.");
+        Assert.assertEquals(voiceWarningText, expectedVoiceWarningText,
+                "The voice warning text should be '" + expectedVoiceWarningText + "', but it is '" + voiceWarningText + "'.");
+        Assert.assertEquals(chooseASoundText, expectedChooseASoundText,
+                "The 'Choose a sound' text should be '" + expectedChooseASoundText + "', but it is '" + chooseASoundText + "'.");
     }
 
     @Test(priority = 2,
@@ -42,7 +45,8 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         if (!mainPage.getSelectedLanguage().equals("English")) {
             LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
             languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
-            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900, "We scroll up in the dropdown menu");
+            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900,
+                    "We scroll up in the dropdown menu");
             languagesDropdownMenu.chooseEnglishOption();
         }
 
@@ -57,7 +61,8 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error("We are not on the 'Information' page");
         }
-        Assert.assertTrue(informationText.contains(expectedTextFragment), "The information text should contain '" + expectedTextFragment + "', but it does not.");
+        Assert.assertTrue(informationText.contains(expectedTextFragment),
+                "The information text should contain '" + expectedTextFragment + "', but it does not.");
     }
 
     @Test(priority = 3,
@@ -73,7 +78,8 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error("The 'Warning' popup window does not appears");
         }
-        Assert.assertTrue(isDisplayedExitWarningPopup, "The 'Warning' popup window should appear, but it does not.");
+        Assert.assertTrue(isDisplayedExitWarningPopup,
+                "The 'Warning' popup window should appear, but it does not.");
 
         mainPage.pressNoButtonOnWarningPopupWindow();
 
@@ -84,6 +90,7 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error("The 'Warning' popup window is not available");
         }
-        Assert.assertFalse(isDisplayedExitWarningPopup, "The 'Warning' popup window should disappear, but it is still available.");
+        Assert.assertFalse(isDisplayedExitWarningPopup,
+                "The 'Warning' popup window should disappear, but it is still available.");
     }
 }

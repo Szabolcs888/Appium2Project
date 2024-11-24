@@ -28,7 +28,8 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         } else {
             LOG.error("The products are not in the correct order");
         }
-        Assert.assertEquals(productsNamesList, expectedList, "The products should be in the correct order, but they are not.");
+        Assert.assertEquals(productsNamesList, expectedList,
+                "The products should be in the correct order, but they are not.");
     }
 
     @Test(priority = 2)
@@ -49,7 +50,8 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         } else {
             LOG.error("The products are not in the correct order");
         }
-        Assert.assertEquals(productsNamesList, expectedList, "The products should be in the correct order, but they are not.");
+        Assert.assertEquals(productsNamesList, expectedList,
+                "The products should be in the correct order, but they are not.");
     }
 
     @Test(priority = 3)
@@ -69,7 +71,8 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         } else {
             LOG.error("The products are not in the correct order");
         }
-        Assert.assertEquals(productsPricesList, expectedList, "The products should be in the correct order, but they are not.");
+        Assert.assertEquals(productsPricesList, expectedList,
+                "The products should be in the correct order, but they are not.");
     }
 
     @Test(priority = 4)
@@ -90,6 +93,7 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         } else {
             LOG.error("The products are not in the correct order");
         }
-        Assert.assertEquals(productsPricesList, expectedList, "The products should be in the correct order, but they are not.");
+        Assert.assertEquals(productsPricesList, expectedList,
+                "The products should be in the correct order, but they are not.");
     }
 }

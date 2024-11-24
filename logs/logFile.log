@@ -1,29 +1,29 @@
-[INFO ] 2024-11-24 15:30:06 - listeners.TestListener                   - Default Suite test(s) run will start
-[INFO ] 2024-11-24 15:30:07 - batteryalarm.PageAccessTests             - ------- Start: Battery Alarm Apk -------
-[INFO ] 2024-11-24 15:30:18 - listeners.TestListener                   - Test STARTED: testMainPageAccess
-[INFO ] 2024-11-24 15:30:22 - batteryalarm.PageAccessTests             - We check whether we are on the 'Main' page
-[INFO ] 2024-11-24 15:30:22 - batteryalarm.PageAccessTests             - We are on the 'Main' page
-[INFO ] 2024-11-24 15:30:22 - listeners.TestListener                   - Test PASSED: testMainPageAccess
-[INFO ] 2024-11-24 15:30:23 - batteryalarm.PageAccessTests             - ------- Stopped: Battery Alarm Apk -------
+[INFO ] 2024-11-24 17:41:09 - listeners.TestListener                   - Default Suite test(s) run will start
+[INFO ] 2024-11-24 17:41:10 - batteryalarm.PageAccessTests             - ------- Start: Battery Alarm Apk -------
+[INFO ] 2024-11-24 17:41:19 - listeners.TestListener                   - Test STARTED: testMainPageAccess
+[INFO ] 2024-11-24 17:41:23 - batteryalarm.PageAccessTests             - We check whether we are on the 'Main' page
+[INFO ] 2024-11-24 17:41:23 - batteryalarm.PageAccessTests             - We are on the 'Main' page
+[INFO ] 2024-11-24 17:41:23 - listeners.TestListener                   - Test PASSED: testMainPageAccess
+[INFO ] 2024-11-24 17:41:24 - batteryalarm.PageAccessTests             - ------- Stopped: Battery Alarm Apk -------
 
-[INFO ] 2024-11-24 15:30:23 - batteryalarm.PageAccessTests             - ------- Start: Battery Alarm Apk -------
-[INFO ] 2024-11-24 15:30:31 - listeners.TestListener                   - Test STARTED: testInformationPageAccess
-[INFO ] 2024-11-24 15:30:33 - batteryalarm.MainPage                    - We press the 'information' button
-[INFO ] 2024-11-24 15:30:33 - batteryalarm.PageAccessTests             - We check whether we are on the 'Information' page
-[INFO ] 2024-11-24 15:30:34 - batteryalarm.PageAccessTests             - We are on the 'Information' page
-[INFO ] 2024-11-24 15:30:34 - listeners.TestListener                   - Test PASSED: testInformationPageAccess
-[INFO ] 2024-11-24 15:30:35 - batteryalarm.PageAccessTests             - ------- Stopped: Battery Alarm Apk -------
+[INFO ] 2024-11-24 17:41:24 - batteryalarm.PageAccessTests             - ------- Start: Battery Alarm Apk -------
+[INFO ] 2024-11-24 17:41:31 - listeners.TestListener                   - Test STARTED: testInformationPageAccess
+[INFO ] 2024-11-24 17:41:34 - batteryalarm.MainPage                    - We press the 'information' button
+[INFO ] 2024-11-24 17:41:34 - batteryalarm.PageAccessTests             - We check whether we are on the 'Information' page
+[INFO ] 2024-11-24 17:41:35 - batteryalarm.PageAccessTests             - We are on the 'Information' page
+[INFO ] 2024-11-24 17:41:35 - listeners.TestListener                   - Test PASSED: testInformationPageAccess
+[INFO ] 2024-11-24 17:41:36 - batteryalarm.PageAccessTests             - ------- Stopped: Battery Alarm Apk -------
 
-[INFO ] 2024-11-24 15:30:35 - batteryalarm.PageAccessTests             - ------- Start: Battery Alarm Apk -------
-[INFO ] 2024-11-24 15:30:42 - listeners.TestListener                   - Test STARTED: testWarningPopupAlertAccess
-[INFO ] 2024-11-24 15:30:45 - batteryalarm.MainPage                    - We press the 'X' (close app) button
-[INFO ] 2024-11-24 15:30:46 - batteryalarm.PageAccessTests             - We check whether the 'Warning' popup window appears
-[INFO ] 2024-11-24 15:30:47 - batteryalarm.PageAccessTests             - The 'Warning' popup window appears
-[INFO ] 2024-11-24 15:30:47 - batteryalarm.MainPage                    - We press the 'NO' button on warning popup window
-[INFO ] 2024-11-24 15:30:48 - batteryalarm.PageAccessTests             - We check whether the popup window 'Warning' disappears
-[ERROR] 2024-11-24 15:30:59 - batteryalarm.PageAccessTests             - The 'Warning' popup window is not available
-[INFO ] 2024-11-24 15:30:59 - listeners.TestListener                   - Test PASSED: testWarningPopupAlertAccess
-[INFO ] 2024-11-24 15:31:00 - batteryalarm.PageAccessTests             - ------- Stopped: Battery Alarm Apk -------
+[INFO ] 2024-11-24 17:41:36 - batteryalarm.PageAccessTests             - ------- Start: Battery Alarm Apk -------
+[INFO ] 2024-11-24 17:41:43 - listeners.TestListener                   - Test STARTED: testWarningPopupAlertAccess
+[INFO ] 2024-11-24 17:41:45 - batteryalarm.MainPage                    - We press the 'X' (close app) button
+[INFO ] 2024-11-24 17:41:45 - batteryalarm.PageAccessTests             - We check whether the 'Warning' popup window appears
+[INFO ] 2024-11-24 17:41:46 - batteryalarm.PageAccessTests             - The 'Warning' popup window appears
+[INFO ] 2024-11-24 17:41:46 - batteryalarm.MainPage                    - We press the 'NO' button on warning popup window
+[INFO ] 2024-11-24 17:41:47 - batteryalarm.PageAccessTests             - We check whether the popup window 'Warning' disappears
+[ERROR] 2024-11-24 17:41:57 - batteryalarm.PageAccessTests             - The 'Warning' popup window is not available
+[INFO ] 2024-11-24 17:41:57 - listeners.TestListener                   - Test PASSED: testWarningPopupAlertAccess
+[INFO ] 2024-11-24 17:41:58 - batteryalarm.PageAccessTests             - ------- Stopped: Battery Alarm Apk -------
 
-[INFO ] 2024-11-24 15:31:00 - listeners.TestListener                   - Default Suite test(s) run completed
+[INFO ] 2024-11-24 17:41:59 - listeners.TestListener                   - Default Suite test(s) run completed
 

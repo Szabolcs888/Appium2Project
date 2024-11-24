@@ -20,7 +20,8 @@ public class AppiumActions {
         driver.navigate().back();
     }
 
-    public static void scrollWithFreeCoordinates(AndroidDriver driver, int numbersOfRuns, int startX, int startY, int endX, int endY, String logMessage) {
+    public static void scrollWithFreeCoordinates(
+            AndroidDriver driver, int numbersOfRuns, int startX, int startY, int endX, int endY, String logMessage) {
         for (int i = 0; i < numbersOfRuns; i++) {
             LOG.info(logMessage);
             Duration SCROLL_DURATION = Duration.ofMillis(300);
@@ -28,7 +29,8 @@ public class AppiumActions {
         }
     }
 
-    public static void scrollWithFixCoordinates(AndroidDriver driver, int numbersOfRuns, String pageDirection, double scrollRatio) {
+    public static void scrollWithFixCoordinates(
+            AndroidDriver driver, int numbersOfRuns, String pageDirection, double scrollRatio) {
         for (int i = 0; i < numbersOfRuns; i++) {
             CommonUtils.threadSleep(500);
             Duration SCROLL_DURATION = Duration.ofMillis(300);
