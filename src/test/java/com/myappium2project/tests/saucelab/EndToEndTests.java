@@ -119,7 +119,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         checkoutPage.fillCountryInput(testData.get(8));
         checkoutPage.pressToPaymentButton();
 
-        CheckoutPaymentPage checkoutPaymentPage = new CheckoutPaymentPage(driver, wait);
+        CheckoutPaymentPage checkoutPaymentPage = new CheckoutPaymentPage(driver);
         checkoutPaymentPage.fillFullNameInput(testData.get(3));
         checkoutPaymentPage.fillCardNumberInput(testData.get(9));
         checkoutPaymentPage.fillExpirationDateInput(testData.get(10));
@@ -317,7 +317,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         checkoutPage.fillCountryInput(testData.get(20));
         checkoutPage.pressToPaymentButton();
 
-        CheckoutPaymentPage checkoutPaymentPage = new CheckoutPaymentPage(driver, wait);
+        CheckoutPaymentPage checkoutPaymentPage = new CheckoutPaymentPage(driver);
         checkoutPaymentPage.fillFullNameInput(testData.get(15));
         checkoutPaymentPage.fillCardNumberInput(testData.get(21));
         checkoutPaymentPage.fillExpirationDateInput(testData.get(22));

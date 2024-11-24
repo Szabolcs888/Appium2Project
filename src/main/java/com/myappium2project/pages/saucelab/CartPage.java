@@ -58,11 +58,15 @@ public class CartPage extends BasePage {
         LOG.info("We press the 'Remove Item' button until the cart is empty");
         boolean moreElements = true;
         while (moreElements) {
-            for (WebElement item : removeItemButtons) {
-                try {
-                    item.click();
-                } catch (StaleElementReferenceException e) {
-                    moreElements = false;
+            if (removeItemButtons.isEmpty())
+                moreElements = false;
+            else {
+                for (WebElement item : removeItemButtons) {
+                    try {
+                        item.click();
+                    } catch (StaleElementReferenceException e) {
+                        moreElements = false;
+                    }
                 }
             }
         }

@@ -17,11 +17,11 @@ public class AppiumServerFromCode {
     public void startAppiumServer() {
         if (!isAppiumServerRunning(4723)) {
             getInstance().start();
-            LOG.info("The Appium Server starts from code");
+            LOG.info("The Appium Server starts from code\n");
             System.out.println("URL: " + server.getUrl());
             System.out.println("Is Server Running: " + server.isRunning());
         } else {
-            System.out.println("Appium Server is running on port 4723\n");
+            LOG.info("Appium Server is running on port 4723\n");
         }
     }
 

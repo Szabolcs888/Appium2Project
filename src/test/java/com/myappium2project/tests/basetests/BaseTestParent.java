@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.Configurator;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import com.myappium2project.server.AppiumServerFromCode;
@@ -36,11 +37,15 @@ public class BaseTestParent {
 
     @BeforeSuite(alwaysRun = true)
     public void setUpSuite() {
-        LOG = LogManager.getLogger(this.getClass());
         Configurator.initialize(null, "config/log4j2.properties");
         appiumServerFromCode.startAppiumServer();
         CommonUtils.cleanReportsAndScreenshots();
         testStartDateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy.MM.dd. HH:mm:ss"));
+    }
+
+    @BeforeClass(alwaysRun = true)
+    public void setUpClass() {
+        LOG = LogManager.getLogger(this.getClass());
     }
 
     @AfterSuite(alwaysRun = true)

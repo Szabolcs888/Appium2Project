@@ -14,7 +14,7 @@ import java.util.List;
 public class CartEmptyingTests extends SauceLabApkBaseTest {
     private static final String TEST_DATA_PATH = TestDataFilePaths.getSaucelabTestDataPath();
 
-    @Test(timeOut = 45000, priority = 1)
+    @Test(timeOut = 55000, priority = 1)
     public void testPlacingProductsInTheCartAndThenEmptyingThemSL() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();

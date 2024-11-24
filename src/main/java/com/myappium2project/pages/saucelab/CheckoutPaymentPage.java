@@ -1,20 +1,17 @@
 package com.myappium2project.pages.saucelab;
 
 import com.myappium2project.pages.BasePage;
+import com.myappium2project.utils.CommonUtils;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CheckoutPaymentPage extends BasePage {
-    private WebDriverWait wait;
 
-    public CheckoutPaymentPage(AndroidDriver driver, WebDriverWait wait) {
+    public CheckoutPaymentPage(AndroidDriver driver) {
         super();
-        this.wait = wait;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
@@ -34,7 +31,7 @@ public class CheckoutPaymentPage extends BasePage {
     private WebElement reviewOrderButton;
 
     public void fillFullNameInput(String fullName) {
-        wait.until(ExpectedConditions.elementToBeClickable(fullNameInput));
+        CommonUtils.threadSleep(600);
         LOG.info("We fill the 'Full Name' input field");
         fullNameInput.sendKeys(fullName);
     }

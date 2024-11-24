@@ -36,7 +36,7 @@ EndToEnd test (Saucelab)
 <td>
 <img src="https://github.com/user-attachments/assets/d2f4c69d-7ac5-4630-b9b4-3d7b8161315e" alt="Kép 2" width="300"/>
 <br>
-Login tests (Cura Healthcare Service)
+Login tests (Cura Healthcare)
 </td>
 <td>
 <img src="https://github.com/user-attachments/assets/2e135396-8ece-4b96-84fd-5e030df44a4a" alt="Kép 3" width="300"/>
