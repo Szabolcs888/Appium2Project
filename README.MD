@@ -25,6 +25,27 @@ I built the framework from scratch, the core of which is provided by Java - Appi
 
 >I deliberately did not put the files containing the test data in .gitignore, because they are fictitious and not private data. And I didn't include the file containing the data necessary for sending emails either, because what I uploaded was just a template, without my own data. In order for email sending to work, it is necessary to fill out the file with the data (if this is not fulfilled, the last method of tearDownSuite() must be commented out).
 
+## Screenshots of the tests
+<table>
+<tr>
+<td>
+<img src="https://github.com/user-attachments/assets/7165fe3f-bd0a-4812-b017-7af0d30d4395" alt="Kép 1" width="300"/>
+<br>
+EndToEnd test (Saucelab)
+</td>
+<td>
+<img src="https://github.com/user-attachments/assets/d2f4c69d-7ac5-4630-b9b4-3d7b8161315e" alt="Kép 2" width="300"/>
+<br>
+Login tests (Cura Healthcare Service)
+</td>
+<td>
+<img src="https://github.com/user-attachments/assets/2e135396-8ece-4b96-84fd-5e030df44a4a" alt="Kép 3" width="300"/>
+<br>
+Page access tests (Battery Alarm)
+</td>
+</tr>
+</table>
+
 ## Videos of the tests
 <table>
 <tr>
@@ -50,8 +71,6 @@ Dropd. and Feedb.popup tests (Saucelab)
 </a>
 </td>
 </tr>
-</table>
-<table>
 <tr>
 <td>
 <a href="https://www.youtube.com/watch?v=5RCdNtd5-Nc">
@@ -76,7 +95,8 @@ Logintests with Data Provider (Cura)
 </td>
 </tr>
 </table>
-<br>
+
+
 
 
 >_note:_ my computer had a hard time with video recording, the processor was often at 100%, so the tests ran slower than usual. Therefore, I had to cut the given video in some places (typically, opening the app took longer than average at the beginning of the test).
