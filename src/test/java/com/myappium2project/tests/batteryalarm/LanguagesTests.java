@@ -1,11 +1,11 @@
 package com.myappium2project.tests.batteryalarm;
 
+import com.myappium2project.utils.batteryalarm.LanguageUtils;
 import org.testng.Assert;
 import com.myappium2project.pages.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.batteryalarm.MainPage;
 import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
 import org.testng.annotations.Test;
-import com.myappium2project.utils.AppiumActions;
 
 public class LanguagesTests extends BatteryAlarmBaseTest {
 
@@ -17,13 +17,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
 
         MainPage mainPage = new MainPage(driver);
         LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
-        if (!mainPage.getSelectedLanguage().equals("English")) {
-            languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
-            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900,
-                    "We scroll up in the dropdown menu");
-        } else {
-            languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
-        }
+        LanguageUtils.scrollToEnglishLanguage(driver, mainPage, languagesDropdownMenu);
 
         languagesDropdownMenu.chooseEnglishOption();
         LOG.info(LOG_MESSAGE_1);

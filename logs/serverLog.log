@@ -6929,3 +6929,4 @@
 2024-11-24 23:15:47:889 [Instrumentation] 
 2024-11-24 23:15:47:889 [Instrumentation] OK (1 test)
 2024-11-24 23:15:48:002 [Instrumentation] The process has exited with code 0
+2024-11-24 23:27:09:831 [Appium] Received SIGINT - shutting down

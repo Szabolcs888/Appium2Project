@@ -1,25 +1,21 @@
 package com.myappium2project.tests.batteryalarm;
 
+import com.myappium2project.utils.batteryalarm.LanguageUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.common.PhoneDesktop;
 import com.myappium2project.pages.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.batteryalarm.MainPage;
 import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
-import com.myappium2project.utils.AppiumActions;
 
 public class AlarmTests extends BatteryAlarmBaseTest {
 
     @Test(description = "The prerequisite for the test is that the phone is charging.")
     public void testMaxAlarm() {
         MainPage mainPage = new MainPage(driver);
-        if (!mainPage.getSelectedLanguage().equals("English")) {
-            LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
-            languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
-            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900,
-                    "We scroll up in the dropdown menu");
-            languagesDropdownMenu.chooseEnglishOption();
-        }
+        LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
+        LanguageUtils.scrollToEnglishLanguage(driver, mainPage, languagesDropdownMenu);
+        languagesDropdownMenu.chooseEnglishOption();
 
         LOG.info("We ask for the battery charge and 'Max Alarm' values");
         int currentBatteryChargeValue = mainPage.getCurrentBatteryChargeValue();
@@ -43,13 +39,9 @@ public class AlarmTests extends BatteryAlarmBaseTest {
     @Test(description = "The prerequisite for the test is that the phone is not charging.")
     public void testMinAlarm() {
         MainPage mainPage = new MainPage(driver);
-        if (!mainPage.getSelectedLanguage().equals("English")) {
-            LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
-            languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
-            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900,
-                    "We scroll up in the dropdown menu");
-            languagesDropdownMenu.chooseEnglishOption();
-        }
+        LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
+        LanguageUtils.scrollToEnglishLanguage(driver, mainPage, languagesDropdownMenu);
+        languagesDropdownMenu.chooseEnglishOption();
 
         LOG.info("We ask for the battery charge and 'Min Alarm' values");
         int currentBatteryChargeValue = mainPage.getCurrentBatteryChargeValue();

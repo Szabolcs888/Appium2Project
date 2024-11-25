@@ -23,9 +23,13 @@ public class AppiumActions {
     public static void scrollWithFreeCoordinates(
             AndroidDriver driver, int numbersOfRuns, int startX, int startY, int endX, int endY, String logMessage) {
         for (int i = 0; i < numbersOfRuns; i++) {
-            LOG.info(logMessage);
-            Duration SCROLL_DURATION = Duration.ofMillis(300);
-            scrollAction(driver, new Point(startX, startY), new Point(endX, endY), SCROLL_DURATION);
+            try {
+                LOG.info(logMessage);
+                Duration SCROLL_DURATION = Duration.ofMillis(300);
+                scrollAction(driver, new Point(startX, startY), new Point(endX, endY), SCROLL_DURATION);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

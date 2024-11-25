@@ -1,12 +1,12 @@
 package com.myappium2project.tests.batteryalarm;
 
+import com.myappium2project.utils.batteryalarm.LanguageUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.batteryalarm.InformationPage;
 import com.myappium2project.pages.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.batteryalarm.MainPage;
 import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
-import com.myappium2project.utils.AppiumActions;
 
 public class PageAccessTests extends BatteryAlarmBaseTest {
 
@@ -14,13 +14,9 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
             groups = {"smoke"})
     public void testMainPageAccess() {
         MainPage mainPage = new MainPage(driver);
-        if (!mainPage.getSelectedLanguage().equals("English")) {
-            LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
-            languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
-            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900,
-                    "We scroll up in the dropdown menu");
-            languagesDropdownMenu.chooseEnglishOption();
-        }
+        LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
+        LanguageUtils.scrollToEnglishLanguage(driver, mainPage, languagesDropdownMenu);
+        languagesDropdownMenu.chooseEnglishOption();
 
         LOG.info("We check whether we are on the 'Main' page");
         String voiceWarningText = mainPage.getVoiceWarningEnglishText();
@@ -42,14 +38,9 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
             groups = {"smoke"})
     public void testInformationPageAccess() {
         MainPage mainPage = new MainPage(driver);
-        if (!mainPage.getSelectedLanguage().equals("English")) {
-            LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
-            languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
-            AppiumActions.scrollWithFreeCoordinates(driver, 2, 112, 700, 112, 1900,
-                    "We scroll up in the dropdown menu");
-            languagesDropdownMenu.chooseEnglishOption();
-        }
-
+        LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
+        LanguageUtils.scrollToEnglishLanguage(driver, mainPage, languagesDropdownMenu);
+        languagesDropdownMenu.chooseEnglishOption();
         mainPage.pressInformationButton();
 
         LOG.info("We check whether we are on the 'Information' page");
