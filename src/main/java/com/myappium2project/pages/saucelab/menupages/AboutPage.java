@@ -1,4 +1,4 @@
-package com.myappium2project.pages.saucelab.menuPages;
+package com.myappium2project.pages.saucelab.menupages;
 
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
@@ -10,13 +10,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AboutPage extends BasePage {
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"About\")")
+    private WebElement aboutTitleText;
+
     public AboutPage(AndroidDriver driver) {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"About\")")
-    private WebElement aboutTitleText;
 
     public String getAboutPageTitleText() {
         try {

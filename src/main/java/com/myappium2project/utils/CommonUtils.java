@@ -61,8 +61,7 @@ public class CommonUtils {
 
     private static void deleteFile(String path) {
         File file = new File(path);
-        if (file.delete()) {
-        } else {
+        if (!file.delete()) {
             System.out.println("Failed to delete the file: " + file.getName());
         }
     }

@@ -1,4 +1,4 @@
-package com.myappium2project.pages.saucelab.productsPages;
+package com.myappium2project.pages.saucelab.productspages;
 
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
@@ -13,16 +13,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FleeceJacketPage extends BasePage {
     private WebDriverWait wait;
-
-    public FleeceJacketPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public FleeceJacketPage(AndroidDriver driver, WebDriverWait wait) {
-        this.wait = wait;
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"\uDB81\uDCCF\").instance(4)")
     private WebElement fifthStarButton;
@@ -39,6 +29,15 @@ public class FleeceJacketPage extends BasePage {
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"counter plus button\"]")
     private WebElement counterPlusButton;
 
+    public FleeceJacketPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public FleeceJacketPage(AndroidDriver driver, WebDriverWait wait) {
+        this.wait = wait;
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void pressAddToCartButton() {
         LOG.info("We press the 'Add To Cart' button");

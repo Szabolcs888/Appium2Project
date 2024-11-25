@@ -12,12 +12,6 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage extends BasePage {
     AndroidDriver driver;
 
-    public LoginPage(AndroidDriver driver) {
-        super();
-        this.driver = driver;
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @FindBy(id = "txt-username")
     private WebElement usernameInput;
 
@@ -32,6 +26,12 @@ public class LoginPage extends BasePage {
 
     @FindBy(id = "login")
     private WebElement loginText;
+
+    public LoginPage(AndroidDriver driver) {
+        super();
+        this.driver = driver;
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void fillUserNameInput(String userName, String validOrInvalidUsername) {
         LOG.info("We fill the 'Username' input field with the {} username", validOrInvalidUsername);

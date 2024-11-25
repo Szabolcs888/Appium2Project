@@ -9,11 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HamburgerMenu extends BasePage {
 
-    public HamburgerMenu(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @FindBy(id = "menu-toggle")
     private WebElement hamburgerMenuButton;
 
@@ -25,6 +20,11 @@ public class HamburgerMenu extends BasePage {
 
     @FindBy(xpath = "//a[@href='history.php#history']")
     private WebElement historyButton;
+
+    public HamburgerMenu(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void pressHamburgerMenuButton() {
         LOG.info("We press the 'Hamburger menu' button");

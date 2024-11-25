@@ -1,4 +1,4 @@
-package com.myappium2project.pages.saucelab.productsPages;
+package com.myappium2project.pages.saucelab.productspages;
 
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
@@ -9,11 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class OnesiePage extends BasePage {
 
-    public OnesiePage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Add To Cart\"]")
     private WebElement addToCartButton;
 
@@ -22,6 +17,11 @@ public class OnesiePage extends BasePage {
 
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"black circle\"]")
     private WebElement blackCircleButton;
+
+    public OnesiePage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void pressBlackCircleButton() {
         LOG.info("We press the black circle button");

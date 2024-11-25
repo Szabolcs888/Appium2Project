@@ -127,4 +127,3 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
                 "The current URL should be '" + expectedUrl + "', but it is '" + currentUrl + "'.");
     }
 }
-

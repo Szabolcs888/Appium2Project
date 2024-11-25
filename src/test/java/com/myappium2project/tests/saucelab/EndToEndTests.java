@@ -1,7 +1,7 @@
 package com.myappium2project.tests.saucelab;
 
 import com.myappium2project.pages.saucelab.*;
-import com.myappium2project.pages.saucelab.productsPages.*;
+import com.myappium2project.pages.saucelab.productspages.*;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
 import com.myappium2project.utils.AppiumActions;
 import com.myappium2project.utils.TestDataFilePaths;

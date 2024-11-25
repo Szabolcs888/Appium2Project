@@ -10,13 +10,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MainPage extends BasePage {
 
+    @FindBy(xpath = "//h1[text()='CURA Healthcare Service']")
+    private WebElement curaHealthcareServiceText;
+
     public MainPage(AndroidDriver driver) {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
-    @FindBy(xpath = ("//h1[text()='CURA Healthcare Service']"))
-    private WebElement curaHealthcareServiceText;
 
     public boolean isPageLoaded() {
         try {

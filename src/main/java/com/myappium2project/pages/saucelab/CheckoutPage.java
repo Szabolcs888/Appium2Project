@@ -10,11 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutPage extends BasePage {
 
-    public CheckoutPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Checkout\")")
     private WebElement checkoutPageTitleText;
 
@@ -38,6 +33,11 @@ public class CheckoutPage extends BasePage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"To Payment\")")
     private WebElement toPaymentButton;
+
+    public CheckoutPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public String getCheckoutPageTitleText() {
         try {
@@ -82,4 +82,3 @@ public class CheckoutPage extends BasePage {
         toPaymentButton.click();
     }
 }
-

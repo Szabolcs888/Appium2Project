@@ -20,17 +20,6 @@ import java.util.List;
 public class ProductsPage extends BasePage {
     private WebDriverWait wait;
 
-    public ProductsPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public ProductsPage(AndroidDriver driver, WebDriverWait wait) {
-        super();
-        this.wait = wait;
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Products\"]")
     private WebElement productTitleText;
 
@@ -87,6 +76,17 @@ public class ProductsPage extends BasePage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Thank you for submitting your review!\")")
     private WebElement feedbackPopupText;
+
+    public ProductsPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public ProductsPage(AndroidDriver driver, WebDriverWait wait) {
+        super();
+        this.wait = wait;
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public String getProductPageTitleText() {
         try {

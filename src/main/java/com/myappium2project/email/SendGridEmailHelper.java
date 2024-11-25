@@ -81,14 +81,14 @@ public class SendGridEmailHelper {
     }
 
     private static void sendEmail(Mail mail) throws IOException {
-        SendGrid sg = new SendGrid(API_KEY);
+        SendGrid sendGrid = new SendGrid(API_KEY);
         Request request = new Request();
 
         try {
             request.setMethod(Method.POST);
             request.setEndpoint("mail/send");
             request.setBody(mail.build());
-            Response response = sg.api(request);
+            Response response = sendGrid.api(request);
             System.out.println("Email successfully sent with status code: " + response.getStatusCode());
         } catch (IOException ex) {
             System.out.println("Failed to send email: " + ex.getMessage());

@@ -12,11 +12,6 @@ import java.util.List;
 
 public class CheckoutOrderReviewPage extends BasePage {
 
-    public CheckoutOrderReviewPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Place Order\")")
     private WebElement placeOrderButton;
 
@@ -25,6 +20,11 @@ public class CheckoutOrderReviewPage extends BasePage {
 
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"checkout payment info\"]//android.widget.TextView")
     private List<WebElement> paymentDataListAsElements;
+
+    public CheckoutOrderReviewPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void pressPlaceOrderButton() {
         LOG.info("We press the 'Place Order' button");

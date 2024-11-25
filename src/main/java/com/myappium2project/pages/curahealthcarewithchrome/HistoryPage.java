@@ -13,12 +13,7 @@ import java.util.List;
 
 public class HistoryPage extends BasePage {
 
-    public HistoryPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    @FindBy(xpath = ("//h2[text()='History']"))
+    @FindBy(xpath = "//h2[text()='History']")
     private WebElement historyTitleText;
 
     @FindBy(className = "panel-heading")
@@ -35,6 +30,11 @@ public class HistoryPage extends BasePage {
 
     @FindBy(id = "comment")
     private WebElement comment;
+
+    public HistoryPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public boolean isPageLoaded() {
         try {

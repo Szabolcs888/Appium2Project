@@ -15,11 +15,6 @@ import java.util.List;
 
 public class CartPage extends BasePage {
 
-    public CartPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Proceed To Checkout\")")
     private WebElement proceedToCheckoutButton;
 
@@ -31,6 +26,11 @@ public class CartPage extends BasePage {
 
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"counter amount\"]")
     private List<WebElement> productsQuantityListInMyCartAsElements;
+
+    public CartPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void pressProceedToCheckoutButton() {
         LOG.info("We press the Proceed To Checkout button");
@@ -58,9 +58,9 @@ public class CartPage extends BasePage {
         LOG.info("We press the 'Remove Item' button until the cart is empty");
         boolean moreElements = true;
         while (moreElements) {
-            if (removeItemButtons.isEmpty())
+            if (removeItemButtons.isEmpty()) {
                 moreElements = false;
-            else {
+            } else {
                 for (WebElement item : removeItemButtons) {
                     try {
                         item.click();

@@ -10,16 +10,16 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ProfilePage extends BasePage {
 
+    @FindBy(xpath = "//p[text()='Under construction.']")
+    private WebElement underConstructionsText;
+
+    @FindBy(className = "btn-default")
+    private WebElement logoutButton;
+
     public ProfilePage(AndroidDriver driver) {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
-    @FindBy(xpath = ("//p[text()='Under construction.']"))
-    private WebElement underConstructionsText;
-
-    @FindBy(className = ("btn-default"))
-    private WebElement logoutButton;
 
     public void pressLogoutButton() {
         LOG.info("We press the 'Logout' Button");

@@ -10,11 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutPaymentPage extends BasePage {
 
-    public CheckoutPaymentPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc=\"Full Name* input field\"]")
     private WebElement fullNameInput;
 
@@ -29,6 +24,11 @@ public class CheckoutPaymentPage extends BasePage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Review Order\")")
     private WebElement reviewOrderButton;
+
+    public CheckoutPaymentPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void fillFullNameInput(String fullName) {
         CommonUtils.threadSleep(600);

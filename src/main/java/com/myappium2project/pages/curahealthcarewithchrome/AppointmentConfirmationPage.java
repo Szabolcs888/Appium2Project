@@ -13,11 +13,6 @@ import java.util.List;
 
 public class AppointmentConfirmationPage extends BasePage {
 
-    public AppointmentConfirmationPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @FindBy(xpath = "//*[text()='Appointment Confirmation']")
     private WebElement appointmentConfirmationPageTitleText;
 
@@ -35,6 +30,11 @@ public class AppointmentConfirmationPage extends BasePage {
 
     @FindBy(id = "comment")
     private WebElement comment;
+
+    public AppointmentConfirmationPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public boolean isPageLoaded() {
         try {

@@ -9,11 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LanguagesDropdownMenu extends BasePage {
 
-    public LanguagesDropdownMenu(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(className = "android.widget.Spinner")
     private WebElement languageSelectorDropdownMenu;
 
@@ -109,6 +104,11 @@ public class LanguagesDropdownMenu extends BasePage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"हिन्दी\")")
     private WebElement hindiOption;
+
+    public LanguagesDropdownMenu(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void pressLanguageSelectorDropdownMenuButton() {
         LOG.info("We press the language selector dropdown menu button");

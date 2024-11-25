@@ -13,6 +13,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class CartNoItemsPage extends BasePage {
     private WebDriverWait wait;
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Go Shopping\")")
+    private WebElement goShoppingButton;
+
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"No Items\")")
+    private WebElement noItemsText;
+
     public CartNoItemsPage(AndroidDriver driver) {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -23,12 +29,6 @@ public class CartNoItemsPage extends BasePage {
         this.wait = wait;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Go Shopping\")")
-    private WebElement goShoppingButton;
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"No Items\")")
-    private WebElement noItemsText;
 
     public void pressGoShoppingButton() {
         wait.until(ExpectedConditions.elementToBeClickable(goShoppingButton));

@@ -10,11 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class InformationPage extends BasePage {
 
-    public InformationPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"In order to avoid issue, find the power saving option on your phone," +
             " open it and add Battery app to protected apps or disable optimization for Battery app." +
             " It is usually under Phone battery settings.\n" +
@@ -34,6 +29,11 @@ public class InformationPage extends BasePage {
             "male Or female voice alert selection some languages only, \n" +
             "Widget\")")
     private WebElement informationText;
+
+    public InformationPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public String getInformationText() {
         try {

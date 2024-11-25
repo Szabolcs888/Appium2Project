@@ -1,7 +1,7 @@
 package com.myappium2project.tests.saucelab;
 
 import com.myappium2project.pages.saucelab.*;
-import com.myappium2project.pages.saucelab.productsPages.*;
+import com.myappium2project.pages.saucelab.productspages.*;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
 import com.myappium2project.utils.AppiumActions;
 import com.myappium2project.utils.TestDataFilePaths;
@@ -14,7 +14,7 @@ import java.util.List;
 public class CartEmptyingTests extends SauceLabApkBaseTest {
     private static final String TEST_DATA_PATH = TestDataFilePaths.getSaucelabTestDataPath();
 
-    @Test(timeOut = 55000, priority = 1)
+    @Test(timeOut = 550_00, priority = 1)
     public void testPlacingProductsInTheCartAndThenEmptyingThemSL() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();

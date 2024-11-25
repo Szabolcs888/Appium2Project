@@ -1,4 +1,4 @@
-package com.myappium2project.pages.saucelab.menuPages;
+package com.myappium2project.pages.saucelab.menupages;
 
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
@@ -10,13 +10,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ApiCallsPage extends BasePage {
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"API calls\")")
+    private WebElement apiCallsTitleText;
+
     public ApiCallsPage(AndroidDriver driver) {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().text(\"API calls\")")
-    private WebElement apiCallsTitleText;
 
     public String getApiCallsPageTitleText() {
         try {

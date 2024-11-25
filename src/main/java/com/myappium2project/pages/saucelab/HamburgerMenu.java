@@ -12,17 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class HamburgerMenu extends BasePage {
     private WebDriverWait wait;
 
-    public HamburgerMenu(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
-    public HamburgerMenu(AndroidDriver driver, WebDriverWait wait) {
-        super();
-        this.wait = wait;
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(className = "android.widget.ImageView")
     private WebElement hamburgerMenuButton;
 
@@ -58,6 +47,17 @@ public class HamburgerMenu extends BasePage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Sauce Bot Video\")")
     private WebElement sauceBotVideoButton;
+
+    public HamburgerMenu(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
+
+    public HamburgerMenu(AndroidDriver driver, WebDriverWait wait) {
+        super();
+        this.wait = wait;
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void pressHamburgerMenuButton() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenuButton));

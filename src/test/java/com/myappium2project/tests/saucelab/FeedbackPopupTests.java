@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.myappium2project.pages.saucelab.HamburgerMenu;
 import com.myappium2project.pages.saucelab.LoginPage;
 import com.myappium2project.pages.saucelab.ProductsPage;
-import com.myappium2project.pages.saucelab.productsPages.FleeceJacketPage;
+import com.myappium2project.pages.saucelab.productspages.FleeceJacketPage;
 import com.myappium2project.utils.CommonUtils;
 
 import java.util.List;

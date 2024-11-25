@@ -9,13 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class PhoneDesktop extends BasePage {
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().description(\"Battery Alarm\")")
+    private WebElement batteryAlarmAppIcon;
+
     public PhoneDesktop(AndroidDriver driver) {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
-    @AndroidFindBy(uiAutomator = "new UiSelector().description(\"Battery Alarm\")")
-    private WebElement batteryAlarmAppIcon;
 
     public void pressBatteryAlarmAppIcon() {
         LOG.info("We press the 'Battery Alarm' app icon");

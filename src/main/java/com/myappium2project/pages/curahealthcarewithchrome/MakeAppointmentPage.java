@@ -15,12 +15,6 @@ import java.util.List;
 public class MakeAppointmentPage extends BasePage {
     private final AndroidDriver driver;
 
-    public MakeAppointmentPage(AndroidDriver driver) {
-        super();
-        this.driver = driver;
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @FindBy(xpath = "//*[text()='Make Appointment']")
     private WebElement makeAppointmentPageTitleText;
 
@@ -44,6 +38,12 @@ public class MakeAppointmentPage extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"btn-book-appointment\"]")
     private WebElement bookAppointmentButton;
+
+    public MakeAppointmentPage(AndroidDriver driver) {
+        super();
+        this.driver = driver;
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public String getMakeAppointmentPageTitleText() {
         try {
@@ -79,8 +79,9 @@ public class MakeAppointmentPage extends BasePage {
         if (option.equals("Yes")) {
             LOG.info("We press the 'Apply for hospital readmission' checkbox");
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", applyForHospitalReadmissionCheckbox);
-        } else
+        } else {
             LOG.info("We do not press the 'Apply for hospital readmission' checkbox");
+        }
     }
 
     public void choiceHealthcareProgramOption(String option) {

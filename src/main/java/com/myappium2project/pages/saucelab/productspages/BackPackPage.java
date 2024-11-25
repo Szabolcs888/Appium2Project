@@ -1,4 +1,4 @@
-package com.myappium2project.pages.saucelab.productsPages;
+package com.myappium2project.pages.saucelab.productspages;
 
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
@@ -8,11 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class BackPackPage extends BasePage {
-
-    public BackPackPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Add To Cart\")")
     private WebElement addToCartButton;
@@ -25,6 +20,11 @@ public class BackPackPage extends BasePage {
 
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"counter plus button\"]")
     private WebElement counterPlusButton;
+
+    public BackPackPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void pressAddToCartButton() {
         LOG.info("We press the 'Add To Cart' button");

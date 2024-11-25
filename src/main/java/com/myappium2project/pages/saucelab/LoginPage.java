@@ -10,11 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage {
 
-    public LoginPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(accessibility = "Username input field")
     private WebElement usernameInput;
 
@@ -32,6 +27,11 @@ public class LoginPage extends BasePage {
 
     @AndroidFindBy(xpath = "//android.widget.Button[@resource-id=\"android:id/button1\"]")
     private WebElement okButtonOnSuccessfulLogoutAlert;
+
+    public LoginPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
 
     public void fillUserNameInput(String userName, String validOrInvalidUsername) {

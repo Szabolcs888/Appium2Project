@@ -12,11 +12,6 @@ import java.util.List;
 
 public class MainPage extends BasePage {
 
-    public MainPage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Choose a sound\")")
     private WebElement chooseASoundText;
 
@@ -142,6 +137,11 @@ public class MainPage extends BasePage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"आवाज चेतावनी\")")
     private WebElement voiceWarningHindiText;
+
+    public MainPage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void pressInformationButton() {
         LOG.info("We press the 'information' button");

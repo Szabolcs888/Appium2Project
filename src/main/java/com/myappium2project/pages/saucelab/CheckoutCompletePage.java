@@ -10,16 +10,16 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutCompletePage extends BasePage {
 
-    public CheckoutCompletePage(AndroidDriver driver) {
-        super();
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-    }
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Continue Shopping\")")
     private WebElement continueShoppingButton;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Checkout Complete\")")
     private WebElement checkoutCompleteText;
+
+    public CheckoutCompletePage(AndroidDriver driver) {
+        super();
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    }
 
     public void pressContinueShoppingButton() {
         LOG.info("We press the 'Continue Shopping' button");
