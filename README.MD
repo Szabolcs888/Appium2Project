@@ -29,17 +29,17 @@ I built the framework from scratch, the core of which is provided by Java - Appi
 <table>
 <tr>
 <td>
-<img src="https://github.com/user-attachments/assets/7165fe3f-bd0a-4812-b017-7af0d30d4395" alt="Kép 1" width="300"/>
+<img src="https://github.com/user-attachments/assets/ab09e32f-1bd4-436a-acaf-0233c53d481f" alt="Kép 1" width="300"/>
 <br>
 EndToEnd test (Saucelab)
 </td>
 <td>
-<img src="https://github.com/user-attachments/assets/d2f4c69d-7ac5-4630-b9b4-3d7b8161315e" alt="Kép 2" width="300"/>
+<img src="https://github.com/user-attachments/assets/4c24d286-97eb-4bbd-a281-610fb9269b27" alt="Kép 2" width="300"/>
 <br>
 Login tests (Cura Healthcare)
 </td>
 <td>
-<img src="https://github.com/user-attachments/assets/2e135396-8ece-4b96-84fd-5e030df44a4a" alt="Kép 3" width="300"/>
+<img src="https://github.com/user-attachments/assets/2004eedb-2a4a-4710-9356-9cb9c6a750ee" alt="Kép 3" width="300"/>
 <br>
 Page access tests (Battery Alarm)
 </td>
