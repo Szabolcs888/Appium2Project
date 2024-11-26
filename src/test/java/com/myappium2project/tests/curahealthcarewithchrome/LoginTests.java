@@ -1,33 +1,29 @@
 package com.myappium2project.tests.curahealthcarewithchrome;
 
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
-import com.myappium2project.utils.TestDataFilePaths;
+import com.myappium2project.testsdata.CommonTestData;
+import com.myappium2project.testsdata.TestDataCura;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.curahealthcarewithchrome.HamburgerMenu;
 import com.myappium2project.pages.curahealthcarewithchrome.LoginPage;
 import com.myappium2project.pages.curahealthcarewithchrome.MakeAppointmentPage;
-import com.myappium2project.utils.CommonUtils;
-
-import java.util.List;
 
 public class LoginTests extends ChromeBrowserBaseTest {
-    private static final String TEST_DATA_PATH = TestDataFilePaths.getCuraTestDataPath();
     private static final String EXPECTED_ERROR_MESSAGE = "Login failed! Please ensure the username and password are valid.";
 
     @Test(priority = 1,
             groups = {"smoke"})
     public void testLoginWithValidDataCura() {
-        driver.get("https://katalon-demo-cura.herokuapp.com");
+        driver.get(TestDataCura.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(testData.get(1), "valid");
-        loginPage.fillPasswordInput(testData.get(2), "valid");
+        loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
@@ -45,16 +41,15 @@ public class LoginTests extends ChromeBrowserBaseTest {
     @Test(priority = 2,
             groups = {"smoke"})
     public void testLoginWithValidUsernameInvalidPasswordCura() {
-        driver.get("https://katalon-demo-cura.herokuapp.com");
+        driver.get(TestDataCura.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(testData.get(1), "valid");
-        loginPage.fillPasswordInput("invalidPassword", "invalid");
+        loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillPasswordInput(CommonTestData.INVALID_PASSWORD, CommonTestData.INVALID_LOG_MESSAGE);
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
@@ -72,16 +67,15 @@ public class LoginTests extends ChromeBrowserBaseTest {
     @Test(priority = 3,
             groups = {"smoke"})
     public void testLoginWithInvalidUsernameValidPasswordCura() {
-        driver.get("https://katalon-demo-cura.herokuapp.com");
+        driver.get(TestDataCura.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput("invalidUsername", "invalid");
-        loginPage.fillPasswordInput(testData.get(2), "valid");
+        loginPage.fillUserNameInput(CommonTestData.INVALID_USERNAME, CommonTestData.INVALID_LOG_MESSAGE);
+        loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
@@ -99,15 +93,15 @@ public class LoginTests extends ChromeBrowserBaseTest {
     @Test(priority = 4,
             groups = {"smoke"})
     public void testLoginWithEmptyUsernameEmptyPasswordCura() {
-        driver.get("https://katalon-demo-cura.herokuapp.com");
+        driver.get(TestDataCura.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput("", "empty");
-        loginPage.fillPasswordInput("", "empty");
+        loginPage.fillUserNameInput("", CommonTestData.EMPTY_LOG_MESSAGE);
+        loginPage.fillPasswordInput("", CommonTestData.EMPTY_LOG_MESSAGE);
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 

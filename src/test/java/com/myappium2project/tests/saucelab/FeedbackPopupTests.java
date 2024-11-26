@@ -1,19 +1,16 @@
 package com.myappium2project.tests.saucelab;
 
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
-import com.myappium2project.utils.TestDataFilePaths;
+import com.myappium2project.testsdata.CommonTestData;
+import com.myappium2project.testsdata.TestDataSaucelab;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.saucelab.HamburgerMenu;
 import com.myappium2project.pages.saucelab.LoginPage;
 import com.myappium2project.pages.saucelab.ProductsPage;
 import com.myappium2project.pages.saucelab.productspages.FleeceJacketPage;
-import com.myappium2project.utils.CommonUtils;
-
-import java.util.List;
 
 public class FeedbackPopupTests extends SauceLabApkBaseTest {
-    private static final String TEST_DATA_PATH = TestDataFilePaths.getSaucelabTestDataPath();
 
     @Test(priority = 1)
     public void testFeedbackPopupOnProductsPageWithoutLoggedIn() {
@@ -52,11 +49,9 @@ public class FeedbackPopupTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLogInButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
-
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(testData.get(1), "valid");
-        loginPage.fillPasswordInput(testData.get(2), "valid");
+        loginPage.fillUserNameInput(TestDataSaucelab.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillPasswordInput(TestDataSaucelab.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.pressLoginButton();
 
         ProductsPage productPage = new ProductsPage(driver);
@@ -77,7 +72,6 @@ public class FeedbackPopupTests extends SauceLabApkBaseTest {
         }
         Assert.assertEquals(feedbackPopupText, expectedFeedbackPopupText,
                 "The popup text should be 'Thank you for submitting your review!', but it is not.");
-
         fleeceJacketPage.pressCloseModalButtonOnFeedbackPopup();
 
         LOG.info("We check whether the 'Close Modal' button is still available");

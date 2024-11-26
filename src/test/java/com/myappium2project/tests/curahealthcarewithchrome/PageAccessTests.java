@@ -1,34 +1,30 @@
 package com.myappium2project.tests.curahealthcarewithchrome;
 
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
+import com.myappium2project.testsdata.CommonTestData;
+import com.myappium2project.testsdata.TestDataCura;
 import com.myappium2project.utils.AppiumActions;
-import com.myappium2project.utils.TestDataFilePaths;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.curahealthcarewithchrome.HamburgerMenu;
 import com.myappium2project.pages.curahealthcarewithchrome.HistoryPage;
 import com.myappium2project.pages.curahealthcarewithchrome.LoginPage;
 import com.myappium2project.pages.curahealthcarewithchrome.ProfilePage;
-import com.myappium2project.utils.CommonUtils;
-
-import java.util.List;
 
 public class PageAccessTests extends ChromeBrowserBaseTest {
-    private static final String TEST_DATA_PATH = TestDataFilePaths.getCuraTestDataPath();
 
     @Test(priority = 1,
             groups = {"smoke"})
     public void testProfilPageAccessCura() {
-        driver.get("https://katalon-demo-cura.herokuapp.com");
+        driver.get(TestDataCura.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(testData.get(1), "valid");
-        loginPage.fillPasswordInput(testData.get(2), "valid");
+        loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
@@ -51,16 +47,15 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
     @Test(priority = 2,
             groups = {"smoke"})
     public void testHistoryPageAccessCura() {
-        driver.get("https://katalon-demo-cura.herokuapp.com");
+        driver.get(TestDataCura.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(testData.get(1), "valid");
-        loginPage.fillPasswordInput(testData.get(2), "valid");
+        loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 

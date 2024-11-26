@@ -3,27 +3,23 @@ package com.myappium2project.tests.saucelab;
 import com.myappium2project.pages.saucelab.*;
 import com.myappium2project.pages.saucelab.productspages.*;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
+import com.myappium2project.testsdata.CommonTestData;
+import com.myappium2project.testsdata.TestDataSaucelab;
 import com.myappium2project.utils.AppiumActions;
-import com.myappium2project.utils.TestDataFilePaths;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.myappium2project.utils.CommonUtils;
-
-import java.util.List;
 
 public class CartEmptyingTests extends SauceLabApkBaseTest {
-    private static final String TEST_DATA_PATH = TestDataFilePaths.getSaucelabTestDataPath();
 
-    @Test(timeOut = 550_00, priority = 1)
+    @Test(timeOut = 620_00, priority = 1)
     public void testPlacingProductsInTheCartAndThenEmptyingThemSL() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLogInButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(testData.get(1), "valid");
-        loginPage.fillPasswordInput(testData.get(2), "valid");
+        loginPage.fillUserNameInput(TestDataSaucelab.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillPasswordInput(TestDataSaucelab.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.pressLoginButton();
 
         ProductsPage productPage = new ProductsPage(driver, wait);

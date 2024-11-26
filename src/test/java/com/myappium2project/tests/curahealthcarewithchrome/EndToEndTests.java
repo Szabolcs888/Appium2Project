@@ -2,29 +2,27 @@ package com.myappium2project.tests.curahealthcarewithchrome;
 
 import com.myappium2project.pages.curahealthcarewithchrome.*;
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
-import com.myappium2project.utils.TestDataFilePaths;
+import com.myappium2project.testsdata.CommonTestData;
+import com.myappium2project.testsdata.TestDataCura;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.myappium2project.utils.CommonUtils;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class EndToEndTests extends ChromeBrowserBaseTest {
-    private static final String TEST_DATA_PATH = TestDataFilePaths.getCuraTestDataPath();
 
     @Test
     public void testEndToEndCura() {
-        driver.get("https://katalon-demo-cura.herokuapp.com");
+        driver.get(TestDataCura.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(testData.get(9), "valid");
-        loginPage.fillPasswordInput(testData.get(10), "valid");
+        loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC2, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC2, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
@@ -40,11 +38,11 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
                 "The 'Make Appointment' page should be loaded, but it is not.");
 
         makeAppointmentPage.pressFacilityDropDownMenuButton();
-        makeAppointmentPage.choiceFacilityOption(testData.get(11));
-        makeAppointmentPage.pressApplyForHospitalReadmissionCheckBoxOrDontPressIt(testData.get(12));
-        makeAppointmentPage.choiceHealthcareProgramOption(testData.get(13));
-        makeAppointmentPage.fillDateOfVisitInput(testData.get(14));
-        makeAppointmentPage.fillCommentInput(testData.get(15));
+        makeAppointmentPage.choiceFacilityOption(TestDataCura.FACILTY_ACC2);
+        makeAppointmentPage.pressApplyForHospitalReadmissionCheckBoxOrDontPressIt(TestDataCura.READMISSION_ACC2);
+        makeAppointmentPage.choiceHealthcareProgramOption(TestDataCura.HEALTHCARE_PROGRAM_ACC2);
+        makeAppointmentPage.fillDateOfVisitInput(TestDataCura.VIST_DATE_ACC2);
+        makeAppointmentPage.fillCommentInput(TestDataCura.COMMENT_ACC2);
         makeAppointmentPage.pressBookAppointmentButton();
 
         LOG.info("We check if we are on the 'Appointment Confirmation' page");
@@ -60,7 +58,9 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
 
         LOG.info("We check whether the appointment data matches the ones we provided");
         List<String> appointmentDataAsTheyAreOnTheAppointmentConfirmationPage = appointmentConfirmationPage.getAppointmentDataAsTheyAreOnTheAppointmentConfirmationPage();
-        List<String> appointmentDataAsItShouldBe = Arrays.asList(testData.get(11), testData.get(12), testData.get(13), testData.get(14), testData.get(15));
+        List<String> appointmentDataAsItShouldBe = Arrays.asList(
+                TestDataCura.FACILTY_ACC2, TestDataCura.READMISSION_ACC2, TestDataCura.HEALTHCARE_PROGRAM_ACC2,
+                TestDataCura.VIST_DATE_ACC2, TestDataCura.COMMENT_ACC2);
         System.out.println("Appointment data is on the 'Appointment Confirmation' page: \n" + appointmentDataAsTheyAreOnTheAppointmentConfirmationPage);
         System.out.println("Original appointment data: \n" + appointmentDataAsItShouldBe);
         if (appointmentDataAsTheyAreOnTheAppointmentConfirmationPage.equals(appointmentDataAsItShouldBe)) {
@@ -86,7 +86,9 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
 
         LOG.info("We also check the appointment data on the 'History' page");
         List<String> appointmentDataAsTheyAreOnTheHistoryPage = historyPage.getAppointmentDataAsTheyAreOnTheHistoryPage();
-        List<String> appointmentDataAsItShouldBe2 = Arrays.asList(testData.get(14), testData.get(11), testData.get(12), testData.get(13), testData.get(15));
+        List<String> appointmentDataAsItShouldBe2 = Arrays.asList(
+                TestDataCura.VIST_DATE_ACC2, TestDataCura.FACILTY_ACC2, TestDataCura.READMISSION_ACC2,
+                TestDataCura.HEALTHCARE_PROGRAM_ACC2, TestDataCura.COMMENT_ACC2);
         System.out.println("Appointment data is on the 'History' page: \n" + appointmentDataAsTheyAreOnTheHistoryPage);
         System.out.println("Original appointment data: \n" + appointmentDataAsItShouldBe2);
         if (appointmentDataAsTheyAreOnTheHistoryPage.equals(appointmentDataAsItShouldBe2)) {

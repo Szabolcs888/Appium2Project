@@ -3,18 +3,17 @@ package com.myappium2project.tests.saucelab;
 import com.myappium2project.pages.saucelab.*;
 import com.myappium2project.pages.saucelab.productspages.*;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
+import com.myappium2project.testsdata.CommonTestData;
+import com.myappium2project.testsdata.TestDataSaucelab;
 import com.myappium2project.utils.AppiumActions;
-import com.myappium2project.utils.TestDataFilePaths;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.myappium2project.utils.CommonUtils;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public class EndToEndTests extends SauceLabApkBaseTest {
-    private static final String TEST_DATA_PATH = TestDataFilePaths.getSaucelabTestDataPath();
 
     @Test(priority = 1,
             description = "Login first then shopping")
@@ -23,10 +22,9 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLogInButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(testData.get(1), "valid");
-        loginPage.fillPasswordInput(testData.get(2), "valid");
+        loginPage.fillUserNameInput(TestDataSaucelab.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillPasswordInput(TestDataSaucelab.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.pressLoginButton();
 
         ProductsPage productsPage = new ProductsPage(driver, wait);
@@ -111,19 +109,19 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         Assert.assertEquals(checkoutPageTitleText, expectedTitleText,
                 "The page title should be 'Checkout', but it is not.");
 
-        checkoutPage.fillFullNameInput(testData.get(3));
-        checkoutPage.fillAddressLine1Input(testData.get(4));
-        checkoutPage.fillCityInput(testData.get(5));
-        checkoutPage.fillStateRegionInput(testData.get(6));
-        checkoutPage.fillZipCodeInput(testData.get(7));
-        checkoutPage.fillCountryInput(testData.get(8));
+        checkoutPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC1);
+        checkoutPage.fillAddressLine1Input(TestDataSaucelab.ADDRESS_LINE1_ACC1);
+        checkoutPage.fillCityInput(TestDataSaucelab.CITY_ACC1);
+        checkoutPage.fillStateRegionInput(TestDataSaucelab.STATE_REGION_ACC1);
+        checkoutPage.fillZipCodeInput(TestDataSaucelab.ZIP_CODE_ACC1);
+        checkoutPage.fillCountryInput(TestDataSaucelab.COUNTRY_ACC1);
         checkoutPage.pressToPaymentButton();
 
         CheckoutPaymentPage checkoutPaymentPage = new CheckoutPaymentPage(driver);
-        checkoutPaymentPage.fillFullNameInput(testData.get(3));
-        checkoutPaymentPage.fillCardNumberInput(testData.get(9));
-        checkoutPaymentPage.fillExpirationDateInput(testData.get(10));
-        checkoutPaymentPage.fillSecurityCodeInput(testData.get(11));
+        checkoutPaymentPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC1);
+        checkoutPaymentPage.fillCardNumberInput(TestDataSaucelab.CARD_NUMBER_ACC1);
+        checkoutPaymentPage.fillExpirationDateInput(TestDataSaucelab.EXPIRATION_DATE_ACC1);
+        checkoutPaymentPage.fillSecurityCodeInput(TestDataSaucelab.SECURITY_CODE_ACC1);
         checkoutPaymentPage.pressReviewOrderButton();
 
         LOG.info("We check that the delivery data and payment data are correct");
@@ -131,8 +129,8 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         AppiumActions.scrollWithFixCoordinates(driver, 2, "DOWN", 0.5);
 
         List<String> originalDeliveryData = Arrays.asList(
-                testData.get(3), testData.get(4), testData.get(5),
-                testData.get(6), testData.get(7), testData.get(8));
+                TestDataSaucelab.FULL_NAME_ACC1, TestDataSaucelab.ADDRESS_LINE1_ACC1, TestDataSaucelab.CITY_ACC1,
+                TestDataSaucelab.STATE_REGION_ACC1, TestDataSaucelab.ZIP_CODE_ACC1, TestDataSaucelab.COUNTRY_ACC1);
         List<String> deliveryDataOnOrderReviewPage = checkoutOrderReviewPage.getDeliveryAddressData();
         System.out.println("Delivery data is on the page: \n" + deliveryDataOnOrderReviewPage);
         System.out.println("Original delivery data: \n" + originalDeliveryData);
@@ -144,7 +142,8 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData,
                 "The delivery data should match the provided data, but it does not.");
 
-        List<String> originalPaymentData = Arrays.asList(testData.get(3), testData.get(9), testData.get(10));
+        List<String> originalPaymentData = Arrays.asList(
+                TestDataSaucelab.FULL_NAME_ACC1, TestDataSaucelab.CARD_NUMBER_ACC1, TestDataSaucelab.EXPIRATION_DATE_ACC1);
         List<String> paymentDataOnOrderReviewPage = checkoutOrderReviewPage.getPaymentData();
         System.out.println("Payment data is on the page: \n" + paymentDataOnOrderReviewPage);
         System.out.println("Original payment data: \n" + originalPaymentData);
@@ -291,10 +290,9 @@ public class EndToEndTests extends SauceLabApkBaseTest {
 
         cartPage.pressProceedToCheckoutButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(testData.get(13), "valid");
-        loginPage.fillPasswordInput(testData.get(14), "valid");
+        loginPage.fillUserNameInput(TestDataSaucelab.VALID_USERNAME_ACC2, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillPasswordInput(TestDataSaucelab.VALID_PASSWORD_ACC2, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.pressLoginButton();
 
         LOG.info("We check whether we are on the 'Checkout' page");
@@ -309,27 +307,27 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         Assert.assertEquals(checkoutPageTitleText, expectedTitleText,
                 "The page title should be 'Checkout', but it is not.");
 
-        checkoutPage.fillFullNameInput(testData.get(15));
-        checkoutPage.fillAddressLine1Input(testData.get(16));
-        checkoutPage.fillCityInput(testData.get(17));
-        checkoutPage.fillStateRegionInput(testData.get(18));
-        checkoutPage.fillZipCodeInput(testData.get(19));
-        checkoutPage.fillCountryInput(testData.get(20));
+        checkoutPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC2);
+        checkoutPage.fillAddressLine1Input(TestDataSaucelab.ADDRESS_LINE1_ACC2);
+        checkoutPage.fillCityInput(TestDataSaucelab.CITY_ACC2);
+        checkoutPage.fillStateRegionInput(TestDataSaucelab.STATE_REGION_ACC2);
+        checkoutPage.fillZipCodeInput(TestDataSaucelab.ZIP_CODE_ACC2);
+        checkoutPage.fillCountryInput(TestDataSaucelab.COUNTRY_ACC2);
         checkoutPage.pressToPaymentButton();
 
         CheckoutPaymentPage checkoutPaymentPage = new CheckoutPaymentPage(driver);
-        checkoutPaymentPage.fillFullNameInput(testData.get(15));
-        checkoutPaymentPage.fillCardNumberInput(testData.get(21));
-        checkoutPaymentPage.fillExpirationDateInput(testData.get(22));
-        checkoutPaymentPage.fillSecurityCodeInput(testData.get(23));
+        checkoutPaymentPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC2);
+        checkoutPaymentPage.fillCardNumberInput(TestDataSaucelab.CARD_NUMBER_ACC2);
+        checkoutPaymentPage.fillExpirationDateInput(TestDataSaucelab.EXPIRATION_DATE_ACC2);
+        checkoutPaymentPage.fillSecurityCodeInput(TestDataSaucelab.SECURITY_CODE_ACC2);
         checkoutPaymentPage.pressReviewOrderButton();
 
         LOG.info("We check that the delivery data and payment data are correct");
         CheckoutOrderReviewPage checkoutOrderReviewPage = new CheckoutOrderReviewPage(driver);
         AppiumActions.scrollWithFixCoordinates(driver, 2, "DOWN", 0.5);
         List<String> originalDeliveryData = Arrays.asList(
-                testData.get(15), testData.get(16), testData.get(17),
-                testData.get(18), testData.get(19), testData.get(20));
+                TestDataSaucelab.FULL_NAME_ACC2, TestDataSaucelab.ADDRESS_LINE1_ACC2, TestDataSaucelab.CITY_ACC2,
+                TestDataSaucelab.STATE_REGION_ACC2, TestDataSaucelab.ZIP_CODE_ACC2, TestDataSaucelab.COUNTRY_ACC2);
         List<String> deliveryDataOnOrderReviewPage = checkoutOrderReviewPage.getDeliveryAddressData();
         System.out.println("Delivery data is on the page: \n" + deliveryDataOnOrderReviewPage);
         System.out.println("Original delivery data: \n" + originalDeliveryData);
@@ -341,7 +339,8 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData,
                 "The delivery data should match the provided data, but it does not.");
 
-        List<String> originalPaymentData = Arrays.asList(testData.get(15), testData.get(21), testData.get(22));
+        List<String> originalPaymentData = Arrays.asList(
+                TestDataSaucelab.FULL_NAME_ACC2, TestDataSaucelab.CARD_NUMBER_ACC2, TestDataSaucelab.EXPIRATION_DATE_ACC2);
         List<String> paymentDataOnOrderReviewPage = checkoutOrderReviewPage.getPaymentData();
         System.out.println("Payment data is on the page: \n" + paymentDataOnOrderReviewPage);
         System.out.println("Original payment data: \n" + originalPaymentData);

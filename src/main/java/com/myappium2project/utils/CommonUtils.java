@@ -13,6 +13,7 @@ import java.util.List;
 
 public class CommonUtils {
     private static final Logger LOG = LogManager.getLogger(CommonUtils.class);
+    private static final String USER_DIR = System.getProperty("user.dir");
 
     public static void threadSleep(int milliseconds) {
         try {
@@ -24,7 +25,6 @@ public class CommonUtils {
     }
 
     public static List<String> readDataFromFile(String path) {
-        LOG.info("We request the test data from the list");
         List<String> lines = new ArrayList<>();
         try {
             lines = Files.readAllLines(Paths.get(path));
@@ -77,9 +77,9 @@ public class CommonUtils {
     }
 
     public static void cleanReportsAndScreenshots() {
-        deleteDirectoryContents(new File(System.getProperty("user.dir") + "/reports/actualReportScreenshots/"));
-        deleteFile(System.getProperty("user.dir") + "/reports/emailable-report.html");
-        deleteFile(System.getProperty("user.dir") + "/target/surefire-reports/emailable-report.html");
-        deleteFile(System.getProperty("user.dir") + "/reports/extent-report.html");
+        deleteDirectoryContents(new File(USER_DIR + "/reports/actualReportScreenshots/"));
+        deleteFile(USER_DIR + "/reports/emailable-report.html");
+        deleteFile(USER_DIR + "/target/surefire-reports/emailable-report.html");
+        deleteFile(USER_DIR + "/reports/extent-report.html");
     }
 }

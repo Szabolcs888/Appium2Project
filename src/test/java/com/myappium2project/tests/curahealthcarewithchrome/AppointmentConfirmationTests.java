@@ -1,51 +1,49 @@
 package com.myappium2project.tests.curahealthcarewithchrome;
 
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
-import com.myappium2project.utils.TestDataFilePaths;
+import com.myappium2project.testsdata.CommonTestData;
+import com.myappium2project.testsdata.TestDataCura;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.curahealthcarewithchrome.AppointmentConfirmationPage;
 import com.myappium2project.pages.curahealthcarewithchrome.HamburgerMenu;
 import com.myappium2project.pages.curahealthcarewithchrome.LoginPage;
 import com.myappium2project.pages.curahealthcarewithchrome.MakeAppointmentPage;
-import com.myappium2project.utils.CommonUtils;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class AppointmentConfirmationTests extends ChromeBrowserBaseTest {
-    private static final String TEST_DATA_PATH = TestDataFilePaths.getCuraTestDataPath();
 
     @Test
     public void testAppointmentConfirmationCura() {
-        driver.get("https://katalon-demo-cura.herokuapp.com");
+        driver.get(TestDataCura.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
-        List<String> testData = CommonUtils.readDataFromFile(TEST_DATA_PATH);
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(testData.get(1), "valid");
-        loginPage.fillPasswordInput(testData.get(2), "valid");
+        loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
         makeAppointmentPage.pressFacilityDropDownMenuButton();
-        makeAppointmentPage.choiceFacilityOption(testData.get(3));
-        makeAppointmentPage.pressApplyForHospitalReadmissionCheckBoxOrDontPressIt(testData.get(4));
-        makeAppointmentPage.choiceHealthcareProgramOption(testData.get(5));
-        makeAppointmentPage.fillDateOfVisitInput(testData.get(6));
-        makeAppointmentPage.fillCommentInput(testData.get(7));
+        makeAppointmentPage.choiceFacilityOption(TestDataCura.FACILTY_ACC1);
+        makeAppointmentPage.pressApplyForHospitalReadmissionCheckBoxOrDontPressIt(TestDataCura.READMISSION_ACC1);
+        makeAppointmentPage.choiceHealthcareProgramOption(TestDataCura.HEALTHCARE_PROGRAM_ACC1);
+        makeAppointmentPage.fillDateOfVisitInput(TestDataCura.VIST_DATE_ACC1);
+        makeAppointmentPage.fillCommentInput(TestDataCura.COMMENT_ACC1);
         makeAppointmentPage.pressBookAppointmentButton();
 
         LOG.info("We check whether the appointment data matches the ones we provided");
         AppointmentConfirmationPage appointmentConfirmationPage = new AppointmentConfirmationPage(driver);
         List<String> appointmentDataAsTheyAreOnThePage = appointmentConfirmationPage.getAppointmentDataAsTheyAreOnTheAppointmentConfirmationPage();
         List<String> appointmentDataAsItShouldBe = Arrays.asList(
-                testData.get(3), testData.get(4), testData.get(5),
-                testData.get(6), testData.get(7));
+                TestDataCura.FACILTY_ACC1, TestDataCura.READMISSION_ACC1, TestDataCura.HEALTHCARE_PROGRAM_ACC1,
+                TestDataCura.VIST_DATE_ACC1, TestDataCura.COMMENT_ACC1);
         System.out.println("Appointment data is on the page: \n" + appointmentDataAsTheyAreOnThePage);
         System.out.println("Original appointment data: \n" + appointmentDataAsItShouldBe);
         if (appointmentDataAsTheyAreOnThePage.equals(appointmentDataAsItShouldBe)) {

@@ -1,6 +1,8 @@
 package com.myappium2project.tests.curahealthcarewithchrome;
 
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
+import com.myappium2project.testsdata.CommonTestData;
+import com.myappium2project.testsdata.TestDataCura;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -10,21 +12,20 @@ import com.myappium2project.pages.curahealthcarewithchrome.MakeAppointmentPage;
 
 public class LoginTestsWithDataProvider extends ChromeBrowserBaseTest {
 
-    // Here, I did not read the data directly from a file for the sake of illustration.
     @DataProvider(name = "loginData")
     public Object[][] loginDataProvider() {
         Object[][] data = {
-                {"John Doe", "valid", "ThisIsNotAPassword", "valid", true},
-                {"John Doe", "valid", "invalidPassword", "invalid", false},
-                {"invalidUsername", "invalid", "ThisIsNotAPassword", "valid", false},
-                {"", "empty", "", "empty", false}
+                {TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE, TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE, true},
+                {TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE, CommonTestData.INVALID_PASSWORD, CommonTestData.INVALID_LOG_MESSAGE, false},
+                {CommonTestData.INVALID_USERNAME, CommonTestData.INVALID_LOG_MESSAGE, TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE, false},
+                {"", CommonTestData.EMPTY_LOG_MESSAGE, "", CommonTestData.EMPTY_LOG_MESSAGE, false}
         };
         return data;
     }
 
     @Test(dataProvider = "loginData")
     public void testsAllLoginCura(String username, String validOrInvalidUN, String password, String validOrInvalidPW, boolean expectedResult) {
-        driver.get("https://katalon-demo-cura.herokuapp.com");
+        driver.get(TestDataCura.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
