@@ -5,7 +5,7 @@ import com.myappium2project.utils.CommonUtils;
 import java.util.List;
 
 public class TestDataSaucelab {
-    private static final String SAUCELAB_TEST_DATA_PATH = "src/test/resources/testdata/sauceLabCredentials.txt";
+    private static final String SAUCELAB_TEST_DATA_PATH = "src/test/resources/testsdatafiles/sauceLabCredentials.txt";
     private static final List<String> testData = CommonUtils.readDataFromFile(SAUCELAB_TEST_DATA_PATH);
 
     // Account 1.

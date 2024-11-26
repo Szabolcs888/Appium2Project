@@ -6,7 +6,7 @@ import java.util.List;
 
 public class TestDataCura {
     public static final String CURA_BASE_URL = "https://katalon-demo-cura.herokuapp.com";
-    private static final String CURA_TEST_DATA_PATH = "src/test/resources/testdata/curaHealthcareCredentials.txt";
+    private static final String CURA_TEST_DATA_PATH = "src/test/resources/testsdatafiles/curaHealthcareCredentials.txt";
     private static final List<String> testData = CommonUtils.readDataFromFile(CURA_TEST_DATA_PATH);
 
     // Account 1.
