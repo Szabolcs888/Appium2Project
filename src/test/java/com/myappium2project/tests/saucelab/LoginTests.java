@@ -14,7 +14,7 @@ public class LoginTests extends SauceLabApkBaseTest {
     private static final String LOG_CHECK_ERROR_MESSAGE = "We check whether the error message appears and, if so, whether it is correct";
     private static final String LOG_ERROR_MESSAGE_CORRECT = "The error message is correct";
     private static final String LOG_ERROR_MESSAGE_INCORRECT = "The error message is not correct";
-    public static final String ASSERT_MESSAGE_ERROR_DISPLAY = "The error message should be displayed, but it is not.";
+    private static final String ASSERT_MESSAGE_ERROR_DISPLAY = "The error message should be displayed, but it is not.";
 
     @Test(priority = 3,
             groups = {"smoke"})
