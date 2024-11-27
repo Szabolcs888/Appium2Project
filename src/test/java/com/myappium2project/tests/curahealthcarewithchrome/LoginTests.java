@@ -10,6 +10,9 @@ import com.myappium2project.pages.curahealthcarewithchrome.LoginPage;
 import com.myappium2project.pages.curahealthcarewithchrome.MakeAppointmentPage;
 
 public class LoginTests extends ChromeBrowserBaseTest {
+    private static final String LOG_CHECK_ERROR_MESSAGE = "We check whether the error message appears and, if so, whether it is correct";
+    private static final String LOG_ERROR_MESSAGE_CORRECT = "The error message is correct";
+    private static final String LOG_ERROR_MESSAGE_INCORRECT = "The error message is not correct";
     private static final String EXPECTED_ERROR_MESSAGE = "Login failed! Please ensure the username and password are valid.";
 
     @Test(priority = 1,
@@ -53,12 +56,12 @@ public class LoginTests extends ChromeBrowserBaseTest {
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        LOG.info("We check whether the error message appears and, if so, whether it is correct");
+        LOG.info(LOG_CHECK_ERROR_MESSAGE);
         String errorMessageText = loginPage.getErrorMessageText();
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
-            LOG.info("The error message is correct");
+            LOG.info(LOG_ERROR_MESSAGE_CORRECT);
         } else {
-            LOG.error("The error message is not correct");
+            LOG.error(LOG_ERROR_MESSAGE_INCORRECT);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
                 "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
@@ -79,12 +82,12 @@ public class LoginTests extends ChromeBrowserBaseTest {
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        LOG.info("We check whether the error message appears and, if so, whether it is correct");
+        LOG.info(LOG_CHECK_ERROR_MESSAGE);
         String errorMessageText = loginPage.getErrorMessageText();
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
-            LOG.info("The error message is correct");
+            LOG.info(LOG_ERROR_MESSAGE_CORRECT);
         } else {
-            LOG.error("The error message is not correct");
+            LOG.error(LOG_ERROR_MESSAGE_INCORRECT);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
                 "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
@@ -105,12 +108,12 @@ public class LoginTests extends ChromeBrowserBaseTest {
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        LOG.info("We check whether the error message appears and, if so, whether it is correct");
+        LOG.info(LOG_CHECK_ERROR_MESSAGE);
         String errorMessageText = loginPage.getErrorMessageText();
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
-            LOG.info("The error message is correct");
+            LOG.info(LOG_ERROR_MESSAGE_CORRECT);
         } else {
-            LOG.error("The error message is not correct");
+            LOG.error(LOG_ERROR_MESSAGE_INCORRECT);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
                 "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");

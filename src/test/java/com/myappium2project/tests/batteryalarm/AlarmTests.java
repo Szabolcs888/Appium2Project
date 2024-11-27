@@ -9,6 +9,8 @@ import com.myappium2project.pages.batteryalarm.MainPage;
 import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
 
 public class AlarmTests extends BatteryAlarmBaseTest {
+    private static final String LOG_ALARM_WORKS = "The alarm works";
+    private static final String LOG_ALARM_DOES_NOT_WORK = "The alarm does not work";
 
     @Test(description = "The prerequisite for the test is that the phone is charging.")
     public void testMaxAlarm() {
@@ -22,16 +24,17 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         int currentMaxAlarmValue = mainPage.getCurrentMaxAlarmValue();
         if (currentBatteryChargeValue < currentMaxAlarmValue) {
             int byWhichToReduceTheMaxAlarmValue = currentMaxAlarmValue - currentBatteryChargeValue + 2;
-            LOG.info("In order for the phone to alarm, we need to reduce the 'Max Alarm' value by {}", byWhichToReduceTheMaxAlarmValue);
+            LOG.info("In order for the phone to alarm, we need to reduce the 'Max Alarm' value by {}",
+                    byWhichToReduceTheMaxAlarmValue);
             mainPage.pressMaxAlarmMinusButton(byWhichToReduceTheMaxAlarmValue);
         }
 
         LOG.info("We check whether the Max Alarm function is working (whether the countdown has started)");
         boolean isCountdownActive = mainPage.isTheCountdownGoing();
         if (isCountdownActive) {
-            LOG.info("The alarm works");
+            LOG.info(LOG_ALARM_WORKS);
         } else {
-            LOG.error("The alarm does not work");
+            LOG.error(LOG_ALARM_DOES_NOT_WORK);
         }
         Assert.assertTrue(isCountdownActive, "The countdown should be active, but it is not.");
     }
@@ -48,19 +51,20 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         int currentMinAlarmValue = mainPage.getCurrentMinAlarmValue();
         if (currentBatteryChargeValue >= currentMinAlarmValue) {
             int byWhichToIncreaseTheMinAlarmValue = currentBatteryChargeValue - currentMinAlarmValue;
-            LOG.info("In order for the phone to alarm, we need to increase the 'Min Alarm' value by {}", byWhichToIncreaseTheMinAlarmValue);
+            LOG.info("In order for the phone to alarm, we need to increase the 'Min Alarm' value by {}",
+                    byWhichToIncreaseTheMinAlarmValue);
             mainPage.pressMinAlarmPlusButton(byWhichToIncreaseTheMinAlarmValue);
         }
 
         LOG.info("We check whether the Min Alarm function is working (whether the countdown has started)");
-        mainPage.pressPutItOnTheTrayButton();                 /** These two steps are necessary because if we stay in the application, **/
-        PhoneDesktop phoneDesktop = new PhoneDesktop(driver); /** the alarm will not go off. That's why we have to put**/
-        phoneDesktop.pressBatteryAlarmAppIcon();              /** it on the tray and then go back to the application.**/
+        mainPage.pressPutItOnTheTrayButton();                 // These two steps are necessary because if we stay in the
+        PhoneDesktop phoneDesktop = new PhoneDesktop(driver); // application, the alarm will not go off. That's why we have
+        phoneDesktop.pressBatteryAlarmAppIcon();              // to put it on the tray and then go back to the application.
         boolean isCountdownActive = mainPage.isTheCountdownGoing();
         if (isCountdownActive) {
-            LOG.info("The alarm works");
+            LOG.info(LOG_ALARM_WORKS);
         } else {
-            LOG.error("The alarm does not work");
+            LOG.error(LOG_ALARM_DOES_NOT_WORK);
         }
         Assert.assertTrue(isCountdownActive, "The countdown should be active, but it is not.");
     }

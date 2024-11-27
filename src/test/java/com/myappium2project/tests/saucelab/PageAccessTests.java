@@ -7,6 +7,12 @@ import org.testng.annotations.Test;
 import com.myappium2project.pages.saucelab.HamburgerMenu;
 
 public class PageAccessTests extends SauceLabApkBaseTest {
+    private static final String LOG_CHECK_PAGE = "We check whether we are on the '";
+    private static final String LOG_PAGE_SUFFIX = "' page";
+    private static final String LOG_ON_PAGE = "We are on the '";
+    private static final String LOG_NOT_ON_PAGE = "We are not on the '";
+    private static final String PAGE_TITLE_SHOULD_BE_PREFIX = "The page title should be '";
+    private static final String PAGE_TITLE_SHOULD_BE_SUFFIX = "', but it is not.";
 
     @Test(priority = 1,
             groups = {"smoke"})
@@ -15,17 +21,18 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressWebviewButton();
 
-        LOG.info("We check whether we are on the 'Webview' page");
+        String pageName = "Webview";
+        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
         WebviewPage webviewPage = new WebviewPage(driver);
         String webviewPageTitleText = webviewPage.getWebviewPageTitleText();
-        String expectedPageTitleText = "Webview";
+        String expectedPageTitleText = pageName;
         if (webviewPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info("We are on the 'Webview' page");
+            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         } else {
-            LOG.error("We are not on the 'Webview' page");
+            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         }
         Assert.assertEquals(webviewPageTitleText, expectedPageTitleText,
-                "The page title should be 'Webview', but it is not.");
+                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
     }
 
     @Test(priority = 2,
@@ -35,17 +42,18 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressQrCodeScannerButton();
 
-        LOG.info("We check whether we are on the 'QR Code Scanner' page");
+        String pageName = "QR Code Scanner";
+        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
         QrCodeScannerPage qrCodeScannerPage = new QrCodeScannerPage(driver);
         String qrCodeScannerPageTitleText = qrCodeScannerPage.getQrCodeScannerPageTitleText();
-        String expectedPageTitleText = "QR Code Scanner";
+        String expectedPageTitleText = pageName;
         if (qrCodeScannerPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info("We are on the 'QR Code Scanner' page");
+            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         } else {
-            LOG.error("We are not on the 'QR Code Scanner' page");
+            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         }
         Assert.assertEquals(qrCodeScannerPageTitleText, expectedPageTitleText,
-                "The page title should be 'QR Code Scanner', but it is not.");
+                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
     }
 
     @Test(priority = 3,
@@ -55,17 +63,18 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressGeoLocationButton();
 
-        LOG.info("We check whether we are on the 'Geo Location' page");
+        String pageName = "Geo Location";
+        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
         GeoLocationPage geoLocationPage = new GeoLocationPage(driver);
         String geoLocationPageTitleText = geoLocationPage.getGeoLocationPageTitleText();
-        String expectedPageTitleText = "Geo Location";
+        String expectedPageTitleText = pageName;
         if (geoLocationPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info("We are on the 'Geo Location' page");
+            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         } else {
-            LOG.error("We are not on the 'Geo Location' page");
+            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         }
         Assert.assertEquals(geoLocationPageTitleText, expectedPageTitleText,
-                "The page title should be 'Geo Location', but it is not.");
+                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
     }
 
     @Test(priority = 4,
@@ -75,17 +84,18 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressDrawingButton();
 
-        LOG.info("We check whether we are on the 'Drawing' page");
+        String pageName = "Drawing";
+        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
         DrawingPage drawingPage = new DrawingPage(driver);
         String drawingPageTitleText = drawingPage.getDrawingPageTitleText();
-        String expectedPageTitleText = "Drawing";
+        String expectedPageTitleText = pageName;
         if (drawingPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info("We are on the 'Drawing' page");
+            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         } else {
-            LOG.error("We are not on the 'Drawing' page");
+            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         }
         Assert.assertEquals(drawingPageTitleText, expectedPageTitleText,
-                "The page title should be 'Drawing', but it is not.");
+                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
     }
 
     @Test(priority = 5,
@@ -95,17 +105,18 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressAboutButton();
 
-        LOG.info("We check whether we are on the 'About' page");
+        String pageName = "About";
+        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
         AboutPage aboutPage = new AboutPage(driver);
         String aboutPageTitleText = aboutPage.getAboutPageTitleText();
-        String expectedPageTitleText = "About";
+        String expectedPageTitleText = pageName;
         if (aboutPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info("We are on the 'About' page");
+            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         } else {
-            LOG.error("We are not on the 'About' page");
+            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         }
         Assert.assertEquals(aboutPageTitleText, expectedPageTitleText,
-                "The page title should be 'About', but it is not.");
+                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
     }
 
     @Test(priority = 6,
@@ -115,17 +126,18 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressFingerPrintButton();
 
-        LOG.info("We check whether we are on the 'Finger Print' page");
+        String pageName = "Finger Print";
+        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
         FingerPrintPage fingerPrintPage = new FingerPrintPage(driver);
         String fingerPrintPageTitleText = fingerPrintPage.getFingerPrintPageTitleText();
-        String expectedPageTitleText = "FingerPrint";
+        String expectedPageTitleText = pageName;
         if (fingerPrintPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info("We are on the 'Finger Print' page");
+            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         } else {
-            LOG.error("We are not on the 'Finger Print' page");
+            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         }
         Assert.assertEquals(fingerPrintPageTitleText, expectedPageTitleText,
-                "The page title should be 'Finger Print', but it is not.");
+                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
     }
 
     @Test(priority = 7,
@@ -135,17 +147,18 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressApiCallsButton();
 
-        LOG.info("We check whether we are on the 'API calls' page");
+        String pageName = "API calls";
+        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
         ApiCallsPage apiCallsPage = new ApiCallsPage(driver);
         String apiCallsPageTitleText = apiCallsPage.getApiCallsPageTitleText();
-        String expectedPageTitleText = "API calls";
+        String expectedPageTitleText = pageName;
         if (apiCallsPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info("We are on the 'API calls' page");
+            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         } else {
-            LOG.error("We are not on the 'API calls' page");
+            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         }
         Assert.assertEquals(apiCallsPageTitleText, expectedPageTitleText,
-                "The page title should be 'API calls', but it is not.");
+                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
     }
 
     @Test(priority = 8,
@@ -155,16 +168,17 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressSauceBotVideoButton();
 
-        LOG.info("We check whether we are on the 'Sauce Bot Video' page");
+        String pageName = "Sauce Bot Video";
+        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
         SauceBotVideoPage sauceBotVideoPage = new SauceBotVideoPage(driver);
         String sauceBotVideoPageTitleText = sauceBotVideoPage.getSauceBotVideoPageTitleText();
         String expectedPageTitleText = "SauceBot - The Beginning";
         if (sauceBotVideoPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info("We are on the 'Sauce Bot Video' page");
+            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         } else {
-            LOG.error("We are not on the 'Sauce Bot Video' page");
+            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         }
         Assert.assertEquals(sauceBotVideoPageTitleText, expectedPageTitleText,
-                "The page title should be 'SauceBot - The Beginning', but it is not.");
+                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
     }
 }

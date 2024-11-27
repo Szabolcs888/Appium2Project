@@ -10,6 +10,12 @@ import java.util.Collections;
 import java.util.List;
 
 public class DropdownMenuTests extends SauceLabApkBaseTest {
+    private static final String LOG_CHECK_PRODUCT_ORDER = "We check whether the app switches to the selected language";
+    private static final String LOG_PRODUCT_ORDER = "The order of the items as they are: \n";
+    private static final String LOG_EXPECTED_PRODUCT_ORDER = "As they should be: \n";
+    private static final String LOG_PRODUCT_ORDER_CORRECT = "The products are in the correct order";
+    private static final String LOG_PRODUCT_ORDER_INCORRECT = "The products are not in the correct order";
+    private static final String ASSERT_MESSAGE_PRODUCT_ORDER = "The products should be in the correct order, but they are not.";
 
     @Test(priority = 1)
     public void testDropdownMenuAbcOrder() {
@@ -17,19 +23,19 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         productPage.pressDropdownMenuButton();
         productPage.pressAbcOrderOption();
 
-        LOG.info("We check whether the products are in the correct order");
+        LOG.info(LOG_CHECK_PRODUCT_ORDER);
         List<String> productsNamesList = productPage.getTheListOfProductNames(driver);
         List<String> expectedList = new ArrayList<>(productsNamesList);
         Collections.sort(expectedList);
-        System.out.println("The order of the items as they are: \n" + productsNamesList);
-        System.out.println("As they should be: \n" + expectedList);
+        System.out.println(LOG_PRODUCT_ORDER + productsNamesList);
+        System.out.println(LOG_EXPECTED_PRODUCT_ORDER + expectedList);
         if (productsNamesList.equals(expectedList)) {
-            LOG.info("The products are in the correct order");
+            LOG.info(LOG_PRODUCT_ORDER_CORRECT);
         } else {
-            LOG.error("The products are not in the correct order");
+            LOG.error(LOG_PRODUCT_ORDER_INCORRECT);
         }
         Assert.assertEquals(productsNamesList, expectedList,
-                "The products should be in the correct order, but they are not.");
+                ASSERT_MESSAGE_PRODUCT_ORDER);
     }
 
     @Test(priority = 2)
@@ -38,20 +44,20 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         productPage.pressDropdownMenuButton();
         productPage.pressAbcOrderBackwardsOption();
 
-        LOG.info("We check whether the products are in the correct order");
+        LOG.info(LOG_CHECK_PRODUCT_ORDER);
         List<String> productsNamesList = productPage.getTheListOfProductNames(driver);
         List<String> expectedList = new ArrayList<>(productsNamesList);
         Collections.sort(expectedList);
         Collections.reverse(expectedList);
-        System.out.println("The order of the items as they are: \n" + productsNamesList);
-        System.out.println("As they should be: \n" + expectedList);
+        System.out.println(LOG_PRODUCT_ORDER + productsNamesList);
+        System.out.println(LOG_EXPECTED_PRODUCT_ORDER + expectedList);
         if (productsNamesList.equals(expectedList)) {
-            LOG.info("The products are in the correct order");
+            LOG.info(LOG_PRODUCT_ORDER_CORRECT);
         } else {
-            LOG.error("The products are not in the correct order");
+            LOG.error(LOG_PRODUCT_ORDER_INCORRECT);
         }
         Assert.assertEquals(productsNamesList, expectedList,
-                "The products should be in the correct order, but they are not.");
+                ASSERT_MESSAGE_PRODUCT_ORDER);
     }
 
     @Test(priority = 3)
@@ -60,19 +66,19 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         productPage.pressDropdownMenuButton();
         productPage.pressPriceAscendingOrderOption();
 
-        LOG.info("We check whether the products are in the correct order");
+        LOG.info(LOG_CHECK_PRODUCT_ORDER);
         List<Float> productsPricesList = productPage.getTheListOfProductPrices(driver);
         List<Float> expectedList = new ArrayList<>(productsPricesList);
         Collections.sort(expectedList);
-        System.out.println("The order of the items as they are: \n" + productsPricesList);
-        System.out.println("As they should be: \n" + expectedList);
+        System.out.println(LOG_PRODUCT_ORDER + productsPricesList);
+        System.out.println(LOG_EXPECTED_PRODUCT_ORDER + expectedList);
         if (productsPricesList.equals(expectedList)) {
-            LOG.info("The products are in the correct order");
+            LOG.info(LOG_PRODUCT_ORDER_CORRECT);
         } else {
-            LOG.error("The products are not in the correct order");
+            LOG.error(LOG_PRODUCT_ORDER_INCORRECT);
         }
         Assert.assertEquals(productsPricesList, expectedList,
-                "The products should be in the correct order, but they are not.");
+                ASSERT_MESSAGE_PRODUCT_ORDER);
     }
 
     @Test(priority = 4)
@@ -81,19 +87,19 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         productPage.pressDropdownMenuButton();
         productPage.pressPriceDescendingOrderOption();
 
-        LOG.info("We check whether the products are in the correct order");
+        LOG.info(LOG_CHECK_PRODUCT_ORDER);
         List<Float> productsPricesList = productPage.getTheListOfProductPrices(driver);
         List<Float> expectedList = new ArrayList<>(productsPricesList);
         Collections.sort(expectedList);
         Collections.reverse(expectedList);
-        System.out.println("The order of the items as they are: \n" + productsPricesList);
-        System.out.println("As they should be: \n" + expectedList);
+        System.out.println(LOG_PRODUCT_ORDER + productsPricesList);
+        System.out.println(LOG_EXPECTED_PRODUCT_ORDER + expectedList);
         if (productsPricesList.equals(expectedList)) {
-            LOG.info("The products are in the correct order");
+            LOG.info(LOG_PRODUCT_ORDER_CORRECT);
         } else {
-            LOG.error("The products are not in the correct order");
+            LOG.error(LOG_PRODUCT_ORDER_INCORRECT);
         }
         Assert.assertEquals(productsPricesList, expectedList,
-                "The products should be in the correct order, but they are not.");
+                ASSERT_MESSAGE_PRODUCT_ORDER);
     }
 }

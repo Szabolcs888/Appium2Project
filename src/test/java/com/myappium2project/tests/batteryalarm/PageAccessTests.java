@@ -9,6 +9,10 @@ import com.myappium2project.pages.batteryalarm.MainPage;
 import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
 
 public class PageAccessTests extends BatteryAlarmBaseTest {
+    private static final String LOG_CHECK_PAGE = "We check whether we are on the '";
+    private static final String LOG_PAGE_SUFFIX = "' page";
+    private static final String LOG_ON_PAGE = "We are on the '";
+    private static final String LOG_NOT_ON_PAGE = "We are not on the '";
 
     @Test(priority = 1,
             groups = {"smoke"})
@@ -18,20 +22,21 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         LanguageUtils.scrollToEnglishLanguage(driver, mainPage, languagesDropdownMenu);
         languagesDropdownMenu.chooseEnglishOption();
 
-        LOG.info("We check whether we are on the 'Main' page");
+        String pageName = "Main";
+        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
         String voiceWarningText = mainPage.getVoiceWarningEnglishText();
         String chooseASoundText = mainPage.getChooseASoundText();
         String expectedVoiceWarningText = "Voice Warning";
         String expectedChooseASoundText = "Choose a sound";
         if (voiceWarningText.equals(expectedVoiceWarningText) && chooseASoundText.equals(expectedChooseASoundText)) {
-            LOG.info("We are on the 'Main' page");
+            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         } else {
-            LOG.error("We are not on the 'Main' page");
+            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         }
         Assert.assertEquals(voiceWarningText, expectedVoiceWarningText,
                 "The voice warning text should be '" + expectedVoiceWarningText + "', but it is '" + voiceWarningText + "'.");
         Assert.assertEquals(chooseASoundText, expectedChooseASoundText,
-                "The 'Choose a sound' text should be '" + expectedChooseASoundText + "', but it is '" + chooseASoundText + "'.");
+                "The '" + expectedChooseASoundText + "' text should be '" + expectedChooseASoundText + "', but it is '" + chooseASoundText + "'.");
     }
 
     @Test(priority = 2,
@@ -43,14 +48,15 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         languagesDropdownMenu.chooseEnglishOption();
         mainPage.pressInformationButton();
 
-        LOG.info("We check whether we are on the 'Information' page");
+        String pageName = "Information";
+        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
         InformationPage informationPage = new InformationPage(driver);
         String informationText = informationPage.getInformationText();
         String expectedTextFragment = "In order to avoid issue, find the power";
         if (informationText.contains(expectedTextFragment)) {
-            LOG.info("We are on the 'Information' page");
+            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         } else {
-            LOG.error("We are not on the 'Information' page");
+            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
         }
         Assert.assertTrue(informationText.contains(expectedTextFragment),
                 "The information text should contain '" + expectedTextFragment + "', but it does not.");

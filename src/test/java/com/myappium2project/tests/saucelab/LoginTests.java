@@ -11,6 +11,10 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends SauceLabApkBaseTest {
     private static final String EXPECTED_ERROR_MESSAGE = "Provided credentials do not match any user in this service.";
+    private static final String LOG_CHECK_ERROR_MESSAGE = "We check whether the error message appears and, if so, whether it is correct";
+    private static final String LOG_ERROR_MESSAGE_CORRECT = "The error message is correct";
+    private static final String LOG_ERROR_MESSAGE_INCORRECT = "The error message is not correct";
+    public static final String ASSERT_MESSAGE_ERROR_DISPLAY = "The error message should be displayed, but it is not.";
 
     @Test(priority = 3,
             groups = {"smoke"})
@@ -49,15 +53,15 @@ public class LoginTests extends SauceLabApkBaseTest {
         loginPage.fillPasswordInput(CommonTestData.INVALID_PASSWORD, CommonTestData.INVALID_LOG_MESSAGE);
         loginPage.pressLoginButton();
 
-        LOG.info("We check whether the error message appears and, if so, whether it is correct");
+        LOG.info(LOG_CHECK_ERROR_MESSAGE);
         String errorMessageText = loginPage.getErrorMessageText();
         if (loginPage.isDisplayedErrorMessage() && errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
-            LOG.info("The error message is correct");
+            LOG.info(LOG_ERROR_MESSAGE_CORRECT);
         } else {
-            LOG.error("The error message is not correct");
+            LOG.error(LOG_ERROR_MESSAGE_INCORRECT);
         }
         Assert.assertTrue(loginPage.isDisplayedErrorMessage(),
-                "The error message should be displayed, but it is not.");
+                ASSERT_MESSAGE_ERROR_DISPLAY);
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
                 "The error message text should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
     }
@@ -74,14 +78,14 @@ public class LoginTests extends SauceLabApkBaseTest {
         loginPage.fillPasswordInput(TestDataSaucelab.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.pressLoginButton();
 
-        LOG.info("We check whether the error message appears and, if so, whether it is correct");
+        LOG.info(LOG_CHECK_ERROR_MESSAGE);
         String errorMessageText = loginPage.getErrorMessageText();
         if (loginPage.isDisplayedErrorMessage() && errorMessageText.equals(EXPECTED_ERROR_MESSAGE))
-            LOG.info("The error message is correct");
+            LOG.info(LOG_ERROR_MESSAGE_CORRECT);
         else
-            LOG.error("The error message is correct");
+            LOG.error(LOG_ERROR_MESSAGE_INCORRECT);
         Assert.assertTrue(loginPage.isDisplayedErrorMessage(),
-                "The error message should be displayed, but it is not.");
+                ASSERT_MESSAGE_ERROR_DISPLAY);
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
                 "The error message text should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
     }

@@ -85,15 +85,16 @@ public class EndToEndTests extends SauceLabApkBaseTest {
 
         LOG.info("We check the number of products in the cart");
         int productsQuantityInMyCart = productsPage.getProductCounterOnCartBadgeButton();
+        int expectedProductsQuantityInMyCart = 11;
         System.out.println("The number of products in the cart: " + productsQuantityInMyCart);
-        System.out.println("This should be the number of products in the cart: 11");
-        if (productsQuantityInMyCart == 11) {
+        System.out.println("This should be the number of products in the cart: " + expectedProductsQuantityInMyCart);
+        if (productsQuantityInMyCart == expectedProductsQuantityInMyCart) {
             LOG.info("The number of products in the cart is correct");
         } else {
             LOG.error("The number of products in the cart is not correct");
         }
-        Assert.assertEquals(productsQuantityInMyCart, 11,
-                "The number of products in the cart should be 11, but it is " + productsQuantityInMyCart + ".");
+        Assert.assertEquals(productsQuantityInMyCart, expectedProductsQuantityInMyCart,
+                "The number of products in the cart should be " + expectedProductsQuantityInMyCart + ", but it is " + productsQuantityInMyCart + ".");
 
         cartPage.pressProceedToCheckoutButton();
 
@@ -278,15 +279,16 @@ public class EndToEndTests extends SauceLabApkBaseTest {
 
         LOG.info("We check the number of products in the cart");
         int productsQuantityInMyCart = productsPage.getProductCounterOnCartBadgeButton();
+        int expectedProductsQuantityInMyCart = 12;
         System.out.println("The number of products in the cart: " + productsQuantityInMyCart);
-        System.out.println("This should be the number of products in the cart: 12");
-        if (productsQuantityInMyCart == 12) {
+        System.out.println("This should be the number of products in the cart: " + expectedProductsQuantityInMyCart);
+        if (productsQuantityInMyCart == expectedProductsQuantityInMyCart) {
             LOG.info("The number of products in the cart is correct");
         } else {
             LOG.error("The number of products in the cart is not correct");
         }
-        Assert.assertEquals(productsQuantityInMyCart, 12,
-                "The number of products in the cart should be 12, but it is " + productsQuantityInMyCart + ".");
+        Assert.assertEquals(productsQuantityInMyCart, expectedProductsQuantityInMyCart,
+                "The number of products in the cart should be " + expectedProductsQuantityInMyCart + ", but it is " + productsQuantityInMyCart + ".");
 
         cartPage.pressProceedToCheckoutButton();
 
