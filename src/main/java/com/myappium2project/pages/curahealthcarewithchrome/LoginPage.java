@@ -33,13 +33,13 @@ public class LoginPage extends BasePage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public void fillUserNameInput(String userName, String validOrInvalidUsername) {
-        LOG.info("We fill the 'Username' input field with the {} username", validOrInvalidUsername);
+    public void fillUserNameInput(String userName, String usernameValidityStatus) {
+        LOG.info("We fill the 'Username' input field with the {} username", usernameValidityStatus);
         usernameInput.sendKeys(userName);
     }
 
-    public void fillPasswordInput(String password, String validOrInvalidPassword) {
-        LOG.info("We fill the 'Password' input field with the {} password", validOrInvalidPassword);
+    public void fillPasswordInput(String password, String passwordValidityStatus) {
+        LOG.info("We fill the 'Password' input field with the {} password", passwordValidityStatus);
         passwordInput.sendKeys(password);
     }
 

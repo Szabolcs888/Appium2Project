@@ -46,7 +46,7 @@ public class HistoryPage extends BasePage {
         }
     }
 
-    public List<String> getAppointmentDataAsTheyAreOnTheHistoryPage() {
+    public List<String> getAppointmentDataOnHistoryPage() {
         List<String> appointmentDataAsTheyAreOnTheHistoryPage = new ArrayList<>();
         appointmentDataAsTheyAreOnTheHistoryPage.add(visitDate.getText());
         appointmentDataAsTheyAreOnTheHistoryPage.add(facilityText.getText());

@@ -18,7 +18,7 @@ public class PhoneDesktop extends BasePage {
     }
 
     public void pressBatteryAlarmAppIcon() {
-        LOG.info("We press the 'Battery Alarm' app icon");
+        LOG.info("We press the 'Battery Alarm' app icon on phone desktop");
         batteryAlarmAppIcon.click();
     }
 }

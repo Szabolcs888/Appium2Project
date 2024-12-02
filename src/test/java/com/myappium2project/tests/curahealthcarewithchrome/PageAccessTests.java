@@ -1,5 +1,6 @@
 package com.myappium2project.tests.curahealthcarewithchrome;
 
+import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
 import com.myappium2project.testsdata.CommonTestData;
 import com.myappium2project.testsdata.TestDataCura;
@@ -15,7 +16,7 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
 
     @Test(priority = 1,
             groups = {"smoke"})
-    public void testProfilPageAccessCura() {
+    public void testProfilePageAccessCura() {
         driver.get(TestDataCura.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
@@ -33,15 +34,16 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressProfileButton();
 
-        LOG.info("We check whether we are on the 'Profile' page");
+        String profilePageName = "Profile";
+        LOG.info(CommonTestLogMessages.getCheckPageLog(), profilePageName);
         ProfilePage profilePage = new ProfilePage(driver);
         boolean isProfilePageLoaded = profilePage.isPageLoaded();
         if (isProfilePageLoaded) {
-            LOG.info("We are on the 'Profile' page");
+            LOG.info(CommonTestLogMessages.getOnPageLog(), profilePageName);
         } else {
-            LOG.error("We are not on the 'Profile' page");
+            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), profilePageName);
         }
-        Assert.assertTrue(isProfilePageLoaded, "The 'Profile' page should be loaded, but it is not.");
+        Assert.assertTrue(isProfilePageLoaded, CommonTestLogMessages.getPageLoadErrorAssertLog(profilePageName));
     }
 
     @Test(priority = 2,
@@ -64,14 +66,15 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressHistoryButton();
 
-        LOG.info("We check whether we are on the 'History' page");
+        String historyPageName = "History";
+        LOG.info(CommonTestLogMessages.getCheckPageLog(), historyPageName);
         HistoryPage historyPage = new HistoryPage(driver);
         boolean isHistoryPageLoaded = historyPage.isPageLoaded();
         if (isHistoryPageLoaded) {
-            LOG.info("We are on the 'History' page");
+            LOG.info(CommonTestLogMessages.getOnPageLog(), historyPageName);
         } else {
-            LOG.error("We are not on the 'History' page");
+            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), historyPageName);
         }
-        Assert.assertTrue(isHistoryPageLoaded, "The 'History' page should be loaded, but it is not.");
+        Assert.assertTrue(isHistoryPageLoaded, CommonTestLogMessages.getPageLoadErrorAssertLog(historyPageName));
     }
 }

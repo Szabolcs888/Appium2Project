@@ -10,12 +10,12 @@ import java.util.Collections;
 import java.util.List;
 
 public class DropdownMenuTests extends SauceLabApkBaseTest {
-    private static final String LOG_CHECK_PRODUCT_ORDER = "We check whether the app switches to the selected language";
-    private static final String LOG_PRODUCT_ORDER = "The order of the items as they are: \n";
-    private static final String LOG_EXPECTED_PRODUCT_ORDER = "As they should be: \n";
-    private static final String LOG_PRODUCT_ORDER_CORRECT = "The products are in the correct order";
-    private static final String LOG_PRODUCT_ORDER_INCORRECT = "The products are not in the correct order";
-    private static final String ASSERT_MESSAGE_PRODUCT_ORDER = "The products should be in the correct order, but they are not.";
+    private static final String CHECK_PRODUCT_ORDER_LOG = "We check if the products are in the correct order";
+    private static final String PRODUCT_ORDER_CONSOLELOG = "The order of the items as they are: \n";
+    private static final String EXPECTED_PRODUCT_ORDER_CONSOLELOG = "As they should be: \n";
+    private static final String PRODUCT_ORDER_CORRECT_LOG = "The products are in the correct order";
+    private static final String PRODUCT_ORDER_INCORRECT_ERRORLOG = "The products are not in the correct order";
+    private static final String MESSAGE_PRODUCT_ORDER_ASSERTLOG = "The products should be in the correct order, but they are not.";
 
     @Test(priority = 1)
     public void testDropdownMenuAbcOrder() {
@@ -23,19 +23,19 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         productPage.pressDropdownMenuButton();
         productPage.pressAbcOrderOption();
 
-        LOG.info(LOG_CHECK_PRODUCT_ORDER);
-        List<String> productsNamesList = productPage.getTheListOfProductNames(driver);
+        LOG.info(CHECK_PRODUCT_ORDER_LOG);
+        List<String> productsNamesList = productPage.getListOfProductNames(driver);
         List<String> expectedList = new ArrayList<>(productsNamesList);
         Collections.sort(expectedList);
-        System.out.println(LOG_PRODUCT_ORDER + productsNamesList);
-        System.out.println(LOG_EXPECTED_PRODUCT_ORDER + expectedList);
+        System.out.println(PRODUCT_ORDER_CONSOLELOG + productsNamesList);
+        System.out.println(EXPECTED_PRODUCT_ORDER_CONSOLELOG + expectedList);
         if (productsNamesList.equals(expectedList)) {
-            LOG.info(LOG_PRODUCT_ORDER_CORRECT);
+            LOG.info(PRODUCT_ORDER_CORRECT_LOG);
         } else {
-            LOG.error(LOG_PRODUCT_ORDER_INCORRECT);
+            LOG.error(PRODUCT_ORDER_INCORRECT_ERRORLOG);
         }
         Assert.assertEquals(productsNamesList, expectedList,
-                ASSERT_MESSAGE_PRODUCT_ORDER);
+                MESSAGE_PRODUCT_ORDER_ASSERTLOG);
     }
 
     @Test(priority = 2)
@@ -44,20 +44,20 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         productPage.pressDropdownMenuButton();
         productPage.pressAbcOrderBackwardsOption();
 
-        LOG.info(LOG_CHECK_PRODUCT_ORDER);
-        List<String> productsNamesList = productPage.getTheListOfProductNames(driver);
+        LOG.info(CHECK_PRODUCT_ORDER_LOG);
+        List<String> productsNamesList = productPage.getListOfProductNames(driver);
         List<String> expectedList = new ArrayList<>(productsNamesList);
         Collections.sort(expectedList);
         Collections.reverse(expectedList);
-        System.out.println(LOG_PRODUCT_ORDER + productsNamesList);
-        System.out.println(LOG_EXPECTED_PRODUCT_ORDER + expectedList);
+        System.out.println(PRODUCT_ORDER_CONSOLELOG + productsNamesList);
+        System.out.println(EXPECTED_PRODUCT_ORDER_CONSOLELOG + expectedList);
         if (productsNamesList.equals(expectedList)) {
-            LOG.info(LOG_PRODUCT_ORDER_CORRECT);
+            LOG.info(PRODUCT_ORDER_CORRECT_LOG);
         } else {
-            LOG.error(LOG_PRODUCT_ORDER_INCORRECT);
+            LOG.error(PRODUCT_ORDER_INCORRECT_ERRORLOG);
         }
         Assert.assertEquals(productsNamesList, expectedList,
-                ASSERT_MESSAGE_PRODUCT_ORDER);
+                MESSAGE_PRODUCT_ORDER_ASSERTLOG);
     }
 
     @Test(priority = 3)
@@ -66,19 +66,19 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         productPage.pressDropdownMenuButton();
         productPage.pressPriceAscendingOrderOption();
 
-        LOG.info(LOG_CHECK_PRODUCT_ORDER);
-        List<Float> productsPricesList = productPage.getTheListOfProductPrices(driver);
+        LOG.info(CHECK_PRODUCT_ORDER_LOG);
+        List<Float> productsPricesList = productPage.getListOfProductPrices(driver);
         List<Float> expectedList = new ArrayList<>(productsPricesList);
         Collections.sort(expectedList);
-        System.out.println(LOG_PRODUCT_ORDER + productsPricesList);
-        System.out.println(LOG_EXPECTED_PRODUCT_ORDER + expectedList);
+        System.out.println(PRODUCT_ORDER_CONSOLELOG + productsPricesList);
+        System.out.println(EXPECTED_PRODUCT_ORDER_CONSOLELOG + expectedList);
         if (productsPricesList.equals(expectedList)) {
-            LOG.info(LOG_PRODUCT_ORDER_CORRECT);
+            LOG.info(PRODUCT_ORDER_CORRECT_LOG);
         } else {
-            LOG.error(LOG_PRODUCT_ORDER_INCORRECT);
+            LOG.error(PRODUCT_ORDER_INCORRECT_ERRORLOG);
         }
         Assert.assertEquals(productsPricesList, expectedList,
-                ASSERT_MESSAGE_PRODUCT_ORDER);
+                MESSAGE_PRODUCT_ORDER_ASSERTLOG);
     }
 
     @Test(priority = 4)
@@ -87,19 +87,19 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         productPage.pressDropdownMenuButton();
         productPage.pressPriceDescendingOrderOption();
 
-        LOG.info(LOG_CHECK_PRODUCT_ORDER);
-        List<Float> productsPricesList = productPage.getTheListOfProductPrices(driver);
+        LOG.info(CHECK_PRODUCT_ORDER_LOG);
+        List<Float> productsPricesList = productPage.getListOfProductPrices(driver);
         List<Float> expectedList = new ArrayList<>(productsPricesList);
         Collections.sort(expectedList);
         Collections.reverse(expectedList);
-        System.out.println(LOG_PRODUCT_ORDER + productsPricesList);
-        System.out.println(LOG_EXPECTED_PRODUCT_ORDER + expectedList);
+        System.out.println(PRODUCT_ORDER_CONSOLELOG + productsPricesList);
+        System.out.println(EXPECTED_PRODUCT_ORDER_CONSOLELOG + expectedList);
         if (productsPricesList.equals(expectedList)) {
-            LOG.info(LOG_PRODUCT_ORDER_CORRECT);
+            LOG.info(PRODUCT_ORDER_CORRECT_LOG);
         } else {
-            LOG.error(LOG_PRODUCT_ORDER_INCORRECT);
+            LOG.error(PRODUCT_ORDER_INCORRECT_ERRORLOG);
         }
         Assert.assertEquals(productsPricesList, expectedList,
-                ASSERT_MESSAGE_PRODUCT_ORDER);
+                MESSAGE_PRODUCT_ORDER_ASSERTLOG);
     }
 }

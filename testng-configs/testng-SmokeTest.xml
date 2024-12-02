@@ -14,6 +14,7 @@
             <class name="com.myappium2project.tests.curahealthcarewithchrome.LoginTests"/>
             <class name="com.myappium2project.tests.curahealthcarewithchrome.PageAccessTests"/>
             <class name="com.myappium2project.tests.batteryalarm.PageAccessTests"/>
+            <class name="com.myappium2project.tests.batteryalarm.PopupAccessTests"/>
         </classes>
     </test>
 </suite>

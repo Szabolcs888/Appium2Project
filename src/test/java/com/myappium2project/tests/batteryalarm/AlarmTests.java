@@ -9,63 +9,73 @@ import com.myappium2project.pages.batteryalarm.MainPage;
 import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
 
 public class AlarmTests extends BatteryAlarmBaseTest {
-    private static final String LOG_ALARM_WORKS = "The alarm works";
-    private static final String LOG_ALARM_DOES_NOT_WORK = "The alarm does not work";
+    private static final String ALARM_VALUE_CHANGE_LOG = "To trigger the alarm, we need to {} the '{}' value by {}";
+    private static final String ALARM_WORKS_LOG = "The alarm works";
+    private static final String ALARM_DOES_NOT_WORK_ERRORLOG = "The alarm does not work";
+    private static final String COUNTDOWN_VALIDATION_ERROR_ASSERTLOG = "The countdown should be active, but it is not.";
+
+    private static String getBatteryChargeAndAlarmLog() {
+        return "We ask for the battery charge and '{}' values";
+    }
+
+    private static String getAlarmFunctionCheckLog() {
+        return "We check if the '{}' function is working (if the countdown has started)";
+    }
 
     @Test(description = "The prerequisite for the test is that the phone is charging.")
     public void testMaxAlarm() {
         MainPage mainPage = new MainPage(driver);
         LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
-        LanguageUtils.scrollToEnglishLanguage(driver, mainPage, languagesDropdownMenu);
-        languagesDropdownMenu.chooseEnglishOption();
+        LanguageUtils.ensureEnglishLanguageSelected(driver, mainPage, languagesDropdownMenu);
 
-        LOG.info("We ask for the battery charge and 'Max Alarm' values");
+        String maxAlarmText = "Max Alarm";
+        LOG.info(getBatteryChargeAndAlarmLog(), maxAlarmText);
         int currentBatteryChargeValue = mainPage.getCurrentBatteryChargeValue();
         int currentMaxAlarmValue = mainPage.getCurrentMaxAlarmValue();
         if (currentBatteryChargeValue < currentMaxAlarmValue) {
-            int byWhichToReduceTheMaxAlarmValue = currentMaxAlarmValue - currentBatteryChargeValue + 2;
-            LOG.info("In order for the phone to alarm, we need to reduce the 'Max Alarm' value by {}",
-                    byWhichToReduceTheMaxAlarmValue);
-            mainPage.pressMaxAlarmMinusButton(byWhichToReduceTheMaxAlarmValue);
+            String actionType = "reduce";
+            int byWhichToReduceMaxAlarmValue = currentMaxAlarmValue - currentBatteryChargeValue + 2;
+            LOG.info(ALARM_VALUE_CHANGE_LOG, actionType, maxAlarmText, byWhichToReduceMaxAlarmValue);
+            mainPage.pressMaxAlarmMinusButton(byWhichToReduceMaxAlarmValue);
         }
 
-        LOG.info("We check whether the Max Alarm function is working (whether the countdown has started)");
+        LOG.info(getAlarmFunctionCheckLog(), maxAlarmText);
         boolean isCountdownActive = mainPage.isTheCountdownGoing();
         if (isCountdownActive) {
-            LOG.info(LOG_ALARM_WORKS);
+            LOG.info(ALARM_WORKS_LOG);
         } else {
-            LOG.error(LOG_ALARM_DOES_NOT_WORK);
+            LOG.error(ALARM_DOES_NOT_WORK_ERRORLOG);
         }
-        Assert.assertTrue(isCountdownActive, "The countdown should be active, but it is not.");
+        Assert.assertTrue(isCountdownActive, COUNTDOWN_VALIDATION_ERROR_ASSERTLOG);
     }
 
     @Test(description = "The prerequisite for the test is that the phone is not charging.")
     public void testMinAlarm() {
         MainPage mainPage = new MainPage(driver);
         LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
-        LanguageUtils.scrollToEnglishLanguage(driver, mainPage, languagesDropdownMenu);
-        languagesDropdownMenu.chooseEnglishOption();
+        LanguageUtils.ensureEnglishLanguageSelected(driver, mainPage, languagesDropdownMenu);
 
-        LOG.info("We ask for the battery charge and 'Min Alarm' values");
+        String minAlarmText = "Min Alarm";
+        LOG.info(getBatteryChargeAndAlarmLog(), minAlarmText);
         int currentBatteryChargeValue = mainPage.getCurrentBatteryChargeValue();
         int currentMinAlarmValue = mainPage.getCurrentMinAlarmValue();
         if (currentBatteryChargeValue >= currentMinAlarmValue) {
-            int byWhichToIncreaseTheMinAlarmValue = currentBatteryChargeValue - currentMinAlarmValue;
-            LOG.info("In order for the phone to alarm, we need to increase the 'Min Alarm' value by {}",
-                    byWhichToIncreaseTheMinAlarmValue);
-            mainPage.pressMinAlarmPlusButton(byWhichToIncreaseTheMinAlarmValue);
+            String actionType = "increase";
+            int byWhichToIncreaseMinAlarmValue = currentBatteryChargeValue - currentMinAlarmValue;
+            LOG.info(ALARM_VALUE_CHANGE_LOG, actionType, minAlarmText, byWhichToIncreaseMinAlarmValue);
+            mainPage.pressMinAlarmPlusButton(byWhichToIncreaseMinAlarmValue);
         }
 
-        LOG.info("We check whether the Min Alarm function is working (whether the countdown has started)");
+        LOG.info(getAlarmFunctionCheckLog(), minAlarmText);
         mainPage.pressPutItOnTheTrayButton();                 // These two steps are necessary because if we stay in the
         PhoneDesktop phoneDesktop = new PhoneDesktop(driver); // application, the alarm will not go off. That's why we have
         phoneDesktop.pressBatteryAlarmAppIcon();              // to put it on the tray and then go back to the application.
         boolean isCountdownActive = mainPage.isTheCountdownGoing();
         if (isCountdownActive) {
-            LOG.info(LOG_ALARM_WORKS);
+            LOG.info(ALARM_WORKS_LOG);
         } else {
-            LOG.error(LOG_ALARM_DOES_NOT_WORK);
+            LOG.error(ALARM_DOES_NOT_WORK_ERRORLOG);
         }
-        Assert.assertTrue(isCountdownActive, "The countdown should be active, but it is not.");
+        Assert.assertTrue(isCountdownActive, COUNTDOWN_VALIDATION_ERROR_ASSERTLOG);
     }
 }

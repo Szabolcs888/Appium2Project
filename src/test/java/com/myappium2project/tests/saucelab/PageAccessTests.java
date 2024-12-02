@@ -1,5 +1,7 @@
 package com.myappium2project.tests.saucelab;
 
+import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
+import com.myappium2project.logging.testlogmessages.SLabTestLogMessages;
 import com.myappium2project.pages.saucelab.menupages.*;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
 import org.testng.Assert;
@@ -7,12 +9,6 @@ import org.testng.annotations.Test;
 import com.myappium2project.pages.saucelab.HamburgerMenu;
 
 public class PageAccessTests extends SauceLabApkBaseTest {
-    private static final String LOG_CHECK_PAGE = "We check whether we are on the '";
-    private static final String LOG_PAGE_SUFFIX = "' page";
-    private static final String LOG_ON_PAGE = "We are on the '";
-    private static final String LOG_NOT_ON_PAGE = "We are not on the '";
-    private static final String PAGE_TITLE_SHOULD_BE_PREFIX = "The page title should be '";
-    private static final String PAGE_TITLE_SHOULD_BE_SUFFIX = "', but it is not.";
 
     @Test(priority = 1,
             groups = {"smoke"})
@@ -21,18 +17,17 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressWebviewButton();
 
-        String pageName = "Webview";
-        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
+        String webviewPageName = "Webview";
+        LOG.info(CommonTestLogMessages.getCheckPageLog(), webviewPageName);
         WebviewPage webviewPage = new WebviewPage(driver);
         String webviewPageTitleText = webviewPage.getWebviewPageTitleText();
-        String expectedPageTitleText = pageName;
-        if (webviewPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+        if (webviewPageTitleText.equals(webviewPageName)) {
+            LOG.info(CommonTestLogMessages.getOnPageLog(), webviewPageName);
         } else {
-            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), webviewPageName);
         }
-        Assert.assertEquals(webviewPageTitleText, expectedPageTitleText,
-                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
+        Assert.assertEquals(webviewPageTitleText, webviewPageName,
+                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(webviewPageName));
     }
 
     @Test(priority = 2,
@@ -42,18 +37,17 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressQrCodeScannerButton();
 
-        String pageName = "QR Code Scanner";
-        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
+        String qrCodeScannerPageName = "QR Code Scanner";
+        LOG.info(CommonTestLogMessages.getCheckPageLog(), qrCodeScannerPageName);
         QrCodeScannerPage qrCodeScannerPage = new QrCodeScannerPage(driver);
         String qrCodeScannerPageTitleText = qrCodeScannerPage.getQrCodeScannerPageTitleText();
-        String expectedPageTitleText = pageName;
-        if (qrCodeScannerPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+        if (qrCodeScannerPageTitleText.equals(qrCodeScannerPageName)) {
+            LOG.info(CommonTestLogMessages.getOnPageLog(), qrCodeScannerPageName);
         } else {
-            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), qrCodeScannerPageName);
         }
-        Assert.assertEquals(qrCodeScannerPageTitleText, expectedPageTitleText,
-                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
+        Assert.assertEquals(qrCodeScannerPageTitleText, qrCodeScannerPageName,
+                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(qrCodeScannerPageName));
     }
 
     @Test(priority = 3,
@@ -63,18 +57,17 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressGeoLocationButton();
 
-        String pageName = "Geo Location";
-        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
+        String geoLocationPageName = "Geo Location";
+        LOG.info(CommonTestLogMessages.getCheckPageLog(), geoLocationPageName);
         GeoLocationPage geoLocationPage = new GeoLocationPage(driver);
         String geoLocationPageTitleText = geoLocationPage.getGeoLocationPageTitleText();
-        String expectedPageTitleText = pageName;
-        if (geoLocationPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+        if (geoLocationPageTitleText.equals(geoLocationPageName)) {
+            LOG.info(CommonTestLogMessages.getOnPageLog(), geoLocationPageName);
         } else {
-            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), geoLocationPageName);
         }
-        Assert.assertEquals(geoLocationPageTitleText, expectedPageTitleText,
-                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
+        Assert.assertEquals(geoLocationPageTitleText, geoLocationPageName,
+                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(geoLocationPageName));
     }
 
     @Test(priority = 4,
@@ -84,18 +77,17 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressDrawingButton();
 
-        String pageName = "Drawing";
-        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
+        String drawingPageName = "Drawing";
+        LOG.info(CommonTestLogMessages.getCheckPageLog(), drawingPageName);
         DrawingPage drawingPage = new DrawingPage(driver);
         String drawingPageTitleText = drawingPage.getDrawingPageTitleText();
-        String expectedPageTitleText = pageName;
-        if (drawingPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+        if (drawingPageTitleText.equals(drawingPageName)) {
+            LOG.info(CommonTestLogMessages.getOnPageLog(), drawingPageName);
         } else {
-            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), drawingPageName);
         }
-        Assert.assertEquals(drawingPageTitleText, expectedPageTitleText,
-                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
+        Assert.assertEquals(drawingPageTitleText, drawingPageName,
+                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(drawingPageName));
     }
 
     @Test(priority = 5,
@@ -105,18 +97,17 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressAboutButton();
 
-        String pageName = "About";
-        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
+        String aboutPageName = "About";
+        LOG.info(CommonTestLogMessages.getCheckPageLog(), aboutPageName);
         AboutPage aboutPage = new AboutPage(driver);
         String aboutPageTitleText = aboutPage.getAboutPageTitleText();
-        String expectedPageTitleText = pageName;
-        if (aboutPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+        if (aboutPageTitleText.equals(aboutPageName)) {
+            LOG.info(CommonTestLogMessages.getOnPageLog(), aboutPageName);
         } else {
-            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), aboutPageName);
         }
-        Assert.assertEquals(aboutPageTitleText, expectedPageTitleText,
-                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
+        Assert.assertEquals(aboutPageTitleText, aboutPageName,
+                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(aboutPageName));
     }
 
     @Test(priority = 6,
@@ -126,18 +117,17 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressFingerPrintButton();
 
-        String pageName = "Finger Print";
-        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
+        String fingerPrintPageName = "Finger Print";
+        LOG.info(CommonTestLogMessages.getCheckPageLog(), fingerPrintPageName);
         FingerPrintPage fingerPrintPage = new FingerPrintPage(driver);
         String fingerPrintPageTitleText = fingerPrintPage.getFingerPrintPageTitleText();
-        String expectedPageTitleText = pageName;
-        if (fingerPrintPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+        if (fingerPrintPageTitleText.equals(fingerPrintPageName)) {
+            LOG.info(CommonTestLogMessages.getOnPageLog(), fingerPrintPageName);
         } else {
-            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), fingerPrintPageName);
         }
-        Assert.assertEquals(fingerPrintPageTitleText, expectedPageTitleText,
-                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
+        Assert.assertEquals(fingerPrintPageTitleText, fingerPrintPageName,
+                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(fingerPrintPageName));
     }
 
     @Test(priority = 7,
@@ -147,18 +137,17 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressApiCallsButton();
 
-        String pageName = "API calls";
-        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
+        String apiCallsPageName = "API calls";
+        LOG.info(CommonTestLogMessages.getCheckPageLog(), apiCallsPageName);
         ApiCallsPage apiCallsPage = new ApiCallsPage(driver);
         String apiCallsPageTitleText = apiCallsPage.getApiCallsPageTitleText();
-        String expectedPageTitleText = pageName;
-        if (apiCallsPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+        if (apiCallsPageTitleText.equals(apiCallsPageName)) {
+            LOG.info(CommonTestLogMessages.getOnPageLog(), apiCallsPageName);
         } else {
-            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), apiCallsPageName);
         }
-        Assert.assertEquals(apiCallsPageTitleText, expectedPageTitleText,
-                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
+        Assert.assertEquals(apiCallsPageTitleText, apiCallsPageName,
+                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(apiCallsPageName));
     }
 
     @Test(priority = 8,
@@ -168,17 +157,17 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressSauceBotVideoButton();
 
-        String pageName = "Sauce Bot Video";
-        LOG.info(LOG_CHECK_PAGE + pageName + LOG_PAGE_SUFFIX);
+        String sauceBotVideoPageName = "Sauce Bot Video";
+        LOG.info(CommonTestLogMessages.getCheckPageLog(), sauceBotVideoPageName);
         SauceBotVideoPage sauceBotVideoPage = new SauceBotVideoPage(driver);
         String sauceBotVideoPageTitleText = sauceBotVideoPage.getSauceBotVideoPageTitleText();
-        String expectedPageTitleText = "SauceBot - The Beginning";
-        if (sauceBotVideoPageTitleText.equals(expectedPageTitleText)) {
-            LOG.info(LOG_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+        String expectedSauceBotPageTitleText = "SauceBot - The Beginning";
+        if (sauceBotVideoPageTitleText.equals(expectedSauceBotPageTitleText)) {
+            LOG.info(CommonTestLogMessages.getOnPageLog(), sauceBotVideoPageName);
         } else {
-            LOG.error(LOG_NOT_ON_PAGE + pageName + LOG_PAGE_SUFFIX);
+            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), sauceBotVideoPageName);
         }
-        Assert.assertEquals(sauceBotVideoPageTitleText, expectedPageTitleText,
-                PAGE_TITLE_SHOULD_BE_PREFIX + expectedPageTitleText + PAGE_TITLE_SHOULD_BE_SUFFIX);
+        Assert.assertEquals(sauceBotVideoPageTitleText, expectedSauceBotPageTitleText,
+                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(expectedSauceBotPageTitleText));
     }
 }

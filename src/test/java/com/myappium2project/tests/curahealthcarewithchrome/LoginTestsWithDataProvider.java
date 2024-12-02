@@ -24,7 +24,8 @@ public class LoginTestsWithDataProvider extends ChromeBrowserBaseTest {
     }
 
     @Test(dataProvider = "loginData")
-    public void testsAllLoginCura(String username, String validOrInvalidUN, String password, String validOrInvalidPW, boolean expectedResult) {
+    public void testsAllLoginCura(
+            String username, String usernameValidityStatus, String password, String passwordValidityStatus, boolean expectedResult) {
         driver.get(TestDataCura.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
@@ -32,20 +33,28 @@ public class LoginTestsWithDataProvider extends ChromeBrowserBaseTest {
         hamburgerMenu.pressLoginButton();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(username, validOrInvalidUN);
-        loginPage.fillPasswordInput(password, validOrInvalidPW);
+        loginPage.fillUserNameInput(username, usernameValidityStatus);
+        loginPage.fillPasswordInput(password, passwordValidityStatus);
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        LOG.info("We check whether the login is successful. The expected result: {}", expectedResult);
+        String loginExpectedResultMessage = getLoginExpectedResultMessage(expectedResult);
+        LOG.info("We check if the login is successful. The expected result: {}", loginExpectedResultMessage);
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
         boolean isMakeAppointmentPageLoaded = makeAppointmentPage.isPageLoaded();
         if (isMakeAppointmentPageLoaded) {
             LOG.info("Login is successful");
         } else {
-            LOG.error("Login failed");
+            LOG.info("Login failed");
         }
         Assert.assertEquals(isMakeAppointmentPageLoaded, expectedResult,
                 "The login result should be '" + expectedResult + "', but it is '" + isMakeAppointmentPageLoaded + "'.");
+    }
+
+    private static String getLoginExpectedResultMessage(boolean expectedResult) {
+        if (expectedResult) {
+            return "successful login";
+        } else
+            return "failed login";
     }
 }

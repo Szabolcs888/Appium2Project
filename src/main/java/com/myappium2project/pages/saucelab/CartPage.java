@@ -37,7 +37,7 @@ public class CartPage extends BasePage {
         proceedToCheckoutButton.click();
     }
 
-    public List<String> getTheListOfProductNamesInMyCart(AndroidDriver driver) {
+    public List<String> getListOfProductNamesInMyCart(AndroidDriver driver) {
         List<String> productsNamesListInMyCartAsString = new ArrayList<>();
         boolean moreElements = true;
         int previousSize = 0;

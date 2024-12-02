@@ -1,5 +1,6 @@
 package com.myappium2project.tests.curahealthcarewithchrome;
 
+import com.myappium2project.logging.testlogmessages.CuraTestLogMessages;
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
 import com.myappium2project.testsdata.CommonTestData;
 import com.myappium2project.testsdata.TestDataCura;
@@ -38,20 +39,23 @@ public class AppointmentConfirmationTests extends ChromeBrowserBaseTest {
         makeAppointmentPage.fillCommentInput(TestDataCura.COMMENT_ACC1);
         makeAppointmentPage.pressBookAppointmentButton();
 
-        LOG.info("We check whether the appointment data matches the ones we provided");
+        LOG.info(CuraTestLogMessages.CHECK_APPOINTMENT_DATA_LOG);
+        String appointmentConfirmationPageName = "Appointment Confirmation";
         AppointmentConfirmationPage appointmentConfirmationPage = new AppointmentConfirmationPage(driver);
-        List<String> appointmentDataAsTheyAreOnThePage = appointmentConfirmationPage.getAppointmentDataAsTheyAreOnTheAppointmentConfirmationPage();
+        List<String> appointmentDataOnAppointmentConfirmationPage =
+                appointmentConfirmationPage.getAppointmentDataOnAppointmentConfirmationPage();
         List<String> appointmentDataAsItShouldBe = Arrays.asList(
                 TestDataCura.FACILTY_ACC1, TestDataCura.READMISSION_ACC1, TestDataCura.HEALTHCARE_PROGRAM_ACC1,
                 TestDataCura.VIST_DATE_ACC1, TestDataCura.COMMENT_ACC1);
-        System.out.println("Appointment data is on the page: \n" + appointmentDataAsTheyAreOnThePage);
-        System.out.println("Original appointment data: \n" + appointmentDataAsItShouldBe);
-        if (appointmentDataAsTheyAreOnThePage.equals(appointmentDataAsItShouldBe)) {
-            LOG.info("The appointment data is correct");
+        System.out.println(CuraTestLogMessages.getAppointmentDataConsoleLog(appointmentConfirmationPageName) +
+                appointmentDataOnAppointmentConfirmationPage);
+        System.out.println(CuraTestLogMessages.ORIGINAL_APPOINTMENT_DATA_CONSOLELOG + appointmentDataAsItShouldBe);
+        if (appointmentDataOnAppointmentConfirmationPage.equals(appointmentDataAsItShouldBe)) {
+            LOG.info(CuraTestLogMessages.getCorrectAppointmentDataLog(), appointmentConfirmationPageName);
         } else {
-            LOG.error("The appointment data is not correct");
+            LOG.error(CuraTestLogMessages.getIncorrectAppointmentDataErrorLog(), appointmentConfirmationPageName);
         }
-        Assert.assertEquals(appointmentDataAsTheyAreOnThePage, appointmentDataAsItShouldBe,
-                "The appointment data should match the provided data, but it does not.");
+        Assert.assertEquals(appointmentDataOnAppointmentConfirmationPage, appointmentDataAsItShouldBe,
+                CuraTestLogMessages.getAppointmentDataValidationErrorAssertLog(appointmentConfirmationPageName));
     }
 }

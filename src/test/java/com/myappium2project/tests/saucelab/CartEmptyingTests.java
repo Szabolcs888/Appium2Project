@@ -1,5 +1,6 @@
 package com.myappium2project.tests.saucelab;
 
+import com.myappium2project.logging.testlogmessages.SLabTestLogMessages;
 import com.myappium2project.pages.saucelab.*;
 import com.myappium2project.pages.saucelab.productspages.*;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
@@ -65,25 +66,25 @@ public class CartEmptyingTests extends SauceLabApkBaseTest {
         CartPage cartPage = new CartPage(driver);
         cartPage.pressRemoveItemButtons();
 
-        LOG.info("We check if the cart is empty");
+        LOG.info(SLabTestLogMessages.CHECK_CART_EMPTY_LOG);
         CartNoItemsPage cartNoItemsPage = new CartNoItemsPage(driver, wait);
         boolean isDisplayedNoItemsText = cartNoItemsPage.isDisplayedNoItemsTextOnCartNoItemsPage();
         if (isDisplayedNoItemsText) {
-            LOG.info("The cart is empty");
+            LOG.info(SLabTestLogMessages.CART_EMPTY_LOG);
         } else {
-            LOG.error("The cart is not empty");
+            LOG.error(SLabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
         }
-        Assert.assertTrue(isDisplayedNoItemsText, "The cart should be empty, but it is not.");
+        Assert.assertTrue(isDisplayedNoItemsText, SLabTestLogMessages.CART_EMPTY_VALIDATION_ERROR_ASSERTLOG);
 
         cartNoItemsPage.pressGoShoppingButton();
 
-        LOG.info("We check if the cart counter is available");
+        LOG.info(SLabTestLogMessages.CHECK_CART_COUNTER_AVAILABLE_LOG);
         boolean isDisplayedProductCounter = productPage.isDisplayedProductCounterOnCartBadgeButton();
         if (!isDisplayedProductCounter) {
-            LOG.info("The cart counter is not available");
+            LOG.info(SLabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_LOG);
         } else {
-            LOG.error("The cart counter is available");
+            LOG.error(SLabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
         }
-        Assert.assertFalse(isDisplayedProductCounter, "The cart counter should not be available, but it is.");
+        Assert.assertFalse(isDisplayedProductCounter, SLabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ERROR_ASSERTLOG);
     }
 }

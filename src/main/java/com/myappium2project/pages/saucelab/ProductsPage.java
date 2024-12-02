@@ -171,7 +171,7 @@ public class ProductsPage extends BasePage {
         cartBadgeButton.click();
     }
 
-    public void pressThirdStarButtonUnderTheBackpack() {
+    public void pressThirdStarButtonUnderBackpack() {
         LOG.info("We press the third star button under the 'Backpack'");
         thirdStarButtonUnderTheBackpack.click();
     }
@@ -189,7 +189,7 @@ public class ProductsPage extends BasePage {
         }
     }
 
-    public boolean isTheCloseModalButtonAvailable() {
+    public boolean isCloseModalButtonAvailable() {
         try {
             boolean isDisplayed = closeModalButtonOnFeedbackPopup.isDisplayed();
             return isDisplayed;
@@ -198,7 +198,7 @@ public class ProductsPage extends BasePage {
         }
     }
 
-    public List<String> getTheListOfProductNames(AndroidDriver driver) {
+    public List<String> getListOfProductNames(AndroidDriver driver) {
         List<String> productNameListAsString = new ArrayList<>();
         boolean moreElements = true;
         int previousSize = 0;
@@ -215,7 +215,7 @@ public class ProductsPage extends BasePage {
         return productNameListAsString;
     }
 
-    public List<Float> getTheListOfProductPrices(AndroidDriver driver) {
+    public List<Float> getListOfProductPrices(AndroidDriver driver) {
         List<Float> productPriceListAsFloat = new ArrayList<>();
         boolean moreElements = true;
         int previousSize = 0;

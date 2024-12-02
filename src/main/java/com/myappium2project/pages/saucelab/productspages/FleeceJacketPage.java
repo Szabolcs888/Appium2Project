@@ -68,7 +68,7 @@ public class FleeceJacketPage extends BasePage {
         }
     }
 
-    public boolean isTheCloseModalButtonAvailable() {
+    public boolean isCloseModalButtonAvailable() {
         try {
             boolean isDisplayed = closeModalButtonOnFeedbackPopup.isDisplayed();
             return isDisplayed;

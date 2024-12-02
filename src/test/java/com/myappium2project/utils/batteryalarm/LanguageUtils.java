@@ -8,6 +8,13 @@ import org.openqa.selenium.NoSuchElementException;
 
 public class LanguageUtils {
 
+    public static void ensureEnglishLanguageSelected(AndroidDriver driver, MainPage mainPage, LanguagesDropdownMenu languagesDropdownMenu) {
+        if (!mainPage.getSelectedLanguage().equals("English")) {
+            scrollToEnglishLanguage(driver, mainPage, languagesDropdownMenu);
+            languagesDropdownMenu.chooseEnglishOption();
+        }
+    }
+
     public static void scrollToEnglishLanguage(AndroidDriver driver, MainPage mainPage, LanguagesDropdownMenu languagesDropdownMenu) {
         do {
             if (!mainPage.getSelectedLanguage().equals("English")) {

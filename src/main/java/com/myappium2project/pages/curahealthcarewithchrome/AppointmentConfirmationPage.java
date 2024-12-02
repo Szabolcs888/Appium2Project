@@ -46,7 +46,7 @@ public class AppointmentConfirmationPage extends BasePage {
         }
     }
 
-    public List<String> getAppointmentDataAsTheyAreOnTheAppointmentConfirmationPage() {
+    public List<String> getAppointmentDataOnAppointmentConfirmationPage() {
         List<String> appointmentDataAsTheyAreOnTheAppointmentConfirmationPage = new ArrayList<>();
         appointmentDataAsTheyAreOnTheAppointmentConfirmationPage.add(facilityText.getText());
         appointmentDataAsTheyAreOnTheAppointmentConfirmationPage.add(hospitalReadmissionChoice.getText());

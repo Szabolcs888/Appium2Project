@@ -1,5 +1,6 @@
 package com.myappium2project.tests.curahealthcarewithchrome;
 
+import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
 import com.myappium2project.testsdata.CommonTestData;
 import com.myappium2project.testsdata.TestDataCura;
@@ -10,9 +11,6 @@ import com.myappium2project.pages.curahealthcarewithchrome.LoginPage;
 import com.myappium2project.pages.curahealthcarewithchrome.MakeAppointmentPage;
 
 public class LoginTests extends ChromeBrowserBaseTest {
-    private static final String LOG_CHECK_ERROR_MESSAGE = "We check whether the error message appears and, if so, whether it is correct";
-    private static final String LOG_ERROR_MESSAGE_CORRECT = "The error message is correct";
-    private static final String LOG_ERROR_MESSAGE_INCORRECT = "The error message is not correct";
     private static final String EXPECTED_ERROR_MESSAGE = "Login failed! Please ensure the username and password are valid.";
 
     @Test(priority = 1,
@@ -30,15 +28,16 @@ public class LoginTests extends ChromeBrowserBaseTest {
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        LOG.info("We check if we are on the 'Make Appointment' page");
+        String makeAppointmentPageName = "Make Appointment";
+        LOG.info(CommonTestLogMessages.getCheckPageLog(), makeAppointmentPageName);
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
         boolean isMakeAppointmentPageLoaded = makeAppointmentPage.isPageLoaded();
         if (isMakeAppointmentPageLoaded) {
-            LOG.info("We are on the 'Make Appointment' page");
+            LOG.info(CommonTestLogMessages.getOnPageLog(), makeAppointmentPageName);
         } else {
-            LOG.error("We are not on the 'Make Appointment' page");
+            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), makeAppointmentPageName);
         }
-        Assert.assertTrue(isMakeAppointmentPageLoaded, "The 'Make Appointment' page should be loaded, but it is not.");
+        Assert.assertTrue(isMakeAppointmentPageLoaded, CommonTestLogMessages.getPageLoadErrorAssertLog(makeAppointmentPageName));
     }
 
     @Test(priority = 2,
@@ -56,15 +55,15 @@ public class LoginTests extends ChromeBrowserBaseTest {
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        LOG.info(LOG_CHECK_ERROR_MESSAGE);
+        LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
-            LOG.info(LOG_ERROR_MESSAGE_CORRECT);
+            LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         } else {
-            LOG.error(LOG_ERROR_MESSAGE_INCORRECT);
+            LOG.error(CommonTestLogMessages.ERROR_MESSAGE_INCORRECT_ERRORLOG);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
-                "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
+                CommonTestLogMessages.getErrorMessageErrorAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
     }
 
     @Test(priority = 3,
@@ -82,15 +81,15 @@ public class LoginTests extends ChromeBrowserBaseTest {
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        LOG.info(LOG_CHECK_ERROR_MESSAGE);
+        LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
-            LOG.info(LOG_ERROR_MESSAGE_CORRECT);
+            LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         } else {
-            LOG.error(LOG_ERROR_MESSAGE_INCORRECT);
+            LOG.error(CommonTestLogMessages.ERROR_MESSAGE_INCORRECT_ERRORLOG);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
-                "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
+                CommonTestLogMessages.getErrorMessageErrorAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
     }
 
     @Test(priority = 4,
@@ -108,14 +107,14 @@ public class LoginTests extends ChromeBrowserBaseTest {
         loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
-        LOG.info(LOG_CHECK_ERROR_MESSAGE);
+        LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
-            LOG.info(LOG_ERROR_MESSAGE_CORRECT);
+            LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         } else {
-            LOG.error(LOG_ERROR_MESSAGE_INCORRECT);
+            LOG.error(CommonTestLogMessages.ERROR_MESSAGE_INCORRECT_ERRORLOG);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
-                "The error message should be '" + EXPECTED_ERROR_MESSAGE + "', but it is '" + errorMessageText + "'.");
+                CommonTestLogMessages.getErrorMessageErrorAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
     }
 }
