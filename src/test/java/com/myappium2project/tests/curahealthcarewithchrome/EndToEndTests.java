@@ -37,7 +37,7 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), makeAppointmentPageName);
         }
-        Assert.assertTrue(isMakeAppointmentPageLoaded, CommonTestLogMessages.getPageLoadErrorAssertLog(makeAppointmentPageName));
+        Assert.assertTrue(isMakeAppointmentPageLoaded, CommonTestLogMessages.getPageLoadValidationAssertLog(makeAppointmentPageName));
 
         makeAppointmentPage.pressFacilityDropDownMenuButton();
         makeAppointmentPage.choiceFacilityOption(TestDataCura.FACILTY_ACC2);
@@ -57,7 +57,7 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), appointmentConfirmationPageName);
         }
         Assert.assertTrue(isAppointmentConfirmationPageLoaded,
-                CommonTestLogMessages.getPageLoadErrorAssertLog(appointmentConfirmationPageName));
+                CommonTestLogMessages.getPageLoadValidationAssertLog(appointmentConfirmationPageName));
 
         LOG.info(CuraTestLogMessages.CHECK_APPOINTMENT_DATA_LOG);
         List<String> appointmentDataOnAppointmentConfirmationPage =
@@ -74,7 +74,7 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
             LOG.error(CuraTestLogMessages.getIncorrectAppointmentDataErrorLog(), appointmentConfirmationPageName);
         }
         Assert.assertEquals(appointmentDataOnAppointmentConfirmationPage, appointmentDataAsItShouldBe,
-                CuraTestLogMessages.APPOINTMENT_DATA_VALIDATION_ERROR_ASSERTLOG);
+                CuraTestLogMessages.APPOINTMENT_DATA_VALIDATION_ASSERTLOG);
 
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressHistoryButton();
@@ -89,7 +89,7 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), historyPageName);
         }
         Assert.assertTrue(isDisplayedHistoryPageTitleText,
-                CommonTestLogMessages.getPageLoadErrorAssertLog(historyPageName));
+                CommonTestLogMessages.getPageLoadValidationAssertLog(historyPageName));
 
         LOG.info("We also check the appointment data on the '" + historyPageName + "' page");
         List<String> appointmentDataOnHistoryPage = historyPage.getAppointmentDataOnHistoryPage();
@@ -104,7 +104,7 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
             LOG.error(CuraTestLogMessages.getIncorrectAppointmentDataErrorLog(), historyPageName);
         }
         Assert.assertEquals(appointmentDataOnHistoryPage, appointmentDataAsItShouldBe2,
-                CuraTestLogMessages.getAppointmentDataValidationErrorAssertLog(historyPageName));
+                CuraTestLogMessages.getAppointmentDataValidationAssertLog(historyPageName));
 
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressProfileButton();
@@ -119,7 +119,7 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), profilePageName);
         }
         Assert.assertTrue(isProfilePageLoaded,
-                CommonTestLogMessages.getPageLoadErrorAssertLog(profilePageName));
+                CommonTestLogMessages.getPageLoadValidationAssertLog(profilePageName));
 
         profilePage.pressLogoutButton();
 
@@ -134,7 +134,7 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), mainPageName);
         }
-        Assert.assertTrue(isMainPageLoaded, CommonTestLogMessages.getPageLoadErrorAssertLog(mainPageName));
+        Assert.assertTrue(isMainPageLoaded, CommonTestLogMessages.getPageLoadValidationAssertLog(mainPageName));
         Assert.assertEquals(currentUrl, expectedUrl,
                 "The current URL should be '" + expectedUrl + "', but it is '" + currentUrl + "'.");
     }

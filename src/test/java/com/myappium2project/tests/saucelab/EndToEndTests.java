@@ -23,7 +23,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         private static final String EXPECTED_PRODUCTS_IN_CART_CONSOLELOG = "The cart should contain these products: \n";
         private static final String CORRECT_PRODUCTS_IN_CART_LOG = "The correct products are in the cart";
         private static final String NOT_RIGHT_PRODUCTS_IN_CART_ERRORLOG = "There are not the right products in the cart.";
-        private static final String CART_DOES_NOT_CONTAIN_CORRECT_PRODUCTS_VALIDATION_ERROR_ASSERTLOG = "The cart should contain the correct products, but it does not.";
+        private static final String CART_DOES_NOT_CONTAIN_CORRECT_PRODUCTS_VALIDATION_ASSERTLOG = "The cart should contain the correct products, but it does not.";
 
         private static final String CHECK_NUMBER_OF_PRODUCTS_IN_CART_LOG = "We check the number of products in the cart";
         private static final String NUMBER_OF_PRODUCTS_IN_CART_LOG = "The number of products in the cart: ";
@@ -36,15 +36,15 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         private static final String ORIGINAL_DELIVERY_DATA_CONSOLELOG = "Original delivery data: \n";
         private static final String CORRECT_DELIVERY_DATA_LOG = "The delivery data is correct";
         private static final String INCORRECT_DELIVERY_DATA_ERRORLOG = "The delivery data is correct";
-        private static final String DELIVERY_DATA_MATCH_VALIDATION_ERROR_ASSERTLOG = "The delivery data should match the provided data, but it does not.";
+        private static final String DELIVERY_DATA_MATCH_VALIDATION_ASSERTLOG = "The delivery data should match the provided data, but it does not.";
 
         private static final String PAYMENT_DATA_ON_PAGE_CONSOLELOG = "Payment data is on the page: \n";
         private static final String ORIGINAL_PAYMENT_DATA_CONSOLELOG = "Original payment data: \n";
         private static final String CORRECT_PAYMENT_DATA_LOG = "The payment data is correct";
         private static final String INCORRECT_PAYMENT_DATA_ERRORLOG = "The payment data is not correct";
-        private static final String PAYMENT_DATA_MATCH_VALIDATION_ERROR_ASSERTLOG = "The payment data should match the provided data, but it does not.";
+        private static final String PAYMENT_DATA_MATCH_VALIDATION_ASSERTLOG = "The payment data should match the provided data, but it does not.";
 
-        private static String getCorrectNumberOfProductsValidationErrorAssertLog(int expectedProductsQuantityInMyCart, int productsQuantityInMyCart) {
+        private static String getCorrectNumberOfProductsValidationAssertLog(int expectedProductsQuantityInMyCart, int productsQuantityInMyCart) {
             return String.format("The number of products in the cart should be %s, but it is %s.",
                     expectedProductsQuantityInMyCart, productsQuantityInMyCart);
         }
@@ -116,7 +116,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(E2ELogMessages.NOT_RIGHT_PRODUCTS_IN_CART_ERRORLOG);
         }
         Assert.assertEquals(productsNamesListInMyCart, productsNamesListAsItShouldBe,
-                E2ELogMessages.CART_DOES_NOT_CONTAIN_CORRECT_PRODUCTS_VALIDATION_ERROR_ASSERTLOG);
+                E2ELogMessages.CART_DOES_NOT_CONTAIN_CORRECT_PRODUCTS_VALIDATION_ASSERTLOG);
 
         LOG.info(E2ELogMessages.CHECK_NUMBER_OF_PRODUCTS_IN_CART_LOG);
         int productsQuantityInMyCart = productsPage.getProductCounterOnCartBadgeButton();
@@ -129,7 +129,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(E2ELogMessages.INCORRECT_NUMBER_OF_PRODUCTS_IN_CART_ERRORLOG);
         }
         Assert.assertEquals(productsQuantityInMyCart, expectedProductsQuantityInMyCart,
-                E2ELogMessages.getCorrectNumberOfProductsValidationErrorAssertLog(expectedProductsQuantityInMyCart, productsQuantityInMyCart));
+                E2ELogMessages.getCorrectNumberOfProductsValidationAssertLog(expectedProductsQuantityInMyCart, productsQuantityInMyCart));
 
         cartPage.pressProceedToCheckoutButton();
 
@@ -143,7 +143,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), checkoutPageName);
         }
         Assert.assertEquals(checkoutPageTitleText, checkoutPageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(checkoutPageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(checkoutPageName));
 
         checkoutPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC1);
         checkoutPage.fillAddressLine1Input(TestDataSaucelab.ADDRESS_LINE1_ACC1);
@@ -176,7 +176,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(E2ELogMessages.INCORRECT_DELIVERY_DATA_ERRORLOG);
         }
         Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData,
-                E2ELogMessages.DELIVERY_DATA_MATCH_VALIDATION_ERROR_ASSERTLOG);
+                E2ELogMessages.DELIVERY_DATA_MATCH_VALIDATION_ASSERTLOG);
 
         List<String> originalPaymentData = Arrays.asList(
                 TestDataSaucelab.FULL_NAME_ACC1, TestDataSaucelab.CARD_NUMBER_ACC1, TestDataSaucelab.EXPIRATION_DATE_ACC1);
@@ -189,7 +189,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(E2ELogMessages.INCORRECT_PAYMENT_DATA_ERRORLOG);
         }
         Assert.assertEquals(paymentDataOnOrderReviewPage, originalPaymentData,
-                E2ELogMessages.PAYMENT_DATA_MATCH_VALIDATION_ERROR_ASSERTLOG);
+                E2ELogMessages.PAYMENT_DATA_MATCH_VALIDATION_ASSERTLOG);
 
         checkoutOrderReviewPage.pressPlaceOrderButton();
 
@@ -203,7 +203,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), checkoutCompletePageName);
         }
         Assert.assertEquals(checkoutCompletePageTitleText, checkoutCompletePageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(checkoutCompletePageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(checkoutCompletePageName));
 
         checkoutCompletePage.pressContinueShoppingButton();
 
@@ -216,7 +216,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             LOG.error(SLabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
         }
-        Assert.assertTrue(isDisplayedNoItemsText, SLabTestLogMessages.CART_EMPTY_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertTrue(isDisplayedNoItemsText, SLabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
 
         LOG.info(SLabTestLogMessages.CHECK_CART_COUNTER_AVAILABLE_LOG);
         boolean isDisplayedProductCounter = productsPage.isDisplayedProductCounterOnCartBadgeButton();
@@ -225,7 +225,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             LOG.error(SLabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
         }
-        Assert.assertFalse(isDisplayedProductCounter, SLabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertFalse(isDisplayedProductCounter, SLabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
 
         AppiumActions.navigateBack(driver);
 
@@ -243,7 +243,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), loginPageName);
         }
         Assert.assertEquals(loginPageTitleText, loginPageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(loginPageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(loginPageName));
     }
 
     @Test(priority = 2,
@@ -308,7 +308,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(E2ELogMessages.NOT_RIGHT_PRODUCTS_IN_CART_ERRORLOG);
         }
         Assert.assertEquals(productsNamesListInMyCart, productsNamesListAsItShouldBe,
-                E2ELogMessages.CART_DOES_NOT_CONTAIN_CORRECT_PRODUCTS_VALIDATION_ERROR_ASSERTLOG);
+                E2ELogMessages.CART_DOES_NOT_CONTAIN_CORRECT_PRODUCTS_VALIDATION_ASSERTLOG);
 
         LOG.info(E2ELogMessages.CHECK_NUMBER_OF_PRODUCTS_IN_CART_LOG);
         int productsQuantityInMyCart = productsPage.getProductCounterOnCartBadgeButton();
@@ -321,7 +321,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(E2ELogMessages.INCORRECT_NUMBER_OF_PRODUCTS_IN_CART_ERRORLOG);
         }
         Assert.assertEquals(productsQuantityInMyCart, expectedProductsQuantityInMyCart,
-                E2ELogMessages.getCorrectNumberOfProductsValidationErrorAssertLog(expectedProductsQuantityInMyCart, productsQuantityInMyCart));
+                E2ELogMessages.getCorrectNumberOfProductsValidationAssertLog(expectedProductsQuantityInMyCart, productsQuantityInMyCart));
 
         cartPage.pressProceedToCheckoutButton();
 
@@ -340,7 +340,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), checkoutPageName);
         }
         Assert.assertEquals(checkoutPageTitleText, checkoutPageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(checkoutPageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(checkoutPageName));
 
         checkoutPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC2);
         checkoutPage.fillAddressLine1Input(TestDataSaucelab.ADDRESS_LINE1_ACC2);
@@ -372,7 +372,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(E2ELogMessages.INCORRECT_DELIVERY_DATA_ERRORLOG);
         }
         Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData,
-                E2ELogMessages.DELIVERY_DATA_MATCH_VALIDATION_ERROR_ASSERTLOG);
+                E2ELogMessages.DELIVERY_DATA_MATCH_VALIDATION_ASSERTLOG);
 
         List<String> originalPaymentData = Arrays.asList(
                 TestDataSaucelab.FULL_NAME_ACC2, TestDataSaucelab.CARD_NUMBER_ACC2, TestDataSaucelab.EXPIRATION_DATE_ACC2);
@@ -385,7 +385,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(E2ELogMessages.INCORRECT_PAYMENT_DATA_ERRORLOG);
         }
         Assert.assertEquals(paymentDataOnOrderReviewPage, originalPaymentData,
-                E2ELogMessages.PAYMENT_DATA_MATCH_VALIDATION_ERROR_ASSERTLOG);
+                E2ELogMessages.PAYMENT_DATA_MATCH_VALIDATION_ASSERTLOG);
 
         checkoutOrderReviewPage.pressPlaceOrderButton();
 
@@ -399,7 +399,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), checkoutCompletePageName);
         }
         Assert.assertEquals(checkoutCompletePageTitleText, checkoutCompletePageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(checkoutCompletePageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(checkoutCompletePageName));
 
         checkoutCompletePage.pressContinueShoppingButton();
 
@@ -412,7 +412,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             LOG.error(SLabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
         }
-        Assert.assertTrue(isDisplayedNoItemsText, SLabTestLogMessages.CART_EMPTY_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertTrue(isDisplayedNoItemsText, SLabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
 
         LOG.info(SLabTestLogMessages.CHECK_CART_COUNTER_AVAILABLE_LOG);
         boolean isDisplayedProductCounter = productsPage.isDisplayedProductCounterOnCartBadgeButton();
@@ -421,7 +421,7 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         } else {
             LOG.error(SLabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
         }
-        Assert.assertFalse(isDisplayedProductCounter, SLabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertFalse(isDisplayedProductCounter, SLabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
 
         AppiumActions.navigateBack(driver);
 
@@ -440,6 +440,6 @@ public class EndToEndTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), loginPageName);
         }
         Assert.assertEquals(loginPageTitleText, loginPageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(loginPageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(loginPageName));
     }
 }

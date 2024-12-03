@@ -27,7 +27,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), webviewPageName);
         }
         Assert.assertEquals(webviewPageTitleText, webviewPageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(webviewPageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(webviewPageName));
     }
 
     @Test(priority = 2,
@@ -47,7 +47,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), qrCodeScannerPageName);
         }
         Assert.assertEquals(qrCodeScannerPageTitleText, qrCodeScannerPageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(qrCodeScannerPageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(qrCodeScannerPageName));
     }
 
     @Test(priority = 3,
@@ -67,7 +67,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), geoLocationPageName);
         }
         Assert.assertEquals(geoLocationPageTitleText, geoLocationPageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(geoLocationPageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(geoLocationPageName));
     }
 
     @Test(priority = 4,
@@ -87,7 +87,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), drawingPageName);
         }
         Assert.assertEquals(drawingPageTitleText, drawingPageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(drawingPageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(drawingPageName));
     }
 
     @Test(priority = 5,
@@ -107,7 +107,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), aboutPageName);
         }
         Assert.assertEquals(aboutPageTitleText, aboutPageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(aboutPageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(aboutPageName));
     }
 
     @Test(priority = 6,
@@ -127,7 +127,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), fingerPrintPageName);
         }
         Assert.assertEquals(fingerPrintPageTitleText, fingerPrintPageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(fingerPrintPageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(fingerPrintPageName));
     }
 
     @Test(priority = 7,
@@ -147,7 +147,7 @@ public class PageAccessTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), apiCallsPageName);
         }
         Assert.assertEquals(apiCallsPageTitleText, apiCallsPageName,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(apiCallsPageName));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(apiCallsPageName));
     }
 
     @Test(priority = 8,
@@ -168,6 +168,6 @@ public class PageAccessTests extends SauceLabApkBaseTest {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), sauceBotVideoPageName);
         }
         Assert.assertEquals(sauceBotVideoPageTitleText, expectedSauceBotPageTitleText,
-                SLabTestLogMessages.getPageTitleValidationErrorAssertLog(expectedSauceBotPageTitleText));
+                SLabTestLogMessages.getPageTitleValidationAssertLog(expectedSauceBotPageTitleText));
     }
 }

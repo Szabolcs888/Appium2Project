@@ -37,7 +37,7 @@ public class LoginTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), makeAppointmentPageName);
         }
-        Assert.assertTrue(isMakeAppointmentPageLoaded, CommonTestLogMessages.getPageLoadErrorAssertLog(makeAppointmentPageName));
+        Assert.assertTrue(isMakeAppointmentPageLoaded, CommonTestLogMessages.getPageLoadValidationAssertLog(makeAppointmentPageName));
     }
 
     @Test(priority = 2,
@@ -57,13 +57,14 @@ public class LoginTests extends ChromeBrowserBaseTest {
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
+        LOG.info(CommonTestLogMessages.getExpectedErrorMessageLog(), errorMessageText);
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
             LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         } else {
             LOG.error(CommonTestLogMessages.ERROR_MESSAGE_INCORRECT_ERRORLOG);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
-                CommonTestLogMessages.getErrorMessageErrorAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
+                CommonTestLogMessages.getErrorMessageValidationAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
     }
 
     @Test(priority = 3,
@@ -83,13 +84,14 @@ public class LoginTests extends ChromeBrowserBaseTest {
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
+        LOG.info(CommonTestLogMessages.getExpectedErrorMessageLog(), errorMessageText);
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
             LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         } else {
             LOG.error(CommonTestLogMessages.ERROR_MESSAGE_INCORRECT_ERRORLOG);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
-                CommonTestLogMessages.getErrorMessageErrorAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
+                CommonTestLogMessages.getErrorMessageValidationAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
     }
 
     @Test(priority = 4,
@@ -109,12 +111,13 @@ public class LoginTests extends ChromeBrowserBaseTest {
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
+        LOG.info(CommonTestLogMessages.getExpectedErrorMessageLog(), errorMessageText);
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
             LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         } else {
             LOG.error(CommonTestLogMessages.ERROR_MESSAGE_INCORRECT_ERRORLOG);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
-                CommonTestLogMessages.getErrorMessageErrorAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
+                CommonTestLogMessages.getErrorMessageValidationAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
     }
 }

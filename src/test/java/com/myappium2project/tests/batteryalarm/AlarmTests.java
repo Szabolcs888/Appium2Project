@@ -12,7 +12,7 @@ public class AlarmTests extends BatteryAlarmBaseTest {
     private static final String ALARM_VALUE_CHANGE_LOG = "To trigger the alarm, we need to {} the '{}' value by {}";
     private static final String ALARM_WORKS_LOG = "The alarm works";
     private static final String ALARM_DOES_NOT_WORK_ERRORLOG = "The alarm does not work";
-    private static final String COUNTDOWN_VALIDATION_ERROR_ASSERTLOG = "The countdown should be active, but it is not.";
+    private static final String COUNTDOWN_VALIDATION_ASSERTLOG = "The countdown should be active, but it is not.";
 
     private static String getBatteryChargeAndAlarmLog() {
         return "We ask for the battery charge and '{}' values";
@@ -46,7 +46,7 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(ALARM_DOES_NOT_WORK_ERRORLOG);
         }
-        Assert.assertTrue(isCountdownActive, COUNTDOWN_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertTrue(isCountdownActive, COUNTDOWN_VALIDATION_ASSERTLOG);
     }
 
     @Test(description = "The prerequisite for the test is that the phone is not charging.")
@@ -76,6 +76,6 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(ALARM_DOES_NOT_WORK_ERRORLOG);
         }
-        Assert.assertTrue(isCountdownActive, COUNTDOWN_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertTrue(isCountdownActive, COUNTDOWN_VALIDATION_ASSERTLOG);
     }
 }

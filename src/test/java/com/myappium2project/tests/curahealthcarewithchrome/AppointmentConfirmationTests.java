@@ -56,6 +56,6 @@ public class AppointmentConfirmationTests extends ChromeBrowserBaseTest {
             LOG.error(CuraTestLogMessages.getIncorrectAppointmentDataErrorLog(), appointmentConfirmationPageName);
         }
         Assert.assertEquals(appointmentDataOnAppointmentConfirmationPage, appointmentDataAsItShouldBe,
-                CuraTestLogMessages.getAppointmentDataValidationErrorAssertLog(appointmentConfirmationPageName));
+                CuraTestLogMessages.getAppointmentDataValidationAssertLog(appointmentConfirmationPageName));
     }
 }

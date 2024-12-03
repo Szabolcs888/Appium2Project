@@ -16,11 +16,11 @@ public class FeedbackPopupTests extends SauceLabApkBaseTest {
     private static final String POPUP_TEXT_CORRECT_LOG = "The popup text is correct";
     private static final String POPUP_TEXT_INCORRECT_ERRORLOG = "The popup text is not correct";
 
-    private static final String CLOSE_MODAL_BUTTON_AVAILABLE_VALIDATION_ERROR_ASSERTLOG = "The popup text should be 'Thank you for submitting your review!', but it is not.";
+    private static final String CLOSE_MODAL_BUTTON_AVAILABLE_VALIDATION_ASSERTLOG = "The popup text should be 'Thank you for submitting your review!', but it is not.";
     private static final String CHECK_CLOSE_MODAL_BUTTON_AVAILABLE_LOG = "We check if the 'Close Modal' button is still available'";
     private static final String CLOSE_MODAL_BUTTON_NOT_AVAILABLE_LOG = "The 'Close Modal' button is not available";
     private static final String CLOSE_MODAL_BUTTON_AVAILABLE_ERRORLOG = "The 'Close Modal' button is available";
-    private static final String CLOSE_MODAL_BUTTON_NOT_AVAILABLE_VALIDATION_ERROR_ASSERTLOG = "The 'Close Modal' button should not be available, but it is.";
+    private static final String CLOSE_MODAL_BUTTON_NOT_AVAILABLE_VALIDATION_ASSERTLOG = "The 'Close Modal' button should not be available, but it is.";
 
     @Test(priority = 1)
     public void testFeedbackPopupOnProductsPageWithoutLoggedIn() {
@@ -36,7 +36,7 @@ public class FeedbackPopupTests extends SauceLabApkBaseTest {
         } else {
             LOG.error(POPUP_TEXT_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(feedbackPopupText, EXPECTED_POPUP_TEXT, CLOSE_MODAL_BUTTON_AVAILABLE_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertEquals(feedbackPopupText, EXPECTED_POPUP_TEXT, CLOSE_MODAL_BUTTON_AVAILABLE_VALIDATION_ASSERTLOG);
 
         productPage.pressCloseModalButtonOnFeedbackPopup();
 
@@ -47,7 +47,7 @@ public class FeedbackPopupTests extends SauceLabApkBaseTest {
         } else {
             LOG.error(CLOSE_MODAL_BUTTON_AVAILABLE_ERRORLOG);
         }
-        Assert.assertFalse(isCloseMButtonAvailable, CLOSE_MODAL_BUTTON_NOT_AVAILABLE_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertFalse(isCloseMButtonAvailable, CLOSE_MODAL_BUTTON_NOT_AVAILABLE_VALIDATION_ASSERTLOG);
     }
 
     @Test(priority = 2)
@@ -76,7 +76,7 @@ public class FeedbackPopupTests extends SauceLabApkBaseTest {
         } else {
             LOG.error(POPUP_TEXT_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(feedbackPopupText, EXPECTED_POPUP_TEXT, CLOSE_MODAL_BUTTON_AVAILABLE_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertEquals(feedbackPopupText, EXPECTED_POPUP_TEXT, CLOSE_MODAL_BUTTON_AVAILABLE_VALIDATION_ASSERTLOG);
         fleeceJacketPage.pressCloseModalButtonOnFeedbackPopup();
 
         LOG.info(CHECK_CLOSE_MODAL_BUTTON_AVAILABLE_LOG);
@@ -86,6 +86,6 @@ public class FeedbackPopupTests extends SauceLabApkBaseTest {
         } else {
             LOG.error(CLOSE_MODAL_BUTTON_AVAILABLE_ERRORLOG);
         }
-        Assert.assertFalse(isCloseMButtonAvailable, CLOSE_MODAL_BUTTON_NOT_AVAILABLE_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertFalse(isCloseMButtonAvailable, CLOSE_MODAL_BUTTON_NOT_AVAILABLE_VALIDATION_ASSERTLOG);
     }
 }

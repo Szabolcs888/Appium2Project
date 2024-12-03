@@ -43,7 +43,7 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), profilePageName);
         }
-        Assert.assertTrue(isProfilePageLoaded, CommonTestLogMessages.getPageLoadErrorAssertLog(profilePageName));
+        Assert.assertTrue(isProfilePageLoaded, CommonTestLogMessages.getPageLoadValidationAssertLog(profilePageName));
     }
 
     @Test(priority = 2,
@@ -75,6 +75,6 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
         } else {
             LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), historyPageName);
         }
-        Assert.assertTrue(isHistoryPageLoaded, CommonTestLogMessages.getPageLoadErrorAssertLog(historyPageName));
+        Assert.assertTrue(isHistoryPageLoaded, CommonTestLogMessages.getPageLoadValidationAssertLog(historyPageName));
     }
 }

@@ -74,7 +74,7 @@ public class CartEmptyingTests extends SauceLabApkBaseTest {
         } else {
             LOG.error(SLabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
         }
-        Assert.assertTrue(isDisplayedNoItemsText, SLabTestLogMessages.CART_EMPTY_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertTrue(isDisplayedNoItemsText, SLabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
 
         cartNoItemsPage.pressGoShoppingButton();
 
@@ -85,6 +85,6 @@ public class CartEmptyingTests extends SauceLabApkBaseTest {
         } else {
             LOG.error(SLabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
         }
-        Assert.assertFalse(isDisplayedProductCounter, SLabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ERROR_ASSERTLOG);
+        Assert.assertFalse(isDisplayedProductCounter, SLabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
     }
 }

@@ -12,7 +12,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
     private static final String LANGUAGE_CORRECT_LOG = "The displayed language is correct";
     private static final String LANGUAGE_INCORRECT_ERRORLOG = "The displayed language is not correct";
 
-    public static String getLanguageValidationErrorAssertLog(String language) {
+    public static String getLanguageValidationAssertLog(String language) {
         return String.format("The displayed language should be %s, but it is not.", language);
     }
 
@@ -30,7 +30,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
             LOG.info(LANGUAGE_CORRECT_LOG);
         else
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
-        Assert.assertEquals(voiceWarningEnglishText, expectedEnglishText, getLanguageValidationErrorAssertLog("English"));
+        Assert.assertEquals(voiceWarningEnglishText, expectedEnglishText, getLanguageValidationAssertLog("English"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseCestinaOption();
@@ -42,7 +42,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningCzechText, expectedCzechText, getLanguageValidationErrorAssertLog("Czech"));
+        Assert.assertEquals(voiceWarningCzechText, expectedCzechText, getLanguageValidationAssertLog("Czech"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseDanskOption();
@@ -54,7 +54,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningDanishText, expectedDanishText, getLanguageValidationErrorAssertLog("Danish"));
+        Assert.assertEquals(voiceWarningDanishText, expectedDanishText, getLanguageValidationAssertLog("Danish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseDeutschOption();
@@ -66,7 +66,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningGermanText, expectedGermanText, getLanguageValidationErrorAssertLog("German"));
+        Assert.assertEquals(voiceWarningGermanText, expectedGermanText, getLanguageValidationAssertLog("German"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseEspanolOption();
@@ -78,7 +78,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningSpanishText, expectedSpanishText, getLanguageValidationErrorAssertLog("Spanish"));
+        Assert.assertEquals(voiceWarningSpanishText, expectedSpanishText, getLanguageValidationAssertLog("Spanish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseFrancaisOption();
@@ -90,7 +90,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningFranchiseText, expectedFranchiseText, getLanguageValidationErrorAssertLog("French"));
+        Assert.assertEquals(voiceWarningFranchiseText, expectedFranchiseText, getLanguageValidationAssertLog("French"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseIndonesiaOption();
@@ -102,7 +102,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningIndonesiaText, expectedIndonesiaText, getLanguageValidationErrorAssertLog("Indonesian"));
+        Assert.assertEquals(voiceWarningIndonesiaText, expectedIndonesiaText, getLanguageValidationAssertLog("Indonesian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseItalianoOption();
@@ -114,7 +114,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningItalianText, expectedItalianText, getLanguageValidationErrorAssertLog("Italian"));
+        Assert.assertEquals(voiceWarningItalianText, expectedItalianText, getLanguageValidationAssertLog("Italian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseMagyarOption();
@@ -126,7 +126,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningHungarianText, expectedHungarianText, getLanguageValidationErrorAssertLog("Hungarian"));
+        Assert.assertEquals(voiceWarningHungarianText, expectedHungarianText, getLanguageValidationAssertLog("Hungarian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseNederlandsOption();
@@ -138,7 +138,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningDutchText, expectedDutchText, getLanguageValidationErrorAssertLog("Dutch"));
+        Assert.assertEquals(voiceWarningDutchText, expectedDutchText, getLanguageValidationAssertLog("Dutch"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.choosePolskiOption();
@@ -150,7 +150,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningPolishText, expectedPolishText, getLanguageValidationErrorAssertLog("Polish"));
+        Assert.assertEquals(voiceWarningPolishText, expectedPolishText, getLanguageValidationAssertLog("Polish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.choosePortuguesOption();
@@ -162,7 +162,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningPortugueseText, expectedPortugueseText, getLanguageValidationErrorAssertLog("Portuguese"));
+        Assert.assertEquals(voiceWarningPortugueseText, expectedPortugueseText, getLanguageValidationAssertLog("Portuguese"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseRomanaOption();
@@ -174,7 +174,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningRomanText, expectedRomanText, getLanguageValidationErrorAssertLog("Romanian"));
+        Assert.assertEquals(voiceWarningRomanText, expectedRomanText, getLanguageValidationAssertLog("Romanian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSlovencinaOption();
@@ -186,7 +186,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningSlovenianText, expectedSlovenianText, getLanguageValidationErrorAssertLog("Slovenian"));
+        Assert.assertEquals(voiceWarningSlovenianText, expectedSlovenianText, getLanguageValidationAssertLog("Slovenian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSvenskaOption();
@@ -198,7 +198,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningSwedishText, expectedSwedishText, getLanguageValidationErrorAssertLog("Swedish"));
+        Assert.assertEquals(voiceWarningSwedishText, expectedSwedishText, getLanguageValidationAssertLog("Swedish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSrpskiOption();
@@ -210,7 +210,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningSerbianText, expectedSerbianText, getLanguageValidationErrorAssertLog("Serbian"));
+        Assert.assertEquals(voiceWarningSerbianText, expectedSerbianText, getLanguageValidationAssertLog("Serbian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSuomiOption();
@@ -222,7 +222,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningFinnishText, expectedFinnishText, getLanguageValidationErrorAssertLog("Finnish"));
+        Assert.assertEquals(voiceWarningFinnishText, expectedFinnishText, getLanguageValidationAssertLog("Finnish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseTurkceOption();
@@ -234,7 +234,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningTurkishText, expectedTurkishText, getLanguageValidationErrorAssertLog("Turkish"));
+        Assert.assertEquals(voiceWarningTurkishText, expectedTurkishText, getLanguageValidationAssertLog("Turkish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseBulgarianOption();
@@ -246,7 +246,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningBulgarianText, expectedBulgarianText, getLanguageValidationErrorAssertLog("Bulgarian"));
+        Assert.assertEquals(voiceWarningBulgarianText, expectedBulgarianText, getLanguageValidationAssertLog("Bulgarian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseRussianOption();
@@ -258,7 +258,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningRussianText, expectedRussianText, getLanguageValidationErrorAssertLog("Russian"));
+        Assert.assertEquals(voiceWarningRussianText, expectedRussianText, getLanguageValidationAssertLog("Russian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseUkrainianOption();
@@ -270,7 +270,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningUkrainianText, expectedUkrainianText, getLanguageValidationErrorAssertLog("Ukrainian"));
+        Assert.assertEquals(voiceWarningUkrainianText, expectedUkrainianText, getLanguageValidationAssertLog("Ukrainian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseGreekOption();
@@ -282,7 +282,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningGreekText, expectedGreekText, getLanguageValidationErrorAssertLog("Greek"));
+        Assert.assertEquals(voiceWarningGreekText, expectedGreekText, getLanguageValidationAssertLog("Greek"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseVietnameseOption();
@@ -294,7 +294,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningVietnameseText, expectedVietnameseText, getLanguageValidationErrorAssertLog("Vietnamese"));
+        Assert.assertEquals(voiceWarningVietnameseText, expectedVietnameseText, getLanguageValidationAssertLog("Vietnamese"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseJapaneseOption();
@@ -306,7 +306,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningJapaneseText, expectedJapaneseText, getLanguageValidationErrorAssertLog("Japanese"));
+        Assert.assertEquals(voiceWarningJapaneseText, expectedJapaneseText, getLanguageValidationAssertLog("Japanese"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseChineseOption();
@@ -318,7 +318,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningChineseText, expectedChineseText, getLanguageValidationErrorAssertLog("Chinese"));
+        Assert.assertEquals(voiceWarningChineseText, expectedChineseText, getLanguageValidationAssertLog("Chinese"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseKoreanOption();
@@ -330,7 +330,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningKoreanText, expectedKoreanText, getLanguageValidationErrorAssertLog("Korean"));
+        Assert.assertEquals(voiceWarningKoreanText, expectedKoreanText, getLanguageValidationAssertLog("Korean"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseThaiOption();
@@ -342,7 +342,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningThaiText, expectedThaiText, getLanguageValidationErrorAssertLog("Thai"));
+        Assert.assertEquals(voiceWarningThaiText, expectedThaiText, getLanguageValidationAssertLog("Thai"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseArabicOption();
@@ -354,7 +354,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningArabicText, expectedArabicText, getLanguageValidationErrorAssertLog("Arabic"));
+        Assert.assertEquals(voiceWarningArabicText, expectedArabicText, getLanguageValidationAssertLog("Arabic"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseFarsiOption();
@@ -366,7 +366,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningFarsiText, expectedFarsiText, getLanguageValidationErrorAssertLog("Farsi"));
+        Assert.assertEquals(voiceWarningFarsiText, expectedFarsiText, getLanguageValidationAssertLog("Farsi"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseHebrewOption();
@@ -378,7 +378,7 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningHebrewText, expectedHebrewText, getLanguageValidationErrorAssertLog("Hebrew"));
+        Assert.assertEquals(voiceWarningHebrewText, expectedHebrewText, getLanguageValidationAssertLog("Hebrew"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseHindiOption();
@@ -390,6 +390,6 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         } else {
             LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
         }
-        Assert.assertEquals(voiceWarningHindiText, expectedHindiText, getLanguageValidationErrorAssertLog("Hindi"));
+        Assert.assertEquals(voiceWarningHindiText, expectedHindiText, getLanguageValidationAssertLog("Hindi"));
     }
 }

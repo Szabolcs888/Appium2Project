@@ -17,7 +17,7 @@ public class PopupAccessTests extends BatteryAlarmBaseTest {
         return "The '{}' popup window {}";
     }
 
-    private static String getPopupValidationErrorAssertLog(String popupTitle, String expectedPopupState) {
+    private static String getPopupValidationAssertLog(String popupTitle, String expectedPopupState) {
         return String.format("The '%s' popup window should %s, but it does not.", popupTitle, expectedPopupState);
     }
 
@@ -40,7 +40,7 @@ public class PopupAccessTests extends BatteryAlarmBaseTest {
             LOG.error(getPopupVisibilityLog(), popupTitle, popupVisibilityStatus);
         }
         String expectedPopupState = "appear";
-        Assert.assertTrue(isDisplayedExitWarningPopup, getPopupValidationErrorAssertLog(popupTitle, expectedPopupState));
+        Assert.assertTrue(isDisplayedExitWarningPopup, getPopupValidationAssertLog(popupTitle, expectedPopupState));
 
         mainPage.pressNoButtonOnWarningPopupWindow();
 
@@ -54,6 +54,6 @@ public class PopupAccessTests extends BatteryAlarmBaseTest {
             LOG.error(getPopupVisibilityLog(), popupTitle, popupVisibilityStatus);
         }
         expectedPopupState = "disappear";
-        Assert.assertFalse(isDisplayedExitWarningPopup, getPopupValidationErrorAssertLog(popupTitle, expectedPopupState));
+        Assert.assertFalse(isDisplayedExitWarningPopup, getPopupValidationAssertLog(popupTitle, expectedPopupState));
     }
 }

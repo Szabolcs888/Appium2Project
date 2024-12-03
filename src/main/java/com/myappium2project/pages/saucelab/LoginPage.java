@@ -23,7 +23,13 @@ public class LoginPage extends BasePage {
     private WebElement loginTitleText;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Provided credentials do not match any user in this service.\"]")
-    private WebElement errorMessage;
+    private WebElement incorrectDataErrorMessage;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Username is required\"]")
+    private WebElement emptyUsernameErrorMessage;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Password is required\"]")
+    private WebElement emptyPasswordErrorMessage;
 
     @AndroidFindBy(xpath = "//android.widget.Button[@resource-id=\"android:id/button1\"]")
     private WebElement okButtonOnSuccessfulLogoutAlert;
@@ -32,7 +38,6 @@ public class LoginPage extends BasePage {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
-
 
     public void fillUserNameInput(String userName, String usernameValidityStatus) {
         LOG.info("We fill the 'Username' input field with the {} username", usernameValidityStatus);
@@ -49,17 +54,49 @@ public class LoginPage extends BasePage {
         loginButton.click();
     }
 
-    public boolean isDisplayedErrorMessage() {
+    public boolean isDisplayedIncorrectDataErrorMessage() {
         try {
-            return errorMessage.isDisplayed();
+            return incorrectDataErrorMessage.isDisplayed();
         } catch (NoSuchElementException e) {
             return false;
         }
     }
 
-    public String getErrorMessageText() {
+    public String getIncorrectDataErrorMessageText() {
         try {
-            return errorMessage.getText();
+            return incorrectDataErrorMessage.getText();
+        } catch (NoSuchElementException e) {
+            return "The error message is not available";
+        }
+    }
+
+    public boolean isDisplayedEmptyUsernameErrorMessage() {
+        try {
+            return emptyUsernameErrorMessage.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public String getEmptyUsernameErrorMessageText() {
+        try {
+            return emptyUsernameErrorMessage.getText();
+        } catch (NoSuchElementException e) {
+            return "The error message is not available";
+        }
+    }
+
+    public boolean isDisplayedEmptyPasswordErrorMessage() {
+        try {
+            return emptyPasswordErrorMessage.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public String getEmptyPasswordErrorMessageText() {
+        try {
+            return emptyPasswordErrorMessage.getText();
         } catch (NoSuchElementException e) {
             return "The error message is not available";
         }
