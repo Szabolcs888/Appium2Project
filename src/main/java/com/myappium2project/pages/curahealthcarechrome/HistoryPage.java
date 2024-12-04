@@ -1,4 +1,4 @@
-package com.myappium2project.pages.curahealthcarewithchrome;
+package com.myappium2project.pages.curahealthcarechrome;
 
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HistoryPage extends BasePage {
-
     @FindBy(xpath = "//h2[text()='History']")
     private WebElement historyTitleText;
 
@@ -56,4 +55,3 @@ public class HistoryPage extends BasePage {
         return appointmentDataAsTheyAreOnTheHistoryPage;
     }
 }
-

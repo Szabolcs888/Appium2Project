@@ -1,5 +1,6 @@
 package com.myappium2project.pages.saucelab.productspages;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -8,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class BoltTShirtPage extends BasePage {
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Add To Cart\")")
     private WebElement addToCartButton;
 
@@ -18,7 +18,7 @@ public class BoltTShirtPage extends BasePage {
     }
 
     public void pressAddToCartButton() {
-        LOG.info("We press the 'Add To Cart' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Add To Cart");
         addToCartButton.click();
     }
 }

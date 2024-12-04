@@ -1,5 +1,6 @@
 package com.myappium2project.pages.saucelab;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -32,7 +33,7 @@ public class CartNoItemsPage extends BasePage {
 
     public void pressGoShoppingButton() {
         wait.until(ExpectedConditions.elementToBeClickable(goShoppingButton));
-        LOG.info("We press the 'Go Shopping' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Go Shopping");
         goShoppingButton.click();
     }
 

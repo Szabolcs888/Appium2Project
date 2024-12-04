@@ -1,5 +1,6 @@
-package com.myappium2project.pages.curahealthcarewithchrome;
+package com.myappium2project.pages.curahealthcarechrome;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -34,30 +35,25 @@ public class LoginPage extends BasePage {
     }
 
     public void fillUserNameInput(String userName, String usernameValidityStatus) {
-        LOG.info("We fill the 'Username' input field with the {} username", usernameValidityStatus);
+        LOG.info(CommonPageLogMessages.FILL_USERNAME_INPUT_LOG, usernameValidityStatus);
         usernameInput.sendKeys(userName);
     }
 
     public void fillPasswordInput(String password, String passwordValidityStatus) {
-        LOG.info("We fill the 'Password' input field with the {} password", passwordValidityStatus);
+        LOG.info(CommonPageLogMessages.FILL_PASSWORD_INPUT_LOG, passwordValidityStatus);
         passwordInput.sendKeys(password);
     }
 
     public void pressLoginButton() {
-        LOG.info("We press the 'Login' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Login");
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", loginButton);
-    }
-
-    public void pressLoginText() {
-        LOG.info("We press the 'Login' text");
-        loginText.click();
     }
 
     public String getErrorMessageText() {
         try {
             return errorMessage.getText();
         } catch (NoSuchElementException e) {
-            return "The error message is not available";
+            return CommonPageLogMessages.ERROR_MESSAGE_IS_NOT_AVAILABLE_LOG;
         }
     }
 }

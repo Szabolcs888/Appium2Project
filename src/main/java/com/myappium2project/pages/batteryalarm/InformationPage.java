@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class InformationPage extends BasePage {
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"In order to avoid issue, find the power saving option on your phone," +
             " open it and add Battery app to protected apps or disable optimization for Battery app." +
             " It is usually under Phone battery settings.\n" +

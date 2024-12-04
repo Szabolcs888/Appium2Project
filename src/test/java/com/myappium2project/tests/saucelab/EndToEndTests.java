@@ -1,7 +1,7 @@
 package com.myappium2project.tests.saucelab;
 
 import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
-import com.myappium2project.logging.testlogmessages.SLabTestLogMessages;
+import com.myappium2project.logging.testlogmessages.SlabTestLogMessages;
 import com.myappium2project.pages.saucelab.*;
 import com.myappium2project.pages.saucelab.productspages.*;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
@@ -134,16 +134,16 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         cartPage.pressProceedToCheckoutButton();
 
         String checkoutPageName = "Checkout";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), checkoutPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, checkoutPageName);
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         String checkoutPageTitleText = checkoutPage.getCheckoutPageTitleText();
         if (checkoutPageTitleText.equals(checkoutPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), checkoutPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, checkoutPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), checkoutPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, checkoutPageName);
         }
         Assert.assertEquals(checkoutPageTitleText, checkoutPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(checkoutPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(checkoutPageName));
 
         checkoutPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC1);
         checkoutPage.fillAddressLine1Input(TestDataSaucelab.ADDRESS_LINE1_ACC1);
@@ -194,38 +194,38 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         checkoutOrderReviewPage.pressPlaceOrderButton();
 
         String checkoutCompletePageName = "Checkout Complete";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), checkoutCompletePageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, checkoutCompletePageName);
         CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
         String checkoutCompletePageTitleText = checkoutCompletePage.getCheckoutCompletePageTitleText();
         if (checkoutCompletePageTitleText.equals(checkoutCompletePageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), checkoutCompletePageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, checkoutCompletePageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), checkoutCompletePageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, checkoutCompletePageName);
         }
         Assert.assertEquals(checkoutCompletePageTitleText, checkoutCompletePageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(checkoutCompletePageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(checkoutCompletePageName));
 
         checkoutCompletePage.pressContinueShoppingButton();
 
-        LOG.info(SLabTestLogMessages.CHECK_CART_EMPTY_LOG);
+        LOG.info(SlabTestLogMessages.CHECK_CART_EMPTY_LOG);
         CartNoItemsPage cartNoItemsPage = new CartNoItemsPage(driver);
         productsPage.pressCartBadgeButton();
         boolean isDisplayedNoItemsText = cartNoItemsPage.isDisplayedNoItemsTextOnCartNoItemsPage();
         if (isDisplayedNoItemsText) {
-            LOG.info(SLabTestLogMessages.CART_EMPTY_LOG);
+            LOG.info(SlabTestLogMessages.CART_EMPTY_LOG);
         } else {
-            LOG.error(SLabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
         }
-        Assert.assertTrue(isDisplayedNoItemsText, SLabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
+        Assert.assertTrue(isDisplayedNoItemsText, SlabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
 
-        LOG.info(SLabTestLogMessages.CHECK_CART_COUNTER_AVAILABLE_LOG);
+        LOG.info(SlabTestLogMessages.CHECK_CART_COUNTER_AVAILABLE_LOG);
         boolean isDisplayedProductCounter = productsPage.isDisplayedProductCounterOnCartBadgeButton();
         if (!isDisplayedProductCounter) {
-            LOG.info(SLabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_LOG);
+            LOG.info(SlabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_LOG);
         } else {
-            LOG.error(SLabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
         }
-        Assert.assertFalse(isDisplayedProductCounter, SLabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
+        Assert.assertFalse(isDisplayedProductCounter, SlabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
 
         AppiumActions.navigateBack(driver);
 
@@ -235,15 +235,15 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         loginPage.pressOkButtonOnSuccessfulLoggedOutAlert();
 
         String loginPageName = "Login";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), loginPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, loginPageName);
         String loginPageTitleText = loginPage.getLoginPageTitleText();
         if (loginPageTitleText.equals(loginPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), loginPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, loginPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), loginPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, loginPageName);
         }
         Assert.assertEquals(loginPageTitleText, loginPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(loginPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(loginPageName));
     }
 
     @Test(priority = 2,
@@ -331,16 +331,16 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         loginPage.pressLoginButton();
 
         String checkoutPageName = "Checkout";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), checkoutPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, checkoutPageName);
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         String checkoutPageTitleText = checkoutPage.getCheckoutPageTitleText();
         if (checkoutPageTitleText.equals(checkoutPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), checkoutPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, checkoutPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), checkoutPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, checkoutPageName);
         }
         Assert.assertEquals(checkoutPageTitleText, checkoutPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(checkoutPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(checkoutPageName));
 
         checkoutPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC2);
         checkoutPage.fillAddressLine1Input(TestDataSaucelab.ADDRESS_LINE1_ACC2);
@@ -390,38 +390,38 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         checkoutOrderReviewPage.pressPlaceOrderButton();
 
         String checkoutCompletePageName = "Checkout Complete";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), checkoutCompletePageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, checkoutCompletePageName);
         CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
         String checkoutCompletePageTitleText = checkoutCompletePage.getCheckoutCompletePageTitleText();
         if (checkoutCompletePageTitleText.equals(checkoutCompletePageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), checkoutCompletePageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, checkoutCompletePageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), checkoutCompletePageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, checkoutCompletePageName);
         }
         Assert.assertEquals(checkoutCompletePageTitleText, checkoutCompletePageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(checkoutCompletePageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(checkoutCompletePageName));
 
         checkoutCompletePage.pressContinueShoppingButton();
 
-        LOG.info(SLabTestLogMessages.CHECK_CART_EMPTY_LOG);
+        LOG.info(SlabTestLogMessages.CHECK_CART_EMPTY_LOG);
         CartNoItemsPage cartNoItemsPage = new CartNoItemsPage(driver);
         productsPage.pressCartBadgeButton();
         boolean isDisplayedNoItemsText = cartNoItemsPage.isDisplayedNoItemsTextOnCartNoItemsPage();
         if (isDisplayedNoItemsText) {
-            LOG.info(SLabTestLogMessages.CART_EMPTY_LOG);
+            LOG.info(SlabTestLogMessages.CART_EMPTY_LOG);
         } else {
-            LOG.error(SLabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
         }
-        Assert.assertTrue(isDisplayedNoItemsText, SLabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
+        Assert.assertTrue(isDisplayedNoItemsText, SlabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
 
-        LOG.info(SLabTestLogMessages.CHECK_CART_COUNTER_AVAILABLE_LOG);
+        LOG.info(SlabTestLogMessages.CHECK_CART_COUNTER_AVAILABLE_LOG);
         boolean isDisplayedProductCounter = productsPage.isDisplayedProductCounterOnCartBadgeButton();
         if (!isDisplayedProductCounter) {
-            LOG.info(SLabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_LOG);
+            LOG.info(SlabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_LOG);
         } else {
-            LOG.error(SLabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
         }
-        Assert.assertFalse(isDisplayedProductCounter, SLabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
+        Assert.assertFalse(isDisplayedProductCounter, SlabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
 
         AppiumActions.navigateBack(driver);
 
@@ -432,14 +432,14 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         loginPage.pressOkButtonOnSuccessfulLoggedOutAlert();
 
         String loginPageName = "Login";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), loginPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, loginPageName);
         String loginPageTitleText = loginPage.getLoginPageTitleText();
         if (loginPageTitleText.equals(loginPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), loginPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, loginPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), loginPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, loginPageName);
         }
         Assert.assertEquals(loginPageTitleText, loginPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(loginPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(loginPageName));
     }
 }

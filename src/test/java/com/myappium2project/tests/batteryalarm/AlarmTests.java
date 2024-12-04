@@ -9,18 +9,12 @@ import com.myappium2project.pages.batteryalarm.MainPage;
 import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
 
 public class AlarmTests extends BatteryAlarmBaseTest {
+    private static final String BATTERY_CHARGE_AND_ALARM_LOG = "We ask for the battery charge and '{}' values";
     private static final String ALARM_VALUE_CHANGE_LOG = "To trigger the alarm, we need to {} the '{}' value by {}";
+    private static final String ALARM_FUNCTION_CHECK_LOG = "We check if the '{}' function is working (if the countdown has started)";
     private static final String ALARM_WORKS_LOG = "The alarm works";
     private static final String ALARM_DOES_NOT_WORK_ERRORLOG = "The alarm does not work";
     private static final String COUNTDOWN_VALIDATION_ASSERTLOG = "The countdown should be active, but it is not.";
-
-    private static String getBatteryChargeAndAlarmLog() {
-        return "We ask for the battery charge and '{}' values";
-    }
-
-    private static String getAlarmFunctionCheckLog() {
-        return "We check if the '{}' function is working (if the countdown has started)";
-    }
 
     @Test(description = "The prerequisite for the test is that the phone is charging.")
     public void testMaxAlarm() {
@@ -29,7 +23,7 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         LanguageUtils.ensureEnglishLanguageSelected(driver, mainPage, languagesDropdownMenu);
 
         String maxAlarmText = "Max Alarm";
-        LOG.info(getBatteryChargeAndAlarmLog(), maxAlarmText);
+        LOG.info(BATTERY_CHARGE_AND_ALARM_LOG, maxAlarmText);
         int currentBatteryChargeValue = mainPage.getCurrentBatteryChargeValue();
         int currentMaxAlarmValue = mainPage.getCurrentMaxAlarmValue();
         if (currentBatteryChargeValue < currentMaxAlarmValue) {
@@ -39,7 +33,7 @@ public class AlarmTests extends BatteryAlarmBaseTest {
             mainPage.pressMaxAlarmMinusButton(byWhichToReduceMaxAlarmValue);
         }
 
-        LOG.info(getAlarmFunctionCheckLog(), maxAlarmText);
+        LOG.info(ALARM_FUNCTION_CHECK_LOG, maxAlarmText);
         boolean isCountdownActive = mainPage.isTheCountdownGoing();
         if (isCountdownActive) {
             LOG.info(ALARM_WORKS_LOG);
@@ -56,7 +50,7 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         LanguageUtils.ensureEnglishLanguageSelected(driver, mainPage, languagesDropdownMenu);
 
         String minAlarmText = "Min Alarm";
-        LOG.info(getBatteryChargeAndAlarmLog(), minAlarmText);
+        LOG.info(BATTERY_CHARGE_AND_ALARM_LOG, minAlarmText);
         int currentBatteryChargeValue = mainPage.getCurrentBatteryChargeValue();
         int currentMinAlarmValue = mainPage.getCurrentMinAlarmValue();
         if (currentBatteryChargeValue >= currentMinAlarmValue) {
@@ -66,7 +60,7 @@ public class AlarmTests extends BatteryAlarmBaseTest {
             mainPage.pressMinAlarmPlusButton(byWhichToIncreaseMinAlarmValue);
         }
 
-        LOG.info(getAlarmFunctionCheckLog(), minAlarmText);
+        LOG.info(ALARM_FUNCTION_CHECK_LOG, minAlarmText);
         mainPage.pressPutItOnTheTrayButton();                 // These two steps are necessary because if we stay in the
         PhoneDesktop phoneDesktop = new PhoneDesktop(driver); // application, the alarm will not go off. That's why we have
         phoneDesktop.pressBatteryAlarmAppIcon();              // to put it on the tray and then go back to the application.

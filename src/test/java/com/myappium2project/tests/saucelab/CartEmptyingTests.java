@@ -1,6 +1,6 @@
 package com.myappium2project.tests.saucelab;
 
-import com.myappium2project.logging.testlogmessages.SLabTestLogMessages;
+import com.myappium2project.logging.testlogmessages.SlabTestLogMessages;
 import com.myappium2project.pages.saucelab.*;
 import com.myappium2project.pages.saucelab.productspages.*;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
@@ -66,25 +66,25 @@ public class CartEmptyingTests extends SauceLabApkBaseTest {
         CartPage cartPage = new CartPage(driver);
         cartPage.pressRemoveItemButtons();
 
-        LOG.info(SLabTestLogMessages.CHECK_CART_EMPTY_LOG);
+        LOG.info(SlabTestLogMessages.CHECK_CART_EMPTY_LOG);
         CartNoItemsPage cartNoItemsPage = new CartNoItemsPage(driver, wait);
         boolean isDisplayedNoItemsText = cartNoItemsPage.isDisplayedNoItemsTextOnCartNoItemsPage();
         if (isDisplayedNoItemsText) {
-            LOG.info(SLabTestLogMessages.CART_EMPTY_LOG);
+            LOG.info(SlabTestLogMessages.CART_EMPTY_LOG);
         } else {
-            LOG.error(SLabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
         }
-        Assert.assertTrue(isDisplayedNoItemsText, SLabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
+        Assert.assertTrue(isDisplayedNoItemsText, SlabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
 
         cartNoItemsPage.pressGoShoppingButton();
 
-        LOG.info(SLabTestLogMessages.CHECK_CART_COUNTER_AVAILABLE_LOG);
+        LOG.info(SlabTestLogMessages.CHECK_CART_COUNTER_AVAILABLE_LOG);
         boolean isDisplayedProductCounter = productPage.isDisplayedProductCounterOnCartBadgeButton();
         if (!isDisplayedProductCounter) {
-            LOG.info(SLabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_LOG);
+            LOG.info(SlabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_LOG);
         } else {
-            LOG.error(SLabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
         }
-        Assert.assertFalse(isDisplayedProductCounter, SLabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
+        Assert.assertFalse(isDisplayedProductCounter, SlabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
     }
 }

@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class PhoneDesktop extends BasePage {
-
     @AndroidFindBy(uiAutomator = "new UiSelector().description(\"Battery Alarm\")")
     private WebElement batteryAlarmAppIcon;
 

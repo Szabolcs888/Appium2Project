@@ -1,5 +1,7 @@
 package com.myappium2project.pages.saucelab.productspages;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
+import com.myappium2project.logging.pagelogmessages.SlabPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -40,23 +42,23 @@ public class FleeceJacketPage extends BasePage {
     }
 
     public void pressAddToCartButton() {
-        LOG.info("We press the 'Add To Cart' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Add To Cart");
         addToCartButton.click();
     }
 
     public void pressCounterPlusButton() {
-        LOG.info("We press the counter plus button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "counter plus");
         counterPlusButton.click();
     }
 
     public void pressFifthStarButton() {
-        LOG.info("We press the fifth star button under the 'Fleece Jacket's picture");
+        LOG.info(SlabPageLogMessages.PRESS_BUTTON_UNDER_LOG, "fifth star", "Fleece Jacket");
         fifthStarButton.click();
     }
 
     public void pressCloseModalButtonOnFeedbackPopup() {
         wait.until(ExpectedConditions.elementToBeClickable(closeModalButtonOnFeedbackPopup));
-        LOG.info("We press the 'Close Modal' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Close Modal");
         closeModalButtonOnFeedbackPopup.click();
     }
 
@@ -64,7 +66,7 @@ public class FleeceJacketPage extends BasePage {
         try {
             return feedbackPopupText.getText();
         } catch (NoSuchElementException e) {
-            return "The feedback popup text is not available";
+            return CommonPageLogMessages.getTextIsNotAvailableLog("feedback popup");
         }
     }
 

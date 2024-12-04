@@ -1,4 +1,4 @@
-package com.myappium2project.tests.curahealthcarewithchrome;
+package com.myappium2project.tests.curahealthcarechrome;
 
 import com.myappium2project.logging.testlogmessages.CuraTestLogMessages;
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
@@ -6,10 +6,10 @@ import com.myappium2project.testsdata.CommonTestData;
 import com.myappium2project.testsdata.TestDataCura;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.myappium2project.pages.curahealthcarewithchrome.AppointmentConfirmationPage;
-import com.myappium2project.pages.curahealthcarewithchrome.HamburgerMenu;
-import com.myappium2project.pages.curahealthcarewithchrome.LoginPage;
-import com.myappium2project.pages.curahealthcarewithchrome.MakeAppointmentPage;
+import com.myappium2project.pages.curahealthcarechrome.AppointmentConfirmationPage;
+import com.myappium2project.pages.curahealthcarechrome.HamburgerMenu;
+import com.myappium2project.pages.curahealthcarechrome.LoginPage;
+import com.myappium2project.pages.curahealthcarechrome.MakeAppointmentPage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +27,6 @@ public class AppointmentConfirmationTests extends ChromeBrowserBaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
-        loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
@@ -51,9 +50,9 @@ public class AppointmentConfirmationTests extends ChromeBrowserBaseTest {
                 appointmentDataOnAppointmentConfirmationPage);
         System.out.println(CuraTestLogMessages.ORIGINAL_APPOINTMENT_DATA_CONSOLELOG + appointmentDataAsItShouldBe);
         if (appointmentDataOnAppointmentConfirmationPage.equals(appointmentDataAsItShouldBe)) {
-            LOG.info(CuraTestLogMessages.getCorrectAppointmentDataLog(), appointmentConfirmationPageName);
+            LOG.info(CuraTestLogMessages.CORRECT_APPOINTMENT_DATA_LOG, appointmentConfirmationPageName);
         } else {
-            LOG.error(CuraTestLogMessages.getIncorrectAppointmentDataErrorLog(), appointmentConfirmationPageName);
+            LOG.error(CuraTestLogMessages.INCORRECT_APPOINTMENT_DATA_ERRORLOG, appointmentConfirmationPageName);
         }
         Assert.assertEquals(appointmentDataOnAppointmentConfirmationPage, appointmentDataAsItShouldBe,
                 CuraTestLogMessages.getAppointmentDataValidationAssertLog(appointmentConfirmationPageName));

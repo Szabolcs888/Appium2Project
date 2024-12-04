@@ -1,5 +1,6 @@
 package com.myappium2project.pages.saucelab;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import com.myappium2project.utils.CommonUtils;
 import io.appium.java_client.android.AndroidDriver;
@@ -9,7 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutPaymentPage extends BasePage {
-
     @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc=\"Full Name* input field\"]")
     private WebElement fullNameInput;
 
@@ -32,27 +32,27 @@ public class CheckoutPaymentPage extends BasePage {
 
     public void fillFullNameInput(String fullName) {
         CommonUtils.threadSleep(600);
-        LOG.info("We fill the 'Full Name' input field");
+        LOG.info(CommonPageLogMessages.FILL_INPUT_LOG, "Full Name", fullName);
         fullNameInput.sendKeys(fullName);
     }
 
     public void fillCardNumberInput(String cardNumber) {
-        LOG.info("We fill the 'Card Number' input field");
+        LOG.info(CommonPageLogMessages.FILL_INPUT_LOG, "Card Number", cardNumber);
         cardNumberInput.sendKeys(cardNumber);
     }
 
     public void fillExpirationDateInput(String expirationDate) {
-        LOG.info("We fill the 'Expiration Date' input field");
+        LOG.info(CommonPageLogMessages.FILL_INPUT_LOG, "Expiration Date", expirationDate);
         expirationDateInput.sendKeys(expirationDate);
     }
 
     public void fillSecurityCodeInput(String securityCode) {
-        LOG.info("We fill the 'Security Code' input field");
+        LOG.info(CommonPageLogMessages.FILL_INPUT_LOG, "Security Code", securityCode);
         securityCodeInput.sendKeys(securityCode);
     }
 
     public void pressReviewOrderButton() {
-        LOG.info("We press the 'Review Order' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Review Order");
         reviewOrderButton.click();
     }
 }

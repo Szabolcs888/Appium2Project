@@ -1,7 +1,7 @@
 package com.myappium2project.tests.saucelab;
 
 import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
-import com.myappium2project.logging.testlogmessages.SLabTestLogMessages;
+import com.myappium2project.logging.testlogmessages.SlabTestLogMessages;
 import com.myappium2project.pages.saucelab.menupages.*;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
 import org.testng.Assert;
@@ -18,16 +18,16 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressWebviewButton();
 
         String webviewPageName = "Webview";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), webviewPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, webviewPageName);
         WebviewPage webviewPage = new WebviewPage(driver);
         String webviewPageTitleText = webviewPage.getWebviewPageTitleText();
         if (webviewPageTitleText.equals(webviewPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), webviewPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, webviewPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), webviewPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, webviewPageName);
         }
         Assert.assertEquals(webviewPageTitleText, webviewPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(webviewPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(webviewPageName));
     }
 
     @Test(priority = 2,
@@ -38,16 +38,16 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressQrCodeScannerButton();
 
         String qrCodeScannerPageName = "QR Code Scanner";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), qrCodeScannerPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, qrCodeScannerPageName);
         QrCodeScannerPage qrCodeScannerPage = new QrCodeScannerPage(driver);
         String qrCodeScannerPageTitleText = qrCodeScannerPage.getQrCodeScannerPageTitleText();
         if (qrCodeScannerPageTitleText.equals(qrCodeScannerPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), qrCodeScannerPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, qrCodeScannerPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), qrCodeScannerPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, qrCodeScannerPageName);
         }
         Assert.assertEquals(qrCodeScannerPageTitleText, qrCodeScannerPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(qrCodeScannerPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(qrCodeScannerPageName));
     }
 
     @Test(priority = 3,
@@ -58,16 +58,16 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressGeoLocationButton();
 
         String geoLocationPageName = "Geo Location";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), geoLocationPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, geoLocationPageName);
         GeoLocationPage geoLocationPage = new GeoLocationPage(driver);
         String geoLocationPageTitleText = geoLocationPage.getGeoLocationPageTitleText();
         if (geoLocationPageTitleText.equals(geoLocationPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), geoLocationPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, geoLocationPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), geoLocationPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, geoLocationPageName);
         }
         Assert.assertEquals(geoLocationPageTitleText, geoLocationPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(geoLocationPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(geoLocationPageName));
     }
 
     @Test(priority = 4,
@@ -78,16 +78,16 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressDrawingButton();
 
         String drawingPageName = "Drawing";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), drawingPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, drawingPageName);
         DrawingPage drawingPage = new DrawingPage(driver);
         String drawingPageTitleText = drawingPage.getDrawingPageTitleText();
         if (drawingPageTitleText.equals(drawingPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), drawingPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, drawingPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), drawingPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, drawingPageName);
         }
         Assert.assertEquals(drawingPageTitleText, drawingPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(drawingPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(drawingPageName));
     }
 
     @Test(priority = 5,
@@ -98,16 +98,16 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressAboutButton();
 
         String aboutPageName = "About";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), aboutPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, aboutPageName);
         AboutPage aboutPage = new AboutPage(driver);
         String aboutPageTitleText = aboutPage.getAboutPageTitleText();
         if (aboutPageTitleText.equals(aboutPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), aboutPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, aboutPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), aboutPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, aboutPageName);
         }
         Assert.assertEquals(aboutPageTitleText, aboutPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(aboutPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(aboutPageName));
     }
 
     @Test(priority = 6,
@@ -118,16 +118,16 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressFingerPrintButton();
 
         String fingerPrintPageName = "Finger Print";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), fingerPrintPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, fingerPrintPageName);
         FingerPrintPage fingerPrintPage = new FingerPrintPage(driver);
         String fingerPrintPageTitleText = fingerPrintPage.getFingerPrintPageTitleText();
         if (fingerPrintPageTitleText.equals(fingerPrintPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), fingerPrintPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, fingerPrintPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), fingerPrintPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, fingerPrintPageName);
         }
         Assert.assertEquals(fingerPrintPageTitleText, fingerPrintPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(fingerPrintPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(fingerPrintPageName));
     }
 
     @Test(priority = 7,
@@ -138,16 +138,16 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressApiCallsButton();
 
         String apiCallsPageName = "API calls";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), apiCallsPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, apiCallsPageName);
         ApiCallsPage apiCallsPage = new ApiCallsPage(driver);
         String apiCallsPageTitleText = apiCallsPage.getApiCallsPageTitleText();
         if (apiCallsPageTitleText.equals(apiCallsPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), apiCallsPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, apiCallsPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), apiCallsPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, apiCallsPageName);
         }
         Assert.assertEquals(apiCallsPageTitleText, apiCallsPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(apiCallsPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(apiCallsPageName));
     }
 
     @Test(priority = 8,
@@ -158,16 +158,16 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressSauceBotVideoButton();
 
         String sauceBotVideoPageName = "Sauce Bot Video";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), sauceBotVideoPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, sauceBotVideoPageName);
         SauceBotVideoPage sauceBotVideoPage = new SauceBotVideoPage(driver);
         String sauceBotVideoPageTitleText = sauceBotVideoPage.getSauceBotVideoPageTitleText();
         String expectedSauceBotPageTitleText = "SauceBot - The Beginning";
         if (sauceBotVideoPageTitleText.equals(expectedSauceBotPageTitleText)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), sauceBotVideoPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, sauceBotVideoPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), sauceBotVideoPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, sauceBotVideoPageName);
         }
         Assert.assertEquals(sauceBotVideoPageTitleText, expectedSauceBotPageTitleText,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(expectedSauceBotPageTitleText));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(expectedSauceBotPageTitleText));
     }
 }

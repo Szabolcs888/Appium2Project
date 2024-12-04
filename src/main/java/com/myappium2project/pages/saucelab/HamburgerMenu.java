@@ -1,5 +1,6 @@
 package com.myappium2project.pages.saucelab;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -61,62 +62,62 @@ public class HamburgerMenu extends BasePage {
 
     public void pressHamburgerMenuButton() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenuButton));
-        LOG.info("We press the 'Hamburger menu' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Hamburger menu");
         hamburgerMenuButton.click();
     }
 
     public void pressLogInButton() {
-        LOG.info("We press the 'Log In' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Log In");
         logInButton.click();
     }
 
     public void pressLogOutButton() {
-        LOG.info("We press the 'Log Out' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Log Out");
         logOutButton.click();
     }
 
     public void pressLogOutButtonOnLogOutAlert() {
-        LOG.info("We press the 'Log Out' button On the 'Log Out' Alert");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_ON_LOG, "Log Out", "'Log Out' alert");
         logOutButtonOnLogOutAlert.click();
     }
 
     public void pressWebviewButton() {
-        LOG.info("We press the 'Webview' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Webview");
         webviewButton.click();
     }
 
     public void pressQrCodeScannerButton() {
-        LOG.info("We press the 'QR Code Scanner' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "QR Code Scanner");
         qrCodeScannerButton.click();
     }
 
     public void pressGeoLocationButton() {
-        LOG.info("We press the 'Geo Location' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Geo Location");
         geoLocationButton.click();
     }
 
     public void pressDrawingButton() {
-        LOG.info("We press the 'Drawing' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Drawing");
         drawingButton.click();
     }
 
     public void pressFingerPrintButton() {
-        LOG.info("We press the 'Finger Print' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Finger Print");
         fingerPrintButton.click();
     }
 
     public void pressAboutButton() {
-        LOG.info("We press the 'About' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "About");
         aboutButton.click();
     }
 
     public void pressApiCallsButton() {
-        LOG.info("We press the 'Api Calls' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Api Calls");
         apiCallsButton.click();
     }
 
     public void pressSauceBotVideoButton() {
-        LOG.info("We press the 'Sauce Bot Video' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Sauce Bot Video");
         sauceBotVideoButton.click();
     }
 }

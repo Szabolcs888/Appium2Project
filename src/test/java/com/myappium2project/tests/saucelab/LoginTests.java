@@ -1,7 +1,7 @@
 package com.myappium2project.tests.saucelab;
 
 import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
-import com.myappium2project.logging.testlogmessages.SLabTestLogMessages;
+import com.myappium2project.logging.testlogmessages.SlabTestLogMessages;
 import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
 import com.myappium2project.testsdata.CommonTestData;
 import com.myappium2project.testsdata.TestDataSaucelab;
@@ -30,16 +30,16 @@ public class LoginTests extends SauceLabApkBaseTest {
         loginPage.pressLoginButton();
 
         String productsPageName = "Products";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), productsPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, productsPageName);
         ProductsPage productPage = new ProductsPage(driver);
         String productPageTitleText = productPage.getProductPageTitleText();
         if (productPageTitleText.equals(productsPageName)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), productsPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, productsPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), productsPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, productsPageName);
         }
         Assert.assertEquals(productPageTitleText, productsPageName,
-                SLabTestLogMessages.getPageTitleValidationAssertLog(productsPageName));
+                SlabTestLogMessages.getPageTitleValidationAssertLog(productsPageName));
     }
 
     @Test(priority = 1,
@@ -56,7 +56,7 @@ public class LoginTests extends SauceLabApkBaseTest {
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getIncorrectDataErrorMessageText();
-        LOG.info(CommonTestLogMessages.getExpectedErrorMessageLog(), errorMessageText);
+        LOG.info(CommonTestLogMessages.EXPECTED_ERROR_MESSAGE_LOG, errorMessageText);
         if (loginPage.isDisplayedIncorrectDataErrorMessage() && errorMessageText.equals(EXPECTED_ERROR_MESSAGE_INCORRECT_DATA)) {
             LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         } else {
@@ -81,7 +81,7 @@ public class LoginTests extends SauceLabApkBaseTest {
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getIncorrectDataErrorMessageText();
-        LOG.info(CommonTestLogMessages.getExpectedErrorMessageLog(), errorMessageText);
+        LOG.info(CommonTestLogMessages.EXPECTED_ERROR_MESSAGE_LOG, errorMessageText);
         if (loginPage.isDisplayedIncorrectDataErrorMessage() && errorMessageText.equals(EXPECTED_ERROR_MESSAGE_INCORRECT_DATA))
             LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         else
@@ -105,7 +105,7 @@ public class LoginTests extends SauceLabApkBaseTest {
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getEmptyUsernameErrorMessageText();
-        LOG.info(CommonTestLogMessages.getExpectedErrorMessageLog(), errorMessageText);
+        LOG.info(CommonTestLogMessages.EXPECTED_ERROR_MESSAGE_LOG, errorMessageText);
         if (loginPage.isDisplayedEmptyUsernameErrorMessage() && errorMessageText.equals(EXPECTED_ERROR_MESSAGE_EMPTY_USERNAME))
             LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         else
@@ -129,7 +129,7 @@ public class LoginTests extends SauceLabApkBaseTest {
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getEmptyPasswordErrorMessageText();
-        LOG.info(CommonTestLogMessages.getExpectedErrorMessageLog(), errorMessageText);
+        LOG.info(CommonTestLogMessages.EXPECTED_ERROR_MESSAGE_LOG, errorMessageText);
         if (loginPage.isDisplayedEmptyPasswordErrorMessage() && errorMessageText.equals(EXPECTED_ERROR_MESSAGE_EMPTY_PASSWORD))
             LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         else

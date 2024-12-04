@@ -1,4 +1,4 @@
-package com.myappium2project.pages.curahealthcarewithchrome;
+package com.myappium2project.pages.curahealthcarechrome;
 
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppointmentConfirmationPage extends BasePage {
-
     @FindBy(xpath = "//*[text()='Appointment Confirmation']")
     private WebElement appointmentConfirmationPageTitleText;
 

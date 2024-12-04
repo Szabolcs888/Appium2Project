@@ -1,5 +1,6 @@
 package com.myappium2project.pages.saucelab;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import com.myappium2project.utils.ListUtils;
 import com.myappium2project.utils.ScrollUtils;
@@ -14,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CartPage extends BasePage {
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Proceed To Checkout\")")
     private WebElement proceedToCheckoutButton;
 
@@ -33,7 +33,7 @@ public class CartPage extends BasePage {
     }
 
     public void pressProceedToCheckoutButton() {
-        LOG.info("We press the Proceed To Checkout button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Proceed To Checkout");
         proceedToCheckoutButton.click();
     }
 

@@ -1,5 +1,6 @@
-package com.myappium2project.pages.curahealthcarewithchrome;
+package com.myappium2project.pages.curahealthcarechrome;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -9,7 +10,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ProfilePage extends BasePage {
-
     @FindBy(xpath = "//p[text()='Under construction.']")
     private WebElement underConstructionsText;
 
@@ -22,7 +22,7 @@ public class ProfilePage extends BasePage {
     }
 
     public void pressLogoutButton() {
-        LOG.info("We press the 'Logout' Button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Logout");
         logoutButton.click();
     }
 

@@ -1,4 +1,4 @@
-package com.myappium2project.tests.curahealthcarewithchrome;
+package com.myappium2project.tests.curahealthcarechrome;
 
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
 import com.myappium2project.testsdata.CommonTestData;
@@ -6,11 +6,11 @@ import com.myappium2project.testsdata.TestDataCura;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import com.myappium2project.pages.curahealthcarewithchrome.HamburgerMenu;
-import com.myappium2project.pages.curahealthcarewithchrome.LoginPage;
-import com.myappium2project.pages.curahealthcarewithchrome.MakeAppointmentPage;
+import com.myappium2project.pages.curahealthcarechrome.HamburgerMenu;
+import com.myappium2project.pages.curahealthcarechrome.LoginPage;
+import com.myappium2project.pages.curahealthcarechrome.MakeAppointmentPage;
 
-public class LoginTestsWithDataProvider extends ChromeBrowserBaseTest {
+public class LoginWithDataProviderTests extends ChromeBrowserBaseTest {
 
     @DataProvider(name = "loginData")
     public Object[][] loginDataProvider() {
@@ -35,7 +35,6 @@ public class LoginTestsWithDataProvider extends ChromeBrowserBaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(username, usernameValidityStatus);
         loginPage.fillPasswordInput(password, passwordValidityStatus);
-        loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
         String loginExpectedResultMessage = getLoginExpectedResultMessage(expectedResult);

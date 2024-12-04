@@ -1,5 +1,6 @@
-package com.myappium2project.pages.curahealthcarewithchrome;
+package com.myappium2project.pages.curahealthcarechrome;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -13,6 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class MakeAppointmentPage extends BasePage {
+    private static final String CHECKBOX_PRESS_ACTION_LOG = "We {}press the 'Apply for hospital readmission' checkbox";
     private final AndroidDriver driver;
 
     @FindBy(xpath = "//*[text()='Make Appointment']")
@@ -49,7 +51,7 @@ public class MakeAppointmentPage extends BasePage {
         try {
             return makeAppointmentPageTitleText.getText();
         } catch (NoSuchElementException e) {
-            return "The title text is not available";
+            return CommonPageLogMessages.getTextIsNotAvailableLog("title");
         }
     }
 
@@ -65,7 +67,7 @@ public class MakeAppointmentPage extends BasePage {
     }
 
     public void pressFacilityDropDownMenuButton() {
-        LOG.info("We press the 'Facility' dropdown menu button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Facility' 'dropdown menu");
         facilityDropDownMenuButton.click();
     }
 
@@ -77,10 +79,10 @@ public class MakeAppointmentPage extends BasePage {
 
     public void pressApplyForHospitalReadmissionCheckBoxOrDontPressIt(String option) {
         if (option.equals("Yes")) {
-            LOG.info("We press the 'Apply for hospital readmission' checkbox");
+            LOG.info(CHECKBOX_PRESS_ACTION_LOG, "");
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", applyForHospitalReadmissionCheckbox);
         } else {
-            LOG.info("We do not press the 'Apply for hospital readmission' checkbox");
+            LOG.info(CHECKBOX_PRESS_ACTION_LOG, "do not ");
         }
     }
 
@@ -96,7 +98,7 @@ public class MakeAppointmentPage extends BasePage {
     }
 
     public void fillDateOfVisitInput(String date) {
-        LOG.info("We fill the date of visit input field with: '{}'", date);
+        LOG.info(CommonPageLogMessages.FILL_INPUT_LOG, "Visit Date", date);
         dateOfVisit.sendKeys(date);
     }
 
@@ -106,8 +108,7 @@ public class MakeAppointmentPage extends BasePage {
     }
 
     public void pressBookAppointmentButton() {
-        LOG.info("We press the 'Book Appointment' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Book Appointment");
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", bookAppointmentButton);
     }
 }
-

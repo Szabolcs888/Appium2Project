@@ -8,14 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PopupAccessTests extends BatteryAlarmBaseTest {
-
-    private static String getCheckPopupVisibilityLog() {
-        return "We check if the '{}' popup window {}";
-    }
-
-    private static String getPopupVisibilityLog() {
-        return "The '{}' popup window {}";
-    }
+    private static final String CHECK_POPUP_VISIBILITY_LOG = "We check if the '{}' popup window {}";
+    private static final String POPUP_VISIBILITY_LOG = "The '{}' popup window {}";
 
     private static String getPopupValidationAssertLog(String popupTitle, String expectedPopupState) {
         return String.format("The '%s' popup window should %s, but it does not.", popupTitle, expectedPopupState);
@@ -31,13 +25,13 @@ public class PopupAccessTests extends BatteryAlarmBaseTest {
 
         String popupTitle = "Warning";
         String popupVisibilityStatus = "appears";
-        LOG.info(getCheckPopupVisibilityLog(), popupTitle, popupVisibilityStatus);
+        LOG.info(CHECK_POPUP_VISIBILITY_LOG, popupTitle, popupVisibilityStatus);
         boolean isDisplayedExitWarningPopup = mainPage.isDisplayedExitWarningPopupWindow();
         if (isDisplayedExitWarningPopup) {
-            LOG.info(getPopupVisibilityLog(), popupTitle, popupVisibilityStatus);
+            LOG.info(POPUP_VISIBILITY_LOG, popupTitle, popupVisibilityStatus);
         } else {
             popupVisibilityStatus = "does not appear";
-            LOG.error(getPopupVisibilityLog(), popupTitle, popupVisibilityStatus);
+            LOG.error(POPUP_VISIBILITY_LOG, popupTitle, popupVisibilityStatus);
         }
         String expectedPopupState = "appear";
         Assert.assertTrue(isDisplayedExitWarningPopup, getPopupValidationAssertLog(popupTitle, expectedPopupState));
@@ -45,13 +39,13 @@ public class PopupAccessTests extends BatteryAlarmBaseTest {
         mainPage.pressNoButtonOnWarningPopupWindow();
 
         popupVisibilityStatus = "disappears";
-        LOG.info(getCheckPopupVisibilityLog(), popupTitle, popupVisibilityStatus);
+        LOG.info(CHECK_POPUP_VISIBILITY_LOG, popupTitle, popupVisibilityStatus);
         isDisplayedExitWarningPopup = mainPage.isDisplayedExitWarningPopupWindow();
         if (!isDisplayedExitWarningPopup) {
-            LOG.info(getPopupVisibilityLog(), popupTitle, popupVisibilityStatus);
+            LOG.info(POPUP_VISIBILITY_LOG, popupTitle, popupVisibilityStatus);
         } else {
             popupVisibilityStatus = "does not disappear";
-            LOG.error(getPopupVisibilityLog(), popupTitle, popupVisibilityStatus);
+            LOG.error(POPUP_VISIBILITY_LOG, popupTitle, popupVisibilityStatus);
         }
         expectedPopupState = "disappear";
         Assert.assertFalse(isDisplayedExitWarningPopup, getPopupValidationAssertLog(popupTitle, expectedPopupState));

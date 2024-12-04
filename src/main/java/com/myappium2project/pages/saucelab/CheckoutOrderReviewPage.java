@@ -1,5 +1,6 @@
 package com.myappium2project.pages.saucelab;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -11,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CheckoutOrderReviewPage extends BasePage {
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Place Order\")")
     private WebElement placeOrderButton;
 
@@ -27,7 +27,7 @@ public class CheckoutOrderReviewPage extends BasePage {
     }
 
     public void pressPlaceOrderButton() {
-        LOG.info("We press the 'Place Order' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Place Order");
         placeOrderButton.click();
     }
 

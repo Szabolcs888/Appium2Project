@@ -11,8 +11,8 @@
         <classes>
             <class name="com.myappium2project.tests.saucelab.LoginTests"/>
             <class name="com.myappium2project.tests.saucelab.PageAccessTests"/>
-            <class name="com.myappium2project.tests.curahealthcarewithchrome.LoginTests"/>
-            <class name="com.myappium2project.tests.curahealthcarewithchrome.PageAccessTests"/>
+            <class name="com.myappium2project.tests.curahealthcarechrome.LoginTests"/>
+            <class name="com.myappium2project.tests.curahealthcarechrome.PageAccessTests"/>
             <class name="com.myappium2project.tests.batteryalarm.PageAccessTests"/>
             <class name="com.myappium2project.tests.batteryalarm.PopupAccessTests"/>
         </classes>

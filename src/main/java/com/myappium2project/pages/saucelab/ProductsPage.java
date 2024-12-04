@@ -1,5 +1,7 @@
 package com.myappium2project.pages.saucelab;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
+import com.myappium2project.logging.pagelogmessages.SlabPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import com.myappium2project.utils.ListUtils;
 import com.myappium2project.utils.ScrollUtils;
@@ -18,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductsPage extends BasePage {
+    private static final String PRESS_TEXT_LOG = "We press the '{}'s text";
+    private static final String SELECT_ORDER_OPTION_LOG = "We select the '{}' order option";
     private WebDriverWait wait;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Products\"]")
@@ -92,7 +96,7 @@ public class ProductsPage extends BasePage {
         try {
             return productTitleText.getText();
         } catch (NoSuchElementException e) {
-            return "The title text is not available";
+            return CommonPageLogMessages.getTextIsNotAvailableLog("title");
         }
     }
 
@@ -110,74 +114,74 @@ public class ProductsPage extends BasePage {
     }
 
     public void pressDropdownMenuButton() {
-        LOG.info("We press the dropdown menu button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "dropdown menu");
         dropdownMenuButton.click();
     }
 
     public void pressAbcOrderOption() {
-        LOG.info("We select the abc order option");
+        LOG.info(SELECT_ORDER_OPTION_LOG, "abc");
         abcAscendingOrderOption.click();
     }
 
     public void pressAbcOrderBackwardsOption() {
-        LOG.info("We select the reverse abc order option");
+        LOG.info(SELECT_ORDER_OPTION_LOG, "reverse abc");
         abcDescendingOrderOption.click();
     }
 
     public void pressPriceAscendingOrderOption() {
-        LOG.info("We select the ascending price order option");
+        LOG.info(SELECT_ORDER_OPTION_LOG, "ascending price");
         priceAscendingOrderOption.click();
     }
 
     public void pressPriceDescendingOrderOption() {
-        LOG.info("We select the descending price order option");
+        LOG.info(SELECT_ORDER_OPTION_LOG, "descending price");
         priceDescendingOrderOption.click();
     }
 
     public void pressBikeLightProductText() {
-        LOG.info("We press the 'Bike Light's text");
+        LOG.info(PRESS_TEXT_LOG, "Bike Light");
         bikeLightProductText.click();
     }
 
     public void pressOnesieProductText() {
         wait.until(ExpectedConditions.elementToBeClickable(onesieProductText));
-        LOG.info("We press the 'Onesie's text");
+        LOG.info(PRESS_TEXT_LOG, "Onesie");
         onesieProductText.click();
     }
 
     public void pressFleeceJacketProductText() {
-        LOG.info("We press the 'Fleece Jacket's text");
+        LOG.info(PRESS_TEXT_LOG, "Fleece Jacket");
         fleeceJacketProductText.click();
     }
 
     public void pressBoltTShirtProductText() {
-        LOG.info("We press the 'Bolt T-shirt's text");
+        LOG.info(PRESS_TEXT_LOG, "Bolt T-shirt");
         boltTShirtProductText.click();
     }
 
     public void pressTestAllTheThingsTShirtProductText() {
-        LOG.info("We press the 'Test allTheThings T-shirt's text");
+        LOG.info(PRESS_TEXT_LOG, "Test allTheThings T-shirt");
         testAllTheThingsTShirtProductText.click();
     }
 
     public void pressBackpackProductText() {
-        LOG.info("We press the 'Backpack's text");
+        LOG.info(PRESS_TEXT_LOG, "Backpack");
         backpackProductText.click();
     }
 
     public void pressCartBadgeButton() {
         CommonUtils.threadSleep(500);
-        LOG.info("We press the cart badge button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "cart badge");
         cartBadgeButton.click();
     }
 
     public void pressThirdStarButtonUnderBackpack() {
-        LOG.info("We press the third star button under the 'Backpack'");
+        LOG.info(SlabPageLogMessages.PRESS_BUTTON_UNDER_LOG, "third star", "Backpack");
         thirdStarButtonUnderTheBackpack.click();
     }
 
     public void pressCloseModalButtonOnFeedbackPopup() {
-        LOG.info("We press the 'Close Modal' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Close Modal");
         closeModalButtonOnFeedbackPopup.click();
     }
 
@@ -185,7 +189,8 @@ public class ProductsPage extends BasePage {
         try {
             return feedbackPopupText.getText();
         } catch (NoSuchElementException e) {
-            return "The feedback popup text is not available";
+            return CommonPageLogMessages.getTextIsNotAvailableLog("feedback popup");
+
         }
     }
 

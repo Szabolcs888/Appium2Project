@@ -12,7 +12,6 @@ public class ScreenshotUtils {
     public static void captureAndSaveScreenshot(AndroidDriver driver, String testName) {
         String screenshotPath = System.getProperty("user.dir") + "/src/test/resources/screenshots/" + testName + ".png";
         String actualReportScreenshotPath = System.getProperty("user.dir") + "/reports/actualReportScreenshots/" + testName + ".png";
-
         takeScreenshot(driver, screenshotPath, actualReportScreenshotPath);
     }
 

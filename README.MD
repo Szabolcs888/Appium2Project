@@ -22,7 +22,7 @@ Of course, there are still countless opportunities for development and refinemen
 - **Saucelab app** [(MyDemoAppRN.1.3.0.build-244)](https://github.com/saucelabs/my-demo-app-rn/releases/ "link title") <br>
 - **CURA Healthcare Service** [(Katalon demo webpage)](https://katalon-demo-cura.herokuapp.com// "link title") <br>
 - **Battery Alarm app (v73)** [(Battery Alarm webpage)](https://www.batteryalarm.app/ "link title")
-- **Chrome version: 129.0.6668.70**
+- **Chrome version: 131.0.6778.81**
 <br>
 
 >I deliberately did not put the files containing the test data in .gitignore, because they are fictitious and not private data. And I didn't include the file containing the data necessary for sending emails either, because what I uploaded was just a template, without my own data. In order for email sending to work, it is necessary to fill out the file with the data (if this is not fulfilled, the last method of tearDownSuite() must be commented out).
@@ -132,7 +132,7 @@ Természetesen számtalan fejlesztési és finomítási lehetőség van még. A 
 - **Saucelab app** [(MyDemoAppRN.1.3.0.build-244)](https://github.com/saucelabs/my-demo-app-rn/releases/ "link title") <br>
 - **CURA Healthcare Service** [(Katalon demo webpage)](https://katalon-demo-cura.herokuapp.com// "link title") <br>
 - **Battery Alarm app (v73)** [(Battery Alarm webpage)](https://www.batteryalarm.app/ "link title")
-- **Chrome verzió: 129.0.6668.70**
+- **Chrome version: 131.0.6778.81**
 <br>
 
 _Megjegyzések:_

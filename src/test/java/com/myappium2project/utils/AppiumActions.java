@@ -1,6 +1,7 @@
 package com.myappium2project.utils;
 
 import com.google.common.collect.ImmutableList;
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,9 +15,10 @@ import java.time.Duration;
 
 public class AppiumActions {
     private static final Logger LOG = LogManager.getLogger(AppiumActions.class);
+    private static final String SCROLL_DIRECTION_LOG = "We scroll {}";
 
     public static void navigateBack(AndroidDriver driver) {
-        LOG.info("We press the back button on the phone");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_ON_LOG, "back", "phone");
         driver.navigate().back();
     }
 
@@ -50,19 +52,19 @@ public class AppiumActions {
             int right = (int) (midPoint.x + midPoint.x * scrollRatio);
             switch (pageDirection) {
                 case "UP" -> {
-                    LOG.info("We scroll up");
+                    LOG.info(SCROLL_DIRECTION_LOG, "up");
                     scrollAction(driver, new Point(midPoint.x, top), new Point(midPoint.x, bottom), SCROLL_DURATION);
                 }
                 case "DOWN" -> {
-                    LOG.info("We scroll down");
+                    LOG.info(SCROLL_DIRECTION_LOG, "down");
                     scrollAction(driver, new Point(midPoint.x, bottom), new Point(midPoint.x, top), SCROLL_DURATION);
                 }
                 case "LEFT" -> {
-                    LOG.info("We scroll to the left");
+                    LOG.info(SCROLL_DIRECTION_LOG, "to the left");
                     scrollAction(driver, new Point(left, midPoint.y), new Point(right, midPoint.y), SCROLL_DURATION);
                 }
                 case "RIGHT" -> {
-                    LOG.info("We scroll to the right");
+                    LOG.info(SCROLL_DIRECTION_LOG, "to the right");
                     scrollAction(driver, new Point(right, midPoint.y), new Point(left, midPoint.y), SCROLL_DURATION);
                 }
             }

@@ -1,5 +1,6 @@
 package com.myappium2project.pages.saucelab;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -9,7 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutPage extends BasePage {
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Checkout\")")
     private WebElement checkoutPageTitleText;
 
@@ -43,42 +43,42 @@ public class CheckoutPage extends BasePage {
         try {
             return checkoutPageTitleText.getText();
         } catch (NoSuchElementException e) {
-            return "The title text is not available";
+            return CommonPageLogMessages.getTextIsNotAvailableLog("title");
         }
     }
 
     public void fillFullNameInput(String fullName) {
-        LOG.info("We fill the 'Full Name' input field");
+        LOG.info(CommonPageLogMessages.FILL_INPUT_LOG, "Full Name", fullName);
         fullNameInput.sendKeys(fullName);
     }
 
     public void fillAddressLine1Input(String addressLine1) {
-        LOG.info("We fill the 'Address Line 1' input field");
+        LOG.info(CommonPageLogMessages.FILL_INPUT_LOG, "Address Line 1", addressLine1);
         addressLine1Input.sendKeys(addressLine1);
     }
 
     public void fillCityInput(String city) {
-        LOG.info("We fill the 'City' input field");
+        LOG.info(CommonPageLogMessages.FILL_INPUT_LOG, "City", city);
         cityInput.sendKeys(city);
     }
 
     public void fillStateRegionInput(String stateRegion) {
-        LOG.info("We fill the 'State Region' input field");
+        LOG.info(CommonPageLogMessages.FILL_INPUT_LOG, "State Region", stateRegion);
         stateRegionInput.sendKeys(stateRegion);
     }
 
     public void fillZipCodeInput(String zipCode) {
-        LOG.info("We fill the 'Zip Code' input field");
+        LOG.info(CommonPageLogMessages.FILL_INPUT_LOG, "Zip Code", zipCode);
         zipCodeInput.sendKeys(zipCode);
     }
 
     public void fillCountryInput(String country) {
-        LOG.info("We fill the 'Country' input field");
+        LOG.info(CommonPageLogMessages.FILL_INPUT_LOG, "Country", country);
         countryInput.sendKeys(country);
     }
 
     public void pressToPaymentButton() {
-        LOG.info("We press the 'To Payment' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "To Payment");
         toPaymentButton.click();
     }
 }

@@ -6,7 +6,7 @@ attribute of the @Test annotation of testNg, but as listed here. -->
     <test name="Regression test (data from xml file)">
         <packages>
             <package name="com.myappium2project.tests.saucelab"/>
-            <package name="com.myappium2project.tests.curahealthcarewithchrome"/>
+            <package name="com.myappium2project.tests.curahealthcarechrome"/>
             <package name="com.myappium2project.tests.batteryalarm"/>
         </packages>
     </test>

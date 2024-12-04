@@ -1,5 +1,6 @@
 package com.myappium2project.pages.saucelab;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -9,7 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutCompletePage extends BasePage {
-
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Continue Shopping\")")
     private WebElement continueShoppingButton;
 
@@ -22,7 +22,7 @@ public class CheckoutCompletePage extends BasePage {
     }
 
     public void pressContinueShoppingButton() {
-        LOG.info("We press the 'Continue Shopping' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Continue Shopping");
         continueShoppingButton.click();
     }
 
@@ -30,7 +30,7 @@ public class CheckoutCompletePage extends BasePage {
         try {
             return checkoutCompleteText.getText();
         } catch (NoSuchElementException e) {
-            return "The title text is not available";
+            return CommonPageLogMessages.getTextIsNotAvailableLog("title");
         }
     }
 }

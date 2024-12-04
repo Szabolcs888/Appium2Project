@@ -1,8 +1,9 @@
-package com.myappium2project.tests.curahealthcarewithchrome;
+package com.myappium2project.tests.curahealthcarechrome;
 
+import com.myappium2project.logging.pagelogmessages.CuraPageLogMessages;
 import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
 import com.myappium2project.logging.testlogmessages.CuraTestLogMessages;
-import com.myappium2project.pages.curahealthcarewithchrome.*;
+import com.myappium2project.pages.curahealthcarechrome.*;
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
 import com.myappium2project.testsdata.CommonTestData;
 import com.myappium2project.testsdata.TestDataCura;
@@ -25,19 +26,18 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC2, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC2, CommonTestData.VALID_LOG_MESSAGE);
-        loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
         String makeAppointmentPageName = "Make Appointment";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), makeAppointmentPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, makeAppointmentPageName);
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
         boolean isMakeAppointmentPageLoaded = makeAppointmentPage.isPageLoaded();
         if (isMakeAppointmentPageLoaded) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), makeAppointmentPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, makeAppointmentPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), makeAppointmentPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, makeAppointmentPageName);
         }
-        Assert.assertTrue(isMakeAppointmentPageLoaded, CommonTestLogMessages.getPageLoadValidationAssertLog(makeAppointmentPageName));
+        Assert.assertTrue(isMakeAppointmentPageLoaded, CuraPageLogMessages.getPageLoadValidationAssertLog(makeAppointmentPageName));
 
         makeAppointmentPage.pressFacilityDropDownMenuButton();
         makeAppointmentPage.choiceFacilityOption(TestDataCura.FACILTY_ACC2);
@@ -48,16 +48,16 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
         makeAppointmentPage.pressBookAppointmentButton();
 
         String appointmentConfirmationPageName = "Appointment Confirmation";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), appointmentConfirmationPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, appointmentConfirmationPageName);
         AppointmentConfirmationPage appointmentConfirmationPage = new AppointmentConfirmationPage(driver);
         boolean isAppointmentConfirmationPageLoaded = appointmentConfirmationPage.isPageLoaded();
         if (isAppointmentConfirmationPageLoaded) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), appointmentConfirmationPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, appointmentConfirmationPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), appointmentConfirmationPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, appointmentConfirmationPageName);
         }
         Assert.assertTrue(isAppointmentConfirmationPageLoaded,
-                CommonTestLogMessages.getPageLoadValidationAssertLog(appointmentConfirmationPageName));
+                CuraPageLogMessages.getPageLoadValidationAssertLog(appointmentConfirmationPageName));
 
         LOG.info(CuraTestLogMessages.CHECK_APPOINTMENT_DATA_LOG);
         List<String> appointmentDataOnAppointmentConfirmationPage =
@@ -69,9 +69,9 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
                 appointmentDataOnAppointmentConfirmationPage);
         System.out.println(CuraTestLogMessages.ORIGINAL_APPOINTMENT_DATA_CONSOLELOG + appointmentDataAsItShouldBe);
         if (appointmentDataOnAppointmentConfirmationPage.equals(appointmentDataAsItShouldBe)) {
-            LOG.info(CuraTestLogMessages.getCorrectAppointmentDataLog(), appointmentConfirmationPageName);
+            LOG.info(CuraTestLogMessages.CORRECT_APPOINTMENT_DATA_LOG, appointmentConfirmationPageName);
         } else {
-            LOG.error(CuraTestLogMessages.getIncorrectAppointmentDataErrorLog(), appointmentConfirmationPageName);
+            LOG.error(CuraTestLogMessages.INCORRECT_APPOINTMENT_DATA_ERRORLOG, appointmentConfirmationPageName);
         }
         Assert.assertEquals(appointmentDataOnAppointmentConfirmationPage, appointmentDataAsItShouldBe,
                 CuraTestLogMessages.APPOINTMENT_DATA_VALIDATION_ASSERTLOG);
@@ -80,16 +80,16 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
         hamburgerMenu.pressHistoryButton();
 
         String historyPageName = "History";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), historyPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, historyPageName);
         HistoryPage historyPage = new HistoryPage(driver);
         boolean isDisplayedHistoryPageTitleText = historyPage.isPageLoaded();
-        if (historyPage.isPageLoaded()) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), historyPageName);
+        if (isDisplayedHistoryPageTitleText) {
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, historyPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), historyPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, historyPageName);
         }
         Assert.assertTrue(isDisplayedHistoryPageTitleText,
-                CommonTestLogMessages.getPageLoadValidationAssertLog(historyPageName));
+                CuraPageLogMessages.getPageLoadValidationAssertLog(historyPageName));
 
         LOG.info("We also check the appointment data on the '" + historyPageName + "' page");
         List<String> appointmentDataOnHistoryPage = historyPage.getAppointmentDataOnHistoryPage();
@@ -99,9 +99,9 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
         System.out.println(CuraTestLogMessages.getAppointmentDataConsoleLog(historyPageName) + appointmentDataOnHistoryPage);
         System.out.println(CuraTestLogMessages.ORIGINAL_APPOINTMENT_DATA_CONSOLELOG + appointmentDataAsItShouldBe2);
         if (appointmentDataOnHistoryPage.equals(appointmentDataAsItShouldBe2)) {
-            LOG.info(CuraTestLogMessages.getCorrectAppointmentDataLog(), historyPageName);
+            LOG.info(CuraTestLogMessages.CORRECT_APPOINTMENT_DATA_LOG, historyPageName);
         } else {
-            LOG.error(CuraTestLogMessages.getIncorrectAppointmentDataErrorLog(), historyPageName);
+            LOG.error(CuraTestLogMessages.INCORRECT_APPOINTMENT_DATA_ERRORLOG, historyPageName);
         }
         Assert.assertEquals(appointmentDataOnHistoryPage, appointmentDataAsItShouldBe2,
                 CuraTestLogMessages.getAppointmentDataValidationAssertLog(historyPageName));
@@ -110,31 +110,31 @@ public class EndToEndTests extends ChromeBrowserBaseTest {
         hamburgerMenu.pressProfileButton();
 
         String profilePageName = "Profile";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), profilePageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, profilePageName);
         ProfilePage profilePage = new ProfilePage(driver);
         boolean isProfilePageLoaded = profilePage.isPageLoaded();
         if (isProfilePageLoaded) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), profilePageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, profilePageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), profilePageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, profilePageName);
         }
         Assert.assertTrue(isProfilePageLoaded,
-                CommonTestLogMessages.getPageLoadValidationAssertLog(profilePageName));
+                CuraPageLogMessages.getPageLoadValidationAssertLog(profilePageName));
 
         profilePage.pressLogoutButton();
 
         String mainPageName = "Main";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), mainPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, mainPageName);
         MainPage mainPage = new MainPage(driver);
         boolean isMainPageLoaded = mainPage.isPageLoaded();
         String currentUrl = driver.getCurrentUrl();
         String expectedUrl = "https://katalon-demo-cura.herokuapp.com/";
         if (isMainPageLoaded && currentUrl.equals(expectedUrl)) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), mainPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, mainPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), mainPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, mainPageName);
         }
-        Assert.assertTrue(isMainPageLoaded, CommonTestLogMessages.getPageLoadValidationAssertLog(mainPageName));
+        Assert.assertTrue(isMainPageLoaded, CuraPageLogMessages.getPageLoadValidationAssertLog(mainPageName));
         Assert.assertEquals(currentUrl, expectedUrl,
                 "The current URL should be '" + expectedUrl + "', but it is '" + currentUrl + "'.");
     }

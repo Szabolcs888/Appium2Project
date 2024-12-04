@@ -1,5 +1,6 @@
-package com.myappium2project.pages.curahealthcarewithchrome;
+package com.myappium2project.pages.curahealthcarechrome;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -8,7 +9,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HamburgerMenu extends BasePage {
-
     @FindBy(id = "menu-toggle")
     private WebElement hamburgerMenuButton;
 
@@ -27,22 +27,22 @@ public class HamburgerMenu extends BasePage {
     }
 
     public void pressHamburgerMenuButton() {
-        LOG.info("We press the 'Hamburger menu' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Hamburger menu");
         hamburgerMenuButton.click();
     }
 
     public void pressLoginButton() {
-        LOG.info("We press the 'Login' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Login");
         loginButton.click();
     }
 
     public void pressProfileButton() {
-        LOG.info("We press the 'Profile' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Profile");
         profileButton.click();
     }
 
     public void pressHistoryButton() {
-        LOG.info("We press the 'History' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "History");
         historyButton.click();
     }
 }

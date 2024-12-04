@@ -1,6 +1,6 @@
 package com.myappium2project.logging.testlogmessages;
 
-public class SLabTestLogMessages {
+public class SlabTestLogMessages {
     public static final String CHECK_CART_EMPTY_LOG = "We check if the cart is empty";
     public static final String CART_EMPTY_LOG = "The cart is empty";
     public static final String CART_NOT_EMPTY_ERRORLOG = "The cart is not empty";

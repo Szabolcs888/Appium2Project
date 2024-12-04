@@ -1,14 +1,15 @@
-package com.myappium2project.tests.curahealthcarewithchrome;
+package com.myappium2project.tests.curahealthcarechrome;
 
+import com.myappium2project.logging.pagelogmessages.CuraPageLogMessages;
 import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
 import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
 import com.myappium2project.testsdata.CommonTestData;
 import com.myappium2project.testsdata.TestDataCura;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import com.myappium2project.pages.curahealthcarewithchrome.HamburgerMenu;
-import com.myappium2project.pages.curahealthcarewithchrome.LoginPage;
-import com.myappium2project.pages.curahealthcarewithchrome.MakeAppointmentPage;
+import com.myappium2project.pages.curahealthcarechrome.HamburgerMenu;
+import com.myappium2project.pages.curahealthcarechrome.LoginPage;
+import com.myappium2project.pages.curahealthcarechrome.MakeAppointmentPage;
 
 public class LoginTests extends ChromeBrowserBaseTest {
     private static final String EXPECTED_ERROR_MESSAGE = "Login failed! Please ensure the username and password are valid.";
@@ -25,19 +26,18 @@ public class LoginTests extends ChromeBrowserBaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
-        loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
         String makeAppointmentPageName = "Make Appointment";
-        LOG.info(CommonTestLogMessages.getCheckPageLog(), makeAppointmentPageName);
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, makeAppointmentPageName);
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
         boolean isMakeAppointmentPageLoaded = makeAppointmentPage.isPageLoaded();
         if (isMakeAppointmentPageLoaded) {
-            LOG.info(CommonTestLogMessages.getOnPageLog(), makeAppointmentPageName);
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, makeAppointmentPageName);
         } else {
-            LOG.error(CommonTestLogMessages.getNotOnPageErrorLog(), makeAppointmentPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, makeAppointmentPageName);
         }
-        Assert.assertTrue(isMakeAppointmentPageLoaded, CommonTestLogMessages.getPageLoadValidationAssertLog(makeAppointmentPageName));
+        Assert.assertTrue(isMakeAppointmentPageLoaded, CuraPageLogMessages.getPageLoadValidationAssertLog(makeAppointmentPageName));
     }
 
     @Test(priority = 2,
@@ -52,12 +52,11 @@ public class LoginTests extends ChromeBrowserBaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
         loginPage.fillPasswordInput(CommonTestData.INVALID_PASSWORD, CommonTestData.INVALID_LOG_MESSAGE);
-        loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
-        LOG.info(CommonTestLogMessages.getExpectedErrorMessageLog(), errorMessageText);
+        LOG.info(CommonTestLogMessages.EXPECTED_ERROR_MESSAGE_LOG, errorMessageText);
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
             LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         } else {
@@ -79,12 +78,11 @@ public class LoginTests extends ChromeBrowserBaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput(CommonTestData.INVALID_USERNAME, CommonTestData.INVALID_LOG_MESSAGE);
         loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
-        loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
-        LOG.info(CommonTestLogMessages.getExpectedErrorMessageLog(), errorMessageText);
+        LOG.info(CommonTestLogMessages.EXPECTED_ERROR_MESSAGE_LOG, errorMessageText);
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
             LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         } else {
@@ -106,12 +104,11 @@ public class LoginTests extends ChromeBrowserBaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.fillUserNameInput("", CommonTestData.EMPTY_LOG_MESSAGE);
         loginPage.fillPasswordInput("", CommonTestData.EMPTY_LOG_MESSAGE);
-        loginPage.pressLoginText();
         loginPage.pressLoginButton();
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
-        LOG.info(CommonTestLogMessages.getExpectedErrorMessageLog(), errorMessageText);
+        LOG.info(CommonTestLogMessages.EXPECTED_ERROR_MESSAGE_LOG, errorMessageText);
         if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
             LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
         } else {

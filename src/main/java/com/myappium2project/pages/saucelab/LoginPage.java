@@ -1,5 +1,6 @@
 package com.myappium2project.pages.saucelab;
 
+import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.pages.BasePage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -9,7 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage {
-
     @AndroidFindBy(accessibility = "Username input field")
     private WebElement usernameInput;
 
@@ -40,17 +40,17 @@ public class LoginPage extends BasePage {
     }
 
     public void fillUserNameInput(String userName, String usernameValidityStatus) {
-        LOG.info("We fill the 'Username' input field with the {} username", usernameValidityStatus);
+        LOG.info(CommonPageLogMessages.FILL_USERNAME_INPUT_LOG, usernameValidityStatus);
         usernameInput.sendKeys(userName);
     }
 
     public void fillPasswordInput(String password, String passwordValidityStatus) {
-        LOG.info("We fill the 'Password' input field with the {} password", passwordValidityStatus);
+        LOG.info(CommonPageLogMessages.FILL_PASSWORD_INPUT_LOG, passwordValidityStatus);
         passwordInput.sendKeys(password);
     }
 
     public void pressLoginButton() {
-        LOG.info("We press the 'Login' button");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Login");
         loginButton.click();
     }
 
@@ -66,7 +66,7 @@ public class LoginPage extends BasePage {
         try {
             return incorrectDataErrorMessage.getText();
         } catch (NoSuchElementException e) {
-            return "The error message is not available";
+            return CommonPageLogMessages.ERROR_MESSAGE_IS_NOT_AVAILABLE_LOG;
         }
     }
 
@@ -82,7 +82,7 @@ public class LoginPage extends BasePage {
         try {
             return emptyUsernameErrorMessage.getText();
         } catch (NoSuchElementException e) {
-            return "The error message is not available";
+            return CommonPageLogMessages.ERROR_MESSAGE_IS_NOT_AVAILABLE_LOG;
         }
     }
 
@@ -98,12 +98,12 @@ public class LoginPage extends BasePage {
         try {
             return emptyPasswordErrorMessage.getText();
         } catch (NoSuchElementException e) {
-            return "The error message is not available";
+            return CommonPageLogMessages.ERROR_MESSAGE_IS_NOT_AVAILABLE_LOG;
         }
     }
 
     public void pressOkButtonOnSuccessfulLoggedOutAlert() {
-        LOG.info("We press 'Ok' button on the alert window");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_ON_LOG, "Ok", "'successfully logged out' alert");
         okButtonOnSuccessfulLogoutAlert.click();
     }
 
@@ -111,7 +111,7 @@ public class LoginPage extends BasePage {
         try {
             return loginTitleText.getText();
         } catch (NoSuchElementException e) {
-            return "The title text is not available";
+            return CommonPageLogMessages.getTextIsNotAvailableLog("title");
         }
     }
 }
