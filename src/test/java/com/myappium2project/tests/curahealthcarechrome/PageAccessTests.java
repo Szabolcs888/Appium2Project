@@ -2,9 +2,9 @@ package com.myappium2project.tests.curahealthcarechrome;
 
 import com.myappium2project.logging.pagelogmessages.CuraPageLogMessages;
 import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
-import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
-import com.myappium2project.testsdata.CommonTestData;
-import com.myappium2project.testsdata.TestDataCura;
+import com.myappium2project.tests.basetests.ChromeBrowserTestBase;
+import com.myappium2project.testsdata.CuraHealthcareData;
+import com.myappium2project.testsgroups.TestGroups;
 import com.myappium2project.utils.AppiumActions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,20 +13,20 @@ import com.myappium2project.pages.curahealthcarechrome.HistoryPage;
 import com.myappium2project.pages.curahealthcarechrome.LoginPage;
 import com.myappium2project.pages.curahealthcarechrome.ProfilePage;
 
-public class PageAccessTests extends ChromeBrowserBaseTest {
+public class PageAccessTests extends ChromeBrowserTestBase {
 
     @Test(priority = 1,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testProfilePageAccessCura() {
-        driver.get(TestDataCura.CURA_BASE_URL);
+        driver.get(CuraHealthcareData.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
-        loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillUserNameInput(CuraHealthcareData.VALID_USERNAME_ACC1, CommonTestLogMessages.VALID_LOG);
+        loginPage.fillPasswordInput(CuraHealthcareData.VALID_PASSWORD_ACC1, CommonTestLogMessages.VALID_LOG);
         loginPage.pressLoginButton();
 
         AppiumActions.scrollWithFixCoordinates(driver, 1, "UP", 0.5);
@@ -41,23 +41,23 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
         if (isProfilePageLoaded) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, profilePageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, profilePageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, profilePageName);
         }
-        Assert.assertTrue(isProfilePageLoaded, CuraPageLogMessages.getPageLoadValidationAssertLog(profilePageName));
+        Assert.assertTrue(isProfilePageLoaded, CuraPageLogMessages.pageNotLoadAssertLog(profilePageName));
     }
 
     @Test(priority = 2,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testHistoryPageAccessCura() {
-        driver.get(TestDataCura.CURA_BASE_URL);
+        driver.get(CuraHealthcareData.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
-        loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillUserNameInput(CuraHealthcareData.VALID_USERNAME_ACC1, CommonTestLogMessages.VALID_LOG);
+        loginPage.fillPasswordInput(CuraHealthcareData.VALID_PASSWORD_ACC1, CommonTestLogMessages.VALID_LOG);
         loginPage.pressLoginButton();
 
         AppiumActions.scrollWithFixCoordinates(driver, 1, "UP", 0.5);
@@ -72,8 +72,8 @@ public class PageAccessTests extends ChromeBrowserBaseTest {
         if (isHistoryPageLoaded) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, historyPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, historyPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, historyPageName);
         }
-        Assert.assertTrue(isHistoryPageLoaded, CuraPageLogMessages.getPageLoadValidationAssertLog(historyPageName));
+        Assert.assertTrue(isHistoryPageLoaded, CuraPageLogMessages.pageNotLoadAssertLog(historyPageName));
     }
 }

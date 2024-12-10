@@ -1,6 +1,6 @@
 package com.myappium2project.pages.curahealthcarechrome;
 
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.NoSuchElementException;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AppointmentConfirmationPage extends BasePage {
+public class AppointmentConfirmationPage extends BasePageClass {
     @FindBy(xpath = "//*[text()='Appointment Confirmation']")
     private WebElement appointmentConfirmationPageTitleText;
 
@@ -39,19 +39,19 @@ public class AppointmentConfirmationPage extends BasePage {
         try {
             return appointmentConfirmationPageTitleText.isDisplayed() &&
                     appointmentConfirmationPageTitleText.isEnabled() &&
-                    appointmentConfirmationPageTitleText.getText().equals("Appointment Confirmation");
+                    "Appointment Confirmation".equals(appointmentConfirmationPageTitleText.getText());
         } catch (NoSuchElementException e) {
             return false;
         }
     }
 
     public List<String> getAppointmentDataOnAppointmentConfirmationPage() {
-        List<String> appointmentDataAsTheyAreOnTheAppointmentConfirmationPage = new ArrayList<>();
-        appointmentDataAsTheyAreOnTheAppointmentConfirmationPage.add(facilityText.getText());
-        appointmentDataAsTheyAreOnTheAppointmentConfirmationPage.add(hospitalReadmissionChoice.getText());
-        appointmentDataAsTheyAreOnTheAppointmentConfirmationPage.add(healthcareProgram.getText());
-        appointmentDataAsTheyAreOnTheAppointmentConfirmationPage.add(visitDate.getText());
-        appointmentDataAsTheyAreOnTheAppointmentConfirmationPage.add(comment.getText());
-        return appointmentDataAsTheyAreOnTheAppointmentConfirmationPage;
+        List<String> appointmentDataOnAppointmentConfirmationPage = new ArrayList<>();
+        appointmentDataOnAppointmentConfirmationPage.add(facilityText.getText());
+        appointmentDataOnAppointmentConfirmationPage.add(hospitalReadmissionChoice.getText());
+        appointmentDataOnAppointmentConfirmationPage.add(healthcareProgram.getText());
+        appointmentDataOnAppointmentConfirmationPage.add(visitDate.getText());
+        appointmentDataOnAppointmentConfirmationPage.add(comment.getText());
+        return appointmentDataOnAppointmentConfirmationPage;
     }
 }

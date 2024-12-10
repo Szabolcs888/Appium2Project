@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Listeners(TestListener.class)
-public class BaseTestParent {
+public class BaseTestClass {
     static {
         Configurator.setLevel("org.testng.internal.Utils", Level.OFF);
     }
@@ -29,7 +29,8 @@ public class BaseTestParent {
     protected AndroidDriver driver;
     protected WebDriverWait wait;
     private AppiumServerFromCode appiumServerFromCode = new AppiumServerFromCode();
-    private static String testStartDateTime;
+    private String testStartDateTime;
+    private String testEndDateTime;
 
     public AndroidDriver getDriver() {
         return driver;
@@ -50,7 +51,7 @@ public class BaseTestParent {
 
     @AfterSuite(alwaysRun = true)
     public void tearDownSuite() {
-        String testEndDateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy.MM.dd. HH:mm:ss"));
+        testEndDateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy.MM.dd. HH:mm:ss"));
         appiumServerFromCode.stopAppiumServer();
         executePostSuiteActions(testStartDateTime, testEndDateTime);
     }

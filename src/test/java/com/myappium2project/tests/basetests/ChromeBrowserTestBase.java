@@ -1,6 +1,6 @@
 package com.myappium2project.tests.basetests;
 
-import com.myappium2project.driver.AppiumOptionsFactory;
+import com.myappium2project.appium.options.AppiumOptionsFactory;
 import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
 import io.appium.java_client.android.AndroidDriver;
 import org.testng.annotations.*;
@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class ChromeBrowserBaseTest extends BaseTestParent {
+public class ChromeBrowserTestBase extends BaseTestClass {
     private static final String APP_NAME_LOG = "Chrome Browser";
 
     @BeforeMethod(alwaysRun = true)

@@ -4,9 +4,9 @@ import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
 import com.myappium2project.logging.testlogmessages.SlabTestLogMessages;
 import com.myappium2project.pages.saucelab.*;
 import com.myappium2project.pages.saucelab.productspages.*;
-import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
-import com.myappium2project.testsdata.CommonTestData;
-import com.myappium2project.testsdata.TestDataSaucelab;
+import com.myappium2project.tests.basetests.SauceLabApkTestBase;
+import com.myappium2project.testsdata.SaucelabData;
+import com.myappium2project.testsgroups.TestGroups;
 import com.myappium2project.utils.AppiumActions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,36 +15,38 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class EndToEndTests extends SauceLabApkBaseTest {
+@Test(groups = {TestGroups.E2E})
+public class EndToEndTests extends SauceLabApkTestBase {
     // I used an inner class in this class because there are too many variables and I wanted to separate them from the tests.
-    private static class E2ELogMessages {
+    private static final class E2ELogMessages {
         private static final String CHECK_CORRECT_PRODUCT_IN_CART_LOG = "We check if the correct products are in the cart";
-        private static final String PRODUCTS_IN_CART_CONSOLELOG = "The products in the cart: \n";
-        private static final String EXPECTED_PRODUCTS_IN_CART_CONSOLELOG = "The cart should contain these products: \n";
+        private static final String PRODUCTS_IN_CART_LOG = "The products in the cart: " + System.lineSeparator();
+        private static final String EXPECTED_PRODUCTS_IN_CART_LOG = "The cart should contain these products: " + System.lineSeparator();
         private static final String CORRECT_PRODUCTS_IN_CART_LOG = "The correct products are in the cart";
-        private static final String NOT_RIGHT_PRODUCTS_IN_CART_ERRORLOG = "There are not the right products in the cart.";
-        private static final String CART_DOES_NOT_CONTAIN_CORRECT_PRODUCTS_VALIDATION_ASSERTLOG = "The cart should contain the correct products, but it does not.";
+        private static final String NOT_RIGHT_PRODUCTS_IN_CART_LOG = "There are not the right products in the cart.";
+        private static final String NOT_RIGHT_PRODUCTS_IN_CART_ASSERT_LOG = "The cart should contain the correct products, but it does not.";
 
         private static final String CHECK_NUMBER_OF_PRODUCTS_IN_CART_LOG = "We check the number of products in the cart";
         private static final String NUMBER_OF_PRODUCTS_IN_CART_LOG = "The number of products in the cart: ";
         private static final String EXPECTED_NUMBER_OF_PRODUCTS_IN_CART_LOG = "This should be the number of products in the cart: ";
         private static final String CORRECT_NUMBER_OF_PRODUCTS_IN_CART_LOG = "The number of products in the cart is correct";
-        private static final String INCORRECT_NUMBER_OF_PRODUCTS_IN_CART_ERRORLOG = "The number of products in the cart is not correct";
+        private static final String INCORRECT_NUMBER_OF_PRODUCTS_IN_CART_LOG = "The number of products in the cart is not correct";
 
         private static final String CHECK_CORRECT_DELIVERY_AND_PAYMENT_DATA_LOG = "We check that the delivery data and payment data are correct";
-        private static final String DELIVERY_DATA_ON_PAGE_CONSOLELOG = "Delivery data is on the page: \n";
-        private static final String ORIGINAL_DELIVERY_DATA_CONSOLELOG = "Original delivery data: \n";
+        private static final String DELIVERY_DATA_ON_PAGE_LOG = "Delivery data is on the page: " + System.lineSeparator();
+        private static final String ORIGINAL_DELIVERY_DATA_LOG = "Original delivery data: " + System.lineSeparator();
         private static final String CORRECT_DELIVERY_DATA_LOG = "The delivery data is correct";
-        private static final String INCORRECT_DELIVERY_DATA_ERRORLOG = "The delivery data is correct";
-        private static final String DELIVERY_DATA_MATCH_VALIDATION_ASSERTLOG = "The delivery data should match the provided data, but it does not.";
+        private static final String INCORRECT_DELIVERY_DATA_LOG = "The delivery data is correct";
+        private static final String INCORRECT_DELIVERY_DATA_ASSERT_LOG = "The delivery data should match the provided data, but it does not.";
 
-        private static final String PAYMENT_DATA_ON_PAGE_CONSOLELOG = "Payment data is on the page: \n";
-        private static final String ORIGINAL_PAYMENT_DATA_CONSOLELOG = "Original payment data: \n";
+        private static final String PAYMENT_DATA_ON_PAGE_LOG = "Payment data is on the page: " + System.lineSeparator();
+        private static final String ORIGINAL_PAYMENT_DATA_LOG = "Original payment data: " + System.lineSeparator();
         private static final String CORRECT_PAYMENT_DATA_LOG = "The payment data is correct";
-        private static final String INCORRECT_PAYMENT_DATA_ERRORLOG = "The payment data is not correct";
-        private static final String PAYMENT_DATA_MATCH_VALIDATION_ASSERTLOG = "The payment data should match the provided data, but it does not.";
+        private static final String INCORRECT_PAYMENT_DATA_LOG = "The payment data is not correct";
+        private static final String INCORRECT_PAYMENT_DATA_ASSERT_LOG = "The payment data should match the provided data, but it does not.";
 
-        private static String getCorrectNumberOfProductsValidationAssertLog(int expectedProductsQuantityInMyCart, int productsQuantityInMyCart) {
+        private static String incorrectNumberOfProductsAssertLog(
+                int expectedProductsQuantityInMyCart, int productsQuantityInMyCart) {
             return String.format("The number of products in the cart should be %s, but it is %s.",
                     expectedProductsQuantityInMyCart, productsQuantityInMyCart);
         }
@@ -58,8 +60,8 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         hamburgerMenu.pressLogInButton();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(TestDataSaucelab.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
-        loginPage.fillPasswordInput(TestDataSaucelab.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillUserNameInput(SaucelabData.VALID_USERNAME_ACC1, CommonTestLogMessages.VALID_LOG);
+        loginPage.fillPasswordInput(SaucelabData.VALID_PASSWORD_ACC1, CommonTestLogMessages.VALID_LOG);
         loginPage.pressLoginButton();
 
         ProductsPage productsPage = new ProductsPage(driver, wait);
@@ -108,15 +110,15 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         List<String> productsNamesListAsItShouldBe = Arrays.asList(
                 "Sauce Labs Bike Light", "Sauce Labs Bolt T-Shirt", "Sauce Labs Fleece Jacket",
                 "Sauce Labs Onesie", "Test.allTheThings() T-Shirt");
-        System.out.println(E2ELogMessages.PRODUCTS_IN_CART_CONSOLELOG + productsNamesListInMyCart);
-        System.out.println(E2ELogMessages.EXPECTED_PRODUCTS_IN_CART_CONSOLELOG + productsNamesListAsItShouldBe);
+        System.out.println(E2ELogMessages.PRODUCTS_IN_CART_LOG + productsNamesListInMyCart);
+        System.out.println(E2ELogMessages.EXPECTED_PRODUCTS_IN_CART_LOG + productsNamesListAsItShouldBe);
         if (productsNamesListInMyCart.equals(productsNamesListAsItShouldBe)) {
             LOG.info(E2ELogMessages.CORRECT_PRODUCTS_IN_CART_LOG);
         } else {
-            LOG.error(E2ELogMessages.NOT_RIGHT_PRODUCTS_IN_CART_ERRORLOG);
+            LOG.error(E2ELogMessages.NOT_RIGHT_PRODUCTS_IN_CART_LOG);
         }
         Assert.assertEquals(productsNamesListInMyCart, productsNamesListAsItShouldBe,
-                E2ELogMessages.CART_DOES_NOT_CONTAIN_CORRECT_PRODUCTS_VALIDATION_ASSERTLOG);
+                E2ELogMessages.NOT_RIGHT_PRODUCTS_IN_CART_ASSERT_LOG);
 
         LOG.info(E2ELogMessages.CHECK_NUMBER_OF_PRODUCTS_IN_CART_LOG);
         int productsQuantityInMyCart = productsPage.getProductCounterOnCartBadgeButton();
@@ -126,10 +128,10 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         if (productsQuantityInMyCart == expectedProductsQuantityInMyCart) {
             LOG.info(E2ELogMessages.CORRECT_NUMBER_OF_PRODUCTS_IN_CART_LOG);
         } else {
-            LOG.error(E2ELogMessages.INCORRECT_NUMBER_OF_PRODUCTS_IN_CART_ERRORLOG);
+            LOG.error(E2ELogMessages.INCORRECT_NUMBER_OF_PRODUCTS_IN_CART_LOG);
         }
         Assert.assertEquals(productsQuantityInMyCart, expectedProductsQuantityInMyCart,
-                E2ELogMessages.getCorrectNumberOfProductsValidationAssertLog(expectedProductsQuantityInMyCart, productsQuantityInMyCart));
+                E2ELogMessages.incorrectNumberOfProductsAssertLog(expectedProductsQuantityInMyCart, productsQuantityInMyCart));
 
         cartPage.pressProceedToCheckoutButton();
 
@@ -140,24 +142,24 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         if (checkoutPageTitleText.equals(checkoutPageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, checkoutPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, checkoutPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, checkoutPageName);
         }
         Assert.assertEquals(checkoutPageTitleText, checkoutPageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(checkoutPageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(checkoutPageName));
 
-        checkoutPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC1);
-        checkoutPage.fillAddressLine1Input(TestDataSaucelab.ADDRESS_LINE1_ACC1);
-        checkoutPage.fillCityInput(TestDataSaucelab.CITY_ACC1);
-        checkoutPage.fillStateRegionInput(TestDataSaucelab.STATE_REGION_ACC1);
-        checkoutPage.fillZipCodeInput(TestDataSaucelab.ZIP_CODE_ACC1);
-        checkoutPage.fillCountryInput(TestDataSaucelab.COUNTRY_ACC1);
+        checkoutPage.fillFullNameInput(SaucelabData.FULL_NAME_ACC1);
+        checkoutPage.fillAddressLine1Input(SaucelabData.ADDRESS_LINE1_ACC1);
+        checkoutPage.fillCityInput(SaucelabData.CITY_ACC1);
+        checkoutPage.fillStateRegionInput(SaucelabData.STATE_REGION_ACC1);
+        checkoutPage.fillZipCodeInput(SaucelabData.ZIP_CODE_ACC1);
+        checkoutPage.fillCountryInput(SaucelabData.COUNTRY_ACC1);
         checkoutPage.pressToPaymentButton();
 
         CheckoutPaymentPage checkoutPaymentPage = new CheckoutPaymentPage(driver);
-        checkoutPaymentPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC1);
-        checkoutPaymentPage.fillCardNumberInput(TestDataSaucelab.CARD_NUMBER_ACC1);
-        checkoutPaymentPage.fillExpirationDateInput(TestDataSaucelab.EXPIRATION_DATE_ACC1);
-        checkoutPaymentPage.fillSecurityCodeInput(TestDataSaucelab.SECURITY_CODE_ACC1);
+        checkoutPaymentPage.fillFullNameInput(SaucelabData.FULL_NAME_ACC1);
+        checkoutPaymentPage.fillCardNumberInput(SaucelabData.CARD_NUMBER_ACC1);
+        checkoutPaymentPage.fillExpirationDateInput(SaucelabData.EXPIRATION_DATE_ACC1);
+        checkoutPaymentPage.fillSecurityCodeInput(SaucelabData.SECURITY_CODE_ACC1);
         checkoutPaymentPage.pressReviewOrderButton();
 
         LOG.info(E2ELogMessages.CHECK_CORRECT_DELIVERY_AND_PAYMENT_DATA_LOG);
@@ -165,31 +167,31 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         AppiumActions.scrollWithFixCoordinates(driver, 2, "DOWN", 0.5);
 
         List<String> originalDeliveryData = Arrays.asList(
-                TestDataSaucelab.FULL_NAME_ACC1, TestDataSaucelab.ADDRESS_LINE1_ACC1, TestDataSaucelab.CITY_ACC1,
-                TestDataSaucelab.STATE_REGION_ACC1, TestDataSaucelab.ZIP_CODE_ACC1, TestDataSaucelab.COUNTRY_ACC1);
+                SaucelabData.FULL_NAME_ACC1, SaucelabData.ADDRESS_LINE1_ACC1, SaucelabData.CITY_ACC1,
+                SaucelabData.STATE_REGION_ACC1, SaucelabData.ZIP_CODE_ACC1, SaucelabData.COUNTRY_ACC1);
         List<String> deliveryDataOnOrderReviewPage = checkoutOrderReviewPage.getDeliveryAddressData();
-        System.out.println(E2ELogMessages.DELIVERY_DATA_ON_PAGE_CONSOLELOG + deliveryDataOnOrderReviewPage);
-        System.out.println(E2ELogMessages.ORIGINAL_DELIVERY_DATA_CONSOLELOG + originalDeliveryData);
+        System.out.println(E2ELogMessages.DELIVERY_DATA_ON_PAGE_LOG + deliveryDataOnOrderReviewPage);
+        System.out.println(E2ELogMessages.ORIGINAL_DELIVERY_DATA_LOG + originalDeliveryData);
         if (deliveryDataOnOrderReviewPage.equals(originalDeliveryData)) {
             LOG.info(E2ELogMessages.CORRECT_DELIVERY_DATA_LOG);
         } else {
-            LOG.error(E2ELogMessages.INCORRECT_DELIVERY_DATA_ERRORLOG);
+            LOG.error(E2ELogMessages.INCORRECT_DELIVERY_DATA_LOG);
         }
         Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData,
-                E2ELogMessages.DELIVERY_DATA_MATCH_VALIDATION_ASSERTLOG);
+                E2ELogMessages.INCORRECT_DELIVERY_DATA_ASSERT_LOG);
 
         List<String> originalPaymentData = Arrays.asList(
-                TestDataSaucelab.FULL_NAME_ACC1, TestDataSaucelab.CARD_NUMBER_ACC1, TestDataSaucelab.EXPIRATION_DATE_ACC1);
+                SaucelabData.FULL_NAME_ACC1, SaucelabData.CARD_NUMBER_ACC1, SaucelabData.EXPIRATION_DATE_ACC1);
         List<String> paymentDataOnOrderReviewPage = checkoutOrderReviewPage.getPaymentData();
-        System.out.println(E2ELogMessages.PAYMENT_DATA_ON_PAGE_CONSOLELOG + paymentDataOnOrderReviewPage);
-        System.out.println(E2ELogMessages.ORIGINAL_PAYMENT_DATA_CONSOLELOG + originalPaymentData);
+        System.out.println(E2ELogMessages.PAYMENT_DATA_ON_PAGE_LOG + paymentDataOnOrderReviewPage);
+        System.out.println(E2ELogMessages.ORIGINAL_PAYMENT_DATA_LOG + originalPaymentData);
         if (paymentDataOnOrderReviewPage.equals(originalPaymentData)) {
             LOG.info(E2ELogMessages.CORRECT_PAYMENT_DATA_LOG);
         } else {
-            LOG.error(E2ELogMessages.INCORRECT_PAYMENT_DATA_ERRORLOG);
+            LOG.error(E2ELogMessages.INCORRECT_PAYMENT_DATA_LOG);
         }
         Assert.assertEquals(paymentDataOnOrderReviewPage, originalPaymentData,
-                E2ELogMessages.PAYMENT_DATA_MATCH_VALIDATION_ASSERTLOG);
+                E2ELogMessages.INCORRECT_PAYMENT_DATA_ASSERT_LOG);
 
         checkoutOrderReviewPage.pressPlaceOrderButton();
 
@@ -200,10 +202,10 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         if (checkoutCompletePageTitleText.equals(checkoutCompletePageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, checkoutCompletePageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, checkoutCompletePageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, checkoutCompletePageName);
         }
         Assert.assertEquals(checkoutCompletePageTitleText, checkoutCompletePageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(checkoutCompletePageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(checkoutCompletePageName));
 
         checkoutCompletePage.pressContinueShoppingButton();
 
@@ -214,18 +216,18 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         if (isDisplayedNoItemsText) {
             LOG.info(SlabTestLogMessages.CART_EMPTY_LOG);
         } else {
-            LOG.error(SlabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_NOT_EMPTY_LOG);
         }
-        Assert.assertTrue(isDisplayedNoItemsText, SlabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
+        Assert.assertTrue(isDisplayedNoItemsText, SlabTestLogMessages.CART_NOT_EMPTY_ASSERT_LOG);
 
         LOG.info(SlabTestLogMessages.CHECK_CART_COUNTER_AVAILABLE_LOG);
         boolean isDisplayedProductCounter = productsPage.isDisplayedProductCounterOnCartBadgeButton();
         if (!isDisplayedProductCounter) {
             LOG.info(SlabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_LOG);
         } else {
-            LOG.error(SlabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_COUNTER_AVAILABLE_LOG);
         }
-        Assert.assertFalse(isDisplayedProductCounter, SlabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
+        Assert.assertFalse(isDisplayedProductCounter, SlabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_ASSERT_LOG);
 
         AppiumActions.navigateBack(driver);
 
@@ -240,10 +242,10 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         if (loginPageTitleText.equals(loginPageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, loginPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, loginPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, loginPageName);
         }
         Assert.assertEquals(loginPageTitleText, loginPageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(loginPageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(loginPageName));
     }
 
     @Test(priority = 2,
@@ -300,15 +302,15 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         List<String> productsNamesListAsItShouldBe = Arrays.asList(
                 "Sauce Labs Backpack", "Sauce Labs Bike Light", "Sauce Labs Bolt T-Shirt",
                 "Sauce Labs Fleece Jacket", "Sauce Labs Onesie", "Test.allTheThings() T-Shirt");
-        System.out.println(E2ELogMessages.PRODUCTS_IN_CART_CONSOLELOG + productsNamesListInMyCart);
-        System.out.println(E2ELogMessages.EXPECTED_PRODUCTS_IN_CART_CONSOLELOG + productsNamesListAsItShouldBe);
+        System.out.println(E2ELogMessages.PRODUCTS_IN_CART_LOG + productsNamesListInMyCart);
+        System.out.println(E2ELogMessages.EXPECTED_PRODUCTS_IN_CART_LOG + productsNamesListAsItShouldBe);
         if (productsNamesListInMyCart.equals(productsNamesListAsItShouldBe)) {
             LOG.info(E2ELogMessages.CORRECT_PRODUCTS_IN_CART_LOG);
         } else {
-            LOG.error(E2ELogMessages.NOT_RIGHT_PRODUCTS_IN_CART_ERRORLOG);
+            LOG.error(E2ELogMessages.NOT_RIGHT_PRODUCTS_IN_CART_LOG);
         }
         Assert.assertEquals(productsNamesListInMyCart, productsNamesListAsItShouldBe,
-                E2ELogMessages.CART_DOES_NOT_CONTAIN_CORRECT_PRODUCTS_VALIDATION_ASSERTLOG);
+                E2ELogMessages.NOT_RIGHT_PRODUCTS_IN_CART_ASSERT_LOG);
 
         LOG.info(E2ELogMessages.CHECK_NUMBER_OF_PRODUCTS_IN_CART_LOG);
         int productsQuantityInMyCart = productsPage.getProductCounterOnCartBadgeButton();
@@ -318,16 +320,16 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         if (productsQuantityInMyCart == expectedProductsQuantityInMyCart) {
             LOG.info(E2ELogMessages.CORRECT_NUMBER_OF_PRODUCTS_IN_CART_LOG);
         } else {
-            LOG.error(E2ELogMessages.INCORRECT_NUMBER_OF_PRODUCTS_IN_CART_ERRORLOG);
+            LOG.error(E2ELogMessages.INCORRECT_NUMBER_OF_PRODUCTS_IN_CART_LOG);
         }
         Assert.assertEquals(productsQuantityInMyCart, expectedProductsQuantityInMyCart,
-                E2ELogMessages.getCorrectNumberOfProductsValidationAssertLog(expectedProductsQuantityInMyCart, productsQuantityInMyCart));
+                E2ELogMessages.incorrectNumberOfProductsAssertLog(expectedProductsQuantityInMyCart, productsQuantityInMyCart));
 
         cartPage.pressProceedToCheckoutButton();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(TestDataSaucelab.VALID_USERNAME_ACC2, CommonTestData.VALID_LOG_MESSAGE);
-        loginPage.fillPasswordInput(TestDataSaucelab.VALID_PASSWORD_ACC2, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillUserNameInput(SaucelabData.VALID_USERNAME_ACC2, CommonTestLogMessages.VALID_LOG);
+        loginPage.fillPasswordInput(SaucelabData.VALID_PASSWORD_ACC2, CommonTestLogMessages.VALID_LOG);
         loginPage.pressLoginButton();
 
         String checkoutPageName = "Checkout";
@@ -337,55 +339,55 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         if (checkoutPageTitleText.equals(checkoutPageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, checkoutPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, checkoutPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, checkoutPageName);
         }
         Assert.assertEquals(checkoutPageTitleText, checkoutPageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(checkoutPageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(checkoutPageName));
 
-        checkoutPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC2);
-        checkoutPage.fillAddressLine1Input(TestDataSaucelab.ADDRESS_LINE1_ACC2);
-        checkoutPage.fillCityInput(TestDataSaucelab.CITY_ACC2);
-        checkoutPage.fillStateRegionInput(TestDataSaucelab.STATE_REGION_ACC2);
-        checkoutPage.fillZipCodeInput(TestDataSaucelab.ZIP_CODE_ACC2);
-        checkoutPage.fillCountryInput(TestDataSaucelab.COUNTRY_ACC2);
+        checkoutPage.fillFullNameInput(SaucelabData.FULL_NAME_ACC2);
+        checkoutPage.fillAddressLine1Input(SaucelabData.ADDRESS_LINE1_ACC2);
+        checkoutPage.fillCityInput(SaucelabData.CITY_ACC2);
+        checkoutPage.fillStateRegionInput(SaucelabData.STATE_REGION_ACC2);
+        checkoutPage.fillZipCodeInput(SaucelabData.ZIP_CODE_ACC2);
+        checkoutPage.fillCountryInput(SaucelabData.COUNTRY_ACC2);
         checkoutPage.pressToPaymentButton();
 
         CheckoutPaymentPage checkoutPaymentPage = new CheckoutPaymentPage(driver);
-        checkoutPaymentPage.fillFullNameInput(TestDataSaucelab.FULL_NAME_ACC2);
-        checkoutPaymentPage.fillCardNumberInput(TestDataSaucelab.CARD_NUMBER_ACC2);
-        checkoutPaymentPage.fillExpirationDateInput(TestDataSaucelab.EXPIRATION_DATE_ACC2);
-        checkoutPaymentPage.fillSecurityCodeInput(TestDataSaucelab.SECURITY_CODE_ACC2);
+        checkoutPaymentPage.fillFullNameInput(SaucelabData.FULL_NAME_ACC2);
+        checkoutPaymentPage.fillCardNumberInput(SaucelabData.CARD_NUMBER_ACC2);
+        checkoutPaymentPage.fillExpirationDateInput(SaucelabData.EXPIRATION_DATE_ACC2);
+        checkoutPaymentPage.fillSecurityCodeInput(SaucelabData.SECURITY_CODE_ACC2);
         checkoutPaymentPage.pressReviewOrderButton();
 
         LOG.info(E2ELogMessages.CHECK_CORRECT_DELIVERY_AND_PAYMENT_DATA_LOG);
         CheckoutOrderReviewPage checkoutOrderReviewPage = new CheckoutOrderReviewPage(driver);
         AppiumActions.scrollWithFixCoordinates(driver, 2, "DOWN", 0.5);
         List<String> originalDeliveryData = Arrays.asList(
-                TestDataSaucelab.FULL_NAME_ACC2, TestDataSaucelab.ADDRESS_LINE1_ACC2, TestDataSaucelab.CITY_ACC2,
-                TestDataSaucelab.STATE_REGION_ACC2, TestDataSaucelab.ZIP_CODE_ACC2, TestDataSaucelab.COUNTRY_ACC2);
+                SaucelabData.FULL_NAME_ACC2, SaucelabData.ADDRESS_LINE1_ACC2, SaucelabData.CITY_ACC2,
+                SaucelabData.STATE_REGION_ACC2, SaucelabData.ZIP_CODE_ACC2, SaucelabData.COUNTRY_ACC2);
         List<String> deliveryDataOnOrderReviewPage = checkoutOrderReviewPage.getDeliveryAddressData();
-        System.out.println(E2ELogMessages.DELIVERY_DATA_ON_PAGE_CONSOLELOG + deliveryDataOnOrderReviewPage);
-        System.out.println(E2ELogMessages.ORIGINAL_DELIVERY_DATA_CONSOLELOG + originalDeliveryData);
+        System.out.println(E2ELogMessages.DELIVERY_DATA_ON_PAGE_LOG + deliveryDataOnOrderReviewPage);
+        System.out.println(E2ELogMessages.ORIGINAL_DELIVERY_DATA_LOG + originalDeliveryData);
         if (deliveryDataOnOrderReviewPage.equals(originalDeliveryData)) {
             LOG.info(E2ELogMessages.CORRECT_DELIVERY_DATA_LOG);
         } else {
-            LOG.error(E2ELogMessages.INCORRECT_DELIVERY_DATA_ERRORLOG);
+            LOG.error(E2ELogMessages.INCORRECT_DELIVERY_DATA_LOG);
         }
         Assert.assertEquals(deliveryDataOnOrderReviewPage, originalDeliveryData,
-                E2ELogMessages.DELIVERY_DATA_MATCH_VALIDATION_ASSERTLOG);
+                E2ELogMessages.INCORRECT_DELIVERY_DATA_ASSERT_LOG);
 
         List<String> originalPaymentData = Arrays.asList(
-                TestDataSaucelab.FULL_NAME_ACC2, TestDataSaucelab.CARD_NUMBER_ACC2, TestDataSaucelab.EXPIRATION_DATE_ACC2);
+                SaucelabData.FULL_NAME_ACC2, SaucelabData.CARD_NUMBER_ACC2, SaucelabData.EXPIRATION_DATE_ACC2);
         List<String> paymentDataOnOrderReviewPage = checkoutOrderReviewPage.getPaymentData();
-        System.out.println(E2ELogMessages.PAYMENT_DATA_ON_PAGE_CONSOLELOG + paymentDataOnOrderReviewPage);
-        System.out.println(E2ELogMessages.ORIGINAL_PAYMENT_DATA_CONSOLELOG + originalPaymentData);
+        System.out.println(E2ELogMessages.PAYMENT_DATA_ON_PAGE_LOG + paymentDataOnOrderReviewPage);
+        System.out.println(E2ELogMessages.ORIGINAL_PAYMENT_DATA_LOG + originalPaymentData);
         if (paymentDataOnOrderReviewPage.equals(originalPaymentData)) {
             LOG.info(E2ELogMessages.CORRECT_PAYMENT_DATA_LOG);
         } else {
-            LOG.error(E2ELogMessages.INCORRECT_PAYMENT_DATA_ERRORLOG);
+            LOG.error(E2ELogMessages.INCORRECT_PAYMENT_DATA_LOG);
         }
         Assert.assertEquals(paymentDataOnOrderReviewPage, originalPaymentData,
-                E2ELogMessages.PAYMENT_DATA_MATCH_VALIDATION_ASSERTLOG);
+                E2ELogMessages.INCORRECT_PAYMENT_DATA_ASSERT_LOG);
 
         checkoutOrderReviewPage.pressPlaceOrderButton();
 
@@ -396,10 +398,10 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         if (checkoutCompletePageTitleText.equals(checkoutCompletePageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, checkoutCompletePageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, checkoutCompletePageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, checkoutCompletePageName);
         }
         Assert.assertEquals(checkoutCompletePageTitleText, checkoutCompletePageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(checkoutCompletePageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(checkoutCompletePageName));
 
         checkoutCompletePage.pressContinueShoppingButton();
 
@@ -410,18 +412,18 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         if (isDisplayedNoItemsText) {
             LOG.info(SlabTestLogMessages.CART_EMPTY_LOG);
         } else {
-            LOG.error(SlabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_NOT_EMPTY_LOG);
         }
-        Assert.assertTrue(isDisplayedNoItemsText, SlabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
+        Assert.assertTrue(isDisplayedNoItemsText, SlabTestLogMessages.CART_NOT_EMPTY_ASSERT_LOG);
 
         LOG.info(SlabTestLogMessages.CHECK_CART_COUNTER_AVAILABLE_LOG);
         boolean isDisplayedProductCounter = productsPage.isDisplayedProductCounterOnCartBadgeButton();
         if (!isDisplayedProductCounter) {
             LOG.info(SlabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_LOG);
         } else {
-            LOG.error(SlabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_COUNTER_AVAILABLE_LOG);
         }
-        Assert.assertFalse(isDisplayedProductCounter, SlabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
+        Assert.assertFalse(isDisplayedProductCounter, SlabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_ASSERT_LOG);
 
         AppiumActions.navigateBack(driver);
 
@@ -437,9 +439,9 @@ public class EndToEndTests extends SauceLabApkBaseTest {
         if (loginPageTitleText.equals(loginPageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, loginPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, loginPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, loginPageName);
         }
         Assert.assertEquals(loginPageTitleText, loginPageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(loginPageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(loginPageName));
     }
 }

@@ -1,7 +1,7 @@
 package com.myappium2project.pages.curahealthcarechrome;
 
 import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.NoSuchElementException;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ProfilePage extends BasePage {
+public class ProfilePage extends BasePageClass {
     @FindBy(xpath = "//p[text()='Under construction.']")
     private WebElement underConstructionsText;
 
@@ -30,7 +30,7 @@ public class ProfilePage extends BasePage {
         try {
             return underConstructionsText.isDisplayed() &&
                     underConstructionsText.isEnabled() &&
-                    underConstructionsText.getText().equals("Under construction.");
+                    "Under construction.".equals(underConstructionsText.getText());
         } catch (NoSuchElementException e) {
             return false;
         }

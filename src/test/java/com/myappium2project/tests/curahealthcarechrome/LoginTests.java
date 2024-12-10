@@ -2,30 +2,30 @@ package com.myappium2project.tests.curahealthcarechrome;
 
 import com.myappium2project.logging.pagelogmessages.CuraPageLogMessages;
 import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
-import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
-import com.myappium2project.testsdata.CommonTestData;
-import com.myappium2project.testsdata.TestDataCura;
+import com.myappium2project.tests.basetests.ChromeBrowserTestBase;
+import com.myappium2project.testsdata.CuraHealthcareData;
+import com.myappium2project.testsgroups.TestGroups;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.curahealthcarechrome.HamburgerMenu;
 import com.myappium2project.pages.curahealthcarechrome.LoginPage;
 import com.myappium2project.pages.curahealthcarechrome.MakeAppointmentPage;
 
-public class LoginTests extends ChromeBrowserBaseTest {
+public class LoginTests extends ChromeBrowserTestBase {
     private static final String EXPECTED_ERROR_MESSAGE = "Login failed! Please ensure the username and password are valid.";
 
     @Test(priority = 1,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testLoginWithValidDataCura() {
-        driver.get(TestDataCura.CURA_BASE_URL);
+        driver.get(CuraHealthcareData.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
-        loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillUserNameInput(CuraHealthcareData.VALID_USERNAME_ACC1, CommonTestLogMessages.VALID_LOG);
+        loginPage.fillPasswordInput(CuraHealthcareData.VALID_PASSWORD_ACC1, CommonTestLogMessages.VALID_LOG);
         loginPage.pressLoginButton();
 
         String makeAppointmentPageName = "Make Appointment";
@@ -35,86 +35,86 @@ public class LoginTests extends ChromeBrowserBaseTest {
         if (isMakeAppointmentPageLoaded) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, makeAppointmentPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, makeAppointmentPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, makeAppointmentPageName);
         }
-        Assert.assertTrue(isMakeAppointmentPageLoaded, CuraPageLogMessages.getPageLoadValidationAssertLog(makeAppointmentPageName));
+        Assert.assertTrue(isMakeAppointmentPageLoaded, CuraPageLogMessages.pageNotLoadAssertLog(makeAppointmentPageName));
     }
 
     @Test(priority = 2,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testLoginWithValidUsernameInvalidPasswordCura() {
-        driver.get(TestDataCura.CURA_BASE_URL);
+        driver.get(CuraHealthcareData.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
-        loginPage.fillPasswordInput(CommonTestData.INVALID_PASSWORD, CommonTestData.INVALID_LOG_MESSAGE);
+        loginPage.fillUserNameInput(CuraHealthcareData.VALID_USERNAME_ACC1, CommonTestLogMessages.VALID_LOG);
+        loginPage.fillPasswordInput(CommonTestLogMessages.INVALID_PASSWORD_LOG, CommonTestLogMessages.INVALID_LOG);
         loginPage.pressLoginButton();
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
         LOG.info(CommonTestLogMessages.EXPECTED_ERROR_MESSAGE_LOG, errorMessageText);
-        if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
-            LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
+        if (EXPECTED_ERROR_MESSAGE.equals(errorMessageText)) {
+            LOG.info(CommonTestLogMessages.CORRECT_ERROR_MESSAGE_LOG);
         } else {
-            LOG.error(CommonTestLogMessages.ERROR_MESSAGE_INCORRECT_ERRORLOG);
+            LOG.error(CommonTestLogMessages.INCORRECT_ERROR_MESSAGE_LOG);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
-                CommonTestLogMessages.getErrorMessageValidationAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
+                CommonTestLogMessages.incorrectErrorMessageAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
     }
 
     @Test(priority = 3,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testLoginWithInvalidUsernameValidPasswordCura() {
-        driver.get(TestDataCura.CURA_BASE_URL);
+        driver.get(CuraHealthcareData.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(CommonTestData.INVALID_USERNAME, CommonTestData.INVALID_LOG_MESSAGE);
-        loginPage.fillPasswordInput(TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillUserNameInput(CommonTestLogMessages.INVALID_USERNAME_LOG, CommonTestLogMessages.INVALID_LOG);
+        loginPage.fillPasswordInput(CuraHealthcareData.VALID_PASSWORD_ACC1, CommonTestLogMessages.VALID_LOG);
         loginPage.pressLoginButton();
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
         LOG.info(CommonTestLogMessages.EXPECTED_ERROR_MESSAGE_LOG, errorMessageText);
-        if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
-            LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
+        if (EXPECTED_ERROR_MESSAGE.equals(errorMessageText)) {
+            LOG.info(CommonTestLogMessages.CORRECT_ERROR_MESSAGE_LOG);
         } else {
-            LOG.error(CommonTestLogMessages.ERROR_MESSAGE_INCORRECT_ERRORLOG);
+            LOG.error(CommonTestLogMessages.INCORRECT_ERROR_MESSAGE_LOG);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
-                CommonTestLogMessages.getErrorMessageValidationAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
+                CommonTestLogMessages.incorrectErrorMessageAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
     }
 
     @Test(priority = 4,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testLoginWithEmptyUsernameEmptyPasswordCura() {
-        driver.get(TestDataCura.CURA_BASE_URL);
+        driver.get(CuraHealthcareData.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLoginButton();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput("", CommonTestData.EMPTY_LOG_MESSAGE);
-        loginPage.fillPasswordInput("", CommonTestData.EMPTY_LOG_MESSAGE);
+        loginPage.fillUserNameInput("", CommonTestLogMessages.EMPTY_LOG);
+        loginPage.fillPasswordInput("", CommonTestLogMessages.EMPTY_LOG);
         loginPage.pressLoginButton();
 
         LOG.info(CommonTestLogMessages.CHECK_ERROR_MESSAGE_LOG);
         String errorMessageText = loginPage.getErrorMessageText();
         LOG.info(CommonTestLogMessages.EXPECTED_ERROR_MESSAGE_LOG, errorMessageText);
-        if (errorMessageText.equals(EXPECTED_ERROR_MESSAGE)) {
-            LOG.info(CommonTestLogMessages.ERROR_MESSAGE_CORRECT_LOG);
+        if (EXPECTED_ERROR_MESSAGE.equals(errorMessageText)) {
+            LOG.info(CommonTestLogMessages.CORRECT_ERROR_MESSAGE_LOG);
         } else {
-            LOG.error(CommonTestLogMessages.ERROR_MESSAGE_INCORRECT_ERRORLOG);
+            LOG.error(CommonTestLogMessages.INCORRECT_ERROR_MESSAGE_LOG);
         }
         Assert.assertEquals(errorMessageText, EXPECTED_ERROR_MESSAGE,
-                CommonTestLogMessages.getErrorMessageValidationAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
+                CommonTestLogMessages.incorrectErrorMessageAssertLog(errorMessageText, EXPECTED_ERROR_MESSAGE));
     }
 }

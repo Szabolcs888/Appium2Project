@@ -1,7 +1,7 @@
 package com.myappium2project.pages.curahealthcarechrome;
 
 import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,8 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends BasePage {
-    AndroidDriver driver;
+public class LoginPage extends BasePageClass {
+    private final AndroidDriver driver;
 
     @FindBy(id = "txt-username")
     private WebElement usernameInput;
@@ -53,7 +53,7 @@ public class LoginPage extends BasePage {
         try {
             return errorMessage.getText();
         } catch (NoSuchElementException e) {
-            return CommonPageLogMessages.ERROR_MESSAGE_IS_NOT_AVAILABLE_LOG;
+            return CommonPageLogMessages.ERROR_MESSAGE_NOT_AVAILABLE_LOG;
         }
     }
 }

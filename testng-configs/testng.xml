@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Master Suite" verbose="1" >
     <suite-files>
-        <suite-file path="testng-SmokeTest.xml"/>
-        <suite-file path="testng-RegressionTest(DataFromXmlFile).xml"/>
+        <suite-file path="testng-Smoke.xml"/>
+        <suite-file path="testng-Regression(DataFromXmlFile).xml"/>
         <suite-file path="testng-CU_EndToEndAndAppointmentConfirmationTests.xml"/>
         <suite-file path="testng-SL_DropdownMenuAndFeedbackPopupTests.xml"/>
         <suite-file path="testng-SL_EndToEndAndCartemptiyngTests.xml"/>

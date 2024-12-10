@@ -1,26 +1,28 @@
 package com.myappium2project.tests.saucelab;
 
+import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
 import com.myappium2project.logging.testlogmessages.SlabTestLogMessages;
 import com.myappium2project.pages.saucelab.*;
 import com.myappium2project.pages.saucelab.productspages.*;
-import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
-import com.myappium2project.testsdata.CommonTestData;
-import com.myappium2project.testsdata.TestDataSaucelab;
+import com.myappium2project.tests.basetests.SauceLabApkTestBase;
+import com.myappium2project.testsdata.SaucelabData;
+import com.myappium2project.testsgroups.TestGroups;
 import com.myappium2project.utils.AppiumActions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CartEmptyingTests extends SauceLabApkBaseTest {
+@Test(groups = {TestGroups.E2E})
+public class CartEmptyingTests extends SauceLabApkTestBase {
 
-    @Test(timeOut = 620_00, priority = 1)
-    public void testPlacingProductsInTheCartAndThenEmptyingThemSL() throws InterruptedException {
+    @Test(timeOut = 62_000, priority = 1)
+    public void testPlacingProductsInCartAndThenEmptyingThemSL() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressLogInButton();
 
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillUserNameInput(TestDataSaucelab.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE);
-        loginPage.fillPasswordInput(TestDataSaucelab.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE);
+        loginPage.fillUserNameInput(SaucelabData.VALID_USERNAME_ACC1, CommonTestLogMessages.VALID_LOG);
+        loginPage.fillPasswordInput(SaucelabData.VALID_PASSWORD_ACC1, CommonTestLogMessages.VALID_LOG);
         loginPage.pressLoginButton();
 
         ProductsPage productPage = new ProductsPage(driver, wait);
@@ -72,9 +74,9 @@ public class CartEmptyingTests extends SauceLabApkBaseTest {
         if (isDisplayedNoItemsText) {
             LOG.info(SlabTestLogMessages.CART_EMPTY_LOG);
         } else {
-            LOG.error(SlabTestLogMessages.CART_NOT_EMPTY_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_NOT_EMPTY_LOG);
         }
-        Assert.assertTrue(isDisplayedNoItemsText, SlabTestLogMessages.CART_EMPTY_VALIDATION_ASSERTLOG);
+        Assert.assertTrue(isDisplayedNoItemsText, SlabTestLogMessages.CART_NOT_EMPTY_ASSERT_LOG);
 
         cartNoItemsPage.pressGoShoppingButton();
 
@@ -83,8 +85,8 @@ public class CartEmptyingTests extends SauceLabApkBaseTest {
         if (!isDisplayedProductCounter) {
             LOG.info(SlabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_LOG);
         } else {
-            LOG.error(SlabTestLogMessages.CART_COUNTER_AVAILABLE_ERRORLOG);
+            LOG.error(SlabTestLogMessages.CART_COUNTER_AVAILABLE_LOG);
         }
-        Assert.assertFalse(isDisplayedProductCounter, SlabTestLogMessages.CART_COUNTER_AVAILABLE_VALIDATION_ASSERTLOG);
+        Assert.assertFalse(isDisplayedProductCounter, SlabTestLogMessages.CART_COUNTER_NOT_AVAILABLE_ASSERT_LOG);
     }
 }

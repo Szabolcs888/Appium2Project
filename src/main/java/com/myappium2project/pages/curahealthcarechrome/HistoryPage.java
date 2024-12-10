@@ -1,6 +1,6 @@
 package com.myappium2project.pages.curahealthcarechrome;
 
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.NoSuchElementException;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HistoryPage extends BasePage {
+public class HistoryPage extends BasePageClass {
     @FindBy(xpath = "//h2[text()='History']")
     private WebElement historyTitleText;
 
@@ -39,19 +39,19 @@ public class HistoryPage extends BasePage {
         try {
             return historyTitleText.isDisplayed() &&
                     historyTitleText.isEnabled() &&
-                    historyTitleText.getText().equals("History");
+                    "History".equals(historyTitleText.getText());
         } catch (NoSuchElementException e) {
             return false;
         }
     }
 
     public List<String> getAppointmentDataOnHistoryPage() {
-        List<String> appointmentDataAsTheyAreOnTheHistoryPage = new ArrayList<>();
-        appointmentDataAsTheyAreOnTheHistoryPage.add(visitDate.getText());
-        appointmentDataAsTheyAreOnTheHistoryPage.add(facilityText.getText());
-        appointmentDataAsTheyAreOnTheHistoryPage.add(hospitalReadmissionChoice.getText());
-        appointmentDataAsTheyAreOnTheHistoryPage.add(healthcareProgram.getText());
-        appointmentDataAsTheyAreOnTheHistoryPage.add(comment.getText());
-        return appointmentDataAsTheyAreOnTheHistoryPage;
+        List<String> appointmentDataOnHistoryPage = new ArrayList<>();
+        appointmentDataOnHistoryPage.add(visitDate.getText());
+        appointmentDataOnHistoryPage.add(facilityText.getText());
+        appointmentDataOnHistoryPage.add(hospitalReadmissionChoice.getText());
+        appointmentDataOnHistoryPage.add(healthcareProgram.getText());
+        appointmentDataOnHistoryPage.add(comment.getText());
+        return appointmentDataOnHistoryPage;
     }
 }

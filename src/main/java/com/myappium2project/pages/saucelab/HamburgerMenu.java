@@ -1,7 +1,7 @@
 package com.myappium2project.pages.saucelab;
 
 import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HamburgerMenu extends BasePage {
+public class HamburgerMenu extends BasePageClass {
     private WebDriverWait wait;
 
     @AndroidFindBy(className = "android.widget.ImageView")

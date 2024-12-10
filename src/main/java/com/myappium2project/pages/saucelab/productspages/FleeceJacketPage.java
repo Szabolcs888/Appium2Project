@@ -2,7 +2,7 @@ package com.myappium2project.pages.saucelab.productspages;
 
 import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.logging.pagelogmessages.SlabPageLogMessages;
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class FleeceJacketPage extends BasePage {
+public class FleeceJacketPage extends BasePageClass {
     private WebDriverWait wait;
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"\uDB81\uDCCF\").instance(4)")
@@ -37,6 +37,7 @@ public class FleeceJacketPage extends BasePage {
     }
 
     public FleeceJacketPage(AndroidDriver driver, WebDriverWait wait) {
+        super();
         this.wait = wait;
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
@@ -66,7 +67,7 @@ public class FleeceJacketPage extends BasePage {
         try {
             return feedbackPopupText.getText();
         } catch (NoSuchElementException e) {
-            return CommonPageLogMessages.getTextIsNotAvailableLog("feedback popup");
+            return CommonPageLogMessages.textNotAvailableLog("feedback popup");
         }
     }
 

@@ -1,6 +1,6 @@
 package com.myappium2project.pages.curahealthcarechrome;
 
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.NoSuchElementException;
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MainPage extends BasePage {
+public class MainPage extends BasePageClass {
     @FindBy(xpath = "//h1[text()='CURA Healthcare Service']")
     private WebElement curaHealthcareServiceText;
 
@@ -21,7 +21,7 @@ public class MainPage extends BasePage {
         try {
             return curaHealthcareServiceText.isDisplayed() &&
                     curaHealthcareServiceText.isEnabled() &&
-                    curaHealthcareServiceText.getText().equals("CURA Healthcare Service");
+                    "CURA Healthcare Service".equals(curaHealthcareServiceText.getText());
         } catch (NoSuchElementException e) {
             return false;
         }

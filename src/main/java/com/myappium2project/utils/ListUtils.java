@@ -4,7 +4,11 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class ListUtils {
+/**
+ * Common utility class for List util operations.
+ * This class is not meant to be instantiated.
+ */
+public final class ListUtils {
 
     public static void addUniqueItemsToStringList(List<String> targetList, List<WebElement> webElements) {
         for (WebElement item : webElements) {
@@ -22,5 +26,9 @@ public class ListUtils {
                 targetList.add(elementAttributeTextAsFLoat);
             }
         }
+    }
+
+    private ListUtils() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

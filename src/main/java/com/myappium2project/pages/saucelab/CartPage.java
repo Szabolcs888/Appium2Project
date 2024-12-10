@@ -1,7 +1,7 @@
 package com.myappium2project.pages.saucelab;
 
 import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import com.myappium2project.utils.ListUtils;
 import com.myappium2project.utils.ScrollUtils;
 import io.appium.java_client.android.AndroidDriver;
@@ -14,7 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartPage extends BasePage {
+public class CartPage extends BasePageClass {
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Proceed To Checkout\")")
     private WebElement proceedToCheckoutButton;
 
@@ -38,20 +38,20 @@ public class CartPage extends BasePage {
     }
 
     public List<String> getListOfProductNamesInMyCart(AndroidDriver driver) {
-        List<String> productsNamesListInMyCartAsString = new ArrayList<>();
+        List<String> productsNamesListInMyCart = new ArrayList<>();
         boolean moreElements = true;
         int previousSize = 0;
         while (moreElements) {
-            ListUtils.addUniqueItemsToStringList(productsNamesListInMyCartAsString, productsNamesListInMyCartAsElements);
+            ListUtils.addUniqueItemsToStringList(productsNamesListInMyCart, productsNamesListInMyCartAsElements);
             // We check if new items have appeared
-            if (productsNamesListInMyCartAsString.size() > previousSize) {
-                previousSize = productsNamesListInMyCartAsString.size();
+            if (productsNamesListInMyCart.size() > previousSize) {
+                previousSize = productsNamesListInMyCart.size();
                 moreElements = ScrollUtils.tryScroll(driver);
             } else {
                 moreElements = false;
             }
         }
-        return productsNamesListInMyCartAsString;
+        return productsNamesListInMyCart;
     }
 
     public void pressRemoveItemButtons() {

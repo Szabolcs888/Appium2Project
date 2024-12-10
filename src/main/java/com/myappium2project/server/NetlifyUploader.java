@@ -3,7 +3,11 @@ package com.myappium2project.server;
 import java.io.File;
 import java.io.IOException;
 
-public class NetlifyUploader {
+/**
+ * Utility class for file upload to server operations.
+ * This class is not meant to be instantiated.
+ */
+public final class NetlifyUploader {
 
     public static void uploadReportToNetlify() {
         try {
@@ -16,12 +20,16 @@ public class NetlifyUploader {
 
             int exitCode = process.waitFor();
             if (exitCode == 0) {
-                System.out.println("Report uploaded to Netlify\n");
+                System.out.println("Report uploaded to Netlify" + System.lineSeparator());
             } else {
-                System.out.println("Error uploading report. Exit code: " + exitCode + " \n");
+                System.out.println("Error uploading report. Exit code: " + exitCode + " " + System.lineSeparator());
             }
         } catch (IOException | InterruptedException e) {
             System.out.println("Exception occurred during report upload: " + e);
         }
+    }
+
+    private NetlifyUploader() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

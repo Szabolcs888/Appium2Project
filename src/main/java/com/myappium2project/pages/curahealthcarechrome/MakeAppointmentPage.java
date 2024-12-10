@@ -1,7 +1,7 @@
 package com.myappium2project.pages.curahealthcarechrome;
 
 import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class MakeAppointmentPage extends BasePage {
+public class MakeAppointmentPage extends BasePageClass {
     private static final String CHECKBOX_PRESS_ACTION_LOG = "We {}press the 'Apply for hospital readmission' checkbox";
     private final AndroidDriver driver;
 
@@ -51,7 +51,7 @@ public class MakeAppointmentPage extends BasePage {
         try {
             return makeAppointmentPageTitleText.getText();
         } catch (NoSuchElementException e) {
-            return CommonPageLogMessages.getTextIsNotAvailableLog("title");
+            return CommonPageLogMessages.textNotAvailableLog("title");
         }
     }
 
@@ -59,8 +59,8 @@ public class MakeAppointmentPage extends BasePage {
         try {
             return makeAppointmentPageTitleText.isDisplayed() &&
                     makeAppointmentPageTitleText.isEnabled() &&
-                    makeAppointmentPageTitleText.getText().equals("Make Appointment") &&
-                    driver.getCurrentUrl().equals("https://katalon-demo-cura.herokuapp.com/#appointment");
+                    "Make Appointment".equals(makeAppointmentPageTitleText.getText()) &&
+                    "https://katalon-demo-cura.herokuapp.com/#appointment".equals(driver.getCurrentUrl());
         } catch (NoSuchElementException e) {
             return false;
         }
@@ -78,7 +78,7 @@ public class MakeAppointmentPage extends BasePage {
     }
 
     public void pressApplyForHospitalReadmissionCheckBoxOrDontPressIt(String option) {
-        if (option.equals("Yes")) {
+        if ("Yes".equals(option)) {
             LOG.info(CHECKBOX_PRESS_ACTION_LOG, "");
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", applyForHospitalReadmissionCheckbox);
         } else {

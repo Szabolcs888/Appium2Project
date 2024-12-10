@@ -1,14 +1,15 @@
 package com.myappium2project.pages.saucelab.productspages;
 
 import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class TestAllTheThingsTShirtPage extends BasePage {
+// This class name contains the term "test" because that is its original name
+public class TestAllTheThingsTShirtPage extends BasePageClass {
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Add To Cart\")")
     private WebElement addToCartButton;
 

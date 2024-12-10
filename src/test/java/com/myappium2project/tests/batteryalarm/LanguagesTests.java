@@ -1,18 +1,20 @@
 package com.myappium2project.tests.batteryalarm;
 
+import com.myappium2project.testsgroups.TestGroups;
 import com.myappium2project.utils.batteryalarm.LanguageUtils;
 import org.testng.Assert;
 import com.myappium2project.pages.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.batteryalarm.MainPage;
-import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
+import com.myappium2project.tests.basetests.BatteryAlarmTestBase;
 import org.testng.annotations.Test;
 
-public class LanguagesTests extends BatteryAlarmBaseTest {
+@Test(groups = {TestGroups.INTEGRATION})
+public class LanguagesTests extends BatteryAlarmTestBase {
     private static final String CHECK_LANGUAGE_LOG = "We check if the app switches to the selected language";
-    private static final String LANGUAGE_CORRECT_LOG = "The displayed language is correct";
-    private static final String LANGUAGE_INCORRECT_ERRORLOG = "The displayed language is not correct";
+    private static final String CORRECT_LANGUAGE_LOG = "The displayed language is correct";
+    private static final String INCORRECT_LANGUAGE_LOG = "The displayed language is not correct";
 
-    public static String getLanguageValidationAssertLog(String language) {
+    public static String incorrectLanguageAssertLog(String language) {
         return String.format("The displayed language should be %s, but it is not.", language);
     }
 
@@ -26,11 +28,12 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         LOG.info(CHECK_LANGUAGE_LOG);
         String voiceWarningEnglishText = mainPage.getVoiceWarningEnglishText();
         String expectedEnglishText = "Voice Warning";
-        if (voiceWarningEnglishText.equals(expectedEnglishText))
-            LOG.info(LANGUAGE_CORRECT_LOG);
-        else
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
-        Assert.assertEquals(voiceWarningEnglishText, expectedEnglishText, getLanguageValidationAssertLog("English"));
+        if (voiceWarningEnglishText.equals(expectedEnglishText)) {
+            LOG.info(CORRECT_LANGUAGE_LOG);
+        } else {
+            LOG.error(INCORRECT_LANGUAGE_LOG);
+        }
+        Assert.assertEquals(voiceWarningEnglishText, expectedEnglishText, incorrectLanguageAssertLog("English"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseCestinaOption();
@@ -38,11 +41,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningCzechText = mainPage.getVoiceWarningCzechText();
         String expectedCzechText = "Hlasové varování";
         if (voiceWarningCzechText.equals(expectedCzechText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningCzechText, expectedCzechText, getLanguageValidationAssertLog("Czech"));
+        Assert.assertEquals(voiceWarningCzechText, expectedCzechText, incorrectLanguageAssertLog("Czech"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseDanskOption();
@@ -50,11 +53,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningDanishText = mainPage.getVoiceWarningDanishText();
         String expectedDanishText = "Stemmeadvarsel";
         if (voiceWarningDanishText.equals(expectedDanishText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningDanishText, expectedDanishText, getLanguageValidationAssertLog("Danish"));
+        Assert.assertEquals(voiceWarningDanishText, expectedDanishText, incorrectLanguageAssertLog("Danish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseDeutschOption();
@@ -62,11 +65,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningGermanText = mainPage.getVoiceWarningGermanText();
         String expectedGermanText = "Sprach warnung";
         if (voiceWarningGermanText.equals(expectedGermanText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningGermanText, expectedGermanText, getLanguageValidationAssertLog("German"));
+        Assert.assertEquals(voiceWarningGermanText, expectedGermanText, incorrectLanguageAssertLog("German"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseEspanolOption();
@@ -74,11 +77,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningSpanishText = mainPage.getVoiceWarningSpanishText();
         String expectedSpanishText = "Advert. de voz";
         if (voiceWarningSpanishText.equals(expectedSpanishText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningSpanishText, expectedSpanishText, getLanguageValidationAssertLog("Spanish"));
+        Assert.assertEquals(voiceWarningSpanishText, expectedSpanishText, incorrectLanguageAssertLog("Spanish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseFrancaisOption();
@@ -86,11 +89,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningFranchiseText = mainPage.getVoiceWarningFranchiseText();
         String expectedFranchiseText = "Avertiss. vocal";
         if (voiceWarningFranchiseText.equals(expectedFranchiseText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningFranchiseText, expectedFranchiseText, getLanguageValidationAssertLog("French"));
+        Assert.assertEquals(voiceWarningFranchiseText, expectedFranchiseText, incorrectLanguageAssertLog("French"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseIndonesiaOption();
@@ -98,11 +101,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningIndonesiaText = mainPage.getVoiceWarningIndonesiaText();
         String expectedIndonesiaText = "Pering. Suara";
         if (voiceWarningIndonesiaText.equals(expectedIndonesiaText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningIndonesiaText, expectedIndonesiaText, getLanguageValidationAssertLog("Indonesian"));
+        Assert.assertEquals(voiceWarningIndonesiaText, expectedIndonesiaText, incorrectLanguageAssertLog("Indonesian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseItalianoOption();
@@ -110,11 +113,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningItalianText = mainPage.getVoiceWarningItalianText();
         String expectedItalianText = "Avviso vocale";
         if (voiceWarningItalianText.equals(expectedItalianText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningItalianText, expectedItalianText, getLanguageValidationAssertLog("Italian"));
+        Assert.assertEquals(voiceWarningItalianText, expectedItalianText, incorrectLanguageAssertLog("Italian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseMagyarOption();
@@ -122,11 +125,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningHungarianText = mainPage.getVoiceWarningHungarianText();
         String expectedHungarianText = "Hang figyelmeztetés";
         if (voiceWarningHungarianText.equals(expectedHungarianText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningHungarianText, expectedHungarianText, getLanguageValidationAssertLog("Hungarian"));
+        Assert.assertEquals(voiceWarningHungarianText, expectedHungarianText, incorrectLanguageAssertLog("Hungarian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseNederlandsOption();
@@ -134,11 +137,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningDutchText = mainPage.getVoiceWarningDutchText();
         String expectedDutchText = "Gesproken waarsch.";
         if (voiceWarningDutchText.equals(expectedDutchText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningDutchText, expectedDutchText, getLanguageValidationAssertLog("Dutch"));
+        Assert.assertEquals(voiceWarningDutchText, expectedDutchText, incorrectLanguageAssertLog("Dutch"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.choosePolskiOption();
@@ -146,11 +149,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningPolishText = mainPage.getVoiceWarningPolishText();
         String expectedPolishText = "Alert głosowe";
         if (voiceWarningPolishText.equals(expectedPolishText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningPolishText, expectedPolishText, getLanguageValidationAssertLog("Polish"));
+        Assert.assertEquals(voiceWarningPolishText, expectedPolishText, incorrectLanguageAssertLog("Polish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.choosePortuguesOption();
@@ -158,11 +161,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningPortugueseText = mainPage.getVoiceWarningPortugueseText();
         String expectedPortugueseText = "Aviso de voz";
         if (voiceWarningPortugueseText.equals(expectedPortugueseText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningPortugueseText, expectedPortugueseText, getLanguageValidationAssertLog("Portuguese"));
+        Assert.assertEquals(voiceWarningPortugueseText, expectedPortugueseText, incorrectLanguageAssertLog("Portuguese"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseRomanaOption();
@@ -170,11 +173,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningRomanText = mainPage.getVoiceWarningRomanText();
         String expectedRomanText = "Avert. vocal";
         if (voiceWarningRomanText.equals(expectedRomanText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningRomanText, expectedRomanText, getLanguageValidationAssertLog("Romanian"));
+        Assert.assertEquals(voiceWarningRomanText, expectedRomanText, incorrectLanguageAssertLog("Romanian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSlovencinaOption();
@@ -182,11 +185,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningSlovenianText = mainPage.getVoiceWarningSlovenianText();
         String expectedSlovenianText = "Hlasové varov.";
         if (voiceWarningSlovenianText.equals(expectedSlovenianText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningSlovenianText, expectedSlovenianText, getLanguageValidationAssertLog("Slovenian"));
+        Assert.assertEquals(voiceWarningSlovenianText, expectedSlovenianText, incorrectLanguageAssertLog("Slovenian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSvenskaOption();
@@ -194,11 +197,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningSwedishText = mainPage.getVoiceWarningSwedishText();
         String expectedSwedishText = "Röstvarning";
         if (voiceWarningSwedishText.equals(expectedSwedishText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningSwedishText, expectedSwedishText, getLanguageValidationAssertLog("Swedish"));
+        Assert.assertEquals(voiceWarningSwedishText, expectedSwedishText, incorrectLanguageAssertLog("Swedish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSrpskiOption();
@@ -206,11 +209,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningSerbianText = mainPage.getVoiceWarningSerbianText();
         String expectedSerbianText = "Glasovno upozorenje";
         if (voiceWarningSerbianText.equals(expectedSerbianText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningSerbianText, expectedSerbianText, getLanguageValidationAssertLog("Serbian"));
+        Assert.assertEquals(voiceWarningSerbianText, expectedSerbianText, incorrectLanguageAssertLog("Serbian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseSuomiOption();
@@ -218,11 +221,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningFinnishText = mainPage.getVoiceWarningFinnishText();
         String expectedFinnishText = "Ihmisen ääni Varoitus";
         if (voiceWarningFinnishText.equals(expectedFinnishText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningFinnishText, expectedFinnishText, getLanguageValidationAssertLog("Finnish"));
+        Assert.assertEquals(voiceWarningFinnishText, expectedFinnishText, incorrectLanguageAssertLog("Finnish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseTurkceOption();
@@ -230,11 +233,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningTurkishText = mainPage.getVoiceWarningTurkishText();
         String expectedTurkishText = "Sesli uyarı";
         if (voiceWarningTurkishText.equals(expectedTurkishText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningTurkishText, expectedTurkishText, getLanguageValidationAssertLog("Turkish"));
+        Assert.assertEquals(voiceWarningTurkishText, expectedTurkishText, incorrectLanguageAssertLog("Turkish"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseBulgarianOption();
@@ -242,11 +245,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningBulgarianText = mainPage.getVoiceWarningBulgarianText();
         String expectedBulgarianText = "Гласово пред.";
         if (voiceWarningBulgarianText.equals(expectedBulgarianText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningBulgarianText, expectedBulgarianText, getLanguageValidationAssertLog("Bulgarian"));
+        Assert.assertEquals(voiceWarningBulgarianText, expectedBulgarianText, incorrectLanguageAssertLog("Bulgarian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseRussianOption();
@@ -254,11 +257,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningRussianText = mainPage.getVoiceWarningRussianText();
         String expectedRussianText = "Голосовое пред.";
         if (voiceWarningRussianText.equals(expectedRussianText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningRussianText, expectedRussianText, getLanguageValidationAssertLog("Russian"));
+        Assert.assertEquals(voiceWarningRussianText, expectedRussianText, incorrectLanguageAssertLog("Russian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseUkrainianOption();
@@ -266,11 +269,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningUkrainianText = mainPage.getVoiceWarningUkrainianText();
         String expectedUkrainianText = "Голосове сповіщ.";
         if (voiceWarningUkrainianText.equals(expectedUkrainianText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningUkrainianText, expectedUkrainianText, getLanguageValidationAssertLog("Ukrainian"));
+        Assert.assertEquals(voiceWarningUkrainianText, expectedUkrainianText, incorrectLanguageAssertLog("Ukrainian"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseGreekOption();
@@ -278,11 +281,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningGreekText = mainPage.getVoiceWarningGreekText();
         String expectedGreekText = "Φωνητική ειδοποίηση";
         if (voiceWarningGreekText.equals(expectedGreekText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningGreekText, expectedGreekText, getLanguageValidationAssertLog("Greek"));
+        Assert.assertEquals(voiceWarningGreekText, expectedGreekText, incorrectLanguageAssertLog("Greek"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseVietnameseOption();
@@ -290,11 +293,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningVietnameseText = mainPage.getVoiceWarningVietnameseText();
         String expectedVietnameseText = "Cảnh báo bằng giọng nói";
         if (voiceWarningVietnameseText.equals(expectedVietnameseText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningVietnameseText, expectedVietnameseText, getLanguageValidationAssertLog("Vietnamese"));
+        Assert.assertEquals(voiceWarningVietnameseText, expectedVietnameseText, incorrectLanguageAssertLog("Vietnamese"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseJapaneseOption();
@@ -302,11 +305,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningJapaneseText = mainPage.getVoiceWarningJapaneseText();
         String expectedJapaneseText = "音声警告";
         if (voiceWarningJapaneseText.equals(expectedJapaneseText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningJapaneseText, expectedJapaneseText, getLanguageValidationAssertLog("Japanese"));
+        Assert.assertEquals(voiceWarningJapaneseText, expectedJapaneseText, incorrectLanguageAssertLog("Japanese"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseChineseOption();
@@ -314,11 +317,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningChineseText = mainPage.getVoiceWarningChineseText();
         String expectedChineseText = "语音警告";
         if (voiceWarningChineseText.equals(expectedChineseText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningChineseText, expectedChineseText, getLanguageValidationAssertLog("Chinese"));
+        Assert.assertEquals(voiceWarningChineseText, expectedChineseText, incorrectLanguageAssertLog("Chinese"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseKoreanOption();
@@ -326,11 +329,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningKoreanText = mainPage.getVoiceWarningKoreanText();
         String expectedKoreanText = "음성 경고";
         if (voiceWarningKoreanText.equals(expectedKoreanText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningKoreanText, expectedKoreanText, getLanguageValidationAssertLog("Korean"));
+        Assert.assertEquals(voiceWarningKoreanText, expectedKoreanText, incorrectLanguageAssertLog("Korean"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseThaiOption();
@@ -338,11 +341,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningThaiText = mainPage.getVoiceWarningThaiText();
         String expectedThaiText = "คำเตือนด้วยเสียง";
         if (voiceWarningThaiText.equals(expectedThaiText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningThaiText, expectedThaiText, getLanguageValidationAssertLog("Thai"));
+        Assert.assertEquals(voiceWarningThaiText, expectedThaiText, incorrectLanguageAssertLog("Thai"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseArabicOption();
@@ -350,11 +353,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningArabicText = mainPage.getVoiceWarningArabicText();
         String expectedArabicText = "تحذیر بالصوت";
         if (voiceWarningArabicText.equals(expectedArabicText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningArabicText, expectedArabicText, getLanguageValidationAssertLog("Arabic"));
+        Assert.assertEquals(voiceWarningArabicText, expectedArabicText, incorrectLanguageAssertLog("Arabic"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseFarsiOption();
@@ -362,11 +365,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningFarsiText = mainPage.getVoiceWarningFarsiText();
         String expectedFarsiText = "هشدار صوتی";
         if (voiceWarningFarsiText.equals(expectedFarsiText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningFarsiText, expectedFarsiText, getLanguageValidationAssertLog("Farsi"));
+        Assert.assertEquals(voiceWarningFarsiText, expectedFarsiText, incorrectLanguageAssertLog("Farsi"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseHebrewOption();
@@ -374,11 +377,11 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningHebrewText = mainPage.getVoiceWarningHebrewText();
         String expectedHebrewText = "אזהרה קולית";
         if (voiceWarningHebrewText.equals(expectedHebrewText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningHebrewText, expectedHebrewText, getLanguageValidationAssertLog("Hebrew"));
+        Assert.assertEquals(voiceWarningHebrewText, expectedHebrewText, incorrectLanguageAssertLog("Hebrew"));
 
         languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
         languagesDropdownMenu.chooseHindiOption();
@@ -386,10 +389,10 @@ public class LanguagesTests extends BatteryAlarmBaseTest {
         String voiceWarningHindiText = mainPage.getVoiceWarningHindiText();
         String expectedHindiText = "आवाज चेतावनी";
         if (voiceWarningHindiText.equals(expectedHindiText)) {
-            LOG.info(LANGUAGE_CORRECT_LOG);
+            LOG.info(CORRECT_LANGUAGE_LOG);
         } else {
-            LOG.error(LANGUAGE_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_LANGUAGE_LOG);
         }
-        Assert.assertEquals(voiceWarningHindiText, expectedHindiText, getLanguageValidationAssertLog("Hindi"));
+        Assert.assertEquals(voiceWarningHindiText, expectedHindiText, incorrectLanguageAssertLog("Hindi"));
     }
 }

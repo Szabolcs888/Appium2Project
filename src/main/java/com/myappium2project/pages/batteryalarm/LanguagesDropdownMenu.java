@@ -1,14 +1,14 @@
 package com.myappium2project.pages.batteryalarm;
 
 import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class LanguagesDropdownMenu extends BasePage {
+public class LanguagesDropdownMenu extends BasePageClass {
     private static final String SELECTED_LANGUAGE_OPTION_LOG = "We choose the '{}' option";
 
     @AndroidFindBy(className = "android.widget.Spinner")

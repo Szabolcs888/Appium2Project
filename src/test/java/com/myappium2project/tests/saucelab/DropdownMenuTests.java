@@ -1,6 +1,7 @@
 package com.myappium2project.tests.saucelab;
 
-import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
+import com.myappium2project.tests.basetests.SauceLabApkTestBase;
+import com.myappium2project.testsgroups.TestGroups;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.saucelab.ProductsPage;
@@ -9,13 +10,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class DropdownMenuTests extends SauceLabApkBaseTest {
+@Test(groups = {TestGroups.INTEGRATION})
+public class DropdownMenuTests extends SauceLabApkTestBase {
     private static final String CHECK_PRODUCT_ORDER_LOG = "We check if the products are in the correct order";
-    private static final String PRODUCT_ORDER_CONSOLELOG = "The order of the items as they are: \n";
-    private static final String EXPECTED_PRODUCT_ORDER_CONSOLELOG = "As they should be: \n";
-    private static final String PRODUCT_ORDER_CORRECT_LOG = "The products are in the correct order";
-    private static final String PRODUCT_ORDER_INCORRECT_ERRORLOG = "The products are not in the correct order";
-    private static final String MESSAGE_PRODUCT_ORDER_ASSERTLOG = "The products should be in the correct order, but they are not.";
+    private static final String PRODUCT_ORDER_LOG = "The order of the items as they are: " + System.lineSeparator();
+    private static final String EXPECTED_PRODUCT_ORDER_LOG = "As they should be: " + System.lineSeparator();
+    private static final String CORRECT_PRODUCT_ORDER_LOG = "The products are in the correct order";
+    private static final String INCORRECT_PRODUCT_ORDER_LOG = "The products are not in the correct order";
+    private static final String INCORRECT_PRODUCT_ORDER_ASSERT_LOG = "The products should be in the correct order, but they are not.";
 
     @Test(priority = 1)
     public void testDropdownMenuAbcOrder() {
@@ -27,15 +29,15 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         List<String> productsNamesList = productPage.getListOfProductNames(driver);
         List<String> expectedList = new ArrayList<>(productsNamesList);
         Collections.sort(expectedList);
-        System.out.println(PRODUCT_ORDER_CONSOLELOG + productsNamesList);
-        System.out.println(EXPECTED_PRODUCT_ORDER_CONSOLELOG + expectedList);
+        System.out.println(PRODUCT_ORDER_LOG + productsNamesList);
+        System.out.println(EXPECTED_PRODUCT_ORDER_LOG + expectedList);
         if (productsNamesList.equals(expectedList)) {
-            LOG.info(PRODUCT_ORDER_CORRECT_LOG);
+            LOG.info(CORRECT_PRODUCT_ORDER_LOG);
         } else {
-            LOG.error(PRODUCT_ORDER_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_PRODUCT_ORDER_LOG);
         }
         Assert.assertEquals(productsNamesList, expectedList,
-                MESSAGE_PRODUCT_ORDER_ASSERTLOG);
+                INCORRECT_PRODUCT_ORDER_ASSERT_LOG);
     }
 
     @Test(priority = 2)
@@ -49,15 +51,15 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         List<String> expectedList = new ArrayList<>(productsNamesList);
         Collections.sort(expectedList);
         Collections.reverse(expectedList);
-        System.out.println(PRODUCT_ORDER_CONSOLELOG + productsNamesList);
-        System.out.println(EXPECTED_PRODUCT_ORDER_CONSOLELOG + expectedList);
+        System.out.println(PRODUCT_ORDER_LOG + productsNamesList);
+        System.out.println(EXPECTED_PRODUCT_ORDER_LOG + expectedList);
         if (productsNamesList.equals(expectedList)) {
-            LOG.info(PRODUCT_ORDER_CORRECT_LOG);
+            LOG.info(CORRECT_PRODUCT_ORDER_LOG);
         } else {
-            LOG.error(PRODUCT_ORDER_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_PRODUCT_ORDER_LOG);
         }
         Assert.assertEquals(productsNamesList, expectedList,
-                MESSAGE_PRODUCT_ORDER_ASSERTLOG);
+                INCORRECT_PRODUCT_ORDER_ASSERT_LOG);
     }
 
     @Test(priority = 3)
@@ -70,15 +72,15 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         List<Float> productsPricesList = productPage.getListOfProductPrices(driver);
         List<Float> expectedList = new ArrayList<>(productsPricesList);
         Collections.sort(expectedList);
-        System.out.println(PRODUCT_ORDER_CONSOLELOG + productsPricesList);
-        System.out.println(EXPECTED_PRODUCT_ORDER_CONSOLELOG + expectedList);
+        System.out.println(PRODUCT_ORDER_LOG + productsPricesList);
+        System.out.println(EXPECTED_PRODUCT_ORDER_LOG + expectedList);
         if (productsPricesList.equals(expectedList)) {
-            LOG.info(PRODUCT_ORDER_CORRECT_LOG);
+            LOG.info(CORRECT_PRODUCT_ORDER_LOG);
         } else {
-            LOG.error(PRODUCT_ORDER_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_PRODUCT_ORDER_LOG);
         }
         Assert.assertEquals(productsPricesList, expectedList,
-                MESSAGE_PRODUCT_ORDER_ASSERTLOG);
+                INCORRECT_PRODUCT_ORDER_ASSERT_LOG);
     }
 
     @Test(priority = 4)
@@ -92,14 +94,14 @@ public class DropdownMenuTests extends SauceLabApkBaseTest {
         List<Float> expectedList = new ArrayList<>(productsPricesList);
         Collections.sort(expectedList);
         Collections.reverse(expectedList);
-        System.out.println(PRODUCT_ORDER_CONSOLELOG + productsPricesList);
-        System.out.println(EXPECTED_PRODUCT_ORDER_CONSOLELOG + expectedList);
+        System.out.println(PRODUCT_ORDER_LOG + productsPricesList);
+        System.out.println(EXPECTED_PRODUCT_ORDER_LOG + expectedList);
         if (productsPricesList.equals(expectedList)) {
-            LOG.info(PRODUCT_ORDER_CORRECT_LOG);
+            LOG.info(CORRECT_PRODUCT_ORDER_LOG);
         } else {
-            LOG.error(PRODUCT_ORDER_INCORRECT_ERRORLOG);
+            LOG.error(INCORRECT_PRODUCT_ORDER_LOG);
         }
         Assert.assertEquals(productsPricesList, expectedList,
-                MESSAGE_PRODUCT_ORDER_ASSERTLOG);
+                INCORRECT_PRODUCT_ORDER_ASSERT_LOG);
     }
 }

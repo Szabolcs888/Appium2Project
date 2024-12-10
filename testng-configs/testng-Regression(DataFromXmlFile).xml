@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <!-- In this file, the test cases are not grouped by the "group"
 attribute of the @Test annotation of testNg, but as listed here. -->
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Regression" verbose="1">
     <test name="Regression test (data from xml file)">
         <packages>
@@ -11,6 +11,3 @@ attribute of the @Test annotation of testNg, but as listed here. -->
         </packages>
     </test>
 </suite>
-
-
-

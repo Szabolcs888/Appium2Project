@@ -1,8 +1,16 @@
 package com.myappium2project.logging.pagelogmessages;
 
-public class CuraPageLogMessages {
+/**
+ * Cura Healthcare log messages used across Cura Healthcare pages.
+ * This class is not meant to be instantiated.
+ */
+public final class CuraPageLogMessages {
 
-    public static String getPageLoadValidationAssertLog(String pageName) {
+    public static String pageNotLoadAssertLog(String pageName) {
         return String.format("The '%s' page should be loaded, but it is not.", pageName);
+    }
+
+    private CuraPageLogMessages() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

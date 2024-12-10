@@ -1,4 +1,4 @@
-package com.myappium2project.logging;
+package com.myappium2project.logging.appenders;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -15,17 +15,16 @@ import org.apache.logging.log4j.core.config.plugins.PluginElement;
 import org.apache.logging.log4j.core.config.plugins.PluginFactory;
 import org.apache.logging.log4j.core.layout.PatternLayout;
 
+/**
+ * Class captures and formats log events for reporting and visualization in ExtentReports.
+ */
 @Plugin(name = "ExtentAppender", category = "Core", elementType = Appender.ELEMENT_TYPE)
-public class ExtentAppender extends AbstractAppender {
+public final class ExtentAppender extends AbstractAppender {
     private static ExtentReports extentReports;
     private static ExtentTest extentTest;
 
     private ExtentAppender(String name, Layout<?> layout) {
         super(name, null, layout, false);
-    }
-
-    public static void setExtentReports(ExtentReports reports) {
-        extentReports = reports;
     }
 
     public static void setExtentTest(ExtentTest test) {
@@ -53,15 +52,13 @@ public class ExtentAppender extends AbstractAppender {
     }
 
     @PluginFactory
-    public static ExtentAppender createAppender(@PluginAttribute("name") String name,
-                                                @PluginElement("Layout") Layout<?> layout) {
-        if (layout == null) {
-            layout = PatternLayout.createDefaultLayout();
+    public static ExtentAppender createAppender(
+            @PluginAttribute("name") String name,
+            @PluginElement("Layout") Layout<?> layout) {
+        Layout<?> effectiveLayout = layout;
+        if (effectiveLayout == null) {
+            effectiveLayout = PatternLayout.createDefaultLayout();
         }
-        return new ExtentAppender(name, layout);
-    }
-
-    public static void reset() {
-        extentTest = null;
+        return new ExtentAppender(name, effectiveLayout);
     }
 }

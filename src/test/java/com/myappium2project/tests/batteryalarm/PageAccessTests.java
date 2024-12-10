@@ -1,22 +1,28 @@
 package com.myappium2project.tests.batteryalarm;
 
 import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
+import com.myappium2project.testsgroups.TestGroups;
 import com.myappium2project.utils.batteryalarm.LanguageUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.batteryalarm.InformationPage;
+import com.myappium2project.pages.batteryalarm.InformationSecondPage;
 import com.myappium2project.pages.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.batteryalarm.MainPage;
-import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
+import com.myappium2project.tests.basetests.BatteryAlarmTestBase;
 
-public class PageAccessTests extends BatteryAlarmBaseTest {
+public class PageAccessTests extends BatteryAlarmTestBase {
 
-    public static String getTextValidationAssertLog(String actualText, String expectedText) {
+    public static String incorrectTextAssertLog(String actualText, String expectedText) {
         return String.format("The expected text on the page should be '%s', but it is '%s'.", expectedText, actualText);
     }
 
+    private static String incorrectInformationTextDetailAssertLog(String expectedTextFragment) {
+        return String.format("The information text should contain '%s', but it does not.", expectedTextFragment);
+    }
+
     @Test(priority = 1,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testMainPageAccess() {
         MainPage mainPage = new MainPage(driver);
         LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
@@ -31,17 +37,17 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         if (voiceWarningText.equals(expectedVoiceWarningText) && chooseASoundText.equals(expectedChooseASoundText)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, mainPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, mainPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, mainPageName);
         }
         Assert.assertEquals(chooseASoundText, expectedChooseASoundText,
-                getTextValidationAssertLog(chooseASoundText, expectedChooseASoundText));
+                incorrectTextAssertLog(chooseASoundText, expectedChooseASoundText));
         Assert.assertEquals(voiceWarningText, expectedVoiceWarningText,
-                getTextValidationAssertLog(voiceWarningText, expectedVoiceWarningText));
+                incorrectTextAssertLog(voiceWarningText, expectedVoiceWarningText));
     }
 
     @Test(priority = 2,
-            groups = {"smoke"})
-    public void testInformationPageAccess() {
+            groups = {TestGroups.SMOKE})
+    public void testInformationPagesAccess() {
         MainPage mainPage = new MainPage(driver);
         LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
         LanguageUtils.ensureEnglishLanguageSelected(driver, mainPage, languagesDropdownMenu);
@@ -56,9 +62,24 @@ public class PageAccessTests extends BatteryAlarmBaseTest {
         if (informationText.contains(expectedTextFragment)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, informationPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, informationPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, informationPageName);
         }
         Assert.assertTrue(informationText.contains(expectedTextFragment),
-                "The information text should contain '" + expectedTextFragment + "', but it does not.");
+                incorrectInformationTextDetailAssertLog(expectedTextFragment));
+
+        informationPage.pressNextPageButton();
+
+        String informationSecondPageName = "second Information";
+        LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, informationSecondPageName);
+        InformationSecondPage informationSecondPage = new InformationSecondPage(driver);
+        String secondInformationText = informationSecondPage.getInformationText();
+        String expectedTextFragment2 = "If you have any problems, feel free To contact Me by email";
+        if (secondInformationText.contains(expectedTextFragment2)) {
+            LOG.info(CommonTestLogMessages.ON_PAGE_LOG, informationSecondPageName);
+        } else {
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, informationSecondPageName);
+        }
+        Assert.assertTrue(secondInformationText.contains(expectedTextFragment2),
+                incorrectInformationTextDetailAssertLog(expectedTextFragment2));
     }
 }

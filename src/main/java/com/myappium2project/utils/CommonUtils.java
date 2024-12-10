@@ -11,16 +11,21 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommonUtils {
+/**
+ * Utility class for common utility methods.
+ * This class is not meant to be instantiated.
+ */
+public final class CommonUtils {
     private static final Logger LOG = LogManager.getLogger(CommonUtils.class);
     private static final String USER_DIR = System.getProperty("user.dir");
+    private static final String FAILED_DELETE_FILE_MESSAGE = "Failed to delete file: ";
 
     public static void threadSleep(int milliseconds) {
         try {
             Thread.sleep(milliseconds);
         } catch (InterruptedException e) {
             LOG.error("Thread sleep was interrupted");
-            throw new RuntimeException(e);
+            throw new IllegalStateException("Thread sleep was interrupted", e);
         }
     }
 
@@ -42,18 +47,20 @@ public class CommonUtils {
                 splitLines.add(item.split("_:")[1]);
             } catch (ArrayIndexOutOfBoundsException e) {
                 LOG.warn("Incorrect format in line: {}", item);
-                throw new RuntimeException("Test data format error: " + item, e);
+                throw new IllegalArgumentException("Test data format error: " + item, e);
             }
         }
         return splitLines;
     }
 
-    private static void deleteDirectoryContents(File directory) {
+    private static void deleteDirectoryFiles(File directory) {
         File[] files = directory.listFiles();
         if (files != null) {
             for (File file : files) {
                 if (file.isFile()) {
-                    file.delete();
+                    if (!file.delete()) {
+                        System.out.println(FAILED_DELETE_FILE_MESSAGE + file.getAbsolutePath());
+                    }
                 }
             }
         }
@@ -62,7 +69,7 @@ public class CommonUtils {
     private static void deleteFile(String path) {
         File file = new File(path);
         if (!file.delete()) {
-            System.out.println("Failed to delete the file: " + file.getName());
+            System.out.println(FAILED_DELETE_FILE_MESSAGE + file.getName());
         }
     }
 
@@ -77,9 +84,13 @@ public class CommonUtils {
     }
 
     public static void cleanReportsAndScreenshots() {
-        deleteDirectoryContents(new File(USER_DIR + "/reports/actualReportScreenshots/"));
+        deleteDirectoryFiles(new File(USER_DIR + "/reports/actualReportScreenshots/"));
         deleteFile(USER_DIR + "/reports/emailable-report.html");
         deleteFile(USER_DIR + "/target/surefire-reports/emailable-report.html");
         deleteFile(USER_DIR + "/reports/extent-report.html");
+    }
+
+    private CommonUtils() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

@@ -1,8 +1,8 @@
 package com.myappium2project.tests.curahealthcarechrome;
 
-import com.myappium2project.tests.basetests.ChromeBrowserBaseTest;
-import com.myappium2project.testsdata.CommonTestData;
-import com.myappium2project.testsdata.TestDataCura;
+import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
+import com.myappium2project.tests.basetests.ChromeBrowserTestBase;
+import com.myappium2project.testsdata.CuraHealthcareData;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -10,23 +10,31 @@ import com.myappium2project.pages.curahealthcarechrome.HamburgerMenu;
 import com.myappium2project.pages.curahealthcarechrome.LoginPage;
 import com.myappium2project.pages.curahealthcarechrome.MakeAppointmentPage;
 
-public class LoginWithDataProviderTests extends ChromeBrowserBaseTest {
+public class LoginWithDataProviderTests extends ChromeBrowserTestBase {
 
+    /**
+     * The order of attributes of the data Object:
+     * 1.username, 2.username validation status message, 3.password, 4.password validation status message, 5.login success result
+     */
     @DataProvider(name = "loginData")
     public Object[][] loginDataProvider() {
         Object[][] data = {
-                {TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE, TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE, true},
-                {TestDataCura.VALID_USERNAME_ACC1, CommonTestData.VALID_LOG_MESSAGE, CommonTestData.INVALID_PASSWORD, CommonTestData.INVALID_LOG_MESSAGE, false},
-                {CommonTestData.INVALID_USERNAME, CommonTestData.INVALID_LOG_MESSAGE, TestDataCura.VALID_PASSWORD_ACC1, CommonTestData.VALID_LOG_MESSAGE, false},
-                {"", CommonTestData.EMPTY_LOG_MESSAGE, "", CommonTestData.EMPTY_LOG_MESSAGE, false}
+                {CuraHealthcareData.VALID_USERNAME_ACC1, CommonTestLogMessages.VALID_LOG,
+                        CuraHealthcareData.VALID_PASSWORD_ACC1, CommonTestLogMessages.VALID_LOG, true},
+                {CuraHealthcareData.VALID_USERNAME_ACC1, CommonTestLogMessages.VALID_LOG,
+                        CommonTestLogMessages.INVALID_PASSWORD_LOG, CommonTestLogMessages.INVALID_LOG, false},
+                {CommonTestLogMessages.INVALID_USERNAME_LOG, CommonTestLogMessages.INVALID_LOG,
+                        CuraHealthcareData.VALID_PASSWORD_ACC1, CommonTestLogMessages.VALID_LOG, false},
+                {"", CommonTestLogMessages.EMPTY_LOG, "", CommonTestLogMessages.EMPTY_LOG, false}
         };
         return data;
     }
 
     @Test(dataProvider = "loginData")
     public void testsAllLoginCura(
-            String username, String usernameValidityStatus, String password, String passwordValidityStatus, boolean expectedResult) {
-        driver.get(TestDataCura.CURA_BASE_URL);
+            String username, String usernameValidityStatus, String password,
+            String passwordValidityStatus, boolean expectedResult) {
+        driver.get(CuraHealthcareData.CURA_BASE_URL);
 
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         hamburgerMenu.pressHamburgerMenuButton();
@@ -53,7 +61,8 @@ public class LoginWithDataProviderTests extends ChromeBrowserBaseTest {
     private static String getLoginExpectedResultMessage(boolean expectedResult) {
         if (expectedResult) {
             return "successful login";
-        } else
+        } else {
             return "failed login";
+        }
     }
 }

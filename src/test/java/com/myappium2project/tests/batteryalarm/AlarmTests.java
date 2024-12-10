@@ -6,15 +6,15 @@ import org.testng.annotations.Test;
 import com.myappium2project.pages.common.PhoneDesktop;
 import com.myappium2project.pages.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.batteryalarm.MainPage;
-import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
+import com.myappium2project.tests.basetests.BatteryAlarmTestBase;
 
-public class AlarmTests extends BatteryAlarmBaseTest {
+public class AlarmTests extends BatteryAlarmTestBase {
     private static final String BATTERY_CHARGE_AND_ALARM_LOG = "We ask for the battery charge and '{}' values";
     private static final String ALARM_VALUE_CHANGE_LOG = "To trigger the alarm, we need to {} the '{}' value by {}";
     private static final String ALARM_FUNCTION_CHECK_LOG = "We check if the '{}' function is working (if the countdown has started)";
     private static final String ALARM_WORKS_LOG = "The alarm works";
-    private static final String ALARM_DOES_NOT_WORK_ERRORLOG = "The alarm does not work";
-    private static final String COUNTDOWN_VALIDATION_ASSERTLOG = "The countdown should be active, but it is not.";
+    private static final String ALARM_NOT_WORK_LOG = "The alarm does not work";
+    private static final String COUNTDOWN_NOT_ACTIVE_ASSERT_LOG = "The countdown should be active, but it is not.";
 
     @Test(description = "The prerequisite for the test is that the phone is charging.")
     public void testMaxAlarm() {
@@ -38,9 +38,9 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         if (isCountdownActive) {
             LOG.info(ALARM_WORKS_LOG);
         } else {
-            LOG.error(ALARM_DOES_NOT_WORK_ERRORLOG);
+            LOG.error(ALARM_NOT_WORK_LOG);
         }
-        Assert.assertTrue(isCountdownActive, COUNTDOWN_VALIDATION_ASSERTLOG);
+        Assert.assertTrue(isCountdownActive, COUNTDOWN_NOT_ACTIVE_ASSERT_LOG);
     }
 
     @Test(description = "The prerequisite for the test is that the phone is not charging.")
@@ -68,8 +68,8 @@ public class AlarmTests extends BatteryAlarmBaseTest {
         if (isCountdownActive) {
             LOG.info(ALARM_WORKS_LOG);
         } else {
-            LOG.error(ALARM_DOES_NOT_WORK_ERRORLOG);
+            LOG.error(ALARM_NOT_WORK_LOG);
         }
-        Assert.assertTrue(isCountdownActive, COUNTDOWN_VALIDATION_ASSERTLOG);
+        Assert.assertTrue(isCountdownActive, COUNTDOWN_NOT_ACTIVE_ASSERT_LOG);
     }
 }

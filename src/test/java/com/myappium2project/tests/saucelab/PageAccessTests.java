@@ -3,15 +3,16 @@ package com.myappium2project.tests.saucelab;
 import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
 import com.myappium2project.logging.testlogmessages.SlabTestLogMessages;
 import com.myappium2project.pages.saucelab.menupages.*;
-import com.myappium2project.tests.basetests.SauceLabApkBaseTest;
+import com.myappium2project.tests.basetests.SauceLabApkTestBase;
+import com.myappium2project.testsgroups.TestGroups;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.saucelab.HamburgerMenu;
 
-public class PageAccessTests extends SauceLabApkBaseTest {
+public class PageAccessTests extends SauceLabApkTestBase {
 
     @Test(priority = 1,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testWebviewPageAccess() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();
@@ -24,14 +25,14 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         if (webviewPageTitleText.equals(webviewPageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, webviewPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, webviewPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, webviewPageName);
         }
         Assert.assertEquals(webviewPageTitleText, webviewPageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(webviewPageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(webviewPageName));
     }
 
     @Test(priority = 2,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testQrCodeScannerPageAccess() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();
@@ -44,14 +45,14 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         if (qrCodeScannerPageTitleText.equals(qrCodeScannerPageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, qrCodeScannerPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, qrCodeScannerPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, qrCodeScannerPageName);
         }
         Assert.assertEquals(qrCodeScannerPageTitleText, qrCodeScannerPageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(qrCodeScannerPageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(qrCodeScannerPageName));
     }
 
     @Test(priority = 3,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testGeoLocationPageAccess() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();
@@ -64,14 +65,14 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         if (geoLocationPageTitleText.equals(geoLocationPageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, geoLocationPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, geoLocationPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, geoLocationPageName);
         }
         Assert.assertEquals(geoLocationPageTitleText, geoLocationPageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(geoLocationPageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(geoLocationPageName));
     }
 
     @Test(priority = 4,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testDrawingPageAccess() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();
@@ -84,14 +85,14 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         if (drawingPageTitleText.equals(drawingPageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, drawingPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, drawingPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, drawingPageName);
         }
         Assert.assertEquals(drawingPageTitleText, drawingPageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(drawingPageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(drawingPageName));
     }
 
     @Test(priority = 5,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testAboutPageAccess() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();
@@ -104,34 +105,34 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         if (aboutPageTitleText.equals(aboutPageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, aboutPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, aboutPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, aboutPageName);
         }
         Assert.assertEquals(aboutPageTitleText, aboutPageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(aboutPageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(aboutPageName));
     }
 
     @Test(priority = 6,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testFingerPrintPageAccess() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressFingerPrintButton();
 
-        String fingerPrintPageName = "Finger Print";
+        String fingerPrintPageName = "FingerPrint";
         LOG.info(CommonTestLogMessages.CHECK_PAGE_LOG, fingerPrintPageName);
         FingerPrintPage fingerPrintPage = new FingerPrintPage(driver);
         String fingerPrintPageTitleText = fingerPrintPage.getFingerPrintPageTitleText();
         if (fingerPrintPageTitleText.equals(fingerPrintPageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, fingerPrintPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, fingerPrintPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, fingerPrintPageName);
         }
         Assert.assertEquals(fingerPrintPageTitleText, fingerPrintPageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(fingerPrintPageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(fingerPrintPageName));
     }
 
     @Test(priority = 7,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testApiCallsPageAccess() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();
@@ -144,14 +145,14 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         if (apiCallsPageTitleText.equals(apiCallsPageName)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, apiCallsPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, apiCallsPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, apiCallsPageName);
         }
         Assert.assertEquals(apiCallsPageTitleText, apiCallsPageName,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(apiCallsPageName));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(apiCallsPageName));
     }
 
     @Test(priority = 8,
-            groups = {"smoke"})
+            groups = {TestGroups.SMOKE})
     public void testSauceBotVideoPageAccess() throws InterruptedException {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         hamburgerMenu.pressHamburgerMenuButton();
@@ -165,9 +166,9 @@ public class PageAccessTests extends SauceLabApkBaseTest {
         if (sauceBotVideoPageTitleText.equals(expectedSauceBotPageTitleText)) {
             LOG.info(CommonTestLogMessages.ON_PAGE_LOG, sauceBotVideoPageName);
         } else {
-            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_ERRORLOG, sauceBotVideoPageName);
+            LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, sauceBotVideoPageName);
         }
         Assert.assertEquals(sauceBotVideoPageTitleText, expectedSauceBotPageTitleText,
-                SlabTestLogMessages.getPageTitleValidationAssertLog(expectedSauceBotPageTitleText));
+                SlabTestLogMessages.incorrectPageTitleAssertLog(expectedSauceBotPageTitleText));
     }
 }

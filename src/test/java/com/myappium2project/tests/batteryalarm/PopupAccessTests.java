@@ -2,20 +2,21 @@ package com.myappium2project.tests.batteryalarm;
 
 import com.myappium2project.pages.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.batteryalarm.MainPage;
-import com.myappium2project.tests.basetests.BatteryAlarmBaseTest;
+import com.myappium2project.tests.basetests.BatteryAlarmTestBase;
+import com.myappium2project.testsgroups.TestGroups;
 import com.myappium2project.utils.batteryalarm.LanguageUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class PopupAccessTests extends BatteryAlarmBaseTest {
+public class PopupAccessTests extends BatteryAlarmTestBase {
     private static final String CHECK_POPUP_VISIBILITY_LOG = "We check if the '{}' popup window {}";
     private static final String POPUP_VISIBILITY_LOG = "The '{}' popup window {}";
 
-    private static String getPopupValidationAssertLog(String popupTitle, String expectedPopupState) {
+    private static String popupAppearsAssertLog(String popupTitle, String expectedPopupState) {
         return String.format("The '%s' popup window should %s, but it does not.", popupTitle, expectedPopupState);
     }
 
-    @Test(groups = {"smoke"})
+    @Test(groups = {TestGroups.SMOKE})
     public void testWarningPopupAlertAccess() {
         MainPage mainPage = new MainPage(driver);
         LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
@@ -34,7 +35,7 @@ public class PopupAccessTests extends BatteryAlarmBaseTest {
             LOG.error(POPUP_VISIBILITY_LOG, popupTitle, popupVisibilityStatus);
         }
         String expectedPopupState = "appear";
-        Assert.assertTrue(isDisplayedExitWarningPopup, getPopupValidationAssertLog(popupTitle, expectedPopupState));
+        Assert.assertTrue(isDisplayedExitWarningPopup, popupAppearsAssertLog(popupTitle, expectedPopupState));
 
         mainPage.pressNoButtonOnWarningPopupWindow();
 
@@ -48,6 +49,6 @@ public class PopupAccessTests extends BatteryAlarmBaseTest {
             LOG.error(POPUP_VISIBILITY_LOG, popupTitle, popupVisibilityStatus);
         }
         expectedPopupState = "disappear";
-        Assert.assertFalse(isDisplayedExitWarningPopup, getPopupValidationAssertLog(popupTitle, expectedPopupState));
+        Assert.assertFalse(isDisplayedExitWarningPopup, popupAppearsAssertLog(popupTitle, expectedPopupState));
     }
 }

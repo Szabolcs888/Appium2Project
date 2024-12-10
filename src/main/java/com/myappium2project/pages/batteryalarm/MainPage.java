@@ -1,7 +1,7 @@
 package com.myappium2project.pages.batteryalarm;
 
 import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -11,7 +11,7 @@ import com.myappium2project.utils.CommonUtils;
 
 import java.util.List;
 
-public class MainPage extends BasePage {
+public class MainPage extends BasePageClass {
     private static final String ALARM_BUTTON_PRESS_LOG = "We press the '{}' {} button {} times";
     private static final String MAX_ALARM_TEXT = "Max Alarm";
     private static final String MIN_ALARM_TEXT = "Min Alarm";
@@ -149,7 +149,7 @@ public class MainPage extends BasePage {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
-    public static String getVoiceWarningTextIsNotAvailableLog(String language) {
+    public static String voiceWarningTextNotAvailableLog(String language) {
         return String.format("The 'Voice Warning' %s text is not available", language);
     }
 
@@ -186,34 +186,39 @@ public class MainPage extends BasePage {
     }
 
     public int getCurrentMaxAlarmValue() {
-        int currentMaxAlarmValue = Integer.parseInt(alarmData.get(9).getText().substring(11).replace("%", ""));
+        int currentMaxAlarmValue =
+                Integer.parseInt(alarmData.get(9).getText().substring(11).replace("%", ""));
         return currentMaxAlarmValue;
     }
 
     public int getCurrentMinAlarmValue() {
-        int currentMinAlarmValue = Integer.parseInt(alarmData.get(8).getText().substring(11).replace("%", ""));
+        int currentMinAlarmValue =
+                Integer.parseInt(alarmData.get(8).getText().substring(11).replace("%", ""));
         return currentMinAlarmValue;
     }
 
     public int getCurrentBatteryChargeValue() {
-        int currentBatteryChargeValue = Integer.parseInt(alarmData.get(2).getText().replace("%", ""));
+        int currentBatteryChargeValue =
+                Integer.parseInt(alarmData.get(2).getText().replace("%", ""));
         return currentBatteryChargeValue;
     }
 
-    public void pressMaxAlarmMinusButton(int buttonPressCounter) {
-        LOG.info(ALARM_BUTTON_PRESS_LOG, MAX_ALARM_TEXT, BUTTON_TYPE_MINUS, buttonPressCounter);
-        for (int i = 0; i < buttonPressCounter; i++) {
-            if (getCurrentMaxAlarmValue() == 1) {
+    public void pressMaxAlarmMinusButton(int numberOfPresses) {
+        LOG.info(ALARM_BUTTON_PRESS_LOG, MAX_ALARM_TEXT, BUTTON_TYPE_MINUS, numberOfPresses);
+        int minimumMaxAlamValue = 1;
+        for (int i = 0; i < numberOfPresses; i++) {
+            if (getCurrentMaxAlarmValue() == minimumMaxAlamValue) {
                 break;
             }
             maxAlarmMinusButton.click();
         }
     }
 
-    public void pressMinAlarmPlusButton(int buttonPressCounter) {
-        LOG.info(ALARM_BUTTON_PRESS_LOG, MIN_ALARM_TEXT, BUTTON_TYPE_PLUS, buttonPressCounter);
-        for (int i = 0; i < buttonPressCounter; i++) {
-            if (getCurrentMinAlarmValue() == 100) {
+    public void pressMinAlarmPlusButton(int numberOfPresses) {
+        LOG.info(ALARM_BUTTON_PRESS_LOG, MIN_ALARM_TEXT, BUTTON_TYPE_PLUS, numberOfPresses);
+        int maximumMinAlamValue = 100;
+        for (int i = 0; i < numberOfPresses; i++) {
+            if (getCurrentMinAlarmValue() == maximumMinAlamValue) {
                 break;
             }
             minAlarmPlusButton.click();
@@ -223,17 +228,18 @@ public class MainPage extends BasePage {
     public boolean isTheCountdownGoing() {
         CommonUtils.threadSleep(7000);
         String countdownTimer = widgetsButtons.get(1).getText();
-        if (!countdownTimer.equals("0h:0m:10s") && !countdownTimer.equals("0h:0m:30s"))
+        if (!"0h:0m:10s".equals(countdownTimer) && !"0h:0m:30s".equals(countdownTimer)) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
 
     public String getChooseASoundText() {
         try {
             return chooseASoundText.getText();
         } catch (StaleElementReferenceException | NoSuchElementException e) {
-            return CommonPageLogMessages.getTextIsNotAvailableLog("Choose a sound");
+            return CommonPageLogMessages.textNotAvailableLog("Choose a sound");
         }
     }
 
@@ -241,7 +247,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningEnglishText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("English");
+            return voiceWarningTextNotAvailableLog("English");
         }
     }
 
@@ -249,7 +255,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningCzechText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Czech");
+            return voiceWarningTextNotAvailableLog("Czech");
         }
     }
 
@@ -257,7 +263,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningDanishText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Danish");
+            return voiceWarningTextNotAvailableLog("Danish");
         }
     }
 
@@ -265,7 +271,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningGermanText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("German");
+            return voiceWarningTextNotAvailableLog("German");
         }
     }
 
@@ -273,7 +279,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningSpanishText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Spanish");
+            return voiceWarningTextNotAvailableLog("Spanish");
         }
     }
 
@@ -281,7 +287,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningFranchiseText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Franchise");
+            return voiceWarningTextNotAvailableLog("Franchise");
         }
     }
 
@@ -289,7 +295,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningIndonesiaText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Indonesia");
+            return voiceWarningTextNotAvailableLog("Indonesia");
         }
     }
 
@@ -297,7 +303,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningItalianText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Italian");
+            return voiceWarningTextNotAvailableLog("Italian");
         }
     }
 
@@ -305,7 +311,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningHungarianText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Hungarian");
+            return voiceWarningTextNotAvailableLog("Hungarian");
         }
     }
 
@@ -313,7 +319,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningDutchText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Dutch");
+            return voiceWarningTextNotAvailableLog("Dutch");
         }
     }
 
@@ -321,7 +327,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningPolishText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Polish");
+            return voiceWarningTextNotAvailableLog("Polish");
         }
     }
 
@@ -329,7 +335,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningPortugueseText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Portuguese");
+            return voiceWarningTextNotAvailableLog("Portuguese");
         }
     }
 
@@ -337,7 +343,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningRomanText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Roman");
+            return voiceWarningTextNotAvailableLog("Roman");
         }
     }
 
@@ -345,7 +351,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningSlovenianText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Slovenian");
+            return voiceWarningTextNotAvailableLog("Slovenian");
         }
     }
 
@@ -353,7 +359,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningSwedishText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Swedish");
+            return voiceWarningTextNotAvailableLog("Swedish");
         }
     }
 
@@ -361,7 +367,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningSerbianText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Serbian");
+            return voiceWarningTextNotAvailableLog("Serbian");
         }
     }
 
@@ -369,7 +375,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningFinnishText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Finnish");
+            return voiceWarningTextNotAvailableLog("Finnish");
         }
     }
 
@@ -377,7 +383,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningTurkishText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Turkish");
+            return voiceWarningTextNotAvailableLog("Turkish");
         }
     }
 
@@ -385,7 +391,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningBulgarianText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Bulgarian");
+            return voiceWarningTextNotAvailableLog("Bulgarian");
         }
     }
 
@@ -393,7 +399,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningRussianText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Russian");
+            return voiceWarningTextNotAvailableLog("Russian");
         }
     }
 
@@ -401,7 +407,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningUkrainianText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Ukrainian");
+            return voiceWarningTextNotAvailableLog("Ukrainian");
         }
     }
 
@@ -409,7 +415,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningGreekText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Greek");
+            return voiceWarningTextNotAvailableLog("Greek");
         }
     }
 
@@ -417,7 +423,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningVietnameseText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Vietnamese");
+            return voiceWarningTextNotAvailableLog("Vietnamese");
         }
     }
 
@@ -425,7 +431,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningJapaneseText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Japanese");
+            return voiceWarningTextNotAvailableLog("Japanese");
         }
     }
 
@@ -433,7 +439,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningChineseText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Chinese");
+            return voiceWarningTextNotAvailableLog("Chinese");
         }
     }
 
@@ -441,7 +447,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningKoreanText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Korean");
+            return voiceWarningTextNotAvailableLog("Korean");
         }
     }
 
@@ -449,7 +455,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningThaiText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Thai");
+            return voiceWarningTextNotAvailableLog("Thai");
         }
     }
 
@@ -457,7 +463,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningArabicText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Arabic");
+            return voiceWarningTextNotAvailableLog("Arabic");
         }
     }
 
@@ -465,7 +471,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningFarsiText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Farsi");
+            return voiceWarningTextNotAvailableLog("Farsi");
         }
     }
 
@@ -473,7 +479,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningHebrewText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Hebrew");
+            return voiceWarningTextNotAvailableLog("Hebrew");
         }
     }
 
@@ -481,7 +487,7 @@ public class MainPage extends BasePage {
         try {
             return voiceWarningHindiText.getText();
         } catch (NoSuchElementException e) {
-            return getVoiceWarningTextIsNotAvailableLog("Hindi");
+            return voiceWarningTextNotAvailableLog("Hindi");
         }
     }
 }

@@ -2,7 +2,7 @@ package com.myappium2project.pages.saucelab;
 
 import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
 import com.myappium2project.logging.pagelogmessages.SlabPageLogMessages;
-import com.myappium2project.pages.BasePage;
+import com.myappium2project.pages.BasePageClass;
 import com.myappium2project.utils.ListUtils;
 import com.myappium2project.utils.ScrollUtils;
 import io.appium.java_client.android.AndroidDriver;
@@ -19,7 +19,7 @@ import com.myappium2project.utils.CommonUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductsPage extends BasePage {
+public class ProductsPage extends BasePageClass {
     private static final String PRESS_TEXT_LOG = "We press the '{}'s text";
     private static final String SELECT_ORDER_OPTION_LOG = "We select the '{}' order option";
     private WebDriverWait wait;
@@ -96,7 +96,7 @@ public class ProductsPage extends BasePage {
         try {
             return productTitleText.getText();
         } catch (NoSuchElementException e) {
-            return CommonPageLogMessages.getTextIsNotAvailableLog("title");
+            return CommonPageLogMessages.textNotAvailableLog("title");
         }
     }
 
@@ -189,7 +189,7 @@ public class ProductsPage extends BasePage {
         try {
             return feedbackPopupText.getText();
         } catch (NoSuchElementException e) {
-            return CommonPageLogMessages.getTextIsNotAvailableLog("feedback popup");
+            return CommonPageLogMessages.textNotAvailableLog("feedback popup");
 
         }
     }
@@ -204,36 +204,36 @@ public class ProductsPage extends BasePage {
     }
 
     public List<String> getListOfProductNames(AndroidDriver driver) {
-        List<String> productNameListAsString = new ArrayList<>();
+        List<String> productNameList = new ArrayList<>();
         boolean moreElements = true;
         int previousSize = 0;
         while (moreElements) {
-            ListUtils.addUniqueItemsToStringList(productNameListAsString, productsNamesListAsElements);
+            ListUtils.addUniqueItemsToStringList(productNameList, productsNamesListAsElements);
             // We check if new items have appeared
-            if (productNameListAsString.size() > previousSize) {
-                previousSize = productNameListAsString.size();
+            if (productNameList.size() > previousSize) {
+                previousSize = productNameList.size();
                 moreElements = ScrollUtils.tryScroll(driver);
             } else {
                 moreElements = false;
             }
         }
-        return productNameListAsString;
+        return productNameList;
     }
 
     public List<Float> getListOfProductPrices(AndroidDriver driver) {
-        List<Float> productPriceListAsFloat = new ArrayList<>();
+        List<Float> productPriceList = new ArrayList<>();
         boolean moreElements = true;
         int previousSize = 0;
         while (moreElements) {
-            ListUtils.addUniqueItemsToFloatList(productPriceListAsFloat, productsPricesListAsElements);
+            ListUtils.addUniqueItemsToFloatList(productPriceList, productsPricesListAsElements);
             // We check if new items have appeared
-            if (productPriceListAsFloat.size() > previousSize) {
-                previousSize = productPriceListAsFloat.size();
+            if (productPriceList.size() > previousSize) {
+                previousSize = productPriceList.size();
                 moreElements = ScrollUtils.tryScroll(driver);
             } else {
                 moreElements = false;
             }
         }
-        return productPriceListAsFloat;
+        return productPriceList;
     }
 }

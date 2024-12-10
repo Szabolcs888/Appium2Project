@@ -9,15 +9,22 @@ import com.sendgrid.helpers.mail.objects.Attachments;
 import com.sendgrid.helpers.mail.objects.Content;
 import com.sendgrid.helpers.mail.objects.Email;
 import com.myappium2project.utils.CommonUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.List;
 
+/**
+ * Class for email sending operations.
+ */
 public class SendGridEmailHelper {
+    private static final Logger LOG = LogManager.getLogger(SendGridEmailHelper.class);
     private static final String EMAIL_SENDING_DATA_PATH = "src/main/resources/emailsendingdata/sendGridCredentials.txt";
     private static final List<String> EMAIL_SENDING_DATA = CommonUtils.readDataFromFile(EMAIL_SENDING_DATA_PATH);
     private static final String API_KEY = EMAIL_SENDING_DATA.get(0);
@@ -37,14 +44,17 @@ public class SendGridEmailHelper {
         try {
             String htmlContent = readHtmlFromFile(emailableReportPath);
             SendGridEmailHelper sendGridEmailHelper = new SendGridEmailHelper();
-            sendGridEmailHelper.sendTestResults(emailSubject, emailTextContent + "\n" +
-                    htmlContent + extentReportlinkInHtml, Arrays.asList(emailableReportPath, extentReportPath, logPath, serverLogPath));
+            sendGridEmailHelper.sendTestResults(
+                    emailSubject, emailTextContent + System.lineSeparator() +
+                            htmlContent + extentReportlinkInHtml,
+                    Arrays.asList(emailableReportPath, extentReportPath, logPath, serverLogPath));
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.error("Failed to send test results email", e);
         }
     }
 
-    private static void sendTestResults(String subject, String htmlContent, List<String> attachmentPaths) throws IOException {
+    private static void sendTestResults(
+            String subject, String htmlContent, List<String> attachmentPaths) throws IOException {
         Mail mail = createEmail(subject, htmlContent, attachmentPaths);
         sendEmail(mail);
     }
@@ -83,7 +93,7 @@ public class SendGridEmailHelper {
     private static void sendEmail(Mail mail) throws IOException {
         SendGrid sendGrid = new SendGrid(API_KEY);
         Request request = new Request();
-
+        System.out.println("Waiting to send email...");
         try {
             request.setMethod(Method.POST);
             request.setEndpoint("mail/send");
@@ -97,7 +107,7 @@ public class SendGridEmailHelper {
     }
 
     private static String readHtmlFromFile(String filePath) throws IOException {
-        return new String(Files.readAllBytes(new File(filePath).toPath()));
+        return new String(Files.readAllBytes(new File(filePath).toPath()), StandardCharsets.UTF_8);
     }
 
     private static String getHtmlLink(String link) {
