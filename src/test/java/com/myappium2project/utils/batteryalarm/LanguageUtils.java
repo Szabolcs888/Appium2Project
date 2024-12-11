@@ -2,7 +2,7 @@ package com.myappium2project.utils.batteryalarm;
 
 import com.myappium2project.pages.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.batteryalarm.MainPage;
-import com.myappium2project.utils.AppiumActions;
+import com.myappium2project.utils.commonutils.AppiumActions;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.NoSuchElementException;
 

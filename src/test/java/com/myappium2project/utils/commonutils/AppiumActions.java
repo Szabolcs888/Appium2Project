@@ -1,7 +1,8 @@
-package com.myappium2project.utils;
+package com.myappium2project.utils.commonutils;
 
 import com.google.common.collect.ImmutableList;
 import com.myappium2project.logging.pagelogmessages.CommonPageLogMessages;
+import com.myappium2project.utils.CommonUtils;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

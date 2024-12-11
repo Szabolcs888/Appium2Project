@@ -62,7 +62,7 @@ public class HamburgerMenu extends BasePageClass {
 
     public void pressHamburgerMenuButton() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(hamburgerMenuButton));
-        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "Hamburger menu");
+        LOG.info(CommonPageLogMessages.PRESS_BUTTON_LOG, "hamburger menu");
         hamburgerMenuButton.click();
     }
 

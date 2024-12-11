@@ -4,7 +4,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.myappium2project.tests.basetests.SauceLabApkTestBase;
-import com.myappium2project.utils.ScreenshotUtils;
+import com.myappium2project.utils.commonutils.ScreenshotUtils;
 import io.appium.java_client.android.AndroidDriver;
 import com.myappium2project.logging.appenders.ExtentAppender;
 import org.apache.logging.log4j.LogManager;
@@ -87,6 +87,16 @@ public class TestListener implements ITestListener {
         extentReports.flush();
         ExtentAppender.setExtentTest(null);
         LOG.info("{} test(s) run completed" + System.lineSeparator(), suiteName);
+
+        int numberOfTests = context.getAllTestMethods().length;
+        int numberOfPassedTests = context.getPassedTests().size();
+        int numberOfFailedTests = context.getFailedTests().size();
+        int numberOfSkippedTests = context.getSkippedTests().size();
+        LOG.info("===============================================");
+        LOG.info(suiteName);
+        LOG.info("Total tests run: {}, Passes: {}, Failures: {}, Skips: {}",
+                numberOfTests, numberOfPassedTests, numberOfFailedTests, numberOfSkippedTests);
+        LOG.info("===============================================");
     }
 
     private AndroidDriver getDriverFromTestClass(Object testClass) {

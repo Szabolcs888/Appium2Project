@@ -5,7 +5,7 @@ import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
 import com.myappium2project.tests.basetests.ChromeBrowserTestBase;
 import com.myappium2project.testsdata.CuraHealthcareData;
 import com.myappium2project.testsgroups.TestGroups;
-import com.myappium2project.utils.AppiumActions;
+import com.myappium2project.utils.commonutils.AppiumActions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.curahealthcarechrome.HamburgerMenu;

@@ -7,7 +7,7 @@ import com.myappium2project.pages.saucelab.productspages.*;
 import com.myappium2project.tests.basetests.SauceLabApkTestBase;
 import com.myappium2project.testsdata.SaucelabData;
 import com.myappium2project.testsgroups.TestGroups;
-import com.myappium2project.utils.AppiumActions;
+import com.myappium2project.utils.commonutils.AppiumActions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

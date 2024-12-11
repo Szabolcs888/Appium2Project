@@ -2,7 +2,9 @@
 <suite name="Master Suite" verbose="1" >
     <suite-files>
         <suite-file path="testng-Smoke.xml"/>
-        <suite-file path="testng-Regression(DataFromXmlFile).xml"/>
+        <suite-file path="testng-Regression.xml"/>
+        <suite-file path="testng-Integration.xml"/>
+        <suite-file path="testng-EndToEnd.xml"/>
         <suite-file path="testng-CU_EndToEndAndAppointmentConfirmationTests.xml"/>
         <suite-file path="testng-SL_DropdownMenuAndFeedbackPopupTests.xml"/>
         <suite-file path="testng-SL_EndToEndAndCartemptiyngTests.xml"/>

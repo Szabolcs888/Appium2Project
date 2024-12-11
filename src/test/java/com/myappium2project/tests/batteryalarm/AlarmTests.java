@@ -1,5 +1,6 @@
 package com.myappium2project.tests.batteryalarm;
 
+import com.myappium2project.testsgroups.TestGroups;
 import com.myappium2project.utils.batteryalarm.LanguageUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -8,6 +9,7 @@ import com.myappium2project.pages.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.batteryalarm.MainPage;
 import com.myappium2project.tests.basetests.BatteryAlarmTestBase;
 
+@Test(groups = {TestGroups.INTEGRATION})
 public class AlarmTests extends BatteryAlarmTestBase {
     private static final String BATTERY_CHARGE_AND_ALARM_LOG = "We ask for the battery charge and '{}' values";
     private static final String ALARM_VALUE_CHANGE_LOG = "To trigger the alarm, we need to {} the '{}' value by {}";

@@ -1,4 +1,4 @@
-package com.myappium2project.utils;
+package com.myappium2project.utils.commonutils;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;

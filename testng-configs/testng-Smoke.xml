@@ -7,6 +7,7 @@
                 <include name="smoke"/>
             </run>
         </groups>
+
         <classes>
             <class name="com.myappium2project.tests.saucelab.LoginTests"/>
             <class name="com.myappium2project.tests.saucelab.PageAccessTests"/>
