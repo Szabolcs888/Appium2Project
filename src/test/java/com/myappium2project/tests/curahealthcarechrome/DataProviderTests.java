@@ -10,7 +10,7 @@ import com.myappium2project.pages.curahealthcarechrome.HamburgerMenu;
 import com.myappium2project.pages.curahealthcarechrome.LoginPage;
 import com.myappium2project.pages.curahealthcarechrome.MakeAppointmentPage;
 
-public class LoginWithDataProviderTests extends ChromeBrowserTestBase {
+public class DataProviderTests extends ChromeBrowserTestBase {
 
     /**
      * The order of attributes of the data Object:

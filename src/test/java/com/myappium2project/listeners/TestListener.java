@@ -22,6 +22,7 @@ import com.myappium2project.tests.basetests.ChromeBrowserTestBase;
  */
 public class TestListener implements ITestListener {
     private static final Logger LOG = LogManager.getLogger(TestListener.class);
+    private static final Logger SUMMARY_LOG = LogManager.getLogger("summaryLogger");
     private ExtentReports extentReports;
     private ExtentTest extentTest;
     private String suiteName;
@@ -92,11 +93,11 @@ public class TestListener implements ITestListener {
         int numberOfPassedTests = context.getPassedTests().size();
         int numberOfFailedTests = context.getFailedTests().size();
         int numberOfSkippedTests = context.getSkippedTests().size();
-        LOG.info("===============================================");
-        LOG.info(suiteName);
-        LOG.info("Total tests run: {}, Passes: {}, Failures: {}, Skips: {}",
+        SUMMARY_LOG.info("===============================================");
+        SUMMARY_LOG.info(suiteName);
+        SUMMARY_LOG.info("Total tests run: {}, Passes: {}, Failures: {}, Skips: {}",
                 numberOfTests, numberOfPassedTests, numberOfFailedTests, numberOfSkippedTests);
-        LOG.info("===============================================");
+        SUMMARY_LOG.info("===============================================");
     }
 
     private AndroidDriver getDriverFromTestClass(Object testClass) {
