@@ -52,22 +52,22 @@ Page access tests (Battery Alarm)
 <table>
 <tr>
 <td>
-<a href="https://www.youtube.com/watch?v=fIGTZE3TzqU">
-<img src="https://img.youtube.com/vi/fIGTZE3TzqU/hqdefault.jpg" alt="Video 1" width="300" />
+<a href="https://www.youtube.com/watch?v=r-YOHGOQKfM">
+<img src="https://img.youtube.com/vi/r-YOHGOQKfM/hqdefault.jpg" alt="Video 1" width="300" />
 <br>
 EndToEnd and Appointment tests (Cura)
 </a>
 </td>
 <td>
-<a href="https://www.youtube.com/watch?v=_fyCZPb1ChQ">
-<img src="https://img.youtube.com/vi/_fyCZPb1ChQ/hqdefault.jpg" alt="Video 2" width="300" />
+<a href="https://www.youtube.com/watch?v=1mExaSGeGFo">
+<img src="https://img.youtube.com/vi/1mExaSGeGFo/hqdefault.jpg" alt="Video 2" width="300" />
 <br>
 EndToEnd and Cart empt. tests (Saucelab)
 </a>
 </td>
 <td>
-<a href="https://www.youtube.com/watch?v=HAl7d1OYIpE">
-<img src="https://img.youtube.com/vi/HAl7d1OYIpE/hqdefault.jpg" alt="Video 2" width="300" />
+<a href="https://www.youtube.com/watch?v=M16hOy4muHU">
+<img src="https://img.youtube.com/vi/M16hOy4muHU/hqdefault.jpg" alt="Video 2" width="300" />
 <br>
 Dropd. and Feedb.popup tests (Saucelab)
 </a>
@@ -75,22 +75,22 @@ Dropd. and Feedb.popup tests (Saucelab)
 </tr>
 <tr>
 <td>
-<a href="https://www.youtube.com/watch?v=5RCdNtd5-Nc">
-<img src="https://img.youtube.com/vi/5RCdNtd5-Nc/hqdefault.jpg" alt="Video 2" width="300" />
+<a href="https://www.youtube.com/watch?v=ou-usLqcfhA">
+<img src="https://img.youtube.com/vi/ou-usLqcfhA/hqdefault.jpg" alt="Video 2" width="300" />
 <br>
 Smoke test (all 3 app/run from a batch file)
 </a>
 </td>
 <td>
-<a href="https://www.youtube.com/watch?v=_lf7F6Mp2Do">
-<img src="https://img.youtube.com/vi/_lf7F6Mp2Do/hqdefault.jpg" alt="Video 3" width="300" />
+<a href="https://www.youtube.com/watch?v=VM3N6wN20q4">
+<img src="https://img.youtube.com/vi/VM3N6wN20q4/hqdefault.jpg" alt="Video 3" width="300" />
 <br>
 Languages and Alarm tests (Battery Alarm)
 </a>
 </td>
 <td>
-<a href="https://www.youtube.com/watch?v=QFx-9d3RgDk">
-<img src="https://img.youtube.com/vi/QFx-9d3RgDk/hqdefault.jpg" alt="Video 1" width="300" />
+<a href="https://www.youtube.com/watch?v=4P3-qimxOKI">
+<img src="https://img.youtube.com/vi/4P3-qimxOKI/hqdefault.jpg" alt="Video 1" width="300" />
 <br>
 Logintests with Data Provider (Cura)
 </a>

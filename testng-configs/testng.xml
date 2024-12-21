@@ -7,7 +7,7 @@
         <suite-file path="testng-EndToEnd.xml"/>
         <suite-file path="testng-CU_EndToEndAndAppointmentConfirmationTests.xml"/>
         <suite-file path="testng-SL_DropdownMenuAndFeedbackPopupTests.xml"/>
-        <suite-file path="testng-SL_EndToEndAndCartemptiyngTests.xml"/>
+        <suite-file path="testng-SL_EndToEndAndCartEmptyingTests.xml"/>
         <suite-file path="testng-BA_LanguagesAndAlarmTests.xml"/>
     </suite-files>
 

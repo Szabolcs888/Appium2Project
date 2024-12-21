@@ -226,7 +226,6 @@ public class ProductsPage extends BasePageClass {
         int previousSize = 0;
         while (moreElements) {
             ListUtils.addUniqueItemsToFloatList(productPriceList, productsPricesListAsElements);
-            // We check if new items have appeared
             if (productPriceList.size() > previousSize) {
                 previousSize = productPriceList.size();
                 moreElements = ScrollUtils.tryScroll(driver);
