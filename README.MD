@@ -101,7 +101,7 @@ Logintests with Data Provider (Cura)
 _notes:_
 >My computer had a hard time with video recording, the processor was often at 100%, so the tests ran slower than usual. Therefore, I had to cut the given video in some places (typically, opening the app took longer than average at the beginning of the test).
 
->The testFingerPrintPageAccess breaks because the popup is not handled. When I wrote the test, the test was successful because the popup does not always pop up. I did not fix it directly afterwards to have an example of a failed test screenshot.
+>The testFingerPrintPageAccess breaks because the popup is not handled. When I wrote the test, the test was successful because the popup does not always pop up. I intentionally didn't fix it afterwards so that there would be an example of a failed test screenshot.
 
 #
 #
@@ -138,6 +138,6 @@ Természetesen számtalan fejlesztési és finomítási lehetőség van még. A 
 _Megjegyzések:_
 >  A tesztadatokat tartalmazó fileokat direkt nem tettem a .gitignore-ba, mert fiktív és nem privát adatok. És az emailküldéshez szükséges adatokat tartalmazó file-t sem, mert amit feltöltöttem, csak egy sablon, a saját adataim nélkül. Ahhoz, hogy működjön az emailküldés, szükséges kitölteni a filet az adatokkal (ha ez nem teljesül, akkor ki kell kommentelni a tearDownSuite() utolsó metódusát).
 
-> A testFingerPrintPageAccess azért törik el, mert a felugró popup nincs lekezelve. A teszt írásakor sikeres volt a teszt futása, mert nem minden esetben ugrik fel a popup. Direkt nem javítottam ki utólag, hogy legyen példa failed teszt screenshot-ra.
+> A testFingerPrintPageAccess azért törik el, mert a felugró popup nincs lekezelve. A teszt írásakor sikeres volt a teszt futása, mert nem minden esetben ugrik fel a popup. Szándékosan nem javítottam ki utólag, hogy legyen példa failed teszt screenshot-ra.
  
 > A videófelvétellel már nehezen bírt a gépem, sokszor 100%-on volt a processzor, így lassabban futottak a tesztek a megszokottnál. Ezért helyenként meg kellett vágnom az adott videót (jellemzően a teszt elején az app megnyitása vett hosszabb időt igénybe az átlagosnál).
