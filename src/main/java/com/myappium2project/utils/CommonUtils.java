@@ -20,6 +20,10 @@ public final class CommonUtils {
     private static final String USER_DIR = System.getProperty("user.dir");
     private static final String FAILED_DELETE_FILE_MESSAGE = "Failed to delete file: ";
 
+    private CommonUtils() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
     public static void threadSleep(int milliseconds) {
         try {
             Thread.sleep(milliseconds);
@@ -88,9 +92,5 @@ public final class CommonUtils {
         deleteFile(USER_DIR + "/reports/emailable-report.html");
         deleteFile(USER_DIR + "/target/surefire-reports/emailable-report.html");
         deleteFile(USER_DIR + "/reports/extent-report.html");
-    }
-
-    private CommonUtils() {
-        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

@@ -14,11 +14,11 @@ public final class CommonPageLogMessages {
 
     public static final String ERROR_MESSAGE_NOT_AVAILABLE_LOG = "The error message is not available";
 
-    public static String textNotAvailableLog(String text) {
-        return String.format("The '%s' text is not available", text);
-    }
-
     private CommonPageLogMessages() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
+    public static String textNotAvailableLog(String text) {
+        return String.format("The '%s' text is not available", text);
     }
 }

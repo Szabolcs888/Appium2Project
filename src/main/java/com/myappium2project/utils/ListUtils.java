@@ -10,6 +10,10 @@ import java.util.List;
  */
 public final class ListUtils {
 
+    private ListUtils() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
     public static void addUniqueItemsToStringList(List<String> targetList, List<WebElement> webElements) {
         for (WebElement item : webElements) {
             String elementAttributeText = item.getText();
@@ -26,9 +30,5 @@ public final class ListUtils {
                 targetList.add(elementAttributeTextAsFLoat);
             }
         }
-    }
-
-    private ListUtils() {
-        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

@@ -11,6 +11,10 @@ import java.io.File;
  */
 public final class AppiumOptionsFactory {
 
+    private AppiumOptionsFactory() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
     public static UiAutomator2Options getSauceLabApkOptions() {
         ClassLoader classLoader = AppiumOptionsFactory.class.getClassLoader();
         File file = new File(classLoader.getResource("apks/Android-MyDemoAppRN.1.3.0.build-244.apk").getFile());
@@ -52,9 +56,5 @@ public final class AppiumOptionsFactory {
                 .noReset()
                 .withBrowserName("Chrome");
         return options;
-    }
-
-    private AppiumOptionsFactory() {
-        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

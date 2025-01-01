@@ -22,6 +22,10 @@ public final class AppiumActions {
     private static final Logger LOG = LogManager.getLogger(AppiumActions.class);
     private static final String SCROLL_DIRECTION_LOG = "We scroll {}";
 
+    private AppiumActions() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
     public static void navigateBack(AndroidDriver driver) {
         LOG.info(CommonPageLogMessages.PRESS_BUTTON_ON_LOG, "back", "phone");
         driver.navigate().back();
@@ -118,9 +122,5 @@ public final class AppiumActions {
         fingerAction.addAction(input.createPointerMove(Duration.ofSeconds(1), PointerInput.Origin.viewport(), location.x, location.y));
         fingerAction.addAction(input.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         driver.perform(ImmutableList.of(fingerAction));
-    }
-
-    private AppiumActions() {
-        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

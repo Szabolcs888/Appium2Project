@@ -11,15 +11,15 @@ public final class CuraTestLogMessages {
     public static final String INCORRECT_APPOINTMENT_DATA_LOG = "The appointment data is not correct on the '{}', page.";
     public static final String INCORRECT_APPOINTMENT_DATA_ASSERT_LOG = "The appointment data should match the provided data, but it does not.";
 
+    private CuraTestLogMessages() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
     public static String appointmentDataLog(String pageName) {
         return String.format("The appointment data is on the '%s', page: %n", pageName);
     }
 
     public static String incorrectAppointmentDataAssertLog(String pageName) {
         return String.format("The appointment data on the '%s' page should match the provided data, but it does not.", pageName);
-    }
-
-    private CuraTestLogMessages() {
-        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

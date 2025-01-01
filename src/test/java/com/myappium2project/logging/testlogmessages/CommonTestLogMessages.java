@@ -23,11 +23,11 @@ public final class CommonTestLogMessages {
     public static final String ON_PAGE_LOG = "We are on the '{}' page";
     public static final String NOT_ON_PAGE_LOG = "We are not on the '{}' page";
 
-    public static String incorrectErrorMessageAssertLog(String errorMessage, String expectedErrorMessage) {
-        return String.format("The error message should be '%s', but it is '%s'.", expectedErrorMessage, errorMessage);
-    }
-
     private CommonTestLogMessages() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
+    public static String incorrectErrorMessageAssertLog(String errorMessage, String expectedErrorMessage) {
+        return String.format("The error message should be '%s', but it is '%s'.", expectedErrorMessage, errorMessage);
     }
 }

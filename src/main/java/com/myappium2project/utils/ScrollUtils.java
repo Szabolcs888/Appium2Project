@@ -10,6 +10,10 @@ import org.openqa.selenium.NoSuchElementException;
  */
 public final class ScrollUtils {
 
+    private ScrollUtils() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
     public static boolean tryScroll(AndroidDriver driver) {
         try {
             driver.findElement(AppiumBy.androidUIAutomator(
@@ -18,9 +22,5 @@ public final class ScrollUtils {
         } catch (NoSuchElementException _) {
             return false;
         }
-    }
-
-    private ScrollUtils() {
-        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

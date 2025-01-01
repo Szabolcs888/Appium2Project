@@ -9,6 +9,10 @@ import java.io.IOException;
  */
 public final class NetlifyUploader {
 
+    private NetlifyUploader() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
     public static void uploadReportToNetlify() {
         try {
             String reportsDirectory = "C:/munka/repositoryProjects/Appium2/Appium2Project/reports";
@@ -27,9 +31,5 @@ public final class NetlifyUploader {
         } catch (IOException | InterruptedException e) {
             System.out.println("Exception occurred during report upload: " + e);
         }
-    }
-
-    private NetlifyUploader() {
-        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

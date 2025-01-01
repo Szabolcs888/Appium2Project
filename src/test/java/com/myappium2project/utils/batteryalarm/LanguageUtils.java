@@ -12,6 +12,10 @@ import org.openqa.selenium.NoSuchElementException;
  */
 public final class LanguageUtils {
 
+    private LanguageUtils() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
     public static void ensureEnglishLanguageSelected(
             AndroidDriver driver, MainPage mainPage,
             LanguagesDropdownMenu languagesDropdownMenu) {
@@ -38,9 +42,5 @@ public final class LanguageUtils {
                 languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
             }
         } while (!"English".equals(mainPage.getSelectedLanguage()));
-    }
-
-    private LanguageUtils() {
-        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

@@ -18,6 +18,10 @@ import java.io.IOException;
 public final class ScreenshotUtils {
     private static final Logger LOG = LogManager.getLogger(ScreenshotUtils.class);
 
+    private ScreenshotUtils() {
+        throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
     public static void captureAndSaveScreenshot(AndroidDriver driver, String testName) {
         String screenshotPath = System.getProperty("user.dir") + "/src/test/resources/screenshots/" + testName + ".png";
         String actualReportScreenshotPath = System.getProperty("user.dir") + "/reports/actualReportScreenshots/" + testName + ".png";
@@ -40,9 +44,5 @@ public final class ScreenshotUtils {
         } catch (ClassCastException e) {
             LOG.error("Driver does not support screenshot capturing", e);
         }
-    }
-
-    private ScreenshotUtils() {
-        throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 }

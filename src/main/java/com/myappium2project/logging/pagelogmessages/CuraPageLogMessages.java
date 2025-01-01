@@ -6,11 +6,11 @@ package com.myappium2project.logging.pagelogmessages;
  */
 public final class CuraPageLogMessages {
 
-    public static String pageNotLoadAssertLog(String pageName) {
-        return String.format("The '%s' page should be loaded, but it is not.", pageName);
-    }
-
     private CuraPageLogMessages() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
+    public static String pageNotLoadAssertLog(String pageName) {
+        return String.format("The '%s' page should be loaded, but it is not.", pageName);
     }
 }

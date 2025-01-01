@@ -15,11 +15,11 @@ public final class SlabTestLogMessages {
     public static final String CART_COUNTER_AVAILABLE_LOG = "The cart counter is available";
     public static final String CART_COUNTER_NOT_AVAILABLE_ASSERT_LOG = "The cart counter should not be available, but it is.";
 
-    public static String incorrectPageTitleAssertLog(String expectedPageTitleText) {
-        return String.format("The page title should be '%s', but it is not.", expectedPageTitleText);
-    }
-
     private SlabTestLogMessages() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
+    }
+
+    public static String incorrectPageTitleAssertLog(String expectedPageTitleText) {
+        return String.format("The page title should be '%s', but it is not.", expectedPageTitleText);
     }
 }
