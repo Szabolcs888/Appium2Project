@@ -49,17 +49,11 @@ public class DriverFactory {
         return new AndroidDriver(url, isCloud ? SauceLabsAppOptionsBuilder.getSauceLabsAppCloudOptions() : SauceLabsAppOptionsBuilder.getSauceLabsAppLocalOptions());
     }
 
-    ;
-
     private static AndroidDriver createBrowserDriver(boolean isCloud, URL url, String appName) {
         return new AndroidDriver(url, isCloud ? BrowserOptionsBuilder.getBrowserCloudOptions(appName) : BrowserOptionsBuilder.getBrowserLocalOptions(appName));
     }
 
-    ;
-
     private static AndroidDriver createBatteryAlarmDriver(URL url) {
         return new AndroidDriver(url, BatteryAlarmAppOptionsBuilder.getBatteryAlarmAppLocalOptions());
     }
-
-    ;
 }
