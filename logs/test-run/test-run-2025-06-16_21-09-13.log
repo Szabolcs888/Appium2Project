@@ -1,0 +1,53 @@
+[INFO ] 2025-06-16 21:09:22 - server.AppiumServerManager                  - The Appium Server was started from code
+[INFO ] 2025-06-16 21:09:22 - server.AppiumServerManager                  - Appium Server URL: http://127.0.0.1:4723/
+[INFO ] 2025-06-16 21:09:22 - server.AppiumServerManager                  - Appium Server is running: true
+
+[INFO ] 2025-06-16 21:09:22 - listeners.TestListener                      - Default Suite test(s) run will start
+[INFO ] 2025-06-16 21:09:22 - curahealthcare.EndToEndTests                - ------- START: Chrome browser -------
+[INFO ] 2025-06-16 21:09:34 - listeners.TestListener                      - Test STARTED: testEndToEnd
+[INFO ] 2025-06-16 21:09:37 - curahealthcare.CuraCommonSteps              - We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+[INFO ] 2025-06-16 21:09:37 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-16 21:09:38 - curahealthcare.HamburgerMenu                - We press the 'Login' button
+[INFO ] 2025-06-16 21:09:39 - curahealthcare.LoginPage                    - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-16 21:09:40 - curahealthcare.LoginPage                    - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-16 21:09:40 - curahealthcare.LoginPage                    - We press the 'Login' button
+[INFO ] 2025-06-16 21:09:43 - curahealthcare.CuraCommonAssertions         - We check if we are on the 'Make Appointment' page
+[INFO ] 2025-06-16 21:09:43 - curahealthcare.CuraCommonAssertions         - We are on the 'Make Appointment' page
+[INFO ] 2025-06-16 21:09:43 - curahealthcare.MakeAppointmentPage          - We press the 'Facility' 'dropdown menu' button
+[INFO ] 2025-06-16 21:09:43 - curahealthcare.MakeAppointmentPage          - We choice the 'Seoul CURA Healthcare Center' option
+[INFO ] 2025-06-16 21:09:44 - curahealthcare.MakeAppointmentPage          - We press the 'Apply for hospital readmission' checkbox
+[INFO ] 2025-06-16 21:09:44 - curahealthcare.MakeAppointmentPage          - We choice the 'Medicare' in the Healthcare Program radio box
+[INFO ] 2025-06-16 21:09:44 - curahealthcare.MakeAppointmentPage          - We fill the 'Visit Date' input field with: '2026-04-12'
+[INFO ] 2025-06-16 21:09:45 - curahealthcare.MakeAppointmentPage          - We write a comment in a comment field: 'Unfortunately, there will be a lot more.'
+[INFO ] 2025-06-16 21:09:46 - curahealthcare.MakeAppointmentPage          - We press the 'Book Appointment' button
+[INFO ] 2025-06-16 21:09:47 - curahealthcare.CuraCommonAssertions         - We check if we are on the 'Appointment Confirmation' page
+[INFO ] 2025-06-16 21:09:47 - curahealthcare.CuraCommonAssertions         - We are on the 'Appointment Confirmation' page
+[INFO ] 2025-06-16 21:09:48 - curahealthcare.CuraCommonAssertions         - We check if the appointment data matches the ones we provided
+[INFO ] 2025-06-16 21:09:48 - curahealthcare.CuraCommonAssertions         - The appointment data is correct on the 'Appointment Confirmation' page
+[INFO ] 2025-06-16 21:09:48 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-16 21:09:49 - curahealthcare.HamburgerMenu                - We press the 'History' button
+[INFO ] 2025-06-16 21:09:51 - curahealthcare.CuraCommonAssertions         - We check if we are on the 'History' page
+[INFO ] 2025-06-16 21:09:51 - curahealthcare.CuraCommonAssertions         - We are on the 'History' page
+[INFO ] 2025-06-16 21:09:52 - curahealthcare.CuraCommonAssertions         - We check if the appointment data matches the ones we provided
+[INFO ] 2025-06-16 21:09:52 - curahealthcare.CuraCommonAssertions         - The appointment data is correct on the 'History' page
+[INFO ] 2025-06-16 21:09:52 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-16 21:09:52 - curahealthcare.HamburgerMenu                - We press the 'Profile' button
+[INFO ] 2025-06-16 21:09:54 - curahealthcare.CuraCommonAssertions         - We check if we are on the 'Profile' page
+[INFO ] 2025-06-16 21:09:54 - curahealthcare.CuraCommonAssertions         - We are on the 'Profile' page
+[INFO ] 2025-06-16 21:09:54 - curahealthcare.ProfilePage                  - We press the 'Logout' button
+[INFO ] 2025-06-16 21:09:56 - curahealthcare.EndToEndTests                - We check if we are on the 'Main' page
+[INFO ] 2025-06-16 21:09:56 - curahealthcare.EndToEndTests                - We are on the 'Main' page
+[INFO ] 2025-06-16 21:09:56 - listeners.TestListener                      - Test PASSED: testEndToEnd
+[INFO ] 2025-06-16 21:09:57 - curahealthcare.EndToEndTests                - ------- STOPPED: Chrome browser -------
+
+[INFO ] 2025-06-16 21:09:58 - listeners.TestListener                      - Default Suite test(s) run completed
+
+[INFO ] 2025-06-16 21:09:58 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-16 21:09:58 - summaryLogger                               - Default Suite
+[INFO ] 2025-06-16 21:09:58 - summaryLogger                               - Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+[INFO ] 2025-06-16 21:09:58 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-16 21:09:58 - server.AppiumServerManager                  - The Appium Server started by this process has been stopped
+
+[INFO ] 2025-06-16 21:10:18 - server.NetlifyUploader                      - Report uploaded to Netlify
+
+[INFO ] 2025-06-16 21:10:21 - service.SendGridEmailService                - Email successfully sent with status code: 202

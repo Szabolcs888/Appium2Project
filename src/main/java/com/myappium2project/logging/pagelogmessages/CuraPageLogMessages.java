@@ -2,7 +2,6 @@ package com.myappium2project.logging.pagelogmessages;
 
 /**
  * Cura Healthcare log messages used across Cura Healthcare pages.
- * This class is not meant to be instantiated.
  */
 public final class CuraPageLogMessages {
 

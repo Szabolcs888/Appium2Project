@@ -3,7 +3,7 @@
 <suite name="Failed suite [Command line suite]">
   <test thread-count="5" name="Command line test(failed)">
     <classes>
-      <class name="tests.a_sauceLabApk.PageAccessTests">
+      <class name="tests.saucelabsapp.PageAccessTests">
         <methods>
           <include name="androidDriverSetup"/>
           <include name="tearDownClass"/>

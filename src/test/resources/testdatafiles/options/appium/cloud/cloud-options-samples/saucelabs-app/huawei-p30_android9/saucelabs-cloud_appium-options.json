@@ -1,0 +1,7 @@
+{
+  "platformName": "Android",
+  "platformVersion": "9.0",
+  "automationName": "UIAutomator2",
+  "deviceName": "Huawei P30",
+  "app": "bs://443ea182bd9617c9253cf7df5716166bf2f75032"
+}

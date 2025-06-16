@@ -1,29 +1,32 @@
 package com.myappium2project.utils;
 
-import org.apache.commons.io.FileUtils;
+import com.myappium2project.configpaths.MainPaths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
+import java.nio.file.Path;
 
 /**
- * Utility class for common utility methods.
- * This class is not meant to be instantiated.
+ * Utility class containing general-purpose helper methods for common test framework operations.
  */
 public final class CommonUtils {
     private static final Logger LOG = LogManager.getLogger(CommonUtils.class);
-    private static final String USER_DIR = System.getProperty("user.dir");
     private static final String FAILED_DELETE_FILE_MESSAGE = "Failed to delete file: ";
 
     private CommonUtils() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
     }
 
+    /**
+     * Pauses the current thread for the specified number of milliseconds.
+     * <p>
+     * Wraps {@link Thread#sleep(long)} and rethrows any {@link InterruptedException}
+     * as an unchecked {@link IllegalStateException}.
+     *
+     * @param milliseconds the number of milliseconds to sleep
+     * @throws IllegalStateException if the thread is interrupted during sleep
+     */
     public static void threadSleep(int milliseconds) {
         try {
             Thread.sleep(milliseconds);
@@ -33,64 +36,49 @@ public final class CommonUtils {
         }
     }
 
-    public static List<String> readDataFromFile(String path) {
-        List<String> lines = new ArrayList<>();
-        try {
-            lines = Files.readAllLines(Paths.get(path));
-        } catch (
-                IOException e) {
-            LOG.error("The testData's file is not found!");
-        }
-        return splittingLines(lines);
+    /**
+     * Deletes previously generated HTML reports and screenshots.
+     * <p>
+     * This is typically used before a new test run to ensure clean reporting output.
+     */
+    public static void cleanReportsAndScreenshots() {
+        deleteDirectoryFiles(MainPaths.ACTUAL_REPORT_SCREENSHOT_PATH, "actualreportscreenshots");
+        deleteFile(MainPaths.EXTENT_REPORT_FILE_PATH);
     }
 
-    private static List<String> splittingLines(List<String> lines) {
-        List<String> splitLines = new ArrayList<>();
-        for (String item : lines) {
-            try {
-                splitLines.add(item.split("_:")[1]);
-            } catch (ArrayIndexOutOfBoundsException e) {
-                LOG.warn("Incorrect format in line: {}", item);
-                throw new IllegalArgumentException("Test data format error: " + item, e);
-            }
-        }
-        return splitLines;
-    }
-
-    private static void deleteDirectoryFiles(File directory) {
-        File[] files = directory.listFiles();
+    /**
+     * Deletes all files (not subdirectories) in the specified directory.
+     *
+     * @param directoryPath the path to the directory to clean
+     * @param directoryName the name used for logging context
+     */
+    private static void deleteDirectoryFiles(Path directoryPath, String directoryName) {
+        File dirPathAsString = directoryPath.toFile(); // Path -> File átalakítás
+        File[] files = dirPathAsString.listFiles();
         if (files != null) {
             for (File file : files) {
                 if (file.isFile()) {
                     if (!file.delete()) {
-                        System.out.println(FAILED_DELETE_FILE_MESSAGE + file.getAbsolutePath());
+                        LOG.warn("Failed to delete file from the {} directory: {}", directoryName, file.getName());
+                    } else {
+                        LOG.debug("Deleted file from the actualReportScreenshots directory: {}", file.getName());
                     }
                 }
             }
         }
     }
 
-    private static void deleteFile(String path) {
-        File file = new File(path);
+    /**
+     * Attempts to delete a single file and logs a warning if deletion fails.
+     *
+     * @param filePath the path of the file to delete
+     */
+    private static void deleteFile(Path filePath) {
+        File file = new File(String.valueOf(filePath));
         if (!file.delete()) {
-            System.out.println(FAILED_DELETE_FILE_MESSAGE + file.getName());
+            LOG.warn(FAILED_DELETE_FILE_MESSAGE + "{}", file.getName());
+        } else {
+            LOG.debug("Deleted file: {}", filePath);
         }
-    }
-
-    public static void copyFile(String sourcePath, String destinationPath) {
-        try {
-            File sourceFile = new File(sourcePath);
-            File destinationFile = new File(destinationPath);
-            FileUtils.copyFile(sourceFile, destinationFile);
-        } catch (IOException e) {
-            System.out.println("Failed to copy from target/surefire-reports/emailable-report.html: " + e.getMessage());
-        }
-    }
-
-    public static void cleanReportsAndScreenshots() {
-        deleteDirectoryFiles(new File(USER_DIR + "/reports/actualReportScreenshots/"));
-        deleteFile(USER_DIR + "/reports/emailable-report.html");
-        deleteFile(USER_DIR + "/target/surefire-reports/emailable-report.html");
-        deleteFile(USER_DIR + "/reports/extent-report.html");
     }
 }

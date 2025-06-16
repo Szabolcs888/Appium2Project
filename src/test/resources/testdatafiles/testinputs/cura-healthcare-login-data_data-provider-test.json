@@ -1,0 +1,30 @@
+[
+  {
+    "username": "John Doe",
+    "usernameStatus": "valid",
+    "password": "ThisIsNotAPassword",
+    "passwordStatus": "valid",
+    "expectedResult": true
+  },
+  {
+    "username": "John Doe",
+    "usernameStatus": "valid",
+    "password": "invalid_password",
+    "passwordStatus": "invalid",
+    "expectedResult": false
+  },
+  {
+    "username": "invalid_username",
+    "usernameStatus": "invalid",
+    "password": "ThisIsNotAPassword",
+    "passwordStatus": "valid",
+    "expectedResult": false
+  },
+  {
+    "username": "",
+    "usernameStatus": "empty",
+    "password": "",
+    "passwordStatus": "empty",
+    "expectedResult": false
+  }
+]

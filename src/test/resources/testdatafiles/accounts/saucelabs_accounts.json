@@ -1,0 +1,28 @@
+[
+  {
+    "email": "bob@example.com",
+    "password": "10203040",
+    "name": "Johnnie Clark",
+    "addressLine": "Narrow way 8.",
+    "city": "Pilis",
+    "region": "Pest megye",
+    "zipCode": "2721",
+    "country": "Hungary",
+    "cardNumber": "023728054492102",
+    "expDate": "0725",
+    "secCode": "872"
+  },
+  {
+    "email": "bob@example.com",
+    "password": "10203040",
+    "name": "Vanessa Morgan",
+    "addressLine": "Fairyflower street 12.",
+    "city": "Urhida",
+    "region": "Fejer megye",
+    "zipCode": "8142",
+    "country": "Hungary",
+    "cardNumber": "238858251007850",
+    "expDate": "0627",
+    "secCode": "871"
+  }
+]

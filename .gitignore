@@ -1,6 +1,8 @@
+### Build output ###
 target/
-batchfiles/
-codemr/
+test-output/
+
+### Maven Wrapper ###
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -36,10 +38,13 @@ build/
 ### Mac OS ###
 .DS_Store
 
-Android-MyDemoAppRN.1.3.0.build-244.apk
-thingsToDo.txt
-_sendGridCredentials.txt
-_sendGridCredentials_sample.txt
-_
+### Personal files (others) ###
 **/videos/
+Android-MyDemoAppRN.1.3.0.build-244.apk
+scrcpy.bat
+thingsToDo.txt
+_sendgrid_account.json
+_sendgrid_account_sample.json
+
+
 

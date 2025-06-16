@@ -1,0 +1,8 @@
+{
+  "platformName": "Android",
+  "platformVersion": "11",
+  "automationName": "UIAutomator2",
+  "deviceName": "17fad31f",
+  "browserName": "Chrome",
+  "noReset": true
+}

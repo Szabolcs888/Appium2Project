@@ -1,0 +1,7 @@
+{
+  "platformName": "Android",
+  "platformVersion": "12.0",
+  "automationName": "UIAutomator2",
+  "deviceName": "Samsung Galaxy S22 Ultra",
+  "app": "bs://443ea182bd9617c9253cf7df5716166bf2f75032"
+}

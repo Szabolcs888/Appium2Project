@@ -1,6 +1,9 @@
 package com.myappium2project.tests.basetests;
 
-import com.myappium2project.email.SendGridEmailHelper;
+import com.myappium2project.configdata.environment.EnvironmentConfig;
+import com.myappium2project.email.service.SendGridEmailService;
+
+import com.myappium2project.email.models.TestResult;
 import io.appium.java_client.android.AndroidDriver;
 import com.myappium2project.listeners.TestListener;
 import org.apache.logging.log4j.Level;
@@ -12,15 +15,32 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
-import com.myappium2project.server.AppiumServerFromCode;
+import com.myappium2project.server.AppiumServerManager;
 import com.myappium2project.server.NetlifyUploader;
 import com.myappium2project.utils.CommonUtils;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
+/**
+ * Base class for all test classes in the project.
+ * <p>
+ * Handles common test suite setup and teardown tasks, such as:
+ * <ul>
+ *   <li>Starting/stopping the Appium server</li>
+ *   <li>Cleaning up previous reports and screenshots</li>
+ *   <li>Sending test result summaries via email</li>
+ *   <li>Uploading the test report to Netlify</li>
+ * </ul>
+ * <p>
+ * Subclasses are expected to initialize the {@code driver} field and may use
+ * the provided {@code LOG} and {@code wait} fields.
+ */
 @Listeners(TestListener.class)
 public class BaseTestClass {
+    private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy.MM.dd. HH:mm:ss");
+
     static {
         Configurator.setLevel("org.testng.internal.Utils", Level.OFF);
     }
@@ -28,43 +48,51 @@ public class BaseTestClass {
     protected Logger LOG;
     protected AndroidDriver driver;
     protected WebDriverWait wait;
-    private AppiumServerFromCode appiumServerFromCode = new AppiumServerFromCode();
+    private AppiumServerManager appiumServerManager = new AppiumServerManager();
     private String testStartDateTime;
     private String testEndDateTime;
 
-    public AndroidDriver getDriver() {
-        return driver;
-    }
-
+    /**
+     * Sets up the test suite before any tests are run.
+     * Starts the Appium server if needed and cleans old reports.
+     */
     @BeforeSuite(alwaysRun = true)
     public void setUpSuite() {
-        Configurator.initialize(null, "config/log4j2.properties");
-        appiumServerFromCode.startAppiumServer();
+        appiumServerManager.startFromCodeIfRequired(EnvironmentConfig.isCloud());
         CommonUtils.cleanReportsAndScreenshots();
-        testStartDateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy.MM.dd. HH:mm:ss"));
+        testStartDateTime = LocalDateTime.now().format(DATE_TIME_FORMATTER);
     }
 
+    /**
+     * Initializes the logger for the concrete test class.
+     */
     @BeforeClass(alwaysRun = true)
     public void setUpClass() {
         LOG = LogManager.getLogger(this.getClass());
     }
 
+    /**
+     * Finalizes the test suite after all tests have run.
+     * Stops the Appium server if it was started from code,
+     * uploads the test report, and sends the email summary.
+     */
     @AfterSuite(alwaysRun = true)
     public void tearDownSuite() {
-        testEndDateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy.MM.dd. HH:mm:ss"));
-        appiumServerFromCode.stopAppiumServer();
-        executePostSuiteActions(testStartDateTime, testEndDateTime);
+        testEndDateTime = LocalDateTime.now().format(DATE_TIME_FORMATTER);
+        appiumServerManager.stopIfStartedFromCode();
+        finalizeTestSuite(testStartDateTime, testEndDateTime);
     }
 
-    private static void executePostSuiteActions(String testStartDateTime, String testEndDateTime) {
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            CommonUtils.threadSleep(1000);
-            CommonUtils.copyFile(
-                    "target/surefire-reports/emailable-report.html",
-                    "reports/emailable-report.html");
-            NetlifyUploader.uploadReportToNetlify();
-            SendGridEmailHelper sendGridEmailHelper = new SendGridEmailHelper();
-            sendGridEmailHelper.sendEmailWithReport(testStartDateTime, testEndDateTime);
-        }));
+    private void finalizeTestSuite(String testStartDateTime, String testEndDateTime) {
+        CommonUtils.threadSleep(1000);
+        NetlifyUploader.uploadReportToNetlify();
+
+        String suiteName = TestListener.getSuiteName();
+        List<TestResult> results = TestListener.getResults();
+        SendGridEmailService.sendEmailWithReport(testStartDateTime, testEndDateTime, suiteName, results);
+    }
+
+    public AndroidDriver getDriver() {
+        return driver;
     }
 }

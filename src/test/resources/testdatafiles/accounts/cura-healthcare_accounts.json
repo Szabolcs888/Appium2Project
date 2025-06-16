@@ -1,0 +1,20 @@
+[
+  {
+    "username": "John Doe",
+    "password": "ThisIsNotAPassword",
+    "facility": "Hongkong CURA Healthcare Center",
+    "readmission": "Yes",
+    "healthcareProgram": "Medicaid",
+    "visitDate": "2025-08-16",
+    "comment": "I look forward to being there."
+  },
+  {
+    "username": "John Doe",
+    "password": "ThisIsNotAPassword",
+    "facility": "Seoul CURA Healthcare Center",
+    "readmission": "Yes",
+    "healthcareProgram": "Medicare",
+    "visitDate": "2026-04-12",
+    "comment": "Unfortunately, there will be a lot more."
+  }
+]

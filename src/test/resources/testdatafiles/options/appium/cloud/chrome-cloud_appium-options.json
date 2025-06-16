@@ -1,0 +1,8 @@
+{
+  "platformName": "Android",
+  "platformVersion": "14.0",
+  "automationName": "UIAutomator2",
+  "deviceName": "OnePlus 12R",
+  "browserName": "Chrome",
+  "noReset": true
+}

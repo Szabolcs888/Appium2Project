@@ -1,0 +1,9 @@
+{
+  "theme": "STANDARD",
+  "documentTitle": "Automation Report",
+  "reportName": "Test Report",
+  "systemInfo": {
+    "Environment": "QA",
+    "User": "Szabolcs"
+  }
+}

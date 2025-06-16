@@ -2,7 +2,6 @@ package com.myappium2project.logging.pagelogmessages;
 
 /**
  * Common log messages used across pages.
- * This class is not meant to be instantiated.
  */
 public final class CommonPageLogMessages {
     public static final String PRESS_BUTTON_LOG = "We press the '{}' button";

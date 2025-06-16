@@ -1,0 +1,57 @@
+[INFO ] 2025-06-16 21:12:18 - server.AppiumServerManager                  - Appium Server is already running on port 4723 (external process)
+
+[INFO ] 2025-06-16 21:12:18 - listeners.TestListener                      - Default Suite test(s) run will start
+[INFO ] 2025-06-16 21:12:19 - saucelabs.CartEmptyingTests                 - ------- START: SauceLabs app -------
+[INFO ] 2025-06-16 21:12:28 - listeners.TestListener                      - Test STARTED: testPlacingProductsInCartAndThenEmptyingThem
+[INFO ] 2025-06-16 21:12:29 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-16 21:12:29 - saucelabs.HamburgerMenu                     - We press the 'Log In' button
+[INFO ] 2025-06-16 21:12:31 - saucelabs.LoginPage                         - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-16 21:12:33 - saucelabs.LoginPage                         - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-16 21:12:33 - saucelabs.LoginPage                         - We press the 'Login' button
+[INFO ] 2025-06-16 21:12:34 - saucelabs.ProductsPage                      - We press the 'dropdown menu' button
+[INFO ] 2025-06-16 21:12:35 - saucelabs.ProductsPage                      - We select the 'ascending price' order option
+[INFO ] 2025-06-16 21:12:36 - saucelabs.ProductsPage                      - We press the 'Bolt T-shirt's text
+[INFO ] 2025-06-16 21:12:37 - productspages.BoltTShirtPage                - We press the 'Add To Cart' button
+[INFO ] 2025-06-16 21:12:39 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-16 21:12:39 - saucelabs.ProductsPage                      - We press the 'Test allTheThings T-shirt's text
+[INFO ] 2025-06-16 21:12:40 - productspages.TestAllTheThingsTShirtPage    - We press the 'gray circle' button
+[INFO ] 2025-06-16 21:12:42 - productspages.TestAllTheThingsTShirtPage    - We press the 'Add To Cart' button
+[INFO ] 2025-06-16 21:12:42 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-16 21:12:43 - common.AppiumActions                        - We scroll down
+[INFO ] 2025-06-16 21:12:43 - saucelabs.ProductsPage                      - We press the 'Fleece Jacket's text
+[INFO ] 2025-06-16 21:12:44 - productspages.FleeceJacketPage              - We press the 'Add To Cart' button
+[INFO ] 2025-06-16 21:12:45 - productspages.FleeceJacketPage              - We press the 'counter plus' button
+[INFO ] 2025-06-16 21:12:46 - productspages.FleeceJacketPage              - We press the 'Add To Cart' button
+[INFO ] 2025-06-16 21:12:47 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-16 21:12:47 - saucelabs.ProductsPage                      - We press the 'Backpack's text
+[INFO ] 2025-06-16 21:12:48 - productspages.BackPackPage                  - We press the 'Add To Cart' button
+[INFO ] 2025-06-16 21:12:50 - productspages.BackPackPage                  - We press the 'red circle' button
+[INFO ] 2025-06-16 21:12:50 - productspages.BackPackPage                  - We press the 'counter plus' button
+[INFO ] 2025-06-16 21:12:51 - productspages.BackPackPage                  - We press the 'counter plus' button
+[INFO ] 2025-06-16 21:12:51 - productspages.BackPackPage                  - We press the 'Add To Cart' button
+[INFO ] 2025-06-16 21:12:52 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-16 21:12:53 - common.AppiumActions                        - We scroll up
+[INFO ] 2025-06-16 21:12:53 - saucelabs.ProductsPage                      - We press the 'Bike Light's text
+[INFO ] 2025-06-16 21:12:54 - productspages.BikeLightPage                 - We press the 'counter plus' button
+[INFO ] 2025-06-16 21:12:55 - productspages.BikeLightPage                 - We press the 'counter plus' button
+[INFO ] 2025-06-16 21:12:56 - productspages.BikeLightPage                 - We press the 'counter plus' button
+[INFO ] 2025-06-16 21:12:57 - productspages.BikeLightPage                 - We press the 'Add To Cart' button
+[INFO ] 2025-06-16 21:12:58 - saucelabs.ProductsPage                      - We press the 'cart badge' button
+[INFO ] 2025-06-16 21:12:59 - saucelabs.CartPage                          - We press the 'Remove Item' button until the cart is empty
+[INFO ] 2025-06-16 21:13:10 - saucelabs.SauceLabsCommonAssertions         - We check if the cart is empty
+[INFO ] 2025-06-16 21:13:10 - saucelabs.SauceLabsCommonAssertions         - The cart is empty
+[INFO ] 2025-06-16 21:13:11 - saucelabs.CartNoItemsPage                   - We press the 'Go Shopping' button
+[INFO ] 2025-06-16 21:13:11 - saucelabs.SauceLabsCommonAssertions         - We check if the cart counter is available
+[INFO ] 2025-06-16 21:13:14 - saucelabs.SauceLabsCommonAssertions         - The cart counter is not available
+[INFO ] 2025-06-16 21:13:14 - listeners.TestListener                      - Test PASSED: testPlacingProductsInCartAndThenEmptyingThem
+[INFO ] 2025-06-16 21:13:16 - saucelabs.CartEmptyingTests                 - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-16 21:13:16 - listeners.TestListener                      - Default Suite test(s) run completed
+
+[INFO ] 2025-06-16 21:13:16 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-16 21:13:16 - summaryLogger                               - Default Suite
+[INFO ] 2025-06-16 21:13:16 - summaryLogger                               - Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+[INFO ] 2025-06-16 21:13:16 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-16 21:13:40 - server.NetlifyUploader                      - Report uploaded to Netlify
+
+[INFO ] 2025-06-16 21:13:42 - service.SendGridEmailService                - Email successfully sent with status code: 202

@@ -1,10 +1,9 @@
 package com.myappium2project.testsgroups;
 
 /**
- * Contains test group constants for TestNG annotations.
- * This class is not meant to be instantiated.
+ * Defines the names of TestNG groups used to categorize test cases.
  * <p>
- * Note: The "REGRESSION" test group is defined directly in the XML file and not as a constant here.
+ * These constants are typically referenced in the {@code groups} attribute of the {@link org.testng.annotations.Test} annotation.
  */
 public class TestGroups {
     public static final String SMOKE = "smoke";

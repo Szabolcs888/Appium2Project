@@ -1,0 +1,9 @@
+{
+  "platformName": "Android",
+  "platformVersion": "11",
+  "automationName": "UIAutomator2",
+  "deviceName": "17fad31f",
+  "appPackage": "simple.batttery.alarm",
+  "appActivity": ".main",
+  "noReset": true
+}
