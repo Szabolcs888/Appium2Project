@@ -1,5 +1,5 @@
 # Appium 2 Project 
-**Note: Note: I will update RAEDME and the videos in a few days as more developments have been made to the project**
+**Note: I will update RAEDME and the videos in a few days because more developments have been made in the project.**
 
 The Appium 2 project was created for learning purposes, so that I could practice and improve my knowledge as a junior software tester. I wanted to create a test framework similar to the ones used in the workplace. During the development, I gained a lot of new experience and faced several challenges. Those who are familiar with mobile testing and Appium know how many things have to fall into place for everything to work properly (I am thinking here primarily of the countless prerequisites required for Appium to work, the installation and configuration of the Appium server and Appium Doctor, or the for contacting elements present on the page but not yet visible on the screen, etc.). I conducted the testing on a real mobile phone, a Xiaomi Redmi note 8t, and in the "cloud", on BrowserStack, which I will demonstrate in the videos below.
 
@@ -110,7 +110,7 @@ _notes:_
 <br>
 
 # Appium 2 Project 
-**Megjegyzés: a RAEDME-t és a videókat néhány napon belül frissítem, mert több fejlesztés történt a projektben**
+**Megjegyzés: a RAEDME-t és a videókat néhány napon belül frissítem, mert több fejlesztés történt a projektben.**
  
 Az Appium 2 projekt tanulási célból készült, hogy junior szoftvertesztelőként gyakorolhassam és fejlesszem tudásomat. Egy olyan tesztkeretrendszert szerettem volna létrehozni, amely hasonlít a munkahelyi környezetben használtakhoz. A fejlesztés során rengeteg új tapasztalatot szereztem és több kihívással is szembesültem. Akik ismerik a mobiltesztelést, az Appiumot, tudják, hogy mennyi mindennek kell a helyére kerülnie ahhoz, hogy minden megfelelően működjön (gondolok itt elsősorban az Appium működéséhez szükséges számtalan előfeltételre, az Appium server és az Appium Doctor telepítésére, konfigurálására, ill. már használat közben az oldalon jelenlévő, de a képernyőn még nem látható elementekkel való kontaktálásra, vagy a nem megnyíló appra, stb.). A tesztelést egy valós mobiltelefonon, egy Xiaomi Redmi note 8t-n, és "felhőben", BrowserStacken végeztem, melyet fentebb videókban be is mutatok.
 
