@@ -9,14 +9,13 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import com.myappium2project.utils.CommonUtils;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MainPage extends BasePageClass {
     private static final String ALARM_BUTTON_PRESS_LOG = "We press the '{}' {} button {} times";
-    private static final String MAX_ALARM_TEXT = "Max Alarm";
-    private static final String MIN_ALARM_TEXT = "Min Alarm";
-    private static final String BUTTON_TYPE_PLUS = "plus";
-    private static final String BUTTON_TYPE_MINUS = "minus";
+    private final Map<String, WebElement> voiceWarningTextMap = new LinkedHashMap<>();
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Choose a sound\")")
     private WebElement chooseASoundText;
@@ -147,10 +146,41 @@ public class MainPage extends BasePageClass {
     public MainPage(AndroidDriver driver) {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+        initVoiceWarningTexts();
     }
 
-    public static String voiceWarningTextNotAvailableLog(String language) {
-        return String.format("The 'Voice Warning' %s text is not available", language);
+    private void initVoiceWarningTexts() {
+        voiceWarningTextMap.put("English", voiceWarningEnglishText);
+        voiceWarningTextMap.put("Czech", voiceWarningCzechText);
+        voiceWarningTextMap.put("Danish", voiceWarningDanishText);
+        voiceWarningTextMap.put("German", voiceWarningGermanText);
+        voiceWarningTextMap.put("Spanish", voiceWarningSpanishText);
+        voiceWarningTextMap.put("French", voiceWarningFranchiseText);
+        voiceWarningTextMap.put("Indonesian", voiceWarningIndonesiaText);
+        voiceWarningTextMap.put("Italian", voiceWarningItalianText);
+        voiceWarningTextMap.put("Hungarian", voiceWarningHungarianText);
+        voiceWarningTextMap.put("Dutch", voiceWarningDutchText);
+        voiceWarningTextMap.put("Polish", voiceWarningPolishText);
+        voiceWarningTextMap.put("Portuguese", voiceWarningPortugueseText);
+        voiceWarningTextMap.put("Romanian", voiceWarningRomanText);
+        voiceWarningTextMap.put("Slovenian", voiceWarningSlovenianText);
+        voiceWarningTextMap.put("Swedish", voiceWarningSwedishText);
+        voiceWarningTextMap.put("Serbian", voiceWarningSerbianText);
+        voiceWarningTextMap.put("Finnish", voiceWarningFinnishText);
+        voiceWarningTextMap.put("Turkish", voiceWarningTurkishText);
+        voiceWarningTextMap.put("Bulgarian", voiceWarningBulgarianText);
+        voiceWarningTextMap.put("Russian", voiceWarningRussianText);
+        voiceWarningTextMap.put("Ukrainian", voiceWarningUkrainianText);
+        voiceWarningTextMap.put("Greek", voiceWarningGreekText);
+        voiceWarningTextMap.put("Vietnamese", voiceWarningVietnameseText);
+        voiceWarningTextMap.put("Japanese", voiceWarningJapaneseText);
+        voiceWarningTextMap.put("Chinese", voiceWarningChineseText);
+        voiceWarningTextMap.put("Korean", voiceWarningKoreanText);
+        voiceWarningTextMap.put("Thai", voiceWarningThaiText);
+        voiceWarningTextMap.put("Arabic", voiceWarningArabicText);
+        voiceWarningTextMap.put("Farsi", voiceWarningFarsiText);
+        voiceWarningTextMap.put("Hebrew", voiceWarningHebrewText);
+        voiceWarningTextMap.put("Hindi", voiceWarningHindiText);
     }
 
     public void pressInformationButton() {
@@ -204,7 +234,7 @@ public class MainPage extends BasePageClass {
     }
 
     public void pressMaxAlarmMinusButton(int numberOfPresses) {
-        LOG.info(ALARM_BUTTON_PRESS_LOG, MAX_ALARM_TEXT, BUTTON_TYPE_MINUS, numberOfPresses);
+        LOG.info(ALARM_BUTTON_PRESS_LOG, "Max Alarm", "minus", numberOfPresses);
         int minimumMaxAlamValue = 1;
         for (int i = 0; i < numberOfPresses; i++) {
             if (getCurrentMaxAlarmValue() == minimumMaxAlamValue) {
@@ -215,7 +245,7 @@ public class MainPage extends BasePageClass {
     }
 
     public void pressMinAlarmPlusButton(int numberOfPresses) {
-        LOG.info(ALARM_BUTTON_PRESS_LOG, MIN_ALARM_TEXT, BUTTON_TYPE_PLUS, numberOfPresses);
+        LOG.info(ALARM_BUTTON_PRESS_LOG, "Min Alarm", "plus", numberOfPresses);
         int maximumMinAlamValue = 100;
         for (int i = 0; i < numberOfPresses; i++) {
             if (getCurrentMinAlarmValue() == maximumMinAlamValue) {
@@ -243,251 +273,16 @@ public class MainPage extends BasePageClass {
         }
     }
 
-    public String getVoiceWarningEnglishText() {
-        try {
-            return voiceWarningEnglishText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("English");
+    public String getVoiceWarningText(String language) {
+        WebElement element = voiceWarningTextMap.get(language);
+        if (element == null) {
+            throw new IllegalArgumentException("Unsupported language: " + language);
         }
-    }
 
-    public String getVoiceWarningCzechText() {
         try {
-            return voiceWarningCzechText.getText();
+            return element.getText();
         } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Czech");
-        }
-    }
-
-    public String getVoiceWarningDanishText() {
-        try {
-            return voiceWarningDanishText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Danish");
-        }
-    }
-
-    public String getVoiceWarningGermanText() {
-        try {
-            return voiceWarningGermanText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("German");
-        }
-    }
-
-    public String getVoiceWarningSpanishText() {
-        try {
-            return voiceWarningSpanishText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Spanish");
-        }
-    }
-
-    public String getVoiceWarningFranchiseText() {
-        try {
-            return voiceWarningFranchiseText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Franchise");
-        }
-    }
-
-    public String getVoiceWarningIndonesiaText() {
-        try {
-            return voiceWarningIndonesiaText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Indonesia");
-        }
-    }
-
-    public String getVoiceWarningItalianText() {
-        try {
-            return voiceWarningItalianText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Italian");
-        }
-    }
-
-    public String getVoiceWarningHungarianText() {
-        try {
-            return voiceWarningHungarianText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Hungarian");
-        }
-    }
-
-    public String getVoiceWarningDutchText() {
-        try {
-            return voiceWarningDutchText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Dutch");
-        }
-    }
-
-    public String getVoiceWarningPolishText() {
-        try {
-            return voiceWarningPolishText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Polish");
-        }
-    }
-
-    public String getVoiceWarningPortugueseText() {
-        try {
-            return voiceWarningPortugueseText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Portuguese");
-        }
-    }
-
-    public String getVoiceWarningRomanText() {
-        try {
-            return voiceWarningRomanText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Roman");
-        }
-    }
-
-    public String getVoiceWarningSlovenianText() {
-        try {
-            return voiceWarningSlovenianText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Slovenian");
-        }
-    }
-
-    public String getVoiceWarningSwedishText() {
-        try {
-            return voiceWarningSwedishText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Swedish");
-        }
-    }
-
-    public String getVoiceWarningSerbianText() {
-        try {
-            return voiceWarningSerbianText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Serbian");
-        }
-    }
-
-    public String getVoiceWarningFinnishText() {
-        try {
-            return voiceWarningFinnishText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Finnish");
-        }
-    }
-
-    public String getVoiceWarningTurkishText() {
-        try {
-            return voiceWarningTurkishText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Turkish");
-        }
-    }
-
-    public String getVoiceWarningBulgarianText() {
-        try {
-            return voiceWarningBulgarianText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Bulgarian");
-        }
-    }
-
-    public String getVoiceWarningRussianText() {
-        try {
-            return voiceWarningRussianText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Russian");
-        }
-    }
-
-    public String getVoiceWarningUkrainianText() {
-        try {
-            return voiceWarningUkrainianText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Ukrainian");
-        }
-    }
-
-    public String getVoiceWarningGreekText() {
-        try {
-            return voiceWarningGreekText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Greek");
-        }
-    }
-
-    public String getVoiceWarningVietnameseText() {
-        try {
-            return voiceWarningVietnameseText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Vietnamese");
-        }
-    }
-
-    public String getVoiceWarningJapaneseText() {
-        try {
-            return voiceWarningJapaneseText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Japanese");
-        }
-    }
-
-    public String getVoiceWarningChineseText() {
-        try {
-            return voiceWarningChineseText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Chinese");
-        }
-    }
-
-    public String getVoiceWarningKoreanText() {
-        try {
-            return voiceWarningKoreanText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Korean");
-        }
-    }
-
-    public String getVoiceWarningThaiText() {
-        try {
-            return voiceWarningThaiText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Thai");
-        }
-    }
-
-    public String getVoiceWarningArabicText() {
-        try {
-            return voiceWarningArabicText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Arabic");
-        }
-    }
-
-    public String getVoiceWarningFarsiText() {
-        try {
-            return voiceWarningFarsiText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Farsi");
-        }
-    }
-
-    public String getVoiceWarningHebrewText() {
-        try {
-            return voiceWarningHebrewText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Hebrew");
-        }
-    }
-
-    public String getVoiceWarningHindiText() {
-        try {
-            return voiceWarningHindiText.getText();
-        } catch (NoSuchElementException e) {
-            return voiceWarningTextNotAvailableLog("Hindi");
+            return String.format("The 'Voice Warning' %s text is not available", language);
         }
     }
 }

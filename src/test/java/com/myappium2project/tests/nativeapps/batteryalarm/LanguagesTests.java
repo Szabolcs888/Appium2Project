@@ -30,39 +30,6 @@ public class LanguagesTests extends BatteryAlarmAppTestBase {
         LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
         LanguageUtils.ensureEnglishLanguageSelected(driver, mainPage, languagesDropdownMenu);
 
-        Map<String, Runnable> languageSelectors = new LinkedHashMap<>();
-        languageSelectors.put("English", languagesDropdownMenu::chooseEnglishOption);
-        languageSelectors.put("Czech", languagesDropdownMenu::chooseCestinaOption);
-        languageSelectors.put("Danish", languagesDropdownMenu::chooseDanskOption);
-        languageSelectors.put("German", languagesDropdownMenu::chooseDeutschOption);
-        languageSelectors.put("Spanish", languagesDropdownMenu::chooseEspanolOption);
-        languageSelectors.put("French", languagesDropdownMenu::chooseFrancaisOption);
-        languageSelectors.put("Indonesian", languagesDropdownMenu::chooseIndonesiaOption);
-        languageSelectors.put("Italian", languagesDropdownMenu::chooseItalianoOption);
-        languageSelectors.put("Hungarian", languagesDropdownMenu::chooseMagyarOption);
-        languageSelectors.put("Dutch", languagesDropdownMenu::chooseNederlandsOption);
-        languageSelectors.put("Polish", languagesDropdownMenu::choosePolskiOption);
-        languageSelectors.put("Portuguese", languagesDropdownMenu::choosePortuguesOption);
-        languageSelectors.put("Romanian", languagesDropdownMenu::chooseRomanaOption);
-        languageSelectors.put("Slovenian", languagesDropdownMenu::chooseSlovencinaOption);
-        languageSelectors.put("Swedish", languagesDropdownMenu::chooseSvenskaOption);
-        languageSelectors.put("Serbian", languagesDropdownMenu::chooseSrpskiOption);
-        languageSelectors.put("Finnish", languagesDropdownMenu::chooseSuomiOption);
-        languageSelectors.put("Turkish", languagesDropdownMenu::chooseTurkceOption);
-        languageSelectors.put("Bulgarian", languagesDropdownMenu::chooseBulgarianOption);
-        languageSelectors.put("Russian", languagesDropdownMenu::chooseRussianOption);
-        languageSelectors.put("Ukrainian", languagesDropdownMenu::chooseUkrainianOption);
-        languageSelectors.put("Greek", languagesDropdownMenu::chooseGreekOption);
-        languageSelectors.put("Vietnamese", languagesDropdownMenu::chooseVietnameseOption);
-        languageSelectors.put("Japanese", languagesDropdownMenu::chooseJapaneseOption);
-        languageSelectors.put("Chinese", languagesDropdownMenu::chooseChineseOption);
-        languageSelectors.put("Korean", languagesDropdownMenu::chooseKoreanOption);
-        languageSelectors.put("Thai", languagesDropdownMenu::chooseThaiOption);
-        languageSelectors.put("Arabic", languagesDropdownMenu::chooseArabicOption);
-        languageSelectors.put("Farsi", languagesDropdownMenu::chooseFarsiOption);
-        languageSelectors.put("Hebrew", languagesDropdownMenu::chooseHebrewOption);
-        languageSelectors.put("Hindi", languagesDropdownMenu::chooseHindiOption);
-
         Map<String, Supplier<String>> expectedTexts = new LinkedHashMap<>();
         expectedTexts.put("English", () -> "Voice Warning");
         expectedTexts.put("Czech", () -> "Hlasové varování");
@@ -96,46 +63,13 @@ public class LanguagesTests extends BatteryAlarmAppTestBase {
         expectedTexts.put("Hebrew", () -> "אזהרה קולית");
         expectedTexts.put("Hindi", () -> "आवाज चेतावनी");
 
-        Map<String, Supplier<String>> actualTexts = new LinkedHashMap<>();
-        actualTexts.put("English", mainPage::getVoiceWarningEnglishText);
-        actualTexts.put("Czech", mainPage::getVoiceWarningCzechText);
-        actualTexts.put("Danish", mainPage::getVoiceWarningDanishText);
-        actualTexts.put("German", mainPage::getVoiceWarningGermanText);
-        actualTexts.put("Spanish", mainPage::getVoiceWarningSpanishText);
-        actualTexts.put("French", mainPage::getVoiceWarningFranchiseText);
-        actualTexts.put("Indonesian", mainPage::getVoiceWarningIndonesiaText);
-        actualTexts.put("Italian", mainPage::getVoiceWarningItalianText);
-        actualTexts.put("Hungarian", mainPage::getVoiceWarningHungarianText);
-        actualTexts.put("Dutch", mainPage::getVoiceWarningDutchText);
-        actualTexts.put("Polish", mainPage::getVoiceWarningPolishText);
-        actualTexts.put("Portuguese", mainPage::getVoiceWarningPortugueseText);
-        actualTexts.put("Romanian", mainPage::getVoiceWarningRomanText);
-        actualTexts.put("Slovenian", mainPage::getVoiceWarningSlovenianText);
-        actualTexts.put("Swedish", mainPage::getVoiceWarningSwedishText);
-        actualTexts.put("Serbian", mainPage::getVoiceWarningSerbianText);
-        actualTexts.put("Finnish", mainPage::getVoiceWarningFinnishText);
-        actualTexts.put("Turkish", mainPage::getVoiceWarningTurkishText);
-        actualTexts.put("Bulgarian", mainPage::getVoiceWarningBulgarianText);
-        actualTexts.put("Russian", mainPage::getVoiceWarningRussianText);
-        actualTexts.put("Ukrainian", mainPage::getVoiceWarningUkrainianText);
-        actualTexts.put("Greek", mainPage::getVoiceWarningGreekText);
-        actualTexts.put("Vietnamese", mainPage::getVoiceWarningVietnameseText);
-        actualTexts.put("Japanese", mainPage::getVoiceWarningJapaneseText);
-        actualTexts.put("Chinese", mainPage::getVoiceWarningChineseText);
-        actualTexts.put("Korean", mainPage::getVoiceWarningKoreanText);
-        actualTexts.put("Thai", mainPage::getVoiceWarningThaiText);
-        actualTexts.put("Arabic", mainPage::getVoiceWarningArabicText);
-        actualTexts.put("Farsi", mainPage::getVoiceWarningFarsiText);
-        actualTexts.put("Hebrew", mainPage::getVoiceWarningHebrewText);
-        actualTexts.put("Hindi", mainPage::getVoiceWarningHindiText);
-
-        for (String language : languageSelectors.keySet()) {
+        for (String language : expectedTexts.keySet()) {
             languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
-            languageSelectors.get(language).run();
+            languagesDropdownMenu.chooseLanguageOption(language);
 
             LOG.info("We check if the app switches to the selected language");
             String expectedText = expectedTexts.get(language).get();
-            String actualText = actualTexts.get(language).get();
+            String actualText = mainPage.getVoiceWarningText(language);
             if (expectedText.equals(actualText)) {
                 LOG.info("The displayed language is correct: {}", language);
             } else {

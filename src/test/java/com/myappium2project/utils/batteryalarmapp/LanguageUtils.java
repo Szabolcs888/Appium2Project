@@ -29,7 +29,7 @@ public final class LanguageUtils {
             LanguagesDropdownMenu languagesDropdownMenu) {
         if (!"English".equals(mainPage.getSelectedLanguage())) {
             scrollToEnglishLanguage(driver, mainPage, languagesDropdownMenu);
-            languagesDropdownMenu.chooseEnglishOption();
+            languagesDropdownMenu.chooseLanguageOption("English");
         }
     }
 

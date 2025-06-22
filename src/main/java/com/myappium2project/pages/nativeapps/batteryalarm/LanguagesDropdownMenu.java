@@ -8,8 +8,11 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class LanguagesDropdownMenu extends BasePageClass {
-    private static final String SELECTED_LANGUAGE_OPTION_LOG = "We choose the '{}' option";
+    private final Map<String, WebElement> languageOptionsMap = new LinkedHashMap<>();
 
     @AndroidFindBy(className = "android.widget.Spinner")
     private WebElement languageSelectorDropdownMenu;
@@ -110,6 +113,41 @@ public class LanguagesDropdownMenu extends BasePageClass {
     public LanguagesDropdownMenu(AndroidDriver driver) {
         super();
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+        initLanguageOptions();
+    }
+
+    private void initLanguageOptions() {
+        languageOptionsMap.put("English", englishOption);
+        languageOptionsMap.put("Czech", cestinaOption);
+        languageOptionsMap.put("Danish", danskOption);
+        languageOptionsMap.put("German", deutschOption);
+        languageOptionsMap.put("Spanish", espanolOption);
+        languageOptionsMap.put("French", francaisOption);
+        languageOptionsMap.put("Indonesian", indonesiaOption);
+        languageOptionsMap.put("Italian", italianoOption);
+        languageOptionsMap.put("Hungarian", magyarOption);
+        languageOptionsMap.put("Dutch", nederlandsOption);
+        languageOptionsMap.put("Polish", polskiOption);
+        languageOptionsMap.put("Portuguese", portuguesOption);
+        languageOptionsMap.put("Romanian", romanaOption);
+        languageOptionsMap.put("Slovenian", slovencinaOption);
+        languageOptionsMap.put("Swedish", svenskaOption);
+        languageOptionsMap.put("Serbian", srpskiOption);
+        languageOptionsMap.put("Finnish", suomiOption);
+        languageOptionsMap.put("Turkish", turkceOption);
+        languageOptionsMap.put("Bulgarian", bulgarianOption);
+        languageOptionsMap.put("Russian", russianOption);
+        languageOptionsMap.put("Ukrainian", ukrainianOption);
+        languageOptionsMap.put("Greek", greekOption);
+        languageOptionsMap.put("Vietnamese", vietnameseOption);
+        languageOptionsMap.put("Japanese", japaneseOption);
+        languageOptionsMap.put("Chinese", chineseOption);
+        languageOptionsMap.put("Korean", koreanOption);
+        languageOptionsMap.put("Thai", thaiOption);
+        languageOptionsMap.put("Arabic", arabOption);
+        languageOptionsMap.put("Farsi", farsiOption);
+        languageOptionsMap.put("Hebrew", hebrewOption);
+        languageOptionsMap.put("Hindi", hindiOption);
     }
 
     public void pressLanguageSelectorDropdownMenuButton() {
@@ -117,158 +155,17 @@ public class LanguagesDropdownMenu extends BasePageClass {
         languageSelectorDropdownMenu.click();
     }
 
-    public void chooseEnglishOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "English");
-        englishOption.click();
+    public void chooseLanguageOption(String language) {
+        WebElement languageElement = languageOptionsMap.get(language);
+        if (languageElement != null) {
+            logSelectedLanguageOption(language);
+            languageElement.click();
+        } else {
+            throw new IllegalArgumentException("Unknown language: " + language);
+        }
     }
 
-    public void chooseCestinaOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "cestina");
-        cestinaOption.click();
-    }
-
-    public void chooseDanskOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "dansk");
-        danskOption.click();
-    }
-
-    public void chooseDeutschOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "Deutsch");
-        deutschOption.click();
-    }
-
-    public void chooseEspanolOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "espanol");
-        espanolOption.click();
-    }
-
-    public void chooseFrancaisOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "francais");
-        francaisOption.click();
-    }
-
-    public void chooseIndonesiaOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "Indonesia");
-        indonesiaOption.click();
-    }
-
-    public void chooseItalianoOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "italiano");
-        italianoOption.click();
-    }
-
-    public void chooseMagyarOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "magyar");
-        magyarOption.click();
-    }
-
-    public void chooseNederlandsOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "Nederlands");
-        nederlandsOption.click();
-    }
-
-    public void choosePolskiOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "polski");
-        polskiOption.click();
-    }
-
-    public void choosePortuguesOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "portugues");
-        portuguesOption.click();
-    }
-
-    public void chooseRomanaOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "romana");
-        romanaOption.click();
-    }
-
-    public void chooseSlovencinaOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "slovencina");
-        slovencinaOption.click();
-    }
-
-    public void chooseSvenskaOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "svenska");
-        svenskaOption.click();
-    }
-
-    public void chooseSrpskiOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "srpski");
-        srpskiOption.click();
-    }
-
-    public void chooseSuomiOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "Suomi");
-        suomiOption.click();
-    }
-
-    public void chooseTurkceOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "Türkce");
-        turkceOption.click();
-    }
-
-    public void chooseBulgarianOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "bulgarian");
-        bulgarianOption.click();
-    }
-
-    public void chooseRussianOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "russian");
-        russianOption.click();
-    }
-
-    public void chooseUkrainianOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "Ukrainian");
-        ukrainianOption.click();
-    }
-
-    public void chooseGreekOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "Greek");
-        greekOption.click();
-    }
-
-    public void chooseVietnameseOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "Vietnamese");
-        vietnameseOption.click();
-    }
-
-    public void chooseJapaneseOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "japanese");
-        japaneseOption.click();
-    }
-
-    public void chooseChineseOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "chinese");
-        chineseOption.click();
-    }
-
-    public void chooseKoreanOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "korean");
-        koreanOption.click();
-    }
-
-    public void chooseThaiOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "thai");
-        thaiOption.click();
-    }
-
-    public void chooseArabicOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "arab");
-        arabOption.click();
-    }
-
-    public void chooseFarsiOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "farsi");
-        farsiOption.click();
-    }
-
-    public void chooseHebrewOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "hebrew");
-        hebrewOption.click();
-    }
-
-    public void chooseHindiOption() {
-        LOG.info(SELECTED_LANGUAGE_OPTION_LOG, "hindi");
-        hindiOption.click();
+    private void logSelectedLanguageOption(String language) {
+        LOG.info("We choose the '{}' option", language);
     }
 }

@@ -190,7 +190,6 @@ public class ProductsPage extends BasePageClass {
             return feedbackPopupText.getText();
         } catch (NoSuchElementException e) {
             return CommonPageLogMessages.textNotAvailableLog("feedback popup");
-
         }
     }
 

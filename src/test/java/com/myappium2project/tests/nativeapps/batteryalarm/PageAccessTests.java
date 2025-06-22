@@ -14,12 +14,8 @@ import com.myappium2project.tests.basetests.BatteryAlarmAppTestBase;
 
 public class PageAccessTests extends BatteryAlarmAppTestBase {
 
-    public static String incorrectTextAssertLog(String actualText, String expectedText) {
+    private static String incorrectTextAssertLog(String actualText, String expectedText) {
         return String.format("The expected text on the page should be '%s', but it is '%s'.", expectedText, actualText);
-    }
-
-    private static String incorrectInformationTextDetailAssertLog(String expectedTextFragment) {
-        return String.format("The information text should contain '%s', but it does not.", expectedTextFragment);
     }
 
     private MainPage mainPage;
@@ -37,7 +33,7 @@ public class PageAccessTests extends BatteryAlarmAppTestBase {
         LanguageUtils.ensureEnglishLanguageSelected(driver, mainPage, languagesDropdownMenu);
 
         String mainPageName = "Main";
-        String actualVoiceWarningText = mainPage.getVoiceWarningEnglishText();
+        String actualVoiceWarningText = mainPage.getVoiceWarningText("English");
         String actualChooseASoundText = mainPage.getChooseASoundText();
         String expectedVoiceWarningText = "Voice Warning";
         String expectedChooseASoundText = "Choose a sound";
@@ -91,6 +87,7 @@ public class PageAccessTests extends BatteryAlarmAppTestBase {
             LOG.error(CommonTestLogMessages.NOT_ON_PAGE_LOG, pageName);
         }
 
-        Assert.assertTrue(actualText.contains(expectedFragment), incorrectInformationTextDetailAssertLog(expectedFragment));
+        Assert.assertTrue(actualText.contains(expectedFragment),
+                "The information text should contain '" + expectedFragment + "', but it does not.");
     }
 }
