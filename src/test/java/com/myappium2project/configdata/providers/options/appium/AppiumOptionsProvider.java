@@ -40,7 +40,7 @@ public class AppiumOptionsProvider {
      * @throws IllegalArgumentException if no path mapping exists for the given app
      */
     private static String resolveJsonPathForApp(String appName, String environment) {
-        boolean isCloud = environment.equals("cloud");
+        boolean isCloud = "cloud".equals(environment);
 
         return switch (appName) {
             case "saucelabs" -> isCloud

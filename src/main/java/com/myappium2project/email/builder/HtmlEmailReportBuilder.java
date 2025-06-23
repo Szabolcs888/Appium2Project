@@ -27,9 +27,9 @@ public class HtmlEmailReportBuilder {
      */
     public static String buildReport(String startTime, String endTime, String suiteName, List<TestResult> results) {
         int total = results.size();
-        long passed = results.stream().filter(r -> r.getStatus().equalsIgnoreCase("PASS")).count();
-        long failed = results.stream().filter(r -> r.getStatus().equalsIgnoreCase("FAIL")).count();
-        long skipped = results.stream().filter(r -> r.getStatus().equalsIgnoreCase("SKIP")).count();
+        long passed = results.stream().filter(r -> "PASS".equalsIgnoreCase(r.getStatus())).count();
+        long failed = results.stream().filter(r -> "FAIL".equalsIgnoreCase(r.getStatus())).count();
+        long skipped = results.stream().filter(r -> "SKIP".equalsIgnoreCase(r.getStatus())).count();
 
         double totalDurationInSeconds = results.stream()
                 .mapToDouble(TestResult::getDurationSeconds)

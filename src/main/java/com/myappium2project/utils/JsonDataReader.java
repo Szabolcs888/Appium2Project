@@ -1,6 +1,7 @@
 package com.myappium2project.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.myappium2project.exceptions.JsonReadException;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,7 +36,7 @@ public class JsonDataReader {
             }
             return objectMapper.readValue(inputStream, clazz);
         } catch (IOException e) {
-            throw new RuntimeException("Failed to read JSON file: " + filePath, e);
+            throw new JsonReadException("Failed to read JSON file: " + filePath, e);
         }
     }
 
@@ -56,7 +57,7 @@ public class JsonDataReader {
             }
             return objectMapper.readValue(inputStream, objectMapper.getTypeFactory().constructCollectionType(List.class, elementType));
         } catch (IOException e) {
-            throw new RuntimeException("Failed to read JSON list from file: " + filePath, e);
+            throw new JsonReadException("Failed to read JSON list from file: " + filePath, e);
         }
     }
 }

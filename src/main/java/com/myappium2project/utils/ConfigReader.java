@@ -1,5 +1,7 @@
 package com.myappium2project.utils;
 
+import com.myappium2project.exceptions.ConfigurationException;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -16,11 +18,11 @@ public class ConfigReader {
     static {
         try (InputStream input = ConfigReader.class.getClassLoader().getResourceAsStream("config.properties")) {
             if (input == null) {
-                throw new RuntimeException("config.properties not found in resources");
+                throw new ConfigurationException("config.properties not found in resources");
             }
             properties.load(input);
         } catch (IOException e) {
-            throw new RuntimeException("Failed to load config.properties", e);
+            throw new ConfigurationException("Failed to load config.properties", e);
         }
     }
 

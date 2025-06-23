@@ -58,10 +58,10 @@ public final class CommonUtils {
         if (files != null) {
             for (File file : files) {
                 if (file.isFile()) {
-                    if (!file.delete()) {
-                        LOG.warn("Failed to delete file from the {} directory: {}", directoryName, file.getName());
-                    } else {
+                    if (file.delete()) {
                         LOG.debug("Deleted file from the actualReportScreenshots directory: {}", file.getName());
+                    } else {
+                        LOG.warn("Failed to delete file from the {} directory: {}", directoryName, file.getName());
                     }
                 }
             }
@@ -75,10 +75,10 @@ public final class CommonUtils {
      */
     private static void deleteFile(Path filePath) {
         File file = new File(String.valueOf(filePath));
-        if (!file.delete()) {
-            LOG.warn(FAILED_DELETE_FILE_MESSAGE + "{}", file.getName());
-        } else {
+        if (file.delete()) {
             LOG.debug("Deleted file: {}", filePath);
+        } else {
+            LOG.warn(FAILED_DELETE_FILE_MESSAGE + "{}", file.getName());
         }
     }
 }

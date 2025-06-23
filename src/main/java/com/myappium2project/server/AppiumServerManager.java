@@ -1,6 +1,7 @@
 package com.myappium2project.server;
 
 import com.myappium2project.configkeys.ConfigDataKeys;
+import com.myappium2project.exceptions.ServerLogInitializationException;
 import com.myappium2project.utils.ConfigReader;
 import com.myappium2project.utils.LogUtils;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -108,7 +109,7 @@ public class AppiumServerManager {
         try {
             serverLogStream = new PrintStream(new FileOutputStream(serverLogPath), true);
         } catch (FileNotFoundException e) {
-            throw new RuntimeException("Could not create server log file at: " + serverLogPath, e);
+            throw new ServerLogInitializationException("Could not create server log file at: " + serverLogPath, e);
         }
 
         String logLevel = ConfigReader.get(ConfigDataKeys.APPIUM_SERVER_LOG_LEVEL.getKey());

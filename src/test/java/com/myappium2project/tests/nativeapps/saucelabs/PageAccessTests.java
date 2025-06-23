@@ -97,7 +97,7 @@ public class PageAccessTests extends SauceLabsAppTestBase {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressSauceBotVideoButton();
 
-        String pageName = "Sauce Bot Video";
+        //Page name = "Sauce Bot Video". In this one case, the page name differs from the expected title.
         String expectedTitle = "SauceBot - The Beginning";
         SauceBotVideoPage sauceBotVideoPage = new SauceBotVideoPage(driver);
         String pageTitle = sauceBotVideoPage.getSauceBotVideoPageTitleText();

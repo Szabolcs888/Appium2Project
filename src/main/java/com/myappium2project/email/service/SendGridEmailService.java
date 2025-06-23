@@ -5,6 +5,7 @@ import com.myappium2project.email.data.SendGridCredentials;
 import com.myappium2project.email.data.SendGridCredentialsProvider;
 import com.myappium2project.email.models.TestResult;
 import com.myappium2project.email.builder.HtmlEmailReportBuilder;
+import com.myappium2project.exceptions.LogFileException;
 import com.myappium2project.utils.ConfigReader;
 import com.myappium2project.configpaths.MainPaths;
 import com.sendgrid.Method;
@@ -99,10 +100,10 @@ public class SendGridEmailService {
     }
 
     private static Mail createEmail(String subject, String htmlContent, List<String> attachmentPaths) {
-        Email from = new Email(SENDER_EMAIL);
-        Email to = new Email(RECEIVER_EMAIL);
+        Email sender = new Email(SENDER_EMAIL);
+        Email receiver = new Email(RECEIVER_EMAIL);
         Content content = new Content("text/html", htmlContent);
-        Mail mail = new Mail(from, subject, to, content);
+        Mail mail = new Mail(sender, subject, receiver, content);
         addAttachments(mail, attachmentPaths);
         return mail;
     }
@@ -164,7 +165,7 @@ public class SendGridEmailService {
                     .map(Path::toString)
                     .orElseThrow(() -> new RuntimeException("No .log files found in: " + logsDirectoryPath));
         } catch (IOException e) {
-            throw new RuntimeException("Failed to read log directory: " + logsDirectoryPath, e);
+            throw new LogFileException("Failed to read log directory: " + logsDirectoryPath, e);
         }
     }
 }

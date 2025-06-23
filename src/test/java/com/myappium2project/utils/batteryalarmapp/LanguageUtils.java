@@ -45,7 +45,9 @@ public final class LanguageUtils {
             AndroidDriver driver, MainPage mainPage,
             LanguagesDropdownMenu languagesDropdownMenu) {
         do {
-            if (!"English".equals(mainPage.getSelectedLanguage())) {
+            if ("English".equals(mainPage.getSelectedLanguage())) {
+                languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
+            } else {
                 try {
                     languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
                 } catch (NoSuchElementException _) {
@@ -54,8 +56,6 @@ public final class LanguageUtils {
                         driver, 2, 112,
                         700, 112, 1900,
                         "We scroll up in the dropdown menu");
-            } else {
-                languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
             }
         } while (!"English".equals(mainPage.getSelectedLanguage()));
     }

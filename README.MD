@@ -58,6 +58,7 @@ The project follows modern software development and test automation *best practi
   * **ExtentReports:** Generates interactive, visual HTML reports with screenshots on failure.
   * **Custom email reporting:** Uses the SendGrid API to send HTML-formatted notifications, providing a reporting mechanism independent of any CI/CD system.
 - **Timestamped logging to file (`logback`):** The `Log4j` logging system creates a separate, timestamped log file for each test run and server start, preventing log overwrites and simplifying debugging. The logging level and target location are configurable in the `log4j.properties` file for test runs and in `config.properties` for the Appium server.
+- **Exception handling with custom exception hierarchy:** The framework introduces dedicated custom exception classes (e.g., `ConfigurationException`, `JsonReadException`, `LogFileException`) all extending a base `AppiumProjectException`. This promotes clearer, contextualized error reporting and better maintainability.
 - **Refactoring based on the DRY (Don't Repeat Yourself) principle:** The entire project is built following the DRY principle. Frequently repeated operations—such as driver management, configuration reading, or common UI interactions—are centralized in reusable components. This significantly reduces code duplication and increases long-term maintainability.
 
 ## Tech Stack
@@ -281,6 +282,7 @@ A projekt a modern szoftverfejlesztési és tesztautomatizálási _best practice
   * **Saját e-mailes riportküldés:** A SendGrid API segítségével HTML-formátumú értesítés küldhető, amely független bármely CI/CD rendszertől.
 - **Időbélyeges logolás fájlba (`logback`):** A `Log4j` logolórendszer minden tesztfutáshoz és szerverindításhoz külön, időbélyeges logfájlt hoz létre, így elkerülhető a logfelülírás, és egyszerűbb a hibakeresés.
 A logolás szintje és célhelye a tesztfuttatáshoz a `log4j.properties`, az Appium serverhez a `config.properties` fájlban állítható.
+- **Hibakezelés saját kivételosztályokkal:** A keretrendszer több egyedi `RuntimeException`-leszármazott osztályt definiál (pl. `ConfigurationException`, `JsonReadException`, `LogFileException`), amelyek a `AppiumProjectException` ősosztályból származnak. Ezek az osztályok segítenek kontextusfüggőbb, jól értelmezhető hibakezelés kialakításában, és megkönnyítik a hibák naplózását és nyomon követését.
 - **DRY (Don't Repeat Yourself) alapú refaktorálás:** A projekt teljes egészében a DRY-elv mentén épül fel. A gyakran ismétlődő műveletek – mint például a driverkezelés, konfigurációolvasás vagy gyakori UI-interakciók – központosított, újrafelhasználható komponensekben vannak elhelyezve. Ez jelentősen csökkenti a kódismétlést és növeli a hosszú távú karbantarthatóságot.
 
 ## Felhasznált technológiák

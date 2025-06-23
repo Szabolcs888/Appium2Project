@@ -49,7 +49,6 @@ public final class ScreenshotUtils {
      */
     public static String getScreenshotUrl(String testName) {
         String baseUrl = ConfigReader.get(ConfigDataKeys.REPORT_NETLIFY_SCREENSHOTS_URL.getKey());
-        ;
         return baseUrl + testName + ".png";
     }
 
