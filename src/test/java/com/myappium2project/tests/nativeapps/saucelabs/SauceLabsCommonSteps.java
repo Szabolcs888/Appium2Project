@@ -28,6 +28,13 @@ public class SauceLabsCommonSteps {
         loginPage.pressLoginButton();
     }
 
+    static void logOutToSauceLabs(HamburgerMenu hamburgerMenu, LoginPage loginPage) throws InterruptedException {
+        hamburgerMenu.pressHamburgerMenuButton();
+        hamburgerMenu.pressLogOutButton();
+        hamburgerMenu.pressLogOutButtonOnLogOutAlert();
+        loginPage.pressOkButtonOnSuccessfulLoggedOutAlert();
+    }
+
     static void scrollDown(AndroidDriver driver) {
         AppiumActions.scrollWithFixCoordinates(driver, 1, "DOWN", 0.5);
     }

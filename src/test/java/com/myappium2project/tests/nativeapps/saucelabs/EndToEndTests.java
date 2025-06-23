@@ -148,10 +148,7 @@ public class EndToEndTests extends SauceLabsAppTestBase {
 
         AppiumActions.navigateBack(driver);
 
-        hamburgerMenu.pressHamburgerMenuButton();
-        hamburgerMenu.pressLogOutButton();
-        hamburgerMenu.pressLogOutButtonOnLogOutAlert();
-        loginPage.pressOkButtonOnSuccessfulLoggedOutAlert();
+        SauceLabsCommonSteps.logOutToSauceLabs(hamburgerMenu, loginPage);
 
         String loginPageName = "Login";
         String loginPageTitleText = loginPage.getLoginPageTitleText();
@@ -259,10 +256,7 @@ public class EndToEndTests extends SauceLabsAppTestBase {
 
         AppiumActions.navigateBack(driver);
 
-        hamburgerMenu.pressHamburgerMenuButton();
-        hamburgerMenu.pressLogOutButton();
-        hamburgerMenu.pressLogOutButtonOnLogOutAlert();
-        loginPage.pressOkButtonOnSuccessfulLoggedOutAlert();
+        SauceLabsCommonSteps.logOutToSauceLabs(hamburgerMenu, loginPage);
 
         String loginPageName = "Login";
         String loginPageTitleText = loginPage.getLoginPageTitleText();
