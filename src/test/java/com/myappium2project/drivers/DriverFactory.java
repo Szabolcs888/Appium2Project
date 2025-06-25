@@ -17,7 +17,7 @@ import java.net.URL;
  * <p>
  * Supports native apps (e.g., SauceLabs, BatteryAlarm) and mobile browsers (e.g., Chrome, Firefox).
  */
-public class DriverFactory {
+public final class DriverFactory {
 
     private DriverFactory() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");

@@ -4,6 +4,7 @@ import com.myappium2project.configdata.environment.EnvironmentConfig;
 import com.myappium2project.email.service.SendGridEmailService;
 
 import com.myappium2project.email.models.TestResult;
+import com.myappium2project.utils.common.TestRunContextHolder;
 import io.appium.java_client.android.AndroidDriver;
 import com.myappium2project.listeners.TestListener;
 import org.apache.logging.log4j.Level;
@@ -50,7 +51,6 @@ public class BaseTestClass {
     protected WebDriverWait wait;
     private AppiumServerManager appiumServerManager = new AppiumServerManager();
     private String testStartDateTime;
-    private String testEndDateTime;
 
     /**
      * Sets up the test suite before any tests are run.
@@ -73,21 +73,32 @@ public class BaseTestClass {
 
     /**
      * Finalizes the test suite after all tests have run.
-     * Stops the Appium server if it was started from code,
-     * uploads the test report, and sends the email summary.
+     * <p>
+     * Stops the Appium server (if it was started from code),
+     * uploads the HTML test report, and sends an email summary.
+     * <p>
+     * Retrieves the suite name from {@link TestRunContextHolder} as it was
+     * set earlier by the test listener, and clears the stored value to avoid
+     * memory leaks or unintended reuse in future test runs.
      */
     @AfterSuite(alwaysRun = true)
     public void tearDownSuite() {
-        testEndDateTime = LocalDateTime.now().format(DATE_TIME_FORMATTER);
-        appiumServerManager.stopIfStartedFromCode();
-        finalizeTestSuite(testStartDateTime, testEndDateTime);
+        try {
+            appiumServerManager.stopIfStartedFromCode();
+
+            String testEndDateTime = LocalDateTime.now().format(DATE_TIME_FORMATTER);
+            String suiteName = TestRunContextHolder.getSuiteName();
+            finalizeTestSuite(testStartDateTime, testEndDateTime, suiteName);
+        } finally {
+            TestRunContextHolder.clear();
+            LOG.debug("Test run context has been cleared.");
+        }
     }
 
-    private void finalizeTestSuite(String testStartDateTime, String testEndDateTime) {
+    private void finalizeTestSuite(String testStartDateTime, String testEndDateTime, String suiteName) {
         CommonUtils.threadSleep(1000);
         NetlifyUploader.uploadReportToNetlify();
 
-        String suiteName = TestListener.getSuiteName();
         List<TestResult> results = TestListener.getResults();
         SendGridEmailService.sendEmailWithReport(testStartDateTime, testEndDateTime, suiteName, results);
     }

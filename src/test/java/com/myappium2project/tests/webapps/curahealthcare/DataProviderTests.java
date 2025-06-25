@@ -20,6 +20,7 @@ import com.myappium2project.pages.webapps.curahealthcare.MakeAppointmentPage;
  * The test runs in a browser environment and inherits setup/teardown logic from {@link BrowserTestBase}.
  */
 public class DataProviderTests extends BrowserTestBase implements ITest {
+    private static final int LOGIN_DATA_MIN_LENGTH = 4;
 
     /**
      * Stores the current test name for use with TestNG and reporting tools (e.g., Allure, ExtentReports).
@@ -47,7 +48,7 @@ public class DataProviderTests extends BrowserTestBase implements ITest {
      */
     @BeforeMethod(alwaysRun = true)
     public void initDataDrivenTestName(Object[] data) {
-        if (data.length >= 4) {
+        if (data.length >= LOGIN_DATA_MIN_LENGTH) {
             String username = String.valueOf(data[0]);
             String usernameStatus = String.valueOf(data[1]);
             String password = String.valueOf(data[2]);
@@ -69,7 +70,6 @@ public class DataProviderTests extends BrowserTestBase implements ITest {
      * @param expectedResult         the expected outcome of the login attempt (true = success)
      */
     @Test(dataProvider = "curaLoginDataFromJson", dataProviderClass = CuraLoginTestDataProvider.class)
-    // ha nem egy osztályban van a teszt és a Data Provider, akkor meg kell adni a helyét a dataProviderClass értékének
     public void testsAllLogin(
             String username, String usernameValidityStatus, String password,
             String passwordValidityStatus, boolean expectedResult) {

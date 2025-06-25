@@ -10,7 +10,7 @@ import com.myappium2project.utils.ConfigReader;
  * Determines whether tests are running locally or in the cloud based on the {@code config.properties}
  * value for {@code run.environment}.
  */
-public class EnvironmentConfig {
+public final class EnvironmentConfig {
     private static final TestEnvironment ENVIRONMENT;
 
     static {

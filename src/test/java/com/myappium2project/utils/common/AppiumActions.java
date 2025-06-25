@@ -8,7 +8,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 
@@ -135,23 +134,6 @@ public final class AppiumActions {
         fingerAction.addAction(input.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), start.x, start.y));
         fingerAction.addAction(input.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
         fingerAction.addAction(input.createPointerMove(duration, PointerInput.Origin.viewport(), end.x, end.y));
-        fingerAction.addAction(input.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        driver.perform(ImmutableList.of(fingerAction));
-    }
-
-    /**
-     * Performs a long-press action on the given WebElement.
-     *
-     * @param driver     the Android driver
-     * @param webElement the element to long-press on
-     */
-    public static void longPress(AndroidDriver driver, WebElement webElement) {
-        Point location = webElement.getLocation();
-        PointerInput input = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-        Sequence fingerAction = new Sequence(input, 0);
-        fingerAction.addAction(input.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), location.x, location.y));
-        fingerAction.addAction(input.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-        fingerAction.addAction(input.createPointerMove(Duration.ofSeconds(1), PointerInput.Origin.viewport(), location.x, location.y));
         fingerAction.addAction(input.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
         driver.perform(ImmutableList.of(fingerAction));
     }

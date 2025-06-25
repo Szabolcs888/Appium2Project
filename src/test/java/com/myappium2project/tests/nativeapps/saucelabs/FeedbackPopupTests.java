@@ -13,7 +13,6 @@ import com.myappium2project.pages.nativeapps.saucelabs.productspages.FleeceJacke
 @Test(groups = {TestGroups.INTEGRATION})
 public class FeedbackPopupTests extends SauceLabsAppTestBase {
     private static final String EXPECTED_POPUP_TEXT = "Thank you for submitting your review!";
-
     private static final SauceLabsAppAccount SAUCE_ACC1 = SauceLabsAppAccountProvider.getAccount(0);
 
     @Test(priority = 1)

@@ -12,7 +12,7 @@ import java.util.Properties;
  * Loads the properties once during static initialization and provides access via the {@link #get(String)} method.
  * Throws a {@link RuntimeException} if the file is missing or unreadable.
  */
-public class ConfigReader {
+public final class ConfigReader {
     private static final Properties properties = new Properties();
 
     static {

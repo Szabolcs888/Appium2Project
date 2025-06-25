@@ -12,7 +12,7 @@ import io.appium.java_client.android.options.UiAutomator2Options;
  * <p>
  * Supports both local and cloud-based testing (e.g. BrowserStack), using data from {@link AppiumOptionsProvider}.
  */
-public class BrowserOptionsBuilder {
+public final class BrowserOptionsBuilder {
 
     private BrowserOptionsBuilder() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
@@ -51,7 +51,7 @@ public class BrowserOptionsBuilder {
 
         BrowserStackOptions browserStackOptions = switch (browserName) {
             case "chrome" -> BrowserStackOptionsProvider.getChromeOptions();
-         // case "firefox" -> BrowserStackOptionsProvider.getFirefoxOptions(); // Future expansion potential
+            // case "firefox" -> BrowserStackOptionsProvider.getFirefoxOptions(); // Future expansion potential
             default -> null;
         };
 
@@ -64,7 +64,7 @@ public class BrowserOptionsBuilder {
             options.setCapability("bstack:options", BrowserStackCapabilityMapper.buildFrom(browserStackOptions));
         }
 
-        // System.out.println("Final Capabilities sent to BrowserStack: " + options.asMap()); // Very useful for debugging!
+     // System.out.println("Final Capabilities sent to BrowserStack: " + options.asMap()); // Very useful for debugging!
         return options;
     }
 }

@@ -14,6 +14,9 @@ public class CuraDataProviderLoginData {
     private String passwordStatus;
     private boolean expectedResult;
 
+    /**
+     * Default constructor required for JSON deserialization.
+     */
     public CuraDataProviderLoginData() {
     }
 

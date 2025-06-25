@@ -5,7 +5,7 @@ package com.myappium2project.testsgroups;
  * <p>
  * These constants are typically referenced in the {@code groups} attribute of the {@link org.testng.annotations.Test} annotation.
  */
-public class TestGroups {
+public final class TestGroups {
     public static final String SMOKE = "smoke";
     public static final String INTEGRATION = "integration";
     public static final String E2E = "e2e";

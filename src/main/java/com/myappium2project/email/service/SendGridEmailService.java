@@ -38,7 +38,7 @@ import java.util.stream.Stream;
  * <p>
  * Email credentials and recipients are loaded from {@link SendGridCredentialsProvider}.
  */
-public class SendGridEmailService {
+public final class SendGridEmailService {
     private static final Logger LOG = LogManager.getLogger(SendGridEmailService.class);
 
     private static final SendGridCredentials CREDENTIALS = SendGridCredentialsProvider.getCredentials();
@@ -139,7 +139,8 @@ public class SendGridEmailService {
             request.setEndpoint("mail/send");
             request.setBody(mail.build());
             Response response = sendGrid.api(request);
-            if (response.getStatusCode() == 202) {
+            int httpStatusAccepted = 202;
+            if (response.getStatusCode() == httpStatusAccepted) {
                 LOG.info("Email successfully sent with status code: {}", response.getStatusCode());
             } else {
                 LOG.error("Failed to send email! Status code: {}", response.getStatusCode());

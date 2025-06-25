@@ -1,6 +1,7 @@
 package com.myappium2project.utils;
 
 import com.myappium2project.configkeys.ConfigDataKeys;
+import com.myappium2project.exceptions.LogFileException;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -13,8 +14,7 @@ import java.time.format.DateTimeFormatter;
  * Constructs the path based on configuration properties and the current timestamp.
  * Ensures the target directory exists before returning the full log file path.
  */
-
-public class LogUtils {
+public final class LogUtils {
 
     private LogUtils() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
@@ -45,7 +45,10 @@ public class LogUtils {
         String fullPath = Paths.get(baseDir, subDir, fileName).toString();
 
         File logFile = new File(fullPath);
-        logFile.getParentFile().mkdirs();
+        File parentDir = logFile.getParentFile();
+        if (!parentDir.mkdirs() && !parentDir.exists()) {
+            throw new LogFileException("Failed to create log directory: " + parentDir.getAbsolutePath());
+        }
 
         return fullPath;
     }

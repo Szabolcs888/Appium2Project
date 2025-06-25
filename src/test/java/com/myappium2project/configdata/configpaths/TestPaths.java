@@ -6,7 +6,7 @@ package com.myappium2project.configdata.configpaths;
  * Includes paths to test data, app installers, Appium/BrowserStack configuration files,
  * and reporting templates. These paths typically point to resources on the classpath.
  */
-public class TestPaths {
+public final class TestPaths {
     // Application account data (per app and platform)
     public static final String CURA_ACCOUNTS_JSON = "testdatafiles/accounts/cura-healthcare_accounts.json";
     public static final String SLABS_ACCOUNTS_JSON = "testdatafiles/accounts/saucelabs_accounts.json";

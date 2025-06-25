@@ -1,10 +1,9 @@
 package com.myappium2project.utils;
 
-/**
- * Utility class for common string manipulation operations used within the test framework.
- */
+import java.util.Locale;
 
-public class StringUtils {
+
+public final class StringUtils {
 
     private StringUtils() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
@@ -22,6 +21,6 @@ public class StringUtils {
         if (input == null || input.isBlank()) {
             return input;
         }
-        return input.substring(0, 1).toUpperCase() + input.substring(1);
+        return input.substring(0, 1).toUpperCase(Locale.ENGLISH) + input.substring(1);
     }
 }

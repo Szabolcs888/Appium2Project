@@ -11,7 +11,7 @@ import com.myappium2project.utils.JsonDataReader;
  * This class resolves the correct JSON configuration file based on the given app name and the current
  * test environment (local or cloud), and deserializes it into an {@link AppiumOptionsData} object.
  */
-public class AppiumOptionsProvider {
+public final class AppiumOptionsProvider {
 
     private AppiumOptionsProvider() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");

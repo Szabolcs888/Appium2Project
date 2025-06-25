@@ -10,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 
 /**
  * Utility class responsible for uploading the generated test report to Netlify using the Netlify CLI.
@@ -67,7 +68,7 @@ public final class NetlifyUploader {
      * Prints the output of the Netlify CLI process to the logger for debugging purposes.
      */
     private static void printCliOutput(Process process) {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream(), StandardCharsets.UTF_8))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 LOG.debug("Netlify CLI output: {}", line);

@@ -12,6 +12,7 @@ import org.openqa.selenium.NoSuchElementException;
  * Ensures that the app is set to English language before tests proceed.
  */
 public final class LanguageUtils {
+    private static final String ENGLISH_LANGUAGE = "English";
 
     private LanguageUtils() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
@@ -27,9 +28,9 @@ public final class LanguageUtils {
     public static void ensureEnglishLanguageSelected(
             AndroidDriver driver, MainPage mainPage,
             LanguagesDropdownMenu languagesDropdownMenu) {
-        if (!"English".equals(mainPage.getSelectedLanguage())) {
+        if (!ENGLISH_LANGUAGE.equals(mainPage.getSelectedLanguage())) {
             scrollToEnglishLanguage(driver, mainPage, languagesDropdownMenu);
-            languagesDropdownMenu.chooseLanguageOption("English");
+            languagesDropdownMenu.chooseLanguageOption(ENGLISH_LANGUAGE);
         }
     }
 
@@ -45,7 +46,7 @@ public final class LanguageUtils {
             AndroidDriver driver, MainPage mainPage,
             LanguagesDropdownMenu languagesDropdownMenu) {
         do {
-            if ("English".equals(mainPage.getSelectedLanguage())) {
+            if (ENGLISH_LANGUAGE.equals(mainPage.getSelectedLanguage())) {
                 languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
             } else {
                 try {
@@ -57,6 +58,6 @@ public final class LanguageUtils {
                         700, 112, 1900,
                         "We scroll up in the dropdown menu");
             }
-        } while (!"English".equals(mainPage.getSelectedLanguage()));
+        } while (!ENGLISH_LANGUAGE.equals(mainPage.getSelectedLanguage()));
     }
 }

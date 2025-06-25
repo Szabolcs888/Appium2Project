@@ -3,6 +3,7 @@ package com.myappium2project.email.builder;
 import com.myappium2project.email.models.TestResult;
 
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Utility class for generating a simple HTML-formatted automated test report
@@ -10,7 +11,7 @@ import java.util.List;
  * <p>
  * The report includes suite summary statistics and a styled table of individual test results.
  */
-public class HtmlEmailReportBuilder {
+public final class HtmlEmailReportBuilder {
 
     private HtmlEmailReportBuilder() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
@@ -40,7 +41,7 @@ public class HtmlEmailReportBuilder {
         String totalFormatted = String.format("%.2f s", totalDurationInSeconds);
         String averageFormatted = String.format("%.2f s", averageDuration);
 
-        StringBuilder html = new StringBuilder();
+        StringBuilder html = new StringBuilder(2000);
 
         html.append("<html><head><style>")
                 .append("body { font-family: Arial, sans-serif; }")
@@ -56,7 +57,7 @@ public class HtmlEmailReportBuilder {
                 .append(".skip { color: orange; }")
 
                 .append(".result-table th { background-color: #4CAF50; color: white; }")
-                .append("th.suite-header { background-color: #E7F5E5 !important; color: #222; font-weight: bold; text-align: center; padding: 8px; font-size: 1.1em; }") // Suite fejléc tulajdonságai
+                .append("th.suite-header { background-color: #E7F5E5 !important; color: #222; font-weight: bold; text-align: center; padding: 8px; font-size: 1.1em; }")
                 .append(".result-table th.class-column { width: 35%; }")
                 .append(".result-table th.test-column { width: 35%; }")
                 .append(".result-table th.status-column, .result-table td.status-column { width: 15%; }")
@@ -84,7 +85,7 @@ public class HtmlEmailReportBuilder {
                 .append("</table>");
 
         html.append("<table class='result-table'>")
-                .append("<tr><th colspan='4' class='suite-header'>").append(suiteName).append("</th></tr>") // suite név teljes szélességben
+                .append("<tr><th colspan='4' class='suite-header'>").append(suiteName).append("</th></tr>")
                 .append("<tr>")
                 .append("<th class='class-column'>Class</th>")
                 .append("<th class='test-column'>Test Name</th>")
@@ -93,7 +94,7 @@ public class HtmlEmailReportBuilder {
                 .append("</tr>");
 
         for (TestResult result : results) {
-            String statusClass = switch (result.getStatus().toUpperCase()) {
+            String statusClass = switch (result.getStatus().toUpperCase(Locale.ENGLISH)) {
                 case "PASS" -> "pass";
                 case "FAIL" -> "fail";
                 case "SKIP" -> "skip";

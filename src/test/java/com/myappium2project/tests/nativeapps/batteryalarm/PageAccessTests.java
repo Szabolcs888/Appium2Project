@@ -13,13 +13,12 @@ import com.myappium2project.pages.nativeapps.batteryalarm.MainPage;
 import com.myappium2project.tests.basetests.BatteryAlarmAppTestBase;
 
 public class PageAccessTests extends BatteryAlarmAppTestBase {
+    private MainPage mainPage;
+    private LanguagesDropdownMenu languagesDropdownMenu;
 
     private static String incorrectTextAssertLog(String actualText, String expectedText) {
         return String.format("The expected text on the page should be '%s', but it is '%s'.", expectedText, actualText);
     }
-
-    private MainPage mainPage;
-    private LanguagesDropdownMenu languagesDropdownMenu;
 
     @BeforeMethod(alwaysRun = true)
     public void initializePageObjects() {

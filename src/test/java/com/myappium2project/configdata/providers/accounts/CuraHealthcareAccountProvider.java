@@ -4,6 +4,7 @@ import com.myappium2project.configdata.configpaths.TestPaths;
 import com.myappium2project.configdata.models.accounts.CuraHealthcareAccount;
 import com.myappium2project.utils.JsonDataReader;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,8 +14,7 @@ import java.util.List;
  * Loads user credentials and related data from a JSON file defined in
  * {@link TestPaths#CURA_ACCOUNTS_JSON}, and exposes it through static methods.
  */
-public class CuraHealthcareAccountProvider {
-    // itt hívódik meg a CuraAccount üres konstruktora, azaz ennél a pontnál történik meg a példányosítás/példányosítások
+public final class CuraHealthcareAccountProvider {
     private static final List<CuraHealthcareAccount> accounts =
             Arrays.asList(JsonDataReader.readJsonFromResource(TestPaths.CURA_ACCOUNTS_JSON, CuraHealthcareAccount[].class));
 
@@ -27,6 +27,6 @@ public class CuraHealthcareAccountProvider {
     }
 
     public static List<CuraHealthcareAccount> getAllAccounts() {
-        return accounts;
+        return new ArrayList<>(accounts);
     }
 }

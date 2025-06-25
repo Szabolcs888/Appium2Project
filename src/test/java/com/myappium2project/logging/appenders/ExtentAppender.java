@@ -18,6 +18,8 @@ import org.apache.logging.log4j.core.config.plugins.PluginElement;
 import org.apache.logging.log4j.core.config.plugins.PluginFactory;
 import org.apache.logging.log4j.core.layout.PatternLayout;
 
+import java.util.Locale;
+
 /**
  * Custom Log4j2 appender that bridges log events into ExtentReports test entries.
  * <p>
@@ -62,7 +64,7 @@ public final class ExtentAppender extends AbstractAppender {
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
 
         ExtentReportsConfig config = ExtentReportsConfigProvider.get();
-        Theme theme = Theme.valueOf(config.getTheme().toUpperCase());
+        Theme theme = Theme.valueOf(config.getTheme().toUpperCase(Locale.ENGLISH));
         sparkReporter.config().setTheme(theme);
         sparkReporter.config().setDocumentTitle(config.getDocumentTitle());
         sparkReporter.config().setReportName(config.getReportName());

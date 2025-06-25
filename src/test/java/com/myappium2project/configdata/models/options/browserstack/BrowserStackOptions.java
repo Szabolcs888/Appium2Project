@@ -15,6 +15,9 @@ public class BrowserStackOptions {
     private String debug;
     private String deviceName;
 
+    /**
+     * Default constructor required for JSON deserialization.
+     */
     public BrowserStackOptions() {
     }
 

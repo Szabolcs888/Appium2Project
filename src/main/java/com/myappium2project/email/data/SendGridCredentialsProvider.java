@@ -9,7 +9,7 @@ import com.myappium2project.configpaths.MainPaths;
  * The credentials are loaded once statically from the path defined in {@link MainPaths#SENDGRID_CREDENTIALS_JSON},
  * and can be accessed via the {@link #getCredentials()} method.
  */
-public class SendGridCredentialsProvider {
+public final class SendGridCredentialsProvider {
     private static final SendGridCredentials credentials;
 
     static {

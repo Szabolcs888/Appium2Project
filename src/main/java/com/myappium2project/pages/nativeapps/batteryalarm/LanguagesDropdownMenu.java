@@ -12,6 +12,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class LanguagesDropdownMenu extends BasePageClass {
+    // Preserving insertion order is required
     private final Map<String, WebElement> languageOptionsMap = new LinkedHashMap<>();
 
     @AndroidFindBy(className = "android.widget.Spinner")

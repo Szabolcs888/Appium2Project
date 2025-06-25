@@ -1,5 +1,7 @@
 package com.myappium2project.configdata.enums;
 
+import java.util.Locale;
+
 /**
  * Enum representing the test execution environment: local or cloud.
  * <p>
@@ -27,7 +29,7 @@ public enum TestEnvironment {
             throw new IllegalArgumentException("Missing or empty 'run.environment'. Allowed: local, cloud");
         }
 
-        return switch (value.trim().toLowerCase()) {
+        return switch (value.trim().toLowerCase(Locale.ENGLISH)) {
             case "local" -> LOCAL;
             case "cloud" -> CLOUD;
             default -> throw new IllegalArgumentException(

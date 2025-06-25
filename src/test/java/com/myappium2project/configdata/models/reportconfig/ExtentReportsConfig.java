@@ -14,6 +14,9 @@ public class ExtentReportsConfig {
     private String reportName;
     private Map<String, String> systemInfo;
 
+    /**
+     * Default constructor required for JSON deserialization.
+     */
     public ExtentReportsConfig() {
     }
 
@@ -30,7 +33,7 @@ public class ExtentReportsConfig {
     }
 
     public Map<String, String> getSystemInfo() {
-        return systemInfo;
+        return Map.copyOf(systemInfo);
     }
 
     @Override

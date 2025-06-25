@@ -12,7 +12,7 @@ import io.appium.java_client.android.AndroidDriver;
  * Common helper methods for SauceLabs App tests.
  * Provides reusable steps such as login and scroll actions.
  */
-public class SauceLabsCommonSteps {
+public final class SauceLabsCommonSteps {
 
     private SauceLabsCommonSteps() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");

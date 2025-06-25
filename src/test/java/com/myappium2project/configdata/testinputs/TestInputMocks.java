@@ -5,7 +5,7 @@ package com.myappium2project.configdata.testinputs;
  * <p>
  * These constants help simulate user input validation scenarios, such as invalid credentials or formats.
  */
-public class TestInputMocks {
+public final class TestInputMocks {
 
     private TestInputMocks() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");

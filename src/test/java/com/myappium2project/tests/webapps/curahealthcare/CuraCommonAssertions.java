@@ -13,7 +13,7 @@ import java.util.List;
  * <p>
  * Contains assertions for verifying page load status and appointment data.
  */
-public class CuraCommonAssertions {
+public final class CuraCommonAssertions {
     private static final Logger LOG = LoggerFactory.getLogger(CuraCommonAssertions.class);
 
     private CuraCommonAssertions() {

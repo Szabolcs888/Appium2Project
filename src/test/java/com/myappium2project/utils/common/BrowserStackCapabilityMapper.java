@@ -9,7 +9,7 @@ import java.util.Map;
  * Utility class for converting {@link BrowserStackOptions} into a Map-based
  * capabilities representation compatible with BrowserStack's desired capabilities format.
  */
-public class BrowserStackCapabilityMapper {
+public final class BrowserStackCapabilityMapper {
 
     private BrowserStackCapabilityMapper() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");

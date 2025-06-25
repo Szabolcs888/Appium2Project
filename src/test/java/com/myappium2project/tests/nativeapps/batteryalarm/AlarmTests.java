@@ -75,7 +75,7 @@ public class AlarmTests extends BatteryAlarmAppTestBase {
     }
 
     private void verifyAlarmCountdownStarted() {
-        boolean isCountdownActive = mainPage.isTheCountdownGoing();
+        boolean isCountdownActive = mainPage.isCountdownGoing();
         if (isCountdownActive) {
             LOG.info("The alarm works");
         } else {

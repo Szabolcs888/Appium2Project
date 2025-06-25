@@ -1,5 +1,7 @@
 package com.myappium2project.configdata.enums;
 
+import java.util.Locale;
+
 /**
  * Enum representing supported browser types for web testing on mobile devices.
  * <p>
@@ -28,7 +30,7 @@ public enum BrowserType {
             throw new IllegalArgumentException("Missing 'browser.type' in config.properties. Allowed values: chrome, firefox, edge.");
         }
 
-        return switch (raw.toLowerCase()) {
+        return switch (raw.toLowerCase(Locale.ENGLISH)) {
             case "chrome" -> CHROME;
             case "firefox" -> FIREFOX;
             case "edge" -> EDGE;

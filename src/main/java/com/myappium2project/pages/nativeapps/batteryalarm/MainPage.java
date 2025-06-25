@@ -15,6 +15,8 @@ import java.util.Map;
 
 public class MainPage extends BasePageClass {
     private static final String ALARM_BUTTON_PRESS_LOG = "We press the '{}' {} button {} times";
+
+    // Preserving insertion order is required
     private final Map<String, WebElement> voiceWarningTextMap = new LinkedHashMap<>();
 
     @AndroidFindBy(uiAutomator = "new UiSelector().text(\"Choose a sound\")")
@@ -255,14 +257,11 @@ public class MainPage extends BasePageClass {
         }
     }
 
-    public boolean isTheCountdownGoing() {
+    public boolean isCountdownGoing() {
         CommonUtils.threadSleep(7000);
         String countdownTimer = widgetsButtons.get(1).getText();
-        if (!"0h:0m:10s".equals(countdownTimer) && !"0h:0m:30s".equals(countdownTimer)) {
-            return true;
-        } else {
-            return false;
-        }
+        boolean isCountdownGoing = !"0h:0m:10s".equals(countdownTimer) && !"0h:0m:30s".equals(countdownTimer);
+        return isCountdownGoing;
     }
 
     public String getChooseASoundText() {

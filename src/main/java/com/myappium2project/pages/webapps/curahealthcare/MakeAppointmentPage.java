@@ -78,7 +78,8 @@ public class MakeAppointmentPage extends BasePageClass {
     }
 
     public void pressApplyForHospitalReadmissionCheckBoxOrDontPressIt(String option) {
-        if ("Yes".equals(option)) {
+        String yesOption = "Yes";
+        if (yesOption.equals(option)) {
             LOG.info(CHECKBOX_PRESS_ACTION_LOG, "");
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", applyForHospitalReadmissionCheckbox);
         } else {

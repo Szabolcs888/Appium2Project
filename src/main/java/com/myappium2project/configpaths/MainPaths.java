@@ -9,7 +9,7 @@ import java.nio.file.Paths;
  * These paths include logs, reports, screenshots, and configuration files.
  * Paths are resolved relative to the project root (user.dir).
  */
-public class MainPaths {
+public final class MainPaths {
     public static final Path USER_DIR = Paths.get(System.getProperty("user.dir")).toAbsolutePath();
 
     // Logs

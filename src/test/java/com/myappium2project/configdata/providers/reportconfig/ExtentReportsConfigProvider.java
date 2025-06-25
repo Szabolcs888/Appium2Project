@@ -9,7 +9,7 @@ import com.myappium2project.utils.JsonDataReader;
  * <p>
  * This configuration includes theming, titles, and system information for ExtentReports.
  */
-public class ExtentReportsConfigProvider {
+public final class ExtentReportsConfigProvider {
 
     private static final ExtentReportsConfig reportConfig =
             JsonDataReader.readJsonFromResource(TestPaths.EXTENT_REPORTS_CONFIG_JSON, ExtentReportsConfig.class);

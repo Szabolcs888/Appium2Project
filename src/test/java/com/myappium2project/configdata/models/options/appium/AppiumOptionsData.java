@@ -17,6 +17,9 @@ public class AppiumOptionsData {
     private Boolean noReset;
     private Boolean fullReset;
 
+    /**
+     * Default constructor required for JSON deserialization.
+     */
     public AppiumOptionsData() {
     }
 

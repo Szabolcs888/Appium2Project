@@ -8,6 +8,9 @@ public class SendGridCredentials {
     private String senderEmail;
     private String receiverEmail;
 
+    /**
+     * Default constructor required for JSON deserialization.
+     */
     public SendGridCredentials() {
     }
 

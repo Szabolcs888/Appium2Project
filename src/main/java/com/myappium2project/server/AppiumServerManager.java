@@ -12,6 +12,9 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.net.ServerSocket;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
  * Utility class for managing the local Appium server lifecycle in non-cloud test environments.
@@ -24,6 +27,7 @@ import java.net.ServerSocket;
 public class AppiumServerManager {
     private static final Logger LOG = LogManager.getLogger(AppiumServerManager.class);
     private static final int APPIUM_PORT = Integer.parseInt(ConfigReader.get(ConfigDataKeys.APPIUM_PORT.getKey()));
+    private static final Object LOCK = new Object();
     private static AppiumDriverLocalService server;
     private static PrintStream serverLogStream;
 
@@ -34,41 +38,54 @@ public class AppiumServerManager {
      *   <li>the server was not already started by this process or externally</li>
      * </ul>
      *
-     * @param isCloud true if the tests are running in a cloud environment (e.g. BrowserStack)
+     * <p>This method uses an explicit synchronization block to guard shared static state.
+     * Although the current test execution model is single-threaded, this provides defensive protection
+     * against accidental concurrent access, and allows for safe extension to parallel test runs in the future.</p>
+     *
+     * @param isCloud {@code true} if the tests are running in a cloud environment (e.g. BrowserStack)
      */
-    public synchronized void startFromCodeIfRequired(boolean isCloud) {
+    public void startFromCodeIfRequired(boolean isCloud) {
         if (isCloud) {
             return;
         }
-        if (server != null && server.isRunning()) {
-            LOG.info("Appium Server was already running (started by this process), Port: {}{}", APPIUM_PORT, System.lineSeparator());
-            return;
-        }
-        if (isAppiumServerRunning(APPIUM_PORT)) {
-            LOG.info("Appium Server is already running on port {} (external process){}", APPIUM_PORT, System.lineSeparator());
-            return;
-        }
 
-        getInstance().start();
-        LOG.info("The Appium Server was started from code");
-        LOG.info("Appium Server URL: {}", server.getUrl());
-        LOG.info("Appium Server is running: {}", server.isRunning() + System.lineSeparator());
+        synchronized (LOCK) {
+            if (server != null && server.isRunning()) {
+                LOG.info("Appium Server was already running (started by this process), Port: {}{}", APPIUM_PORT, System.lineSeparator());
+                return;
+            }
+            if (isAppiumServerRunning(APPIUM_PORT)) {
+                LOG.info("Appium Server is already running on port {} (external process){}", APPIUM_PORT, System.lineSeparator());
+                return;
+            }
+
+            getInstance().start();
+            LOG.info("The Appium Server was started from code");
+            LOG.info("Appium Server URL: {}", server.getUrl());
+            LOG.info("Appium Server is running: {}", server.isRunning() + System.lineSeparator());
+        }
     }
 
     /**
-     * Stops the Appium server if it was previously started from code by this class.
-     * Also closes the associated log stream.
+     * Stops the Appium server <strong>only if</strong> it was previously started by this process.
+     * <p>
+     * Also closes the associated server log stream if it exists.
+     * This method uses the same explicit locking mechanism as the startup method to ensure safe access
+     * to shared static resources, and to prevent potential race conditions in future parallel executions.
+     * </p>
      */
-    public synchronized void stopIfStartedFromCode() {
-        if (server != null && server.isRunning()) {
-            server.stop();
-            LOG.info("The Appium Server started by this process has been stopped{}", System.lineSeparator());
+    public void stopIfStartedFromCode() {
+        synchronized (LOCK) {
+            if (server != null && server.isRunning()) {
+                server.stop();
+                LOG.info("The Appium Server (started by this process) has been stopped{}", System.lineSeparator());
+            }
+            if (serverLogStream != null) {
+                serverLogStream.close();
+                serverLogStream = null;
+            }
+            server = null;
         }
-        if (serverLogStream != null) {
-            serverLogStream.close();
-            serverLogStream = null;
-        }
-        server = null;
     }
 
     /**
@@ -102,13 +119,15 @@ public class AppiumServerManager {
         return server;
     }
 
+    // Avoid try-with-resources: OutputStream must remain open for AppiumServer to write logs
     private static void setInstance() {
         String ipAddress = ConfigReader.get(ConfigDataKeys.APPIUM_IP_ADDRESS.getKey());
         String serverLogPath = LogUtils.createServerLogPath();
 
         try {
-            serverLogStream = new PrintStream(new FileOutputStream(serverLogPath), true);
-        } catch (FileNotFoundException e) {
+            OutputStream outputStream = Files.newOutputStream(Paths.get(serverLogPath));
+            serverLogStream = new PrintStream(outputStream, true, StandardCharsets.UTF_8);
+        } catch (IOException e) {
             throw new ServerLogInitializationException("Could not create server log file at: " + serverLogPath, e);
         }
 

@@ -14,6 +14,9 @@ public class CuraHealthcareAccount {
     private String visitDate;
     private String comment;
 
+    /**
+     * Default constructor required for JSON deserialization.
+     */
     public CuraHealthcareAccount() {
     }
 

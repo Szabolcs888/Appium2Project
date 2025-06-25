@@ -30,6 +30,7 @@ public class LanguagesTests extends BatteryAlarmAppTestBase {
         LanguagesDropdownMenu languagesDropdownMenu = new LanguagesDropdownMenu(driver);
         LanguageUtils.ensureEnglishLanguageSelected(driver, mainPage, languagesDropdownMenu);
 
+        // Preserving insertion order is required
         Map<String, Supplier<String>> expectedTexts = new LinkedHashMap<>();
         expectedTexts.put("English", () -> "Voice Warning");
         expectedTexts.put("Czech", () -> "Hlasové varování");
@@ -63,12 +64,14 @@ public class LanguagesTests extends BatteryAlarmAppTestBase {
         expectedTexts.put("Hebrew", () -> "אזהרה קולית");
         expectedTexts.put("Hindi", () -> "आवाज चेतावनी");
 
-        for (String language : expectedTexts.keySet()) {
+        for (Map.Entry<String, Supplier<String>> entry : expectedTexts.entrySet()) {
+            String language = entry.getKey();
+            String expectedText = entry.getValue().get();
+
             languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
             languagesDropdownMenu.chooseLanguageOption(language);
 
             LOG.info("We check if the app switches to the selected language");
-            String expectedText = expectedTexts.get(language).get();
             String actualText = mainPage.getVoiceWarningText(language);
             if (expectedText.equals(actualText)) {
                 LOG.info("The displayed language is correct: {}", language);

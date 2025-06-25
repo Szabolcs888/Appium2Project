@@ -18,6 +18,9 @@ public class SauceLabsAppAccount {
     private String expDate;
     private String secCode;
 
+    /**
+     * Default constructor required for JSON deserialization.
+     */
     public SauceLabsAppAccount() {
     }
 

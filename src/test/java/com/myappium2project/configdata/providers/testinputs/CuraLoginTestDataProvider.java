@@ -12,7 +12,7 @@ import java.util.List;
  * <p>
  * The data is loaded from a JSON file and supplied to TestNG tests via a named {@code DataProvider}.
  */
-public class CuraLoginTestDataProvider {
+public final class CuraLoginTestDataProvider {
 
     private CuraLoginTestDataProvider() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");

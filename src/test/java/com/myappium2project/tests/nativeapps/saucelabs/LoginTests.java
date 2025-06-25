@@ -28,6 +28,8 @@ public class LoginTests extends SauceLabsAppTestBase {
         hamburgerMenu = new HamburgerMenu(driver, wait);
     }
 
+    //This test is run last because when running locally, the app is not reinstalled before the tests, so after a successful login
+    // a logout would be required (which is not part of the test). Therefore, it is advisable to run the failed login tests first.
     @Test(priority = 5,
             groups = {TestGroups.SMOKE})
     public void testLoginValidData() throws InterruptedException {

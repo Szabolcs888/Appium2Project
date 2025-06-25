@@ -10,7 +10,7 @@ import com.myappium2project.utils.ConfigReader;
  * The value is read from the {@code config.properties} key {@code browser.type}
  * and mapped to a {@link BrowserType} enum.
  */
-public class BrowserConfig {
+public final class BrowserConfig {
     private static final BrowserType BROWSER_TYPE;
 
     static {

@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
  * Utility class providing common reusable steps for the CURA Healthcare tests.
  * Currently includes login functionality using given credentials.
  */
-public class CuraCommonSteps {
+public final class CuraCommonSteps {
     private static final Logger LOG = LoggerFactory.getLogger(CuraCommonSteps.class);
 
     private CuraCommonSteps() {

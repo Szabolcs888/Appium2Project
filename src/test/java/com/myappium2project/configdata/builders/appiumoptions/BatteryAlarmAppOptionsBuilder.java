@@ -11,7 +11,7 @@ import io.appium.java_client.android.options.UiAutomator2Options;
  * This app is only tested locally, as it is available solely via the Play Store
  * and its versions may change over time.
  */
-public class BatteryAlarmAppOptionsBuilder {
+public final class BatteryAlarmAppOptionsBuilder {
 
     private BatteryAlarmAppOptionsBuilder() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");

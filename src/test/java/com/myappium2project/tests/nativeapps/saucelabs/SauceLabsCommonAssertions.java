@@ -11,7 +11,7 @@ import org.testng.Assert;
  * Provides common assertion utilities for SauceLabs App tests.
  * Includes reusable verification methods for page access, cart state, and UI elements.
  */
-public class SauceLabsCommonAssertions {
+public final class SauceLabsCommonAssertions {
     private static final Logger LOG = LoggerFactory.getLogger(SauceLabsCommonAssertions.class);
 
     private SauceLabsCommonAssertions() {

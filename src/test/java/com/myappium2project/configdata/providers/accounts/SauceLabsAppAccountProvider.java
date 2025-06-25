@@ -4,6 +4,7 @@ import com.myappium2project.configdata.configpaths.TestPaths;
 import com.myappium2project.configdata.models.accounts.SauceLabsAppAccount;
 import com.myappium2project.utils.JsonDataReader;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import java.util.List;
  * Loads account details from a JSON file defined in {@link TestPaths#SLABS_ACCOUNTS_JSON}
  * and makes them available for test classes via static access methods.
  */
-public class SauceLabsAppAccountProvider {
+public final class SauceLabsAppAccountProvider {
     private static final List<SauceLabsAppAccount> accounts =
             Arrays.asList(JsonDataReader.readJsonFromResource(TestPaths.SLABS_ACCOUNTS_JSON, SauceLabsAppAccount[].class));
 
@@ -26,6 +27,6 @@ public class SauceLabsAppAccountProvider {
     }
 
     public static List<SauceLabsAppAccount> getAllAccounts() {
-        return accounts;
+        return new ArrayList<>(accounts);
     }
 }

@@ -12,7 +12,7 @@ import java.util.List;
  * <p>
  * Supports reading both single objects and lists of objects.
  */
-public class JsonDataReader {
+public final class JsonDataReader {
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
     private JsonDataReader() {

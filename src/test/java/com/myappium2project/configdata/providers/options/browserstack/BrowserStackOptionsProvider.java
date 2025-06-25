@@ -10,7 +10,7 @@ import com.myappium2project.utils.JsonDataReader;
  * The options are loaded once from JSON files and exposed via static getters for reuse
  * across test initialization logic.
  */
-public class BrowserStackOptionsProvider {
+public final class BrowserStackOptionsProvider {
     private static final BrowserStackOptions sauceLabsOptions = JsonDataReader.readJsonFromResource(
             TestPaths.BS_SAUCELABS_OPTIONS_JSON, BrowserStackOptions.class);
     private static final BrowserStackOptions chromeOptions = JsonDataReader.readJsonFromResource(

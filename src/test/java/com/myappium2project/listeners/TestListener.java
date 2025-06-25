@@ -6,6 +6,7 @@ import com.aventstack.extentreports.Status;
 import com.myappium2project.email.models.TestResult;
 import com.myappium2project.tests.basetests.SauceLabsAppTestBase;
 import com.myappium2project.utils.common.ScreenshotUtils;
+import com.myappium2project.utils.common.TestRunContextHolder;
 import io.appium.java_client.android.AndroidDriver;
 import com.myappium2project.logging.appenders.ExtentAppender;
 import org.apache.logging.log4j.LogManager;
@@ -34,18 +35,23 @@ public class TestListener implements ITestListener {
     private static final Logger LOG = LogManager.getLogger(TestListener.class);
     private static final Logger SUMMARY_LOG = LogManager.getLogger("summaryLogger");
     private static final List<TestResult> emailReportResults = new ArrayList<>();
-    private static String suiteName;
+    private String currentSuiteName;
     private ExtentReports extentReports;
     private ExtentTest extentTest;
 
     /**
      * Called before any test methods are run in the suite.
-     * Initializes the ExtentReports instance.
+     * <p>
+     * Initializes the {@link ExtentReports} instance and stores the suite name
+     * in the {@link TestRunContextHolder} for use later in the test lifecycle
+     * (e.g., for reporting and logging purposes).
      */
     @Override
     public void onStart(ITestContext context) {
-        suiteName = context.getSuite().getName();
-        LOG.info("{} test(s) run will start", suiteName);
+        currentSuiteName = context.getSuite().getName();
+        TestRunContextHolder.setSuiteName(currentSuiteName);
+
+        LOG.info("{} test(s) run will start", currentSuiteName);
         extentReports = ExtentAppender.setupExtentReports();
     }
 
@@ -108,14 +114,14 @@ public class TestListener implements ITestListener {
     public void onFinish(ITestContext context) {
         extentReports.flush();
         ExtentAppender.setExtentTest(null);
-        LOG.info("{} test(s) run completed{}", suiteName, System.lineSeparator());
+        LOG.info("{} test(s) run completed{}", currentSuiteName, System.lineSeparator());
 
         int numberOfTests = context.getAllTestMethods().length;
         int numberOfPassedTests = context.getPassedTests().size();
         int numberOfFailedTests = context.getFailedTests().size();
         int numberOfSkippedTests = context.getSkippedTests().size();
         SUMMARY_LOG.info("===============================================");
-        SUMMARY_LOG.info(suiteName);
+        SUMMARY_LOG.info(currentSuiteName);
         SUMMARY_LOG.info("Total tests run: {}, Passes: {}, Failures: {}, Skips: {}",
                 numberOfTests, numberOfPassedTests, numberOfFailedTests, numberOfSkippedTests);
         SUMMARY_LOG.info("===============================================");
@@ -174,11 +180,7 @@ public class TestListener implements ITestListener {
         return new TestResult(testName, combined, status, durationFormatted, durationSeconds);
     }
 
-    public static String getSuiteName() {
-        return suiteName;
-    }
-
     public static List<TestResult> getResults() {
-        return emailReportResults;
+        return new ArrayList<>(emailReportResults);
     }
 }

@@ -17,7 +17,7 @@ import java.io.File;
  * Supports both local Android and cloud-based Android testing (e.g. via BrowserStack).
  * Configuration values are loaded via {@link AppiumOptionsProvider} and augmented with cloud-specific capabilities when needed.
  */
-public class SauceLabsAppOptionsBuilder {
+public final class SauceLabsAppOptionsBuilder {
     private static final String APP_NAME = TestApp.SAUCELABS.getName();
 
     private SauceLabsAppOptionsBuilder() {
