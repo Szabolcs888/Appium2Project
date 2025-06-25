@@ -138,7 +138,7 @@ The `pom.xml` file is configured with the **Maven Surefire Plugin** to run tests
 Any modern Java IDE (e.g., IntelliJ IDEA or Eclipse) with TestNG support allows running tests via a graphical interface, either at the level of individual test suites or even single methods.
 
 ## Screenshots of the Tests
-**Note: I will update screenshots and the videos in a few days because more developments have been made in the project.**
+**Note: I will update the screenshots and videos soon.**
 <table>
 <tr>
 <td>
