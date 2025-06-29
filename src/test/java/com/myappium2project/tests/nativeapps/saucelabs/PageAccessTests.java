@@ -70,6 +70,8 @@ public class PageAccessTests extends SauceLabsAppTestBase {
         SauceLabsCommonAssertions.verifyPageLoaded(pageTitle, pageName);
     }
 
+    // The testFingerPrintPageAccess sometimes breaks because the popup is not handled. When I wrote the test, the test was successful because the popup
+    // does not always pop up. I intentionally did not implement this popup handling afterwards so that there would be an example of a failed test screenshot.
     @Test(priority = 6, groups = {TestGroups.SMOKE})
     public void testFingerPrintPageAccess() throws InterruptedException {
         hamburgerMenu.pressHamburgerMenuButton();
@@ -97,7 +99,7 @@ public class PageAccessTests extends SauceLabsAppTestBase {
         hamburgerMenu.pressHamburgerMenuButton();
         hamburgerMenu.pressSauceBotVideoButton();
 
-      //Page name = "Sauce Bot Video". In this one case, the page name differs from the expected title.
+     // Page name = "Sauce Bot Video". In this one case, the page name differs from the expected title.
         String expectedTitle = "SauceBot - The Beginning";
         SauceBotVideoPage sauceBotVideoPage = new SauceBotVideoPage(driver);
         String pageTitle = sauceBotVideoPage.getSauceBotVideoPageTitleText();
