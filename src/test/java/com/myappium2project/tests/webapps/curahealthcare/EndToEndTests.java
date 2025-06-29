@@ -8,6 +8,7 @@ import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
 import com.myappium2project.pages.webapps.curahealthcare.*;
 import com.myappium2project.tests.basetests.BrowserTestBase;
 import com.myappium2project.testsgroups.TestGroups;
+import com.myappium2project.utils.BrowserHelper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -22,6 +23,9 @@ public class EndToEndTests extends BrowserTestBase {
     public void testEndToEnd() {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         CuraCommonSteps.loginToCura(driver, hamburgerMenu, CURA_ACC2);
+
+        BrowserHelper browserHelper = new BrowserHelper(driver, wait);
+        browserHelper.dismissPasswordPopupInChrome();
 
         String makeAppointmentPageName = "Make Appointment";
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);

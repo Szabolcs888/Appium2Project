@@ -4,6 +4,7 @@ import com.myappium2project.configdata.models.accounts.CuraHealthcareAccount;
 import com.myappium2project.configdata.providers.accounts.CuraHealthcareAccountProvider;
 import com.myappium2project.tests.basetests.BrowserTestBase;
 import com.myappium2project.testsgroups.TestGroups;
+import com.myappium2project.utils.BrowserHelper;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.webapps.curahealthcare.AppointmentConfirmationPage;
 import com.myappium2project.pages.webapps.curahealthcare.HamburgerMenu;
@@ -20,6 +21,9 @@ public class AppointmentConfirmationTests extends BrowserTestBase {
     public void testAppointmentConfirmation() {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);
         CuraCommonSteps.loginToCura(driver, hamburgerMenu, CURA_ACC1);
+
+        BrowserHelper browserHelper = new BrowserHelper(driver, wait);
+        browserHelper.dismissPasswordPopupInChrome();
 
         MakeAppointmentPage makeAppointmentPage = new MakeAppointmentPage(driver);
         makeAppointmentPage.pressFacilityDropDownMenuButton();
