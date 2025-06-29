@@ -12,7 +12,6 @@ import java.nio.file.Path;
  */
 public final class CommonUtils {
     private static final Logger LOG = LogManager.getLogger(CommonUtils.class);
-    private static final String FAILED_DELETE_FILE_MESSAGE = "Failed to delete file: ";
 
     private CommonUtils() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
@@ -78,7 +77,7 @@ public final class CommonUtils {
         if (file.delete()) {
             LOG.debug("Deleted file: {}", filePath);
         } else {
-            LOG.warn(FAILED_DELETE_FILE_MESSAGE + "{}", file.getName());
+            LOG.warn("Failed to delete file: " + "{}", file.getName());
         }
     }
 }
