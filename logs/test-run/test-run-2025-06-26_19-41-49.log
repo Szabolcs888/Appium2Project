@@ -1,0 +1,80 @@
+[INFO ] 2025-06-26 19:41:51 - server.AppiumServerManager                  - Appium Server is already running on port 4723 (external process)
+
+[INFO ] 2025-06-26 19:41:51 - listeners.TestListener                      - DropdownMenu and FeedbackPopup test(s) run will start
+[INFO ] 2025-06-26 19:41:52 - saucelabs.DropdownMenuTests                 - ------- START: SauceLabs app -------
+[INFO ] 2025-06-26 19:42:03 - listeners.TestListener                      - Test STARTED: testDropdownMenuAbcOrder
+[INFO ] 2025-06-26 19:42:03 - saucelabs.ProductsPage                      - We press the 'dropdown menu' button
+[INFO ] 2025-06-26 19:42:04 - saucelabs.ProductsPage                      - We select the 'abc' order option
+[INFO ] 2025-06-26 19:42:10 - saucelabs.DropdownMenuTests                 - We check if the products are in the correct order
+[INFO ] 2025-06-26 19:42:10 - saucelabs.DropdownMenuTests                 - The products are in the correct order
+[INFO ] 2025-06-26 19:42:10 - listeners.TestListener                      - Test PASSED: testDropdownMenuAbcOrder
+[INFO ] 2025-06-26 19:42:11 - saucelabs.DropdownMenuTests                 - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-26 19:42:11 - saucelabs.DropdownMenuTests                 - ------- START: SauceLabs app -------
+[INFO ] 2025-06-26 19:42:18 - listeners.TestListener                      - Test STARTED: testDropdownMenuReverseAbcOrder
+[INFO ] 2025-06-26 19:42:18 - saucelabs.ProductsPage                      - We press the 'dropdown menu' button
+[INFO ] 2025-06-26 19:42:20 - saucelabs.ProductsPage                      - We select the 'reverse abc' order option
+[INFO ] 2025-06-26 19:42:26 - saucelabs.DropdownMenuTests                 - We check if the products are in the correct order
+[INFO ] 2025-06-26 19:42:26 - saucelabs.DropdownMenuTests                 - The products are in the correct order
+[INFO ] 2025-06-26 19:42:26 - listeners.TestListener                      - Test PASSED: testDropdownMenuReverseAbcOrder
+[INFO ] 2025-06-26 19:42:27 - saucelabs.DropdownMenuTests                 - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-26 19:42:27 - saucelabs.DropdownMenuTests                 - ------- START: SauceLabs app -------
+[INFO ] 2025-06-26 19:42:34 - listeners.TestListener                      - Test STARTED: testDropdownMenuPricesOrder
+[INFO ] 2025-06-26 19:42:34 - saucelabs.ProductsPage                      - We press the 'dropdown menu' button
+[INFO ] 2025-06-26 19:42:35 - saucelabs.ProductsPage                      - We select the 'ascending price' order option
+[INFO ] 2025-06-26 19:42:41 - saucelabs.DropdownMenuTests                 - We check if the products are in the correct order
+[INFO ] 2025-06-26 19:42:41 - saucelabs.DropdownMenuTests                 - The products are in the correct order
+[INFO ] 2025-06-26 19:42:41 - listeners.TestListener                      - Test PASSED: testDropdownMenuPricesOrder
+[INFO ] 2025-06-26 19:42:42 - saucelabs.DropdownMenuTests                 - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-26 19:42:42 - saucelabs.DropdownMenuTests                 - ------- START: SauceLabs app -------
+[INFO ] 2025-06-26 19:42:49 - listeners.TestListener                      - Test STARTED: testDropdownMenuPricesOrderBackwards
+[INFO ] 2025-06-26 19:42:49 - saucelabs.ProductsPage                      - We press the 'dropdown menu' button
+[INFO ] 2025-06-26 19:42:51 - saucelabs.ProductsPage                      - We select the 'descending price' order option
+[INFO ] 2025-06-26 19:42:57 - saucelabs.DropdownMenuTests                 - We check if the products are in the correct order
+[INFO ] 2025-06-26 19:42:57 - saucelabs.DropdownMenuTests                 - The products are in the correct order
+[INFO ] 2025-06-26 19:42:57 - listeners.TestListener                      - Test PASSED: testDropdownMenuPricesOrderBackwards
+[INFO ] 2025-06-26 19:42:58 - saucelabs.DropdownMenuTests                 - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-26 19:42:58 - saucelabs.FeedbackPopupTests                - ------- START: SauceLabs app -------
+[INFO ] 2025-06-26 19:43:05 - listeners.TestListener                      - Test STARTED: testFeedbackPopupOnProductsPageWithoutLoggedIn
+[INFO ] 2025-06-26 19:43:05 - saucelabs.ProductsPage                      - We press the 'dropdown menu' button
+[INFO ] 2025-06-26 19:43:06 - saucelabs.ProductsPage                      - We select the 'abc' order option
+[INFO ] 2025-06-26 19:43:07 - saucelabs.ProductsPage                      - We press the 'third star' button under the 'Backpack'
+[INFO ] 2025-06-26 19:43:09 - saucelabs.FeedbackPopupTests                - We check that the text of the pop-up window matches this: 'Thank you for submitting your review!'
+[INFO ] 2025-06-26 19:43:09 - saucelabs.FeedbackPopupTests                - The popup text is correct
+[INFO ] 2025-06-26 19:43:09 - saucelabs.ProductsPage                      - We press the 'Close Modal' button
+[INFO ] 2025-06-26 19:43:13 - saucelabs.FeedbackPopupTests                - We check if the 'Close Modal' button is still available
+[INFO ] 2025-06-26 19:43:13 - saucelabs.FeedbackPopupTests                - The 'Close Modal' button is not available
+[INFO ] 2025-06-26 19:43:13 - listeners.TestListener                      - Test PASSED: testFeedbackPopupOnProductsPageWithoutLoggedIn
+[INFO ] 2025-06-26 19:43:14 - saucelabs.FeedbackPopupTests                - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-26 19:43:14 - saucelabs.FeedbackPopupTests                - ------- START: SauceLabs app -------
+[INFO ] 2025-06-26 19:43:21 - listeners.TestListener                      - Test STARTED: testFeedbackPopupOnFleeceJacketPageInLoggedIn
+[INFO ] 2025-06-26 19:43:22 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-26 19:43:22 - saucelabs.HamburgerMenu                     - We press the 'Log In' button
+[INFO ] 2025-06-26 19:43:24 - saucelabs.LoginPage                         - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-26 19:43:25 - saucelabs.LoginPage                         - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-26 19:43:26 - saucelabs.LoginPage                         - We press the 'Login' button
+[INFO ] 2025-06-26 19:43:27 - saucelabs.ProductsPage                      - We press the 'dropdown menu' button
+[INFO ] 2025-06-26 19:43:28 - saucelabs.ProductsPage                      - We select the 'abc' order option
+[INFO ] 2025-06-26 19:43:29 - saucelabs.ProductsPage                      - We press the 'Fleece Jacket's text
+[INFO ] 2025-06-26 19:43:30 - productspages.FleeceJacketPage              - We press the 'fifth star' button under the 'Fleece Jacket'
+[INFO ] 2025-06-26 19:43:32 - saucelabs.FeedbackPopupTests                - We check that the text of the pop-up window matches this: 'Thank you for submitting your review!'
+[INFO ] 2025-06-26 19:43:32 - saucelabs.FeedbackPopupTests                - The popup text is correct
+[INFO ] 2025-06-26 19:43:32 - productspages.FleeceJacketPage              - We press the 'Close Modal' button
+[INFO ] 2025-06-26 19:43:35 - saucelabs.FeedbackPopupTests                - We check if the 'Close Modal' button is still available
+[INFO ] 2025-06-26 19:43:35 - saucelabs.FeedbackPopupTests                - The 'Close Modal' button is not available
+[INFO ] 2025-06-26 19:43:35 - listeners.TestListener                      - Test PASSED: testFeedbackPopupOnFleeceJacketPageInLoggedIn
+[INFO ] 2025-06-26 19:43:37 - saucelabs.FeedbackPopupTests                - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-26 19:43:38 - listeners.TestListener                      - DropdownMenu and FeedbackPopup test(s) run completed
+
+[INFO ] 2025-06-26 19:43:38 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-26 19:43:38 - summaryLogger                               - DropdownMenu and FeedbackPopup
+[INFO ] 2025-06-26 19:43:38 - summaryLogger                               - Total tests run: 6, Passes: 6, Failures: 0, Skips: 0
+[INFO ] 2025-06-26 19:43:38 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-26 19:43:56 - server.NetlifyUploader                      - Report uploaded to Netlify
+
+[INFO ] 2025-06-26 19:43:59 - service.SendGridEmailService                - Email successfully sent with status code: 202

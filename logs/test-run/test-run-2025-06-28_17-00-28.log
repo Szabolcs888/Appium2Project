@@ -1,0 +1,264 @@
+[INFO ] 2025-06-28 17:00:29 - server.AppiumServerManager                  - Appium Server is already running on port 4723 (external process)
+
+[INFO ] 2025-06-28 17:00:29 - listeners.TestListener                      - Smoke test(s) run will start
+[INFO ] 2025-06-28 17:00:30 - saucelabs.LoginTests                        - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:00:43 - listeners.TestListener                      - Test STARTED: testLoginValidUsernameInvalidPassword
+[INFO ] 2025-06-28 17:00:43 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:00:44 - saucelabs.HamburgerMenu                     - We press the 'Log In' button
+[INFO ] 2025-06-28 17:00:46 - saucelabs.LoginPage                         - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-28 17:00:47 - saucelabs.LoginPage                         - We fill the 'Password' input field with the 'invalid' password
+[INFO ] 2025-06-28 17:00:48 - saucelabs.LoginPage                         - We press the 'Login' button
+[INFO ] 2025-06-28 17:00:50 - saucelabs.LoginTests                        - We check if the error message appears and, if so, if it is correct
+[INFO ] 2025-06-28 17:00:50 - saucelabs.LoginTests                        - Expected error message: 'Provided credentials do not match any user in this service.'
+[INFO ] 2025-06-28 17:00:50 - saucelabs.LoginTests                        - The error message is correct
+[INFO ] 2025-06-28 17:00:50 - listeners.TestListener                      - Test PASSED: testLoginValidUsernameInvalidPassword
+[INFO ] 2025-06-28 17:00:51 - saucelabs.LoginTests                        - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:00:51 - saucelabs.LoginTests                        - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:01:00 - listeners.TestListener                      - Test STARTED: testLoginInvalidUsernameValidPassword
+[INFO ] 2025-06-28 17:01:01 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:01:02 - saucelabs.HamburgerMenu                     - We press the 'Log In' button
+[INFO ] 2025-06-28 17:01:04 - saucelabs.LoginPage                         - We fill the 'Username' input field with the 'invalid' username
+[INFO ] 2025-06-28 17:01:06 - saucelabs.LoginPage                         - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-28 17:01:06 - saucelabs.LoginPage                         - We press the 'Login' button
+[INFO ] 2025-06-28 17:01:08 - saucelabs.LoginTests                        - We check if the error message appears and, if so, if it is correct
+[INFO ] 2025-06-28 17:01:08 - saucelabs.LoginTests                        - Expected error message: 'Provided credentials do not match any user in this service.'
+[INFO ] 2025-06-28 17:01:08 - saucelabs.LoginTests                        - The error message is correct
+[INFO ] 2025-06-28 17:01:08 - listeners.TestListener                      - Test PASSED: testLoginInvalidUsernameValidPassword
+[INFO ] 2025-06-28 17:01:09 - saucelabs.LoginTests                        - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:01:09 - saucelabs.LoginTests                        - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:01:16 - listeners.TestListener                      - Test STARTED: testLoginEmptyUsernameValidPassword
+[INFO ] 2025-06-28 17:01:17 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:01:17 - saucelabs.HamburgerMenu                     - We press the 'Log In' button
+[INFO ] 2025-06-28 17:01:20 - saucelabs.LoginPage                         - We fill the 'Username' input field with the 'empty' username
+[INFO ] 2025-06-28 17:01:21 - saucelabs.LoginPage                         - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-28 17:01:22 - saucelabs.LoginPage                         - We press the 'Login' button
+[INFO ] 2025-06-28 17:01:24 - saucelabs.LoginTests                        - We check if the error message appears and, if so, if it is correct
+[INFO ] 2025-06-28 17:01:24 - saucelabs.LoginTests                        - Expected error message: 'Username is required'
+[INFO ] 2025-06-28 17:01:24 - saucelabs.LoginTests                        - The error message is correct
+[INFO ] 2025-06-28 17:01:24 - listeners.TestListener                      - Test PASSED: testLoginEmptyUsernameValidPassword
+[INFO ] 2025-06-28 17:01:25 - saucelabs.LoginTests                        - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:01:25 - saucelabs.LoginTests                        - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:01:32 - listeners.TestListener                      - Test STARTED: testLoginValidUsernameEmptyPassword
+[INFO ] 2025-06-28 17:01:33 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:01:33 - saucelabs.HamburgerMenu                     - We press the 'Log In' button
+[INFO ] 2025-06-28 17:01:35 - saucelabs.LoginPage                         - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-28 17:01:37 - saucelabs.LoginPage                         - We fill the 'Password' input field with the 'empty' password
+[INFO ] 2025-06-28 17:01:37 - saucelabs.LoginPage                         - We press the 'Login' button
+[INFO ] 2025-06-28 17:01:39 - saucelabs.LoginTests                        - We check if the error message appears and, if so, if it is correct
+[INFO ] 2025-06-28 17:01:39 - saucelabs.LoginTests                        - Expected error message: 'Password is required'
+[INFO ] 2025-06-28 17:01:39 - saucelabs.LoginTests                        - The error message is correct
+[INFO ] 2025-06-28 17:01:39 - listeners.TestListener                      - Test PASSED: testLoginValidUsernameEmptyPassword
+[INFO ] 2025-06-28 17:01:41 - saucelabs.LoginTests                        - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:01:41 - saucelabs.LoginTests                        - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:01:49 - listeners.TestListener                      - Test STARTED: testLoginValidData
+[INFO ] 2025-06-28 17:01:50 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:01:51 - saucelabs.HamburgerMenu                     - We press the 'Log In' button
+[INFO ] 2025-06-28 17:01:52 - saucelabs.LoginPage                         - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-28 17:01:54 - saucelabs.LoginPage                         - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-28 17:01:54 - saucelabs.LoginPage                         - We press the 'Login' button
+[INFO ] 2025-06-28 17:01:56 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'Products' page
+[INFO ] 2025-06-28 17:01:56 - saucelabs.SauceLabsCommonAssertions         - We are on the 'Products' page
+[INFO ] 2025-06-28 17:01:56 - listeners.TestListener                      - Test PASSED: testLoginValidData
+[INFO ] 2025-06-28 17:01:58 - saucelabs.LoginTests                        - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:01:58 - saucelabs.PageAccessTests                   - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:02:05 - listeners.TestListener                      - Test STARTED: testWebviewPageAccess
+[INFO ] 2025-06-28 17:02:06 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:02:06 - saucelabs.HamburgerMenu                     - We press the 'Webview' button
+[INFO ] 2025-06-28 17:02:09 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'Webview' page
+[INFO ] 2025-06-28 17:02:09 - saucelabs.SauceLabsCommonAssertions         - We are on the 'Webview' page
+[INFO ] 2025-06-28 17:02:09 - listeners.TestListener                      - Test PASSED: testWebviewPageAccess
+[INFO ] 2025-06-28 17:02:11 - saucelabs.PageAccessTests                   - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:02:11 - saucelabs.PageAccessTests                   - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:02:17 - listeners.TestListener                      - Test STARTED: testQrCodeScannerPageAccess
+[INFO ] 2025-06-28 17:02:18 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:02:18 - saucelabs.HamburgerMenu                     - We press the 'QR Code Scanner' button
+[INFO ] 2025-06-28 17:02:22 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'QR Code Scanner' page
+[INFO ] 2025-06-28 17:02:22 - saucelabs.SauceLabsCommonAssertions         - We are on the 'QR Code Scanner' page
+[INFO ] 2025-06-28 17:02:22 - listeners.TestListener                      - Test PASSED: testQrCodeScannerPageAccess
+[INFO ] 2025-06-28 17:02:24 - saucelabs.PageAccessTests                   - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:02:24 - saucelabs.PageAccessTests                   - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:02:31 - listeners.TestListener                      - Test STARTED: testGeoLocationPageAccess
+[INFO ] 2025-06-28 17:02:31 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:02:32 - saucelabs.HamburgerMenu                     - We press the 'Geo Location' button
+[INFO ] 2025-06-28 17:02:35 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'Geo Location' page
+[INFO ] 2025-06-28 17:02:35 - saucelabs.SauceLabsCommonAssertions         - We are on the 'Geo Location' page
+[INFO ] 2025-06-28 17:02:35 - listeners.TestListener                      - Test PASSED: testGeoLocationPageAccess
+[INFO ] 2025-06-28 17:02:36 - saucelabs.PageAccessTests                   - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:02:36 - saucelabs.PageAccessTests                   - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:02:44 - listeners.TestListener                      - Test STARTED: testDrawingPageAccess
+[INFO ] 2025-06-28 17:02:45 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:02:46 - saucelabs.HamburgerMenu                     - We press the 'Drawing' button
+[INFO ] 2025-06-28 17:02:50 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'Drawing' page
+[INFO ] 2025-06-28 17:02:50 - saucelabs.SauceLabsCommonAssertions         - We are on the 'Drawing' page
+[INFO ] 2025-06-28 17:02:50 - listeners.TestListener                      - Test PASSED: testDrawingPageAccess
+[INFO ] 2025-06-28 17:02:52 - saucelabs.PageAccessTests                   - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:02:52 - saucelabs.PageAccessTests                   - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:02:59 - listeners.TestListener                      - Test STARTED: testAboutPageAccess
+[INFO ] 2025-06-28 17:03:00 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:03:00 - saucelabs.HamburgerMenu                     - We press the 'About' button
+[INFO ] 2025-06-28 17:03:03 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'About' page
+[INFO ] 2025-06-28 17:03:03 - saucelabs.SauceLabsCommonAssertions         - We are on the 'About' page
+[INFO ] 2025-06-28 17:03:03 - listeners.TestListener                      - Test PASSED: testAboutPageAccess
+[INFO ] 2025-06-28 17:03:05 - saucelabs.PageAccessTests                   - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:03:05 - saucelabs.PageAccessTests                   - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:03:12 - listeners.TestListener                      - Test STARTED: testFingerPrintPageAccess
+[INFO ] 2025-06-28 17:03:13 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:03:13 - saucelabs.HamburgerMenu                     - We press the 'Finger Print' button
+[ERROR] 2025-06-28 17:03:27 - listeners.TestListener                      - Test FAILED: testFingerPrintPageAccess
+[INFO ] 2025-06-28 17:03:28 - saucelabs.PageAccessTests                   - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:03:28 - saucelabs.PageAccessTests                   - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:03:35 - listeners.TestListener                      - Test STARTED: testApiCallsPageAccess
+[INFO ] 2025-06-28 17:03:36 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:03:36 - saucelabs.HamburgerMenu                     - We press the 'Api Calls' button
+[INFO ] 2025-06-28 17:03:41 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'API calls' page
+[INFO ] 2025-06-28 17:03:41 - saucelabs.SauceLabsCommonAssertions         - We are on the 'API calls' page
+[INFO ] 2025-06-28 17:03:41 - listeners.TestListener                      - Test PASSED: testApiCallsPageAccess
+[INFO ] 2025-06-28 17:03:42 - saucelabs.PageAccessTests                   - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:03:42 - saucelabs.PageAccessTests                   - ------- START: SauceLabs app -------
+[INFO ] 2025-06-28 17:03:49 - listeners.TestListener                      - Test STARTED: testSauceBotVideoPageAccess
+[INFO ] 2025-06-28 17:03:50 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:03:50 - saucelabs.HamburgerMenu                     - We press the 'Sauce Bot Video' button
+[INFO ] 2025-06-28 17:03:54 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'SauceBot - The Beginning' page
+[INFO ] 2025-06-28 17:03:54 - saucelabs.SauceLabsCommonAssertions         - We are on the 'SauceBot - The Beginning' page
+[INFO ] 2025-06-28 17:03:54 - listeners.TestListener                      - Test PASSED: testSauceBotVideoPageAccess
+[INFO ] 2025-06-28 17:03:56 - saucelabs.PageAccessTests                   - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-28 17:03:56 - curahealthcare.LoginTests                   - ------- START: Chrome browser -------
+[INFO ] 2025-06-28 17:04:08 - listeners.TestListener                      - Test STARTED: testLoginValidData
+[INFO ] 2025-06-28 17:04:11 - curahealthcare.CuraCommonSteps              - We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+[INFO ] 2025-06-28 17:04:11 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:04:12 - curahealthcare.HamburgerMenu                - We press the 'Login' button
+[INFO ] 2025-06-28 17:04:13 - curahealthcare.LoginPage                    - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-28 17:04:13 - curahealthcare.LoginPage                    - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-28 17:04:14 - curahealthcare.LoginPage                    - We press the 'Login' button
+[INFO ] 2025-06-28 17:04:16 - curahealthcare.CuraCommonAssertions         - We check if we are on the 'Make Appointment' page
+[INFO ] 2025-06-28 17:04:16 - curahealthcare.CuraCommonAssertions         - We are on the 'Make Appointment' page
+[INFO ] 2025-06-28 17:04:16 - listeners.TestListener                      - Test PASSED: testLoginValidData
+[INFO ] 2025-06-28 17:04:18 - curahealthcare.LoginTests                   - ------- STOPPED: Chrome browser -------
+
+[INFO ] 2025-06-28 17:04:18 - curahealthcare.LoginTests                   - ------- START: Chrome browser -------
+[INFO ] 2025-06-28 17:04:29 - listeners.TestListener                      - Test STARTED: testLoginValidUsernameInvalidPassword
+[INFO ] 2025-06-28 17:04:32 - curahealthcare.LoginTests                   - We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+[INFO ] 2025-06-28 17:04:32 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:04:33 - curahealthcare.HamburgerMenu                - We press the 'Login' button
+[INFO ] 2025-06-28 17:04:34 - curahealthcare.LoginPage                    - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-28 17:04:34 - curahealthcare.LoginPage                    - We fill the 'Password' input field with the 'invalid' password
+[INFO ] 2025-06-28 17:04:35 - curahealthcare.LoginPage                    - We press the 'Login' button
+[INFO ] 2025-06-28 17:04:36 - curahealthcare.LoginTests                   - We check if the error message appears and, if so, if it is correct
+[INFO ] 2025-06-28 17:04:36 - curahealthcare.LoginTests                   - Expected error message: 'Login failed! Please ensure the username and password are valid.'
+[INFO ] 2025-06-28 17:04:36 - curahealthcare.LoginTests                   - The error message is correct
+[INFO ] 2025-06-28 17:04:36 - listeners.TestListener                      - Test PASSED: testLoginValidUsernameInvalidPassword
+[INFO ] 2025-06-28 17:04:38 - curahealthcare.LoginTests                   - ------- STOPPED: Chrome browser -------
+
+[INFO ] 2025-06-28 17:04:38 - curahealthcare.LoginTests                   - ------- START: Chrome browser -------
+[INFO ] 2025-06-28 17:04:47 - listeners.TestListener                      - Test STARTED: testLoginInvalidUsernameValidPassword
+[INFO ] 2025-06-28 17:04:51 - curahealthcare.LoginTests                   - We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+[INFO ] 2025-06-28 17:04:51 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:04:51 - curahealthcare.HamburgerMenu                - We press the 'Login' button
+[INFO ] 2025-06-28 17:04:52 - curahealthcare.LoginPage                    - We fill the 'Username' input field with the 'invalid' username
+[INFO ] 2025-06-28 17:04:53 - curahealthcare.LoginPage                    - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-28 17:04:53 - curahealthcare.LoginPage                    - We press the 'Login' button
+[INFO ] 2025-06-28 17:04:54 - curahealthcare.LoginTests                   - We check if the error message appears and, if so, if it is correct
+[INFO ] 2025-06-28 17:04:55 - curahealthcare.LoginTests                   - Expected error message: 'Login failed! Please ensure the username and password are valid.'
+[INFO ] 2025-06-28 17:04:55 - curahealthcare.LoginTests                   - The error message is correct
+[INFO ] 2025-06-28 17:04:55 - listeners.TestListener                      - Test PASSED: testLoginInvalidUsernameValidPassword
+[INFO ] 2025-06-28 17:04:56 - curahealthcare.LoginTests                   - ------- STOPPED: Chrome browser -------
+
+[INFO ] 2025-06-28 17:04:56 - curahealthcare.LoginTests                   - ------- START: Chrome browser -------
+[INFO ] 2025-06-28 17:05:05 - listeners.TestListener                      - Test STARTED: testLoginEmptyUsernameEmptyPassword
+[INFO ] 2025-06-28 17:05:09 - curahealthcare.LoginTests                   - We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+[INFO ] 2025-06-28 17:05:09 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:05:09 - curahealthcare.HamburgerMenu                - We press the 'Login' button
+[INFO ] 2025-06-28 17:05:10 - curahealthcare.LoginPage                    - We fill the 'Username' input field with the 'empty' username
+[INFO ] 2025-06-28 17:05:11 - curahealthcare.LoginPage                    - We fill the 'Password' input field with the 'empty' password
+[INFO ] 2025-06-28 17:05:11 - curahealthcare.LoginPage                    - We press the 'Login' button
+[INFO ] 2025-06-28 17:05:12 - curahealthcare.LoginTests                   - We check if the error message appears and, if so, if it is correct
+[INFO ] 2025-06-28 17:05:12 - curahealthcare.LoginTests                   - Expected error message: 'Login failed! Please ensure the username and password are valid.'
+[INFO ] 2025-06-28 17:05:12 - curahealthcare.LoginTests                   - The error message is correct
+[INFO ] 2025-06-28 17:05:12 - listeners.TestListener                      - Test PASSED: testLoginEmptyUsernameEmptyPassword
+[INFO ] 2025-06-28 17:05:13 - curahealthcare.LoginTests                   - ------- STOPPED: Chrome browser -------
+
+[INFO ] 2025-06-28 17:05:13 - curahealthcare.PageAccessTests              - ------- START: Chrome browser -------
+[INFO ] 2025-06-28 17:05:23 - listeners.TestListener                      - Test STARTED: testProfilePageAccess
+[INFO ] 2025-06-28 17:05:26 - curahealthcare.CuraCommonSteps              - We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+[INFO ] 2025-06-28 17:05:26 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:05:26 - curahealthcare.HamburgerMenu                - We press the 'Login' button
+[INFO ] 2025-06-28 17:05:27 - curahealthcare.LoginPage                    - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-28 17:05:28 - curahealthcare.LoginPage                    - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-28 17:05:28 - curahealthcare.LoginPage                    - We press the 'Login' button
+[INFO ] 2025-06-28 17:05:30 - utils.BrowserHelper                         - We handle the Chrome password popup window
+[INFO ] 2025-06-28 17:05:33 - common.AppiumActions                        - We scroll up
+[INFO ] 2025-06-28 17:05:33 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:05:34 - curahealthcare.HamburgerMenu                - We press the 'Profile' button
+[INFO ] 2025-06-28 17:05:36 - curahealthcare.CuraCommonAssertions         - We check if we are on the 'Profile' page
+[INFO ] 2025-06-28 17:05:36 - curahealthcare.CuraCommonAssertions         - We are on the 'Profile' page
+[INFO ] 2025-06-28 17:05:36 - listeners.TestListener                      - Test PASSED: testProfilePageAccess
+[INFO ] 2025-06-28 17:05:37 - curahealthcare.PageAccessTests              - ------- STOPPED: Chrome browser -------
+
+[INFO ] 2025-06-28 17:05:37 - curahealthcare.PageAccessTests              - ------- START: Chrome browser -------
+[INFO ] 2025-06-28 17:05:46 - listeners.TestListener                      - Test STARTED: testHistoryPageAccess
+[INFO ] 2025-06-28 17:05:49 - curahealthcare.CuraCommonSteps              - We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+[INFO ] 2025-06-28 17:05:49 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:05:49 - curahealthcare.HamburgerMenu                - We press the 'Login' button
+[INFO ] 2025-06-28 17:05:50 - curahealthcare.LoginPage                    - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-28 17:05:51 - curahealthcare.LoginPage                    - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-28 17:05:52 - curahealthcare.LoginPage                    - We press the 'Login' button
+[INFO ] 2025-06-28 17:05:53 - utils.BrowserHelper                         - We handle the Chrome password popup window
+[INFO ] 2025-06-28 17:05:55 - common.AppiumActions                        - We scroll up
+[INFO ] 2025-06-28 17:05:56 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-28 17:05:57 - curahealthcare.HamburgerMenu                - We press the 'History' button
+[INFO ] 2025-06-28 17:05:59 - curahealthcare.CuraCommonAssertions         - We check if we are on the 'History' page
+[INFO ] 2025-06-28 17:05:59 - curahealthcare.CuraCommonAssertions         - We are on the 'History' page
+[INFO ] 2025-06-28 17:05:59 - listeners.TestListener                      - Test PASSED: testHistoryPageAccess
+[INFO ] 2025-06-28 17:06:00 - curahealthcare.PageAccessTests              - ------- STOPPED: Chrome browser -------
+
+[INFO ] 2025-06-28 17:06:00 - batteryalarm.PageAccessTests                - ------- START: Battery Alarm app -------
+[INFO ] 2025-06-28 17:06:05 - listeners.TestListener                      - Test STARTED: testMainPageAccess
+[INFO ] 2025-06-28 17:06:07 - batteryalarm.PageAccessTests                - We check if we are on the 'Main' page
+[INFO ] 2025-06-28 17:06:07 - batteryalarm.PageAccessTests                - We are on the 'Main' page
+[INFO ] 2025-06-28 17:06:07 - listeners.TestListener                      - Test PASSED: testMainPageAccess
+[INFO ] 2025-06-28 17:06:09 - batteryalarm.PageAccessTests                - ------- STOPPED: Battery Alarm app -------
+
+[INFO ] 2025-06-28 17:06:09 - batteryalarm.PageAccessTests                - ------- START: Battery Alarm app -------
+[INFO ] 2025-06-28 17:06:14 - listeners.TestListener                      - Test STARTED: testInformationPagesAccess
+[INFO ] 2025-06-28 17:06:16 - batteryalarm.MainPage                       - We press the 'information' button
+[INFO ] 2025-06-28 17:06:17 - batteryalarm.PageAccessTests                - We check if we are on the 'Information' page
+[INFO ] 2025-06-28 17:06:17 - batteryalarm.PageAccessTests                - We are on the 'Information' page
+[INFO ] 2025-06-28 17:06:17 - batteryalarm.InformationPage                - We press the 'next page' '>>>' button
+[INFO ] 2025-06-28 17:06:18 - batteryalarm.PageAccessTests                - We check if we are on the 'second Information' page
+[INFO ] 2025-06-28 17:06:18 - batteryalarm.PageAccessTests                - We are on the 'second Information' page
+[INFO ] 2025-06-28 17:06:18 - listeners.TestListener                      - Test PASSED: testInformationPagesAccess
+[INFO ] 2025-06-28 17:06:20 - batteryalarm.PageAccessTests                - ------- STOPPED: Battery Alarm app -------
+
+[INFO ] 2025-06-28 17:06:20 - batteryalarm.PopupAccessTests               - ------- START: Battery Alarm app -------
+[INFO ] 2025-06-28 17:06:25 - listeners.TestListener                      - Test STARTED: testWarningPopupAlertAccess
+[INFO ] 2025-06-28 17:06:27 - batteryalarm.MainPage                       - We press the 'X' '(close app)' button
+[INFO ] 2025-06-28 17:06:28 - batteryalarm.PopupAccessTests               - We check if the 'Warning' popup window appears
+[INFO ] 2025-06-28 17:06:28 - batteryalarm.PopupAccessTests               - The 'Warning' popup window appears
+[INFO ] 2025-06-28 17:06:28 - batteryalarm.MainPage                       - We press the 'NO' button
+[INFO ] 2025-06-28 17:06:39 - batteryalarm.PopupAccessTests               - We check if the 'Warning' popup window disappears
+[INFO ] 2025-06-28 17:06:39 - batteryalarm.PopupAccessTests               - The 'Warning' popup window disappears
+[INFO ] 2025-06-28 17:06:39 - listeners.TestListener                      - Test PASSED: testWarningPopupAlertAccess
+[INFO ] 2025-06-28 17:06:40 - batteryalarm.PopupAccessTests               - ------- STOPPED: Battery Alarm app -------
+
+[INFO ] 2025-06-28 17:06:41 - listeners.TestListener                      - Smoke test(s) run completed
+
+[INFO ] 2025-06-28 17:06:41 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-28 17:06:41 - summaryLogger                               - Smoke
+[INFO ] 2025-06-28 17:06:41 - summaryLogger                               - Total tests run: 22, Passes: 21, Failures: 1, Skips: 0
+[INFO ] 2025-06-28 17:06:41 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-28 17:07:00 - server.NetlifyUploader                      - Report uploaded to Netlify
+
+[INFO ] 2025-06-28 17:07:05 - service.SendGridEmailService                - Email successfully sent with status code: 202

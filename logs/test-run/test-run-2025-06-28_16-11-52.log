@@ -1,0 +1,11 @@
+[INFO ] 2025-06-28 16:11:53 - server.AppiumServerManager                  - Appium Server is already running on port 4723 (external process)
+
+[INFO ] 2025-06-28 16:11:53 - listeners.TestListener                      - Languages and Alarm test(s) run will start
+[INFO ] 2025-06-28 16:11:54 - batteryalarm.LanguagesTests                 - ------- START: Battery Alarm app -------
+[INFO ] 2025-06-28 16:12:00 - listeners.TestListener                      - Test STARTED: testLanguages
+[INFO ] 2025-06-28 16:12:02 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:12:02 - batteryalarm.LanguagesDropdownMenu          - We choose the 'English' option
+[INFO ] 2025-06-28 16:12:04 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:12:04 - batteryalarm.LanguagesTests                 - The displayed language is correct: English
+[INFO ] 2025-06-28 16:12:04 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:12:04 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Czech' option

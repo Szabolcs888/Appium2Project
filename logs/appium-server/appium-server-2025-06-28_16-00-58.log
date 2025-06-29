@@ -1,0 +1,1136 @@
+2025-06-28 16:01:02:162 [Appium] Welcome to Appium v2.19.0
+2025-06-28 16:01:02:168 [Appium] Non-default server args:
+2025-06-28 16:01:02:169 [Appium] {
+  localTimezone: true,
+  loglevel: 'info'
+}
+2025-06-28 16:01:02:170 [Appium] Attempting to load driver uiautomator2...
+2025-06-28 16:01:02:173 [Appium] Attempting to load driver chromium...
+2025-06-28 16:01:06:564 [Appium] Appium REST http interface listener started on http://0.0.0.0:4723
+2025-06-28 16:01:06:573 [Appium] You can provide the following URLs in your client code to connect to this server:
+	http://192.168.56.1:4723/
+	http://192.168.100.168:4723/
+	http://127.0.0.1:4723/ (only accessible from the same host)
+2025-06-28 16:01:06:573 [Appium] Available drivers:
+2025-06-28 16:01:06:574 [Appium]   - uiautomator2@4.2.3 (automationName 'UiAutomator2')
+2025-06-28 16:01:06:574 [Appium]   - chromium@1.5.1 (automationName 'Chromium')
+2025-06-28 16:01:06:574 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+2025-06-28 16:16:11:866 [HTTP] --> POST /session {"capabilities":{"firstMatch":[{"appium:noReset":true,"appium:appActivity":".main","appium:deviceName":"17fad31f","platformName":"ANDROID","appium:automationName":"UIAutomator2","appium:platformVersion":"11","appium:appPackage":"simple.batttery.alarm"}]}}
+2025-06-28 16:16:11:872 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'ANDROID'
+2025-06-28 16:16:11:874 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2025-06-28 16:16:11:875 [Appium] Will require it at C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver
+2025-06-28 16:16:11:879 [AppiumDriver@2142] Appium v2.19.0 creating new AndroidUiautomator2Driver (v4.2.3) session
+2025-06-28 16:16:11:880 [AppiumDriver@2142] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2025-06-28 16:16:11:880 [AppiumDriver@2142] Appium's BaseDriver version is 9.18.0
+2025-06-28 16:16:11:883 [AppiumDriver@2142] AndroidUiautomator2Driver's BaseDriver version is 9.18.0
+2025-06-28 16:16:11:897 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Session created with session id: 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:11:906 [74170df1][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-28 16:16:11:974 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Retrieving device list
+2025-06-28 16:16:12:029 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Looking for a device with Android '11.0.0'
+2025-06-28 16:16:12:030 [74170df1][ADB] Getting device platform version
+2025-06-28 16:16:12:148 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Using device: 17fad31f
+2025-06-28 16:16:12:150 [74170df1][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-28 16:16:12:196 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Starting 'simple.batttery.alarm' directly on the device
+2025-06-28 16:16:12:321 [74170df1][ADB] Getting device platform version
+2025-06-28 16:16:12:442 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Relaxing hidden api policy
+2025-06-28 16:16:12:610 [74170df1][ADB] Using 'aapt2.exe' from 'C:\Users\szigl\AppData\Local\Android\Sdk\build-tools\35.0.0-rc4\aapt2.exe'
+2025-06-28 16:16:13:654 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Server packages are not going to be (re)installed
+2025-06-28 16:16:13:782 [74170df1][ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2025-06-28 16:16:14:162 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Starting UIAutomator2 server 7.5.2
+2025-06-28 16:16:14:163 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Using UIAutomator2 server from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v7.5.2.apk' and test from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2025-06-28 16:16:14:163 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Waiting up to 30000ms for UiAutomator2 to be online...
+2025-06-28 16:16:14:195 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] socket hang up
+2025-06-28 16:16:15:209 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] socket hang up
+2025-06-28 16:16:16:395 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Determined the downstream protocol as 'W3C'
+2025-06-28 16:16:16:647 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Screen already unlocked, doing nothing
+2025-06-28 16:16:16:649 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Starting 'simple.batttery.alarm/.main' and waiting for 'simple.batttery.alarm/.main'
+2025-06-28 16:16:17:680 [74170df1][AppiumDriver@2142] New AndroidUiautomator2Driver session created successfully, session 74170df1-34a0-427b-820f-2a95cbf27329 added to master session list
+2025-06-28 16:16:17:684 [74170df1][HTTP] <-- POST /session 200 5820 ms - 903 
+2025-06-28 16:16:17:818 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/timeouts {"implicit":10000}
+2025-06-28 16:16:17:822 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/timeouts 200 4 ms - 14 
+2025-06-28 16:16:19:482 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:19:484 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:19:495 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:19:545 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 46 ms - 137 
+2025-06-28 16:16:19:551 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:19:613 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 61 ms - 14 
+2025-06-28 16:16:19:619 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:19:620 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:19:627 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"English\")","using":"-android uiautomator"}
+2025-06-28 16:16:20:557 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 930 ms - 137 
+2025-06-28 16:16:20:562 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b6-ffff-ffff0000003a/click {"id":"00000000-0000-03b6-ffff-ffff0000003a"}
+2025-06-28 16:16:21:426 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b6-ffff-ffff0000003a/click 200 865 ms - 14 
+2025-06-28 16:16:21:440 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:21:446 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 4 ms - 22 
+2025-06-28 16:16:21:451 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Voice Warning\")","using":"-android uiautomator"}
+2025-06-28 16:16:21:546 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 95 ms - 137 
+2025-06-28 16:16:21:551 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:21:552 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:21:647 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:21:650 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 96 ms - 76 
+2025-06-28 16:16:21:661 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:21:663 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:21:668 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:21:774 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 97 ms - 137 
+2025-06-28 16:16:21:779 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:21:893 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 115 ms - 14 
+2025-06-28 16:16:21:902 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:21:906 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:21:913 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"čeština\")","using":"-android uiautomator"}
+2025-06-28 16:16:22:813 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 899 ms - 137 
+2025-06-28 16:16:22:817 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b8-ffff-ffff0000004b/click {"id":"00000000-0000-03b8-ffff-ffff0000004b"}
+2025-06-28 16:16:23:541 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b8-ffff-ffff0000004b/click 200 722 ms - 14 
+2025-06-28 16:16:23:547 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:23:548 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:23:554 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Hlasové varování\")","using":"-android uiautomator"}
+2025-06-28 16:16:23:639 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 84 ms - 137 
+2025-06-28 16:16:23:644 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:23:645 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:23:717 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:23:718 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 74 ms - 82 
+2025-06-28 16:16:23:727 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:23:728 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:23:733 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:23:817 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 76 ms - 137 
+2025-06-28 16:16:23:822 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:24:957 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 1134 ms - 14 
+2025-06-28 16:16:24:962 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:24:965 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:24:977 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"dansk\")","using":"-android uiautomator"}
+2025-06-28 16:16:25:035 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 57 ms - 137 
+2025-06-28 16:16:25:041 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b9-ffff-ffff0000005c/click {"id":"00000000-0000-03b9-ffff-ffff0000005c"}
+2025-06-28 16:16:26:222 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b9-ffff-ffff0000005c/click 200 1175 ms - 14 
+2025-06-28 16:16:26:226 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:26:228 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:26:235 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Stemmeadvarsel\")","using":"-android uiautomator"}
+2025-06-28 16:16:26:335 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 98 ms - 137 
+2025-06-28 16:16:26:342 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:26:343 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:26:427 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:26:429 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 87 ms - 77 
+2025-06-28 16:16:26:442 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:26:445 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 5 ms - 22 
+2025-06-28 16:16:26:452 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:26:994 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 541 ms - 137 
+2025-06-28 16:16:27:000 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:27:140 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 134 ms - 14 
+2025-06-28 16:16:27:146 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:27:149 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:27:153 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Deutsch\")","using":"-android uiautomator"}
+2025-06-28 16:16:28:515 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 1359 ms - 137 
+2025-06-28 16:16:28:518 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03bb-ffff-ffff0000006d/click {"id":"00000000-0000-03bb-ffff-ffff0000006d"}
+2025-06-28 16:16:29:214 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03bb-ffff-ffff0000006d/click 200 694 ms - 14 
+2025-06-28 16:16:29:218 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:29:221 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:29:226 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Sprach warnung\")","using":"-android uiautomator"}
+2025-06-28 16:16:29:279 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 51 ms - 137 
+2025-06-28 16:16:29:284 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:29:285 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:29:359 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:29:361 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 75 ms - 77 
+2025-06-28 16:16:29:369 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:29:377 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:29:385 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:29:460 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 77 ms - 137 
+2025-06-28 16:16:29:467 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:29:577 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 109 ms - 14 
+2025-06-28 16:16:29:582 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:29:583 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:29:587 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"español\")","using":"-android uiautomator"}
+2025-06-28 16:16:30:483 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 895 ms - 137 
+2025-06-28 16:16:30:488 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03bd-ffff-ffff0000007e/click {"id":"00000000-0000-03bd-ffff-ffff0000007e"}
+2025-06-28 16:16:32:027 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03bd-ffff-ffff0000007e/click 200 1539 ms - 14 
+2025-06-28 16:16:32:035 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:32:043 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:32:050 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Advert. de voz\")","using":"-android uiautomator"}
+2025-06-28 16:16:32:111 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 57 ms - 137 
+2025-06-28 16:16:32:117 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:32:118 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:32:196 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:32:198 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 81 ms - 77 
+2025-06-28 16:16:32:208 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:32:211 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:32:217 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:32:286 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 70 ms - 137 
+2025-06-28 16:16:32:291 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:32:394 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 103 ms - 14 
+2025-06-28 16:16:32:402 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:32:405 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:32:412 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"français\")","using":"-android uiautomator"}
+2025-06-28 16:16:33:280 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 867 ms - 137 
+2025-06-28 16:16:33:284 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03bf-ffff-ffff0000008f/click {"id":"00000000-0000-03bf-ffff-ffff0000008f"}
+2025-06-28 16:16:34:416 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03bf-ffff-ffff0000008f/click 200 1132 ms - 14 
+2025-06-28 16:16:34:422 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:34:425 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:34:430 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Avertiss. vocal\")","using":"-android uiautomator"}
+2025-06-28 16:16:34:506 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 69 ms - 137 
+2025-06-28 16:16:34:511 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:34:513 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:34:576 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:34:576 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 65 ms - 78 
+2025-06-28 16:16:34:583 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:34:586 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 3 ms - 22 
+2025-06-28 16:16:34:593 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:34:673 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 75 ms - 137 
+2025-06-28 16:16:34:676 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:34:801 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 122 ms - 14 
+2025-06-28 16:16:34:813 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:34:816 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:34:827 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Indonesia\")","using":"-android uiautomator"}
+2025-06-28 16:16:35:951 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 1124 ms - 137 
+2025-06-28 16:16:35:957 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c0-ffff-ffff000000a0/click {"id":"00000000-0000-03c0-ffff-ffff000000a0"}
+2025-06-28 16:16:37:072 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c0-ffff-ffff000000a0/click 200 1115 ms - 14 
+2025-06-28 16:16:37:079 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:37:081 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:37:089 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Pering. Suara\")","using":"-android uiautomator"}
+2025-06-28 16:16:37:173 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 80 ms - 137 
+2025-06-28 16:16:37:179 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:37:179 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:37:281 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:37:282 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 104 ms - 76 
+2025-06-28 16:16:37:289 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:37:301 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:37:307 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:37:381 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 76 ms - 137 
+2025-06-28 16:16:37:385 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:37:493 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 107 ms - 14 
+2025-06-28 16:16:37:500 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:37:505 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:37:509 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"italiano\")","using":"-android uiautomator"}
+2025-06-28 16:16:38:409 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 900 ms - 137 
+2025-06-28 16:16:38:414 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c2-ffff-ffff000000b1/click {"id":"00000000-0000-03c2-ffff-ffff000000b1"}
+2025-06-28 16:16:39:724 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c2-ffff-ffff000000b1/click 200 1309 ms - 14 
+2025-06-28 16:16:39:729 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:39:735 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:39:741 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"//android.widget.CheckBox[@text=\"Avviso vocale\"]","using":"xpath"}
+2025-06-28 16:16:40:285 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 545 ms - 137 
+2025-06-28 16:16:40:291 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:40:292 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:40:322 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:40:324 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 32 ms - 76 
+2025-06-28 16:16:40:330 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:40:332 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:40:337 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:40:391 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 53 ms - 137 
+2025-06-28 16:16:40:396 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:40:491 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 95 ms - 14 
+2025-06-28 16:16:40:497 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:40:501 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:40:506 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"magyar\")","using":"-android uiautomator"}
+2025-06-28 16:16:41:428 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 922 ms - 137 
+2025-06-28 16:16:41:435 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c4-ffff-ffff000000c2/click {"id":"00000000-0000-03c4-ffff-ffff000000c2"}
+2025-06-28 16:16:42:578 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c4-ffff-ffff000000c2/click 200 1133 ms - 14 
+2025-06-28 16:16:42:582 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:42:585 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:42:592 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"//android.widget.CheckBox[@text=\"Hang figyelmeztetés\"]","using":"xpath"}
+2025-06-28 16:16:42:790 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 197 ms - 137 
+2025-06-28 16:16:42:794 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:42:796 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:42:831 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:42:835 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 38 ms - 83 
+2025-06-28 16:16:42:842 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:42:847 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:42:849 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:43:488 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 638 ms - 137 
+2025-06-28 16:16:43:493 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:43:599 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 104 ms - 14 
+2025-06-28 16:16:43:609 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:43:610 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:43:615 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Nederlands\")","using":"-android uiautomator"}
+2025-06-28 16:16:44:501 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 884 ms - 137 
+2025-06-28 16:16:44:508 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c6-ffff-ffff000000d3/click {"id":"00000000-0000-03c6-ffff-ffff000000d3"}
+2025-06-28 16:16:45:305 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c6-ffff-ffff000000d3/click 200 797 ms - 14 
+2025-06-28 16:16:45:312 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:45:314 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:45:318 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"//android.widget.CheckBox[@text=\"Gesproken waarsch.\"]","using":"xpath"}
+2025-06-28 16:16:45:473 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 151 ms - 137 
+2025-06-28 16:16:45:478 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:45:479 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:46:100 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:46:102 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 623 ms - 81 
+2025-06-28 16:16:46:114 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:46:119 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 3 ms - 22 
+2025-06-28 16:16:46:125 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:46:195 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 70 ms - 137 
+2025-06-28 16:16:46:201 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:46:308 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 101 ms - 14 
+2025-06-28 16:16:46:312 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:46:315 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:46:323 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"polski\")","using":"-android uiautomator"}
+2025-06-28 16:16:47:213 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 890 ms - 137 
+2025-06-28 16:16:47:218 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c8-ffff-ffff000000e4/click {"id":"00000000-0000-03c8-ffff-ffff000000e4"}
+2025-06-28 16:16:48:451 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c8-ffff-ffff000000e4/click 200 1232 ms - 14 
+2025-06-28 16:16:48:460 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:48:462 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:48:467 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Alert głosowe\")","using":"-android uiautomator"}
+2025-06-28 16:16:48:543 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 75 ms - 137 
+2025-06-28 16:16:48:550 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:48:551 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:48:624 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:48:626 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 75 ms - 77 
+2025-06-28 16:16:48:634 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:48:637 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:48:646 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:48:723 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 79 ms - 137 
+2025-06-28 16:16:48:728 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:48:839 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 108 ms - 14 
+2025-06-28 16:16:48:846 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:48:848 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:48:854 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"português\")","using":"-android uiautomator"}
+2025-06-28 16:16:49:825 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 972 ms - 137 
+2025-06-28 16:16:49:830 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c9-ffff-ffff000000f5/click {"id":"00000000-0000-03c9-ffff-ffff000000f5"}
+2025-06-28 16:16:51:017 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03c9-ffff-ffff000000f5/click 200 1183 ms - 14 
+2025-06-28 16:16:51:022 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:51:024 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:51:028 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"//android.widget.CheckBox[@text=\"Aviso de voz\"]","using":"xpath"}
+2025-06-28 16:16:51:235 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 203 ms - 137 
+2025-06-28 16:16:51:249 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:51:251 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:51:283 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:51:285 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 35 ms - 75 
+2025-06-28 16:16:51:292 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:51:294 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:51:300 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:51:372 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 70 ms - 137 
+2025-06-28 16:16:51:376 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:51:480 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 104 ms - 14 
+2025-06-28 16:16:51:488 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:51:489 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:51:493 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"română\")","using":"-android uiautomator"}
+2025-06-28 16:16:52:468 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 972 ms - 137 
+2025-06-28 16:16:52:472 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03cb-ffff-ffff00000106/click {"id":"00000000-0000-03cb-ffff-ffff00000106"}
+2025-06-28 16:16:54:248 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03cb-ffff-ffff00000106/click 200 1776 ms - 14 
+2025-06-28 16:16:54:255 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:54:257 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:54:261 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Avert. vocal\")","using":"-android uiautomator"}
+2025-06-28 16:16:54:338 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 74 ms - 137 
+2025-06-28 16:16:54:342 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:54:343 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:54:418 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:54:420 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 76 ms - 75 
+2025-06-28 16:16:54:428 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:54:431 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:54:437 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:54:522 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 86 ms - 137 
+2025-06-28 16:16:54:527 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:54:613 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 86 ms - 14 
+2025-06-28 16:16:54:620 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:54:622 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:54:626 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"slovenčina\")","using":"-android uiautomator"}
+2025-06-28 16:16:55:527 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 901 ms - 137 
+2025-06-28 16:16:55:533 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03cd-ffff-ffff00000117/click {"id":"00000000-0000-03cd-ffff-ffff00000117"}
+2025-06-28 16:16:56:656 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03cd-ffff-ffff00000117/click 200 1120 ms - 14 
+2025-06-28 16:16:56:663 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:56:668 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:56:674 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Hlasové varov.\")","using":"-android uiautomator"}
+2025-06-28 16:16:56:750 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 62 ms - 137 
+2025-06-28 16:16:56:755 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:56:757 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:56:820 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:56:823 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 67 ms - 78 
+2025-06-28 16:16:56:832 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:56:843 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 3 ms - 22 
+2025-06-28 16:16:56:845 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:56:923 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 75 ms - 137 
+2025-06-28 16:16:56:927 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:57:040 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 112 ms - 14 
+2025-06-28 16:16:57:049 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:57:058 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 3 ms - 22 
+2025-06-28 16:16:57:060 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"svenska\")","using":"-android uiautomator"}
+2025-06-28 16:16:57:970 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 909 ms - 137 
+2025-06-28 16:16:57:975 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03cf-ffff-ffff00000128/click {"id":"00000000-0000-03cf-ffff-ffff00000128"}
+2025-06-28 16:16:58:684 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03cf-ffff-ffff00000128/click 200 709 ms - 14 
+2025-06-28 16:16:58:690 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:58:691 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:16:58:696 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Röstvarning\")","using":"-android uiautomator"}
+2025-06-28 16:16:58:763 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 67 ms - 137 
+2025-06-28 16:16:58:771 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:16:58:772 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:16:58:845 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:16:58:846 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 75 ms - 75 
+2025-06-28 16:16:58:854 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:58:857 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 3 ms - 22 
+2025-06-28 16:16:58:862 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:16:58:939 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 73 ms - 137 
+2025-06-28 16:16:58:942 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:16:59:078 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 132 ms - 14 
+2025-06-28 16:16:59:085 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:16:59:087 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:16:59:091 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"srpski\")","using":"-android uiautomator"}
+2025-06-28 16:17:00:181 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 1085 ms - 137 
+2025-06-28 16:17:00:186 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d0-ffff-ffff00000139/click {"id":"00000000-0000-03d0-ffff-ffff00000139"}
+2025-06-28 16:17:01:439 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d0-ffff-ffff00000139/click 200 1252 ms - 14 
+2025-06-28 16:17:01:445 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:01:447 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:01:450 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Glasovno upozorenje\")","using":"-android uiautomator"}
+2025-06-28 16:17:01:510 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 59 ms - 137 
+2025-06-28 16:17:01:516 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:01:516 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:01:576 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:01:578 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 62 ms - 82 
+2025-06-28 16:17:01:586 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:01:589 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:01:594 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:01:662 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 65 ms - 137 
+2025-06-28 16:17:01:665 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:01:772 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 107 ms - 14 
+2025-06-28 16:17:01:779 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:01:781 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:01:786 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Suomi\")","using":"-android uiautomator"}
+2025-06-28 16:17:02:655 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 869 ms - 137 
+2025-06-28 16:17:02:659 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d2-ffff-ffff0000014a/click {"id":"00000000-0000-03d2-ffff-ffff0000014a"}
+2025-06-28 16:17:03:713 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d2-ffff-ffff0000014a/click 200 1053 ms - 14 
+2025-06-28 16:17:03:719 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:03:721 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:03:727 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"//android.widget.CheckBox[@text=\"Ihmisen ääni Varoitus\"]","using":"xpath"}
+2025-06-28 16:17:03:861 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 134 ms - 137 
+2025-06-28 16:17:03:873 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:03:875 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:03:911 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:03:914 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 42 ms - 86 
+2025-06-28 16:17:03:920 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:03:922 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:03:928 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:03:989 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 59 ms - 137 
+2025-06-28 16:17:03:998 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:04:109 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 113 ms - 14 
+2025-06-28 16:17:04:116 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:04:118 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:17:04:123 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Türkçe\")","using":"-android uiautomator"}
+2025-06-28 16:17:05:028 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 905 ms - 137 
+2025-06-28 16:17:05:034 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d4-ffff-ffff0000015b/click {"id":"00000000-0000-03d4-ffff-ffff0000015b"}
+2025-06-28 16:17:05:743 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d4-ffff-ffff0000015b/click 200 709 ms - 14 
+2025-06-28 16:17:05:750 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:05:751 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:17:05:756 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"//android.widget.CheckBox[@text=\"Sesli uyarı\"]","using":"xpath"}
+2025-06-28 16:17:05:912 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 151 ms - 137 
+2025-06-28 16:17:05:916 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:05:917 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:05:940 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:05:943 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 25 ms - 75 
+2025-06-28 16:17:05:950 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:05:952 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:17:05:956 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:06:025 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 63 ms - 137 
+2025-06-28 16:17:06:027 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:06:122 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 92 ms - 14 
+2025-06-28 16:17:06:128 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:06:129 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:17:06:136 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"български\")","using":"-android uiautomator"}
+2025-06-28 16:17:07:216 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 1078 ms - 137 
+2025-06-28 16:17:07:222 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d5-ffff-ffff0000016c/click {"id":"00000000-0000-03d5-ffff-ffff0000016c"}
+2025-06-28 16:17:08:477 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d5-ffff-ffff0000016c/click 200 1246 ms - 14 
+2025-06-28 16:17:08:481 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:08:484 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:08:491 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"//android.widget.CheckBox[@text=\"Гласово пред.\"]","using":"xpath"}
+2025-06-28 16:17:08:673 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 180 ms - 137 
+2025-06-28 16:17:08:681 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:08:681 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:08:712 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:08:713 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 33 ms - 87 
+2025-06-28 16:17:08:721 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:08:723 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:08:728 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:08:793 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 65 ms - 137 
+2025-06-28 16:17:08:798 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:08:907 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 106 ms - 14 
+2025-06-28 16:17:08:913 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:08:916 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:08:919 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"русский\")","using":"-android uiautomator"}
+2025-06-28 16:17:09:828 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 908 ms - 137 
+2025-06-28 16:17:09:835 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d7-ffff-ffff0000017d/click {"id":"00000000-0000-03d7-ffff-ffff0000017d"}
+2025-06-28 16:17:10:741 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d7-ffff-ffff0000017d/click 200 904 ms - 14 
+2025-06-28 16:17:10:750 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:10:753 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:10:759 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Голосовое пред.\")","using":"-android uiautomator"}
+2025-06-28 16:17:10:812 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 49 ms - 137 
+2025-06-28 16:17:10:818 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:10:818 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:10:903 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:10:907 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 87 ms - 91 
+2025-06-28 16:17:10:914 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:10:917 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:10:921 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:10:993 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 73 ms - 137 
+2025-06-28 16:17:11:001 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:11:117 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 117 ms - 14 
+2025-06-28 16:17:11:123 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:11:126 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:17:11:130 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Українська\")","using":"-android uiautomator"}
+2025-06-28 16:17:12:026 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 897 ms - 137 
+2025-06-28 16:17:12:029 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d9-ffff-ffff0000018e/click {"id":"00000000-0000-03d9-ffff-ffff0000018e"}
+2025-06-28 16:17:12:720 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03d9-ffff-ffff0000018e/click 200 690 ms - 14 
+2025-06-28 16:17:12:727 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:12:729 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:12:737 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"//android.widget.CheckBox[@text=\"Голосове сповіщ.\"]","using":"xpath"}
+2025-06-28 16:17:12:890 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 152 ms - 137 
+2025-06-28 16:17:12:895 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:12:896 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:13:483 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:13:485 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 589 ms - 93 
+2025-06-28 16:17:13:492 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:13:494 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:13:501 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:13:583 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 83 ms - 137 
+2025-06-28 16:17:13:589 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:14:360 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 771 ms - 14 
+2025-06-28 16:17:14:372 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:14:376 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 3 ms - 22 
+2025-06-28 16:17:14:381 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Ελληνικά\")","using":"-android uiautomator"}
+2025-06-28 16:17:15:256 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 876 ms - 137 
+2025-06-28 16:17:15:261 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03db-ffff-ffff0000019f/click {"id":"00000000-0000-03db-ffff-ffff0000019f"}
+2025-06-28 16:17:15:980 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03db-ffff-ffff0000019f/click 200 717 ms - 14 
+2025-06-28 16:17:15:985 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:15:987 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:15:992 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Φωνητική ειδοποίηση\")","using":"-android uiautomator"}
+2025-06-28 16:17:16:059 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 67 ms - 137 
+2025-06-28 16:17:16:067 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:16:068 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:16:134 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:16:136 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 69 ms - 100 
+2025-06-28 16:17:16:147 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:16:148 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:16:152 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:16:213 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 60 ms - 137 
+2025-06-28 16:17:16:217 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:16:347 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 129 ms - 14 
+2025-06-28 16:17:16:354 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:16:357 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:16:362 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"Tiếng việt\")","using":"-android uiautomator"}
+2025-06-28 16:17:17:805 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 1440 ms - 137 
+2025-06-28 16:17:17:810 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03dc-ffff-ffff000001b0/click {"id":"00000000-0000-03dc-ffff-ffff000001b0"}
+2025-06-28 16:17:18:527 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03dc-ffff-ffff000001b0/click 200 718 ms - 14 
+2025-06-28 16:17:18:538 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:18:541 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:18:545 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"//android.widget.CheckBox[@text=\"Cảnh báo bằng giọng nói\"]","using":"xpath"}
+2025-06-28 16:17:18:680 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 134 ms - 137 
+2025-06-28 16:17:18:688 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:18:688 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:18:720 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:18:722 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 34 ms - 94 
+2025-06-28 16:17:18:729 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:18:732 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:18:738 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:18:821 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 83 ms - 137 
+2025-06-28 16:17:18:825 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:18:932 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 106 ms - 14 
+2025-06-28 16:17:18:942 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:18:944 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:18:949 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"日本語\")","using":"-android uiautomator"}
+2025-06-28 16:17:19:850 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 901 ms - 137 
+2025-06-28 16:17:19:855 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03de-ffff-ffff000001c1/click {"id":"00000000-0000-03de-ffff-ffff000001c1"}
+2025-06-28 16:17:21:308 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03de-ffff-ffff000001c1/click 200 1453 ms - 14 
+2025-06-28 16:17:21:316 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:21:320 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:21:326 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"音声警告\")","using":"-android uiautomator"}
+2025-06-28 16:17:21:381 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 55 ms - 137 
+2025-06-28 16:17:21:389 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:21:389 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:21:477 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:21:477 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 88 ms - 75 
+2025-06-28 16:17:21:484 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:21:486 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:17:21:490 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:21:554 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 63 ms - 137 
+2025-06-28 16:17:21:561 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:21:659 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 99 ms - 14 
+2025-06-28 16:17:21:669 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:21:675 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 3 ms - 22 
+2025-06-28 16:17:21:678 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"中文\")","using":"-android uiautomator"}
+2025-06-28 16:17:22:592 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 913 ms - 137 
+2025-06-28 16:17:22:596 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e0-ffff-ffff000001d2/click {"id":"00000000-0000-03e0-ffff-ffff000001d2"}
+2025-06-28 16:17:23:715 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e0-ffff-ffff000001d2/click 200 1117 ms - 14 
+2025-06-28 16:17:23:724 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:23:726 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:23:732 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"语音警告\")","using":"-android uiautomator"}
+2025-06-28 16:17:23:800 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 67 ms - 137 
+2025-06-28 16:17:23:806 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:23:807 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:23:870 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:23:872 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 65 ms - 75 
+2025-06-28 16:17:23:880 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:23:882 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:17:23:885 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:23:955 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 70 ms - 137 
+2025-06-28 16:17:23:962 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:24:055 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 94 ms - 14 
+2025-06-28 16:17:24:062 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:24:066 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:24:072 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"한국어\")","using":"-android uiautomator"}
+2025-06-28 16:17:25:006 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 933 ms - 137 
+2025-06-28 16:17:25:013 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e1-ffff-ffff000001e3/click {"id":"00000000-0000-03e1-ffff-ffff000001e3"}
+2025-06-28 16:17:26:166 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e1-ffff-ffff000001e3/click 200 1152 ms - 14 
+2025-06-28 16:17:26:174 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:26:177 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:26:181 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"음성 경고\")","using":"-android uiautomator"}
+2025-06-28 16:17:26:255 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 72 ms - 137 
+2025-06-28 16:17:26:263 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:26:265 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:26:333 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:26:336 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 73 ms - 76 
+2025-06-28 16:17:26:344 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:26:346 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:26:351 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:26:419 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 69 ms - 137 
+2025-06-28 16:17:26:424 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:26:548 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 124 ms - 14 
+2025-06-28 16:17:26:556 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:26:558 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:17:26:565 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"ไทย\")","using":"-android uiautomator"}
+2025-06-28 16:17:27:461 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 897 ms - 137 
+2025-06-28 16:17:27:472 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e3-ffff-ffff000001f4/click {"id":"00000000-0000-03e3-ffff-ffff000001f4"}
+2025-06-28 16:17:28:491 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e3-ffff-ffff000001f4/click 200 1022 ms - 14 
+2025-06-28 16:17:28:501 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:28:506 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:28:513 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"คำเตือนด้วยเสียง\")","using":"-android uiautomator"}
+2025-06-28 16:17:28:544 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 33 ms - 137 
+2025-06-28 16:17:28:552 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:28:552 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:28:580 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:28:583 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 30 ms - 111 
+2025-06-28 16:17:28:590 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:28:592 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:28:604 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:28:642 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 40 ms - 137 
+2025-06-28 16:17:28:646 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:28:739 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 87 ms - 14 
+2025-06-28 16:17:28:747 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:28:751 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:28:758 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"عربي\")","using":"-android uiautomator"}
+2025-06-28 16:17:29:612 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 855 ms - 137 
+2025-06-28 16:17:29:616 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e5-ffff-ffff00000205/click {"id":"00000000-0000-03e5-ffff-ffff00000205"}
+2025-06-28 16:17:30:741 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e5-ffff-ffff00000205/click 200 1124 ms - 14 
+2025-06-28 16:17:30:750 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:30:751 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 1 ms - 22 
+2025-06-28 16:17:30:756 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"//android.widget.CheckBox[@text=\"تحذیر بالصوت\"]","using":"xpath"}
+2025-06-28 16:17:30:848 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 90 ms - 137 
+2025-06-28 16:17:30:854 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:30:856 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:30:871 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:30:875 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 18 ms - 86 
+2025-06-28 16:17:30:881 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:30:883 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:30:887 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:30:918 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 30 ms - 137 
+2025-06-28 16:17:30:924 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:31:022 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 97 ms - 14 
+2025-06-28 16:17:31:031 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:31:042 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 3 ms - 22 
+2025-06-28 16:17:31:044 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"فارسی\")","using":"-android uiautomator"}
+2025-06-28 16:17:32:002 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 956 ms - 137 
+2025-06-28 16:17:32:006 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e6-ffff-ffff00000216/click {"id":"00000000-0000-03e6-ffff-ffff00000216"}
+2025-06-28 16:17:32:762 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e6-ffff-ffff00000216/click 200 755 ms - 14 
+2025-06-28 16:17:32:771 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:32:774 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:32:780 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"هشدار صوتی\")","using":"-android uiautomator"}
+2025-06-28 16:17:32:876 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 97 ms - 137 
+2025-06-28 16:17:32:883 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:32:883 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:33:511 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:33:512 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 629 ms - 82 
+2025-06-28 16:17:33:519 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:33:521 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:33:525 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:33:597 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 70 ms - 137 
+2025-06-28 16:17:33:601 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:33:692 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 91 ms - 14 
+2025-06-28 16:17:33:701 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:33:705 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:33:708 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"עִברִית\")","using":"-android uiautomator"}
+2025-06-28 16:17:34:657 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 949 ms - 137 
+2025-06-28 16:17:34:672 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e8-ffff-ffff00000227/click {"id":"00000000-0000-03e8-ffff-ffff00000227"}
+2025-06-28 16:17:36:024 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03e8-ffff-ffff00000227/click 200 1351 ms - 14 
+2025-06-28 16:17:36:039 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:36:047 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 7 ms - 22 
+2025-06-28 16:17:36:050 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"//android.widget.CheckBox[@text=\"אזהרה קולית\"]","using":"xpath"}
+2025-06-28 16:17:36:191 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 140 ms - 137 
+2025-06-28 16:17:36:200 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:36:200 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:36:235 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:36:238 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 38 ms - 84 
+2025-06-28 16:17:36:248 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:36:251 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:36:257 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:36:308 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 51 ms - 137 
+2025-06-28 16:17:36:313 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click {"id":"00000000-0000-03b5-ffff-ffff00000019"}
+2025-06-28 16:17:36:433 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff00000019/click 200 120 ms - 14 
+2025-06-28 16:17:36:444 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:36:445 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:36:450 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"हिन्दी\")","using":"-android uiautomator"}
+2025-06-28 16:17:37:343 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 892 ms - 137 
+2025-06-28 16:17:37:348 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03ea-ffff-ffff00000238/click {"id":"00000000-0000-03ea-ffff-ffff00000238"}
+2025-06-28 16:17:38:879 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03ea-ffff-ffff00000238/click 200 1517 ms - 14 
+2025-06-28 16:17:38:886 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context {}
+2025-06-28 16:17:38:890 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/context 200 2 ms - 22 
+2025-06-28 16:17:38:894 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element {"value":"new UiSelector().text(\"आवाज चेतावनी\")","using":"-android uiautomator"}
+2025-06-28 16:17:38:949 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/element 200 48 ms - 137 
+2025-06-28 16:17:38:955 [74170df1][HTTP] --> GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text {}
+2025-06-28 16:17:38:956 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:39:065 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Replacing sessionId 9646fe15-d87f-4b5a-906d-248d19b7103a with 74170df1-34a0-427b-820f-2a95cbf27329
+2025-06-28 16:17:39:078 [74170df1][HTTP] <-- GET /session/74170df1-34a0-427b-820f-2a95cbf27329/element/00000000-0000-03b5-ffff-ffff0000000e/text 200 111 ms - 97 
+2025-06-28 16:17:39:107 [74170df1][HTTP] --> POST /session/74170df1-34a0-427b-820f-2a95cbf27329/execute/sync {"args":[{"appId":"simple.batttery.alarm","bundleId":"simple.batttery.alarm"}],"script":"mobile: terminateApp"}
+2025-06-28 16:17:39:114 [74170df1][BaseDriver] The following script arguments are not known and will be ignored: bundleId
+2025-06-28 16:17:39:117 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Terminating 'simple.batttery.alarm'
+2025-06-28 16:17:39:521 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Querying the state of 'simple.batttery.alarm'
+2025-06-28 16:17:39:789 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] 'simple.batttery.alarm' has been successfully terminated
+2025-06-28 16:17:39:792 [74170df1][HTTP] <-- POST /session/74170df1-34a0-427b-820f-2a95cbf27329/execute/sync 200 688 ms - 14 
+2025-06-28 16:17:39:805 [74170df1][HTTP] --> DELETE /session/74170df1-34a0-427b-820f-2a95cbf27329 {}
+2025-06-28 16:17:39:808 [74170df1][AppiumDriver@2142] Removing session 74170df1-34a0-427b-820f-2a95cbf27329 from our master session list
+2025-06-28 16:17:40:317 [74170df1][38;5;-40m[AndroidUiautomator2Driver@6e64] Restoring hidden api policy to the device default configuration
+2025-06-28 16:17:40:561 [74170df1][HTTP] <-- DELETE /session/74170df1-34a0-427b-820f-2a95cbf27329 200 757 ms - 14 
+2025-06-28 16:17:40:601 [HTTP] --> POST /session {"capabilities":{"firstMatch":[{"appium:noReset":true,"appium:appActivity":".main","appium:deviceName":"17fad31f","platformName":"ANDROID","appium:automationName":"UIAutomator2","appium:platformVersion":"11","appium:appPackage":"simple.batttery.alarm"}]}}
+2025-06-28 16:17:40:603 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'ANDROID'
+2025-06-28 16:17:40:605 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2025-06-28 16:17:40:605 [Appium] Will require it at C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver
+2025-06-28 16:17:40:606 [AppiumDriver@2142] Appium v2.19.0 creating new AndroidUiautomator2Driver (v4.2.3) session
+2025-06-28 16:17:40:607 [AppiumDriver@2142] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2025-06-28 16:17:40:607 [AppiumDriver@2142] Appium's BaseDriver version is 9.18.0
+2025-06-28 16:17:40:608 [AppiumDriver@2142] AndroidUiautomator2Driver's BaseDriver version is 9.18.0
+2025-06-28 16:17:40:617 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Session created with session id: 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:40:620 [893a9066][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-28 16:17:40:677 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Retrieving device list
+2025-06-28 16:17:40:729 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Looking for a device with Android '11.0.0'
+2025-06-28 16:17:40:731 [893a9066][ADB] Getting device platform version
+2025-06-28 16:17:40:850 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Using device: 17fad31f
+2025-06-28 16:17:40:852 [893a9066][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-28 16:17:40:913 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Starting 'simple.batttery.alarm' directly on the device
+2025-06-28 16:17:41:040 [893a9066][ADB] Getting device platform version
+2025-06-28 16:17:41:152 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Relaxing hidden api policy
+2025-06-28 16:17:41:314 [893a9066][ADB] Using 'aapt2.exe' from 'C:\Users\szigl\AppData\Local\Android\Sdk\build-tools\35.0.0-rc4\aapt2.exe'
+2025-06-28 16:17:42:479 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Server packages are not going to be (re)installed
+2025-06-28 16:17:42:626 [893a9066][ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2025-06-28 16:17:43:023 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Starting UIAutomator2 server 7.5.2
+2025-06-28 16:17:43:024 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Using UIAutomator2 server from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v7.5.2.apk' and test from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2025-06-28 16:17:43:025 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Waiting up to 30000ms for UiAutomator2 to be online...
+2025-06-28 16:17:43:053 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] socket hang up
+2025-06-28 16:17:44:070 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] socket hang up
+2025-06-28 16:17:45:247 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Determined the downstream protocol as 'W3C'
+2025-06-28 16:17:45:431 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Screen already unlocked, doing nothing
+2025-06-28 16:17:45:432 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Starting 'simple.batttery.alarm/.main' and waiting for 'simple.batttery.alarm/.main'
+2025-06-28 16:17:46:557 [893a9066][AppiumDriver@2142] New AndroidUiautomator2Driver session created successfully, session 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5 added to master session list
+2025-06-28 16:17:46:571 [893a9066][HTTP] <-- POST /session 200 5958 ms - 903 
+2025-06-28 16:17:46:587 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/timeouts {"implicit":10000}
+2025-06-28 16:17:46:590 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/timeouts 200 3 ms - 14 
+2025-06-28 16:17:46:888 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:46:894 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 9 ms - 22 
+2025-06-28 16:17:46:899 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().resourceId(\"android:id/text1\")","using":"-android uiautomator"}
+2025-06-28 16:17:48:023 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 1125 ms - 137 
+2025-06-28 16:17:48:027 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000036/text {}
+2025-06-28 16:17:48:028 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:48:069 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:48:073 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000036/text 200 43 ms - 81 
+2025-06-28 16:17:48:077 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:48:079 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:17:48:083 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().resourceId(\"android:id/text1\")","using":"-android uiautomator"}
+2025-06-28 16:17:48:109 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 26 ms - 137 
+2025-06-28 16:17:48:114 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000036/text {}
+2025-06-28 16:17:48:115 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:48:141 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:48:146 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000036/text 200 28 ms - 81 
+2025-06-28 16:17:48:149 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:48:149 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:17:48:155 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:48:184 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 29 ms - 137 
+2025-06-28 16:17:48:188 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000019/click {"id":"00000000-0000-03f2-ffff-ffff00000019"}
+2025-06-28 16:17:48:256 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000019/click 200 68 ms - 14 
+2025-06-28 16:17:48:283 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/actions {"actions":[{"id":"finger","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":112,"y":700,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":300,"x":112,"y":1900,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2025-06-28 16:17:48:656 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/actions 200 369 ms - 14 
+2025-06-28 16:17:48:665 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/actions {"actions":[{"id":"finger","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":112,"y":700,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":300,"x":112,"y":1900,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2025-06-28 16:17:49:429 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/actions 200 766 ms - 14 
+2025-06-28 16:17:49:440 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:49:444 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 5 ms - 22 
+2025-06-28 16:17:49:449 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().resourceId(\"android:id/text1\")","using":"-android uiautomator"}
+2025-06-28 16:17:49:743 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 294 ms - 137 
+2025-06-28 16:17:49:747 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000047/text {}
+2025-06-28 16:17:49:748 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:49:780 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:49:781 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000047/text 200 34 ms - 73 
+2025-06-28 16:17:49:787 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:49:789 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:17:49:793 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().resourceId(\"android:id/text1\")","using":"-android uiautomator"}
+2025-06-28 16:17:49:822 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 28 ms - 137 
+2025-06-28 16:17:49:826 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000047/text {}
+2025-06-28 16:17:49:826 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:49:854 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:49:856 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000047/text 200 30 ms - 73 
+2025-06-28 16:17:49:860 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:49:867 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:17:49:870 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"android.widget.Spinner","using":"class name"}
+2025-06-28 16:17:49:913 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 33 ms - 137 
+2025-06-28 16:17:49:915 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000019/click {"id":"00000000-0000-03f2-ffff-ffff00000019"}
+2025-06-28 16:17:50:028 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000019/click 200 112 ms - 14 
+2025-06-28 16:17:50:038 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/actions {"actions":[{"id":"finger","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":112,"y":700,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":300,"x":112,"y":1900,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2025-06-28 16:17:50:409 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/actions 200 367 ms - 14 
+2025-06-28 16:17:50:418 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/actions {"actions":[{"id":"finger","type":"pointer","parameters":{"pointerType":"touch"},"actions":[{"duration":0,"x":112,"y":700,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerDown"},{"duration":300,"x":112,"y":1900,"type":"pointerMove","origin":"viewport"},{"button":0,"type":"pointerUp"}]}]}
+2025-06-28 16:17:50:783 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/actions 200 367 ms - 14 
+2025-06-28 16:17:50:790 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:50:793 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:17:50:800 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().resourceId(\"android:id/text1\")","using":"-android uiautomator"}
+2025-06-28 16:17:51:338 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 538 ms - 137 
+2025-06-28 16:17:51:342 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f6-ffff-ffff0000005b/text {}
+2025-06-28 16:17:51:344 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:51:383 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:51:386 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f6-ffff-ffff0000005b/text 200 42 ms - 70 
+2025-06-28 16:17:51:391 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:51:393 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:17:51:397 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"English\")","using":"-android uiautomator"}
+2025-06-28 16:17:51:426 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 27 ms - 137 
+2025-06-28 16:17:51:433 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f6-ffff-ffff0000005b/click {"id":"00000000-0000-03f6-ffff-ffff0000005b"}
+2025-06-28 16:17:52:299 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f6-ffff-ffff0000005b/click 200 867 ms - 14 
+2025-06-28 16:17:52:307 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:52:309 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:17:52:315 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:17:53:400 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 1083 ms - 1291 
+2025-06-28 16:17:53:412 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000018/text {}
+2025-06-28 16:17:53:413 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:53:447 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:53:449 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000018/text 200 37 ms - 66 
+2025-06-28 16:17:53:454 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:53:456 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:17:53:460 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:17:53:588 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 128 ms - 1291 
+2025-06-28 16:17:53:594 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:17:53:594 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:53:628 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:53:640 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 36 ms - 78 
+2025-06-28 16:17:53:643 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:53:645 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:17:53:649 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:17:53:804 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 154 ms - 1291 
+2025-06-28 16:17:53:809 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:17:53:810 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:53:838 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:53:840 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 29 ms - 78 
+2025-06-28 16:17:53:849 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:53:852 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 5 ms - 22 
+2025-06-28 16:17:53:857 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:17:53:973 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 111 ms - 137 
+2025-06-28 16:17:53:975 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:17:54:643 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 668 ms - 14 
+2025-06-28 16:17:54:648 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:54:650 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:17:54:653 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:17:54:837 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 181 ms - 1291 
+2025-06-28 16:17:54:842 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:17:54:842 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:54:869 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:54:872 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 29 ms - 77 
+2025-06-28 16:17:54:876 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:54:878 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:17:54:882 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:17:54:948 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 65 ms - 137 
+2025-06-28 16:17:54:952 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:17:55:117 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 165 ms - 14 
+2025-06-28 16:17:55:121 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:55:122 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:17:55:126 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:17:55:740 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 613 ms - 1291 
+2025-06-28 16:17:55:745 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:17:55:747 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:55:786 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:55:788 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 41 ms - 77 
+2025-06-28 16:17:55:794 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:55:797 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:17:55:805 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:17:56:486 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 681 ms - 137 
+2025-06-28 16:17:56:491 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:17:56:651 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 158 ms - 14 
+2025-06-28 16:17:56:655 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:56:657 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:17:56:660 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:17:57:376 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 716 ms - 1291 
+2025-06-28 16:17:57:381 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:17:57:382 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:57:412 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:57:415 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 33 ms - 77 
+2025-06-28 16:17:57:419 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:57:421 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:17:57:426 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:17:57:489 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 64 ms - 137 
+2025-06-28 16:17:57:493 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:17:57:629 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 135 ms - 14 
+2025-06-28 16:17:57:636 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:57:639 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 3 ms - 22 
+2025-06-28 16:17:57:644 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:17:58:254 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 610 ms - 1291 
+2025-06-28 16:17:58:258 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:17:58:259 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:58:283 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:58:288 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 26 ms - 77 
+2025-06-28 16:17:58:292 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:58:294 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:17:58:300 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:17:58:361 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 61 ms - 137 
+2025-06-28 16:17:58:367 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:17:58:525 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 158 ms - 14 
+2025-06-28 16:17:58:529 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:58:533 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:17:58:537 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:17:59:121 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 583 ms - 1291 
+2025-06-28 16:17:59:126 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:17:59:126 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:17:59:151 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:17:59:153 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 27 ms - 77 
+2025-06-28 16:17:59:158 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:17:59:160 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:17:59:163 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:17:59:227 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 64 ms - 137 
+2025-06-28 16:17:59:233 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:00:024 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 787 ms - 14 
+2025-06-28 16:18:00:027 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:00:035 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:00:039 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:00:635 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 595 ms - 1291 
+2025-06-28 16:18:00:641 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:00:642 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:00:675 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:00:677 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 34 ms - 77 
+2025-06-28 16:18:00:682 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:00:684 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:00:687 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:00:753 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 65 ms - 137 
+2025-06-28 16:18:00:757 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:00:913 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 157 ms - 14 
+2025-06-28 16:18:00:918 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:00:921 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:00:924 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:01:538 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 613 ms - 1291 
+2025-06-28 16:18:01:544 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:01:546 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:01:575 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:01:577 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 32 ms - 77 
+2025-06-28 16:18:01:581 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:01:584 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:01:587 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:01:648 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 60 ms - 137 
+2025-06-28 16:18:01:652 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:02:319 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 667 ms - 14 
+2025-06-28 16:18:02:324 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:02:326 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:02:337 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:02:478 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 140 ms - 1291 
+2025-06-28 16:18:02:485 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:02:485 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:02:509 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:02:511 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 26 ms - 77 
+2025-06-28 16:18:02:515 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:02:517 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:02:522 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:02:607 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 85 ms - 137 
+2025-06-28 16:18:02:612 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:03:470 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 857 ms - 14 
+2025-06-28 16:18:03:475 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:03:477 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:03:481 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:03:584 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 102 ms - 1291 
+2025-06-28 16:18:03:590 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:03:591 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:03:621 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:03:622 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 31 ms - 77 
+2025-06-28 16:18:03:627 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:03:633 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:03:637 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:03:705 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 67 ms - 137 
+2025-06-28 16:18:03:708 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:03:851 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 143 ms - 14 
+2025-06-28 16:18:03:857 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:03:859 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:03:864 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:04:442 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 578 ms - 1291 
+2025-06-28 16:18:04:448 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:04:448 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:04:481 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:04:482 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 34 ms - 77 
+2025-06-28 16:18:04:488 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:04:490 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:04:494 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:04:576 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 82 ms - 137 
+2025-06-28 16:18:04:581 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:04:711 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 130 ms - 14 
+2025-06-28 16:18:04:717 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:04:719 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:04:723 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:05:319 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 596 ms - 1291 
+2025-06-28 16:18:05:326 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:05:326 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:05:357 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:05:359 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 33 ms - 77 
+2025-06-28 16:18:05:365 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:05:366 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:05:376 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:05:454 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 79 ms - 137 
+2025-06-28 16:18:05:458 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:05:622 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 164 ms - 14 
+2025-06-28 16:18:05:627 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:05:628 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:05:632 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:06:224 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 592 ms - 1291 
+2025-06-28 16:18:06:232 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:06:239 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:06:279 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:06:281 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 49 ms - 77 
+2025-06-28 16:18:06:286 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:06:287 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:06:290 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:06:347 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 57 ms - 137 
+2025-06-28 16:18:06:352 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:07:471 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 1113 ms - 14 
+2025-06-28 16:18:07:476 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:07:477 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:07:482 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:08:032 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 549 ms - 1291 
+2025-06-28 16:18:08:043 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:08:044 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:08:075 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:08:077 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 35 ms - 77 
+2025-06-28 16:18:08:081 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:08:084 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:08:087 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:08:147 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 60 ms - 137 
+2025-06-28 16:18:08:150 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:08:298 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 145 ms - 14 
+2025-06-28 16:18:08:305 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:08:307 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 3 ms - 22 
+2025-06-28 16:18:08:314 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:08:904 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 589 ms - 1291 
+2025-06-28 16:18:08:910 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:08:911 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:08:938 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:08:941 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 30 ms - 77 
+2025-06-28 16:18:08:947 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:08:950 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:08:954 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:09:007 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 52 ms - 137 
+2025-06-28 16:18:09:011 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:09:142 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 131 ms - 14 
+2025-06-28 16:18:09:148 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:09:150 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:09:152 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:09:716 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 563 ms - 1291 
+2025-06-28 16:18:09:722 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:09:722 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:09:744 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:09:746 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 24 ms - 77 
+2025-06-28 16:18:09:750 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:09:752 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:09:757 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:09:808 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 52 ms - 137 
+2025-06-28 16:18:09:812 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:10:563 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 747 ms - 14 
+2025-06-28 16:18:10:574 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:10:578 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 6 ms - 22 
+2025-06-28 16:18:10:583 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:11:171 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 585 ms - 1291 
+2025-06-28 16:18:11:180 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:11:180 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:11:207 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:11:210 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 30 ms - 77 
+2025-06-28 16:18:11:214 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:11:216 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:11:219 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:11:293 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 73 ms - 137 
+2025-06-28 16:18:11:296 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:12:455 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 1157 ms - 14 
+2025-06-28 16:18:12:462 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:12:465 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:12:470 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:12:597 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 127 ms - 1291 
+2025-06-28 16:18:12:606 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:12:606 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:12:627 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:12:629 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 23 ms - 77 
+2025-06-28 16:18:12:638 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:12:641 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:12:646 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:12:690 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 45 ms - 137 
+2025-06-28 16:18:12:693 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:13:343 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 649 ms - 14 
+2025-06-28 16:18:13:348 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:13:350 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:13:354 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:13:457 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 103 ms - 1291 
+2025-06-28 16:18:13:466 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:13:467 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:14:208 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:14:210 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 745 ms - 77 
+2025-06-28 16:18:14:215 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:14:217 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:14:220 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:14:305 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 85 ms - 137 
+2025-06-28 16:18:14:310 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:14:464 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 152 ms - 14 
+2025-06-28 16:18:14:474 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:14:479 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:14:482 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:15:059 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 577 ms - 1291 
+2025-06-28 16:18:15:066 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:15:067 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:15:088 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:15:091 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 24 ms - 77 
+2025-06-28 16:18:15:095 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:15:099 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 3 ms - 22 
+2025-06-28 16:18:15:104 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:15:158 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 53 ms - 137 
+2025-06-28 16:18:15:161 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:15:801 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 637 ms - 14 
+2025-06-28 16:18:15:808 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:15:810 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:15:814 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:15:944 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 129 ms - 1291 
+2025-06-28 16:18:15:951 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:15:951 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:15:976 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:15:979 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 27 ms - 77 
+2025-06-28 16:18:15:985 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:15:986 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:15:989 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:16:054 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 65 ms - 137 
+2025-06-28 16:18:16:059 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:16:227 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 168 ms - 14 
+2025-06-28 16:18:16:234 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:16:238 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:16:241 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:18:310 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 2068 ms - 1291 
+2025-06-28 16:18:18:317 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:18:317 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:18:350 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:18:353 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 36 ms - 77 
+2025-06-28 16:18:18:359 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:18:360 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:18:365 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:18:439 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 73 ms - 137 
+2025-06-28 16:18:18:443 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:18:576 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 132 ms - 14 
+2025-06-28 16:18:18:582 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:18:583 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:18:586 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.TextView","using":"xpath"}
+2025-06-28 16:18:19:185 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 599 ms - 1291 
+2025-06-28 16:18:19:192 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text {}
+2025-06-28 16:18:19:192 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:19:220 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:19:222 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000024/text 200 30 ms - 77 
+2025-06-28 16:18:19:227 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:19:229 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 2 ms - 22 
+2025-06-28 16:18:19:233 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element {"value":"new UiSelector().text(\"\").instance(1)","using":"-android uiautomator"}
+2025-06-28 16:18:19:301 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element 200 67 ms - 137 
+2025-06-28 16:18:19:308 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click {"id":"00000000-0000-03f2-ffff-ffff00000027"}
+2025-06-28 16:18:19:933 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000027/click 200 624 ms - 14 
+2025-06-28 16:18:26:951 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context {}
+2025-06-28 16:18:26:952 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/context 200 1 ms - 22 
+2025-06-28 16:18:26:956 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements {"value":"//android.widget.Button","using":"xpath"}
+2025-06-28 16:18:27:400 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/elements 200 444 ms - 1291 
+2025-06-28 16:18:27:408 [893a9066][HTTP] --> GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000012/text {}
+2025-06-28 16:18:27:409 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Driver proxy active, passing request on via HTTP proxy
+2025-06-28 16:18:27:564 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Replacing sessionId 087a66f9-3bc2-4cf4-9d4b-3620c5199f71 with 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5
+2025-06-28 16:18:27:568 [893a9066][HTTP] <-- GET /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/element/00000000-0000-03f2-ffff-ffff00000012/text 200 157 ms - 66 
+2025-06-28 16:18:27:582 [893a9066][HTTP] --> POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/execute/sync {"args":[{"appId":"simple.batttery.alarm","bundleId":"simple.batttery.alarm"}],"script":"mobile: terminateApp"}
+2025-06-28 16:18:27:584 [893a9066][BaseDriver] The following script arguments are not known and will be ignored: bundleId
+2025-06-28 16:18:27:585 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Terminating 'simple.batttery.alarm'
+2025-06-28 16:18:28:051 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Querying the state of 'simple.batttery.alarm'
+2025-06-28 16:18:28:345 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] 'simple.batttery.alarm' has been successfully terminated
+2025-06-28 16:18:28:348 [893a9066][HTTP] <-- POST /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5/execute/sync 200 765 ms - 14 
+2025-06-28 16:18:28:352 [893a9066][HTTP] --> DELETE /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5 {}
+2025-06-28 16:18:28:353 [893a9066][AppiumDriver@2142] Removing session 893a9066-e1fe-4bfb-b17c-589c1fa7e0c5 from our master session list
+2025-06-28 16:18:28:850 [893a9066][38;5;-28m[AndroidUiautomator2Driver@2a13] Restoring hidden api policy to the device default configuration
+2025-06-28 16:18:29:055 [893a9066][HTTP] <-- DELETE /session/893a9066-e1fe-4bfb-b17c-589c1fa7e0c5 200 703 ms - 14 
+2025-06-28 16:45:28:927 [Appium] Received SIGINT - shutting down

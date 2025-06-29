@@ -1,0 +1,156 @@
+[INFO ] 2025-06-28 16:16:09 - server.AppiumServerManager                  - Appium Server is already running on port 4723 (external process)
+
+[INFO ] 2025-06-28 16:16:10 - listeners.TestListener                      - Languages and Alarm test(s) run will start
+[INFO ] 2025-06-28 16:16:10 - batteryalarm.LanguagesTests                 - ------- START: Battery Alarm app -------
+[INFO ] 2025-06-28 16:16:17 - listeners.TestListener                      - Test STARTED: testLanguages
+[INFO ] 2025-06-28 16:16:19 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:19 - batteryalarm.LanguagesDropdownMenu          - We choose the 'English' option
+[INFO ] 2025-06-28 16:16:21 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:21 - batteryalarm.LanguagesTests                 - The displayed language is correct: English
+[INFO ] 2025-06-28 16:16:21 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:21 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Czech' option
+[INFO ] 2025-06-28 16:16:23 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:23 - batteryalarm.LanguagesTests                 - The displayed language is correct: Czech
+[INFO ] 2025-06-28 16:16:23 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:24 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Danish' option
+[INFO ] 2025-06-28 16:16:26 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:26 - batteryalarm.LanguagesTests                 - The displayed language is correct: Danish
+[INFO ] 2025-06-28 16:16:26 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:27 - batteryalarm.LanguagesDropdownMenu          - We choose the 'German' option
+[INFO ] 2025-06-28 16:16:29 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:29 - batteryalarm.LanguagesTests                 - The displayed language is correct: German
+[INFO ] 2025-06-28 16:16:29 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:29 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Spanish' option
+[INFO ] 2025-06-28 16:16:32 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:32 - batteryalarm.LanguagesTests                 - The displayed language is correct: Spanish
+[INFO ] 2025-06-28 16:16:32 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:32 - batteryalarm.LanguagesDropdownMenu          - We choose the 'French' option
+[INFO ] 2025-06-28 16:16:34 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:34 - batteryalarm.LanguagesTests                 - The displayed language is correct: French
+[INFO ] 2025-06-28 16:16:34 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:34 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Indonesian' option
+[INFO ] 2025-06-28 16:16:37 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:37 - batteryalarm.LanguagesTests                 - The displayed language is correct: Indonesian
+[INFO ] 2025-06-28 16:16:37 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:37 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Italian' option
+[INFO ] 2025-06-28 16:16:39 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:40 - batteryalarm.LanguagesTests                 - The displayed language is correct: Italian
+[INFO ] 2025-06-28 16:16:40 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:40 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Hungarian' option
+[INFO ] 2025-06-28 16:16:42 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:42 - batteryalarm.LanguagesTests                 - The displayed language is correct: Hungarian
+[INFO ] 2025-06-28 16:16:42 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:43 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Dutch' option
+[INFO ] 2025-06-28 16:16:45 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:46 - batteryalarm.LanguagesTests                 - The displayed language is correct: Dutch
+[INFO ] 2025-06-28 16:16:46 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:46 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Polish' option
+[INFO ] 2025-06-28 16:16:48 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:48 - batteryalarm.LanguagesTests                 - The displayed language is correct: Polish
+[INFO ] 2025-06-28 16:16:48 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:48 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Portuguese' option
+[INFO ] 2025-06-28 16:16:51 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:51 - batteryalarm.LanguagesTests                 - The displayed language is correct: Portuguese
+[INFO ] 2025-06-28 16:16:51 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:51 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Romanian' option
+[INFO ] 2025-06-28 16:16:54 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:54 - batteryalarm.LanguagesTests                 - The displayed language is correct: Romanian
+[INFO ] 2025-06-28 16:16:54 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:54 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Slovenian' option
+[INFO ] 2025-06-28 16:16:56 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:56 - batteryalarm.LanguagesTests                 - The displayed language is correct: Slovenian
+[INFO ] 2025-06-28 16:16:56 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:57 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Swedish' option
+[INFO ] 2025-06-28 16:16:58 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:16:58 - batteryalarm.LanguagesTests                 - The displayed language is correct: Swedish
+[INFO ] 2025-06-28 16:16:58 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:16:59 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Serbian' option
+[INFO ] 2025-06-28 16:17:01 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:01 - batteryalarm.LanguagesTests                 - The displayed language is correct: Serbian
+[INFO ] 2025-06-28 16:17:01 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:01 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Finnish' option
+[INFO ] 2025-06-28 16:17:03 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:03 - batteryalarm.LanguagesTests                 - The displayed language is correct: Finnish
+[INFO ] 2025-06-28 16:17:03 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:04 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Turkish' option
+[INFO ] 2025-06-28 16:17:05 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:05 - batteryalarm.LanguagesTests                 - The displayed language is correct: Turkish
+[INFO ] 2025-06-28 16:17:05 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:06 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Bulgarian' option
+[INFO ] 2025-06-28 16:17:08 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:08 - batteryalarm.LanguagesTests                 - The displayed language is correct: Bulgarian
+[INFO ] 2025-06-28 16:17:08 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:08 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Russian' option
+[INFO ] 2025-06-28 16:17:10 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:10 - batteryalarm.LanguagesTests                 - The displayed language is correct: Russian
+[INFO ] 2025-06-28 16:17:10 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:11 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Ukrainian' option
+[INFO ] 2025-06-28 16:17:12 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:13 - batteryalarm.LanguagesTests                 - The displayed language is correct: Ukrainian
+[INFO ] 2025-06-28 16:17:13 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:14 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Greek' option
+[INFO ] 2025-06-28 16:17:15 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:16 - batteryalarm.LanguagesTests                 - The displayed language is correct: Greek
+[INFO ] 2025-06-28 16:17:16 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:16 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Vietnamese' option
+[INFO ] 2025-06-28 16:17:18 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:18 - batteryalarm.LanguagesTests                 - The displayed language is correct: Vietnamese
+[INFO ] 2025-06-28 16:17:18 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:18 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Japanese' option
+[INFO ] 2025-06-28 16:17:21 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:21 - batteryalarm.LanguagesTests                 - The displayed language is correct: Japanese
+[INFO ] 2025-06-28 16:17:21 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:21 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Chinese' option
+[INFO ] 2025-06-28 16:17:23 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:23 - batteryalarm.LanguagesTests                 - The displayed language is correct: Chinese
+[INFO ] 2025-06-28 16:17:23 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:24 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Korean' option
+[INFO ] 2025-06-28 16:17:26 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:26 - batteryalarm.LanguagesTests                 - The displayed language is correct: Korean
+[INFO ] 2025-06-28 16:17:26 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:26 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Thai' option
+[INFO ] 2025-06-28 16:17:28 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:28 - batteryalarm.LanguagesTests                 - The displayed language is correct: Thai
+[INFO ] 2025-06-28 16:17:28 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:28 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Arabic' option
+[INFO ] 2025-06-28 16:17:30 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:30 - batteryalarm.LanguagesTests                 - The displayed language is correct: Arabic
+[INFO ] 2025-06-28 16:17:30 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:31 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Farsi' option
+[INFO ] 2025-06-28 16:17:32 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:33 - batteryalarm.LanguagesTests                 - The displayed language is correct: Farsi
+[INFO ] 2025-06-28 16:17:33 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:33 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Hebrew' option
+[INFO ] 2025-06-28 16:17:36 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:36 - batteryalarm.LanguagesTests                 - The displayed language is correct: Hebrew
+[INFO ] 2025-06-28 16:17:36 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:36 - batteryalarm.LanguagesDropdownMenu          - We choose the 'Hindi' option
+[INFO ] 2025-06-28 16:17:38 - batteryalarm.LanguagesTests                 - We check if the app switches to the selected language
+[INFO ] 2025-06-28 16:17:39 - batteryalarm.LanguagesTests                 - The displayed language is correct: Hindi
+[INFO ] 2025-06-28 16:17:39 - listeners.TestListener                      - Test PASSED: testLanguages
+[INFO ] 2025-06-28 16:17:40 - batteryalarm.LanguagesTests                 - ------- STOPPED: Battery Alarm app -------
+
+[INFO ] 2025-06-28 16:17:40 - batteryalarm.AlarmTests                     - ------- START: Battery Alarm app -------
+[INFO ] 2025-06-28 16:17:46 - listeners.TestListener                      - Test STARTED: testMaxAlarm
+[INFO ] 2025-06-28 16:17:48 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:48 - common.AppiumActions                        - We scroll up in the dropdown menu
+[INFO ] 2025-06-28 16:17:49 - batteryalarm.LanguagesDropdownMenu          - We press the 'language selector' 'dropdown menu' button
+[INFO ] 2025-06-28 16:17:50 - common.AppiumActions                        - We scroll up in the dropdown menu
+[INFO ] 2025-06-28 16:17:51 - batteryalarm.LanguagesDropdownMenu          - We choose the 'English' option
+[INFO ] 2025-06-28 16:17:52 - batteryalarm.AlarmTests                     - We ask for the battery charge and 'Max Alarm' values
+[INFO ] 2025-06-28 16:17:53 - batteryalarm.AlarmTests                     - To trigger the alarm, we need to reduce the 'Max Alarm' value by 23
+[INFO ] 2025-06-28 16:17:53 - batteryalarm.MainPage                       - We press the 'Max Alarm' minus button 23 times
+[INFO ] 2025-06-28 16:18:19 - batteryalarm.AlarmTests                     - We check if the 'Max Alarm' function is working (if the countdown has started)
+[INFO ] 2025-06-28 16:18:27 - batteryalarm.AlarmTests                     - The alarm works
+[INFO ] 2025-06-28 16:18:27 - listeners.TestListener                      - Test PASSED: testMaxAlarm
+[INFO ] 2025-06-28 16:18:29 - batteryalarm.AlarmTests                     - ------- STOPPED: Battery Alarm app -------
+
+[INFO ] 2025-06-28 16:18:29 - listeners.TestListener                      - Languages and Alarm test(s) run completed
+
+[INFO ] 2025-06-28 16:18:29 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-28 16:18:29 - summaryLogger                               - Languages and Alarm
+[INFO ] 2025-06-28 16:18:29 - summaryLogger                               - Total tests run: 2, Passes: 2, Failures: 0, Skips: 0
+[INFO ] 2025-06-28 16:18:29 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-28 16:18:51 - server.NetlifyUploader                      - Report uploaded to Netlify
+
+[INFO ] 2025-06-28 16:18:54 - service.SendGridEmailService                - Email successfully sent with status code: 202

@@ -1,0 +1,214 @@
+[INFO ] 2025-06-26 23:51:16 - server.AppiumServerManager                  - Appium Server is already running on port 4723 (external process)
+
+[INFO ] 2025-06-26 23:51:16 - listeners.TestListener                      - EndToEnd and CartEmptying test(s) run will start
+[INFO ] 2025-06-26 23:51:16 - saucelabs.EndToEndTests                     - ------- START: SauceLabs app -------
+[INFO ] 2025-06-26 23:51:28 - listeners.TestListener                      - Test STARTED: testEndToEndWithLoginBeforeShopping
+[INFO ] 2025-06-26 23:51:28 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-26 23:51:28 - saucelabs.HamburgerMenu                     - We press the 'Log In' button
+[INFO ] 2025-06-26 23:51:31 - saucelabs.LoginPage                         - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-26 23:51:32 - saucelabs.LoginPage                         - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-26 23:51:33 - saucelabs.LoginPage                         - We press the 'Login' button
+[INFO ] 2025-06-26 23:51:34 - saucelabs.ProductsPage                      - We press the 'dropdown menu' button
+[INFO ] 2025-06-26 23:51:35 - saucelabs.ProductsPage                      - We select the 'abc' order option
+[INFO ] 2025-06-26 23:51:36 - saucelabs.ProductsPage                      - We press the 'Bike Light's text
+[INFO ] 2025-06-26 23:51:37 - productspages.BikeLightPage                 - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:51:39 - productspages.BikeLightPage                 - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:51:39 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:51:39 - saucelabs.ProductsPage                      - We press the 'Bolt T-shirt's text
+[INFO ] 2025-06-26 23:51:41 - productspages.BoltTShirtPage                - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:51:42 - productspages.BoltTShirtPage                - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:51:42 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:51:44 - common.AppiumActions                        - We scroll down
+[INFO ] 2025-06-26 23:51:45 - saucelabs.ProductsPage                      - We press the 'Onesie's text
+[INFO ] 2025-06-26 23:51:46 - productspages.OnesiePage                    - We press the 'black circle' button
+[INFO ] 2025-06-26 23:51:47 - productspages.OnesiePage                    - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:51:47 - productspages.OnesiePage                    - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:51:48 - productspages.OnesiePage                    - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:51:49 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:51:49 - saucelabs.ProductsPage                      - We press the 'Test allTheThings T-shirt's text
+[INFO ] 2025-06-26 23:51:50 - productspages.TestAllTheThingsTShirtPage    - We press the 'gray circle' button
+[INFO ] 2025-06-26 23:51:51 - productspages.TestAllTheThingsTShirtPage    - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:51:52 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:51:52 - saucelabs.ProductsPage                      - We press the 'Fleece Jacket's text
+[INFO ] 2025-06-26 23:51:53 - productspages.FleeceJacketPage              - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:51:55 - productspages.FleeceJacketPage              - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:51:55 - productspages.FleeceJacketPage              - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:51:56 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:51:57 - saucelabs.ProductsPage                      - We press the 'cart badge' button
+[INFO ] 2025-06-26 23:52:05 - saucelabs.EndToEndTests                     - We check if the correct products are in the cart
+[INFO ] 2025-06-26 23:52:05 - saucelabs.EndToEndTests                     - The correct products are in the cart
+[INFO ] 2025-06-26 23:52:05 - saucelabs.EndToEndTests                     - We check the number of products in the cart
+[INFO ] 2025-06-26 23:52:05 - saucelabs.EndToEndTests                     - The number of products in the cart is correct
+[INFO ] 2025-06-26 23:52:05 - saucelabs.CartPage                          - We press the 'Proceed To Checkout' button
+[INFO ] 2025-06-26 23:52:07 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'Checkout' page
+[INFO ] 2025-06-26 23:52:07 - saucelabs.SauceLabsCommonAssertions         - We are on the 'Checkout' page
+[INFO ] 2025-06-26 23:52:07 - saucelabs.CheckoutPage                      - We fill the 'Full Name' input field with: 'Johnnie Clark'
+[INFO ] 2025-06-26 23:52:08 - saucelabs.CheckoutPage                      - We fill the 'Address Line 1' input field with: 'Narrow way 8.'
+[INFO ] 2025-06-26 23:52:09 - saucelabs.CheckoutPage                      - We fill the 'City' input field with: 'Pilis'
+[INFO ] 2025-06-26 23:52:10 - saucelabs.CheckoutPage                      - We fill the 'State Region' input field with: 'Pest megye'
+[INFO ] 2025-06-26 23:52:11 - saucelabs.CheckoutPage                      - We fill the 'Zip Code' input field with: '2721'
+[INFO ] 2025-06-26 23:52:12 - saucelabs.CheckoutPage                      - We fill the 'Country' input field with: 'Hungary'
+[INFO ] 2025-06-26 23:52:13 - saucelabs.CheckoutPage                      - We press the 'To Payment' button
+[INFO ] 2025-06-26 23:52:14 - saucelabs.CheckoutPaymentPage               - We fill the 'Full Name' input field with: 'Johnnie Clark'
+[INFO ] 2025-06-26 23:52:16 - saucelabs.CheckoutPaymentPage               - We fill the 'Card Number' input field with: '023728054492102'
+[INFO ] 2025-06-26 23:52:17 - saucelabs.CheckoutPaymentPage               - We fill the 'Expiration Date' input field with: '0725'
+[INFO ] 2025-06-26 23:52:18 - saucelabs.CheckoutPaymentPage               - We fill the 'Security Code' input field with: '872'
+[INFO ] 2025-06-26 23:52:19 - saucelabs.CheckoutPaymentPage               - We press the 'Review Order' button
+[INFO ] 2025-06-26 23:52:20 - common.AppiumActions                        - We scroll down
+[INFO ] 2025-06-26 23:52:21 - common.AppiumActions                        - We scroll down
+[INFO ] 2025-06-26 23:52:23 - saucelabs.EndToEndTests                     - We check that the delivery data is correct
+[INFO ] 2025-06-26 23:52:23 - saucelabs.EndToEndTests                     - The delivery data is correct
+[INFO ] 2025-06-26 23:52:23 - saucelabs.EndToEndTests                     - We check that the payment data is correct
+[INFO ] 2025-06-26 23:52:23 - saucelabs.EndToEndTests                     - The payment data is correct
+[INFO ] 2025-06-26 23:52:23 - saucelabs.CheckoutOrderReviewPage           - We press the 'Place Order' button
+[INFO ] 2025-06-26 23:52:24 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'Checkout Complete' page
+[INFO ] 2025-06-26 23:52:24 - saucelabs.SauceLabsCommonAssertions         - We are on the 'Checkout Complete' page
+[INFO ] 2025-06-26 23:52:24 - saucelabs.CheckoutCompletePage              - We press the 'Continue Shopping' button
+[INFO ] 2025-06-26 23:52:25 - saucelabs.ProductsPage                      - We press the 'cart badge' button
+[INFO ] 2025-06-26 23:52:26 - saucelabs.SauceLabsCommonAssertions         - We check if the cart is empty
+[INFO ] 2025-06-26 23:52:26 - saucelabs.SauceLabsCommonAssertions         - The cart is empty
+[INFO ] 2025-06-26 23:52:26 - saucelabs.SauceLabsCommonAssertions         - We check if the cart counter is available
+[INFO ] 2025-06-26 23:52:30 - saucelabs.SauceLabsCommonAssertions         - The cart counter is not available
+[INFO ] 2025-06-26 23:52:30 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:52:31 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-26 23:52:31 - saucelabs.HamburgerMenu                     - We press the 'Log Out' button
+[INFO ] 2025-06-26 23:52:33 - saucelabs.HamburgerMenu                     - We press the 'Log Out' button on the 'Log Out' alert
+[INFO ] 2025-06-26 23:52:35 - saucelabs.LoginPage                         - We press the 'Ok' button on the 'successfully logged out' alert
+[INFO ] 2025-06-26 23:52:36 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'Login' page
+[INFO ] 2025-06-26 23:52:36 - saucelabs.SauceLabsCommonAssertions         - We are on the 'Login' page
+[INFO ] 2025-06-26 23:52:36 - listeners.TestListener                      - Test PASSED: testEndToEndWithLoginBeforeShopping
+[INFO ] 2025-06-26 23:52:37 - saucelabs.EndToEndTests                     - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-26 23:52:37 - saucelabs.EndToEndTests                     - ------- START: SauceLabs app -------
+[INFO ] 2025-06-26 23:52:45 - listeners.TestListener                      - Test STARTED: testEndToEndWithShoppingBeforeLogin
+[INFO ] 2025-06-26 23:52:45 - saucelabs.ProductsPage                      - We press the 'dropdown menu' button
+[INFO ] 2025-06-26 23:52:46 - saucelabs.ProductsPage                      - We select the 'ascending price' order option
+[INFO ] 2025-06-26 23:52:47 - saucelabs.ProductsPage                      - We press the 'Test allTheThings T-shirt's text
+[INFO ] 2025-06-26 23:52:48 - productspages.TestAllTheThingsTShirtPage    - We press the 'black circle' button
+[INFO ] 2025-06-26 23:52:49 - productspages.TestAllTheThingsTShirtPage    - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:52:50 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:52:52 - saucelabs.ProductsPage                      - We press the 'Onesie's text
+[INFO ] 2025-06-26 23:52:52 - productspages.OnesiePage                    - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:52:53 - productspages.OnesiePage                    - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:52:54 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:52:54 - saucelabs.ProductsPage                      - We press the 'Bike Light's text
+[INFO ] 2025-06-26 23:52:56 - productspages.BikeLightPage                 - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:52:57 - productspages.BikeLightPage                 - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:52:58 - productspages.BikeLightPage                 - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:52:59 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:52:59 - saucelabs.ProductsPage                      - We press the 'Bolt T-shirt's text
+[INFO ] 2025-06-26 23:53:00 - productspages.BoltTShirtPage                - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:53:02 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:53:02 - common.AppiumActions                        - We scroll down
+[INFO ] 2025-06-26 23:53:03 - saucelabs.ProductsPage                      - We press the 'Fleece Jacket's text
+[INFO ] 2025-06-26 23:53:04 - productspages.FleeceJacketPage              - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:53:05 - productspages.FleeceJacketPage              - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:53:06 - productspages.FleeceJacketPage              - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:53:06 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:53:06 - saucelabs.ProductsPage                      - We press the 'Backpack's text
+[INFO ] 2025-06-26 23:53:08 - productspages.BackPackPage                  - We press the 'blue circle' button
+[INFO ] 2025-06-26 23:53:09 - productspages.BackPackPage                  - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:53:10 - productspages.BackPackPage                  - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:53:10 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:53:11 - saucelabs.ProductsPage                      - We press the 'cart badge' button
+[INFO ] 2025-06-26 23:53:20 - saucelabs.EndToEndTests                     - We check if the correct products are in the cart
+[INFO ] 2025-06-26 23:53:20 - saucelabs.EndToEndTests                     - The correct products are in the cart
+[INFO ] 2025-06-26 23:53:20 - saucelabs.EndToEndTests                     - We check the number of products in the cart
+[INFO ] 2025-06-26 23:53:20 - saucelabs.EndToEndTests                     - The number of products in the cart is correct
+[INFO ] 2025-06-26 23:53:20 - saucelabs.CartPage                          - We press the 'Proceed To Checkout' button
+[INFO ] 2025-06-26 23:53:20 - saucelabs.LoginPage                         - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-26 23:53:21 - saucelabs.LoginPage                         - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-26 23:53:22 - saucelabs.LoginPage                         - We press the 'Login' button
+[INFO ] 2025-06-26 23:53:24 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'Checkout' page
+[INFO ] 2025-06-26 23:53:24 - saucelabs.SauceLabsCommonAssertions         - We are on the 'Checkout' page
+[INFO ] 2025-06-26 23:53:24 - saucelabs.CheckoutPage                      - We fill the 'Full Name' input field with: 'Vanessa Morgan'
+[INFO ] 2025-06-26 23:53:25 - saucelabs.CheckoutPage                      - We fill the 'Address Line 1' input field with: 'Fairyflower street 12.'
+[INFO ] 2025-06-26 23:53:26 - saucelabs.CheckoutPage                      - We fill the 'City' input field with: 'Urhida'
+[INFO ] 2025-06-26 23:53:27 - saucelabs.CheckoutPage                      - We fill the 'State Region' input field with: 'Fejer megye'
+[INFO ] 2025-06-26 23:53:28 - saucelabs.CheckoutPage                      - We fill the 'Zip Code' input field with: '8142'
+[INFO ] 2025-06-26 23:53:29 - saucelabs.CheckoutPage                      - We fill the 'Country' input field with: 'Hungary'
+[INFO ] 2025-06-26 23:53:31 - saucelabs.CheckoutPage                      - We press the 'To Payment' button
+[INFO ] 2025-06-26 23:53:32 - saucelabs.CheckoutPaymentPage               - We fill the 'Full Name' input field with: 'Vanessa Morgan'
+[INFO ] 2025-06-26 23:53:33 - saucelabs.CheckoutPaymentPage               - We fill the 'Card Number' input field with: '238858251007850'
+[INFO ] 2025-06-26 23:53:35 - saucelabs.CheckoutPaymentPage               - We fill the 'Expiration Date' input field with: '0627'
+[INFO ] 2025-06-26 23:53:35 - saucelabs.CheckoutPaymentPage               - We fill the 'Security Code' input field with: '871'
+[INFO ] 2025-06-26 23:53:37 - saucelabs.CheckoutPaymentPage               - We press the 'Review Order' button
+[INFO ] 2025-06-26 23:53:38 - common.AppiumActions                        - We scroll down
+[INFO ] 2025-06-26 23:53:39 - common.AppiumActions                        - We scroll down
+[INFO ] 2025-06-26 23:53:40 - saucelabs.EndToEndTests                     - We check that the delivery data is correct
+[INFO ] 2025-06-26 23:53:40 - saucelabs.EndToEndTests                     - The delivery data is correct
+[INFO ] 2025-06-26 23:53:40 - saucelabs.EndToEndTests                     - We check that the payment data is correct
+[INFO ] 2025-06-26 23:53:40 - saucelabs.EndToEndTests                     - The payment data is correct
+[INFO ] 2025-06-26 23:53:40 - saucelabs.CheckoutOrderReviewPage           - We press the 'Place Order' button
+[INFO ] 2025-06-26 23:53:42 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'Checkout Complete' page
+[INFO ] 2025-06-26 23:53:42 - saucelabs.SauceLabsCommonAssertions         - We are on the 'Checkout Complete' page
+[INFO ] 2025-06-26 23:53:42 - saucelabs.CheckoutCompletePage              - We press the 'Continue Shopping' button
+[INFO ] 2025-06-26 23:53:43 - saucelabs.ProductsPage                      - We press the 'cart badge' button
+[INFO ] 2025-06-26 23:53:43 - saucelabs.SauceLabsCommonAssertions         - We check if the cart is empty
+[INFO ] 2025-06-26 23:53:44 - saucelabs.SauceLabsCommonAssertions         - The cart is empty
+[INFO ] 2025-06-26 23:53:44 - saucelabs.SauceLabsCommonAssertions         - We check if the cart counter is available
+[INFO ] 2025-06-26 23:53:47 - saucelabs.SauceLabsCommonAssertions         - The cart counter is not available
+[INFO ] 2025-06-26 23:53:47 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:53:49 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-26 23:53:49 - saucelabs.HamburgerMenu                     - We press the 'Log Out' button
+[INFO ] 2025-06-26 23:53:51 - saucelabs.HamburgerMenu                     - We press the 'Log Out' button on the 'Log Out' alert
+[INFO ] 2025-06-26 23:53:52 - saucelabs.LoginPage                         - We press the 'Ok' button on the 'successfully logged out' alert
+[INFO ] 2025-06-26 23:53:54 - saucelabs.SauceLabsCommonAssertions         - We check if we are on the 'Login' page
+[INFO ] 2025-06-26 23:53:54 - saucelabs.SauceLabsCommonAssertions         - We are on the 'Login' page
+[INFO ] 2025-06-26 23:53:54 - listeners.TestListener                      - Test PASSED: testEndToEndWithShoppingBeforeLogin
+[INFO ] 2025-06-26 23:53:55 - saucelabs.EndToEndTests                     - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-26 23:53:55 - saucelabs.CartEmptyingTests                 - ------- START: SauceLabs app -------
+[INFO ] 2025-06-26 23:54:04 - listeners.TestListener                      - Test STARTED: testPlacingProductsInCartAndThenEmptyingThem
+[INFO ] 2025-06-26 23:54:04 - saucelabs.HamburgerMenu                     - We press the 'hamburger menu' button
+[INFO ] 2025-06-26 23:54:05 - saucelabs.HamburgerMenu                     - We press the 'Log In' button
+[INFO ] 2025-06-26 23:54:06 - saucelabs.LoginPage                         - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-26 23:54:08 - saucelabs.LoginPage                         - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-26 23:54:09 - saucelabs.LoginPage                         - We press the 'Login' button
+[INFO ] 2025-06-26 23:54:09 - saucelabs.ProductsPage                      - We press the 'dropdown menu' button
+[INFO ] 2025-06-26 23:54:10 - saucelabs.ProductsPage                      - We select the 'ascending price' order option
+[INFO ] 2025-06-26 23:54:11 - saucelabs.ProductsPage                      - We press the 'Bolt T-shirt's text
+[INFO ] 2025-06-26 23:54:13 - productspages.BoltTShirtPage                - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:54:14 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:54:14 - saucelabs.ProductsPage                      - We press the 'Test allTheThings T-shirt's text
+[INFO ] 2025-06-26 23:54:15 - productspages.TestAllTheThingsTShirtPage    - We press the 'gray circle' button
+[INFO ] 2025-06-26 23:54:17 - productspages.TestAllTheThingsTShirtPage    - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:54:17 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:54:18 - common.AppiumActions                        - We scroll down
+[INFO ] 2025-06-26 23:54:18 - saucelabs.ProductsPage                      - We press the 'Fleece Jacket's text
+[INFO ] 2025-06-26 23:54:19 - productspages.FleeceJacketPage              - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:54:20 - productspages.FleeceJacketPage              - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:54:21 - productspages.FleeceJacketPage              - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:54:21 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:54:22 - saucelabs.ProductsPage                      - We press the 'Backpack's text
+[INFO ] 2025-06-26 23:54:23 - productspages.BackPackPage                  - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:54:24 - productspages.BackPackPage                  - We press the 'red circle' button
+[INFO ] 2025-06-26 23:54:25 - productspages.BackPackPage                  - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:54:26 - productspages.BackPackPage                  - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:54:26 - productspages.BackPackPage                  - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:54:27 - common.AppiumActions                        - We press the 'back' button on the phone
+[INFO ] 2025-06-26 23:54:28 - common.AppiumActions                        - We scroll up
+[INFO ] 2025-06-26 23:54:28 - saucelabs.ProductsPage                      - We press the 'Bike Light's text
+[INFO ] 2025-06-26 23:54:29 - productspages.BikeLightPage                 - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:54:31 - productspages.BikeLightPage                 - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:54:31 - productspages.BikeLightPage                 - We press the 'counter plus' button
+[INFO ] 2025-06-26 23:54:32 - productspages.BikeLightPage                 - We press the 'Add To Cart' button
+[INFO ] 2025-06-26 23:54:33 - saucelabs.ProductsPage                      - We press the 'cart badge' button
+[INFO ] 2025-06-26 23:54:34 - saucelabs.CartPage                          - We press the 'Remove Item' button until the cart is empty
+[INFO ] 2025-06-26 23:54:46 - saucelabs.SauceLabsCommonAssertions         - We check if the cart is empty
+[INFO ] 2025-06-26 23:54:46 - saucelabs.SauceLabsCommonAssertions         - The cart is empty
+[INFO ] 2025-06-26 23:54:46 - saucelabs.CartNoItemsPage                   - We press the 'Go Shopping' button
+[INFO ] 2025-06-26 23:54:47 - saucelabs.SauceLabsCommonAssertions         - We check if the cart counter is available
+[INFO ] 2025-06-26 23:54:50 - saucelabs.SauceLabsCommonAssertions         - The cart counter is not available
+[INFO ] 2025-06-26 23:54:50 - listeners.TestListener                      - Test PASSED: testPlacingProductsInCartAndThenEmptyingThem
+[INFO ] 2025-06-26 23:54:51 - saucelabs.CartEmptyingTests                 - ------- STOPPED: SauceLabs app -------
+
+[INFO ] 2025-06-26 23:54:52 - listeners.TestListener                      - EndToEnd and CartEmptying test(s) run completed
+
+[INFO ] 2025-06-26 23:54:52 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-26 23:54:52 - summaryLogger                               - EndToEnd and CartEmptying
+[INFO ] 2025-06-26 23:54:52 - summaryLogger                               - Total tests run: 3, Passes: 3, Failures: 0, Skips: 0
+[INFO ] 2025-06-26 23:54:52 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-26 23:55:11 - server.NetlifyUploader                      - Report uploaded to Netlify
+
+[INFO ] 2025-06-26 23:55:15 - service.SendGridEmailService                - Email successfully sent with status code: 202

@@ -1,0 +1,617 @@
+2025-06-27 22:16:43:111 [Appium] Welcome to Appium v2.19.0
+2025-06-27 22:16:43:116 [Appium] Non-default server args:
+2025-06-27 22:16:43:117 [Appium] {
+  localTimezone: true,
+  loglevel: 'info'
+}
+2025-06-27 22:16:43:119 [Appium] Attempting to load driver uiautomator2...
+2025-06-27 22:16:43:121 [Appium] Attempting to load driver chromium...
+2025-06-27 22:16:47:662 [Appium] Appium REST http interface listener started on http://0.0.0.0:4723
+2025-06-27 22:16:47:670 [Appium] You can provide the following URLs in your client code to connect to this server:
+	http://192.168.56.1:4723/
+	http://192.168.100.168:4723/
+	http://127.0.0.1:4723/ (only accessible from the same host)
+2025-06-27 22:16:47:671 [Appium] Available drivers:
+2025-06-27 22:16:47:672 [Appium]   - uiautomator2@4.2.3 (automationName 'UiAutomator2')
+2025-06-27 22:16:47:672 [Appium]   - chromium@1.5.1 (automationName 'Chromium')
+2025-06-27 22:16:47:673 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+2025-06-27 22:17:06:800 [HTTP] --> POST /session {"capabilities":{"firstMatch":[{"appium:noReset":true,"browserName":"Chrome","appium:deviceName":"17fad31f","platformName":"ANDROID","appium:automationName":"UIAutomator2","appium:platformVersion":"11"}]}}
+2025-06-27 22:17:06:816 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'ANDROID'
+2025-06-27 22:17:06:816 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2025-06-27 22:17:06:817 [Appium] Will require it at C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver
+2025-06-27 22:17:06:820 [AppiumDriver@5bbd] Appium v2.19.0 creating new AndroidUiautomator2Driver (v4.2.3) session
+2025-06-27 22:17:06:820 [AppiumDriver@5bbd] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2025-06-27 22:17:06:821 [AppiumDriver@5bbd] Appium's BaseDriver version is 9.18.0
+2025-06-27 22:17:06:821 [AppiumDriver@5bbd] AndroidUiautomator2Driver's BaseDriver version is 9.18.0
+2025-06-27 22:17:06:851 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Session created with session id: 9082b85c-6eb1-4f48-9026-64aa0ffa3bf0
+2025-06-27 22:17:06:883 [9082b85c][ADB] Found 2 'build-tools' folders under 'c:\Users\szigl\AppData\Local\Android\Sdk' (newest first):
+2025-06-27 22:17:06:884 [9082b85c][ADB]     C:\Users\szigl\AppData\Local\Android\Sdk\build-tools\35.0.0-rc4
+2025-06-27 22:17:06:885 [9082b85c][ADB]     C:\Users\szigl\AppData\Local\Android\Sdk\build-tools\34.0.0
+2025-06-27 22:17:06:887 [9082b85c][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-27 22:17:06:946 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Retrieving device list
+2025-06-27 22:17:06:998 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Looking for a device with Android '11.0.0'
+2025-06-27 22:17:07:001 [9082b85c][ADB] Getting device platform version
+2025-06-27 22:17:07:131 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Using device: 17fad31f
+2025-06-27 22:17:07:136 [9082b85c][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-27 22:17:07:188 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] We're going to run a Chrome-based session
+2025-06-27 22:17:07:290 [9082b85c][ADB] Getting device platform version
+2025-06-27 22:17:07:546 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Chrome-type package and activity are com.android.chrome and com.android.chrome/com.google.android.apps.chrome.Main
+2025-06-27 22:17:07:548 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Starting 'com.android.chrome' directly on the device
+2025-06-27 22:17:07:549 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Relaxing hidden api policy
+2025-06-27 22:17:07:739 [9082b85c][ADB] Using 'aapt2.exe' from 'C:\Users\szigl\AppData\Local\Android\Sdk\build-tools\35.0.0-rc4\aapt2.exe'
+2025-06-27 22:17:08:919 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Server packages are not going to be (re)installed
+2025-06-27 22:17:09:080 [9082b85c][ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2025-06-27 22:17:09:724 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Starting UIAutomator2 server 7.5.2
+2025-06-27 22:17:09:728 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Using UIAutomator2 server from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v7.5.2.apk' and test from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2025-06-27 22:17:09:730 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Waiting up to 30000ms for UiAutomator2 to be online...
+2025-06-27 22:17:09:886 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] socket hang up
+2025-06-27 22:17:10:917 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] socket hang up
+2025-06-27 22:17:12:142 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Determined the downstream protocol as 'W3C'
+2025-06-27 22:17:12:436 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Screen already unlocked, doing nothing
+2025-06-27 22:17:12:439 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Starting a chrome-based browser session
+2025-06-27 22:17:12:521 [9082b85c][Chromedriver@ab1e] Found 1 Chromedriver, which is missing in the list of known versions: {"137.0.7151.70":"137"}
+2025-06-27 22:17:12:524 [9082b85c][Chromedriver@ab1e] No mapping path provided
+2025-06-27 22:17:12:701 [9082b85c][Chromedriver@ab1e] Set chromedriver binary as: C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-chromedriver\chromedriver\win\chromedriver.exe
+2025-06-27 22:17:13:054 [9082b85c][Chromedriver@ab1e] Spawning Chromedriver with: C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-chromedriver\chromedriver\win\chromedriver.exe --port=62200 --adb-port=5037 --verbose
+2025-06-27 22:17:13:235 [9082b85c][Chromedriver@ab1e] connect ECONNREFUSED 127.0.0.1:62200
+2025-06-27 22:17:13:449 [9082b85c][Chromedriver@ab1e] Chromedriver version: 137.0.7151.70
+2025-06-27 22:17:13:451 [9082b85c][Chromedriver@ab1e] Starting W3C Chromedriver session with capabilities: {
+  "capabilities": {
+    "alwaysMatch": {
+      "goog:chromeOptions": {
+        "androidPackage": "com.android.chrome",
+        "androidDeviceSerial": "17fad31f"
+      },
+      "goog:loggingPrefs": {
+        "browser": "ALL"
+      }
+    }
+  }
+}
+2025-06-27 22:17:17:102 [9082b85c][Chromedriver@ab1e] Determined the downstream protocol as 'W3C'
+2025-06-27 22:17:17:105 [9082b85c][AppiumDriver@5bbd] New AndroidUiautomator2Driver session created successfully, session 9082b85c-6eb1-4f48-9026-64aa0ffa3bf0 added to master session list
+2025-06-27 22:17:17:115 [9082b85c][HTTP] <-- POST /session 200 10316 ms - 936 
+2025-06-27 22:17:17:254 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/timeouts {"implicit":3000}
+2025-06-27 22:17:17:256 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:17:270 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/timeouts 200 14 ms - 14 
+2025-06-27 22:17:17:327 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/url {"url":"https://katalon-demo-cura.herokuapp.com"}
+2025-06-27 22:17:17:331 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:19:862 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/url 200 2526 ms - 14 
+2025-06-27 22:17:20:913 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:21:001 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync 200 87 ms - 14 
+2025-06-27 22:17:21:014 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context {}
+2025-06-27 22:17:21:020 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context 200 6 ms - 20 
+2025-06-27 22:17:21:030 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element {"value":"menu-toggle","using":"id"}
+2025-06-27 22:17:21:032 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:21:058 [9082b85c][Chromedriver@ab1e] Got response with status 400: {"value":{"error":"invalid argument","message":"invalid argument: invalid locator\n  (Session info: chrome=137.0.7151.89)","stacktrace":"\tGetHandleVerifier [0x0x7ff7da7ffe75+79173]\n\tGetHandleVerifier [0x0x7ff7da7ffed0+79264]\n\t(No symbol) [0x0x7ff7da5b9e5a]\n\t(No symbol) [0x0x7ff7da61034e]\n\t(No symbol) [0x0x7ff7da61083c]\n\t(No symbol) [0x0x7ff7da664247]\n\t(No symbol) [0x0x7ff7da6389af]\n\t(No symbol) [0x0x7ff7da66100d]\n\t(No symbol) [0x0x7ff7da638743]\n\t(No symbol) [0x0x7ff7da6014c1]\n\t(No symbol) [0x0x7ff7da602253]\n\tGetHandleVerifier [0x0x7ff7daaca2ad+3004797]\n\tGetHandleVerifier [0x0x7ff7daac46fd+2981325]\n\tGetHandleVerifier [0x0x7ff7daae3350+3107360]\n\tGetHandleVerifier [0x0x7ff7da81a9fe+188622]\n\tGetHandleVerifier [0x0x7ff7da82228f+219487]\n\tGetHandleVerifier [0x0x7ff7da808dc4+115860]\n\tGetHandleVerifier [0x0x7ff7da808f79+116297]\n\tGetHandleVerifier [0x0x7ff7da7ef528+11256]\n\tBaseThreadInitThunk [0x0x7ffcc42d7374+20]\n\tRtlUserThreadStart [0x0x7ffcc449cc91+33]\n"}}
+2025-06-27 22:17:21:070 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element 400 33 ms - 1005 
+2025-06-27 22:17:21:083 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element {"value":"#menu\\-toggle","using":"css selector"}
+2025-06-27 22:17:21:085 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:21:155 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element 200 71 ms - 211 
+2025-06-27 22:17:21:168 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.BDBAE9C12437B1ABD1BC6B85331335FA.e.9/click {"id":"f.CEBEB2594A647856BC968138196A85FB.d.BDBAE9C12437B1ABD1BC6B85331335FA.e.9"}
+2025-06-27 22:17:21:169 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:21:646 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.BDBAE9C12437B1ABD1BC6B85331335FA.e.9/click 200 477 ms - 14 
+2025-06-27 22:17:21:654 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:21:703 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync 200 42 ms - 14 
+2025-06-27 22:17:21:708 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context {}
+2025-06-27 22:17:21:714 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context 200 4 ms - 20 
+2025-06-27 22:17:21:719 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element {"value":"//a[@href='profile.php#login']","using":"xpath"}
+2025-06-27 22:17:21:720 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:21:783 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element 200 63 ms - 213 
+2025-06-27 22:17:21:791 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.BDBAE9C12437B1ABD1BC6B85331335FA.e.10/click {"id":"f.CEBEB2594A647856BC968138196A85FB.d.BDBAE9C12437B1ABD1BC6B85331335FA.e.10"}
+2025-06-27 22:17:21:792 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:22:752 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.BDBAE9C12437B1ABD1BC6B85331335FA.e.10/click 200 960 ms - 14 
+2025-06-27 22:17:22:765 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:22:797 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync 200 28 ms - 14 
+2025-06-27 22:17:22:801 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context {}
+2025-06-27 22:17:22:805 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context 200 3 ms - 20 
+2025-06-27 22:17:22:813 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element {"value":"#txt\\-username","using":"css selector"}
+2025-06-27 22:17:22:815 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:22:902 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element 200 87 ms - 213 
+2025-06-27 22:17:22:913 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.B06B4DCC4C2C88DB3D27DB7B2F967C8B.e.16/value {"text":"John Doe","value":["J","o","h","n"," ","D","o","e"],"id":"f.CEBEB2594A647856BC968138196A85FB.d.B06B4DCC4C2C88DB3D27DB7B2F967C8B.e.16"}
+2025-06-27 22:17:22:914 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:23:375 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.B06B4DCC4C2C88DB3D27DB7B2F967C8B.e.16/value 200 457 ms - 14 
+2025-06-27 22:17:23:382 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:23:443 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync 200 52 ms - 14 
+2025-06-27 22:17:23:447 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context {}
+2025-06-27 22:17:23:450 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context 200 2 ms - 20 
+2025-06-27 22:17:23:459 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element {"value":"#txt\\-password","using":"css selector"}
+2025-06-27 22:17:23:463 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:23:531 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element 200 67 ms - 213 
+2025-06-27 22:17:23:536 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.B06B4DCC4C2C88DB3D27DB7B2F967C8B.e.17/value {"text":"ThisIsNotAPassword","value":["T","h","i","s","I","s","N","o","t","A","P","a","s","s","w","o","r","d"],"id":"f.CEBEB2594A647856BC968138196A85FB.d.B06B4DCC4C2C88DB3D27DB7B2F967C8B.e.17"}
+2025-06-27 22:17:23:537 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:23:991 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.B06B4DCC4C2C88DB3D27DB7B2F967C8B.e.17/value 200 456 ms - 14 
+2025-06-27 22:17:24:002 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:24:053 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync 200 51 ms - 14 
+2025-06-27 22:17:24:065 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context {}
+2025-06-27 22:17:24:069 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context 200 4 ms - 20 
+2025-06-27 22:17:24:077 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element {"value":"#btn\\-login","using":"css selector"}
+2025-06-27 22:17:24:077 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:24:184 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element 200 96 ms - 213 
+2025-06-27 22:17:24:190 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync {"script":"arguments[0].click();","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.CEBEB2594A647856BC968138196A85FB.d.B06B4DCC4C2C88DB3D27DB7B2F967C8B.e.26"}]}
+2025-06-27 22:17:24:962 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync 200 770 ms - 14 
+2025-06-27 22:17:25:353 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:25:522 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync 200 178 ms - 14 
+2025-06-27 22:17:25:530 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context {}
+2025-06-27 22:17:25:534 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context 200 3 ms - 20 
+2025-06-27 22:17:25:541 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:17:25:543 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:25:614 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element 200 73 ms - 213 
+2025-06-27 22:17:25:623 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.EDFF0A8F4F68BD8898703F87A8BD5EED.e.13/displayed {}
+2025-06-27 22:17:25:624 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:25:686 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.EDFF0A8F4F68BD8898703F87A8BD5EED.e.13/displayed 200 63 ms - 14 
+2025-06-27 22:17:25:693 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:25:729 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync 200 36 ms - 14 
+2025-06-27 22:17:25:738 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context {}
+2025-06-27 22:17:25:741 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context 200 2 ms - 20 
+2025-06-27 22:17:25:750 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:17:25:751 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:25:816 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element 200 63 ms - 213 
+2025-06-27 22:17:25:824 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.EDFF0A8F4F68BD8898703F87A8BD5EED.e.13/enabled {}
+2025-06-27 22:17:25:826 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:25:915 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.EDFF0A8F4F68BD8898703F87A8BD5EED.e.13/enabled 200 83 ms - 14 
+2025-06-27 22:17:25:919 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:25:952 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/execute/sync 200 33 ms - 14 
+2025-06-27 22:17:25:964 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context {}
+2025-06-27 22:17:25:975 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/context 200 5 ms - 20 
+2025-06-27 22:17:25:979 [9082b85c][HTTP] --> POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:17:25:980 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:26:037 [9082b85c][HTTP] <-- POST /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element 200 57 ms - 213 
+2025-06-27 22:17:26:045 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.EDFF0A8F4F68BD8898703F87A8BD5EED.e.13/text {}
+2025-06-27 22:17:26:046 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:26:119 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/element/f.CEBEB2594A647856BC968138196A85FB.d.EDFF0A8F4F68BD8898703F87A8BD5EED.e.13/text 200 73 ms - 28 
+2025-06-27 22:17:26:129 [9082b85c][HTTP] --> GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/url {}
+2025-06-27 22:17:26:130 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:26:168 [9082b85c][HTTP] <-- GET /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0/url 200 39 ms - 64 
+2025-06-27 22:17:26:198 [9082b85c][HTTP] --> DELETE /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0 {}
+2025-06-27 22:17:26:200 [9082b85c][AppiumDriver@5bbd] Removing session 9082b85c-6eb1-4f48-9026-64aa0ffa3bf0 from our master session list
+2025-06-27 22:17:27:078 [9082b85c][38;5;-144m[AndroidUiautomator2Driver@e0e7] Restoring hidden api policy to the device default configuration
+2025-06-27 22:17:27:303 [9082b85c][HTTP] <-- DELETE /session/9082b85c-6eb1-4f48-9026-64aa0ffa3bf0 200 1105 ms - 14 
+2025-06-27 22:17:27:345 [HTTP] --> POST /session {"capabilities":{"firstMatch":[{"appium:noReset":true,"browserName":"Chrome","appium:deviceName":"17fad31f","platformName":"ANDROID","appium:automationName":"UIAutomator2","appium:platformVersion":"11"}]}}
+2025-06-27 22:17:27:349 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'ANDROID'
+2025-06-27 22:17:27:350 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2025-06-27 22:17:27:351 [Appium] Will require it at C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver
+2025-06-27 22:17:27:353 [AppiumDriver@5bbd] Appium v2.19.0 creating new AndroidUiautomator2Driver (v4.2.3) session
+2025-06-27 22:17:27:354 [AppiumDriver@5bbd] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2025-06-27 22:17:27:354 [AppiumDriver@5bbd] Appium's BaseDriver version is 9.18.0
+2025-06-27 22:17:27:355 [AppiumDriver@5bbd] AndroidUiautomator2Driver's BaseDriver version is 9.18.0
+2025-06-27 22:17:27:375 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Session created with session id: 817e3863-52e2-4a54-83c7-2c80f4bbbb06
+2025-06-27 22:17:27:381 [817e3863][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-27 22:17:27:438 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Retrieving device list
+2025-06-27 22:17:27:504 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Looking for a device with Android '11.0.0'
+2025-06-27 22:17:27:506 [817e3863][ADB] Getting device platform version
+2025-06-27 22:17:27:618 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Using device: 17fad31f
+2025-06-27 22:17:27:620 [817e3863][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-27 22:17:27:687 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] We're going to run a Chrome-based session
+2025-06-27 22:17:27:801 [817e3863][ADB] Getting device platform version
+2025-06-27 22:17:28:019 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Chrome-type package and activity are com.android.chrome and com.android.chrome/com.google.android.apps.chrome.Main
+2025-06-27 22:17:28:021 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Starting 'com.android.chrome' directly on the device
+2025-06-27 22:17:28:022 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Relaxing hidden api policy
+2025-06-27 22:17:28:174 [817e3863][ADB] Using 'aapt2.exe' from 'C:\Users\szigl\AppData\Local\Android\Sdk\build-tools\35.0.0-rc4\aapt2.exe'
+2025-06-27 22:17:29:192 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Server packages are not going to be (re)installed
+2025-06-27 22:17:29:355 [817e3863][ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2025-06-27 22:17:29:770 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Starting UIAutomator2 server 7.5.2
+2025-06-27 22:17:29:777 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Using UIAutomator2 server from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v7.5.2.apk' and test from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2025-06-27 22:17:29:778 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Waiting up to 30000ms for UiAutomator2 to be online...
+2025-06-27 22:17:29:813 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] socket hang up
+2025-06-27 22:17:30:849 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] socket hang up
+2025-06-27 22:17:32:019 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Determined the downstream protocol as 'W3C'
+2025-06-27 22:17:32:247 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Screen already unlocked, doing nothing
+2025-06-27 22:17:32:249 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Starting a chrome-based browser session
+2025-06-27 22:17:32:306 [817e3863][Chromedriver@82e0] Found 1 Chromedriver, which is missing in the list of known versions: {"137.0.7151.70":"137"}
+2025-06-27 22:17:32:309 [817e3863][Chromedriver@82e0] No mapping path provided
+2025-06-27 22:17:32:470 [817e3863][Chromedriver@82e0] Set chromedriver binary as: C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-chromedriver\chromedriver\win\chromedriver.exe
+2025-06-27 22:17:32:770 [817e3863][Chromedriver@82e0] Spawning Chromedriver with: C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-chromedriver\chromedriver\win\chromedriver.exe --port=62333 --adb-port=5037 --verbose
+2025-06-27 22:17:32:819 [817e3863][Chromedriver@82e0] connect ECONNREFUSED 127.0.0.1:62333
+2025-06-27 22:17:33:031 [817e3863][Chromedriver@82e0] Chromedriver version: 137.0.7151.70
+2025-06-27 22:17:33:034 [817e3863][Chromedriver@82e0] Starting W3C Chromedriver session with capabilities: {
+  "capabilities": {
+    "alwaysMatch": {
+      "goog:chromeOptions": {
+        "androidPackage": "com.android.chrome",
+        "androidDeviceSerial": "17fad31f"
+      },
+      "goog:loggingPrefs": {
+        "browser": "ALL"
+      }
+    }
+  }
+}
+2025-06-27 22:17:36:737 [817e3863][Chromedriver@82e0] Determined the downstream protocol as 'W3C'
+2025-06-27 22:17:36:740 [817e3863][AppiumDriver@5bbd] New AndroidUiautomator2Driver session created successfully, session 817e3863-52e2-4a54-83c7-2c80f4bbbb06 added to master session list
+2025-06-27 22:17:36:744 [817e3863][HTTP] <-- POST /session 200 9398 ms - 936 
+2025-06-27 22:17:36:776 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/timeouts {"implicit":3000}
+2025-06-27 22:17:36:777 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:36:782 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/timeouts 200 16 ms - 14 
+2025-06-27 22:17:36:797 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/url {"url":"https://katalon-demo-cura.herokuapp.com"}
+2025-06-27 22:17:36:800 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:38:811 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/url 200 2014 ms - 14 
+2025-06-27 22:17:38:820 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:38:855 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync 200 35 ms - 14 
+2025-06-27 22:17:38:863 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context {}
+2025-06-27 22:17:38:872 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context 200 3 ms - 20 
+2025-06-27 22:17:38:877 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element {"value":"menu-toggle","using":"id"}
+2025-06-27 22:17:38:878 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:38:899 [817e3863][Chromedriver@82e0] Got response with status 400: {"value":{"error":"invalid argument","message":"invalid argument: invalid locator\n  (Session info: chrome=137.0.7151.89)","stacktrace":"\tGetHandleVerifier [0x0x7ff7da7ffe75+79173]\n\tGetHandleVerifier [0x0x7ff7da7ffed0+79264]\n\t(No symbol) [0x0x7ff7da5b9e5a]\n\t(No symbol) [0x0x7ff7da61034e]\n\t(No symbol) [0x0x7ff7da61083c]\n\t(No symbol) [0x0x7ff7da664247]\n\t(No symbol) [0x0x7ff7da6389af]\n\t(No symbol) [0x0x7ff7da66100d]\n\t(No symbol) [0x0x7ff7da638743]\n\t(No symbol) [0x0x7ff7da6014c1]\n\t(No symbol) [0x0x7ff7da602253]\n\tGetHandleVerifier [0x0x7ff7daaca2ad+3004797]\n\tGetHandleVerifier [0x0x7ff7daac46fd+2981325]\n\tGetHandleVerifier [0x0x7ff7daae3350+3107360]\n\tGetHandleVerifier [0x0x7ff7da81a9fe+188622]\n\tGetHandleVerifier [0x0x7ff7da82228f+219487]\n\tGetHandleVerifier [0x0x7ff7da808dc4+115860]\n\tGetHandleVerifier [0x0x7ff7da808f79+116297]\n\tGetHandleVerifier [0x0x7ff7da7ef528+11256]\n\tBaseThreadInitThunk [0x0x7ffcc42d7374+20]\n\tRtlUserThreadStart [0x0x7ffcc449cc91+33]\n"}}
+2025-06-27 22:17:38:908 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element 400 25 ms - 1005 
+2025-06-27 22:17:38:911 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element {"value":"#menu\\-toggle","using":"css selector"}
+2025-06-27 22:17:38:912 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:38:980 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element 200 68 ms - 211 
+2025-06-27 22:17:38:988 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.276D324A76606104AC2BC7C3165E7321.e.9/click {"id":"f.ECA7C9097C30B2390DE88697115F874E.d.276D324A76606104AC2BC7C3165E7321.e.9"}
+2025-06-27 22:17:38:989 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:39:450 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.276D324A76606104AC2BC7C3165E7321.e.9/click 200 461 ms - 14 
+2025-06-27 22:17:39:464 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:39:507 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync 200 36 ms - 14 
+2025-06-27 22:17:39:512 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context {}
+2025-06-27 22:17:39:514 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context 200 2 ms - 20 
+2025-06-27 22:17:39:521 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element {"value":"//a[@href='profile.php#login']","using":"xpath"}
+2025-06-27 22:17:39:521 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:39:584 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element 200 63 ms - 213 
+2025-06-27 22:17:39:595 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.276D324A76606104AC2BC7C3165E7321.e.11/click {"id":"f.ECA7C9097C30B2390DE88697115F874E.d.276D324A76606104AC2BC7C3165E7321.e.11"}
+2025-06-27 22:17:39:596 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:40:548 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.276D324A76606104AC2BC7C3165E7321.e.11/click 200 937 ms - 14 
+2025-06-27 22:17:40:551 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:40:598 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync 200 41 ms - 14 
+2025-06-27 22:17:40:604 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context {}
+2025-06-27 22:17:40:615 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context 200 3 ms - 20 
+2025-06-27 22:17:40:617 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element {"value":"#txt\\-username","using":"css selector"}
+2025-06-27 22:17:40:618 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:40:712 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element 200 88 ms - 213 
+2025-06-27 22:17:40:716 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.53581A77A096E714C53B196F3E0DB6D6.e.17/value {"text":"John Doe","value":["J","o","h","n"," ","D","o","e"],"id":"f.ECA7C9097C30B2390DE88697115F874E.d.53581A77A096E714C53B196F3E0DB6D6.e.17"}
+2025-06-27 22:17:40:717 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:41:217 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.53581A77A096E714C53B196F3E0DB6D6.e.17/value 200 499 ms - 14 
+2025-06-27 22:17:41:226 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:41:271 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync 200 40 ms - 14 
+2025-06-27 22:17:41:277 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context {}
+2025-06-27 22:17:41:280 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context 200 4 ms - 20 
+2025-06-27 22:17:41:288 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element {"value":"#txt\\-password","using":"css selector"}
+2025-06-27 22:17:41:290 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:41:347 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element 200 58 ms - 213 
+2025-06-27 22:17:41:355 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.53581A77A096E714C53B196F3E0DB6D6.e.18/value {"text":"invalid_password","value":["i","n","v","a","l","i","d","_","p","a","s","s","w","o","r","d"],"id":"f.ECA7C9097C30B2390DE88697115F874E.d.53581A77A096E714C53B196F3E0DB6D6.e.18"}
+2025-06-27 22:17:41:356 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:41:761 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.53581A77A096E714C53B196F3E0DB6D6.e.18/value 200 398 ms - 14 
+2025-06-27 22:17:41:781 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:41:846 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync 200 74 ms - 14 
+2025-06-27 22:17:41:851 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context {}
+2025-06-27 22:17:41:857 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context 200 2 ms - 20 
+2025-06-27 22:17:41:864 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element {"value":"#btn\\-login","using":"css selector"}
+2025-06-27 22:17:41:865 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:42:072 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element 200 196 ms - 213 
+2025-06-27 22:17:42:078 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync {"script":"arguments[0].click();","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.ECA7C9097C30B2390DE88697115F874E.d.53581A77A096E714C53B196F3E0DB6D6.e.27"}]}
+2025-06-27 22:17:42:898 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync 200 813 ms - 14 
+2025-06-27 22:17:43:286 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:43:371 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync 200 80 ms - 14 
+2025-06-27 22:17:43:384 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context {}
+2025-06-27 22:17:43:389 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context 200 10 ms - 20 
+2025-06-27 22:17:43:399 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:17:43:401 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:43:482 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element 200 87 ms - 213 
+2025-06-27 22:17:43:489 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.C19DA4B8900353EFDC52ADD0D82AD477.e.12/displayed {}
+2025-06-27 22:17:43:491 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:43:587 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.C19DA4B8900353EFDC52ADD0D82AD477.e.12/displayed 200 92 ms - 14 
+2025-06-27 22:17:43:595 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:43:635 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync 200 35 ms - 14 
+2025-06-27 22:17:43:641 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context {}
+2025-06-27 22:17:43:644 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context 200 2 ms - 20 
+2025-06-27 22:17:43:650 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:17:43:651 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:43:733 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element 200 82 ms - 213 
+2025-06-27 22:17:43:743 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.C19DA4B8900353EFDC52ADD0D82AD477.e.12/enabled {}
+2025-06-27 22:17:43:744 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:43:848 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.C19DA4B8900353EFDC52ADD0D82AD477.e.12/enabled 200 105 ms - 14 
+2025-06-27 22:17:43:854 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:43:881 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/execute/sync 200 27 ms - 14 
+2025-06-27 22:17:43:886 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context {}
+2025-06-27 22:17:43:888 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/context 200 2 ms - 20 
+2025-06-27 22:17:43:894 [817e3863][HTTP] --> POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:17:43:896 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:43:939 [817e3863][HTTP] <-- POST /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element 200 44 ms - 213 
+2025-06-27 22:17:43:945 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.C19DA4B8900353EFDC52ADD0D82AD477.e.12/text {}
+2025-06-27 22:17:43:946 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:44:060 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/element/f.ECA7C9097C30B2390DE88697115F874E.d.C19DA4B8900353EFDC52ADD0D82AD477.e.12/text 200 111 ms - 28 
+2025-06-27 22:17:44:063 [817e3863][HTTP] --> GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/url {}
+2025-06-27 22:17:44:064 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:44:100 [817e3863][HTTP] <-- GET /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06/url 200 36 ms - 69 
+2025-06-27 22:17:44:112 [817e3863][HTTP] --> DELETE /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06 {}
+2025-06-27 22:17:44:113 [817e3863][AppiumDriver@5bbd] Removing session 817e3863-52e2-4a54-83c7-2c80f4bbbb06 from our master session list
+2025-06-27 22:17:44:936 [817e3863][38;5;-104m[AndroidUiautomator2Driver@9e6e] Restoring hidden api policy to the device default configuration
+2025-06-27 22:17:45:146 [817e3863][HTTP] <-- DELETE /session/817e3863-52e2-4a54-83c7-2c80f4bbbb06 200 1033 ms - 14 
+2025-06-27 22:17:45:173 [HTTP] --> POST /session {"capabilities":{"firstMatch":[{"appium:noReset":true,"browserName":"Chrome","appium:deviceName":"17fad31f","platformName":"ANDROID","appium:automationName":"UIAutomator2","appium:platformVersion":"11"}]}}
+2025-06-27 22:17:45:176 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'ANDROID'
+2025-06-27 22:17:45:176 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2025-06-27 22:17:45:177 [Appium] Will require it at C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver
+2025-06-27 22:17:45:179 [AppiumDriver@5bbd] Appium v2.19.0 creating new AndroidUiautomator2Driver (v4.2.3) session
+2025-06-27 22:17:45:179 [AppiumDriver@5bbd] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2025-06-27 22:17:45:179 [AppiumDriver@5bbd] Appium's BaseDriver version is 9.18.0
+2025-06-27 22:17:45:180 [AppiumDriver@5bbd] AndroidUiautomator2Driver's BaseDriver version is 9.18.0
+2025-06-27 22:17:45:192 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Session created with session id: f3bbd3de-81b9-47e2-9573-8eef97330d0a
+2025-06-27 22:17:45:195 [f3bbd3de][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-27 22:17:45:247 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Retrieving device list
+2025-06-27 22:17:45:295 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Looking for a device with Android '11.0.0'
+2025-06-27 22:17:45:298 [f3bbd3de][ADB] Getting device platform version
+2025-06-27 22:17:45:408 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Using device: 17fad31f
+2025-06-27 22:17:45:410 [f3bbd3de][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-27 22:17:45:461 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] We're going to run a Chrome-based session
+2025-06-27 22:17:45:569 [f3bbd3de][ADB] Getting device platform version
+2025-06-27 22:17:45:798 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Chrome-type package and activity are com.android.chrome and com.android.chrome/com.google.android.apps.chrome.Main
+2025-06-27 22:17:45:801 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Starting 'com.android.chrome' directly on the device
+2025-06-27 22:17:45:801 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Relaxing hidden api policy
+2025-06-27 22:17:45:956 [f3bbd3de][ADB] Using 'aapt2.exe' from 'C:\Users\szigl\AppData\Local\Android\Sdk\build-tools\35.0.0-rc4\aapt2.exe'
+2025-06-27 22:17:46:881 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Server packages are not going to be (re)installed
+2025-06-27 22:17:47:075 [f3bbd3de][ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2025-06-27 22:17:47:449 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Starting UIAutomator2 server 7.5.2
+2025-06-27 22:17:47:451 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Using UIAutomator2 server from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v7.5.2.apk' and test from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2025-06-27 22:17:47:452 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Waiting up to 30000ms for UiAutomator2 to be online...
+2025-06-27 22:17:47:474 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] socket hang up
+2025-06-27 22:17:48:509 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] socket hang up
+2025-06-27 22:17:49:686 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Determined the downstream protocol as 'W3C'
+2025-06-27 22:17:49:881 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Screen already unlocked, doing nothing
+2025-06-27 22:17:49:883 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Starting a chrome-based browser session
+2025-06-27 22:17:49:949 [f3bbd3de][Chromedriver@7f09] Found 1 Chromedriver, which is missing in the list of known versions: {"137.0.7151.70":"137"}
+2025-06-27 22:17:49:951 [f3bbd3de][Chromedriver@7f09] No mapping path provided
+2025-06-27 22:17:50:073 [f3bbd3de][Chromedriver@7f09] Set chromedriver binary as: C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-chromedriver\chromedriver\win\chromedriver.exe
+2025-06-27 22:17:50:364 [f3bbd3de][Chromedriver@7f09] Spawning Chromedriver with: C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-chromedriver\chromedriver\win\chromedriver.exe --port=62467 --adb-port=5037 --verbose
+2025-06-27 22:17:50:416 [f3bbd3de][Chromedriver@7f09] connect ECONNREFUSED 127.0.0.1:62467
+2025-06-27 22:17:50:636 [f3bbd3de][Chromedriver@7f09] Chromedriver version: 137.0.7151.70
+2025-06-27 22:17:50:639 [f3bbd3de][Chromedriver@7f09] Starting W3C Chromedriver session with capabilities: {
+  "capabilities": {
+    "alwaysMatch": {
+      "goog:chromeOptions": {
+        "androidPackage": "com.android.chrome",
+        "androidDeviceSerial": "17fad31f"
+      },
+      "goog:loggingPrefs": {
+        "browser": "ALL"
+      }
+    }
+  }
+}
+2025-06-27 22:17:54:231 [f3bbd3de][Chromedriver@7f09] Determined the downstream protocol as 'W3C'
+2025-06-27 22:17:54:232 [f3bbd3de][AppiumDriver@5bbd] New AndroidUiautomator2Driver session created successfully, session f3bbd3de-81b9-47e2-9573-8eef97330d0a added to master session list
+2025-06-27 22:17:54:235 [f3bbd3de][HTTP] <-- POST /session 200 9062 ms - 936 
+2025-06-27 22:17:54:249 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/timeouts {"implicit":3000}
+2025-06-27 22:17:54:250 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:54:255 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/timeouts 200 6 ms - 14 
+2025-06-27 22:17:54:269 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/url {"url":"https://katalon-demo-cura.herokuapp.com"}
+2025-06-27 22:17:54:270 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:57:355 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/url 200 3087 ms - 14 
+2025-06-27 22:17:57:363 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:57:405 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync 200 33 ms - 14 
+2025-06-27 22:17:57:408 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context {}
+2025-06-27 22:17:57:410 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context 200 2 ms - 20 
+2025-06-27 22:17:57:416 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element {"value":"menu-toggle","using":"id"}
+2025-06-27 22:17:57:417 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:57:443 [f3bbd3de][Chromedriver@7f09] Got response with status 400: {"value":{"error":"invalid argument","message":"invalid argument: invalid locator\n  (Session info: chrome=137.0.7151.89)","stacktrace":"\tGetHandleVerifier [0x0x7ff7da7ffe75+79173]\n\tGetHandleVerifier [0x0x7ff7da7ffed0+79264]\n\t(No symbol) [0x0x7ff7da5b9e5a]\n\t(No symbol) [0x0x7ff7da61034e]\n\t(No symbol) [0x0x7ff7da61083c]\n\t(No symbol) [0x0x7ff7da664247]\n\t(No symbol) [0x0x7ff7da6389af]\n\t(No symbol) [0x0x7ff7da66100d]\n\t(No symbol) [0x0x7ff7da638743]\n\t(No symbol) [0x0x7ff7da6014c1]\n\t(No symbol) [0x0x7ff7da602253]\n\tGetHandleVerifier [0x0x7ff7daaca2ad+3004797]\n\tGetHandleVerifier [0x0x7ff7daac46fd+2981325]\n\tGetHandleVerifier [0x0x7ff7daae3350+3107360]\n\tGetHandleVerifier [0x0x7ff7da81a9fe+188622]\n\tGetHandleVerifier [0x0x7ff7da82228f+219487]\n\tGetHandleVerifier [0x0x7ff7da808dc4+115860]\n\tGetHandleVerifier [0x0x7ff7da808f79+116297]\n\tGetHandleVerifier [0x0x7ff7da7ef528+11256]\n\tBaseThreadInitThunk [0x0x7ffcc42d7374+20]\n\tRtlUserThreadStart [0x0x7ffcc449cc91+33]\n"}}
+2025-06-27 22:17:57:446 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element 400 29 ms - 1005 
+2025-06-27 22:17:57:452 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element {"value":"#menu\\-toggle","using":"css selector"}
+2025-06-27 22:17:57:453 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:57:514 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element 200 61 ms - 211 
+2025-06-27 22:17:57:521 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.4940C3A5F994D33B26FE19553D80B85A.e.9/click {"id":"f.47DD5189376595E5E0E30FEAEB6C0C0F.d.4940C3A5F994D33B26FE19553D80B85A.e.9"}
+2025-06-27 22:17:57:522 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:57:971 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.4940C3A5F994D33B26FE19553D80B85A.e.9/click 200 450 ms - 14 
+2025-06-27 22:17:57:979 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:58:012 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync 200 33 ms - 14 
+2025-06-27 22:17:58:017 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context {}
+2025-06-27 22:17:58:020 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context 200 2 ms - 20 
+2025-06-27 22:17:58:028 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element {"value":"//a[@href='profile.php#login']","using":"xpath"}
+2025-06-27 22:17:58:033 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:58:099 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element 200 71 ms - 213 
+2025-06-27 22:17:58:105 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.4940C3A5F994D33B26FE19553D80B85A.e.10/click {"id":"f.47DD5189376595E5E0E30FEAEB6C0C0F.d.4940C3A5F994D33B26FE19553D80B85A.e.10"}
+2025-06-27 22:17:58:106 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:58:995 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.4940C3A5F994D33B26FE19553D80B85A.e.10/click 200 889 ms - 14 
+2025-06-27 22:17:59:005 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:59:035 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync 200 30 ms - 14 
+2025-06-27 22:17:59:045 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context {}
+2025-06-27 22:17:59:047 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context 200 2 ms - 20 
+2025-06-27 22:17:59:052 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element {"value":"#txt\\-username","using":"css selector"}
+2025-06-27 22:17:59:056 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:59:110 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element 200 57 ms - 213 
+2025-06-27 22:17:59:115 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.7CC31143868440CC736C73D890663D91.e.14/value {"text":"invalid_username","value":["i","n","v","a","l","i","d","_","u","s","e","r","n","a","m","e"],"id":"f.47DD5189376595E5E0E30FEAEB6C0C0F.d.7CC31143868440CC736C73D890663D91.e.14"}
+2025-06-27 22:17:59:117 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:59:585 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.7CC31143868440CC736C73D890663D91.e.14/value 200 466 ms - 14 
+2025-06-27 22:17:59:591 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:17:59:628 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync 200 36 ms - 14 
+2025-06-27 22:17:59:635 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context {}
+2025-06-27 22:17:59:638 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context 200 3 ms - 20 
+2025-06-27 22:17:59:645 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element {"value":"#txt\\-password","using":"css selector"}
+2025-06-27 22:17:59:646 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:17:59:712 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element 200 67 ms - 213 
+2025-06-27 22:17:59:722 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.7CC31143868440CC736C73D890663D91.e.15/value {"text":"ThisIsNotAPassword","value":["T","h","i","s","I","s","N","o","t","A","P","a","s","s","w","o","r","d"],"id":"f.47DD5189376595E5E0E30FEAEB6C0C0F.d.7CC31143868440CC736C73D890663D91.e.15"}
+2025-06-27 22:17:59:723 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:00:147 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.7CC31143868440CC736C73D890663D91.e.15/value 200 425 ms - 14 
+2025-06-27 22:18:00:154 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:00:219 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync 200 63 ms - 14 
+2025-06-27 22:18:00:231 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context {}
+2025-06-27 22:18:00:243 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context 200 6 ms - 20 
+2025-06-27 22:18:00:247 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element {"value":"#btn\\-login","using":"css selector"}
+2025-06-27 22:18:00:259 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:00:474 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element 200 219 ms - 213 
+2025-06-27 22:18:00:477 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync {"script":"arguments[0].click();","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.47DD5189376595E5E0E30FEAEB6C0C0F.d.7CC31143868440CC736C73D890663D91.e.25"}]}
+2025-06-27 22:18:01:279 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync 200 802 ms - 14 
+2025-06-27 22:18:01:287 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:01:378 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync 200 90 ms - 14 
+2025-06-27 22:18:01:385 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context {}
+2025-06-27 22:18:01:387 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context 200 2 ms - 20 
+2025-06-27 22:18:01:394 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:18:01:395 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:01:479 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element 200 80 ms - 213 
+2025-06-27 22:18:01:483 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.C9D8B6EFE83FE470212B654B7782EC8D.e.12/displayed {}
+2025-06-27 22:18:01:484 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:01:564 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.C9D8B6EFE83FE470212B654B7782EC8D.e.12/displayed 200 77 ms - 14 
+2025-06-27 22:18:01:569 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:01:627 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync 200 56 ms - 14 
+2025-06-27 22:18:01:632 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context {}
+2025-06-27 22:18:01:635 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context 200 2 ms - 20 
+2025-06-27 22:18:01:641 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:18:01:643 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:01:703 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element 200 57 ms - 213 
+2025-06-27 22:18:01:710 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.C9D8B6EFE83FE470212B654B7782EC8D.e.12/enabled {}
+2025-06-27 22:18:01:711 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:01:787 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.C9D8B6EFE83FE470212B654B7782EC8D.e.12/enabled 200 77 ms - 14 
+2025-06-27 22:18:01:795 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:01:844 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/execute/sync 200 48 ms - 14 
+2025-06-27 22:18:01:850 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context {}
+2025-06-27 22:18:01:853 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/context 200 2 ms - 20 
+2025-06-27 22:18:01:858 [f3bbd3de][HTTP] --> POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:18:01:859 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:01:920 [f3bbd3de][HTTP] <-- POST /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element 200 56 ms - 213 
+2025-06-27 22:18:01:928 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.C9D8B6EFE83FE470212B654B7782EC8D.e.12/text {}
+2025-06-27 22:18:01:936 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:02:051 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/element/f.47DD5189376595E5E0E30FEAEB6C0C0F.d.C9D8B6EFE83FE470212B654B7782EC8D.e.12/text 200 120 ms - 28 
+2025-06-27 22:18:02:054 [f3bbd3de][HTTP] --> GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/url {}
+2025-06-27 22:18:02:055 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:02:083 [f3bbd3de][HTTP] <-- GET /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a/url 200 27 ms - 69 
+2025-06-27 22:18:02:098 [f3bbd3de][HTTP] --> DELETE /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a {}
+2025-06-27 22:18:02:100 [f3bbd3de][AppiumDriver@5bbd] Removing session f3bbd3de-81b9-47e2-9573-8eef97330d0a from our master session list
+2025-06-27 22:18:02:938 [f3bbd3de][38;5;-125m[AndroidUiautomator2Driver@ef50] Restoring hidden api policy to the device default configuration
+2025-06-27 22:18:03:149 [f3bbd3de][HTTP] <-- DELETE /session/f3bbd3de-81b9-47e2-9573-8eef97330d0a 200 1053 ms - 14 
+2025-06-27 22:18:03:174 [HTTP] --> POST /session {"capabilities":{"firstMatch":[{"appium:noReset":true,"browserName":"Chrome","appium:deviceName":"17fad31f","platformName":"ANDROID","appium:automationName":"UIAutomator2","appium:platformVersion":"11"}]}}
+2025-06-27 22:18:03:176 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'ANDROID'
+2025-06-27 22:18:03:177 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2025-06-27 22:18:03:178 [Appium] Will require it at C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver
+2025-06-27 22:18:03:181 [AppiumDriver@5bbd] Appium v2.19.0 creating new AndroidUiautomator2Driver (v4.2.3) session
+2025-06-27 22:18:03:182 [AppiumDriver@5bbd] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2025-06-27 22:18:03:182 [AppiumDriver@5bbd] Appium's BaseDriver version is 9.18.0
+2025-06-27 22:18:03:183 [AppiumDriver@5bbd] AndroidUiautomator2Driver's BaseDriver version is 9.18.0
+2025-06-27 22:18:03:193 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Session created with session id: 7b96abc0-322b-4a2b-aad3-8cf48095ec4a
+2025-06-27 22:18:03:195 [7b96abc0][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-27 22:18:03:253 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Retrieving device list
+2025-06-27 22:18:03:305 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Looking for a device with Android '11.0.0'
+2025-06-27 22:18:03:309 [7b96abc0][ADB] Getting device platform version
+2025-06-27 22:18:03:420 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Using device: 17fad31f
+2025-06-27 22:18:03:422 [7b96abc0][ADB] Using 'adb.exe' from 'c:\Users\szigl\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2025-06-27 22:18:03:481 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] We're going to run a Chrome-based session
+2025-06-27 22:18:03:580 [7b96abc0][ADB] Getting device platform version
+2025-06-27 22:18:03:808 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Chrome-type package and activity are com.android.chrome and com.android.chrome/com.google.android.apps.chrome.Main
+2025-06-27 22:18:03:810 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Starting 'com.android.chrome' directly on the device
+2025-06-27 22:18:03:811 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Relaxing hidden api policy
+2025-06-27 22:18:03:955 [7b96abc0][ADB] Using 'aapt2.exe' from 'C:\Users\szigl\AppData\Local\Android\Sdk\build-tools\35.0.0-rc4\aapt2.exe'
+2025-06-27 22:18:04:881 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Server packages are not going to be (re)installed
+2025-06-27 22:18:05:104 [7b96abc0][ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2025-06-27 22:18:05:459 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Starting UIAutomator2 server 7.5.2
+2025-06-27 22:18:05:463 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Using UIAutomator2 server from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v7.5.2.apk' and test from 'C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2025-06-27 22:18:05:464 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Waiting up to 30000ms for UiAutomator2 to be online...
+2025-06-27 22:18:05:491 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] socket hang up
+2025-06-27 22:18:06:521 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] socket hang up
+2025-06-27 22:18:07:710 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Determined the downstream protocol as 'W3C'
+2025-06-27 22:18:07:928 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Screen already unlocked, doing nothing
+2025-06-27 22:18:07:932 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Starting a chrome-based browser session
+2025-06-27 22:18:07:988 [7b96abc0][Chromedriver@a9a6] Found 1 Chromedriver, which is missing in the list of known versions: {"137.0.7151.70":"137"}
+2025-06-27 22:18:07:990 [7b96abc0][Chromedriver@a9a6] No mapping path provided
+2025-06-27 22:18:08:122 [7b96abc0][Chromedriver@a9a6] Set chromedriver binary as: C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-chromedriver\chromedriver\win\chromedriver.exe
+2025-06-27 22:18:08:429 [7b96abc0][Chromedriver@a9a6] Spawning Chromedriver with: C:\Users\szigl\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-chromedriver\chromedriver\win\chromedriver.exe --port=62601 --adb-port=5037 --verbose
+2025-06-27 22:18:08:483 [7b96abc0][Chromedriver@a9a6] connect ECONNREFUSED 127.0.0.1:62601
+2025-06-27 22:18:08:698 [7b96abc0][Chromedriver@a9a6] Chromedriver version: 137.0.7151.70
+2025-06-27 22:18:08:702 [7b96abc0][Chromedriver@a9a6] Starting W3C Chromedriver session with capabilities: {
+  "capabilities": {
+    "alwaysMatch": {
+      "goog:chromeOptions": {
+        "androidPackage": "com.android.chrome",
+        "androidDeviceSerial": "17fad31f"
+      },
+      "goog:loggingPrefs": {
+        "browser": "ALL"
+      }
+    }
+  }
+}
+2025-06-27 22:18:12:283 [7b96abc0][Chromedriver@a9a6] Determined the downstream protocol as 'W3C'
+2025-06-27 22:18:12:285 [7b96abc0][AppiumDriver@5bbd] New AndroidUiautomator2Driver session created successfully, session 7b96abc0-322b-4a2b-aad3-8cf48095ec4a added to master session list
+2025-06-27 22:18:12:287 [7b96abc0][HTTP] <-- POST /session 200 9113 ms - 936 
+2025-06-27 22:18:12:302 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/timeouts {"implicit":3000}
+2025-06-27 22:18:12:304 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:12:310 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/timeouts 200 7 ms - 14 
+2025-06-27 22:18:12:321 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/url {"url":"https://katalon-demo-cura.herokuapp.com"}
+2025-06-27 22:18:12:322 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:14:741 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/url 200 2418 ms - 14 
+2025-06-27 22:18:14:750 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:14:789 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync 200 41 ms - 14 
+2025-06-27 22:18:14:797 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context {}
+2025-06-27 22:18:14:801 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context 200 4 ms - 20 
+2025-06-27 22:18:14:806 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element {"value":"menu-toggle","using":"id"}
+2025-06-27 22:18:14:807 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:14:828 [7b96abc0][Chromedriver@a9a6] Got response with status 400: {"value":{"error":"invalid argument","message":"invalid argument: invalid locator\n  (Session info: chrome=137.0.7151.89)","stacktrace":"\tGetHandleVerifier [0x0x7ff7da7ffe75+79173]\n\tGetHandleVerifier [0x0x7ff7da7ffed0+79264]\n\t(No symbol) [0x0x7ff7da5b9e5a]\n\t(No symbol) [0x0x7ff7da61034e]\n\t(No symbol) [0x0x7ff7da61083c]\n\t(No symbol) [0x0x7ff7da664247]\n\t(No symbol) [0x0x7ff7da6389af]\n\t(No symbol) [0x0x7ff7da66100d]\n\t(No symbol) [0x0x7ff7da638743]\n\t(No symbol) [0x0x7ff7da6014c1]\n\t(No symbol) [0x0x7ff7da602253]\n\tGetHandleVerifier [0x0x7ff7daaca2ad+3004797]\n\tGetHandleVerifier [0x0x7ff7daac46fd+2981325]\n\tGetHandleVerifier [0x0x7ff7daae3350+3107360]\n\tGetHandleVerifier [0x0x7ff7da81a9fe+188622]\n\tGetHandleVerifier [0x0x7ff7da82228f+219487]\n\tGetHandleVerifier [0x0x7ff7da808dc4+115860]\n\tGetHandleVerifier [0x0x7ff7da808f79+116297]\n\tGetHandleVerifier [0x0x7ff7da7ef528+11256]\n\tBaseThreadInitThunk [0x0x7ffcc42d7374+20]\n\tRtlUserThreadStart [0x0x7ffcc449cc91+33]\n"}}
+2025-06-27 22:18:14:834 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element 400 25 ms - 1005 
+2025-06-27 22:18:14:840 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element {"value":"#menu\\-toggle","using":"css selector"}
+2025-06-27 22:18:14:841 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:14:914 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element 200 74 ms - 211 
+2025-06-27 22:18:14:918 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.D5221B7D09262A49583A5E0DD1156A96.e.3/click {"id":"f.D1DB773B7F341A3E0542E4401319EABA.d.D5221B7D09262A49583A5E0DD1156A96.e.3"}
+2025-06-27 22:18:14:920 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:15:372 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.D5221B7D09262A49583A5E0DD1156A96.e.3/click 200 452 ms - 14 
+2025-06-27 22:18:15:379 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:15:430 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync 200 49 ms - 14 
+2025-06-27 22:18:15:437 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context {}
+2025-06-27 22:18:15:441 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context 200 2 ms - 20 
+2025-06-27 22:18:15:445 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element {"value":"//a[@href='profile.php#login']","using":"xpath"}
+2025-06-27 22:18:15:446 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:15:508 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element 200 60 ms - 213 
+2025-06-27 22:18:15:514 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.D5221B7D09262A49583A5E0DD1156A96.e.10/click {"id":"f.D1DB773B7F341A3E0542E4401319EABA.d.D5221B7D09262A49583A5E0DD1156A96.e.10"}
+2025-06-27 22:18:15:515 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:16:467 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.D5221B7D09262A49583A5E0DD1156A96.e.10/click 200 954 ms - 14 
+2025-06-27 22:18:16:477 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:16:509 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync 200 31 ms - 14 
+2025-06-27 22:18:16:514 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context {}
+2025-06-27 22:18:16:517 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context 200 2 ms - 20 
+2025-06-27 22:18:16:521 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element {"value":"#txt\\-username","using":"css selector"}
+2025-06-27 22:18:16:522 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:16:599 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element 200 67 ms - 213 
+2025-06-27 22:18:16:602 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.75E28B943D19B5C6B6609DA5ED4ED1A5.e.16/value {"text":"","value":[],"id":"f.D1DB773B7F341A3E0542E4401319EABA.d.75E28B943D19B5C6B6609DA5ED4ED1A5.e.16"}
+2025-06-27 22:18:16:603 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:16:948 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.75E28B943D19B5C6B6609DA5ED4ED1A5.e.16/value 200 341 ms - 14 
+2025-06-27 22:18:16:952 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:17:009 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync 200 50 ms - 14 
+2025-06-27 22:18:17:012 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context {}
+2025-06-27 22:18:17:015 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context 200 3 ms - 20 
+2025-06-27 22:18:17:023 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element {"value":"#txt\\-password","using":"css selector"}
+2025-06-27 22:18:17:025 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:17:084 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element 200 62 ms - 213 
+2025-06-27 22:18:17:090 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.75E28B943D19B5C6B6609DA5ED4ED1A5.e.17/value {"text":"","value":[],"id":"f.D1DB773B7F341A3E0542E4401319EABA.d.75E28B943D19B5C6B6609DA5ED4ED1A5.e.17"}
+2025-06-27 22:18:17:091 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:17:414 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.75E28B943D19B5C6B6609DA5ED4ED1A5.e.17/value 200 325 ms - 14 
+2025-06-27 22:18:17:420 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:17:448 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync 200 28 ms - 14 
+2025-06-27 22:18:17:452 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context {}
+2025-06-27 22:18:17:456 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context 200 2 ms - 20 
+2025-06-27 22:18:17:464 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element {"value":"#btn\\-login","using":"css selector"}
+2025-06-27 22:18:17:465 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:17:555 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element 200 91 ms - 213 
+2025-06-27 22:18:17:564 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync {"script":"arguments[0].click();","args":[{"element-6066-11e4-a52e-4f735466cecf":"f.D1DB773B7F341A3E0542E4401319EABA.d.75E28B943D19B5C6B6609DA5ED4ED1A5.e.26"}]}
+2025-06-27 22:18:18:238 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync 200 672 ms - 14 
+2025-06-27 22:18:18:252 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:18:300 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync 200 46 ms - 14 
+2025-06-27 22:18:18:305 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context {}
+2025-06-27 22:18:18:310 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context 200 3 ms - 20 
+2025-06-27 22:18:18:314 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:18:18:316 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:18:390 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element 200 76 ms - 213 
+2025-06-27 22:18:18:397 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.828C2261E6AD6CE18010912BE4D6DBA6.e.38/displayed {}
+2025-06-27 22:18:18:398 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:18:475 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.828C2261E6AD6CE18010912BE4D6DBA6.e.38/displayed 200 79 ms - 14 
+2025-06-27 22:18:18:480 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:18:524 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync 200 43 ms - 14 
+2025-06-27 22:18:18:530 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context {}
+2025-06-27 22:18:18:533 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context 200 2 ms - 20 
+2025-06-27 22:18:18:542 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:18:18:555 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:18:609 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element 200 66 ms - 213 
+2025-06-27 22:18:18:615 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.828C2261E6AD6CE18010912BE4D6DBA6.e.38/enabled {}
+2025-06-27 22:18:18:616 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:18:668 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.828C2261E6AD6CE18010912BE4D6DBA6.e.38/enabled 200 47 ms - 14 
+2025-06-27 22:18:18:673 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync {"script":"return !!window.navigator;","args":[]}
+2025-06-27 22:18:18:718 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/execute/sync 200 44 ms - 14 
+2025-06-27 22:18:18:727 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context {}
+2025-06-27 22:18:18:731 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/context 200 7 ms - 20 
+2025-06-27 22:18:18:737 [7b96abc0][HTTP] --> POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element {"value":"//*[text()='Make Appointment']","using":"xpath"}
+2025-06-27 22:18:18:738 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:18:821 [7b96abc0][HTTP] <-- POST /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element 200 84 ms - 213 
+2025-06-27 22:18:18:830 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.828C2261E6AD6CE18010912BE4D6DBA6.e.38/text {}
+2025-06-27 22:18:18:836 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:18:949 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/element/f.D1DB773B7F341A3E0542E4401319EABA.d.828C2261E6AD6CE18010912BE4D6DBA6.e.38/text 200 119 ms - 28 
+2025-06-27 22:18:18:955 [7b96abc0][HTTP] --> GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/url {}
+2025-06-27 22:18:18:957 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Driver proxy active, passing request on via HTTP proxy
+2025-06-27 22:18:18:992 [7b96abc0][HTTP] <-- GET /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a/url 200 36 ms - 69 
+2025-06-27 22:18:19:002 [7b96abc0][HTTP] --> DELETE /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a {}
+2025-06-27 22:18:19:003 [7b96abc0][AppiumDriver@5bbd] Removing session 7b96abc0-322b-4a2b-aad3-8cf48095ec4a from our master session list
+2025-06-27 22:18:19:838 [7b96abc0][38;5;-149m[AndroidUiautomator2Driver@1da2] Restoring hidden api policy to the device default configuration
+2025-06-27 22:18:20:049 [7b96abc0][HTTP] <-- DELETE /session/7b96abc0-322b-4a2b-aad3-8cf48095ec4a 200 1041 ms - 14 
+2025-06-27 22:53:23:915 [Appium] Received SIGINT - shutting down

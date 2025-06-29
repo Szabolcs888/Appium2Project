@@ -1,0 +1,71 @@
+[INFO ] 2025-06-27 18:11:30 - server.AppiumServerManager                  - Appium Server is already running on port 4723 (external process)
+
+[INFO ] 2025-06-27 18:11:30 - listeners.TestListener                      - EndToEnd and Appointment Confirmation test(s) run will start
+[INFO ] 2025-06-27 18:11:31 - curahealthcare.EndToEndTests                - ------- START: Chrome browser -------
+[INFO ] 2025-06-27 18:11:44 - listeners.TestListener                      - Test STARTED: testEndToEnd
+[INFO ] 2025-06-27 18:11:48 - curahealthcare.CuraCommonSteps              - We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+[INFO ] 2025-06-27 18:11:48 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-27 18:11:49 - curahealthcare.HamburgerMenu                - We press the 'Login' button
+[INFO ] 2025-06-27 18:11:50 - curahealthcare.LoginPage                    - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-27 18:11:51 - curahealthcare.LoginPage                    - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-27 18:11:51 - curahealthcare.LoginPage                    - We press the 'Login' button
+[INFO ] 2025-06-27 18:11:52 - utils.BrowserHelper                         - We handle the Chrome password popup window
+[INFO ] 2025-06-27 18:11:57 - curahealthcare.CuraCommonAssertions         - We check if we are on the 'Make Appointment' page
+[INFO ] 2025-06-27 18:11:57 - curahealthcare.CuraCommonAssertions         - We are on the 'Make Appointment' page
+[INFO ] 2025-06-27 18:11:57 - curahealthcare.MakeAppointmentPage          - We press the 'Facility' 'dropdown menu' button
+[INFO ] 2025-06-27 18:11:57 - curahealthcare.MakeAppointmentPage          - We choice the 'Seoul CURA Healthcare Center' option
+[INFO ] 2025-06-27 18:11:59 - curahealthcare.MakeAppointmentPage          - We press the 'Apply for hospital readmission' checkbox
+[INFO ] 2025-06-27 18:11:59 - curahealthcare.MakeAppointmentPage          - We choice the 'Medicare' in the Healthcare Program radio box
+[INFO ] 2025-06-27 18:11:59 - curahealthcare.MakeAppointmentPage          - We fill the 'Visit Date' input field with: '2026-04-12'
+[INFO ] 2025-06-27 18:12:00 - curahealthcare.MakeAppointmentPage          - We write a comment in a comment field: 'Unfortunately, there will be a lot more.'
+[INFO ] 2025-06-27 18:12:01 - curahealthcare.MakeAppointmentPage          - We press the 'Book Appointment' button
+[INFO ] 2025-06-27 18:12:03 - curahealthcare.CuraCommonAssertions         - We check if we are on the 'Appointment Confirmation' page
+[INFO ] 2025-06-27 18:12:03 - curahealthcare.CuraCommonAssertions         - We are on the 'Appointment Confirmation' page
+[INFO ] 2025-06-27 18:12:05 - curahealthcare.CuraCommonAssertions         - We check if the appointment data matches the ones we provided
+[INFO ] 2025-06-27 18:12:05 - curahealthcare.CuraCommonAssertions         - The appointment data is correct on the 'Appointment Confirmation' page
+[INFO ] 2025-06-27 18:12:05 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-27 18:12:06 - curahealthcare.HamburgerMenu                - We press the 'History' button
+[INFO ] 2025-06-27 18:12:08 - curahealthcare.CuraCommonAssertions         - We check if we are on the 'History' page
+[INFO ] 2025-06-27 18:12:08 - curahealthcare.CuraCommonAssertions         - We are on the 'History' page
+[INFO ] 2025-06-27 18:12:09 - curahealthcare.CuraCommonAssertions         - We check if the appointment data matches the ones we provided
+[INFO ] 2025-06-27 18:12:09 - curahealthcare.CuraCommonAssertions         - The appointment data is correct on the 'History' page
+[INFO ] 2025-06-27 18:12:09 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-27 18:12:10 - curahealthcare.HamburgerMenu                - We press the 'Profile' button
+[INFO ] 2025-06-27 18:12:12 - curahealthcare.CuraCommonAssertions         - We check if we are on the 'Profile' page
+[INFO ] 2025-06-27 18:12:12 - curahealthcare.CuraCommonAssertions         - We are on the 'Profile' page
+[INFO ] 2025-06-27 18:12:12 - curahealthcare.ProfilePage                  - We press the 'Logout' button
+[INFO ] 2025-06-27 18:12:14 - curahealthcare.EndToEndTests                - We check if we are on the 'Main' page
+[INFO ] 2025-06-27 18:12:14 - curahealthcare.EndToEndTests                - We are on the 'Main' page
+[INFO ] 2025-06-27 18:12:14 - listeners.TestListener                      - Test PASSED: testEndToEnd
+[INFO ] 2025-06-27 18:12:16 - curahealthcare.EndToEndTests                - ------- STOPPED: Chrome browser -------
+
+[INFO ] 2025-06-27 18:12:16 - curahealthcare.AppointmentConfirmationTests - ------- START: Chrome browser -------
+[INFO ] 2025-06-27 18:12:26 - listeners.TestListener                      - Test STARTED: testAppointmentConfirmation
+[INFO ] 2025-06-27 18:12:29 - curahealthcare.CuraCommonSteps              - We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+[INFO ] 2025-06-27 18:12:29 - curahealthcare.HamburgerMenu                - We press the 'hamburger menu' button
+[INFO ] 2025-06-27 18:12:30 - curahealthcare.HamburgerMenu                - We press the 'Login' button
+[INFO ] 2025-06-27 18:12:31 - curahealthcare.LoginPage                    - We fill the 'Username' input field with the 'valid' username
+[INFO ] 2025-06-27 18:12:31 - curahealthcare.LoginPage                    - We fill the 'Password' input field with the 'valid' password
+[INFO ] 2025-06-27 18:12:32 - curahealthcare.LoginPage                    - We press the 'Login' button
+[INFO ] 2025-06-27 18:12:33 - utils.BrowserHelper                         - We handle the Chrome password popup window
+[INFO ] 2025-06-27 18:12:36 - curahealthcare.MakeAppointmentPage          - We press the 'Facility' 'dropdown menu' button
+[INFO ] 2025-06-27 18:12:36 - curahealthcare.MakeAppointmentPage          - We choice the 'Hongkong CURA Healthcare Center' option
+[INFO ] 2025-06-27 18:12:38 - curahealthcare.MakeAppointmentPage          - We press the 'Apply for hospital readmission' checkbox
+[INFO ] 2025-06-27 18:12:38 - curahealthcare.MakeAppointmentPage          - We choice the 'Medicaid' in the Healthcare Program radio box
+[INFO ] 2025-06-27 18:12:38 - curahealthcare.MakeAppointmentPage          - We fill the 'Visit Date' input field with: '2025-08-16'
+[INFO ] 2025-06-27 18:12:39 - curahealthcare.MakeAppointmentPage          - We write a comment in a comment field: 'I look forward to being there.'
+[INFO ] 2025-06-27 18:12:40 - curahealthcare.MakeAppointmentPage          - We press the 'Book Appointment' button
+[INFO ] 2025-06-27 18:12:42 - curahealthcare.CuraCommonAssertions         - We check if the appointment data matches the ones we provided
+[INFO ] 2025-06-27 18:12:42 - curahealthcare.CuraCommonAssertions         - The appointment data is correct on the 'Appointment Confirmation' page
+[INFO ] 2025-06-27 18:12:42 - listeners.TestListener                      - Test PASSED: testAppointmentConfirmation
+[INFO ] 2025-06-27 18:12:44 - curahealthcare.AppointmentConfirmationTests - ------- STOPPED: Chrome browser -------
+
+[INFO ] 2025-06-27 18:12:44 - listeners.TestListener                      - EndToEnd and Appointment Confirmation test(s) run completed
+
+[INFO ] 2025-06-27 18:12:44 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-27 18:12:44 - summaryLogger                               - EndToEnd and Appointment Confirmation
+[INFO ] 2025-06-27 18:12:44 - summaryLogger                               - Total tests run: 2, Passes: 2, Failures: 0, Skips: 0
+[INFO ] 2025-06-27 18:12:44 - summaryLogger                               - ===============================================
+[INFO ] 2025-06-27 18:13:03 - server.NetlifyUploader                      - Report uploaded to Netlify
+
+[INFO ] 2025-06-27 18:13:07 - service.SendGridEmailService                - Email successfully sent with status code: 202
