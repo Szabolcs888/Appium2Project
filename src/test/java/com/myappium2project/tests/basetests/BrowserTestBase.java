@@ -4,6 +4,7 @@ import com.myappium2project.configdata.environment.BrowserConfig;
 import com.myappium2project.drivers.DriverFactory;
 import com.myappium2project.logging.testlogmessages.CommonTestLogMessages;
 import com.myappium2project.utils.StringUtils;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import java.net.MalformedURLException;
@@ -29,6 +30,7 @@ public class BrowserTestBase extends BaseTestClass {
         LOG.info(CommonTestLogMessages.START_APP_LOG, APP_NAME_LOG);
         driver = DriverFactory.createDriver(BROWSER_TYPE);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
     /**
