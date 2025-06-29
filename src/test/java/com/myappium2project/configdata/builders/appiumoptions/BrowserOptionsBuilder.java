@@ -51,7 +51,7 @@ public final class BrowserOptionsBuilder {
 
         BrowserStackOptions browserStackOptions = switch (browserName) {
             case "chrome" -> BrowserStackOptionsProvider.getChromeOptions();
-            // case "firefox" -> BrowserStackOptionsProvider.getFirefoxOptions(); // Future expansion potential
+         // case "firefox" -> BrowserStackOptionsProvider.getFirefoxOptions(); // Future expansion potential
             default -> null;
         };
 
