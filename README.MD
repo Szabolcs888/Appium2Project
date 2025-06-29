@@ -149,7 +149,7 @@ EndToEnd test (Sauce Labs)
 <td>
 <img src="https://github.com/user-attachments/assets/f0548673-d1b7-473e-9dda-03264b642f4b" alt="Image 2" width="300"/>
 <br>
-Appointment conf. test (Cura Healthcare)
+Appointment conf. test (Cura)
 </td>
 <td>
 <img src="https://github.com/user-attachments/assets/321bfb85-2c23-42b4-9a9c-765efc20f910" alt="Image 3" width="300"/>
@@ -173,14 +173,14 @@ EndToEnd and Appointment tests (Cura)
 <a href="https://www.youtube.com/watch?v=AUADuV_k55I">
 <img src="https://img.youtube.com/vi/AUADuV_k55I/hqdefault.jpg" alt="Video 2" width="300" />
 <br>
-EndToEnd and Cart tests (Sauce Labs)
+EndToEnd and Cart emptying tests (Sauce L.)
 </a>
 </td>
 <td>
 <a href="https://www.youtube.com/watch?v=SFCqrhz8kVc">
 <img src="https://img.youtube.com/vi/SFCqrhz8kVc/hqdefault.jpg" alt="Video 3" width="300" />
 <br>
-Dropdown and Feedback popup tests (Sauce Labs)
+Dropd. and Feedb. popup tests (Sauce L.)
 </a>
 </td>
 </tr>
