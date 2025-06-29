@@ -138,23 +138,23 @@ The `pom.xml` file is configured with the **Maven Surefire Plugin** to run tests
 Any modern Java IDE (e.g., IntelliJ IDEA or Eclipse) with TestNG support allows running tests via a graphical interface, either at the level of individual test suites or even single methods.
 
 ## Screenshots of the Tests
-**Note: I will update the screenshots and videos soon.**
+
 <table>
 <tr>
 <td>
-<img src="https://github.com/user-attachments/assets/ab09e32f-1bd4-436a-acaf-0233c53d481f" alt="Image 1" width="300"/>
+<img src="https://github.com/user-attachments/assets/a24859f8-3442-492a-97e7-6c040f685314" alt="Image 1" width="300"/>
 <br>
 EndToEnd test (Sauce Labs)
 </td>
 <td>
-<img src="https://github.com/user-attachments/assets/4c24d286-97eb-4bbd-a281-610fb9269b27" alt="Image 2" width="300"/>
+<img src="https://github.com/user-attachments/assets/f0548673-d1b7-473e-9dda-03264b642f4b" alt="Image 2" width="300"/>
 <br>
-Login tests (Cura Healthcare)
+Appointment conf. test (Cura Healthcare)
 </td>
 <td>
-<img src="https://github.com/user-attachments/assets/2004eedb-2a4a-4710-9356-9cb9c6a750ee" alt="Image 3" width="300"/>
+<img src="https://github.com/user-attachments/assets/321bfb85-2c23-42b4-9a9c-765efc20f910" alt="Image 3" width="300"/>
 <br>
-Page access tests (Battery Alarm)
+Test on BrowserStack (Sauce Labs)
 </td>
 </tr>
 </table>
@@ -163,22 +163,22 @@ Page access tests (Battery Alarm)
 <table>
 <tr>
 <td>
-<a href="https://www.youtube.com/watch?v=r-YOHGOQKfM">
-<img src="https://img.youtube.com/vi/r-YOHGOQKfM/hqdefault.jpg" alt="Video 1" width="300" />
+<a href="https://www.youtube.com/watch?v=YfV5z6kA3X0">
+<img src="https://img.youtube.com/vi/YfV5z6kA3X0/hqdefault.jpg" alt="Video 1" width="300" />
 <br>
 EndToEnd and Appointment tests (Cura)
 </a>
 </td>
 <td>
-<a href="https://www.youtube.com/watch?v=1mExaSGeGFo">
-<img src="https://img.youtube.com/vi/1mExaSGeGFo/hqdefault.jpg" alt="Video 2" width="300" />
+<a href="https://www.youtube.com/watch?v=AUADuV_k55I">
+<img src="https://img.youtube.com/vi/AUADuV_k55I/hqdefault.jpg" alt="Video 2" width="300" />
 <br>
 EndToEnd and Cart tests (Sauce Labs)
 </a>
 </td>
 <td>
-<a href="https://www.youtube.com/watch?v=M16hOy4muHU">
-<img src="https://img.youtube.com/vi/M16hOy4muHU/hqdefault.jpg" alt="Video 3" width="300" />
+<a href="https://www.youtube.com/watch?v=SFCqrhz8kVc">
+<img src="https://img.youtube.com/vi/SFCqrhz8kVc/hqdefault.jpg" alt="Video 3" width="300" />
 <br>
 Dropdown and Feedback popup tests (Sauce Labs)
 </a>
@@ -186,22 +186,22 @@ Dropdown and Feedback popup tests (Sauce Labs)
 </tr>
 <tr>
 <td>
-<a href="https://www.youtube.com/watch?v=o6Hq22I1mVU">
-<img src="https://img.youtube.com/vi/o6Hq22I1mVU/hqdefault.jpg" alt="Video 4" width="300" />
+<a href="https://www.youtube.com/watch?v=UT8veQOcc8c">
+<img src="https://img.youtube.com/vi/UT8veQOcc8c/hqdefault.jpg" alt="Video 4" width="300" />
 <br>
 Smoke test (all 3 apps/run from a batch file)
 </a>
 </td>
 <td>
-<a href="https://www.youtube.com/watch?v=VM3N6wN20q4">
-<img src="https://img.youtube.com/vi/VM3N6wN20q4/hqdefault.jpg" alt="Video 5" width="300" />
+<a href="https://www.youtube.com/watch?v=VsuDjn6x5Co">
+<img src="https://img.youtube.com/vi/VsuDjn6x5Co/hqdefault.jpg" alt="Video 5" width="300" />
 <br>
 Languages and Alarm tests (Battery Alarm)
 </a>
 </td>
 <td>
-<a href="https://www.youtube.com/watch?v=4P3-qimxOKI">
-<img src="https://img.youtube.com/vi/4P3-qimxOKI/hqdefault.jpg" alt="Video 6" width="300" />
+<a href="https://www.youtube.com/watch?v=nkuSgzNxoJ4">
+<img src="https://img.youtube.com/vi/nkuSgzNxoJ4/hqdefault.jpg" alt="Video 6" width="300" />
 <br>
 Login tests with Data Provider (Cura)
 </a>
