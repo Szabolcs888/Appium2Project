@@ -13,7 +13,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
 /**
- * Utility class responsible for uploading the generated test report to Netlify using the Netlify CLI.
+ * Utility class responsible for uploading the Extent Reports to Netlify using the Netlify CLI.
  * <p>
  * The upload is executed via a shell command built from configuration values defined in {@code config.properties},
  * such as the Bash executable path and Netlify deploy command prefix.
