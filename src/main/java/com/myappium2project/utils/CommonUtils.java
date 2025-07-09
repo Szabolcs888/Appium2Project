@@ -52,8 +52,8 @@ public final class CommonUtils {
      * @param directoryName the name used for logging context
      */
     private static void deleteDirectoryFiles(Path directoryPath, String directoryName) {
-        File dirPathAsString = directoryPath.toFile();
-        File[] files = dirPathAsString.listFiles();
+        File directoryFile = directoryPath.toFile();
+        File[] files = directoryFile.listFiles();
         if (files != null) {
             for (File file : files) {
                 if (file.isFile()) {
