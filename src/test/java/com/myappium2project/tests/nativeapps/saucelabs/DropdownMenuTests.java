@@ -95,6 +95,7 @@ public class DropdownMenuTests extends SauceLabsAppTestBase {
         LOG.info(CHECK_PRODUCT_ORDER_LOG);
         System.out.println(PRODUCT_ORDER_LOG + actual);
         System.out.println(EXPECTED_PRODUCT_ORDER_LOG + expected);
+
         if (actual.equals(expected)) {
             LOG.info(CORRECT_PRODUCT_ORDER_LOG);
         } else {
