@@ -52,7 +52,7 @@ public final class CommonUtils {
      * @param directoryName the name used for logging context
      */
     private static void deleteDirectoryFiles(Path directoryPath, String directoryName) {
-        File dirPathAsString = directoryPath.toFile(); // Path -> File átalakítás
+        File dirPathAsString = directoryPath.toFile();
         File[] files = dirPathAsString.listFiles();
         if (files != null) {
             for (File file : files) {
