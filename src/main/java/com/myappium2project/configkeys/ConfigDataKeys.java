@@ -1,10 +1,10 @@
 package com.myappium2project.configkeys;
 
 /**
- * Enum representing all supported keys found in the {@code config.properties} file.
+ * Enum representing the supported keys found in the {@code config.properties} file.
  * <p>
- * These keys are used to load configuration values such as Appium settings,
- * environment URLs, logging preferences, and other system-level properties.
+ * This centralizes all valid configuration keys used in the framework,
+ * ensuring type safety and reducing errors from hardcoded strings.
  */
 public enum ConfigDataKeys {
     APPIUM_PORT("appium.port"),
