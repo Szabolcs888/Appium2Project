@@ -57,6 +57,7 @@ public final class AppiumActions {
             try {
                 scrollAction(driver, startPoint, endPoint, scrollDuration);
             } catch (Exception _) {
+            // Scroll failure is expected occasionally due to popup interference – no action required
             }
         }
     }
