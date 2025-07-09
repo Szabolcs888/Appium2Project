@@ -62,7 +62,6 @@ public final class HtmlEmailReportBuilder {
                 .append(".result-table th.test-column { width: 35%; }")
                 .append(".result-table th.status-column, .result-table td.status-column { width: 15%; }")
                 .append(".result-table th.duration-column, .result-table td.duration-column { width: 15%; }")
-
                 .append("</style></head><body>");
 
         html.append("<h2>Automated Test Report</h2>");
