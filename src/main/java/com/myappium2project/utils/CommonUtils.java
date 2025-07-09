@@ -58,7 +58,7 @@ public final class CommonUtils {
             for (File file : files) {
                 if (file.isFile()) {
                     if (file.delete()) {
-                        LOG.debug("Deleted file from the actualReportScreenshots directory: {}", file.getName());
+                        LOG.debug("Deleted file from the {} directory: {}", directoryName, file.getName());
                     } else {
                         LOG.warn("Failed to delete file from the {} directory: {}", directoryName, file.getName());
                     }
