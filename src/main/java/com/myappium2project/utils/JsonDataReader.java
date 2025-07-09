@@ -20,14 +20,13 @@ public final class JsonDataReader {
     }
 
     /**
-     * Reads a JSON file from the classpath and deserializes it into an object of the specified type.
+     * Reads a JSON file from the resources folder and maps it to an object of the specified class.
      *
-     * @param filePath the relative path to the JSON resource file (e.g. {@code "data/user.json"})
-     * @param clazz    the target class type for deserialization
-     * @param <T>      the type of the resulting object
-     * @return a deserialized object of type {@code T}
-     * @throws IllegalArgumentException if the file is not found
-     * @throws RuntimeException         if deserialization fails
+     * @param filePath The path of the JSON file inside the resources directory (e.g., "data/user.json").
+     * @param clazz    The class to which the JSON should be mapped (e.g., User.class).
+     * @param <T>      The type of the object to be returned.
+     * @return An instance of type T populated with data from the JSON file.
+     * @throws JsonReadException If the file is not found or deserialization fails.
      */
     public static <T> T readJsonFromResource(String filePath, Class<T> clazz) {
         try (InputStream inputStream = ClassLoader.getSystemResourceAsStream(filePath)) {
@@ -41,14 +40,13 @@ public final class JsonDataReader {
     }
 
     /**
-     * Reads a JSON file from the classpath and deserializes it into a list of the specified element type.
+     * Reads a JSON array file from the resources folder and maps it to a List of the specified type.
      *
-     * @param filePath    the relative path to the JSON resource file (e.g. {@code "data/users.json"})
-     * @param elementType the class of the list's element type
-     * @param <T>         the type of elements in the resulting list
-     * @return a list of deserialized objects of type {@code T}
-     * @throws IllegalArgumentException if the file is not found
-     * @throws RuntimeException         if deserialization fails
+     * @param filePath    The path to the JSON array file inside resources (e.g., "data/users.json").
+     * @param elementType The class of the elements contained in the list (e.g., User.class).
+     * @param <T>         The type of elements in the returned list.
+     * @return A List of objects of type T populated with data from the JSON array.
+     * @throws JsonReadException If the file is not found or the deserialization fails.
      */
     public static <T> List<T> readJsonListFromResource(String filePath, Class<T> elementType) {
         try (InputStream inputStream = ClassLoader.getSystemResourceAsStream(filePath)) {

@@ -5,10 +5,6 @@ import com.myappium2project.configdata.models.options.browserstack.BrowserStackO
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Utility class for converting {@link BrowserStackOptions} into a Map-based
- * capabilities representation compatible with BrowserStack's desired capabilities format.
- */
 public final class BrowserStackCapabilityMapper {
 
     private BrowserStackCapabilityMapper() {
