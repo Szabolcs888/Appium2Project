@@ -5,6 +5,7 @@ import com.myappium2project.configdata.providers.accounts.SauceLabsAppAccountPro
 import com.myappium2project.tests.basetests.SauceLabsAppTestBase;
 import com.myappium2project.testsgroups.TestGroups;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.nativeapps.saucelabs.HamburgerMenu;
 import com.myappium2project.pages.nativeapps.saucelabs.ProductsPage;
@@ -19,9 +20,15 @@ public class FeedbackPopupTests extends SauceLabsAppTestBase {
     private static final String EXPECTED_POPUP_TEXT = "Thank you for submitting your review!";
     private static final SauceLabsAppAccount SAUCE_ACC1 = SauceLabsAppAccountProvider.getAccount(0);
 
+    private ProductsPage productPage;
+
+    @BeforeMethod(alwaysRun = true)
+    public void initializeProductsPage() {
+        productPage = new ProductsPage(driver);
+    }
+
     @Test(priority = 1)
     public void testFeedbackPopupOnProductsPageWithoutLoggedIn() {
-        ProductsPage productPage = new ProductsPage(driver);
         productPage.pressDropdownMenuButton();
         productPage.pressAbcOrderOption();
         productPage.pressThirdStarButtonUnderBackpack();
@@ -40,7 +47,6 @@ public class FeedbackPopupTests extends SauceLabsAppTestBase {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver, wait);
         SauceLabsCommonSteps.loginToSauceLabs(driver, hamburgerMenu, SAUCE_ACC1);
 
-        ProductsPage productPage = new ProductsPage(driver);
         productPage.pressDropdownMenuButton();
         productPage.pressAbcOrderOption();
         productPage.pressFleeceJacketProductText();
