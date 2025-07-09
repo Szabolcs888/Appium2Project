@@ -8,12 +8,6 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/**
- * Utility class for generating file paths for Appium server log output.
- * <p>
- * Constructs the path based on configuration properties and the current timestamp.
- * Ensures the target directory exists before returning the full log file path.
- */
 public final class LogUtils {
 
     private LogUtils() {
