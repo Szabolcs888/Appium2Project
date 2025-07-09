@@ -67,7 +67,7 @@ public final class SendGridEmailService {
         String extentReportLink = ConfigReader.get(ConfigDataKeys.REPORT_NETLIFY_URL.getKey());
         String extentReportLinkInHtml = getHtmlLink(extentReportLink);
 
-        logMissingFiles(extentReportPath, logDirPath);
+        logMissingFiles(extentReportPath, logDirPath, serverLogDirPath);
 
         String htmlContent;
         if (results == null || results.isEmpty()) {
@@ -85,12 +85,15 @@ public final class SendGridEmailService {
         }
     }
 
-    private static void logMissingFiles(String extentReportPath, String logPath) {
+    private static void logMissingFiles(String extentReportPath, String logPath, String serverLogPath) {
         if (!Files.exists(Path.of(extentReportPath))) {
             LOG.error("The extent-report.html not found: {}", extentReportPath);
         }
         if (!Files.exists(Path.of(logPath))) {
-            LOG.warn("Log file not found: {}", logPath);
+            LOG.warn("Test log file not found: {}", logPath);
+        }
+        if (!Files.exists(Path.of(serverLogPath))) {
+            LOG.warn("Server log file not found: {}", serverLogPath);
         }
     }
 
