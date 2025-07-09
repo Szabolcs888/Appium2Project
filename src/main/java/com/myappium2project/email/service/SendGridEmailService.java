@@ -142,11 +142,12 @@ public final class SendGridEmailService {
             request.setEndpoint("mail/send");
             request.setBody(mail.build());
             Response response = sendGrid.api(request);
+            int httpStatusCode = response.getStatusCode();
             int httpStatusAccepted = 202;
-            if (response.getStatusCode() == httpStatusAccepted) {
-                LOG.info("Email successfully sent with status code: {}", response.getStatusCode());
+            if (httpStatusCode == httpStatusAccepted) {
+                LOG.info("Email successfully sent with status code: {}", httpStatusCode);
             } else {
-                LOG.error("Failed to send email! Status code: {}", response.getStatusCode());
+                LOG.error("Failed to send email! Status code: {}", httpStatusCode);
             }
         } catch (IOException ex) {
             LOG.error("Failed to send email: {}", ex.getMessage());
