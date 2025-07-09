@@ -17,7 +17,7 @@ import java.time.Duration;
  * Utility class providing reusable Appium-based actions for Android automation.
  * <p>
  * Includes helper methods for navigation, scrolling, and touch gestures
- * such as long-press or free coordinate scrolling.
+ * such as free coordinate scrolling.
  * <p>
  * These methods abstract low-level Appium interactions into more readable and maintainable operations.
  * All actions are logged for easier debugging and test result tracing.
