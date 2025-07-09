@@ -4,8 +4,8 @@ package com.myappium2project.configdata.models.testinputs;
  * Data model representing input values and expected outcomes for login tests
  * of the CURA Healthcare web application.
  * <p>
- * Primarily used with data-driven test methods (e.g., TestNG DataProviders)
- * to validate different login scenarios including valid and invalid credentials.
+ * Used with data-driven test method (TestNG DataProviders) to validate
+ * different login scenarios including valid and invalid credentials.
  */
 public class CuraDataProviderLoginData {
     private String username;
