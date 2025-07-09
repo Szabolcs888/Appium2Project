@@ -60,9 +60,7 @@ public final class BrowserOptionsBuilder {
                 .setAutomationName(optionsData.getAutomationName())
                 .setDeviceName(optionsData.getDeviceName())
                 .setCapability("browserName", optionsData.getBrowserName());
-        if (browserStackOptions != null) {
-            options.setCapability("bstack:options", BrowserStackCapabilityMapper.buildFrom(browserStackOptions));
-        }
+        options.setCapability("bstack:options", BrowserStackCapabilityMapper.buildFrom(browserStackOptions));
 
      // System.out.println("Final Capabilities sent to BrowserStack: " + options.asMap()); // Very useful for debugging!
         return options;
