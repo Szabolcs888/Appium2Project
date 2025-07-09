@@ -12,7 +12,7 @@ import com.myappium2project.pages.webapps.curahealthcare.LoginPage;
 import com.myappium2project.pages.webapps.curahealthcare.MakeAppointmentPage;
 
 /**
- * Integration test class for login functionality of the Cura Healthcare web application.
+ * Test class for login functionality of the Cura Healthcare web application.
  * <p>
  * This test class uses TestNG's DataProvider to verify login behavior with various credential combinations.
  * It dynamically sets the test name for better reporting via the {@link ITest} interface.
@@ -23,7 +23,7 @@ public class DataProviderTests extends BrowserTestBase implements ITest {
     private static final int LOGIN_DATA_MIN_LENGTH = 4;
 
     /**
-     * Stores the current test name for use with TestNG and reporting tools (e.g., Allure, ExtentReports).
+     * Stores the current test name for use with TestNG and reporting tools (e.g. ExtentReports).
      * Ensures each test case generated via DataProvider has a descriptive name.
      */
     private static final ThreadLocal<String> testName = new ThreadLocal<>();
