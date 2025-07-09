@@ -43,12 +43,14 @@ public final class HtmlEmailReportBuilder {
 
         StringBuilder html = new StringBuilder(2000);
 
+        // Inline CSS in the HTML header
         html.append("<html><head><style>")
                 .append("body { font-family: Arial, sans-serif; }")
                 .append("table { border-collapse: collapse; width: 100%; margin-top: 20px; }")
                 .append("th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }")
                 .append("th { background-color: #E8EDDE; color: #333; }")
 
+                // Statistical table (summary) style
                 .append(".stats-table { width: 40%; margin-top: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-collapse: collapse; }")
                 .append(".stats-table th, .stats-table td { border: 1px solid #ccc; padding: 8px; text-align: center; }")
                 .append(".stats-table th { width: 25%; }")
@@ -56,6 +58,7 @@ public final class HtmlEmailReportBuilder {
                 .append(".fail { color: red; }")
                 .append(".skip { color: orange; }")
 
+                // Detailed test results style
                 .append(".result-table th { background-color: #4CAF50; color: white; }")
                 .append("th.suite-header { background-color: #E7F5E5 !important; color: #222; font-weight: bold; text-align: center; padding: 8px; font-size: 1.1em; }")
                 .append(".result-table th.class-column { width: 35%; }")
@@ -64,13 +67,16 @@ public final class HtmlEmailReportBuilder {
                 .append(".result-table th.duration-column, .result-table td.duration-column { width: 15%; }")
                 .append("</style></head><body>");
 
+        // Header title
         html.append("<h2>Automated Test Report</h2>");
 
+        // Runtime information (timestamps, durations)
         html.append("<p><strong>Start:</strong>&nbsp;").append(startTime)
                 .append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Total duration:</strong> ").append(totalFormatted)
                 .append("<br>&nbsp;<strong>End:</strong>&nbsp;").append(endTime)
                 .append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Average per test:</strong> ").append(averageFormatted).append("</p>");
 
+        // Summary table: how many PASS/FAIL/SKIPs there were
         html.append("<table class='stats-table'>")
                 .append("<tr>")
                 .append("<th>Total</th><th>Passed</th><th>Failed</th><th>Skipped</th>")
@@ -83,6 +89,7 @@ public final class HtmlEmailReportBuilder {
                 .append("</tr>")
                 .append("</table>");
 
+        // Detailed scoreboard header
         html.append("<table class='result-table'>")
                 .append("<tr><th colspan='4' class='suite-header'>").append(suiteName).append("</th></tr>")
                 .append("<tr>")
@@ -92,6 +99,7 @@ public final class HtmlEmailReportBuilder {
                 .append("<th class='duration-column'>Duration</th>")
                 .append("</tr>");
 
+        // Append test results row by row
         for (TestResult result : results) {
             String statusClass = switch (result.getStatus().toUpperCase(Locale.ENGLISH)) {
                 case "PASS" -> "pass";
@@ -100,6 +108,7 @@ public final class HtmlEmailReportBuilder {
                 default -> "";
             };
 
+            // Append a row to the results table
             html.append("<tr>")
                     .append("<td class='class-column'>").append(result.getClassName()).append("</td>")
                     .append("<td class='test-column'>").append(result.getName()).append("</td>")
@@ -108,6 +117,7 @@ public final class HtmlEmailReportBuilder {
                     .append("</tr>");
         }
 
+        // Close HTML
         html.append("</table></body></html>");
 
         return html.toString();
