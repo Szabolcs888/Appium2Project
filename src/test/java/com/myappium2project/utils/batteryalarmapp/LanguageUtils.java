@@ -52,6 +52,7 @@ public final class LanguageUtils {
                 try {
                     languagesDropdownMenu.pressLanguageSelectorDropdownMenuButton();
                 } catch (NoSuchElementException _) {
+                // Action might fail due to popup interference – safe to ignore
                 }
                 AppiumActions.scrollWithFreeCoordinates(
                         driver, 2, 112,
