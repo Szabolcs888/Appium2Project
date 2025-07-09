@@ -13,6 +13,9 @@ import com.myappium2project.pages.webapps.curahealthcare.HamburgerMenu;
 import com.myappium2project.pages.webapps.curahealthcare.LoginPage;
 import com.myappium2project.pages.webapps.curahealthcare.MakeAppointmentPage;
 
+/**
+ * Verifies the login functionality for the app with valid and/or invalid credentials.
+ */
 public class LoginTests extends BrowserTestBase {
     private static final String EXPECTED_ERROR_MESSAGE = "Login failed! Please ensure the username and password are valid.";
     private static final CuraHealthcareAccount CURA_ACC1 = CuraHealthcareAccountProvider.getAccount(0);

@@ -7,6 +7,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.myappium2project.pages.nativeapps.saucelabs.HamburgerMenu;
 
+/**
+ * Verifies that each page in the application can be accessed via the main navigation menu.
+ */
 public class PageAccessTests extends SauceLabsAppTestBase {
     private HamburgerMenu hamburgerMenu;
 

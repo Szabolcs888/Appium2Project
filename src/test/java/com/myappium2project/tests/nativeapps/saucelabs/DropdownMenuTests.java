@@ -11,6 +11,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Tests the sorting functionality of the dropdown menu on the Sauce Labs app's product listing page.
+ * Verifies correct ordering of products by name and price.
+ */
 @Test(groups = {TestGroups.INTEGRATION})
 public class DropdownMenuTests extends SauceLabsAppTestBase {
     private static final String CHECK_PRODUCT_ORDER_LOG = "We check if the products are in the correct order";

@@ -10,6 +10,10 @@ import com.myappium2project.pages.nativeapps.saucelabs.HamburgerMenu;
 import com.myappium2project.pages.nativeapps.saucelabs.ProductsPage;
 import com.myappium2project.pages.nativeapps.saucelabs.productspages.FleeceJacketPage;
 
+/**
+ * Verifies the behavior of the feedback popup window in the Sauce Labs demo app
+ * under different user states (logged in and not logged in).
+ */
 @Test(groups = {TestGroups.INTEGRATION})
 public class FeedbackPopupTests extends SauceLabsAppTestBase {
     private static final String EXPECTED_POPUP_TEXT = "Thank you for submitting your review!";

@@ -17,6 +17,10 @@ import java.util.List;
 public class AppointmentConfirmationTests extends BrowserTestBase {
     private static final CuraHealthcareAccount CURA_ACC1 = CuraHealthcareAccountProvider.getAccount(0);
 
+    /**
+     * Test that verifies appointment data is correctly displayed on the confirmation page
+     * after a successful booking in the Cura Healthcare web app.
+     */
     @Test
     public void testAppointmentConfirmation() {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);

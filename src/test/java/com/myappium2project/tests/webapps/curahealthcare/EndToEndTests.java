@@ -19,6 +19,10 @@ import java.util.List;
 public class EndToEndTests extends BrowserTestBase {
     private static final CuraHealthcareAccount CURA_ACC2 = CuraHealthcareAccountProvider.getAccount(1);
 
+    /**
+     * End-to-end test for Cura Healthcare's appointment workflow,
+     * covering login, booking, confirmation, history verification, and logout.
+     */
     @Test
     public void testEndToEnd() {
         HamburgerMenu hamburgerMenu = new HamburgerMenu(driver);

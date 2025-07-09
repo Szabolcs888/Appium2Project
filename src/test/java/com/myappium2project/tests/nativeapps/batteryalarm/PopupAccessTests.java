@@ -8,6 +8,9 @@ import com.myappium2project.utils.batteryalarmapp.LanguageUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+/**
+ * Validates the visibility and dismissal behavior of the warning popup.
+ */
 public class PopupAccessTests extends BatteryAlarmAppTestBase {
     private static final String CHECK_POPUP_VISIBILITY_LOG = "We check if the '{}' popup window {}";
     private static final String POPUP_VISIBILITY_LOG = "The '{}' popup window {}";

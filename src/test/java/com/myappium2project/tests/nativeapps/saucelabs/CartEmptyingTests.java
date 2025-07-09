@@ -9,6 +9,10 @@ import com.myappium2project.testsgroups.TestGroups;
 import com.myappium2project.utils.common.AppiumActions;
 import org.testng.annotations.Test;
 
+/**
+ * End-to-end test for verifying that items can be added to the cart and then successfully removed.
+ * Covers full product selection, navigation, and cart-clearing workflow.
+ */
 @Test(groups = {TestGroups.E2E})
 public class CartEmptyingTests extends SauceLabsAppTestBase {
     private static final SauceLabsAppAccount SAUCE_ACC1 = SauceLabsAppAccountProvider.getAccount(0);

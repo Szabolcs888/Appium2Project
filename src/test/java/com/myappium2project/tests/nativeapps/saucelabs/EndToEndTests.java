@@ -16,6 +16,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Performs full end-to-end tests.
+ * Covers complete shopping flows both with login before and after product selection,
+ * including product selection, cart validation, checkout, and logout.
+ */
 @Test(groups = {TestGroups.E2E})
 public class EndToEndTests extends SauceLabsAppTestBase {
     private static final SauceLabsAppAccount SAUCE_ACC1 = SauceLabsAppAccountProvider.getAccount(0);

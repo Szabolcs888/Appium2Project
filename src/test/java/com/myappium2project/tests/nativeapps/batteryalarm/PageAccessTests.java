@@ -12,6 +12,10 @@ import com.myappium2project.pages.nativeapps.batteryalarm.LanguagesDropdownMenu;
 import com.myappium2project.pages.nativeapps.batteryalarm.MainPage;
 import com.myappium2project.tests.basetests.BatteryAlarmAppTestBase;
 
+/**
+ * Verifies that key pages of the application are displayed correctly when accessed.
+ */
+
 public class PageAccessTests extends BatteryAlarmAppTestBase {
     private MainPage mainPage;
     private LanguagesDropdownMenu languagesDropdownMenu;

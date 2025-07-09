@@ -13,6 +13,9 @@ import com.myappium2project.pages.webapps.curahealthcare.HamburgerMenu;
 import com.myappium2project.pages.webapps.curahealthcare.HistoryPage;
 import com.myappium2project.pages.webapps.curahealthcare.ProfilePage;
 
+/**
+ * Verifies that each page in the application can be accessed via the main navigation menu.
+ */
 public class PageAccessTests extends BrowserTestBase {
     private static final CuraHealthcareAccount CURA_ACC1 = CuraHealthcareAccountProvider.getAccount(0);
 

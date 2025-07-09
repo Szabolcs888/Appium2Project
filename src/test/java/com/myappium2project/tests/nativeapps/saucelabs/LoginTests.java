@@ -13,6 +13,9 @@ import com.myappium2project.pages.nativeapps.saucelabs.ProductsPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+/**
+ * Verifies the login functionality for the app with valid and/or invalid credentials.
+ */
 public class LoginTests extends SauceLabsAppTestBase {
     private static final String EXPECTED_ERROR_MESSAGE_INCORRECT_DATA = "Provided credentials do not match any user in this service.";
     private static final String EXPECTED_ERROR_MESSAGE_EMPTY_USERNAME = "Username is required";
