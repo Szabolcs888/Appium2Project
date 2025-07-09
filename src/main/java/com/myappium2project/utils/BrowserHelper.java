@@ -24,7 +24,7 @@ public class BrowserHelper {
     private WebDriverWait wait;
 
     @FindBy(id = "com.android.chrome:id/positive_button")
-    private WebElement popup;
+    private WebElement okButtonOnPopup;
 
     public BrowserHelper(AndroidDriver driver, WebDriverWait wait) {
         this.driver = driver;
@@ -37,7 +37,7 @@ public class BrowserHelper {
         String webContext = driver.getContext();
         try {
             driver.context("NATIVE_APP");
-            wait.until(ExpectedConditions.elementToBeClickable(popup)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(okButtonOnPopup)).click();
         } catch (Exception e) {
             LOG.warn("Password popup not found or could not be dismissed.");
             driver.context(webContext);
