@@ -5,7 +5,6 @@ import com.myappium2project.configdata.models.accounts.CuraHealthcareAccount;
 import com.myappium2project.utils.JsonDataReader;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -16,7 +15,7 @@ import java.util.List;
  */
 public final class CuraHealthcareAccountProvider {
     private static final List<CuraHealthcareAccount> accounts =
-            Arrays.asList(JsonDataReader.readJsonFromResource(TestPaths.CURA_ACCOUNTS_JSON, CuraHealthcareAccount[].class));
+            JsonDataReader.readJsonListFromResource(TestPaths.CURA_ACCOUNTS_JSON, CuraHealthcareAccount.class);
 
     private CuraHealthcareAccountProvider() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");

@@ -5,7 +5,6 @@ import com.myappium2project.configdata.models.accounts.SauceLabsAppAccount;
 import com.myappium2project.utils.JsonDataReader;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -16,7 +15,7 @@ import java.util.List;
  */
 public final class SauceLabsAppAccountProvider {
     private static final List<SauceLabsAppAccount> accounts =
-            Arrays.asList(JsonDataReader.readJsonFromResource(TestPaths.SLABS_ACCOUNTS_JSON, SauceLabsAppAccount[].class));
+            JsonDataReader.readJsonListFromResource(TestPaths.SLABS_ACCOUNTS_JSON, SauceLabsAppAccount.class);
 
     private SauceLabsAppAccountProvider() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
