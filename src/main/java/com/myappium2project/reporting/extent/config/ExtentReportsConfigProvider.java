@@ -1,7 +1,6 @@
-package com.myappium2project.configdata.providers.reportconfig;
+package com.myappium2project.reporting.extent;
 
-import com.myappium2project.configdata.configpaths.TestPaths;
-import com.myappium2project.configdata.models.reportconfig.ExtentReportsConfig;
+import com.myappium2project.configpaths.MainPaths;
 import com.myappium2project.utils.JsonDataReader;
 
 /**
@@ -12,7 +11,7 @@ import com.myappium2project.utils.JsonDataReader;
 public final class ExtentReportsConfigProvider {
 
     private static final ExtentReportsConfig reportConfig =
-            JsonDataReader.readJsonFromResource(TestPaths.EXTENT_REPORTS_CONFIG_JSON, ExtentReportsConfig.class);
+            JsonDataReader.readJsonFromResource(MainPaths.EXTENT_REPORTS_CONFIG_JSON, ExtentReportsConfig.class);
 
     private ExtentReportsConfigProvider() {
         throw new UnsupportedOperationException("Utility class cannot be instantiated");
