@@ -3,7 +3,8 @@ package com.myappium2project.listeners;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.myappium2project.email.models.TestResult;
+import com.myappium2project.reporting.email.models.TestResult;
+import com.myappium2project.reporting.extent.initializer.ExtentReportInitializer;
 import com.myappium2project.tests.basetests.SauceLabsAppTestBase;
 import com.myappium2project.utils.common.ScreenshotUtils;
 import com.myappium2project.utils.common.TestRunContextHolder;
@@ -52,7 +53,7 @@ public class TestListener implements ITestListener {
         TestRunContextHolder.setSuiteName(currentSuiteName);
 
         LOG.info("{} test(s) run will start", currentSuiteName);
-        extentReports = ExtentAppender.setupExtentReports();
+        extentReports = ExtentReportInitializer.create();
     }
 
     /**
@@ -116,15 +117,7 @@ public class TestListener implements ITestListener {
         ExtentAppender.setExtentTest(null);
         LOG.info("{} test(s) run completed{}", currentSuiteName, System.lineSeparator());
 
-        int numberOfTests = context.getAllTestMethods().length;
-        int numberOfPassedTests = context.getPassedTests().size();
-        int numberOfFailedTests = context.getFailedTests().size();
-        int numberOfSkippedTests = context.getSkippedTests().size();
-        SUMMARY_LOG.info("===============================================");
-        SUMMARY_LOG.info(currentSuiteName);
-        SUMMARY_LOG.info("Total tests run: {}, Passes: {}, Failures: {}, Skips: {}",
-                numberOfTests, numberOfPassedTests, numberOfFailedTests, numberOfSkippedTests);
-        SUMMARY_LOG.info("===============================================");
+        logSummary(context);
     }
 
     /**
@@ -178,6 +171,28 @@ public class TestListener implements ITestListener {
         String durationFormatted = String.format("%.2f s", durationSeconds);
 
         return new TestResult(testName, combined, status, durationFormatted, durationSeconds);
+    }
+
+    /**
+     * Logs a summary of the test suite execution, including total,
+     * passed, failed, and skipped test counts.
+     * <p>
+     * The output is written to the summary log file (not the console),
+     * using the {@code summaryLogger} configured in Log4j.
+     *
+     * @param context the TestNG test context containing result statistics
+     */
+    private void logSummary(ITestContext context) {
+        int numberOfTests = context.getAllTestMethods().length;
+        int numberOfPassedTests = context.getPassedTests().size();
+        int numberOfFailedTests = context.getFailedTests().size();
+        int numberOfSkippedTests = context.getSkippedTests().size();
+
+        SUMMARY_LOG.info("===============================================");
+        SUMMARY_LOG.info(currentSuiteName);
+        SUMMARY_LOG.info("Total tests run: {}, Passes: {}, Failures: {}, Skips: {}",
+                numberOfTests, numberOfPassedTests, numberOfFailedTests, numberOfSkippedTests);
+        SUMMARY_LOG.info("===============================================");
     }
 
     public static List<TestResult> getResults() {
