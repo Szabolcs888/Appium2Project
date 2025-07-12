@@ -38,8 +38,8 @@ public class SauceLabsAppTestBase extends BaseTestClass {
      */
     @AfterMethod(alwaysRun = true)
     public void tearDownMethod() {
-        driver.terminateApp(AppiumOptionsProvider.getAppiumOptions(APP_NAME).getAppPackage());
         if (driver != null) {
+            driver.terminateApp(AppiumOptionsProvider.getAppiumOptions(APP_NAME).getAppPackage());
             driver.quit();
         }
         LOG.info(CommonTestLogMessages.STOPPED_APP_LOG, APP_NAME_LOG);
