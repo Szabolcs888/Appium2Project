@@ -11,21 +11,21 @@ The **Appium 2 Project** is a Java-based test automation framework built with Ap
 
 ---
 
-## Table of contents
+## Table of Contents
 
-- [About the project](#about-the-project)
-- [Key features and technical solutions](#key-features-and-technical-solutions)
-- [Tech stack](#tech-stack)
-- [Tested applications](#tested-applications)
-- [Setup and prerequisites](#setup-and-prerequisites)
-  - [Prerequisites for execution](#prerequisites-for-execution)
-- [Usage and running tests](#usage-and-running-tests)
+- [About the Project](#about-the-project)
+- [Key Features and Technical Solutions](#key-features-and-technical-solutions)
+- [Tech Stack](#tech-stack)
+- [Tested Applications](#tested-applications)
+- [Setup and Prerequisites](#setup-and-prerequisites)
+  - [Prerequisites for Execution](#prerequisites-for-execution)
+- [Usage and Running Tests](#usage-and-running-tests)
   - [Configuration](#configuration)
-  - [Execution strategies and TestNG configuration](#execution-strategies-and-testng-configuration)
-  - [Running the tests](#running-the-tests)
-- [Screenshots and videos of the tests](#screenshots-of-the-tests)
+  - [Execution Strategies and TestNG configuration](#execution-strategies-and-testng-configuration)
+  - [Running the Tests](#running-the-tests)
+- [Screenshots and Videos of the Tests](#screenshots-of-the-tests)
 
-## About the project
+## About the Project
 
 This project was created for learning purposes, allowing me as a junior software tester to practice and deepen my knowledge in the field of **test automation**, particularly in testing **mobile and web-based systems**. I aimed to create a test framework that, in its structure and operation, resembles solutions used in professional work environments.
 
@@ -42,24 +42,24 @@ Testing was performed on a real Android device (Xiaomi Redmi Note 8T) and in the
 The project follows modern software development and test automation *best practices*:
 
 - **Page Object Model (POM):** UI elements and their corresponding actions are separated from the test logic, resulting in clean and maintainable code.
-- **Data-Driven configuration:** Driver capabilities, environment settings, and test data are stored in external `JSON` and `.properties` files. This allows for modifying the test environment without changing the Java code.
-- **Factory and Builder design patterns:**
+- **Data-Driven Configuration:** Driver capabilities, environment settings, and test data are stored in external `JSON` and `.properties` files. This allows for modifying the test environment without changing the Java code.
+- **Factory and Builder Design Patterns:**
   * `DriverFactory`: A central "factory" for creating various `AndroidDriver` instances (native/web, local/cloud).
   * `OptionsBuilder` classes: Responsible for the dynamic and readable assembly of complex Appium capabilities objects.
-- **POJO and enum classes for structured data representation:**
+- **POJO and Enum Classes for Structured Data Representation:**
   * The system uses `POJO` classes (e.g., `AppiumOptionsData`) to read JSON configurations and test data with the help of Jackson. This provides type safety and better readability compared to raw `Map` objects.
   * `Enums` are used for the safe handling of fixed, predefined values (e.g., execution environments), preventing errors from typos.
-- **Layered logic with steps, assertions, and providers:**
+- **Layered Logic with Steps, Assertions, and Providers:**
   * Tests are broken down into well-defined layers. Page Object classes contain reusable, business-level steps (e.g., `login()`), while test methods are responsible for calling these steps and performing assertions.
   * Data-driven testing is supported through DataProvider classes.
-- **Environment-dependent execution:** A single configuration switch allows for toggling between local (on a real device or emulator) and cloud-based (BrowserStack) execution.
-- **Programmatic server management:** The `AppiumServerManager` can automatically start/stop the Appium server, eliminating the need for manual intervention.
-- **Detailed reporting:** The system offers two parallel reporting mechanisms:
+- **Environment-Dependent Execution:** A single configuration switch allows for toggling between local (on a real device or emulator) and cloud-based (BrowserStack) execution.
+- **Programmatic Server Management:** The `AppiumServerManager` can automatically start/stop the Appium server, eliminating the need for manual intervention.
+- **Detailed Reporting:** The system offers two parallel reporting mechanisms:
   * **ExtentReports:** Generates interactive, visual HTML reports with screenshots on failure.
-  * **Custom email reporting:** Uses the SendGrid API to send HTML-formatted notifications, providing a reporting mechanism independent of any CI/CD system.
-- **Timestamped logging to file (`logback`):** The `Log4j` logging system creates a separate, timestamped log file for each test run and server start, preventing log overwrites and simplifying debugging. The logging level and target location are configurable in the `log4j.properties` file for test runs and in `config.properties` for the Appium server.
-- **Exception handling with custom exception hierarchy:** The framework introduces dedicated custom exception classes (e.g., `ConfigurationException`, `JsonReadException`, `LogFileException`) all extending a base `AppiumProjectException`. This promotes clearer, contextualized error reporting and better maintainability.
-- **Refactoring based on the DRY (Don't Repeat Yourself) principle:** The entire project is built following the DRY principle. Frequently repeated operations—such as driver management, configuration reading, or common UI interactions—are centralized in reusable components. This significantly reduces code duplication and increases long-term maintainability.
+  * **Custom Email Reporting:** Uses the SendGrid API to send HTML-formatted notifications, providing a reporting mechanism independent of any CI/CD system.
+- **Timestamped Logging to file (`logback`):** The `Log4j` logging system creates a separate, timestamped log file for each test run and server start, preventing log overwrites and simplifying debugging. The logging level and target location are configurable in the `log4j.properties` file for test runs and in `config.properties` for the Appium server.
+- **Exception Handling with Custom Exception Hierarchy:** The framework introduces dedicated custom exception classes (e.g., `ConfigurationException`, `JsonReadException`, `LogFileException`) all extending a base `AppiumProjectException`. This promotes clearer, contextualized error reporting and better maintainability.
+- **Refactoring Based on the DRY (Don't Repeat Yourself) Principle:** The entire project is built following the DRY principle. Frequently repeated operations—such as driver management, configuration reading, or common UI interactions—are centralized in reusable components. This significantly reduces code duplication and increases long-term maintainability.
 
 ## Tech Stack
 
@@ -76,16 +76,16 @@ The project uses the latest or near-latest versions of the following main techno
 - **Sendgrid 4.10.3 (for email sending)**
 - **Netlify-CLI 18.0.4 (for uploading files to a server)**
 
-## Tested applications
+## Tested Applications
 
 - **SauceLabs Swag Labs (native) app** [(MyDemoAppRN.1.3.0.build-244)](https://github.com/saucelabs/my-demo-app-rn/releases/ "link title") <br>
 - **Battery Alarm (native) app (v76)** [(Battery Alarm webpage)](https://www.batteryalarm.app/ "link title") <br>
 - **CURA Healthcare Service (web) app** [(Katalon demo webpage)](https://katalon-demo-cura.herokuapp.com// "link title")
 - **Chrome version: 137.0.7151.89**
 
-## Setup and prerequisites
+## Setup and Prerequisites
 
-### Prerequisites for execution
+### Prerequisites for Execution
 
 - **Java Development Kit (JDK) 22 or newer**
 - **Apache Maven** – for building the project and running tests
@@ -97,26 +97,26 @@ The project uses the latest or near-latest versions of the following main techno
     * **Netlify** – for public access to files in test reports (e.g., screenshots), a simple Netlify account and deploy are required
     * **BrowserStack** – for test execution in a cloud-based device farm. Configuration files: `src/test/resources/testdatafiles/options/browserstack/`
 
-## Usage and running tests
+## Usage and Running Tests
 
 ### Configuration
 
-- **Execution environment and browser:** The following settings can be configured in the `src/main/resources/config.properties` file:
+- **Execution Environment and Browser:** The following settings can be configured in the `src/main/resources/config.properties` file:
     * `run.environment`: The test execution environment. Possible values: `local` or `cloud` (BrowserStack).
     * `browser.type`: The browser used for web tests. Possible values: `chrome` or `firefox`.
-- **Driver capabilities:** Platform- and environment-specific Appium settings are located in separate JSON files under the following path: `src/test/resources/testdatafiles/options/appium/`.
+- **Driver Capabilities:** Platform- and environment-specific Appium settings are located in separate JSON files under the following path: `src/test/resources/testdatafiles/options/appium/`.
 
-### Execution strategies and TestNG configuration
+### Execution Strategies and TestNG Configuration
 
 The framework uses **TestNG** to configure and run tests, leveraging its advanced control features.
 - **Test Suites:** Predefined execution packages for various testing purposes (e.g., quick checks, full regression) are located in the `src/test/resources/testng-configs/` folder. This allows running only relevant tests, optimizing time and resources.
     * `smoke-tests.xml`: Fast-running tests to check basic functionality.
     * `regression-tests.xml`: A test suite ensuring full functional coverage of the system.
-- **TestNG groups:** Tests can be logically separated using the `@Test(groups = {"smoke"})` annotation.
-- **Data-Driven testing (@DataProvider):** The framework supports a data-driven testing approach. The `DataProviderTests` class for the **CURA H.S.** application provides an example of how to read test data (username, password) from an external JSON file (from the `src/test/resources/testdatafiles/testinputs/` folder). The `CuraLoginTestDataProvider` class separates the data supply from the test logic, allowing the same test case to be executed with multiple input combinations.
-- **Priority and dependencies:** The `@Test(priority = ...)` annotation allows specifying the execution order of tests, which is particularly useful for testing complex, interdependent user flows.
+- **TestNG Groups:** Tests can be logically separated using the `@Test(groups = {"smoke"})` annotation.
+- **Data-Driven Testing (@DataProvider):** The framework supports a data-driven testing approach. The `DataProviderTests` class for the **CURA H.S.** application provides an example of how to read test data (username, password) from an external JSON file (from the `src/test/resources/testdatafiles/testinputs/` folder). The `CuraLoginTestDataProvider` class separates the data supply from the test logic, allowing the same test case to be executed with multiple input combinations.
+- **Priority and Dependencies:** The `@Test(priority = ...)` annotation allows specifying the execution order of tests, which is particularly useful for testing complex, interdependent user flows.
 
-### Running the tests
+### Running the Tests
 
 Tests can be run in two ways – in both cases, the `testng.xml` suite files form the basis.
 
