@@ -1,18 +1,22 @@
 package com.myappium2project.configdata.configpaths;
 
 /**
- * Centralized storage for file path constants used in testing.
+ * Centralized storage for file path constants used in testing-related configurations.
  * <p>
- * Includes paths to test data, app installers, Appium/BrowserStack configuration files,
- * and reporting templates. These paths typically point to resources on the classpath.
+ * Includes paths to:
+ * <ul>
+ *   <li>Application account data (Cura, SauceLabs)</li>
+ *   <li>Appium options for local and cloud environments</li>
+ *   <li>BrowserStack options</li>
+ *   <li>Test input data for parameterized tests</li>
+ *   <li>APK installers for local Appium runs</li>
+ * </ul>
+ * These paths typically point to JSON files within the {@code resources/testdatafiles} directory.
  */
 public final class TestPaths {
     // Application account data (per app and platform)
     public static final String CURA_ACCOUNTS_JSON = "testdatafiles/accounts/cura-healthcare_accounts.json";
     public static final String SLABS_ACCOUNTS_JSON = "testdatafiles/accounts/saucelabs_accounts.json";
-
-    // Reporting configuration for ExtentReports
-    public static final String EXTENT_REPORTS_CONFIG_JSON = "testdatafiles/reporting/extent-reports_config.json";
 
     // BrowserStack options
     public static final String BS_CHROME_OPTIONS_JSON = "testdatafiles/options/browserstack/chrome_bs-options.json";

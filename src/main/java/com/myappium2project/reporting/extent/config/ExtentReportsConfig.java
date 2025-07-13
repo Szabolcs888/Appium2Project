@@ -1,4 +1,4 @@
-package com.myappium2project.reporting.extent;
+package com.myappium2project.reporting.extent.config;
 
 import java.util.Map;
 

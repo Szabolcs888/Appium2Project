@@ -1,4 +1,4 @@
-package com.myappium2project.reporting.extent.appenders;
+package com.myappium2project.logging.appenders;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -62,7 +62,7 @@ public final class ExtentAppender extends AbstractAppender {
     /**
      * Factory method for creating the custom Log4j appender.
      *
-     * @param name the appender name
+     * @param name   the appender name
      * @param layout the log layout (optional, uses default if null)
      * @return a new ExtentAppender instance
      */

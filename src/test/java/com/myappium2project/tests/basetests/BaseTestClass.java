@@ -3,7 +3,7 @@ package com.myappium2project.tests.basetests;
 import com.myappium2project.configdata.environment.EnvironmentConfig;
 import com.myappium2project.email.service.SendGridEmailService;
 
-import com.myappium2project.email.models.TestResult;
+import com.myappium2project.reporting.email.models.TestResult;
 import com.myappium2project.utils.common.TestRunContextHolder;
 import io.appium.java_client.android.AndroidDriver;
 import com.myappium2project.listeners.TestListener;

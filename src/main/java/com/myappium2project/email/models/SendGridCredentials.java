@@ -1,4 +1,4 @@
-package com.myappium2project.email.data;
+package com.myappium2project.email.models;
 
 /**
  * POJO class representing the SendGrid email credentials loaded from a JSON file.

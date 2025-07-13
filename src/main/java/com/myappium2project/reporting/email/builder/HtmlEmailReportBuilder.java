@@ -1,6 +1,6 @@
-package com.myappium2project.email.builder;
+package com.myappium2project.reporting.email.builder;
 
-import com.myappium2project.email.models.TestResult;
+import com.myappium2project.reporting.email.models.TestResult;
 
 import java.util.List;
 import java.util.Locale;

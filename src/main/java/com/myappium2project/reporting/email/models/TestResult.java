@@ -1,4 +1,4 @@
-package com.myappium2project.email.models;
+package com.myappium2project.reporting.email.models;
 
 /**
  * Represents the result of a single automated test execution.

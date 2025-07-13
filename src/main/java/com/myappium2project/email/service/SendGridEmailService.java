@@ -1,10 +1,10 @@
 package com.myappium2project.email.service;
 
 import com.myappium2project.configkeys.ConfigDataKeys;
-import com.myappium2project.email.data.SendGridCredentials;
-import com.myappium2project.email.data.SendGridCredentialsProvider;
-import com.myappium2project.email.models.TestResult;
-import com.myappium2project.email.builder.HtmlEmailReportBuilder;
+import com.myappium2project.email.models.SendGridCredentials;
+import com.myappium2project.email.providers.SendGridCredentialsProvider;
+import com.myappium2project.reporting.email.models.TestResult;
+import com.myappium2project.reporting.email.builder.HtmlEmailReportBuilder;
 import com.myappium2project.exceptions.LogFileException;
 import com.myappium2project.utils.ConfigReader;
 import com.myappium2project.configpaths.MainPaths;

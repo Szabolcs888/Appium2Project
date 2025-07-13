@@ -1,5 +1,6 @@
-package com.myappium2project.email.data;
+package com.myappium2project.email.providers;
 
+import com.myappium2project.email.models.SendGridCredentials;
 import com.myappium2project.utils.JsonDataReader;
 import com.myappium2project.configpaths.MainPaths;
 

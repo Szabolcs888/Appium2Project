@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">jún. 16, 2025 09:14:01 du.</span></a>
+<a href="#"><span class="badge badge-primary">júl. 13, 2025 11:40:49 de.</span></a>
 </li>
 </ul>
 </div>
@@ -67,6 +67,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,9 +80,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">testEndToEndWithLoginBeforeShopping</p>
+            <p class="name">testLoginValidUsernameInvalidPassword</p>
             <p class="text-sm">
-              <span>21:14:14</span> / <span>00:01:08:398</span>
+              <span>11:40:58</span> / <span>00:00:06:364</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +90,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testEndToEndWithLoginBeforeShopping</h5>
-<span class='badge badge-success'>06.16.2025 21:14:14</span>
-<span class='badge badge-danger'>06.16.2025 21:15:22</span>
-<span class='badge badge-default'>00:01:08:398</span>
+<h5 class="test-status text-pass">testLoginValidUsernameInvalidPassword</h5>
+<span class='badge badge-success'>07.13.2025 11:40:58</span>
+<span class='badge badge-danger'>07.13.2025 11:41:05</span>
+<span class='badge badge-default'>00:00:06:364</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -105,525 +106,70 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:14</td>
+        <td>11:40:58</td>
         <td>
-          Test STARTED: testEndToEndWithLoginBeforeShopping
+          Test STARTED: testLoginValidUsernameInvalidPassword
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:14</td>
+        <td>11:40:58</td>
         <td>
           We press the 'hamburger menu' button
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:14</td>
+        <td>11:40:59</td>
         <td>
           We press the 'Log In' button
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:16</td>
+        <td>11:41:00</td>
         <td>
           We fill the 'Username' input field with the 'valid' username
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:17</td>
+        <td>11:41:02</td>
         <td>
-          We fill the 'Password' input field with the 'valid' password
+          We fill the 'Password' input field with the 'invalid' password
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:18</td>
+        <td>11:41:03</td>
         <td>
           We press the 'Login' button
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:19</td>
+        <td>11:41:05</td>
         <td>
-          We press the 'dropdown menu' button
+          We check if the error message appears and, if so, if it is correct
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:20</td>
+        <td>11:41:05</td>
         <td>
-          We select the 'abc' order option
+          Expected error message: 'Provided credentials do not match any user in this service.'
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:21</td>
+        <td>11:41:05</td>
         <td>
-          We press the 'Bike Light's text
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:23</td>
-        <td>
-          We press the 'counter plus' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:24</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:25</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:25</td>
-        <td>
-          We press the 'Bolt T-shirt's text
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:26</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:28</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:29</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:29</td>
-        <td>
-          We scroll down
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:31</td>
-        <td>
-          We press the 'Onesie's text
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:31</td>
-        <td>
-          We press the 'black circle' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:32</td>
-        <td>
-          We press the 'counter plus' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:33</td>
-        <td>
-          We press the 'counter plus' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:33</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:34</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:34</td>
-        <td>
-          We press the 'Test allTheThings T-shirt's text
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:36</td>
-        <td>
-          We press the 'gray circle' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:37</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:37</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:37</td>
-        <td>
-          We press the 'Fleece Jacket's text
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:39</td>
-        <td>
-          We press the 'counter plus' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:40</td>
-        <td>
-          We press the 'counter plus' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:40</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:41</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:42</td>
-        <td>
-          We press the 'cart badge' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:50</td>
-        <td>
-          We check if the correct products are in the cart
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:50</td>
-        <td>
-          The correct products are in the cart
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:50</td>
-        <td>
-          We check the number of products in the cart
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:50</td>
-        <td>
-          The number of products in the cart is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:50</td>
-        <td>
-          We press the 'Proceed To Checkout' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:52</td>
-        <td>
-          We check if we are on the 'Checkout' page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:52</td>
-        <td>
-          We are on the 'Checkout' page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:52</td>
-        <td>
-          We fill the 'Full Name' input field with: 'Johnnie Clark'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:53</td>
-        <td>
-          We fill the 'Address Line 1' input field with: 'Narrow way 8.'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:54</td>
-        <td>
-          We fill the 'City' input field with: 'Pilis'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:55</td>
-        <td>
-          We fill the 'State Region' input field with: 'Pest megye'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:56</td>
-        <td>
-          We fill the 'Zip Code' input field with: '2721'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:57</td>
-        <td>
-          We fill the 'Country' input field with: 'Hungary'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:14:59</td>
-        <td>
-          We press the 'To Payment' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:00</td>
-        <td>
-          We fill the 'Full Name' input field with: 'Johnnie Clark'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:01</td>
-        <td>
-          We fill the 'Card Number' input field with: '023728054492102'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:02</td>
-        <td>
-          We fill the 'Expiration Date' input field with: '0725'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:04</td>
-        <td>
-          We fill the 'Security Code' input field with: '872'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:05</td>
-        <td>
-          We press the 'Review Order' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:06</td>
-        <td>
-          We scroll down
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:07</td>
-        <td>
-          We scroll down
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:08</td>
-        <td>
-          We check that the delivery data is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:08</td>
-        <td>
-          The delivery data is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:08</td>
-        <td>
-          We check that the payment data is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:08</td>
-        <td>
-          The payment data is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:08</td>
-        <td>
-          We press the 'Place Order' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:10</td>
-        <td>
-          We check if we are on the 'Checkout Complete' page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:10</td>
-        <td>
-          We are on the 'Checkout Complete' page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:10</td>
-        <td>
-          We press the 'Continue Shopping' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:11</td>
-        <td>
-          We press the 'cart badge' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:12</td>
-        <td>
-          We check if the cart is empty
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:13</td>
-        <td>
-          The cart is empty
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:13</td>
-        <td>
-          We check if the cart counter is available
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:16</td>
-        <td>
-          The cart counter is not available
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:16</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:17</td>
-        <td>
-          We press the 'hamburger menu' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:17</td>
-        <td>
-          We press the 'Log Out' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:19</td>
-        <td>
-          We press the 'Log Out' button on the 'Log Out' alert
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:20</td>
-        <td>
-          We press the 'Ok' button on the 'successfully logged out' alert
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:22</td>
-        <td>
-          We check if we are on the 'Login' page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:22</td>
-        <td>
-          We are on the 'Login' page
+          The error message is correct
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>21:15:22</td>
+        <td>11:41:05</td>
         <td>
           Test Passed
         </td>
@@ -638,9 +184,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">testEndToEndWithShoppingBeforeLogin</p>
+            <p class="name">testLoginInvalidUsernameValidPassword</p>
             <p class="text-sm">
-              <span>21:15:32</span> / <span>00:01:09:206</span>
+              <span>11:41:13</span> / <span>00:00:06:640</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -648,10 +194,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">testEndToEndWithShoppingBeforeLogin</h5>
-<span class='badge badge-success'>06.16.2025 21:15:32</span>
-<span class='badge badge-danger'>06.16.2025 21:16:41</span>
-<span class='badge badge-default'>00:01:09:206</span>
+<h5 class="test-status text-pass">testLoginInvalidUsernameValidPassword</h5>
+<span class='badge badge-success'>07.13.2025 11:41:13</span>
+<span class='badge badge-danger'>07.13.2025 11:41:19</span>
+<span class='badge badge-default'>00:00:06:640</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -664,532 +210,1920 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:32</td>
+        <td>11:41:13</td>
         <td>
-          Test STARTED: testEndToEndWithShoppingBeforeLogin
+          Test STARTED: testLoginInvalidUsernameValidPassword
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:32</td>
-        <td>
-          We press the 'dropdown menu' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:33</td>
-        <td>
-          We select the 'ascending price' order option
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:34</td>
-        <td>
-          We press the 'Test allTheThings T-shirt's text
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:35</td>
-        <td>
-          We press the 'black circle' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:36</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:37</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:39</td>
-        <td>
-          We press the 'Onesie's text
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:39</td>
-        <td>
-          We press the 'counter plus' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:40</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:41</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:41</td>
-        <td>
-          We press the 'Bike Light's text
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:43</td>
-        <td>
-          We press the 'counter plus' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:44</td>
-        <td>
-          We press the 'counter plus' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:45</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:45</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:45</td>
-        <td>
-          We press the 'Bolt T-shirt's text
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:47</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:48</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:49</td>
-        <td>
-          We scroll down
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:49</td>
-        <td>
-          We press the 'Fleece Jacket's text
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:50</td>
-        <td>
-          We press the 'counter plus' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:51</td>
-        <td>
-          We press the 'counter plus' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:52</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:53</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:53</td>
-        <td>
-          We press the 'Backpack's text
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:54</td>
-        <td>
-          We press the 'blue circle' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:56</td>
-        <td>
-          We press the 'counter plus' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:56</td>
-        <td>
-          We press the 'Add To Cart' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:56</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:15:57</td>
-        <td>
-          We press the 'cart badge' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:06</td>
-        <td>
-          We check if the correct products are in the cart
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:06</td>
-        <td>
-          The correct products are in the cart
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:06</td>
-        <td>
-          We check the number of products in the cart
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:06</td>
-        <td>
-          The number of products in the cart is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:06</td>
-        <td>
-          We press the 'Proceed To Checkout' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:07</td>
-        <td>
-          We fill the 'Username' input field with the 'valid' username
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:08</td>
-        <td>
-          We fill the 'Password' input field with the 'valid' password
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:09</td>
-        <td>
-          We press the 'Login' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:11</td>
-        <td>
-          We check if we are on the 'Checkout' page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:11</td>
-        <td>
-          We are on the 'Checkout' page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:11</td>
-        <td>
-          We fill the 'Full Name' input field with: 'Vanessa Morgan'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:12</td>
-        <td>
-          We fill the 'Address Line 1' input field with: 'Fairyflower street 12.'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:13</td>
-        <td>
-          We fill the 'City' input field with: 'Urhida'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:14</td>
-        <td>
-          We fill the 'State Region' input field with: 'Fejer megye'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:15</td>
-        <td>
-          We fill the 'Zip Code' input field with: '8142'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:17</td>
-        <td>
-          We fill the 'Country' input field with: 'Hungary'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:18</td>
-        <td>
-          We press the 'To Payment' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:19</td>
-        <td>
-          We fill the 'Full Name' input field with: 'Vanessa Morgan'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:20</td>
-        <td>
-          We fill the 'Card Number' input field with: '238858251007850'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:22</td>
-        <td>
-          We fill the 'Expiration Date' input field with: '0627'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:23</td>
-        <td>
-          We fill the 'Security Code' input field with: '871'
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:24</td>
-        <td>
-          We press the 'Review Order' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:25</td>
-        <td>
-          We scroll down
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:26</td>
-        <td>
-          We scroll down
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:27</td>
-        <td>
-          We check that the delivery data is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:27</td>
-        <td>
-          The delivery data is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:28</td>
-        <td>
-          We check that the payment data is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:28</td>
-        <td>
-          The payment data is correct
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:28</td>
-        <td>
-          We press the 'Place Order' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:29</td>
-        <td>
-          We check if we are on the 'Checkout Complete' page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:29</td>
-        <td>
-          We are on the 'Checkout Complete' page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:29</td>
-        <td>
-          We press the 'Continue Shopping' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:30</td>
-        <td>
-          We press the 'cart badge' button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:31</td>
-        <td>
-          We check if the cart is empty
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:32</td>
-        <td>
-          The cart is empty
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:32</td>
-        <td>
-          We check if the cart counter is available
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:35</td>
-        <td>
-          The cart counter is not available
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:35</td>
-        <td>
-          We press the 'back' button on the phone
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:36</td>
+        <td>11:41:13</td>
         <td>
           We press the 'hamburger menu' button
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:36</td>
+        <td>11:41:14</td>
         <td>
-          We press the 'Log Out' button
+          We press the 'Log In' button
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:38</td>
+        <td>11:41:15</td>
         <td>
-          We press the 'Log Out' button on the 'Log Out' alert
+          We fill the 'Username' input field with the 'invalid' username
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:40</td>
+        <td>11:41:17</td>
         <td>
-          We press the 'Ok' button on the 'successfully logged out' alert
+          We fill the 'Password' input field with the 'valid' password
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:41</td>
+        <td>11:41:17</td>
         <td>
-          We check if we are on the 'Login' page
+          We press the 'Login' button
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>21:16:41</td>
+        <td>11:41:19</td>
         <td>
-          We are on the 'Login' page
+          We check if the error message appears and, if so, if it is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:19</td>
+        <td>
+          Expected error message: 'Provided credentials do not match any user in this service.'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:19</td>
+        <td>
+          The error message is correct
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>21:16:41</td>
+        <td>11:41:19</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testLoginEmptyUsernameValidPassword</p>
+            <p class="text-sm">
+              <span>11:41:29</span> / <span>00:00:07:320</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testLoginEmptyUsernameValidPassword</h5>
+<span class='badge badge-success'>07.13.2025 11:41:29</span>
+<span class='badge badge-danger'>07.13.2025 11:41:36</span>
+<span class='badge badge-default'>00:00:07:320</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:29</td>
+        <td>
+          Test STARTED: testLoginEmptyUsernameValidPassword
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:30</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:30</td>
+        <td>
+          We press the 'Log In' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:32</td>
+        <td>
+          We fill the 'Username' input field with the 'empty' username
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:33</td>
+        <td>
+          We fill the 'Password' input field with the 'valid' password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:34</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:36</td>
+        <td>
+          We check if the error message appears and, if so, if it is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:36</td>
+        <td>
+          Expected error message: 'Username is required'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:36</td>
+        <td>
+          The error message is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:41:36</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testLoginValidUsernameEmptyPassword</p>
+            <p class="text-sm">
+              <span>11:41:45</span> / <span>00:00:07:412</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testLoginValidUsernameEmptyPassword</h5>
+<span class='badge badge-success'>07.13.2025 11:41:45</span>
+<span class='badge badge-danger'>07.13.2025 11:41:53</span>
+<span class='badge badge-default'>00:00:07:412</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:45</td>
+        <td>
+          Test STARTED: testLoginValidUsernameEmptyPassword
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:46</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:46</td>
+        <td>
+          We press the 'Log In' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:49</td>
+        <td>
+          We fill the 'Username' input field with the 'valid' username
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:50</td>
+        <td>
+          We fill the 'Password' input field with the 'empty' password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:51</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:53</td>
+        <td>
+          We check if the error message appears and, if so, if it is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:53</td>
+        <td>
+          Expected error message: 'Password is required'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:41:53</td>
+        <td>
+          The error message is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:41:53</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testLoginValidData</p>
+            <p class="text-sm">
+              <span>11:42:01</span> / <span>00:00:07:634</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testLoginValidData</h5>
+<span class='badge badge-success'>07.13.2025 11:42:01</span>
+<span class='badge badge-danger'>07.13.2025 11:42:08</span>
+<span class='badge badge-default'>00:00:07:634</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:01</td>
+        <td>
+          Test STARTED: testLoginValidData
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:02</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:02</td>
+        <td>
+          We press the 'Log In' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:04</td>
+        <td>
+          We fill the 'Username' input field with the 'valid' username
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:06</td>
+        <td>
+          We fill the 'Password' input field with the 'valid' password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:06</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:08</td>
+        <td>
+          We check if we are on the 'Products' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:08</td>
+        <td>
+          We are on the 'Products' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:42:08</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testWebviewPageAccess</p>
+            <p class="text-sm">
+              <span>11:42:17</span> / <span>00:00:04:254</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testWebviewPageAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:42:17</span>
+<span class='badge badge-danger'>07.13.2025 11:42:21</span>
+<span class='badge badge-default'>00:00:04:254</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:17</td>
+        <td>
+          Test STARTED: testWebviewPageAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:18</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:18</td>
+        <td>
+          We press the 'Webview' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:21</td>
+        <td>
+          We check if we are on the 'Webview' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:21</td>
+        <td>
+          We are on the 'Webview' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:42:21</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testQrCodeScannerPageAccess</p>
+            <p class="text-sm">
+              <span>11:42:31</span> / <span>00:00:04:479</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testQrCodeScannerPageAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:42:31</span>
+<span class='badge badge-danger'>07.13.2025 11:42:35</span>
+<span class='badge badge-default'>00:00:04:479</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:31</td>
+        <td>
+          Test STARTED: testQrCodeScannerPageAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:31</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:32</td>
+        <td>
+          We press the 'QR Code Scanner' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:35</td>
+        <td>
+          We check if we are on the 'QR Code Scanner' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:35</td>
+        <td>
+          We are on the 'QR Code Scanner' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:42:35</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testGeoLocationPageAccess</p>
+            <p class="text-sm">
+              <span>11:42:48</span> / <span>00:00:03:713</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testGeoLocationPageAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:42:48</span>
+<span class='badge badge-danger'>07.13.2025 11:42:51</span>
+<span class='badge badge-default'>00:00:03:713</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:48</td>
+        <td>
+          Test STARTED: testGeoLocationPageAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:49</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:49</td>
+        <td>
+          We press the 'Geo Location' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:51</td>
+        <td>
+          We check if we are on the 'Geo Location' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:42:51</td>
+        <td>
+          We are on the 'Geo Location' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:42:51</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testDrawingPageAccess</p>
+            <p class="text-sm">
+              <span>11:43:00</span> / <span>00:00:05:736</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testDrawingPageAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:43:00</span>
+<span class='badge badge-danger'>07.13.2025 11:43:06</span>
+<span class='badge badge-default'>00:00:05:736</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:00</td>
+        <td>
+          Test STARTED: testDrawingPageAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:01</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:02</td>
+        <td>
+          We press the 'Drawing' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:06</td>
+        <td>
+          We check if we are on the 'Drawing' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:06</td>
+        <td>
+          We are on the 'Drawing' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:43:06</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testAboutPageAccess</p>
+            <p class="text-sm">
+              <span>11:43:15</span> / <span>00:00:04:702</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testAboutPageAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:43:15</span>
+<span class='badge badge-danger'>07.13.2025 11:43:20</span>
+<span class='badge badge-default'>00:00:04:702</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:15</td>
+        <td>
+          Test STARTED: testAboutPageAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:17</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:17</td>
+        <td>
+          We press the 'About' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:20</td>
+        <td>
+          We check if we are on the 'About' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:20</td>
+        <td>
+          We are on the 'About' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:43:20</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testFingerPrintPageAccess</p>
+            <p class="text-sm">
+              <span>11:43:28</span> / <span>00:00:15:696</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">testFingerPrintPageAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:43:28</span>
+<span class='badge badge-danger'>07.13.2025 11:43:44</span>
+<span class='badge badge-default'>00:00:15:696</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='https://appiumreports.netlify.app/actualreportscreenshots/testFingerPrintPageAccess.png' src="https://appiumreports.netlify.app/actualreportscreenshots/testFingerPrintPageAccess.png">
+  
+    <div class="title">Screenshot</div>
+
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:28</td>
+        <td>
+          Test STARTED: testFingerPrintPageAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:30</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:30</td>
+        <td>
+          We press the 'Finger Print' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:43:44</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testApiCallsPageAccess</p>
+            <p class="text-sm">
+              <span>11:43:53</span> / <span>00:00:04:375</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testApiCallsPageAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:43:53</span>
+<span class='badge badge-danger'>07.13.2025 11:43:58</span>
+<span class='badge badge-default'>00:00:04:375</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:53</td>
+        <td>
+          Test STARTED: testApiCallsPageAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:54</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:54</td>
+        <td>
+          We press the 'Api Calls' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:58</td>
+        <td>
+          We check if we are on the 'API calls' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:43:58</td>
+        <td>
+          We are on the 'API calls' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:43:58</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testSauceBotVideoPageAccess</p>
+            <p class="text-sm">
+              <span>11:44:05</span> / <span>00:00:05:425</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testSauceBotVideoPageAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:44:05</span>
+<span class='badge badge-danger'>07.13.2025 11:44:11</span>
+<span class='badge badge-default'>00:00:05:425</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:05</td>
+        <td>
+          Test STARTED: testSauceBotVideoPageAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:06</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:07</td>
+        <td>
+          We press the 'Sauce Bot Video' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:11</td>
+        <td>
+          We check if we are on the 'SauceBot - The Beginning' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:11</td>
+        <td>
+          We are on the 'SauceBot - The Beginning' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:44:11</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testLoginValidData</p>
+            <p class="text-sm">
+              <span>11:44:23</span> / <span>00:00:08:047</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testLoginValidData</h5>
+<span class='badge badge-success'>07.13.2025 11:44:23</span>
+<span class='badge badge-danger'>07.13.2025 11:44:31</span>
+<span class='badge badge-default'>00:00:08:047</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:23</td>
+        <td>
+          Test STARTED: testLoginValidData
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:26</td>
+        <td>
+          We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:26</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:27</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:28</td>
+        <td>
+          We fill the 'Username' input field with the 'valid' username
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:28</td>
+        <td>
+          We fill the 'Password' input field with the 'valid' password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:29</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:31</td>
+        <td>
+          We check if we are on the 'Make Appointment' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:31</td>
+        <td>
+          We are on the 'Make Appointment' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:44:31</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testLoginValidUsernameInvalidPassword</p>
+            <p class="text-sm">
+              <span>11:44:42</span> / <span>00:00:05:924</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testLoginValidUsernameInvalidPassword</h5>
+<span class='badge badge-success'>07.13.2025 11:44:42</span>
+<span class='badge badge-danger'>07.13.2025 11:44:47</span>
+<span class='badge badge-default'>00:00:05:924</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:42</td>
+        <td>
+          Test STARTED: testLoginValidUsernameInvalidPassword
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:44</td>
+        <td>
+          We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:44</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:44</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:45</td>
+        <td>
+          We fill the 'Username' input field with the 'valid' username
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:46</td>
+        <td>
+          We fill the 'Password' input field with the 'invalid' password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:46</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:47</td>
+        <td>
+          We check if the error message appears and, if so, if it is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:47</td>
+        <td>
+          Expected error message: 'Login failed! Please ensure the username and password are valid.'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:47</td>
+        <td>
+          The error message is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:44:47</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testLoginInvalidUsernameValidPassword</p>
+            <p class="text-sm">
+              <span>11:44:57</span> / <span>00:00:08:132</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testLoginInvalidUsernameValidPassword</h5>
+<span class='badge badge-success'>07.13.2025 11:44:57</span>
+<span class='badge badge-danger'>07.13.2025 11:45:06</span>
+<span class='badge badge-default'>00:00:08:132</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:44:57</td>
+        <td>
+          Test STARTED: testLoginInvalidUsernameValidPassword
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:00</td>
+        <td>
+          We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:00</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:01</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:02</td>
+        <td>
+          We fill the 'Username' input field with the 'invalid' username
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:03</td>
+        <td>
+          We fill the 'Password' input field with the 'valid' password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:03</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:04</td>
+        <td>
+          We check if the error message appears and, if so, if it is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:06</td>
+        <td>
+          Expected error message: 'Login failed! Please ensure the username and password are valid.'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:06</td>
+        <td>
+          The error message is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:45:06</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testLoginEmptyUsernameEmptyPassword</p>
+            <p class="text-sm">
+              <span>11:45:18</span> / <span>00:00:06:211</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testLoginEmptyUsernameEmptyPassword</h5>
+<span class='badge badge-success'>07.13.2025 11:45:18</span>
+<span class='badge badge-danger'>07.13.2025 11:45:24</span>
+<span class='badge badge-default'>00:00:06:211</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:18</td>
+        <td>
+          Test STARTED: testLoginEmptyUsernameEmptyPassword
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:20</td>
+        <td>
+          We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:20</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:20</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:22</td>
+        <td>
+          We fill the 'Username' input field with the 'empty' username
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:22</td>
+        <td>
+          We fill the 'Password' input field with the 'empty' password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:23</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:23</td>
+        <td>
+          We check if the error message appears and, if so, if it is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:24</td>
+        <td>
+          Expected error message: 'Login failed! Please ensure the username and password are valid.'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:24</td>
+        <td>
+          The error message is correct
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:45:24</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testProfilePageAccess</p>
+            <p class="text-sm">
+              <span>11:45:34</span> / <span>00:00:11:659</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testProfilePageAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:45:34</span>
+<span class='badge badge-danger'>07.13.2025 11:45:46</span>
+<span class='badge badge-default'>00:00:11:659</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:34</td>
+        <td>
+          Test STARTED: testProfilePageAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:36</td>
+        <td>
+          We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:36</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:37</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:38</td>
+        <td>
+          We fill the 'Username' input field with the 'valid' username
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:38</td>
+        <td>
+          We fill the 'Password' input field with the 'valid' password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:39</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:40</td>
+        <td>
+          We handle the Chrome password popup window
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:43</td>
+        <td>
+          We scroll up
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:43</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:44</td>
+        <td>
+          We press the 'Profile' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:46</td>
+        <td>
+          We check if we are on the 'Profile' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:46</td>
+        <td>
+          We are on the 'Profile' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:45:46</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testHistoryPageAccess</p>
+            <p class="text-sm">
+              <span>11:45:56</span> / <span>00:00:11:522</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testHistoryPageAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:45:56</span>
+<span class='badge badge-danger'>07.13.2025 11:46:08</span>
+<span class='badge badge-default'>00:00:11:522</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:56</td>
+        <td>
+          Test STARTED: testHistoryPageAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:58</td>
+        <td>
+          We navigate to CURA base URL: https://katalon-demo-cura.herokuapp.com
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:58</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:45:59</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:00</td>
+        <td>
+          We fill the 'Username' input field with the 'valid' username
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:00</td>
+        <td>
+          We fill the 'Password' input field with the 'valid' password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:01</td>
+        <td>
+          We press the 'Login' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:02</td>
+        <td>
+          We handle the Chrome password popup window
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:05</td>
+        <td>
+          We scroll up
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:05</td>
+        <td>
+          We press the 'hamburger menu' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:06</td>
+        <td>
+          We press the 'History' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:08</td>
+        <td>
+          We check if we are on the 'History' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:08</td>
+        <td>
+          We are on the 'History' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:46:08</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testMainPageAccess</p>
+            <p class="text-sm">
+              <span>11:46:14</span> / <span>00:00:01:821</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testMainPageAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:46:14</span>
+<span class='badge badge-danger'>07.13.2025 11:46:16</span>
+<span class='badge badge-default'>00:00:01:821</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:14</td>
+        <td>
+          Test STARTED: testMainPageAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:16</td>
+        <td>
+          We check if we are on the 'Main' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:16</td>
+        <td>
+          We are on the 'Main' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:46:16</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="21"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testInformationPagesAccess</p>
+            <p class="text-sm">
+              <span>11:46:23</span> / <span>00:00:04:082</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testInformationPagesAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:46:23</span>
+<span class='badge badge-danger'>07.13.2025 11:46:27</span>
+<span class='badge badge-default'>00:00:04:082</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:23</td>
+        <td>
+          Test STARTED: testInformationPagesAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:24</td>
+        <td>
+          We press the 'information' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:26</td>
+        <td>
+          We check if we are on the 'Information' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:26</td>
+        <td>
+          We are on the 'Information' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:26</td>
+        <td>
+          We press the 'next page' '>>>' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:27</td>
+        <td>
+          We check if we are on the 'second Information' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:27</td>
+        <td>
+          We are on the 'second Information' page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:46:27</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="22"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">testWarningPopupAlertAccess</p>
+            <p class="text-sm">
+              <span>11:46:34</span> / <span>00:00:14:106</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">testWarningPopupAlertAccess</h5>
+<span class='badge badge-success'>07.13.2025 11:46:34</span>
+<span class='badge badge-danger'>07.13.2025 11:46:48</span>
+<span class='badge badge-default'>00:00:14:106</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:34</td>
+        <td>
+          Test STARTED: testWarningPopupAlertAccess
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:35</td>
+        <td>
+          We press the 'X' '(close app)' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:37</td>
+        <td>
+          We check if the 'Warning' popup window appears
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:37</td>
+        <td>
+          The 'Warning' popup window appears
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:37</td>
+        <td>
+          We press the 'NO' button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:48</td>
+        <td>
+          We check if the 'Warning' popup window disappears
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:46:48</td>
+        <td>
+          The 'Warning' popup window disappears
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:46:48</td>
         <td>
           Test Passed
         </td>
@@ -1213,25 +2147,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>jún. 16, 2025 09:14:01 du.</h3>
+<h3>júl. 13, 2025 11:40:49 de.</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>jún. 16, 2025 09:16:42 du.</h3>
+<h3>júl. 13, 2025 11:46:49 de.</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>2</h3>
+<h3>21</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -1247,12 +2181,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>2</b> tests passed
+<div><small data-tooltip='95%'>
+<b>21</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='4%'><b>1</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -1270,10 +2204,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='1%'><b>2</b> events passed</small></div>
+<div><small data-tooltip='11%'><b>21</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>149</b> others
+<small data-tooltip='0%'><b>1</b> events failed,
+<b data-tooltip='%'>164</b> others
 </small>
 </div>
 </div>
@@ -1289,7 +2223,7 @@
 </div></div>
 <script>
 var timeline = {
-"testEndToEndWithLoginBeforeShopping":68.398,"testEndToEndWithShoppingBeforeLogin":69.206
+"testLoginValidUsernameInvalidPassword":6.364,"testLoginInvalidUsernameValidPassword":6.64,"testLoginEmptyUsernameValidPassword":7.32,"testLoginValidUsernameEmptyPassword":7.412,"testLoginValidData":7.634,"testWebviewPageAccess":4.254,"testQrCodeScannerPageAccess":4.479,"testGeoLocationPageAccess":3.713,"testDrawingPageAccess":5.736,"testAboutPageAccess":4.702,"testFingerPrintPageAccess":15.696,"testApiCallsPageAccess":4.375,"testSauceBotVideoPageAccess":5.425,"testLoginValidData":8.047,"testLoginValidUsernameInvalidPassword":5.924,"testLoginInvalidUsernameValidPassword":8.132,"testLoginEmptyUsernameEmptyPassword":6.211,"testProfilePageAccess":11.659,"testHistoryPageAccess":11.522,"testMainPageAccess":1.821,"testInformationPagesAccess":4.082,"testWarningPopupAlertAccess":14.106
 };
 </script>
 <div class="row">
@@ -1300,12 +2234,12 @@ var timeline = {
 <thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
 <tbody>
 <tr>
-<td>Environment</td>
-<td>QA</td>
-</tr>
-<tr>
 <td>User</td>
 <td>Szabolcs</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>QA</td>
 </tr>
 </tbody>
 </table></div>
@@ -1316,8 +2250,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 2,
-failParent: 0,
+passParent: 21,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -1333,11 +2267,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 2,
-failEvents: 0,
+passEvents: 21,
+failEvents: 1,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 149
+infoEvents: 164
 };
 </script>        </div>
       </div>
