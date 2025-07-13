@@ -39,11 +39,6 @@ build/
 .DS_Store
 
 ### Personal files (others) ###
-**/videos/
+**/other-files/
 scrcpy.bat
-things-to-do.txt
-_sendgrid_account.json
-_sendgrid_account_sample.json
-
-
 
