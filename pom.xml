@@ -8,35 +8,50 @@
     <artifactId>Appium2Project</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- ======== CORE BUILD PROPERTIES ======== -->
     <properties>
+        <!-- Defines the Java version of the source code (e.g., allows using Java 22 features). -->
         <maven.compiler.source>22</maven.compiler.source>
+        <!-- Defines the Java version compatibility for the compiled bytecode (.class files). -->
         <maven.compiler.target>22</maven.compiler.target>
+        <!-- Ensures correct character encoding (e.g., for special characters). -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!-- ======== CENTRAL DEPENDENCY VERSION MANAGEMENT ======== -->
+    <!-- This block does not add libraries, it only sets rules for their versions. -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- The Selenium Bill of Materials (BOM). This is a "rulebook". -->
+            <!-- It guarantees that all Selenium modules (support, remote-driver, etc.) -->
+            <!-- are using a consistent and compatible version, in this case 4.22.0. -->
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-bom</artifactId>
+                <version>4.22.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- ======== PROJECT DEPENDENCIES (LIBRARIES) ======== -->
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+        <!-- Appium Java client. The main library for mobile and web automation. -->
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>9.4.0</version>
+            <version>9.2.2</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <!-- High-level Selenium features (e.g., WebDriverWait, ExpectedConditions, Select). -->
+        <!-- The version is managed automatically by the "selenium-bom" rulebook above. -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>4.32.0</version>
+            <artifactId>selenium-support</artifactId>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-api</artifactId>
-            <version>4.32.0</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <!-- TestNG, our testing framework. Only needed for running tests. -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -44,12 +59,13 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <!-- Log4j, our logging framework's core and API modules. -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.24.0</version>
         </dependency>
+
 
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -57,7 +73,7 @@
             <version>2.24.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j2-impl -->
+        <!-- Bridge between Log4j and SLF4J (another popular logging facade). -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j2-impl</artifactId>
@@ -65,42 +81,42 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <!-- Apache Commons IO: utility classes for file handling operations. -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.17.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <!-- ExtentReports: a library for generating beautiful, interactive HTML test reports. -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>5.1.2</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
+        <!-- Apache Commons Compress: utility classes for handling compressed files (e.g., zip). -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-compress</artifactId>
             <version>1.27.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <!-- WebDriverManager: automatically downloads and manages browser drivers (e.g., chromedriver). -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.9.2</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <!-- Jackson Databind: a library for processing (reading, writing) JSON files. -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.19.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.sendgrid/sendgrid-java -->
+        <!-- SendGrid: Java client for the email sending service. -->
         <dependency>
             <groupId>com.sendgrid</groupId>
             <artifactId>sendgrid-java</artifactId>
@@ -108,13 +124,16 @@
         </dependency>
     </dependencies>
 
+    <!-- ======== BUILD PROCESS CONFIGURATION (PLUGINS) ======== -->
     <build>
         <plugins>
+            <!-- The Maven Surefire Plugin is responsible for running tests during the 'mvn test' phase. -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.1</version>
                 <configuration>
+                    <!-- Tells Surefire which XML file to use for running TestNG suites. -->
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/testng-configs/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
