@@ -291,8 +291,8 @@ A projekt a következő fő technológiák és könyvtárak legfrissebb vagy kö
 - **Java 22.0**
 - **Maven 3.9.9**
 - **Appium 2.19.0**
-- **Appium Java Client 9.4.0**
-- **Selenium 4.32.0**
+- **Appium Java Client 9.2.2**
+- **Selenium 4.22.0**
 - **TestNG 7.10.2**
 - **Log4j 2.24.0**
 - **Jackson 2.19**
