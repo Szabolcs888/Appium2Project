@@ -35,7 +35,7 @@ The tests operate in a data-driven manner, with input data sourced from JSON fil
 
 Of course, there are still countless opportunities for development and refinement. My next goals include implementing **parallel test execution** and **CI/CD integration**, for example, using **Jenkins**.
 
-Testing was performed on a real Android device (Xiaomi Redmi Note 8T) and in the **BrowserStack** cloud service, which I demonstrate in the videos below.
+Testing was performed on a real Android device (Xiaomi Redmi Note 8T - Android 11) and in the **BrowserStack** cloud service, which I demonstrate in the videos below.
 
 ## Key features and technical solutions
 
@@ -258,7 +258,7 @@ A tesztek adatvezérelt módon működnek, a bemeneti adatok JSON fájlokból é
 
 Természetesen számtalan fejlesztési és finomítási lehetőség van még. A következő céljaim közé tartozik a **párhuzamos tesztfuttatás**, valamint a **CI/CD integráció**, például **Jenkins** segítségével.
 
-A tesztelést valós Android eszközön (Xiaomi Redmi Note 8T), valamint **BrowserStack** felhőszolgáltatásban végeztem, melyet fentebb videókban be is mutatok.
+A tesztelést valós Android eszközön (Xiaomi Redmi Note 8T - Android 11), valamint **BrowserStack** felhőszolgáltatásban végeztem, melyet fentebb videókban be is mutatok.
 
 ## Főbb jellemzők és technikai megoldások
 
